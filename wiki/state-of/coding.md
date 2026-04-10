@@ -4,7 +4,7 @@ type: state-of
 domains: [coding]
 tags: []
 as_of: 2026-04-10
-sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos]
+sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit]
 ---
 
 # State of Coding
@@ -40,10 +40,16 @@ CLI-based AI coding agents that run in the terminal, operating autonomously acro
 - [[tools/claude-code]] — Anthropic; terminal-first agent with background Monitor tool for event-driven wakeups *(as of 2026-04-10)*
 - [[tools/codex]] — OpenAI; cloud-based coding agent via CLI and ChatGPT *(as of 2026-04-10)*
 
+### Agent toolkits
+
+Toolkits that package a developer platform's docs, schemas, validation, and related capabilities for AI coding tools via plugins, skills, or MCP.
+
+- [[tools/shopify-ai-toolkit]] — Shopify packages platform docs, API schemas, and validation for Claude Code, Codex, Cursor, Gemini CLI, and VS Code via plugin, skills, or local Dev MCP; Codex support is skills/MCP only *(as of 2026-04-10)*
+
 ## Recent changes
 
+- [2026-04-10] Added `agent-toolkits` subcategory with [[tools/shopify-ai-toolkit]]
 - [2026-04-10] Added `terminal-coding-agent` subcategory with [[tools/claude-code]] and [[tools/codex]]
 - [2026-04-10] OpenAI launches $100/mo Pro tier — 5× Codex usage, exclusive Pro model, launch promo through 2026-05-31
 - [2026-04-09] Added `agentic-devops` subcategory with [[tools/stripe-cli]] after ingesting the `projects.dev` launch page
 - [2026-04-02] Cursor 3 launched; added new `agentic-coding-workspace` subcategory and placed Cursor under it
-- [2025-10-15] First content for this page. Added `spec-driven-development` subcategory with Kiro, spec-kit, Tessl after ingesting Fowler's SDD survey.

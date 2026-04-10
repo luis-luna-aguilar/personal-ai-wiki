@@ -166,6 +166,14 @@ Brief present-tense description. Current version, what it is, what it's good at.
 - [[sources/articles/cursor-vs-windsurf-review]]
 ```
 
+Tool, model, and workflow pages should be concise by default once the wiki is past the earliest bootstrap stage.
+
+- Prefer a compact synthesis over a long product brief.
+- Keep `## Current status` to 3-6 bullets unless the user explicitly wants depth.
+- Add only the sections that materially change understanding; do not repeat the same point under "Current status", "Strengths", and "What it is trying to solve".
+- Default target is roughly 150-300 words of body content for routine ingests unless the source genuinely introduces multiple distinct ideas that need separate treatment.
+- If the source is mostly setup, positioning, or one core claim, prefer a shorter page and rely on the source summary / raw source for extra detail.
+
 ### Concept / trend pages
 
 Concept and trend pages should be **more concise** than tool pages by default. Prefer a compact synthesis over an essay.

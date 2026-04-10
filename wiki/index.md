@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 type: index
-as_of: 2026-04-09
+as_of: 2026-04-10
 ---
 
 # Wiki Index
@@ -16,7 +16,7 @@ When adding a new wiki page (via a proposal), add its index entry under the corr
 
 Read-me-first dashboards per domain.
 
-- [[state-of/coding]] — current state of AI coding tools and workflows *(as_of: 2026-04-09)*
+- [[state-of/coding]] — current state of AI coding tools and workflows *(as_of: 2026-04-10)*
 - [[state-of/models]] — current state of foundation models *(as_of: —)*
 - [[state-of/agents]] — current state of agentic systems and tool use *(as_of: 2026-04-09)*
 - [[state-of/legal]] — current state of AI in legal practice *(as_of: 2026-04-02)*
@@ -40,6 +40,7 @@ Tools and products built on top of models. One page per tool.
 - [[tools/kiro]] — VS Code-based SDD tool, 3-doc workflow *(as_of: 2025-10-15)*
 - [[tools/spec-kit]] — GitHub's CLI SDD scaffolder with slash commands *(as_of: 2025-10-15)*
 - [[tools/stripe-cli]] — Stripe CLI's developer-preview `projects` workflow for provisioning and managing app-stack services across providers *(as_of: 2026-04-09)*
+- [[tools/shopify-ai-toolkit]] — Shopify's plugin / skills / MCP integration layer for AI-assisted Shopify app development *(as_of: 2026-04-10)*
 - [[tools/tessl]] — CLI + MCP framework exploring spec-as-source; private beta *(as_of: 2025-10-15)*
 - [[tools/perplexity-computer]] — Perplexity's 19-model orchestration agent; connects to 400+ apps and 12K+ financial institutions *(as_of: 2026-04-10)*
 - [[tools/gemini]] — Google's AI chatbot; custom visualizations, notebooks, Google ecosystem integration *(as_of: 2026-04-10)*
@@ -74,6 +75,7 @@ Things being watched that haven't solidified yet.
 
 - [[trends/agents-reshape-organizations]] — leverage moves from individual to org as autonomous agents take coordination work *(as_of: 2026-04-02)*
 - [[trends/ai-in-science]] — AI as force-multiplier for researchers; NASA anomalies, brain MRI, AlphaFold *(as_of: 2026-04-10)*
+- [[trends/proprietary-data-becomes-model-moat]] — proprietary operational data, domain evals, and narrow training loops may become a stronger moat as model quality converges *(as_of: 2026-04-10)*
 
 ## Sources
 
@@ -85,10 +87,10 @@ See `wiki/sources/` — source summaries are not indexed here (they're many and 
 
 - state-of: 7 (5 populated, 2 skeleton)
 - models: 1
-- tools: 11
+- tools: 12
 - benchmarks: 0
 - workflows: 1
 - concepts: 5
-- trends: 2
+- trends: 3
 
-**Total content pages: 27.** The wiki is in the bootstrap phase (<30 pages) — categorization discipline is relaxed.
+**Total content pages: 29.** The wiki is in the bootstrap phase (<30 pages) — categorization discipline is relaxed.

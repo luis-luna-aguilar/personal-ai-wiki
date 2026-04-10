@@ -77,3 +77,11 @@ grep "^## \[" wiki/log.md | tail -20
 ## [2026-04-10] schema | added subcategory terminal-coding-agent, tag openai
 
 ## [2026-04-10] apply | Harness concept | 1 page updated (wiki/index), 1 created (concepts/harness)
+
+## [2026-04-10] ingest | Every / Playtesting — "The Market for Making AI Better" | 1 page updated, 2 created (wiki/index updated; trends/proprietary-data-becomes-model-moat, sources/articles/market-for-making-ai-better created)
+
+## [2026-04-10] apply | tool-page concision guidance | LLM-INSTRUCTIONS updated so routine tool/model/workflow ingests default to shorter pages and fewer repeated sections
+
+## [2026-04-10] schema | added subcategory `agent-toolkits`
+
+## [2026-04-10] ingest | Shopify AI Toolkit | 2 pages updated, 2 created (state-of/coding, wiki/index updated; tools/shopify-ai-toolkit, sources/articles/shopify-ai-toolkit created)

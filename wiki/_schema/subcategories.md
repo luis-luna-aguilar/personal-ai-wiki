@@ -72,6 +72,12 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 - **Definition:** CLI-based AI coding agents that run in the terminal, operating autonomously across file editing, shell commands, and tool use without a graphical IDE.
 - **Examples:** [[tools/claude-code]], [[tools/codex]]
 
+### agent-toolkits
+- **Parent domain(s):** coding
+- **Applies to types:** tool
+- **Definition:** Toolkits that package a specific developer platform's docs, schemas, validation, and related capabilities for AI coding tools via plugins, skills, or MCP servers.
+- **Examples:** [[tools/shopify-ai-toolkit]]
+
 ### Format
 
 Each entry follows this shape:
