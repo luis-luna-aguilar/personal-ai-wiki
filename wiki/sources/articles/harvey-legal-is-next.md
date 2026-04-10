@@ -4,6 +4,7 @@ type: source
 source_type: article
 source_file: raw/articles/2026-04-09-harveyai-blog-autonomous-agents-legal-is-next.md
 url: https://www.harvey.ai/blog/autonomous-agents-legal-is-next
+published: 2026-04-02
 ingested: 2026-04-09
 domains: [legal, agents, coding]
 ---

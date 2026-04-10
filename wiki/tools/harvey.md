@@ -4,7 +4,7 @@ type: tool
 domains: [legal]
 subcategory: legal-ai
 tags: [closed-source, agentic]
-as_of: 2026-04-09
+as_of: 2026-04-02
 sources: [harvey-legal-is-next]
 ---
 
@@ -12,7 +12,7 @@ sources: [harvey-legal-is-next]
 
 Harvey is a legal AI platform aimed at law firms and in-house legal teams. The wiki currently has only one ingested source, and it is editorial — most concrete facts on this page come from the site's own navigation, not from independent coverage.
 
-## Current status (as of 2026-04-09)
+## Current status (as of 2026-04-02)
 
 - Active company; nav banner on the source page advertises a recent raise at an $11B valuation
 - Marketed product surfaces (per site nav): **Assistant**, **Vault**, **Knowledge**, **Workflow Agents**
@@ -27,7 +27,7 @@ Harvey is a legal AI platform aimed at law firms and in-house legal teams. The w
 
 ## Recent changes
 
-- [2026-04-09] Page created from Harvey's "Legal is Next" post — initial stub
+- [2026-04-02] Page created from Harvey's "Legal is Next" post — initial stub
 
 ## Sources
 

@@ -24,6 +24,12 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 - **Definition:** Surfaces (desktop, web, mobile, chat-integration) that let a human supervise, hand off, and merge work across multiple AI agents running in parallel.
 - **Examples:** [[tools/cursor]]
 
+### agent-orchestration
+- **Parent domain(s):** agents
+- **Applies to types:** tool
+- **Definition:** Platforms that run or coordinate long-horizon agents across one or more execution environments, with durable state and orchestration separated from any single local process or container.
+- **Examples:** [[tools/claude-managed-agents]]
+
 ### coding-model
 - **Parent domain(s):** models, coding
 - **Applies to types:** model
@@ -47,6 +53,24 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 - **Applies to types:** tool
 - **Definition:** CLI-native tools that provision and manage third-party app infrastructure and credentials across multiple providers, in workflows designed to be executable by humans or agents.
 - **Examples:** [[tools/stripe-cli]]
+
+### computer-use
+- **Parent domain(s):** computer-use
+- **Applies to types:** tool
+- **Definition:** Autonomous agents that orchestrate models, connect to external services, and execute complex workflows through application interfaces — going beyond API tool-calling to interact with systems as a human would.
+- **Examples:** [[tools/perplexity-computer]]
+
+### ai-assistant
+- **Parent domain(s):** models
+- **Applies to types:** tool
+- **Definition:** General-purpose AI assistant products that combine conversational AI, search, and productivity features into a consumer or enterprise interface.
+- **Examples:** [[tools/gemini]]
+
+### terminal-coding-agent
+- **Parent domain(s):** coding, agents
+- **Applies to types:** tool
+- **Definition:** CLI-based AI coding agents that run in the terminal, operating autonomously across file editing, shell commands, and tool use without a graphical IDE.
+- **Examples:** [[tools/claude-code]], [[tools/codex]]
 
 ### Format
 

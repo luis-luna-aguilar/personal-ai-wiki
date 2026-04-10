@@ -4,7 +4,7 @@ type: tool
 domains: [coding]
 subcategory: spec-driven-development
 tags: [github, open-source, cli, spec-driven]
-as_of: 2026-04-09
+as_of: 2025-10-15
 sources: [sdd-3-tools-fowler]
 ---
 
@@ -12,7 +12,7 @@ sources: [sdd-3-tools-fowler]
 
 GitHub's open-source take on [[concepts/spec-driven-development|spec-driven development]]. Distributed as a CLI that scaffolds a workspace with prompt files, templates, and a memory bank, then interacts with the user through slash commands inside their coding assistant (Copilot, Cursor, etc.). It is the most customizable of the three SDD tools Birgitta Böckeler reviewed, because all its artifacts live directly in the user's workspace.
 
-## Current status (as of 2026-04-09)
+## Current status (as of 2025-10-15)
 
 - Open-source, repo: github.com/github/spec-kit
 - CLI-based scaffolder; works with multiple coding assistants
@@ -50,7 +50,7 @@ One spec is made up of many files. In Böckeler's test, a single spec directory 
 
 ## Recent changes
 
-- [2026-04-09] Page created from Fowler's SDD tool survey (tool tried ~September 2025)
+- [2025-10-15] Page created from Fowler's SDD tool survey (tool tried ~September 2025)
 
 ## Sources
 

@@ -4,7 +4,7 @@ type: tool
 domains: [coding]
 subcategory: spec-driven-development
 tags: [cli, beta, spec-driven]
-as_of: 2026-04-09
+as_of: 2025-10-15
 sources: [sdd-3-tools-fowler]
 ---
 
@@ -12,7 +12,7 @@ sources: [sdd-3-tools-fowler]
 
 The [[concepts/spec-driven-development|SDD]] tool furthest along the spec-as-source direction. A CLI that also doubles as an MCP server, scaffolds workspace config for a variety of coding assistants, and treats the spec as a living artifact that can round-trip with code. Currently in private beta.
 
-## Current status (as of 2026-04-09)
+## Current status (as of 2025-10-15)
 
 - **Private beta** — not publicly available
 - Distributed as a CLI; same binary runs as an MCP server
@@ -47,7 +47,7 @@ Lives in `.tessl/framework/` with additional conventions via `KNOWLEDGE.md` and 
 
 ## Recent changes
 
-- [2026-04-09] Page created from Fowler's SDD tool survey (tool tried ~September 2025)
+- [2025-10-15] Page created from Fowler's SDD tool survey (tool tried ~September 2025)
 
 ## Sources
 

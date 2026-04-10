@@ -90,7 +90,7 @@ source_types:
   tweet:
     raw_dir: raw/tweets
     ingest_style: lightweight
-    notes: "Often a signal only. May touch 1 page. Always preserve the tweet author + date."
+    notes: "Often a signal only. May touch 1 page. If a tweet mainly points to a fuller source, ingest the fuller source and ignore the tweet unless it adds unique information."
   paper:
     raw_dir: raw/papers
     ingest_style: deep

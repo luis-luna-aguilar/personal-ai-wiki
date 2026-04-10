@@ -4,6 +4,7 @@ type: source
 source_type: article
 source_file: raw/articles/2026-04-09-cursorcom-blog-cursor-3.md
 url: https://cursor.com/blog/cursor-3
+published: 2026-04-02
 ingested: 2026-04-09
 domains: [coding, agents]
 ---

@@ -4,7 +4,7 @@ type: model
 domains: [coding, models]
 subcategory: coding-model
 tags: [closed-source]
-as_of: 2026-04-09
+as_of: 2026-04-02
 sources: [cursor-3-launch]
 ---
 
@@ -12,7 +12,7 @@ sources: [cursor-3-launch]
 
 Composer 2 is Cursor's own frontier coding model, positioned as the model behind agent work in [[tools/cursor|Cursor 3]]. This page is a stub — almost everything we know comes from a single passing mention in the Cursor 3 launch post; a dedicated Composer 2 source ingest is pending.
 
-## Current status (as of 2026-04-09)
+## Current status (as of 2026-04-02)
 
 - Cursor's in-house frontier coding model
 - Marketed with "high usage limits" inside Cursor
@@ -23,7 +23,7 @@ Composer 2 is Cursor's own frontier coding model, positioned as the model behind
 
 ## Recent changes
 
-- [2026-04-09] Page created (stub) from a passing mention in the Cursor 3 launch post
+- [2026-04-02] Page created (stub) from a passing mention in the Cursor 3 launch post
 
 ## Sources
 

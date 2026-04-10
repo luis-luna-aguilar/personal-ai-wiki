@@ -4,6 +4,7 @@ type: source
 source_type: article
 source_file: raw/articles/2026-04-09-martinfowlercom-articles-exploring-gen-ai-sdd-3-toolshtml.md
 url: https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html
+published: 2025-10-15
 ingested: 2026-04-09
 domains: [coding, agents]
 ---

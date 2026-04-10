@@ -209,7 +209,18 @@ def fetch_with_playwright(
             )
             page = context.new_page()
 
-        page.goto(url, timeout=timeout * 1000, wait_until=wait_for)
+        try:
+            page.goto(url, timeout=timeout * 1000, wait_until=wait_for)
+        except Exception as nav_err:
+            if wait_for == "networkidle":
+                print(
+                    f"warn: networkidle timed out ({nav_err}); "
+                    "retrying with domcontentloaded (common with Cloudflare bot protection)",
+                    file=sys.stderr,
+                )
+                page.goto(url, timeout=timeout * 1000, wait_until="domcontentloaded")
+            else:
+                raise
         # Some sites lazy-load; give them a breath.
         try:
             page.wait_for_load_state("networkidle", timeout=5000)

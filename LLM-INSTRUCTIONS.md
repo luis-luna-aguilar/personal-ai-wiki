@@ -12,12 +12,14 @@ This is a personal knowledge base that tracks the fast-moving AI landscape: tool
 
 1. **Current state first.** Main pages are present-tense. History is capped, mostly off-page, and only read when explicitly requested.
 2. **Dates are load-bearing.** Every claim has an `as_of` date. Confidence is derived from age at query time, never assigned during ingest.
-3. **Trust the sources.** Do not evaluate source credibility at ingest. Record what the source says with the date you ingested it.
-4. **Reuse over fragmentation.** Prefer updating existing pages to creating new ones. Most sources update 3–8 existing pages and create 0–1 new ones.
-5. **Ambiguity is valid.** Subcategories can have multiple top players. Do not force a single winner unless the sources clearly support one.
-6. **Dry-run by default.** Never write to `wiki/` directly in response to a new source. Always write a proposal to `proposals/` first and wait for user approval.
-7. **Token efficiency.** Do not read `wiki/history/` unless asked. Do not walk the whole wiki — use `wiki/index.md` to find the right pages.
-8. **Use Claude Code's or Codex's native search tools** (Grep, Glob, Read). Do not build or use a custom search CLI.
+3. **Source date beats ingest date.** If the source provides a publication date (article publish date, tweet date, paper date, release date, etc.), use that date for `as_of` on the pages derived from it. Only fall back to the ingest date when the source date is unknown.
+4. **Trust the sources.** Do not evaluate source credibility at ingest. Record what the source says, and keep publication date separate from ingestion date.
+5. **Reuse over fragmentation.** Prefer updating existing pages to creating new ones. Most sources update 3–8 existing pages and create 0–1 new ones.
+6. **Ambiguity is valid.** Subcategories can have multiple top players. Do not force a single winner unless the sources clearly support one.
+7. **Dry-run by default.** Never write to `wiki/` directly in response to a new source. Always write a proposal to `proposals/` first and wait for user approval.
+8. **Token efficiency.** Do not read `wiki/history/` unless asked. Do not walk the whole wiki — use `wiki/index.md` to find the right pages.
+9. **Use Claude Code's or Codex's native search tools** (Grep, Glob, Read). Do not build or use a custom search CLI.
+10. **Prefer the substantive source.** If a tweet mainly points to a linked article, paper, repo, or similar fuller source, ingest the fuller source and ignore the tweet unless the tweet adds unique information.
 
 ## Directory layout
 
@@ -93,6 +95,11 @@ sources: [claude-opus-46-launch, swe-bench-april]   # IDs matching files in wiki
 - `subcategory` — required for `tool`, `model`, `workflow`
 - `sources` — required once a page has any content derived from a source
 
+**Date rule for `as_of`:**
+- If the source has a clear publication/date-of-record, use that date for `as_of` on derived wiki pages.
+- If multiple sources support a page, `as_of` should reflect the newest source-backed claim currently represented on the page.
+- If the source date is unavailable, use the ingest date as a fallback.
+
 **Do not add fields for confidence.** Confidence is computed at query time from `as_of` + `config.yml` thresholds.
 
 ## Page body conventions
@@ -159,6 +166,16 @@ Brief present-tense description. Current version, what it is, what it's good at.
 - [[sources/articles/cursor-vs-windsurf-review]]
 ```
 
+### Concept / trend pages
+
+Concept and trend pages should be **more concise** than tool pages by default. Prefer a compact synthesis over an essay.
+
+- Start with a short definition paragraph.
+- Keep `## Current status` to 3–5 bullets.
+- Add only the sections that materially help understanding; avoid repeating the same idea under multiple headings.
+- Default target is roughly 150–300 words of body content unless the user explicitly wants depth or the concept genuinely needs more structure.
+- If a source is mostly one core idea plus a few implications, prefer one "Why it matters" section over several thematic sections.
+
 ### Recent changes cap
 
 The "Recent changes" section is capped at `config.yml → history.recent_changes_cap` (default 5). When a 6th entry arrives, append the oldest one to the corresponding file under `wiki/history/` (create the file if it doesn't exist) and drop it from the main page.
@@ -174,6 +191,7 @@ type: source
 source_type: article
 source_file: raw/articles/2026-04-09-cursor-3-release.md
 url: https://cursor.com/blog/cursor-3
+published: 2026-04-05   # optional; include when the source provides it
 ingested: 2026-04-09
 domains: [coding]
 ---
@@ -194,6 +212,8 @@ One-paragraph summary.
 ```
 
 This doubles as your "what have I actually read" log.
+
+When a source provides a publication date, record it on the source summary page as `published:` and use that same date for `as_of` on the derived wiki pages.
 
 ## Workflows
 
@@ -255,15 +275,16 @@ status: pending
 
 - [ ] **[misc]** ChatGPT adds voice feature
     *Impact:* consumer side, outside current scope
-    *Recommended:* note-only (one-liner in `trends/consumer-ai.md`)
+    *Recommended:* skip
 ```
 
-**Processing a triage:** When the user says "process the triage" (or similar), re-read the triage file. For each **checked** item:
-- **full ingest** → generate a full proposal at `proposals/YYYY-MM-DD-<slug>.md`
-- **note-only** → apply a one-line update directly (no proposal file); log it
-- **skip** / unchecked → ignore
+**Processing a triage:** When the user says "process the triage" (or similar), re-read the triage file, then:
 
-Then move the triage file to `proposals/triage/applied/` and append a log entry: `## [YYYY-MM-DD] triage | <name> | N full, M note, K skipped`.
+1. **Fetch linked sources for checked items.** For each **checked** item, follow the primary link(s) from the newsletter using `scripts/fetch_url.py` to retrieve the fuller source (article, tweet thread, blog post, etc.). This produces richer content for the proposal than the newsletter summary alone. If a fetch fails, fall back to the newsletter summary and note the gap in the proposal. Unchecked items are not fetched.
+2. **Generate proposals.** For each checked item, generate a proposal at `proposals/YYYY-MM-DD-<slug>.md` using the fetched source content (not just the newsletter blurb). Thin signals (one-liners, minor updates) still get a proposal — just a small one.
+3. **Nothing is applied directly from a triage.** Every change goes through the proposal → approval → apply cycle. Unchecked items are ignored.
+
+Then move the triage file to `proposals/triage/applied/` and append a log entry: `## [YYYY-MM-DD] triage | <name> | N proposals, K skipped`.
 
 ### 4. Proposal format (dry-run diff)
 
@@ -327,6 +348,7 @@ Two-sentence TL;DR of the source.
 **Rules for proposals:**
 - Every intended change is a checkbox. Unchecked = skip.
 - Every draft appears **in full** inside the proposal, in a fenced code block. The user may edit drafts directly in the file before applying.
+- For **updated** pages, show only the relevant diff snippet in the proposal unless the user explicitly asks for the full file. Do not paste the entire unchanged page just to show a small edit.
 - Include "Open questions" when you're uncertain — the user can answer inline.
 - Include a "Schema / vocabulary additions" section whenever you want to introduce a new tag, domain, or subcategory. This requires explicit approval via checkbox.
 

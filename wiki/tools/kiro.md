@@ -4,7 +4,7 @@ type: tool
 domains: [coding]
 subcategory: spec-driven-development
 tags: [spec-driven]
-as_of: 2026-04-09
+as_of: 2025-10-15
 sources: [sdd-3-tools-fowler]
 ---
 
@@ -12,7 +12,7 @@ sources: [sdd-3-tools-fowler]
 
 Kiro is a VS Code-based coding assistant that implements a simple, opinionated [[concepts/spec-driven-development|spec-driven development]] workflow. Of the three SDD tools Birgitta Böckeler surveyed, it is the lightest-weight — mostly spec-first, with no clear story for carrying a spec across multiple tasks.
 
-## Current status (as of 2026-04-09)
+## Current status (as of 2025-10-15)
 
 - Distributed as a VS Code-based product (see kiro.dev)
 - Workflow guided inside the editor; 3 markdown docs per feature
@@ -45,7 +45,7 @@ Kiro calls its memory bank **steering**. Default topology when you let Kiro gene
 
 ## Recent changes
 
-- [2026-04-09] Page created from Fowler's SDD tool survey (tool tried ~September 2025)
+- [2025-10-15] Page created from Fowler's SDD tool survey (tool tried ~September 2025)
 
 ## Sources
 

@@ -3,7 +3,7 @@ title: Agents reshape organizations (leverage moves from individual to org)
 type: trend
 domains: [agents, coding]
 tags: [agentic]
-as_of: 2026-04-09
+as_of: 2026-04-02
 sources: [harvey-legal-is-next]
 ---
 
@@ -31,6 +31,10 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - Adoption of named "background agent" patterns at companies outside the AI labs
 - Whether the bottleneck-shifts-to-coordination claim shows up in headcount, org-chart, or pricing changes
 
+## Related concepts
+
+- [[concepts/agentic-thinking]] — Junyang Lin argues the competitive edge is shifting from model training to environment design and harness engineering, reinforcing the thesis that organizational leverage matters more than individual model capability
+
 ## Open questions
 
 - Is this trend already happening in practice, or is it mostly Twitter / vendor-blog narrative? Need non-vendor data points before treating it as "current."
@@ -38,7 +42,7 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 
 ## Recent changes
 
-- [2026-04-09] Trend opened from Harvey's "Legal is Next" post
+- [2026-04-02] Trend opened from Harvey's "Legal is Next" post
 
 ## Sources
 

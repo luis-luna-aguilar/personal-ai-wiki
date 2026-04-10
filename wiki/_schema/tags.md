@@ -12,6 +12,9 @@ Valid values for the `tags:` field in frontmatter. Tags are for cross-cutting at
 - **`beta`** — flavor: pre-GA product (public or private beta)
 - **`spec-driven`** — flavor: aligned with the spec-driven-development approach
 - **`agentic`** — flavor: agent-centric product or workflow (multi-step, autonomous, tool-using)
+- **`perplexity`** — vendor/org: Perplexity AI
+- **`google`** — vendor/org: Google / DeepMind
+- **`openai`** — vendor/org: OpenAI
 
 ## Conventions
 

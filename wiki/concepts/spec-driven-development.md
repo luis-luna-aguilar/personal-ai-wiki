@@ -4,7 +4,7 @@ type: concept
 domains: [coding, agents]
 subcategory: spec-driven-development
 tags: [spec-driven]
-as_of: 2026-04-09
+as_of: 2025-10-15
 sources: [sdd-3-tools-fowler]
 ---
 
@@ -12,7 +12,7 @@ sources: [sdd-3-tools-fowler]
 
 A loosely-defined AI-assisted coding approach where a structured, behavior-oriented artifact written in natural language — the **spec** — is authored before code and used as the primary input to AI coding agents. The term is still in flux and already semantically diffused: some practitioners use "spec" as a synonym for "detailed prompt," while self-labeled SDD tools differ substantially in how they structure and maintain specs.
 
-## Current status (as of 2026-04-09)
+## Current status (as of 2025-10-15)
 
 - Term is new and contested; no shared definition across tools
 - Three self-labeled SDD tools exist: [[tools/kiro]], [[tools/spec-kit]], [[tools/tessl]]
@@ -54,7 +54,7 @@ From the Fowler review:
 
 ## Recent changes
 
-- [2026-04-09] Page created from Fowler's "Understanding Spec-Driven Development: Kiro, spec-kit, and Tessl"
+- [2025-10-15] Page created from Fowler's "Understanding Spec-Driven Development: Kiro, spec-kit, and Tessl"
 
 ## Sources
 

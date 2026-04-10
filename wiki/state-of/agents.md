@@ -3,8 +3,8 @@ title: State of Agents
 type: state-of
 domains: [agents]
 tags: []
-as_of: 2026-04-09
-sources: [cursor-3-launch, advisor-strategy, stripe-cli]
+as_of: 2026-04-10
+sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin]
 ---
 
 # State of Agents
@@ -17,7 +17,13 @@ Current state of agentic systems — tool use, multi-step autonomy, orchestratio
 
 Surfaces (desktop, web, mobile, chat) where humans supervise, hand off, and review work across multiple AI agents running in parallel.
 
-- [[tools/cursor]] — Cursor 3's desktop app surfaces local and cloud agents in one sidebar, with handoff between environments and demos/screenshots from cloud agents *(as of 2026-04-09)*
+- [[tools/cursor]] — Cursor 3's desktop app surfaces local and cloud agents in one sidebar, with handoff between environments and demos/screenshots from cloud agents *(as of 2026-04-02)*
+
+### Agent orchestration
+
+Platforms that run or coordinate long-horizon agents across execution environments, instead of only exposing a local loop or a thin UI over one agent.
+
+- [[tools/claude-managed-agents]] — Anthropic's hosted runtime separates session, harness, and sandbox so long-running agents can recover from failures, attach tools or customer infrastructure, and start faster when no sandbox is needed immediately *(as of 2026-04-09)*
 
 ### Model orchestration
 
@@ -33,6 +39,8 @@ Agent-compatible tools that let a model provision external services and receive 
 
 ## Recent changes
 
+- [2026-04-10] Added [[concepts/agentic-thinking]] — Junyang Lin's essay on the shift from reasoning to agentic thinking
+- [2026-04-09] Added `agent-orchestration` with [[tools/claude-managed-agents]] after ingesting Anthropic's Managed Agents architecture post.
 - [2026-04-09] Added `agentic-devops` subcategory with [[tools/stripe-cli]] after ingesting the `projects.dev` landing page
 - [2026-04-09] Added `model-orchestration` subcategory with [[workflows/advisor-strategy]] after ingesting Anthropic's advisor-strategy launch post.
-- [2026-04-09] First content for this page. Added `agent-orchestration-ui` subcategory with Cursor after ingesting the Cursor 3 launch post.
+- [2026-04-02] First content for this page. Added `agent-orchestration-ui` subcategory with Cursor after ingesting the Cursor 3 launch post.

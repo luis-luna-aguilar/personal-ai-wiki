@@ -19,4 +19,4 @@ _(Empty. Subcategories will be added as models are ingested.)_
 
 ## Recent changes
 
-_(none)_
+- [2026-04-10] Gemini adds custom interactive visualizations in chat and notebooks (dedicated workspaces with grouped chats, file uploads, instructions); rolling out to paid accounts first
