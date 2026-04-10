@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e47d65980cfcebbd",
+        "id": "1780da32fc4ea65b",
         "type": "tabs",
         "children": [
           {
-            "id": "5a95f7f4e96ef30e",
+            "id": "d96759bc3b560b27",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -90,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AGENTS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for AGENTS"
+              "title": "Backlinks"
             }
           },
           {
@@ -109,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AGENTS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from AGENTS"
+              "title": "Outgoing links"
             }
           },
           {
@@ -152,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AGENTS.md",
+                "file": "proposals/2026-04-09-stripe-projects.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of AGENTS"
+              "title": "Outline of 2026-04-09-stripe-projects"
             }
           }
         ]
@@ -181,8 +179,13 @@
   },
   "active": "32d5ab9afeaf3323",
   "lastOpenFiles": [
-    "CLAUDE.md",
+    "proposals/applied/2026-04-09-stripe-projects.md",
+    "wiki/sources/articles/stripe-cli.md",
+    "wiki/tools/stripe-cli.md",
     "AGENTS.md",
+    "proposals/2026-04-09-stripe-projects.md",
+    "raw/articles/2026-04-09-projectsdev.md",
+    "CLAUDE.md",
     "LLM-INSTRUCTIONS.md",
     "raw/assets/2026-04-09-langchain-2039028327030079565.jpg",
     "raw/tweets/2026-04-09-langchain-2039028327030079565.md",
@@ -205,11 +208,6 @@
     "proposals/applied/2026-04-09-cursor-3-launch.md",
     "wiki/sources/articles/cursor-3-launch.md",
     "wiki/models/composer-2.md",
-    "wiki/tools/cursor.md",
-    "raw/articles/2026-04-09-cursorcom-blog-cursor-3.md",
-    "proposals/2026-04-09-sdd-3-tools-fowler.md",
-    "proposals/applied/2026-04-09-sdd-3-tools-fowler.md",
-    "wiki/sources/articles/sdd-3-tools-fowler.md",
     "scripts/__pycache__/_lib.cpython-39.pyc",
     "scripts/__pycache__/_lib.cpython-314.pyc",
     "scripts/__pycache__",

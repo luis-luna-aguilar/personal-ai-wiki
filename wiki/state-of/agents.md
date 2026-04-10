@@ -4,7 +4,7 @@ type: state-of
 domains: [agents]
 tags: []
 as_of: 2026-04-09
-sources: [cursor-3-launch, advisor-strategy]
+sources: [cursor-3-launch, advisor-strategy, stripe-cli]
 ---
 
 # State of Agents
@@ -25,7 +25,14 @@ Patterns that combine models of different sizes or costs inside a single agentic
 
 - [[workflows/advisor-strategy]] — Anthropic: a small executor (Sonnet or Haiku) drives the loop and escalates to Opus as an *advisor* only when stuck. Shipped as a server-side `advisor_20260301` tool on the Claude API, making it a one-line change to a Messages request. Reported +2.7% on SWE-bench Multilingual *and* −11.9% cost for Sonnet+Opus-advisor vs Sonnet alone *(as of 2026-04-09)*
 
+### Agentic DevOps
+
+Agent-compatible tools that let a model provision external services and receive credentials through a repeatable CLI workflow instead of clicking through SaaS dashboards.
+
+- [[tools/stripe-cli]] — Stripe explicitly pitches the CLI `projects` flow for "you or your agents": provision services across providers, sync credentials back to the environment, and manage upgrades or billing from the CLI *(as of 2026-04-09)*
+
 ## Recent changes
 
+- [2026-04-09] Added `agentic-devops` subcategory with [[tools/stripe-cli]] after ingesting the `projects.dev` landing page
 - [2026-04-09] Added `model-orchestration` subcategory with [[workflows/advisor-strategy]] after ingesting Anthropic's advisor-strategy launch post.
 - [2026-04-09] First content for this page. Added `agent-orchestration-ui` subcategory with Cursor after ingesting the Cursor 3 launch post.

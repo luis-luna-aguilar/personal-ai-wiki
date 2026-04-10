@@ -35,3 +35,7 @@ grep "^## \[" wiki/log.md | tail -20
 ## [2026-04-09] schema | added subcategory `model-orchestration`; added tag `anthropic`
 
 ## [2026-04-09] ingest | Anthropic — "The advisor strategy" | 2 pages updated, 2 created (state-of/agents, wiki/index updated; workflows/advisor-strategy, sources/articles/advisor-strategy created)
+
+## [2026-04-09] schema | added subcategory `agentic-devops`
+
+## [2026-04-09] ingest | Stripe CLI `projects` developer preview | 3 pages updated, 2 created (state-of/coding, state-of/agents, wiki/index updated; tools/stripe-cli, sources/articles/stripe-cli created)

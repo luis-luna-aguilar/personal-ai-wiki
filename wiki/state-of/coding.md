@@ -4,7 +4,7 @@ type: state-of
 domains: [coding]
 tags: []
 as_of: 2026-04-09
-sources: [sdd-3-tools-fowler, cursor-3-launch]
+sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli]
 ---
 
 # State of Coding
@@ -27,7 +27,14 @@ Coding tools whose primary UI is built around managing one or more AI coding age
 
 - [[tools/cursor]] — Cursor 3 is a unified agent workspace with multi-repo, local↔cloud handoff, plugin marketplace; built from scratch (not a VS Code fork); legacy IDE mode still available *(as of 2026-04-09)*
 
+### Agentic DevOps
+
+Tools that turn app-stack setup into a repeatable command-line workflow across multiple providers, with explicit support for agent-executable provisioning.
+
+- [[tools/stripe-cli]] — Stripe CLI's developer-preview `projects` workflow provisions hosting, databases, auth, AI, analytics, and more across providers; credentials sync back to the environment and billing can be managed from the CLI *(as of 2026-04-09)*
+
 ## Recent changes
 
+- [2026-04-09] Added `agentic-devops` subcategory with [[tools/stripe-cli]] after ingesting the `projects.dev` launch page
 - [2026-04-09] Cursor 3 launched; added new `agentic-coding-workspace` subcategory and placed Cursor under it
 - [2026-04-09] First content for this page. Added `spec-driven-development` subcategory with Kiro, spec-kit, Tessl after ingesting Fowler's SDD survey.

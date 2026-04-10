@@ -334,8 +334,10 @@ Two-sentence TL;DR of the source.
 
 Triggered by **"apply this proposal"** / **"apply proposals/xxx.md"**.
 
+**Critical rule:** before applying, you must re-open and re-read the proposal file from disk immediately before making any changes. Assume the user may have edited the proposal in Obsidian or another editor after you last looked at it. Do **not** rely on your memory, prior tool output, or an earlier read of the file.
+
 **Steps:**
-1. Re-read the proposal file **as it is now** (the user may have edited it).
+1. Re-read the proposal file **from disk, as it is now, immediately before applying** (the user may have edited it externally).
 2. For each **checked** item, perform the action using the draft content **as it now appears in the file** (the user may have edited drafts).
 3. Update `wiki/index.md` with any new pages.
 4. Update `wiki/_schema/` files for any approved vocabulary additions.
@@ -344,7 +346,7 @@ Triggered by **"apply this proposal"** / **"apply proposals/xxx.md"**.
 7. Run an inline wikilink sanity check on everything you wrote; fix any broken links before reporting done.
 8. Report a short summary to the user.
 
-**Never apply an unchecked item.** Never apply a draft that has been deleted from the file. If the file is in an inconsistent state (checked boxes reference deleted drafts), stop and ask.
+**Never apply an unchecked item.** Never apply a draft that has been deleted from the file. If the file is in an inconsistent state (checked boxes reference deleted drafts), stop and ask. If what you see in the editor/session conflicts with the last version you remember, trust the fresh on-disk read.
 
 ### 6. Reject proposal
 

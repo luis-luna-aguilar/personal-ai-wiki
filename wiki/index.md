@@ -35,6 +35,7 @@ Tools and products built on top of models. One page per tool.
 - [[tools/harvey]] — legal AI platform; thin stub from a single editorial source *(as_of: 2026-04-09)*
 - [[tools/kiro]] — VS Code-based SDD tool, 3-doc workflow *(as_of: 2026-04-09)*
 - [[tools/spec-kit]] — GitHub's CLI SDD scaffolder with slash commands *(as_of: 2026-04-09)*
+- [[tools/stripe-cli]] — Stripe CLI's developer-preview `projects` workflow for provisioning and managing app-stack services across providers *(as_of: 2026-04-09)*
 - [[tools/tessl]] — CLI + MCP framework exploring spec-as-source; private beta *(as_of: 2026-04-09)*
 
 ## Benchmarks
@@ -71,10 +72,10 @@ See `wiki/sources/` — source summaries are not indexed here (they're many and 
 
 - state-of: 4 (3 populated, 1 skeleton)
 - models: 1
-- tools: 5
+- tools: 6
 - benchmarks: 0
 - workflows: 1
 - concepts: 1
 - trends: 1
 
-**Total content pages: 9.** The wiki is in the bootstrap phase (<30 pages) — categorization discipline is relaxed.
+**Total content pages: 10.** The wiki is in the bootstrap phase (<30 pages) — categorization discipline is relaxed.

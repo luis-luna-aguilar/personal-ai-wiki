@@ -42,6 +42,12 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 - **Definition:** Patterns that combine models of different sizes or costs inside a single agentic task — e.g. a small executor escalating to a larger advisor, or a large orchestrator delegating to small workers. Concerned with how an agent is internally structured, not with the user-facing surface.
 - **Examples:** [[workflows/advisor-strategy]]
 
+### agentic-devops
+- **Parent domain(s):** coding, agents
+- **Applies to types:** tool
+- **Definition:** CLI-native tools that provision and manage third-party app infrastructure and credentials across multiple providers, in workflows designed to be executable by humans or agents.
+- **Examples:** [[tools/stripe-cli]]
+
 ### Format
 
 Each entry follows this shape:
