@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Running scripts — AI Wiki Manual</title>
+  <link rel="stylesheet" href="assets/pico.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="container">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">AI Wiki</a>
+    <div class="subtitle">User manual</div>
+
+    <h3>Start here</h3>
+    <ul>
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting-started.html">Getting started</a></li>
+    </ul>
+
+    <h3>Daily use</h3>
+    <ul>
+      <li><a href="ingesting-sources.html">Ingesting sources</a></li>
+      <li><a href="url-fetching.html">Fetching from URLs</a></li>
+      <li><a href="triaging-newsletters.html">Triaging newsletters</a></li>
+      <li><a href="proposals-workflow.html">Proposals workflow</a></li>
+      <li><a href="querying-the-wiki.html">Asking questions</a></li>
+      <li><a href="personal-notes.html">Personal notes &amp; takes</a></li>
+    </ul>
+
+    <h3>Maintenance</h3>
+    <ul>
+      <li><a href="running-scripts.html" aria-current="page">Running scripts</a></li>
+      <li><a href="config-reference.html">Config reference</a></li>
+    </ul>
+  </aside>
+
+  <article class="content">
+    <h1>Running scripts</h1>
+    <p>Maintenance scripts in <code>scripts/</code> are zero-token — they walk the vault's markdown files directly and produce reports. Run them whenever; they're cheap. The LLM can also run them on your behalf when you ask for a check.</p>
+
+    <h2>When things run</h2>
+    <div class="callout note">
+      <strong>Nothing runs automatically.</strong> No cron, no hooks, no post-commit triggers. Every script runs only when you (or the LLM, on your instruction) explicitly invoke it.
+    </div>
+
+    <p>Suggested cadence:</p>
+    <ul>
+      <li><strong>Weekly:</strong> <code>python scripts/lint_all.py</code> before your review session. Catches most hygiene issues at once.</li>
+      <li><strong>Ad-hoc:</strong> run <code>stale.py</code> when you want to know what needs refreshing, <code>orphans.py</code> when the graph view looks messy, <code>link_check.py</code> after a big refactor.</li>
+      <li><strong>Semantic lint (LLM-based):</strong> monthly or before a major review. Explicit phrases only — see below.</li>
+    </ul>
+
+    <h2>The scripts</h2>
+
+    <h3><code>stale.py</code></h3>
+    <p>Reports wiki pages whose <code>as_of</code> date has exceeded the staleness threshold for their type. Thresholds live in <code>config.yml → stale_thresholds_days</code>.</p>
+    <pre><code>python scripts/stale.py            # human report
+python scripts/stale.py --json     # machine-readable</code></pre>
+    <p>Output groups pages into <strong>stale</strong> (age &gt; 2× threshold), <strong>aging</strong> (age &gt; threshold), and <strong>missing_as_of</strong> (frontmatter is incomplete).</p>
+    <p>Returns exit code 1 if any pages are stale, 0 otherwise.</p>
+
+    <h3><code>orphans.py</code></h3>
+    <p>Reports wiki pages with no inbound <code>[[wikilinks]]</code>. Exempt paths (state-of, _schema, history, sources, index, log) are never counted as orphans — see <code>config.yml → orphans</code>.</p>
+    <pre><code>python scripts/orphans.py
+python scripts/orphans.py --json</code></pre>
+
+    <h3><code>link_check.py</code></h3>
+    <p>Reports broken <code>[[wikilinks]]</code> — targets that don't resolve to any file in <code>wiki/</code>.</p>
+    <pre><code>python scripts/link_check.py
+python scripts/link_check.py --json</code></pre>
+
+    <h3><code>tag_compliance.py</code></h3>
+    <p>Reports any tag, domain, or subcategory used in a page's frontmatter that isn't declared in <code>wiki/_schema/</code>. Catches accidental typos and undeclared vocabulary.</p>
+    <pre><code>python scripts/tag_compliance.py
+python scripts/tag_compliance.py --json</code></pre>
+
+    <h3><code>lint_all.py</code></h3>
+    <p>Chains all four scripts above into one combined report. This is the one you run weekly.</p>
+    <pre><code>python scripts/lint_all.py</code></pre>
+
+    <h3><code>fetch_url.py</code></h3>
+    <p>Real-browser URL fetch. See <a href="url-fetching.html">Fetching from URLs</a> for details.</p>
+    <pre><code>python scripts/fetch_url.py --type article --url https://...</code></pre>
+
+    <h2>Asking the LLM to run them</h2>
+    <p>The LLM knows these trigger phrases:</p>
+    <table>
+      <thead><tr><th>You say…</th><th>The LLM runs…</th></tr></thead>
+      <tbody>
+        <tr><td>"show stale pages", "what's stale"</td><td><code>stale.py</code></td></tr>
+        <tr><td>"find orphan pages"</td><td><code>orphans.py</code></td></tr>
+        <tr><td>"check links"</td><td><code>link_check.py</code></td></tr>
+        <tr><td>"check tag compliance"</td><td><code>tag_compliance.py</code></td></tr>
+        <tr><td>"run lint", "lint the wiki"</td><td><code>lint_all.py</code></td></tr>
+      </tbody>
+    </table>
+
+    <h2>Semantic lint (LLM-based, explicit only)</h2>
+    <p>Some checks need semantic understanding and can't be scripted. The LLM runs these <strong>only when you explicitly ask</strong>, because they cost serious tokens. None are triggered automatically.</p>
+    <table>
+      <thead><tr><th>Check</th><th>Trigger phrase</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Contradictions</td>
+          <td>"find contradictions", "scan for contradictions"</td>
+          <td>Reads state-of + referenced pages, looks for claims that contradict each other.</td>
+        </tr>
+        <tr>
+          <td>Missing pages</td>
+          <td>"missing page suggestions", "what concepts need pages"</td>
+          <td>Finds entities/concepts mentioned across many pages but lacking their own page.</td>
+        </tr>
+        <tr>
+          <td>Domain completeness</td>
+          <td>"domain completeness for X", "what's missing from state-of/X"</td>
+          <td>Reports subcategories or topics that look thin compared to mentions elsewhere.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout warn">
+      <strong>These will not run unless you ask with one of the trigger phrases above.</strong> Scripts are free; semantic lint is not. Treat it like a monthly review, not a routine check.
+    </div>
+
+    <h2>Exit codes</h2>
+    <p>All scripts use these exit codes so they can be chained in CI or other automation:</p>
+    <ul>
+      <li><strong>0</strong> — no issues</li>
+      <li><strong>1</strong> — issues found</li>
+      <li><strong>2</strong> — script error (e.g., missing Playwright)</li>
+    </ul>
+
+    <footer class="page-footer">
+      <span><a href="personal-notes.html">← Personal notes &amp; takes</a></span>
+      <span><a href="config-reference.html">Config reference →</a></span>
+    </footer>
+  </article>
+</main>
+</body>
+</html>

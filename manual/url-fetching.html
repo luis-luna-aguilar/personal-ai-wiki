@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetching from URLs — AI Wiki Manual</title>
+  <link rel="stylesheet" href="assets/pico.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="container">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">AI Wiki</a>
+    <div class="subtitle">User manual</div>
+
+    <h3>Start here</h3>
+    <ul>
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting-started.html">Getting started</a></li>
+    </ul>
+
+    <h3>Daily use</h3>
+    <ul>
+      <li><a href="ingesting-sources.html">Ingesting sources</a></li>
+      <li><a href="url-fetching.html" aria-current="page">Fetching from URLs</a></li>
+      <li><a href="triaging-newsletters.html">Triaging newsletters</a></li>
+      <li><a href="proposals-workflow.html">Proposals workflow</a></li>
+      <li><a href="querying-the-wiki.html">Asking questions</a></li>
+      <li><a href="personal-notes.html">Personal notes &amp; takes</a></li>
+    </ul>
+
+    <h3>Maintenance</h3>
+    <ul>
+      <li><a href="running-scripts.html">Running scripts</a></li>
+      <li><a href="config-reference.html">Config reference</a></li>
+    </ul>
+  </aside>
+
+  <article class="content">
+    <h1>Fetching from URLs</h1>
+    <p>Give the LLM a URL and it'll pull the content using a real Chromium browser via <code>scripts/fetch_url.py</code>. This bypasses most bot blocks and supports logged-in sites via a persistent profile.</p>
+
+    <h2>Why not plain HTTP fetch?</h2>
+    <p>Most news sites, Twitter, Substack, and paywalled content block simple HTTP fetches. A real browser with JavaScript execution, a realistic user agent, and cookie persistence gets through nearly all of it. This is why <code>fetch_url.py</code> uses Playwright-driven Chromium.</p>
+
+    <h2>One-time setup</h2>
+    <pre><code>pip install playwright markdownify readability-lxml
+playwright install chromium</code></pre>
+    <p>Chromium lives wherever Playwright installs it (usually <code>~/Library/Caches/ms-playwright</code> on macOS). The persistent browser profile lives at <code>~/.cache/ai-wiki-playwright</code> by default — change via <code>config.yml</code> → <code>fetch_url.profile_dir</code>.</p>
+
+    <h2>Usage (you telling the LLM)</h2>
+    <p>Any of these work:</p>
+    <ul>
+      <li>"fetch and ingest <code>https://cursor.com/blog/cursor-3</code>"</li>
+      <li>"ingest this URL: https://arxiv.org/abs/2404.12345"</li>
+      <li>"pull https://github.com/anthropics/claude-code and ingest as a repo"</li>
+    </ul>
+    <p>The LLM decides the <code>--type</code> based on the URL shape (github → repo, arxiv → paper, twitter → tweet, otherwise → article), runs the script, then proceeds with a normal ingest proposal based on the saved raw file.</p>
+
+    <h2>Usage (you running it directly)</h2>
+    <p>You can also run it yourself before asking the LLM to ingest:</p>
+    <pre><code>python scripts/fetch_url.py --type article --url https://cursor.com/blog/cursor-3
+python scripts/fetch_url.py --type paper   --url https://arxiv.org/abs/2404.12345
+python scripts/fetch_url.py --type repo    --url https://github.com/anthropics/claude-code
+python scripts/fetch_url.py --type tweet   --url https://twitter.com/karpathy/status/1234</code></pre>
+
+    <p>The script prints the saved file's relative path as its last line, so you can chain it.</p>
+
+    <h2>Logged-in sites (Twitter, paywalls)</h2>
+    <p>The script uses a <strong>persistent Chromium profile</strong>, so once you log in, cookies are saved and future runs work without re-authenticating.</p>
+    <p>To log in:</p>
+    <ol>
+      <li>Run the script once on any URL from the site you need to log into.</li>
+      <li>If it's headless, run with the profile in headed mode — the simplest trick is to open the profile dir manually in Chromium: <code>chromium --user-data-dir=~/.cache/ai-wiki-playwright</code> (or let the LLM run a one-off interactive session).</li>
+      <li>Log in as you normally would. Close the browser.</li>
+      <li>Future runs of <code>fetch_url.py</code> will reuse the cookies.</li>
+    </ol>
+    <p>Alternatively, run without the persistent profile via <code>--no-profile</code> for one-off fetches.</p>
+
+    <h2>When the fetch fails</h2>
+    <p>Some sites will still fail — very aggressive anti-bot (Cloudflare challenges), heavy JS frameworks with slow hydration, or sites that gate on WebGL fingerprints. Fallbacks:</p>
+    <ul>
+      <li><strong>Obsidian Web Clipper</strong> — clip the article manually in your real browser, drop into <code>raw/articles/</code>.</li>
+      <li><strong>Paste the text</strong> — copy the content, paste it into a new <code>raw/</code> file, then ingest.</li>
+      <li><strong>Archive.org / archive.today</strong> — sometimes easier to fetch.</li>
+    </ul>
+
+    <div class="callout warn">
+      <strong>Do not</strong> fall back to Claude Code's built-in <code>WebFetch</code> tool. That's the thing <code>fetch_url.py</code> replaces — <code>WebFetch</code> gets blocked too often and can't execute JavaScript. The LLM is instructed to never use it for source ingestion.
+    </div>
+
+    <h2>Images in fetched content</h2>
+    <p>When <code>config.yml → fetch_url.download_images</code> is on (the default), images referenced in the article will be downloaded to <code>raw/assets/</code> and the markdown links rewritten to local paths. This means the LLM can later open an image to look at it directly, which matters for benchmark charts and screenshots.</p>
+
+    <h2>Command reference</h2>
+    <pre><code>python scripts/fetch_url.py \
+  --type {article,tweet,paper,podcast,repo,newsletter,note} \
+  --url  https://...                 # required
+  [--slug my-custom-slug]             # override auto-generated filename slug
+  [--no-profile]                      # don't use the persistent Chromium profile
+  [--profile-dir /path/to/profile]    # override profile location</code></pre>
+
+    <footer class="page-footer">
+      <span><a href="ingesting-sources.html">← Ingesting sources</a></span>
+      <span><a href="triaging-newsletters.html">Triaging newsletters →</a></span>
+    </footer>
+  </article>
+</main>
+</body>
+</html>

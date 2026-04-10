@@ -1,0 +1,137 @@
+# AI Wiki configuration.
+# All thresholds and settings used by scripts and by the LLM at query time.
+# Edit freely — nothing here is baked into code outside these keys.
+
+# ---------------------------------------------------------------------------
+# Staleness thresholds (in days), used by:
+#   - scripts/stale.py to report stale pages
+#   - LLM at query time to compute confidence bands
+#
+# A page is considered "fresh" if (today - as_of) <= threshold for its type.
+# If the page type isn't listed, "default" is used.
+# ---------------------------------------------------------------------------
+stale_thresholds_days:
+  state-of:  30
+  model:     30
+  tool:      30
+  benchmark: 30
+  workflow:  60
+  concept:   90
+  trend:     30
+  source:   365    # sources rarely "go stale" — they record what was said when
+  default:   30
+
+# ---------------------------------------------------------------------------
+# Confidence bands for query answers.
+# Given page type threshold T and page age A:
+#   A <=           high_max_ratio * T  -> high
+#   A <=         medium_max_ratio * T  -> medium ("may be outdated")
+#   otherwise                          -> stale  ("verify this")
+# ---------------------------------------------------------------------------
+query:
+  confidence_bands:
+    high_max_ratio:   1.0
+    medium_max_ratio: 2.0
+
+# ---------------------------------------------------------------------------
+# History handling.
+# Main pages keep at most `recent_changes_cap` bullets in their "Recent changes"
+# section. When a new entry pushes the count over the cap, the oldest is spilled
+# to the corresponding file under wiki/history/<type>/<slug>.md.
+# ---------------------------------------------------------------------------
+history:
+  recent_changes_cap: 10
+
+# ---------------------------------------------------------------------------
+# Staleness script behaviour.
+# ---------------------------------------------------------------------------
+stale:
+  # Directories to scan for staleness.
+  include_paths:
+    - wiki/state-of
+    - wiki/models
+    - wiki/tools
+    - wiki/benchmarks
+    - wiki/workflows
+    - wiki/concepts
+    - wiki/trends
+  # Directories explicitly excluded.
+  exclude_paths:
+    - wiki/history
+    - wiki/sources
+    - wiki/_schema
+    - personal
+
+# ---------------------------------------------------------------------------
+# Orphan detection.
+# A page is an orphan if no other page under `scan_paths` links to it.
+# Pages under `exempt_paths` are never reported as orphans.
+# ---------------------------------------------------------------------------
+orphans:
+  scan_paths:
+    - wiki
+  exempt_paths:
+    - wiki/index.md
+    - wiki/log.md
+    - wiki/state-of
+    - wiki/_schema
+    - wiki/history
+    - wiki/sources
+
+# ---------------------------------------------------------------------------
+# Source types and their ingest playbooks.
+# The LLM reads these and adjusts its ingest behaviour accordingly.
+# ---------------------------------------------------------------------------
+source_types:
+  article:
+    raw_dir: raw/articles
+    ingest_style: standard
+    notes: "Full ingest. Extract key claims, update relevant pages, create source summary."
+  tweet:
+    raw_dir: raw/tweets
+    ingest_style: lightweight
+    notes: "Often a signal only. May touch 1 page. Always preserve the tweet author + date."
+  paper:
+    raw_dir: raw/papers
+    ingest_style: deep
+    notes: "Deep read. Likely to spawn concept pages. Extract methodology, findings, limitations."
+  podcast:
+    raw_dir: raw/podcasts
+    ingest_style: summarize_first
+    notes: "Long transcript. Summarize aggressively before extracting claims. Preserve speaker attribution."
+  repo:
+    raw_dir: raw/repos
+    ingest_style: readme_first
+    notes: "Read README carefully. Capture: what it does, stack, activity, comparisons to alternatives. Fits under tools/."
+  newsletter:
+    raw_dir: raw/newsletters
+    ingest_style: triage
+    notes: "Do NOT ingest directly. Always write a triage file first."
+  meeting:
+    raw_dir: raw/meetings
+    ingest_style: personal
+    notes: "Personal context. Decisions and opinions. Consider whether this belongs in personal/ rather than wiki/."
+  note:
+    raw_dir: raw/notes
+    ingest_style: personal
+    notes: "User's own notes. Often personal space material."
+
+# ---------------------------------------------------------------------------
+# URL fetching via scripts/fetch_url.py.
+# ---------------------------------------------------------------------------
+fetch_url:
+  # Where Playwright stores persistent browser state (cookies, logins).
+  # Using a persistent profile means logged-in sites (Twitter, paywalled subs) work.
+  profile_dir: ~/.cache/ai-wiki-playwright
+  # Default timeout for page loads (seconds).
+  timeout: 30
+  # Wait for network idle before extraction.
+  wait_for: networkidle
+  # Download and rewrite images to local paths.
+  download_images: true
+  images_dir: raw/assets
+
+# ---------------------------------------------------------------------------
+# Log file location.
+# ---------------------------------------------------------------------------
+log_file: wiki/log.md

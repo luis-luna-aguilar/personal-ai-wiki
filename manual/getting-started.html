@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting started — AI Wiki Manual</title>
+  <link rel="stylesheet" href="assets/pico.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="container">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">AI Wiki</a>
+    <div class="subtitle">User manual</div>
+
+    <h3>Start here</h3>
+    <ul>
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting-started.html" aria-current="page">Getting started</a></li>
+    </ul>
+
+    <h3>Daily use</h3>
+    <ul>
+      <li><a href="ingesting-sources.html">Ingesting sources</a></li>
+      <li><a href="url-fetching.html">Fetching from URLs</a></li>
+      <li><a href="triaging-newsletters.html">Triaging newsletters</a></li>
+      <li><a href="proposals-workflow.html">Proposals workflow</a></li>
+      <li><a href="querying-the-wiki.html">Asking questions</a></li>
+      <li><a href="personal-notes.html">Personal notes &amp; takes</a></li>
+    </ul>
+
+    <h3>Maintenance</h3>
+    <ul>
+      <li><a href="running-scripts.html">Running scripts</a></li>
+      <li><a href="config-reference.html">Config reference</a></li>
+    </ul>
+  </aside>
+
+  <article class="content">
+    <h1>Getting started</h1>
+    <p>One-time setup: install Python dependencies for the scripts, configure Obsidian helpers, and know where to drop things.</p>
+
+    <h2>1. Python dependencies</h2>
+    <p>The maintenance scripts (<code>stale.py</code>, <code>orphans.py</code>, <code>link_check.py</code>, <code>tag_compliance.py</code>, <code>lint_all.py</code>) have <strong>no external dependencies</strong> — they run on stdlib Python 3.9+.</p>
+
+    <p>The URL fetcher (<code>fetch_url.py</code>) needs a real browser and a few libraries. Run this once:</p>
+    <pre><code>pip install playwright markdownify readability-lxml
+playwright install chromium</code></pre>
+
+    <p>This installs Playwright (browser automation), markdownify (HTML→markdown), readability-lxml (article extraction), and a headless Chromium browser.</p>
+
+    <div class="callout note">
+      <strong>Why a real browser?</strong> Plain HTTP fetches get blocked by anti-bot systems on most news sites and block-free by design on Twitter, Substack, and paywalled content.
+      A real Chromium instance bypasses nearly all of this and supports logins via persistent profiles.
+    </div>
+
+    <h2>2. Verify the scripts work</h2>
+    <p>From the vault root:</p>
+    <pre><code>python scripts/lint_all.py</code></pre>
+    <p>You should see four sections (stale, orphans, link check, tag compliance) and an <code>OK</code> summary. On a fresh empty wiki, everything is green.</p>
+
+    <h2>3. Obsidian setup</h2>
+    <p>This vault is its own Obsidian vault — open the <code>AI Wiki</code> folder in Obsidian directly.</p>
+
+    <h3>Recommended plugins / settings</h3>
+    <ul>
+      <li>
+        <strong>Obsidian Web Clipper</strong> (browser extension): clip web articles directly to <code>raw/articles/</code>.
+        When you clip, the LLM can then "ingest" the clipped file by name.
+      </li>
+      <li>
+        <strong>Attachment folder:</strong> Settings → Files and links → set <em>Default location for new attachments</em> to
+        <code>raw/assets/</code>. This keeps all clipped images in one place.
+      </li>
+      <li>
+        <strong>Download attachments hotkey:</strong> Settings → Hotkeys → search "Download" → find
+        <em>Download attachments for current file</em> and bind to <kbd>Ctrl/Cmd + Shift + D</kbd>.
+        After clipping an article, hit the hotkey and all images download locally.
+      </li>
+      <li>
+        <strong>Graph view:</strong> the wiki structure becomes legible once you have a few pages — use it to spot orphans and hubs.
+      </li>
+    </ul>
+
+    <h2>4. Know where things go</h2>
+    <table>
+      <thead><tr><th>When you have…</th><th>Put it in…</th></tr></thead>
+      <tbody>
+        <tr><td>A clipped or pasted article</td><td><code>raw/articles/</code></td></tr>
+        <tr><td>A tweet (screenshot or text)</td><td><code>raw/tweets/</code></td></tr>
+        <tr><td>A PDF paper</td><td><code>raw/papers/</code></td></tr>
+        <tr><td>A podcast transcript</td><td><code>raw/podcasts/</code></td></tr>
+        <tr><td>A GitHub repo's README</td><td><code>raw/repos/</code></td></tr>
+        <tr><td>A newsletter issue</td><td><code>raw/newsletters/</code></td></tr>
+        <tr><td>Meeting notes</td><td><code>raw/meetings/</code></td></tr>
+        <tr><td>Your own notes</td><td><code>raw/notes/</code></td></tr>
+      </tbody>
+    </table>
+
+    <p>Or — skip the folder and just give the LLM a URL. It'll run <code>fetch_url.py</code> for you. See <a href="url-fetching.html">Fetching from URLs</a>.</p>
+
+    <h2>5. Your first source</h2>
+    <p>Pick a recent article you'd like to capture. Drop it into <code>raw/articles/</code> and tell the LLM:</p>
+    <blockquote>ingest <code>raw/articles/your-file.md</code></blockquote>
+    <p>The LLM will draft a proposal file under <code>proposals/</code>. Open it in Obsidian, tick the boxes for what to apply, and say:</p>
+    <blockquote>apply it</blockquote>
+    <p>Repeat. That's the loop.</p>
+
+    <div class="callout">
+      <strong>First ~10 sources will fan out aggressively.</strong> The wiki is empty, so new sources will create many new pages and subcategories.
+      That's expected — after ~30 pages the LLM tightens up its reuse-first discipline automatically.
+    </div>
+
+    <footer class="page-footer">
+      <span><a href="index.html">← Overview</a></span>
+      <span><a href="ingesting-sources.html">Ingesting sources →</a></span>
+    </footer>
+  </article>
+</main>
+</body>
+</html>

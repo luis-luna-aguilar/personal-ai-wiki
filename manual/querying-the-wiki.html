@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asking questions — AI Wiki Manual</title>
+  <link rel="stylesheet" href="assets/pico.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="container">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">AI Wiki</a>
+    <div class="subtitle">User manual</div>
+
+    <h3>Start here</h3>
+    <ul>
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting-started.html">Getting started</a></li>
+    </ul>
+
+    <h3>Daily use</h3>
+    <ul>
+      <li><a href="ingesting-sources.html">Ingesting sources</a></li>
+      <li><a href="url-fetching.html">Fetching from URLs</a></li>
+      <li><a href="triaging-newsletters.html">Triaging newsletters</a></li>
+      <li><a href="proposals-workflow.html">Proposals workflow</a></li>
+      <li><a href="querying-the-wiki.html" aria-current="page">Asking questions</a></li>
+      <li><a href="personal-notes.html">Personal notes &amp; takes</a></li>
+    </ul>
+
+    <h3>Maintenance</h3>
+    <ul>
+      <li><a href="running-scripts.html">Running scripts</a></li>
+      <li><a href="config-reference.html">Config reference</a></li>
+    </ul>
+  </aside>
+
+  <article class="content">
+    <h1>Asking questions</h1>
+    <p>Once the wiki has content in it, you can ask the LLM questions and get answers grounded in the pages you've ingested. Answers come with a <strong>confidence label</strong> based on how fresh the underlying pages are.</p>
+
+    <h2>Two modes</h2>
+    <h3>Wiki-only: <code>ask</code></h3>
+    <p>Default mode. The LLM answers strictly from the wiki, reading only the pages relevant to your question. It reports confidence based on the <code>as_of</code> dates of the pages it used.</p>
+    <ul>
+      <li>"ask: what's the best tool for agentic coding right now?"</li>
+      <li>"based on the wiki, which models lead on tool use?"</li>
+      <li>"how does Cursor compare to Claude Code?"</li>
+    </ul>
+
+    <h3>Wiki + web: <code>ask-verify</code></h3>
+    <p>Answers from the wiki first, then uses the browser-based fetcher to check the answer against fresh web content. Reports where the wiki agrees, disagrees, or is behind. Proposes a dry-run update if anything new turned up.</p>
+    <ul>
+      <li>"ask-verify: is Cursor still leading SWE-bench?"</li>
+      <li>"verify against the web: what's the latest frontier model benchmark?"</li>
+    </ul>
+    <p>For <code>ask-verify</code>, it helps if you provide URLs to check against. If you don't, the LLM will tell you what URLs would be useful.</p>
+
+    <h2>Confidence labels</h2>
+    <p>Every answer starts with a confidence header like:</p>
+    <pre><code>**Confidence:** high — newest relevant page as of 2026-04-09 (2 days old, threshold 14d).</code></pre>
+
+    <p>The bands:</p>
+    <table>
+      <thead>
+        <tr><th>Label</th><th>Meaning</th><th>When</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>high</strong></td>
+          <td>Trust the answer. Pages are within their freshness window.</td>
+          <td>age ≤ threshold</td>
+        </tr>
+        <tr>
+          <td><strong>medium</strong></td>
+          <td>Answer may be outdated. Consider verifying.</td>
+          <td>threshold &lt; age ≤ 2× threshold</td>
+        </tr>
+        <tr>
+          <td><strong>stale</strong></td>
+          <td>Strong warning. Don't trust without checking the web.</td>
+          <td>age &gt; 2× threshold</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Thresholds are per-page-type and configurable in <code>config.yml → stale_thresholds_days</code>. Defaults:</p>
+    <ul>
+      <li><code>state-of</code>: 14 days</li>
+      <li><code>model</code>: 7 days</li>
+      <li><code>tool</code>: 30 days</li>
+      <li><code>benchmark</code>: 14 days</li>
+      <li><code>workflow</code>: 60 days</li>
+      <li><code>concept</code>: 90 days</li>
+    </ul>
+
+    <h2>What the LLM does to answer</h2>
+    <ol>
+      <li>Reads <code>wiki/index.md</code>.</li>
+      <li>Identifies the relevant state-of page(s) and 2–5 specific tool/model/benchmark pages.</li>
+      <li>Reads only those pages — it does not walk the whole tree.</li>
+      <li>Synthesizes an answer with wikilinks to the sources.</li>
+      <li>Reports confidence based on the oldest relevant page's <code>as_of</code>.</li>
+    </ol>
+
+    <p>This is why answers are cheap even as the wiki grows — the index is the router, and reads are targeted.</p>
+
+    <h2>Asking about history</h2>
+    <p>By default the LLM does not read <code>wiki/history/</code> — it stays focused on current state. If you want historical context, say so:</p>
+    <ul>
+      <li>"how has Cursor evolved over the last 3 months?"</li>
+      <li>"what was the top coding model in February?"</li>
+      <li>"trace the benchmark trajectory of SWE-bench leaders"</li>
+    </ul>
+    <p>For these, the LLM will open the relevant history files in addition to the current page.</p>
+
+    <h2>Filing good answers back into the wiki</h2>
+    <p>If an answer turned out to be a good analysis or comparison, you can save it as a new wiki page:</p>
+    <ul>
+      <li>"file that comparison into the wiki"</li>
+      <li>"save that as a concept page"</li>
+    </ul>
+    <p>This triggers a normal proposal flow — the answer becomes a draft you can review and apply.</p>
+
+    <h2>Output formats</h2>
+    <p>You can ask for different response shapes:</p>
+    <ul>
+      <li>"make a comparison table of the top 4 IDE coding tools"</li>
+      <li>"draft a short brief on the state of agents for a non-technical reader"</li>
+      <li>"generate a markdown report I can paste into a document"</li>
+    </ul>
+    <p>If the LLM produces something worth keeping, ask for it to be filed.</p>
+
+    <h2>When the wiki doesn't know</h2>
+    <p>A good answer includes honest "I don't know" or "the wiki is silent on this." The LLM won't hallucinate — if the wiki lacks data on something, it'll say so and suggest what sources would fill the gap.</p>
+    <p>Two useful follow-ups:</p>
+    <ul>
+      <li>"find me sources to fill that gap" — the LLM suggests search queries and URLs you could feed into <code>fetch_url.py</code>.</li>
+      <li>"ask-verify" — the same question but with a web check on top.</li>
+    </ul>
+
+    <footer class="page-footer">
+      <span><a href="proposals-workflow.html">← Proposals workflow</a></span>
+      <span><a href="personal-notes.html">Personal notes &amp; takes →</a></span>
+    </footer>
+  </article>
+</main>
+</body>
+</html>

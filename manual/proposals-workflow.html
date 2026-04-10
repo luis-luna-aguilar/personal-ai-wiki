@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposals workflow — AI Wiki Manual</title>
+  <link rel="stylesheet" href="assets/pico.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="container">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">AI Wiki</a>
+    <div class="subtitle">User manual</div>
+
+    <h3>Start here</h3>
+    <ul>
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting-started.html">Getting started</a></li>
+    </ul>
+
+    <h3>Daily use</h3>
+    <ul>
+      <li><a href="ingesting-sources.html">Ingesting sources</a></li>
+      <li><a href="url-fetching.html">Fetching from URLs</a></li>
+      <li><a href="triaging-newsletters.html">Triaging newsletters</a></li>
+      <li><a href="proposals-workflow.html" aria-current="page">Proposals workflow</a></li>
+      <li><a href="querying-the-wiki.html">Asking questions</a></li>
+      <li><a href="personal-notes.html">Personal notes &amp; takes</a></li>
+    </ul>
+
+    <h3>Maintenance</h3>
+    <ul>
+      <li><a href="running-scripts.html">Running scripts</a></li>
+      <li><a href="config-reference.html">Config reference</a></li>
+    </ul>
+  </aside>
+
+  <article class="content">
+    <h1>Proposals workflow</h1>
+    <p>Every source goes through a proposal before it touches the wiki. This is the safety rail — you see exactly what's about to change, check what you agree with, edit what needs tweaking, and apply only the approved parts.</p>
+
+    <h2>When a proposal appears</h2>
+    <p>After you ask the LLM to ingest a source (or process a triage item marked "full ingest"), you'll get a message telling you a proposal has been written to <code>proposals/YYYY-MM-DD-slug.md</code>. Open it in Obsidian.</p>
+
+    <h2>What a proposal contains</h2>
+    <ol>
+      <li><strong>Summary</strong> — two sentences describing the source.</li>
+      <li><strong>Intended changes</strong> — a checkbox list of every action the LLM wants to take (update X, create Y, spill Z to history, etc.).</li>
+      <li><strong>Page drafts</strong> — the full proposed markdown for every new or updated page, in fenced code blocks.</li>
+      <li><strong>Schema / vocabulary additions</strong> — when the LLM wants to introduce a new tag, domain, or subcategory. Requires its own checkbox.</li>
+      <li><strong>Open questions</strong> — points where the LLM is uncertain and wants your input.</li>
+    </ol>
+
+    <h2>How to review</h2>
+    <ol>
+      <li><strong>Read the summary.</strong> Is this source worth keeping at all? If not, say "reject it."</li>
+      <li><strong>Scan the intended changes.</strong> Does each change make sense? Tick the ones you agree with. Leave the rest unchecked.</li>
+      <li><strong>Edit drafts if needed.</strong> The page drafts are full markdown — you can rewrite sentences, delete paragraphs, change links. What's in the file when you apply is what gets written.</li>
+      <li><strong>Answer open questions.</strong> Edit the file to leave comments next to the LLM's questions.</li>
+      <li><strong>Apply.</strong> Say "apply it" or "apply <code>proposals/xxx.md</code>."</li>
+    </ol>
+
+    <div class="callout note">
+      <strong>The file you edit is the source of truth.</strong> The LLM re-reads the proposal file at apply time — it doesn't remember what it originally wrote. Whatever's in the file when you apply is what gets written to the wiki.
+    </div>
+
+    <h2>Feedback conventions</h2>
+    <p>The LLM reads the proposal file at apply time and uses these conventions to decide what to do. You don't have to follow them rigidly — they exist so you don't have to think about format — but knowing them helps if a draft isn't being applied the way you expected.</p>
+
+    <h3>Checkboxes</h3>
+    <ul>
+      <li><code>[x]</code> means <strong>include</strong> — the LLM will perform that action when you say apply.</li>
+      <li><code>[ ]</code> means <strong>skip</strong> — unchecked items are silently dropped at apply time.</li>
+      <li>This applies to every <strong>Intended changes</strong> item AND every <strong>Schema / vocabulary additions</strong> item.</li>
+    </ul>
+
+    <h3>Editing drafts in place</h3>
+    <p>Every page draft sits inside a fenced markdown code block under <strong>Page drafts</strong>. To change what gets written, edit the block directly — rewrite sentences, delete paragraphs, fix wikilinks, change frontmatter, whatever. The LLM uses the draft as it appears in the file at apply time, not what it originally wrote.</p>
+    <p>If you delete a draft entirely but leave the corresponding intended-change item checked, the LLM will stop and ask rather than guess.</p>
+
+    <h3>Answering open questions</h3>
+    <p>Open questions live at the bottom of the proposal under <strong>Open questions</strong>. Add your answer as an indented bullet directly under the question. Any prefix works — <code>→</code>, <code>Comment:</code>, plain text — the LLM picks it up either way.</p>
+    <pre><code>- **Should we create a stub for this model?** ...
+    - Yes, create the stub.</code></pre>
+
+    <h3>Free-form notes</h3>
+    <p>For anything that doesn't fit a specific question or draft, add a <code>## Comments</code> section at the bottom of the proposal and write whatever you want. The LLM reads it at apply time and adjusts its behavior. Use this for cross-cutting feedback, format complaints, scope changes, or "by the way, also do X."</p>
+
+    <h3>Diff display in updates</h3>
+    <p>For <strong>Create</strong> actions the LLM shows the full draft (there's nothing to diff against). For <strong>Update</strong> actions it tries to show only the delta — the section being added or replaced — rather than re-printing the whole page. Index updates are shown as just the new lines plus the replaced page-count block. If a draft format makes editing harder than it should, say so in a <code>## Comments</code> section and the LLM will adjust.</p>
+
+    <h2>Example proposal</h2>
+    <pre><code>---
+type: proposal
+source: raw/articles/2026-04-09-cursor-3-release.md
+status: pending
+created: 2026-04-09
+---
+
+# Proposal: Cursor 3 release
+
+## Summary
+Two-sentence TL;DR of the source.
+
+## Intended changes
+
+- [ ] **Update** `wiki/state-of/coding.md` — bump Cursor line, update as_of
+    > **Before:** `- [[Cursor]] — 68% SWE-bench (as of 2026-03-22)`
+    > **After:**  `- [[Cursor]] — 74% SWE-bench (as of 2026-04-09)`
+
+- [ ] **Update** `wiki/tools/cursor.md` — version bump, new recent-change entry
+    > See draft below
+
+- [ ] **Create** `wiki/benchmarks/swe-bench.md`
+    > See draft below
+
+- [ ] **Create** `wiki/sources/articles/cursor-3-release.md`
+
+## Page drafts
+
+### wiki/tools/cursor.md (updated)
+```
+---
+title: Cursor
+type: tool
+domains: [coding]
+...
+---
+# Cursor
+...(full content)...
+```
+
+### wiki/benchmarks/swe-bench.md (new)
+```
+...(full content)...
+```
+
+## Schema / vocabulary additions
+
+- [ ] Add subcategory `ide-pair-programming` to `wiki/_schema/subcategories.md`
+
+## Open questions
+
+- Should I merge Cursor 3 content into existing `tools/cursor.md` (assumed yes),
+  or create a separate page for v3?
+</code></pre>
+
+    <h2>How to apply</h2>
+    <p>Once the file is ready, say:</p>
+    <blockquote>apply it</blockquote>
+    <p>or:</p>
+    <blockquote>apply <code>proposals/2026-04-09-cursor-3-release.md</code></blockquote>
+    <p>The LLM will:</p>
+    <ol>
+      <li>Re-read the proposal file as it is now.</li>
+      <li>Execute only the <strong>checked</strong> items.</li>
+      <li>Use the drafts <strong>as they appear in the file</strong> — including any edits you made.</li>
+      <li>Update <code>wiki/index.md</code> with any new pages.</li>
+      <li>Update <code>wiki/_schema/</code> for any approved vocabulary additions.</li>
+      <li>Append a log entry to <code>wiki/log.md</code>.</li>
+      <li>Move the proposal file to <code>proposals/applied/</code>.</li>
+      <li>Report a short summary back to you.</li>
+    </ol>
+
+    <h2>How to reject</h2>
+    <p>If a proposal isn't worth pursuing at all, say:</p>
+    <blockquote>reject it</blockquote>
+    <p>The file is moved to <code>proposals/rejected/</code>, no changes are made to the wiki, and a log entry is written.</p>
+
+    <h2>Partial rejection</h2>
+    <p>There's no such thing — a proposal with unchecked items is a partial apply. Uncheck anything you don't want, apply the rest, and the unchecked items effectively get rejected.</p>
+    <p>If you want to keep the proposal open for later review instead of applying immediately, just leave it alone. Proposals stay in <code>proposals/</code> until you apply or reject them.</p>
+
+    <h2>Editing drafts directly</h2>
+    <p>The drafts in a proposal are fair game — you can:</p>
+    <ul>
+      <li>Rewrite entire sections</li>
+      <li>Add or remove bullet points</li>
+      <li>Fix factual errors</li>
+      <li>Add wikilinks the LLM missed</li>
+      <li>Change the tone or phrasing</li>
+    </ul>
+    <p>When you apply, the LLM writes <strong>exactly what's in the file</strong>, not what it originally drafted. This is how the dry-run becomes conversational — you're literally co-editing a document before it gets committed.</p>
+
+    <h2>The <code>proposals/</code> directory</h2>
+    <pre><code>proposals/
+  2026-04-09-cursor-3-release.md     # pending — you haven't applied yet
+  applied/
+    2026-04-08-karpathy-tweet.md     # applied yesterday
+  rejected/
+    2026-04-05-vendor-blog.md        # rejected (wasn't worth ingesting)
+  triage/
+    2026-04-09-the-batch.md          # pending triage
+    applied/
+      2026-04-02-import-ai.md        # already processed</code></pre>
+
+    <p>You can look back at <code>applied/</code> to see what's been ingested. The files there are the exact final form you approved.</p>
+
+    <footer class="page-footer">
+      <span><a href="triaging-newsletters.html">← Triaging newsletters</a></span>
+      <span><a href="querying-the-wiki.html">Asking questions →</a></span>
+    </footer>
+  </article>
+</main>
+</body>
+</html>

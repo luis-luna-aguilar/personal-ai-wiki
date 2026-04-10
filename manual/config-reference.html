@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Config reference — AI Wiki Manual</title>
+  <link rel="stylesheet" href="assets/pico.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="container">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">AI Wiki</a>
+    <div class="subtitle">User manual</div>
+
+    <h3>Start here</h3>
+    <ul>
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting-started.html">Getting started</a></li>
+    </ul>
+
+    <h3>Daily use</h3>
+    <ul>
+      <li><a href="ingesting-sources.html">Ingesting sources</a></li>
+      <li><a href="url-fetching.html">Fetching from URLs</a></li>
+      <li><a href="triaging-newsletters.html">Triaging newsletters</a></li>
+      <li><a href="proposals-workflow.html">Proposals workflow</a></li>
+      <li><a href="querying-the-wiki.html">Asking questions</a></li>
+      <li><a href="personal-notes.html">Personal notes &amp; takes</a></li>
+    </ul>
+
+    <h3>Maintenance</h3>
+    <ul>
+      <li><a href="running-scripts.html">Running scripts</a></li>
+      <li><a href="config-reference.html" aria-current="page">Config reference</a></li>
+    </ul>
+  </aside>
+
+  <article class="content">
+    <h1>Config reference</h1>
+    <p><code>config.yml</code> at the vault root holds all tunable settings: staleness thresholds, history cap, scan paths, source-type playbooks, and URL-fetching behavior. Scripts read it directly. The LLM reads it when computing query-time confidence.</p>
+
+    <h2>Where it lives</h2>
+    <p><code>/config.yml</code> (vault root, next to <code>CLAUDE.md</code>).</p>
+
+    <h2>Sections</h2>
+
+    <h3><code>stale_thresholds_days</code></h3>
+    <p>How many days a page can go without an <code>as_of</code> update before it's considered stale. Used by <code>stale.py</code> and by the LLM at query time to compute the confidence band.</p>
+    <pre><code>stale_thresholds_days:
+  state-of:  14
+  model:      7
+  tool:      30
+  benchmark: 14
+  workflow:  60
+  concept:   90
+  trend:     30
+  source:   365    # sources don't really go stale; they're records
+  default:   30    # fallback for unlisted types</code></pre>
+
+    <p>Models and state-of pages have tight windows because they change the fastest. Concepts and workflows are more durable.</p>
+
+    <h3><code>query.confidence_bands</code></h3>
+    <p>How query answers are labeled. Ratios are multipliers of the page type's threshold.</p>
+    <pre><code>query:
+  confidence_bands:
+    high_max_ratio:   1.0   # age <= 1.0x threshold  -> high
+    medium_max_ratio: 2.0   # age <= 2.0x threshold  -> medium
+    # otherwise                                      -> stale</code></pre>
+    <p>The LLM uses the oldest relevant page's <code>as_of</code> when computing confidence. If multiple pages disagree on age, it reports the worst.</p>
+
+    <h3><code>history.recent_changes_cap</code></h3>
+    <p>How many entries a "Recent changes" section can hold on a main page before the oldest is spilled to <code>wiki/history/</code>. Default 5. Raise for more in-line trend visibility, lower for leaner pages.</p>
+    <pre><code>history:
+  recent_changes_cap: 5</code></pre>
+
+    <h3><code>stale.include_paths</code> / <code>stale.exclude_paths</code></h3>
+    <p>Which directories <code>stale.py</code> scans. Everything under <code>exclude_paths</code> is skipped even if it would otherwise match <code>include_paths</code>.</p>
+    <pre><code>stale:
+  include_paths:
+    - wiki/state-of
+    - wiki/models
+    - wiki/tools
+    - wiki/benchmarks
+    - wiki/workflows
+    - wiki/concepts
+    - wiki/trends
+  exclude_paths:
+    - wiki/history
+    - wiki/sources
+    - wiki/_schema
+    - personal</code></pre>
+    <p>Personal is excluded by default — your takes don't decay the same way facts do.</p>
+
+    <h3><code>orphans.scan_paths</code> / <code>orphans.exempt_paths</code></h3>
+    <p>Which pages <code>orphans.py</code> considers. Scan paths define what to check; exempt paths are never flagged as orphans.</p>
+    <pre><code>orphans:
+  scan_paths:
+    - wiki
+  exempt_paths:
+    - wiki/index.md
+    - wiki/log.md
+    - wiki/state-of
+    - wiki/_schema
+    - wiki/history
+    - wiki/sources</code></pre>
+    <p>State-of pages are exempt because they're entry points — nothing links <em>to</em> them in the normal sense, they're the root of the graph.</p>
+
+    <h3><code>source_types</code></h3>
+    <p>Per-source-type configuration. The <code>raw_dir</code> determines where new files land; the <code>ingest_style</code> tells the LLM which playbook to follow; <code>notes</code> is a one-line reminder of what that playbook is.</p>
+    <pre><code>source_types:
+  article:
+    raw_dir: raw/articles
+    ingest_style: standard
+    notes: "Full ingest. Extract key claims, update relevant pages."
+  tweet:
+    raw_dir: raw/tweets
+    ingest_style: lightweight
+    notes: "Often a signal only. May touch 1 page."
+  paper:
+    raw_dir: raw/papers
+    ingest_style: deep
+  podcast:
+    raw_dir: raw/podcasts
+    ingest_style: summarize_first
+  repo:
+    raw_dir: raw/repos
+    ingest_style: readme_first
+  newsletter:
+    raw_dir: raw/newsletters
+    ingest_style: triage
+  meeting:
+    raw_dir: raw/meetings
+    ingest_style: personal
+  note:
+    raw_dir: raw/notes
+    ingest_style: personal</code></pre>
+    <p>Most edits you'd make here are just adding a new source type (e.g. <code>youtube</code>) and defining where it goes.</p>
+
+    <h3><code>fetch_url</code></h3>
+    <p>Settings for <code>scripts/fetch_url.py</code>.</p>
+    <pre><code>fetch_url:
+  profile_dir: ~/.cache/ai-wiki-playwright  # persistent Chromium profile for logins
+  timeout: 30                               # page load timeout in seconds
+  wait_for: networkidle                     # Playwright wait_until value
+  download_images: true                     # download and rewrite image links to local paths
+  images_dir: raw/assets                    # where downloaded images go</code></pre>
+
+    <h3><code>log_file</code></h3>
+    <p>Where <code>wiki/log.md</code> lives. Rarely changed.</p>
+    <pre><code>log_file: wiki/log.md</code></pre>
+
+    <h2>Changing thresholds</h2>
+    <p>Start with the defaults, then adjust based on how often you actually ingest. Some heuristics:</p>
+    <ul>
+      <li>If stale reports are constantly empty, tighten the thresholds.</li>
+      <li>If they're overwhelming, loosen the most noisy type first.</li>
+      <li>Models and state-of pages should always be the shortest — they change fastest.</li>
+      <li>Concepts and workflows can be generous — they change slowly.</li>
+    </ul>
+
+    <h2>Adding a new source type</h2>
+    <ol>
+      <li>Add an entry under <code>source_types</code> with the <code>raw_dir</code> and <code>ingest_style</code>.</li>
+      <li>Create the corresponding <code>raw/&lt;type&gt;/</code> folder.</li>
+      <li>Add an entry to <code>wiki/_schema/source-types.md</code> describing the playbook.</li>
+      <li>Tell the LLM so it can use the new type on the next ingest.</li>
+    </ol>
+
+    <h2>Adding a new domain</h2>
+    <ol>
+      <li>Ask the LLM to propose a new domain in a proposal file (vocabulary additions section).</li>
+      <li>When you approve and apply, the LLM updates <code>wiki/_schema/domains.md</code> and creates a new <code>wiki/state-of/&lt;domain&gt;.md</code> skeleton.</li>
+      <li>Optional: add a specific <code>stale_thresholds_days</code> entry if this domain's pages should decay differently. Otherwise they'll use <code>default</code>.</li>
+    </ol>
+
+    <footer class="page-footer">
+      <span><a href="running-scripts.html">← Running scripts</a></span>
+      <span><a href="index.html">Back to overview</a></span>
+    </footer>
+  </article>
+</main>
+</body>
+</html>

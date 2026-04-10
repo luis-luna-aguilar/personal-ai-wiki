@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triaging newsletters — AI Wiki Manual</title>
+  <link rel="stylesheet" href="assets/pico.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="container">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">AI Wiki</a>
+    <div class="subtitle">User manual</div>
+
+    <h3>Start here</h3>
+    <ul>
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting-started.html">Getting started</a></li>
+    </ul>
+
+    <h3>Daily use</h3>
+    <ul>
+      <li><a href="ingesting-sources.html">Ingesting sources</a></li>
+      <li><a href="url-fetching.html">Fetching from URLs</a></li>
+      <li><a href="triaging-newsletters.html" aria-current="page">Triaging newsletters</a></li>
+      <li><a href="proposals-workflow.html">Proposals workflow</a></li>
+      <li><a href="querying-the-wiki.html">Asking questions</a></li>
+      <li><a href="personal-notes.html">Personal notes &amp; takes</a></li>
+    </ul>
+
+    <h3>Maintenance</h3>
+    <ul>
+      <li><a href="running-scripts.html">Running scripts</a></li>
+      <li><a href="config-reference.html">Config reference</a></li>
+    </ul>
+  </aside>
+
+  <article class="content">
+    <h1>Triaging newsletters</h1>
+    <p>Newsletters are high-volume and mostly noise. Ingesting a newsletter as if it were a single article would bloat the wiki with one page per issue. Instead, newsletters go through a <strong>triage flow</strong> — the LLM extracts discrete signals, you tick the ones worth pursuing, and only those get ingested.</p>
+
+    <h2>Why triage?</h2>
+    <p>A typical issue of an AI newsletter has 10–20 signals: a new model release, three benchmark updates, a funding round, two vendor blog posts, and a "10 ways AI will change X" listicle. You probably want three of those in your wiki and don't care about the rest. Triage lets you be selective without having to read-and-reject each item.</p>
+
+    <h2>The flow</h2>
+    <ol>
+      <li>Drop the newsletter into <code>raw/newsletters/</code> (or give the LLM a URL with "triage this URL").</li>
+      <li>Say "triage this" or "triage the latest newsletter."</li>
+      <li>The LLM writes a triage file to <code>proposals/triage/YYYY-MM-DD-newsletter-name.md</code> with a bulleted list of signals — each with a checkbox, an impact note, and a recommended action.</li>
+      <li>Open the triage file in Obsidian. Tick the boxes for items you want to pursue. Leave the rest unchecked.</li>
+      <li>Say "process the triage."</li>
+      <li>For each checked item, the LLM generates a full ingest proposal (or applies a one-line note-only update). Unchecked items are ignored.</li>
+    </ol>
+
+    <h2>What a triage file looks like</h2>
+    <pre><code>---
+type: triage
+source: raw/newsletters/2026-04-09-the-batch.md
+status: pending
+---
+
+# Triage: The Batch — 2026-04-09
+
+## Signals
+
+- [ ] **[coding]** Cursor 3 released, 74% SWE-bench (new top score)
+    *Impact:* updates `state-of/coding.md`, `tools/cursor.md`; demotes previous leader line
+    *Recommended:* full ingest
+
+- [ ] **[models]** Anthropic announces Opus 4.7 preview
+    *Impact:* new entry on `models/claude-opus.md`; bump `state-of/models.md`
+    *Recommended:* full ingest
+
+- [ ] **[marketing]** Vendor blog: "10 ways AI is changing X"
+    *Impact:* nothing new
+    *Recommended:* skip
+
+- [ ] **[misc]** ChatGPT adds voice feature
+    *Impact:* consumer side, outside current scope
+    *Recommended:* note-only (one-liner in `trends/consumer-ai.md`)</code></pre>
+
+    <h2>Recommendation kinds</h2>
+    <ul>
+      <li><strong>full ingest</strong> — generate a normal proposal for review. Use this when the signal genuinely updates or adds wiki content.</li>
+      <li><strong>note-only</strong> — apply a one-line update directly without spawning a full proposal. Useful for confirmations of known trends or minor mentions.</li>
+      <li><strong>skip</strong> — do nothing. Leave the box unchecked, or explicitly annotate.</li>
+    </ul>
+
+    <h2>Overriding recommendations</h2>
+    <p>You can override the LLM's recommendation by editing the line. For example, downgrade a "full ingest" to "note-only" by changing the text:</p>
+    <pre><code>- [x] **[coding]** Cursor 3 released, 74% SWE-bench
+    *Recommended:* note-only  <-- edited from "full ingest"</code></pre>
+    <p>When processing, the LLM respects what's in the file, not its original recommendation.</p>
+
+    <h2>Processing</h2>
+    <p>After you've marked up the triage file, say:</p>
+    <blockquote>process the triage</blockquote>
+    <p>or:</p>
+    <blockquote>process <code>proposals/triage/2026-04-09-the-batch.md</code></blockquote>
+    <p>For each checked signal:</p>
+    <ul>
+      <li><strong>full ingest</strong> → a new proposal file appears in <code>proposals/</code> for your review.</li>
+      <li><strong>note-only</strong> → applied immediately to the target page. No proposal file.</li>
+      <li><strong>skip / unchecked</strong> → ignored.</li>
+    </ul>
+    <p>The triage file is then moved to <code>proposals/triage/applied/</code>. A log entry is written: <code>## [YYYY-MM-DD] triage | The Batch 2026-04-09 | 3 full, 1 note, 1 skipped</code>.</p>
+
+    <h2>Tips</h2>
+    <ul>
+      <li>
+        <strong>Triage liberally, ingest selectively.</strong> A good triage takes two minutes — scan the signals, tick the 2–4 that matter, move on.
+      </li>
+      <li>
+        <strong>Note-only is underrated.</strong> For confirmations of known trends ("another company adopted X"), a one-line update to the trend page is usually enough.
+      </li>
+      <li>
+        <strong>Don't re-triage the same newsletter twice.</strong> If you need to add more signals after processing, drop the original file in again and ask for a new triage — or just do a manual one-off ingest.
+      </li>
+      <li>
+        <strong>Full ingests from triage follow the normal proposal flow.</strong> You still review each one before it touches the wiki.
+      </li>
+    </ul>
+
+    <footer class="page-footer">
+      <span><a href="url-fetching.html">← Fetching from URLs</a></span>
+      <span><a href="proposals-workflow.html">Proposals workflow →</a></span>
+    </footer>
+  </article>
+</main>
+</body>
+</html>

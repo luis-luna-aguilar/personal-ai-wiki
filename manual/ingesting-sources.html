@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingesting sources — AI Wiki Manual</title>
+  <link rel="stylesheet" href="assets/pico.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="container">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">AI Wiki</a>
+    <div class="subtitle">User manual</div>
+
+    <h3>Start here</h3>
+    <ul>
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting-started.html">Getting started</a></li>
+    </ul>
+
+    <h3>Daily use</h3>
+    <ul>
+      <li><a href="ingesting-sources.html" aria-current="page">Ingesting sources</a></li>
+      <li><a href="url-fetching.html">Fetching from URLs</a></li>
+      <li><a href="triaging-newsletters.html">Triaging newsletters</a></li>
+      <li><a href="proposals-workflow.html">Proposals workflow</a></li>
+      <li><a href="querying-the-wiki.html">Asking questions</a></li>
+      <li><a href="personal-notes.html">Personal notes &amp; takes</a></li>
+    </ul>
+
+    <h3>Maintenance</h3>
+    <ul>
+      <li><a href="running-scripts.html">Running scripts</a></li>
+      <li><a href="config-reference.html">Config reference</a></li>
+    </ul>
+  </aside>
+
+  <article class="content">
+    <h1>Ingesting sources</h1>
+    <p>Adding a source is a two-phase flow: drop the file, then review and apply the proposal. The LLM never writes to <code>wiki/</code> directly.</p>
+
+    <h2>The basic flow</h2>
+    <ol>
+      <li>Drop a file into the right <code>raw/</code> subfolder.</li>
+      <li>Tell the LLM to ingest it. You'll get a proposal file in <code>proposals/</code>.</li>
+      <li>Open the proposal in Obsidian, tick the checkboxes you agree with, optionally edit drafts.</li>
+      <li>Tell the LLM to apply the proposal.</li>
+    </ol>
+
+    <h2>Source types and where they go</h2>
+    <p>Each source type lives in its own <code>raw/</code> subfolder and has a per-type ingest playbook the LLM follows. You don't need to remember the playbooks — just drop the file in the right folder.</p>
+    <table>
+      <thead>
+        <tr><th>Type</th><th>Folder</th><th>What the LLM does</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Article</strong></td>
+          <td><code>raw/articles/</code></td>
+          <td>Full ingest. Extracts claims, updates relevant pages, creates a source summary.</td>
+        </tr>
+        <tr>
+          <td><strong>Tweet</strong></td>
+          <td><code>raw/tweets/</code></td>
+          <td>Lightweight. Often touches just one page. Preserves author + date.</td>
+        </tr>
+        <tr>
+          <td><strong>Paper</strong></td>
+          <td><code>raw/papers/</code></td>
+          <td>Deep read. Extracts methodology, findings, limitations. May spawn concept pages.</td>
+        </tr>
+        <tr>
+          <td><strong>Podcast</strong></td>
+          <td><code>raw/podcasts/</code></td>
+          <td>Summarizes the transcript first, then extracts claims. Preserves speaker attribution.</td>
+        </tr>
+        <tr>
+          <td><strong>Repo</strong></td>
+          <td><code>raw/repos/</code></td>
+          <td>Reads README first. Becomes a <code>tools/</code> entry.</td>
+        </tr>
+        <tr>
+          <td><strong>Newsletter</strong></td>
+          <td><code>raw/newsletters/</code></td>
+          <td><strong>Does not ingest directly.</strong> Always writes a triage file first. See <a href="triaging-newsletters.html">Triaging newsletters</a>.</td>
+        </tr>
+        <tr>
+          <td><strong>Meeting notes</strong></td>
+          <td><code>raw/meetings/</code></td>
+          <td>Usually goes into <code>personal/</code>, not the factual wiki.</td>
+        </tr>
+        <tr>
+          <td><strong>Your own notes</strong></td>
+          <td><code>raw/notes/</code></td>
+          <td>Usually goes into <code>personal/</code>.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Naming your files</h2>
+    <p>Convention: <code>YYYY-MM-DD-slug.md</code> for most types. For repos, <code>owner-repo.md</code> (no date prefix). The LLM will rename files if needed, so this is a soft convention.</p>
+
+    <h3>Examples</h3>
+    <ul>
+      <li><code>raw/articles/2026-04-09-cursor-3-release.md</code></li>
+      <li><code>raw/tweets/2026-04-08-karpathy-agent-loops.md</code></li>
+      <li><code>raw/papers/2026-03-28-voyage-rerank-2.md</code></li>
+      <li><code>raw/repos/anthropics-claude-code.md</code></li>
+    </ul>
+
+    <h2>What you say to the LLM</h2>
+    <p>Any of these work:</p>
+    <ul>
+      <li>"ingest <code>raw/articles/2026-04-09-cursor-3-release.md</code>"</li>
+      <li>"ingest the Cursor 3 article"</li>
+      <li>"ingest the latest thing in raw/articles"</li>
+      <li>"process <code>raw/papers/voyage-rerank-2.md</code>"</li>
+    </ul>
+    <p>The LLM will read the file, check the index for existing pages it might touch, and draft a proposal. It will <em>not</em> modify the wiki until you say so.</p>
+
+    <h2>What happens next</h2>
+    <p>Once the proposal is ready, the LLM will tell you the path — something like <code>proposals/2026-04-09-cursor-3-release.md</code>. Open it in Obsidian.</p>
+    <p>See <a href="proposals-workflow.html">Proposals workflow</a> for how to review and apply.</p>
+
+    <h2>Batch ingesting several sources</h2>
+    <p>You can drop several files at once and say "ingest all the new articles" — the LLM will process them sequentially and produce one proposal per source. Each is reviewed independently.</p>
+    <p>For newsletters with many signals, use the triage flow instead — don't try to ingest a newsletter as one article.</p>
+
+    <h2>Clipped articles from the browser</h2>
+    <p>Obsidian Web Clipper saves clean markdown straight into <code>raw/articles/</code>. After clipping, hit your image-download hotkey (<kbd>Ctrl/Cmd + Shift + D</kbd>) to pull images to <code>raw/assets/</code>. Then tell the LLM to ingest the file. For web content you don't want to clip manually, use <a href="url-fetching.html">URL fetching</a>.</p>
+
+    <footer class="page-footer">
+      <span><a href="getting-started.html">← Getting started</a></span>
+      <span><a href="url-fetching.html">Fetching from URLs →</a></span>
+    </footer>
+  </article>
+</main>
+</body>
+</html>

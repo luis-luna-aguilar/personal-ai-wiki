@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Wiki — Manual</title>
+  <link rel="stylesheet" href="assets/pico.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="container">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">AI Wiki</a>
+    <div class="subtitle">User manual</div>
+
+    <h3>Start here</h3>
+    <ul>
+      <li><a href="index.html" aria-current="page">Overview</a></li>
+      <li><a href="getting-started.html">Getting started</a></li>
+    </ul>
+
+    <h3>Daily use</h3>
+    <ul>
+      <li><a href="ingesting-sources.html">Ingesting sources</a></li>
+      <li><a href="url-fetching.html">Fetching from URLs</a></li>
+      <li><a href="triaging-newsletters.html">Triaging newsletters</a></li>
+      <li><a href="proposals-workflow.html">Proposals workflow</a></li>
+      <li><a href="querying-the-wiki.html">Asking questions</a></li>
+      <li><a href="personal-notes.html">Personal notes &amp; takes</a></li>
+    </ul>
+
+    <h3>Maintenance</h3>
+    <ul>
+      <li><a href="running-scripts.html">Running scripts</a></li>
+      <li><a href="config-reference.html">Config reference</a></li>
+    </ul>
+  </aside>
+
+  <article class="content">
+    <h1>AI Wiki</h1>
+    <p class="subtitle" style="font-size: 1.1rem; color: var(--pico-muted-color);">
+      A personal knowledge base for tracking the fast-moving AI landscape, maintained by an LLM.
+    </p>
+
+    <div class="callout note">
+      <strong>This manual is for you, the human.</strong> It explains the workflows you use to drive the wiki.
+      It does <em>not</em> cover how the LLM maintains pages internally — that's in <code>CLAUDE.md</code>.
+    </div>
+
+    <h2>What this is</h2>
+    <p>
+      This vault is a personal AI-tracking wiki. You drop in sources (articles, tweets, papers, podcast transcripts,
+      GitHub repos, newsletters, meeting notes, your own notes). The LLM reads them, proposes diffs to the wiki,
+      waits for your approval, and applies what you accept. Over time, the wiki becomes a structured,
+      cross-referenced, always-current map of the AI landscape as <em>you</em> understand it.
+    </p>
+
+    <h2>The core loop</h2>
+    <ol>
+      <li><strong>Drop a source</strong> into <code>raw/</code> — or give the LLM a URL.</li>
+      <li><strong>Say "ingest this"</strong> (or "triage this" for newsletters).</li>
+      <li><strong>Review the proposal</strong> in <code>proposals/</code> — tick the boxes for changes you want.</li>
+      <li><strong>Say "apply it"</strong> — the LLM writes only the checked changes.</li>
+      <li><strong>Ask questions</strong> any time. Answers come with freshness-based confidence.</li>
+    </ol>
+
+    <h2>Why it works this way</h2>
+    <ul>
+      <li>
+        <strong>Current state first.</strong> Pages are present-tense. History is capped and mostly off-page.
+        You don't get token-bloated by things that used to be true.
+      </li>
+      <li>
+        <strong>Dates are load-bearing.</strong> Every claim has an <code>as_of</code> date. Confidence is computed from age at query time — no
+        credibility scores, no per-claim bookkeeping during ingest.
+      </li>
+      <li>
+        <strong>Dry-run everything.</strong> The LLM never writes to the wiki without your approval.
+        Proposals are editable markdown files; you check boxes or edit drafts inline before applying.
+      </li>
+      <li>
+        <strong>Ambiguity is allowed.</strong> A subcategory can have multiple top players.
+        "Cursor or Claude Code?" doesn't need a single winner.
+      </li>
+      <li>
+        <strong>Zero-cost hygiene.</strong> Maintenance is handled by Python scripts (no LLM tokens) — staleness, orphans, broken links, tag compliance.
+        Semantic checks (contradictions, missing pages) run only when you explicitly ask.
+      </li>
+    </ul>
+
+    <h2>Where things live</h2>
+    <table>
+      <thead>
+        <tr><th>Folder</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>raw/</code></td><td>Your source files, immutable. Subfolders by type.</td></tr>
+        <tr><td><code>wiki/</code></td><td>LLM-maintained pages. The knowledge base.</td></tr>
+        <tr><td><code>personal/</code></td><td>Your opinions and takes. Separate from the factual wiki.</td></tr>
+        <tr><td><code>proposals/</code></td><td>Pending dry-run diffs waiting for your approval.</td></tr>
+        <tr><td><code>scripts/</code></td><td>Python utilities for maintenance and URL fetching.</td></tr>
+        <tr><td><code>manual/</code></td><td>This documentation. You're reading it now.</td></tr>
+        <tr><td><code>config.yml</code></td><td>Thresholds and settings.</td></tr>
+        <tr><td><code>CLAUDE.md</code></td><td>Operating manual for the LLM (not for you).</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Next steps</h2>
+    <ul>
+      <li>New to the vault? <a href="getting-started.html">Getting started</a>.</li>
+      <li>Want to add your first source? <a href="ingesting-sources.html">Ingesting sources</a>.</li>
+      <li>Want to understand the proposal flow? <a href="proposals-workflow.html">Proposals workflow</a>.</li>
+    </ul>
+
+    <footer class="page-footer">
+      <span>AI Wiki manual</span>
+      <span><a href="getting-started.html">Getting started →</a></span>
+    </footer>
+  </article>
+</main>
+</body>
+</html>

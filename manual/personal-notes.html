@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal notes &amp; takes — AI Wiki Manual</title>
+  <link rel="stylesheet" href="assets/pico.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="container">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">AI Wiki</a>
+    <div class="subtitle">User manual</div>
+
+    <h3>Start here</h3>
+    <ul>
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting-started.html">Getting started</a></li>
+    </ul>
+
+    <h3>Daily use</h3>
+    <ul>
+      <li><a href="ingesting-sources.html">Ingesting sources</a></li>
+      <li><a href="url-fetching.html">Fetching from URLs</a></li>
+      <li><a href="triaging-newsletters.html">Triaging newsletters</a></li>
+      <li><a href="proposals-workflow.html">Proposals workflow</a></li>
+      <li><a href="querying-the-wiki.html">Asking questions</a></li>
+      <li><a href="personal-notes.html" aria-current="page">Personal notes &amp; takes</a></li>
+    </ul>
+
+    <h3>Maintenance</h3>
+    <ul>
+      <li><a href="running-scripts.html">Running scripts</a></li>
+      <li><a href="config-reference.html">Config reference</a></li>
+    </ul>
+  </aside>
+
+  <article class="content">
+    <h1>Personal notes &amp; takes</h1>
+    <p>The <code>personal/</code> folder is a separate space for your own opinions, philosophies, journal-style notes, and subjective takes. It is <em>not</em> part of the factual wiki. The LLM treats it with different rules.</p>
+
+    <h2>Why separate it?</h2>
+    <p>The factual wiki is about what's <strong>true now</strong>, with dates and sources. Your personal takes are about what <strong>you think</strong> — they shouldn't decay the same way, and they shouldn't be rewritten by incoming sources. Keeping them separate means:</p>
+    <ul>
+      <li>A new paper doesn't overwrite your opinion because it "contradicts" you.</li>
+      <li>Your takes don't get flagged as stale if you haven't updated them in a month.</li>
+      <li>The LLM won't auto-update personal pages from sources — you drive those updates explicitly.</li>
+      <li>The factual wiki stays clean, citeable, and dateable.</li>
+    </ul>
+
+    <h2>Structure</h2>
+    <pre><code>personal/
+  philosophies/    # long-form beliefs about how AI should be used
+    compound-engineering.md
+    context-is-everything.md
+    agent-native-defaults.md
+  takes/           # shorter, more opinionated commentary
+    why-rag-is-overrated.md
+    cursor-vs-claude-code-for-me.md</code></pre>
+    <p>The split between <code>philosophies/</code> and <code>takes/</code> is soft — use whichever fits. Philosophies are stable and load-bearing; takes are spikier and may change.</p>
+
+    <h2>Linking rules</h2>
+    <p>Links between <code>personal/</code> and <code>wiki/</code> are <strong>one-way</strong>:</p>
+    <ul>
+      <li><strong>Allowed:</strong> personal → wiki. A philosophy page can link to <code>tools/cursor.md</code>, <code>concepts/rag.md</code>, etc.</li>
+      <li><strong>Not allowed:</strong> wiki → personal. Wiki pages never link to personal content. The factual wiki stays uncontaminated by opinion.</li>
+    </ul>
+    <p>This means you can cite facts from your takes, but your takes don't leak into the canonical dashboards.</p>
+
+    <h2>How the LLM treats personal pages</h2>
+    <ul>
+      <li><strong>No automatic updates.</strong> A new source never modifies a personal page — the LLM won't even propose it. Personal updates happen only when you ask directly.</li>
+      <li><strong>Staleness ignored.</strong> <code>stale.py</code> skips the <code>personal/</code> folder by default (controlled via <code>config.yml → stale.exclude_paths</code>).</li>
+      <li><strong>No auto-creation.</strong> The LLM never creates personal pages on its own. If it thinks an opinion piece is worth capturing, it asks you first.</li>
+      <li><strong>Voice preserved.</strong> When you do ask for edits, the LLM keeps your phrasing — it's not allowed to rewrite tone or flatten strong opinions.</li>
+    </ul>
+
+    <h2>Using meeting notes and personal raw files</h2>
+    <p>Two <code>raw/</code> folders feed this space:</p>
+    <ul>
+      <li><code>raw/meetings/</code> — transcripts or notes from meetings you were in.</li>
+      <li><code>raw/notes/</code> — your own written notes, jottings, voice memos transcribed.</li>
+    </ul>
+    <p>When you drop something in these folders and ask to ingest, the default target is <code>personal/</code> — usually <code>personal/takes/</code> or a new personal page — not the wiki. If you explicitly want something in the wiki instead, say so:</p>
+    <blockquote>ingest <code>raw/notes/2026-04-09-thoughts-on-cursor.md</code> but file the factual parts into the wiki</blockquote>
+    <p>The LLM will split facts from opinions and propose wiki updates for the facts, leaving the opinions in a personal page.</p>
+
+    <h2>Editing personal pages directly</h2>
+    <p>You can always just edit personal pages in Obsidian yourself — no need to involve the LLM. For assistance, tell it what to do:</p>
+    <ul>
+      <li>"edit <code>personal/philosophies/compound-engineering.md</code> to add a section on X"</li>
+      <li>"clean up the phrasing in <code>personal/takes/why-rag-is-overrated.md</code> but keep my voice"</li>
+    </ul>
+    <p>Personal edits don't go through the proposal flow — the LLM applies them directly (since you're the only author). If the edit is substantial, ask for a diff preview first.</p>
+
+    <h2>Citing personal content in conversation</h2>
+    <p>When you ask a question, the LLM draws on the wiki by default. You can pull in personal context explicitly:</p>
+    <ul>
+      <li>"based on my philosophy pages, would Cursor or Claude Code fit my workflow better?"</li>
+      <li>"reconcile my take on RAG with what the wiki says"</li>
+    </ul>
+    <p>The LLM will read both spaces and be explicit about which claims come from which.</p>
+
+    <footer class="page-footer">
+      <span><a href="querying-the-wiki.html">← Asking questions</a></span>
+      <span><a href="running-scripts.html">Running scripts →</a></span>
+    </footer>
+  </article>
+</main>
+</body>
+</html>
