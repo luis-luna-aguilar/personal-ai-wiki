@@ -10,7 +10,7 @@ One playbook per source type. The LLM follows the playbook when ingesting. Setti
 - **Playbook:**
   1. Read fully.
   2. Extract key claims, version numbers, benchmark results, and dated facts.
-  3. Identify wiki pages touched (usually 3–8).
+  3. Identify wiki pages touched (usually 3–8). Articles about organizational rollout, enablement, or reported adoption patterns may fit `wiki/training/`.
   4. Draft a proposal in `proposals/`.
   5. Create a source summary at `wiki/sources/articles/<slug>.md`.
 
@@ -44,7 +44,7 @@ One playbook per source type. The LLM follows the playbook when ingesting. Setti
 - **Playbook:**
   1. Transcripts are long. First pass: aggressive summarization with speaker attribution.
   2. Treat the summary as the ingest unit.
-  3. Extract opinions / predictions / anecdotes — podcasts are rich for `trends/` and `personal/takes/`.
+  3. Extract opinions / predictions / anecdotes — podcasts are rich for `trends/`, `training/`, and `personal/takes/`.
   4. Source summary required.
 
 ## repo
@@ -76,7 +76,7 @@ One playbook per source type. The LLM follows the playbook when ingesting. Setti
 - **Playbook:**
   1. Meeting notes are usually personal context (decisions, opinions, priorities).
   2. Default target is `personal/`, not `wiki/`.
-  3. If the user wants factual content extracted to the wiki, they'll say so explicitly.
+  3. If the user wants factual content extracted to the wiki, they'll say so explicitly. Team rollout lessons and repeated enablement patterns may fit `wiki/training/`.
 
 ## note
 
@@ -86,4 +86,4 @@ One playbook per source type. The LLM follows the playbook when ingesting. Setti
 - **Playbook:**
   1. User's own notes. Usually personal material.
   2. Default target is `personal/`. Do not push to wiki/ without explicit instruction.
-  3. Treat with more care than public sources — the voice should be preserved.
+  3. Treat with more care than public sources — the voice should be preserved. If the user explicitly wants reusable guidance extracted, `wiki/training/` is the likely target.

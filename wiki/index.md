@@ -73,9 +73,15 @@ Ideas and techniques (RAG, context engineering, compound engineering, etc.).
 
 Things being watched that haven't solidified yet.
 
-- [[trends/agents-reshape-organizations]] — leverage moves from individual to org as autonomous agents take coordination work *(as_of: 2026-04-02)*
+- [[trends/agents-reshape-organizations]] — leverage moves from individual to org as autonomous agents take coordination work *(as_of: 2026-04-10)*
 - [[trends/ai-in-science]] — AI as force-multiplier for researchers; NASA anomalies, brain MRI, AlphaFold *(as_of: 2026-04-10)*
 - [[trends/proprietary-data-becomes-model-moat]] — proprietary operational data, domain evals, and narrow training loops may become a stronger moat as model quality converges *(as_of: 2026-04-10)*
+
+## Training
+
+Practical guidance for teaching teams and businesses to use AI well.
+
+- [[training/company-wide-ai-enablement]] — operating patterns for broad AI adoption: defaults, access, social proof, and platform-plus-spokes org design *(as_of: 2026-04-10)*
 
 ## Sources
 
@@ -92,5 +98,6 @@ See `wiki/sources/` — source summaries are not indexed here (they're many and 
 - workflows: 1
 - concepts: 5
 - trends: 3
+- training: 1
 
-**Total content pages: 29.** The wiki is in the bootstrap phase (<30 pages) — categorization discipline is relaxed.
+**Total content pages: 30.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.

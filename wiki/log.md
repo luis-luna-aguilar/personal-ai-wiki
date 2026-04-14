@@ -85,3 +85,9 @@ grep "^## \[" wiki/log.md | tail -20
 ## [2026-04-10] schema | added subcategory `agent-toolkits`
 
 ## [2026-04-10] ingest | Shopify AI Toolkit | 2 pages updated, 2 created (state-of/coding, wiki/index updated; tools/shopify-ai-toolkit, sources/articles/shopify-ai-toolkit created)
+
+## [2026-04-10] schema | added page type `training` | new `wiki/training/` and `wiki/history/training/` directories; LLM-INSTRUCTIONS, config.yml, source-type guidance, and wiki/index updated to support training pages for organizational AI enablement
+
+## [2026-04-10] ingest | Ramp AI adoption playbook | 2 pages updated, 2 created (wiki/trends/agents-reshape-organizations, wiki/index updated; wiki/training/company-wide-ai-enablement, wiki/sources/articles/ramp-ai-adoption-playbook created); personal/takes/test-backlog appended with customer PR backlog item
+
+## [2026-04-10] triage | The Code Newsletter — Managed Agents / Muse Spark | 3 proposals generated (Muse Spark, Cursor Bugbot learned rules, Postman AI-org-chart signal), 4 skipped

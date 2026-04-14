@@ -3,8 +3,8 @@ title: Agents reshape organizations (leverage moves from individual to org)
 type: trend
 domains: [agents, coding]
 tags: [agentic]
-as_of: 2026-04-02
-sources: [harvey-legal-is-next]
+as_of: 2026-04-10
+sources: [harvey-legal-is-next, ramp-ai-adoption-playbook]
 ---
 
 # Agents reshape organizations (leverage moves from individual to org)
@@ -20,10 +20,12 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 3. **Organizations are information-routing hierarchies.** Managers exist because information has historically had to move through people. Background agents start to take over part of that coordination function directly: monitoring systems, carrying context across teams, triggering work, surfacing decisions.
 4. **The bottleneck shifts** from implementation to **review, prioritization, coordination, and operating design**. More work can happen than the old coordination structure can absorb.
 
-## Concrete signals (per the Harvey post)
+## Concrete signals
 
-- **Background agents inside companies.** Cited examples: Ramp's background agent, Stripe's end-to-end coding agents, Harvey's internal Spectre system.
+- **Background agents inside companies.** Cited examples now include Ramp's background agent / coding-agent stack, Stripe's end-to-end coding agents, and Harvey's internal Spectre system.
 - **Triggers move beyond explicit prompts.** Some of these systems are triggered by monitoring incidents, bug reports, customer feedback, and Slack messages — not by a human typing a request.
+- **Ramp publishes concrete internal adoption numbers.** Ramp reports 99.5% of employees active on AI tools, 84% using coding agents weekly, 1,500+ apps shipped in six weeks by 800+ builders, and non-engineers accounting for 12% of human-initiated PRs on the production codebase.
+- **The org model itself changes.** Ramp describes a central team owning platforms, connectors, and enablement while functional teams build on top, which is exactly the kind of operating redesign this trend predicts.
 
 ## What to watch
 
@@ -37,13 +39,15 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 
 ## Open questions
 
-- Is this trend already happening in practice, or is it mostly Twitter / vendor-blog narrative? Need non-vendor data points before treating it as "current."
+- Is this trend already happening in practice, or is it mostly Twitter / vendor-blog narrative? We now have a stronger first-party Ramp data point, but still need more independent or cross-company reporting before treating it as settled.
 - Where are the *first* non-engineering knowledge-work functions to feel this — legal, ops, finance, support? Each will probably go at a different pace.
 
 ## Recent changes
 
+- [2026-04-10] Ramp adds a concrete company-reported example of org-wide AI building and non-engineer PR creation
 - [2026-04-02] Trend opened from Harvey's "Legal is Next" post
 
 ## Sources
 
 - [[sources/articles/harvey-legal-is-next]]
+- [[sources/articles/ramp-ai-adoption-playbook]]

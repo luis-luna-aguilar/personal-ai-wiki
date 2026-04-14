@@ -25,3 +25,13 @@ Run a dev session where Claude Code monitors a dev server or test suite in the b
 **Why test:** Token savings + less manual checking during long agent runs.
 
 See: [[tools/claude-code]]
+
+## [ ] Let non-technical customers open PRs in our projects
+
+Ramp reports that non-engineers account for a meaningful share of production-code PRs via internal coding agents. We should explore enabling our customers to open PRs in our projects even when they are not technical.
+
+**Why test:** This could materially widen who can propose product and workflow changes, and shorten the loop from customer need to actionable code.
+
+**How:** Define a safe PR path with strong defaults, scoped permissions, review gates, and agent support so non-technical users can propose changes without needing local setup or engineering fluency.
+
+See: [[training/company-wide-ai-enablement]]

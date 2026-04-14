@@ -18,6 +18,7 @@ stale_thresholds_days:
   workflow:  60
   concept:   90
   trend:     30
+  training:  90
   source:   365    # sources rarely "go stale" — they record what was said when
   default:   30
 
@@ -55,6 +56,7 @@ stale:
     - wiki/workflows
     - wiki/concepts
     - wiki/trends
+    - wiki/training
   # Directories explicitly excluded.
   exclude_paths:
     - wiki/history

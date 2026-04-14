@@ -6,7 +6,7 @@ This file tells you (the LLM) how to operate on this wiki. It is **not** user do
 
 ## Purpose
 
-This is a personal knowledge base that tracks the fast-moving AI landscape: tools, models, benchmarks, workflows, concepts, and trends across business areas. Your job is to keep it current, organized, and token-efficient. The user curates sources and asks questions; you do the reading, filing, cross-referencing, and bookkeeping.
+This is a personal knowledge base that tracks the fast-moving AI landscape: tools, models, benchmarks, workflows, concepts, trends, and training guidance across business areas. Your job is to keep it current, organized, and token-efficient. The user curates sources and asks questions; you do the reading, filing, cross-referencing, and bookkeeping.
 
 ## Operating principles
 
@@ -38,6 +38,7 @@ wiki/                      # You own this. Current state.
   workflows/               # Reusable patterns & recipes.
   concepts/                # Ideas (RAG, context engineering, etc.).
   trends/                  # Things being watched.
+  training/                # Practical guidance for teaching teams and businesses to use AI well.
   sources/                 # One lightweight summary page per ingested source.
   history/                 # Archived old versions. Mirrors wiki/ structure.
   _schema/                 # Controlled vocabulary files. See below.
@@ -80,7 +81,7 @@ Every wiki page has YAML frontmatter:
 ```yaml
 ---
 title: Claude Opus 4.6
-type: model          # model | tool | benchmark | workflow | concept | trend | state-of | source
+type: model          # model | tool | benchmark | workflow | concept | trend | training | state-of | source
 domains: [coding, agents]
 subcategory: frontier-model    # required for type: tool | model | workflow; optional elsewhere
 tags: [anthropic, frontier]
@@ -91,7 +92,7 @@ sources: [claude-opus-46-launch, swe-bench-april]   # IDs matching files in wiki
 
 **Required fields by type:**
 - `title`, `type`, `as_of` — always required
-- `domains` — required for `tool`, `model`, `workflow`, `state-of`, `trend`
+- `domains` — required for `tool`, `model`, `workflow`, `state-of`, `trend`; optional for `training`
 - `subcategory` — required for `tool`, `model`, `workflow`
 - `sources` — required once a page has any content derived from a source
 
@@ -183,6 +184,24 @@ Concept and trend pages should be **more concise** than tool pages by default. P
 - Add only the sections that materially help understanding; avoid repeating the same idea under multiple headings.
 - Default target is roughly 150–300 words of body content unless the user explicitly wants depth or the concept genuinely needs more structure.
 - If a source is mostly one core idea plus a few implications, prefer one "Why it matters" section over several thematic sections.
+
+### Training pages
+
+Training pages (`wiki/training/*.md`) capture practical guidance for helping teams, functions, or entire businesses use AI better. They are neither product pages nor pure concepts: the goal is operational enablement.
+
+- Use these for playbooks, rollout guidance, evidence-backed adoption patterns, and synthesized "what worked for other teams" pages.
+- Default to concise, practical writing. Prefer checklists, patterns, and failure modes over essays.
+- Good page shapes include:
+  - team enablement playbooks
+  - function-specific training guidance (for example legal, finance, support, engineering)
+  - evidence pages that compile reported wins, rollout patterns, and anti-patterns across sources
+- `domains` is optional. Use it when the page is clearly tied to a domain already represented in the wiki; omit it when the page is cross-functional.
+- Suggested sections:
+  - `## Current guidance`
+  - `## Proven patterns`
+  - `## Failure modes`
+  - `## Evidence from practice`
+  - `## Open questions`
 
 ### Recent changes cap
 
@@ -388,7 +407,7 @@ Triggered by **"ask:"**, **"based on the wiki..."**, or similar question-shaped 
 
 **Steps:**
 1. Read `wiki/index.md` first.
-2. Identify relevant pages (usually a state-of page + 2–5 specific pages).
+2. Identify relevant pages (usually a state-of page + 2–5 specific pages, and training pages when the question is about adoption or enablement).
 3. Read only those pages. Do not walk the tree.
 4. Synthesize an answer with wikilinks to sources.
 5. **Always include a confidence header** based on the freshness of the underlying pages:
@@ -448,7 +467,7 @@ Run via `python scripts/<name>.py`. These are cheap — run them whenever asked.
 Run these **only when the user explicitly asks with one of these phrases**:
 
 - **"find contradictions"** / **"scan for contradictions"** → read `wiki/index.md` + all state-of pages + referenced pages, look for claims that contradict each other, report findings
-- **"missing page suggestions"** / **"what concepts need pages"** → find entities/concepts mentioned across multiple pages but lacking their own page, suggest which deserve promotion
+- **"missing page suggestions"** / **"what concepts need pages"** → find entities/concepts/training topics mentioned across multiple pages but lacking their own page, suggest which deserve promotion
 - **"domain completeness"** / **"what's missing from state-of/X"** → given a domain, report subcategories that look thin or missing compared to mentions elsewhere
 
 **Never run these automatically.** They consume serious tokens. Only on explicit request.
