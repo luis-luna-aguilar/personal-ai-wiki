@@ -6,6 +6,8 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration-ui`, `agent-orchestration`, `coding-model`, `frontier-multimodal-model`, `legal-ai`, `model-orchestration`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`
+
 ### spec-driven-development
 - **Parent domain(s):** coding
 - **Applies to types:** tool | workflow | concept
@@ -35,6 +37,12 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 - **Applies to types:** model
 - **Definition:** A foundation model trained or specialized for code generation, completion, or agentic coding tasks.
 - **Examples:** [[models/composer-2]]
+
+### frontier-multimodal-model
+- **Parent domain(s):** models
+- **Applies to types:** model
+- **Definition:** General-purpose frontier models competing on broad multimodal capability rather than narrow specialization.
+- **Examples:** [[models/muse-spark]]
 
 ### legal-ai
 - **Parent domain(s):** legal

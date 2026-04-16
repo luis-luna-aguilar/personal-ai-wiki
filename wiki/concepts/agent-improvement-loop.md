@@ -4,20 +4,21 @@ type: concept
 domains: [agents]
 tags: [agentic]
 as_of: 2026-04-10
-sources: [trace-agent-improvement-loop, langchain-better-harness]
+sources: [trace-agent-improvement-loop, langchain-better-harness, cursor-bugbot-learning]
 ---
 
 # Agent improvement loop
 
 A workflow for improving AI agents by studying **execution traces**: records of what the agent actually did during a run, including model calls, tool calls, intermediate steps, and outputs. The loop is: collect traces, score or review them, identify recurring failure patterns, make targeted changes, validate those changes offline, then redeploy and repeat.
 
-## Current status (as of 2026-04-09)
+## Current status (as of 2026-04-10)
 
 - LangChain frames tracing as the foundation for systematic agent improvement, not just debugging
 - The loop spans both staging and production, with production traces treated as the most valuable source of real failures
 - Online evals, offline evals, and human review are complementary layers
 - The concept is broader than any one vendor, even though the source article is product-adjacent
 - LangChain's Better-Harness (open-sourced 2026-04-10) automates the loop: sources evals, splits optimization/holdout sets, iteratively diagnoses failures from traces, and proposes targeted harness changes with overfitting guards
+- Cursor's Bugbot provides a product example of the same pattern: reactions, replies, and reviewer comments become candidate rules that are promoted or disabled based on later production signal
 
 ## The loop
 
@@ -56,6 +57,10 @@ LangChain's Better-Harness is a prototype that formalizes the improvement loop a
 
 Tested with Claude Sonnet 4.6 and GLM-5. Results showed near-full generalization to holdout sets on tool_selection and followup_quality categories. The analogy is explicit: `harness + evals + harness engineering → better agent`, mirroring `model + training data + gradient descent → better model`.
 
+## Product example: Bugbot learned rules
+
+Cursor's Bugbot shows what the improvement loop looks like when shipped inside a user-facing product. Instead of relying only on offline experiments, Bugbot turns feedback from merged PRs into candidate rules, evaluates those rules on later PRs, activates rules that keep earning good signal, and disables rules that perform poorly. That is the same core loop in more operational form: production traces plus human feedback become structured changes to the harness.
+
 ## Caveats
 
 - This is a conceptual guide from LangChain, not an independent market survey.
@@ -64,6 +69,7 @@ Tested with Claude Sonnet 4.6 and GLM-5. Results showed near-full generalization
 
 ## Recent changes
 
+- [2026-04-10] Added Cursor Bugbot as a production example of live feedback turning into agent rules
 - [2026-04-10] Added Better-Harness section — LangChain's autonomous harness hill-climbing system
 - [2026-04-09] Page created from LangChain's conceptual guide "The Agent Improvement Loop Starts with a Trace"
 
@@ -71,3 +77,4 @@ Tested with Claude Sonnet 4.6 and GLM-5. Results showed near-full generalization
 
 - [[sources/articles/trace-agent-improvement-loop]]
 - [[sources/articles/langchain-better-harness]]
+- [[sources/articles/cursor-bugbot-learning]]

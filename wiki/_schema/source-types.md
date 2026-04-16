@@ -35,6 +35,9 @@ One playbook per source type. The LLM follows the playbook when ingesting. Setti
   2. Extract: methodology, headline findings, limitations, datasets/benchmarks used.
   3. Propose concept pages for any new ideas. Update benchmark pages if new scores are reported.
   4. Full source summary required.
+  5. Paper proposals should be more explanatory and simpler than routine source proposals. The paper source page should help the user understand and reuse the idea, not evaluate it like a peer reviewer.
+  6. Include a plain-English thesis, the practical problem, the main loop or mechanism, concrete examples, translation to possible user projects, reported results, and limits.
+  7. Avoid unexplained academic shorthand. Define necessary terms in everyday language and keep claims scoped to the paper's evidence.
 
 ## podcast
 

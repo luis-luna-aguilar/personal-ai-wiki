@@ -375,9 +375,23 @@ Two-sentence TL;DR of the source.
 **Rules for proposals:**
 - Every intended change is a checkbox. Unchecked = skip.
 - Every draft appears **in full** inside the proposal, in a fenced code block. The user may edit drafts directly in the file before applying.
+- If a draft contains fenced code examples, wrap the full draft in a longer fence such as ````md ... ```` so inner ```text blocks do not break proposal formatting.
 - For **updated** pages, show only the relevant diff snippet in the proposal unless the user explicitly asks for the full file. Do not paste the entire unchanged page just to show a small edit.
 - Include "Open questions" when you're uncertain — the user can answer inline.
 - Include a "Schema / vocabulary additions" section whenever you want to introduce a new tag, domain, or subcategory. This requires explicit approval via checkbox.
+
+**Paper proposal exception:** papers are usually harder to understand than articles, tweets, or product pages, so paper proposals should be more explanatory and simpler by default.
+
+- The goal is not academic evaluation. The goal is to ingest the useful content in plain language so the user can understand it and consider whether it applies to their own projects.
+- Do not compress a paper into only a TL;DR and a short claim list.
+- Start from the everyday problem the paper addresses: "what breaks?", "what is the agent/system trying to do?", and "why is this hard?"
+- Explain the core idea in simple words before using technical terms. If a technical term is necessary, define it immediately in practical language.
+- Prefer concrete examples, analogies, and step-by-step walkthroughs over dense phrases from the paper.
+- Include a `Why this is useful for our projects` or equivalent section when the idea can transfer beyond the paper's domain.
+- The proposed `wiki/sources/papers/<slug>.md` source page should help the user understand and reuse the paper's idea. Include the plain-language thesis, the problem setup, the main loop or mechanism, examples, practical translation, reported results, and limits.
+- Keep derived concept/trend pages readable as wiki state, but allow them to be longer than routine concept pages when the concept originates in a paper and needs more explanation.
+- Do not overstate paper results. Clearly distinguish "the paper reports X" from "this is proven generally," and note simulation-only results, benchmark scope, assumptions, and unresolved limitations.
+- Avoid unexplained academic shorthand such as "neuro-symbolic," "operator," "reward machine," "transition," "policy," or "LTL." Either replace it with simpler wording or define it in the same paragraph.
 
 ### 5. Apply proposal
 

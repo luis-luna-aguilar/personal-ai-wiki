@@ -4,7 +4,7 @@ type: state-of
 domains: [agents]
 tags: []
 as_of: 2026-04-10
-sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin]
+sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination]
 ---
 
 # State of Agents
@@ -39,6 +39,7 @@ Agent-compatible tools that let a model provision external services and receive 
 
 ## Recent changes
 
+- [2025-03-06] Added [[concepts/curiosity-driven-imagination]] — paper pattern for agents that recover from broken plans by exploring, learning new steps, and turning them into guided rewards
 - [2026-04-10] Added [[concepts/agentic-thinking]] — Junyang Lin's essay on the shift from reasoning to agentic thinking
 - [2026-04-09] Added `agent-orchestration` with [[tools/claude-managed-agents]] after ingesting Anthropic's Managed Agents architecture post.
 - [2026-04-09] Added `agentic-devops` subcategory with [[tools/stripe-cli]] after ingesting the `projects.dev` landing page

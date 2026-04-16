@@ -86,3 +86,4 @@ sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart]
 ## Open questions
 
 - The fetch gap is real here. If you want this signal treated more seriously, we should ingest a fuller primary source than the X shell capture.
+	- We will have more signal in the future.

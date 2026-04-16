@@ -91,3 +91,15 @@ grep "^## \[" wiki/log.md | tail -20
 ## [2026-04-10] ingest | Ramp AI adoption playbook | 2 pages updated, 2 created (wiki/trends/agents-reshape-organizations, wiki/index updated; wiki/training/company-wide-ai-enablement, wiki/sources/articles/ramp-ai-adoption-playbook created); personal/takes/test-backlog appended with customer PR backlog item
 
 ## [2026-04-10] triage | The Code Newsletter — Managed Agents / Muse Spark | 3 proposals generated (Muse Spark, Cursor Bugbot learned rules, Postman AI-org-chart signal), 4 skipped
+
+## [2026-04-15] apply | Cursor Bugbot learned rules | 3 pages updated (tools/cursor, concepts/agent-improvement-loop, state-of/coding), 1 created (sources/articles/cursor-bugbot-learning); index updated
+
+## [2026-04-15] schema | added subcategory `frontier-multimodal-model`
+
+## [2026-04-15] ingest | Muse Spark | 2 pages updated, 2 created (state-of/models, wiki/index updated; models/muse-spark, sources/articles/muse-spark created)
+
+## [2026-04-15] ingest | Postman AI-era org-chart signal | 1 page updated, 1 created (trends/agents-reshape-organizations updated; sources/tweets/postman-ai-org-chart created)
+
+## [2026-04-15] ingest | Curiosity-Driven Imagination paper | 3 pages updated, 2 created
+
+## [2026-04-16] triage | The Code 2026-04-16 | 1 proposals, 5 skipped

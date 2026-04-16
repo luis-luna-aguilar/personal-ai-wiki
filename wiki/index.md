@@ -17,7 +17,7 @@ When adding a new wiki page (via a proposal), add its index entry under the corr
 Read-me-first dashboards per domain.
 
 - [[state-of/coding]] — current state of AI coding tools and workflows *(as_of: 2026-04-10)*
-- [[state-of/models]] — current state of foundation models *(as_of: —)*
+- [[state-of/models]] — current state of foundation models *(as_of: 2026-04-10)*
 - [[state-of/agents]] — current state of agentic systems and tool use *(as_of: 2026-04-09)*
 - [[state-of/legal]] — current state of AI in legal practice *(as_of: 2026-04-02)*
 - [[state-of/computer-use]] — current state of AI computer-use agents *(as_of: 2026-04-10)*
@@ -29,13 +29,14 @@ Read-me-first dashboards per domain.
 Foundation models. One page per model family or generation.
 
 - [[models/composer-2]] — Cursor's in-house frontier coding model; stub *(as_of: 2026-04-02)*
+- [[models/muse-spark]] — Meta's new multimodal model; source emphasizes compute-efficient scaling vs prior Llama 4 Maverick generation *(as_of: 2026-04-10)*
 
 ## Tools
 
 Tools and products built on top of models. One page per tool.
 
 - [[tools/claude-managed-agents]] — Anthropic's hosted long-horizon agent runtime concept built around decoupled session, harness, and sandbox abstractions *(as_of: 2026-04-09)*
-- [[tools/cursor]] — Cursor 3 agentic coding workspace; multi-repo, local↔cloud agent handoff *(as_of: 2026-04-02)*
+- [[tools/cursor]] — Cursor 3 agentic coding workspace; multi-repo, local↔cloud agent handoff; Bugbot learned-rules loop for PR review *(as_of: 2026-04-10)*
 - [[tools/harvey]] — legal AI platform; thin stub from a single editorial source *(as_of: 2026-04-02)*
 - [[tools/kiro]] — VS Code-based SDD tool, 3-doc workflow *(as_of: 2025-10-15)*
 - [[tools/spec-kit]] — GitHub's CLI SDD scaffolder with slash commands *(as_of: 2025-10-15)*
@@ -68,6 +69,7 @@ Ideas and techniques (RAG, context engineering, compound engineering, etc.).
 - [[concepts/harness]] — scaffolding that wraps a model into an acting agent; prompts, tools, orchestration, environment, evals *(as_of: 2026-04-10)*
 - [[concepts/agentic-thinking]] — proposed successor to reasoning thinking; models that reason in order to act within environments *(as_of: 2026-04-10)*
 - [[concepts/spec-driven-development]] — SDD concept, three-level taxonomy, critiques *(as_of: 2025-10-15)*
+- [[concepts/curiosity-driven-imagination]] — agent recovery pattern: explore when stuck, learn new steps, and turn the steps into guided rewards *(as_of: 2025-03-06)*
 
 ## Trends
 
@@ -91,13 +93,13 @@ See `wiki/sources/` — source summaries are not indexed here (they're many and 
 
 ## Page count
 
-- state-of: 7 (5 populated, 2 skeleton)
-- models: 1
+- state-of: 7 (6 populated, 1 skeleton)
+- models: 2
 - tools: 12
 - benchmarks: 0
 - workflows: 1
-- concepts: 5
+- concepts: 6
 - trends: 3
 - training: 1
 
-**Total content pages: 30.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 32.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.

@@ -176,3 +176,4 @@ General-purpose frontier models competing on broad multimodal capability rather 
 ## Open questions
 
 - The captured Meta source is thinner than a normal launch post. I kept the page intentionally concise and avoided unsupported claims from the newsletter blurb. If you want a fuller Muse Spark page, we likely need a richer primary source than the saved capture.
+	- Keep it as such

@@ -4,7 +4,7 @@ type: trend
 domains: [agents, coding]
 tags: [agentic]
 as_of: 2026-04-10
-sources: [harvey-legal-is-next, ramp-ai-adoption-playbook]
+sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart]
 ---
 
 # Agents reshape organizations (leverage moves from individual to org)
@@ -26,6 +26,7 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - **Triggers move beyond explicit prompts.** Some of these systems are triggered by monitoring incidents, bug reports, customer feedback, and Slack messages — not by a human typing a request.
 - **Ramp publishes concrete internal adoption numbers.** Ramp reports 99.5% of employees active on AI tools, 84% using coding agents weekly, 1,500+ apps shipped in six weeks by 800+ builders, and non-engineers accounting for 12% of human-initiated PRs on the production codebase.
 - **The org model itself changes.** Ramp describes a central team owning platforms, connectors, and enablement while functional teams build on top, which is exactly the kind of operating redesign this trend predicts.
+- **The org-chart argument is spreading.** A thin signal relayed from Postman's founder argues AI-era teams should run with wider spans of control and fewer layers between leaders and ICs. This fits the same direction of travel, but the current source quality here is weak.
 
 ## What to watch
 
@@ -44,6 +45,7 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 
 ## Recent changes
 
+- [2026-04-10] Added weak supporting signal from Postman founder's AI-era org-chart thesis (wider spans, fewer layers)
 - [2026-04-10] Ramp adds a concrete company-reported example of org-wide AI building and non-engineer PR creation
 - [2026-04-02] Trend opened from Harvey's "Legal is Next" post
 
@@ -51,3 +53,4 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 
 - [[sources/articles/harvey-legal-is-next]]
 - [[sources/articles/ramp-ai-adoption-playbook]]
+- [[sources/tweets/postman-ai-org-chart]]

@@ -4,7 +4,7 @@ type: state-of
 domains: [coding]
 tags: []
 as_of: 2026-04-10
-sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit]
+sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit, cursor-bugbot-learning]
 ---
 
 # State of Coding
@@ -25,7 +25,7 @@ Tools where a structured natural-language spec is the primary input to AI coding
 
 Coding tools whose primary UI is built around managing one or more AI coding agents (local and cloud), rather than file-centric editing with AI assistance bolted on.
 
-- [[tools/cursor]] — Cursor 3 is a unified agent workspace with multi-repo, local↔cloud handoff, plugin marketplace; built from scratch (not a VS Code fork); legacy IDE mode still available *(as of 2026-04-02)*
+- [[tools/cursor]] — Cursor 3 is a unified agent workspace with multi-repo, local↔cloud handoff, plugin marketplace, and Bugbot learned rules from production PR feedback; Cursor reports 78.13% resolution across 50,310 public PRs *(as of 2026-04-10)*
 
 ### Agentic DevOps
 
@@ -48,8 +48,8 @@ Toolkits that package a developer platform's docs, schemas, validation, and rela
 
 ## Recent changes
 
+- [2026-04-10] Cursor Bugbot learned rules: production PR feedback now turns into active review rules; Cursor reports 78.13% resolution across 50,310 public PRs
 - [2026-04-10] Added `agent-toolkits` subcategory with [[tools/shopify-ai-toolkit]]
 - [2026-04-10] Added `terminal-coding-agent` subcategory with [[tools/claude-code]] and [[tools/codex]]
 - [2026-04-10] OpenAI launches $100/mo Pro tier — 5× Codex usage, exclusive Pro model, launch promo through 2026-05-31
 - [2026-04-09] Added `agentic-devops` subcategory with [[tools/stripe-cli]] after ingesting the `projects.dev` launch page
-- [2026-04-02] Cursor 3 launched; added new `agentic-coding-workspace` subcategory and placed Cursor under it
