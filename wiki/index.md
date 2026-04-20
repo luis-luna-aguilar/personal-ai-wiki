@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 type: index
-as_of: 2026-04-10
+as_of: 2026-04-16
 ---
 
 # Wiki Index
@@ -18,7 +18,7 @@ Read-me-first dashboards per domain.
 
 - [[state-of/coding]] — current state of AI coding tools and workflows *(as_of: 2026-04-10)*
 - [[state-of/models]] — current state of foundation models *(as_of: 2026-04-10)*
-- [[state-of/agents]] — current state of agentic systems and tool use *(as_of: 2026-04-09)*
+- [[state-of/agents]] — current state of agentic systems and tool use *(as_of: 2026-04-15)*
 - [[state-of/legal]] — current state of AI in legal practice *(as_of: 2026-04-02)*
 - [[state-of/computer-use]] — current state of AI computer-use agents *(as_of: 2026-04-10)*
 - [[state-of/finance]] — current state of AI in finance *(as_of: 2026-04-10)*
@@ -47,6 +47,7 @@ Tools and products built on top of models. One page per tool.
 - [[tools/gemini]] — Google's AI chatbot; custom visualizations, notebooks, Google ecosystem integration *(as_of: 2026-04-10)*
 - [[tools/claude-code]] — Anthropic's terminal-first AI coding agent; Monitor tool for event-driven background scripts *(as_of: 2026-04-10)*
 - [[tools/codex]] — OpenAI's cloud-based coding agent via CLI and ChatGPT; stub with pricing *(as_of: 2026-04-10)*
+- [[tools/openai-agents-sdk]] — OpenAI's updated agent SDK: model-native harness, native sandbox execution, durable checkpoint / rehydration, and provider-neutral manifests *(as_of: 2026-04-15)*
 
 ## Benchmarks
 
@@ -66,7 +67,7 @@ Ideas and techniques (RAG, context engineering, compound engineering, etc.).
 
 - [[concepts/agent-improvement-loop]] — trace-centered workflow for improving AI agents through tracing, evals, review, and regression testing *(as_of: 2026-04-09)*
 - [[concepts/functional-emotions]] — emotion-concept representations in LLMs can causally shape behavior without implying subjective feeling *(as_of: 2026-04-02)*
-- [[concepts/harness]] — scaffolding that wraps a model into an acting agent; prompts, tools, orchestration, environment, evals *(as_of: 2026-04-10)*
+- [[concepts/harness]] — scaffolding that wraps a model into an acting agent; prompts, tools, orchestration, environment, evals *(as_of: 2026-04-15)*
 - [[concepts/agentic-thinking]] — proposed successor to reasoning thinking; models that reason in order to act within environments *(as_of: 2026-04-10)*
 - [[concepts/spec-driven-development]] — SDD concept, three-level taxonomy, critiques *(as_of: 2025-10-15)*
 - [[concepts/curiosity-driven-imagination]] — agent recovery pattern: explore when stuck, learn new steps, and turn the steps into guided rewards *(as_of: 2025-03-06)*
@@ -95,11 +96,11 @@ See `wiki/sources/` — source summaries are not indexed here (they're many and 
 
 - state-of: 7 (6 populated, 1 skeleton)
 - models: 2
-- tools: 12
+- tools: 13
 - benchmarks: 0
 - workflows: 1
 - concepts: 6
 - trends: 3
 - training: 1
 
-**Total content pages: 32.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 33.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.

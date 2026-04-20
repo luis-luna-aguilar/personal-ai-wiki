@@ -103,3 +103,4 @@ grep "^## \[" wiki/log.md | tail -20
 ## [2026-04-15] ingest | Curiosity-Driven Imagination paper | 3 pages updated, 2 created
 
 ## [2026-04-16] triage | The Code 2026-04-16 | 1 proposals, 5 skipped
+## [2026-04-16] ingest | OpenAI — "The next evolution of the Agents SDK" | 3 pages updated, 2 created

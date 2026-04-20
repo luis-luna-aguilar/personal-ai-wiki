@@ -14,20 +14,20 @@ OpenAI's April 15, 2026 product post reframes the Agents SDK as standardized inf
 
 ## Intended changes
 
-- [ ] **Create** `wiki/tools/openai-agents-sdk.md` — new tool page for OpenAI's model-native agent runtime / SDK
+- [x] **Create** `wiki/tools/openai-agents-sdk.md` — new tool page for OpenAI's model-native agent runtime / SDK
     > See draft below
 
-- [ ] **Update** `wiki/state-of/agents.md` — add OpenAI under `Agent orchestration`
+- [x] **Update** `wiki/state-of/agents.md` — add OpenAI under `Agent orchestration`
     > **Before:** only `[[tools/claude-managed-agents]]` appears under `Agent orchestration`
     > **After:** add `[[tools/openai-agents-sdk]] — OpenAI's updated SDK combines a model-native harness with native sandbox execution, durable checkpoint / rehydration, provider-neutral manifests, and built-in support for MCP, skills, AGENTS.md, shell, and apply_patch *(as of 2026-04-15)*`
 
-- [ ] **Update** `wiki/concepts/harness.md` — add a concrete vendor example of a harness as production infrastructure rather than just prompt/tool glue
+- [x] **Update** `wiki/concepts/harness.md` — add a concrete vendor example of a harness as production infrastructure rather than just prompt/tool glue
     > **Add snippet:** `OpenAI's April 15, 2026 Agents SDK post gives a concrete vendor example of this broader definition: the harness includes configurable memory, sandbox-aware orchestration, Codex-like filesystem tools, MCP, skills, AGENTS.md, shell, and apply_patch. OpenAI explicitly argues the harness should stay separate from compute so credentials remain outside execution sandboxes and runs can survive sandbox failure via snapshotting and rehydration.`
 
-- [ ] **Create** `wiki/sources/articles/openai-agents-sdk-evolution.md` — source summary for the official OpenAI post
+- [x] **Create** `wiki/sources/articles/openai-agents-sdk-evolution.md` — source summary for the official OpenAI post
     > See draft below
 
-- [ ] **Update** `wiki/index.md` — add `[[tools/openai-agents-sdk]]` under Tools and refresh counts / `as_of`
+- [x] **Update** `wiki/index.md` — add `[[tools/openai-agents-sdk]]` under Tools and refresh counts / `as_of`
     > **Before:** no OpenAI Agents SDK entry
     > **After:** `- [[tools/openai-agents-sdk]] — OpenAI's updated agent SDK: model-native harness, native sandbox execution, durable checkpoint / rehydration, and provider-neutral manifests *(as_of: 2026-04-15)*`
 

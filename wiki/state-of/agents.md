@@ -3,8 +3,8 @@ title: State of Agents
 type: state-of
 domains: [agents]
 tags: []
-as_of: 2026-04-10
-sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination]
+as_of: 2026-04-15
+sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution]
 ---
 
 # State of Agents
@@ -24,6 +24,7 @@ Surfaces (desktop, web, mobile, chat) where humans supervise, hand off, and revi
 Platforms that run or coordinate long-horizon agents across execution environments, instead of only exposing a local loop or a thin UI over one agent.
 
 - [[tools/claude-managed-agents]] — Anthropic's hosted runtime separates session, harness, and sandbox so long-running agents can recover from failures, attach tools or customer infrastructure, and start faster when no sandbox is needed immediately *(as of 2026-04-09)*
+- [[tools/openai-agents-sdk]] — OpenAI's updated SDK combines a model-native harness with native sandbox execution, durable checkpoint / rehydration, provider-neutral manifests, and built-in support for MCP, skills, AGENTS.md, shell, and `apply_patch` *(as of 2026-04-15)*
 
 ### Model orchestration
 
@@ -39,6 +40,7 @@ Agent-compatible tools that let a model provision external services and receive 
 
 ## Recent changes
 
+- [2026-04-15] Added [[tools/openai-agents-sdk]] under `agent-orchestration` after ingesting OpenAI's Agents SDK evolution post.
 - [2025-03-06] Added [[concepts/curiosity-driven-imagination]] — paper pattern for agents that recover from broken plans by exploring, learning new steps, and turning them into guided rewards
 - [2026-04-10] Added [[concepts/agentic-thinking]] — Junyang Lin's essay on the shift from reasoning to agentic thinking
 - [2026-04-09] Added `agent-orchestration` with [[tools/claude-managed-agents]] after ingesting Anthropic's Managed Agents architecture post.

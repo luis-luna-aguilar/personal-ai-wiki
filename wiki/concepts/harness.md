@@ -3,8 +3,8 @@ title: Harness (agent)
 type: concept
 domains: [agents]
 tags: [agentic]
-as_of: 2026-04-10
-sources: [agentic-thinking-lin, langchain-better-harness]
+as_of: 2026-04-15
+sources: [agentic-thinking-lin, langchain-better-harness, openai-agents-sdk-evolution]
 ---
 
 # Harness (agent)
@@ -25,6 +25,8 @@ The analogy to model training is explicit in the field: just as training data sh
 
 In the reasoning era, the competitive edge was in model training — better RL, stronger feedback signals. In the agentic era, as [[sources/articles/agentic-thinking-lin|Junyang Lin argues]], the edge is in the harness: environment quality, prompt precision, tool design, and the ability to iterate on behavior without retraining the model. Harness engineering is increasingly treated as a first-class discipline.
 
+OpenAI's April 15, 2026 Agents SDK post gives a concrete vendor example of this broader definition: the harness includes configurable memory, sandbox-aware orchestration, Codex-like filesystem tools, MCP, skills, AGENTS.md, shell, and `apply_patch`. OpenAI explicitly argues the harness should stay separate from compute so credentials remain outside execution sandboxes and runs can survive sandbox failure via snapshotting and rehydration.
+
 ## Harness vs model
 
 A well-engineered harness can compensate for a weaker model. A poor harness can cripple a strong one. This is why [[sources/articles/langchain-better-harness|Better-Harness]] and similar systems focus on *harness hill-climbing* — iteratively improving the harness using evals as a signal, separate from any model update.
@@ -38,3 +40,4 @@ A well-engineered harness can compensate for a weaker model. A poor harness can 
 
 - [[sources/articles/agentic-thinking-lin]]
 - [[sources/articles/langchain-better-harness]]
+- [[sources/articles/openai-agents-sdk-evolution]]
