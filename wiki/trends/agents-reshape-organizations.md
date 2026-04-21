@@ -4,7 +4,7 @@ type: trend
 domains: [agents, coding]
 tags: [agentic]
 as_of: 2026-04-21
-sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org]
+sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern]
 ---
 
 # Agents reshape organizations (leverage moves from individual to org)
@@ -23,9 +23,13 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 ## Concrete signals
 
 - **Background agents inside companies.** Cited examples now include Ramp's background agent / coding-agent stack, Stripe's end-to-end coding agents, and Harvey's internal Spectre system.
+- **Product categories are being rebuilt around agents as first-class users.** Linear's early-April framing argues the winning SaaS products are not "AI features on top" but products redesigned so agents can operate as real users inside the system.
 - **Triggers move beyond explicit prompts.** Some of these systems are triggered by monitoring incidents, bug reports, customer feedback, and Slack messages — not by a human typing a request.
+- **"Everyone gets an agent" is becoming an org-design question.** Every's internal reporting frames the challenge less as tool selection and more as agent etiquette, delegation style, and where humans stay responsible once each employee has a dedicated agent surface.
+- **Named agent employees are becoming a real operating pattern.** Every's late-March reporting describes agents with names, managers, dedicated responsibilities, Slack presence, and even their own always-on machines. That makes the "parallel organization chart" idea feel less metaphorical and more operational.
 - **Ramp publishes concrete internal adoption numbers.** Ramp reports 99.5% of employees active on AI tools, 84% using coding agents weekly, 1,500+ apps shipped in six weeks by 800+ builders, and non-engineers accounting for 12% of human-initiated PRs on the production codebase.
 - **The org model itself changes.** Ramp describes a central team owning platforms, connectors, and enablement while functional teams build on top, which is exactly the kind of operating redesign this trend predicts.
+- **Company design is being reframed explicitly.** Block's "from hierarchy to intelligence" essay pushes the strongest version of the thesis in this batch: organizations historically route information through managers because information had to move through people; AI systems may increasingly absorb part of that routing layer directly.
 - **McKinsey names the bottleneck: workflow redesign, not technology.** "AI is Everywhere. The Agentic Organization Isn't Yet" (McKinsey, 2026) reports that 80%+ of companies are not seeing bottom-line impact from AI investments despite large spending. The diagnosis: companies are running pilots inside unchanged processes rather than redesigning workflows end-to-end. The unlock is "end-to-end workflow reimagination" — rethinking the entire process (e.g., insurance underwriting, hire-to-onboard) rather than speeding up individual tasks. McKinsey introduces the distinction between humans "in the loop" (executing parts of a workflow) vs. "above the loop" (providing judgment over an agent-run process) as the structural end state for knowledge work.
 - **The org-chart argument is spreading.** A thin signal relayed from Postman's founder argues AI-era teams should run with wider spans of control and fewer layers between leaders and ICs. This fits the same direction of travel, but the current source quality here is weak.
 
@@ -58,3 +62,4 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - [[sources/articles/ramp-ai-adoption-playbook]]
 - [[sources/articles/mckinsey-agentic-org]]
 - [[sources/tweets/postman-ai-org-chart]]
+- [[sources/newsletters/agent-coworkers-operating-pattern]]

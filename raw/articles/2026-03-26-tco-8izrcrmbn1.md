@@ -1,0 +1,15 @@
+---
+title: "HackerNoon | Learn Any Technology: 'If your tests break every time the UI  changes…Are  they testing anything?This deep dive explores"
+type: article
+url: https://t.co/8iZrCrMbN1
+received: 2026-03-26
+gmail_id: 19d2b924c20b38f2
+fetched: false
+---
+
+# HackerNoon | Learn Any Technology: "If your tests break every time the UI  changes…Are  they testing anything?This deep dive explores
+
+**URL:** https://t.co/8iZrCrMbN1
+**Forwarded:** 2026-03-26
+
+HackerNoon | Learn Any Technology: "If your tests break every time the UI changes…Are they testing anything?This deep dive explores agentic testing and a better approach to QA 👇https://t.co/8iZrCrMbN1" - Post on X (formerly Twitter) by HackerNoon | Learn Any Technology  https://x.com/hackernoon/status/2036790655540760842

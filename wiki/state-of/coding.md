@@ -3,8 +3,8 @@ title: State of Coding
 type: state-of
 domains: [coding]
 tags: []
-as_of: 2026-04-10
-sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit, cursor-bugbot-learning]
+as_of: 2026-04-21
+sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit, cursor-bugbot-learning, claude-code-routines, openai-codex-ongoing-tasks, orca-homepage, coding-agent-control-planes, claude-code-leak-architecture, cursor-3-orchestration-bet]
 ---
 
 # State of Coding
@@ -25,7 +25,8 @@ Tools where a structured natural-language spec is the primary input to AI coding
 
 Coding tools whose primary UI is built around managing one or more AI coding agents (local and cloud), rather than file-centric editing with AI assistance bolted on.
 
-- [[tools/cursor]] — Cursor 3 is a unified agent workspace with multi-repo, local↔cloud handoff, plugin marketplace, and Bugbot learned rules from production PR feedback; Cursor reports 78.13% resolution across 50,310 public PRs *(as of 2026-04-10)*
+- [[tools/cursor]] — Cursor remains the clearest reference point for the category: Cursor 3 and 3.1 treat coding as agent supervision work first, with tiled multi-agent control, local↔cloud handoff, branch-aware remote execution, plugin-marketplace extensibility, and Bugbot learning loops from production PR feedback *(as of 2026-04-14)*
+- [[tools/orca]] — Open-source worktree IDE for running Claude Code, Codex, and other coding agents side by side with built-in terminals, file review, diff review, and CI/PR status tracking *(as of 2026-04-21)*
 
 ### Agentic DevOps
 
@@ -35,10 +36,10 @@ Tools that turn app-stack setup into a repeatable command-line workflow across m
 
 ### Terminal coding agent
 
-CLI-based AI coding agents that run in the terminal, operating autonomously across file editing, shell commands, and tool use without a graphical IDE.
+CLI-based AI coding agents that still anchor in the terminal, but are increasingly expanding into supervised workspaces with repeatable workflows, background execution, and broader agent control surfaces.
 
-- [[tools/claude-code]] — Anthropic; terminal-first agent with background Monitor tool for event-driven wakeups *(as of 2026-04-10)*
-- [[tools/codex]] — OpenAI; cloud-based coding agent via CLI and ChatGPT *(as of 2026-04-10)*
+- [[tools/claude-code]] — Anthropic; terminal-first agent with Monitor wakeups, hosted routines, and a product direction toward multi-session supervision *(as of 2026-04-21)*
+- [[tools/codex]] — OpenAI; cloud coding agent via CLI and ChatGPT, increasingly framed around app use, memory, and repeatable ongoing tasks *(as of 2026-04-21)*
 
 ### Agent toolkits
 
@@ -48,8 +49,9 @@ Toolkits that package a developer platform's docs, schemas, validation, and rela
 
 ## Recent changes
 
+- [2026-04-21] Early-April Claude Code leak reinforced that harness quality — memory layering, repo-state awareness, permission boundaries, and subagent design — is becoming a core competitive dimension in coding agents
+- [2026-04-14] Cursor 3.1 added tiled multi-agent supervision and stronger control-plane UX, reinforcing the shift from AI-enhanced IDEs toward agent workspaces
+- [2026-04-21] Added [[tools/orca]] under `agentic-coding-workspace`; open-source worktree IDE centered on parallel agent supervision
+- [2026-04-21] Claude Code routines and Codex ongoing-task/computer-use push reinforce a shift from single-loop CLI agents toward supervised, repeatable agent workflows
 - [2026-04-10] Cursor Bugbot learned rules: production PR feedback now turns into active review rules; Cursor reports 78.13% resolution across 50,310 public PRs
 - [2026-04-10] Added `agent-toolkits` subcategory with [[tools/shopify-ai-toolkit]]
-- [2026-04-10] Added `terminal-coding-agent` subcategory with [[tools/claude-code]] and [[tools/codex]]
-- [2026-04-10] OpenAI launches $100/mo Pro tier — 5× Codex usage, exclusive Pro model, launch promo through 2026-05-31
-- [2026-04-09] Added `agentic-devops` subcategory with [[tools/stripe-cli]] after ingesting the `projects.dev` launch page

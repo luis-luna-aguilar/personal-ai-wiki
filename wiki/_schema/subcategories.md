@@ -6,7 +6,7 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
-Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration-ui`, `agent-orchestration`, `coding-model`, `frontier-multimodal-model`, `legal-ai`, `model-orchestration`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration-ui`, `agent-orchestration`, `coding-model`, `frontier-multimodal-model`, `legal-ai`, `model-orchestration`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`
 
 ### spec-driven-development
 - **Parent domain(s):** coding
@@ -85,6 +85,12 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Applies to types:** tool
 - **Definition:** Toolkits that package a specific developer platform's docs, schemas, validation, and related capabilities for AI coding tools via plugins, skills, or MCP servers.
 - **Examples:** [[tools/shopify-ai-toolkit]]
+
+### agentic-orchestration-patterns
+- **Parent domain(s):** agents
+- **Applies to types:** workflow | concept
+- **Definition:** Reusable design patterns for orchestrating one or more agents across planning, delegation, evaluation, ambiguity handling, and recovery.
+- **Examples:** [[workflows/agentic-orchestration-patterns]]
 
 ### Format
 

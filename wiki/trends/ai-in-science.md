@@ -3,20 +3,28 @@ title: AI in Science
 type: trend
 domains: [science]
 tags: []
-as_of: 2026-04-10
-sources: []
+as_of: 2026-04-21
+sources: [noetik-cancer-trials, gpt-rosalind-launch]
 ---
 
 # AI in Science
 
-AI is accelerating scientific research primarily as a force-multiplier for human researchers rather than an autonomous discovery engine. The pattern: models analyze data and run experiments at scales no human team could match, compressing months of work into days.
+AI is increasingly moving from generic scientific assistance toward domain-specific scientific reasoning systems. The strongest current signal in this wiki is biology and drug discovery: models are being positioned not just as literature copilots, but as systems that infer treatment response, model tumor environments, or support translational medicine workflows.
 
-## Current status (as of 2026-04-10)
+## Current status (as of 2026-04-21)
 
-- NASA scientists used AI to surface 800 previously undocumented cosmic anomalies after scanning 100M images
-- University of Michigan researchers built a model that reads and diagnoses brain MRIs in seconds with 97.5% accuracy
-- DeepMind's AlphaFold compresses protein-structure breakthroughs that used to take months into a single weekend
+- Noetik is presented as using large multimodal tumor datasets and transformer models to predict treatment response and improve cancer-trial selection
+- The company reportedly signed a $50M GSK deal tied to this stack
+- OpenAI launched GPT-Rosalind as a frontier reasoning model for biology, drug discovery, and translational medicine
+- Translational medicine here means moving from lab and data insight toward practical clinical use, such as deciding which therapies, biomarkers, or trial designs are most likely to work in patients
+- The pattern is shifting from "AI helps researchers" to "specialized models target a scientific bottleneck directly"
 
 ## Recent changes
 
+- [2026-04-21] Added biology and drug-discovery productization signals: Noetik and GPT-Rosalind
 - [2026-04-10] Page seeded from Superhuman AI newsletter overview of AI-driven scientific breakthroughs
+
+## Sources
+
+- [[sources/newsletters/noetik-cancer-trials]]
+- [[sources/tweets/gpt-rosalind-launch]]

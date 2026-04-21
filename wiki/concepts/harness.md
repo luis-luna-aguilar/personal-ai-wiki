@@ -3,8 +3,8 @@ title: Harness (agent)
 type: concept
 domains: [agents]
 tags: [agentic]
-as_of: 2026-04-15
-sources: [agentic-thinking-lin, langchain-better-harness, openai-agents-sdk-evolution]
+as_of: 2026-04-21
+sources: [agentic-thinking-lin, langchain-better-harness, openai-agents-sdk-evolution, notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, claude-code-leak-architecture, harness-engineering-early-april]
 ---
 
 # Harness (agent)
@@ -20,6 +20,8 @@ The analogy to model training is explicit in the field: just as training data sh
 - **Orchestration logic** — how the agent loops, when it escalates, how sub-agents are coordinated
 - **Execution environment** — browser, terminal, code sandbox, API layers, memory systems
 - **Evaluation layer** — evals and traces that measure whether the agent behaves as intended
+- **Context-shaping layer** — practical systems increasingly treat repo state, recent edits, local instructions, and memory retrieval policy as part of the harness boundary, not as incidental prompt stuffing
+- **Reusable operating modules** — skills, hook scripts, and lightweight knowledge layers increasingly act as composable pieces of the harness, not just ad hoc project artifacts
 
 ## Why it matters
 
@@ -27,17 +29,48 @@ In the reasoning era, the competitive edge was in model training — better RL, 
 
 OpenAI's April 15, 2026 Agents SDK post gives a concrete vendor example of this broader definition: the harness includes configurable memory, sandbox-aware orchestration, Codex-like filesystem tools, MCP, skills, AGENTS.md, shell, and `apply_patch`. OpenAI explicitly argues the harness should stay separate from compute so credentials remain outside execution sandboxes and runs can survive sandbox failure via snapshotting and rehydration.
 
+In practice, a harness is not only the loop logic. Recent source material reinforces that stable context packaging matters just as much: the folder, local instructions, reusable skills, and accumulated project memory often determine whether the same base model behaves like a specialist or a generic assistant.
+
+## What good harness engineering looks like
+
+- **Ambiguity gates** stop the agent to ask for clarification at forks where guessing wrong is expensive, instead of turning every step into a confirmation dialog.
+- **Scoped context** gives each sub-agent only the files, tools, and instructions it needs, which reduces context bleed and instruction collisions.
+- **Failure-metadata replanning** treats errors as structured input to a new plan, rather than blindly retrying the same approach with slightly different wording.
+- **Eval-driven simplification** keeps the harness as simple as possible while it still passes the target evals; cleaner interfaces and stronger verification often beat more elaborate scaffolding.
+- **Layered memory** keeps durable knowledge, topic files, and live-session context separate instead of forcing everything into one rolling transcript.
+- **Repo-state awareness** gives the agent current branch, recent commits, and file-level state so it acts on the real workspace instead of a stale abstract summary.
+- **Permission boundaries** stay explicit. Good harnesses make it legible when the agent is allowed to act, when it must ask, and where risky execution is isolated.
+- **Cache-efficient subagent parallelism** lets worker agents inherit enough shared context to be useful without rebuilding the full setup cost every time.
+- **Skills as the reusable abstraction** let teams share operating judgment as modules instead of only sharing code snippets or prompts.
+- **Hook-based reliability plumbing** invokes the right capability at the right moment instead of hoping the model notices a textual instruction.
+- **Externalized knowledge layers** help the harness retrieve the right context without dumping everything into the prompt.
+
 ## Harness vs model
 
 A well-engineered harness can compensate for a weaker model. A poor harness can cripple a strong one. This is why [[sources/articles/langchain-better-harness|Better-Harness]] and similar systems focus on *harness hill-climbing* — iteratively improving the harness using evals as a signal, separate from any model update.
+
+## Harness vs folder-level context
+
+- **Folder-level context** packages what the agent knows: codebase, instructions, skills, conventions, and durable local memory
+- **Harness** packages how the agent operates: loop logic, tools, routing, retries, and evaluation
+
+The two are related but not identical. Many real-world "agent" improvements actually come from better context packaging rather than fancier orchestration.
 
 ## Caveats
 
 - The term has no single agreed definition across the field. Some sources use it narrowly (just the prompt + tool config); others include the full execution environment and orchestration layer.
 - This page reflects the broader definition, consistent with [[sources/articles/agentic-thinking-lin|Lin's essay]] and [[sources/articles/langchain-better-harness|LangChain's Better-Harness]] framing.
+- Some practitioners now implicitly split "harness" from "folder-level context." The distinction is useful operationally even if the vocabulary is not yet standardized.
 
 ## Sources
 
 - [[sources/articles/agentic-thinking-lin]]
 - [[sources/articles/langchain-better-harness]]
 - [[sources/articles/openai-agents-sdk-evolution]]
+- [[sources/newsletters/notion-token-town]]
+- [[sources/newsletters/ainews-openclaw-2026-04-18]]
+- [[sources/tweets/garrytan-confusion-protocol]]
+- [[sources/tweets/matt-pocock-ddd-adr]]
+- [[sources/newsletters/harness-engineering-patterns]]
+- [[sources/newsletters/claude-code-leak-architecture]]
+- [[sources/newsletters/harness-engineering-early-april]]

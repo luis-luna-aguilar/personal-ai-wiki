@@ -1,0 +1,34 @@
+---
+title: "🔬Why There Is No 'AlphaFold for Materials' — AI for Materials Discovery with Heather Kulik"
+type: newsletter
+sender: "Latent.Space <swyx@substack.com>"
+received: 2026-03-24
+gmail_id: 19d20c5511748711
+---
+
+# 🔬Why There Is No "AlphaFold for Materials" — AI for Materials Discovery with Heather Kulik
+
+**From:** Latent.Space <swyx@substack.com>
+**Date:** 2026-03-24
+
+View this post on the web at https://www.latent.space/p/material
+
+Materials science is the unsung hero of the science world. Behind every physical product you interact was decades of research into getting the properties of materials just right. Your gym clothes contain synthetic fibers developed over decades. The glass screen, diodes, and chip substrate technology needed to read this blog post were only viable due to many teams of material scientists.
+Our guest Prof. Heather Kulik [ https://substack.com/redirect/04e1fcd9-9752-4073-b36b-c2de35ad3370?j=eyJ1IjoiMnZtN2U0In0.wD3dcFAYUauUmayn7txEHe_RXTNDo11i_Ww9KAqkSqw ] was one of the first material scientists to realize that there was alpha in combining computational tools with data driven modeling — she did AI for science before it was cool. She has a hard-fought perspective for how to succeed in this field. Yes, she believes the wins are real. To get there you must work hard to deeply integrate domain expertise with AI techniques, and also maintain a discriminating mind. Ultimately what matters is you succeed in the lab, and nature doesn’t care about how hyped a model is. These lessons personally resonated with the Latent.Space [ https://substack.com/redirect/1beddde7-717a-4219-b9d7-5406bea149f8?j=eyJ1IjoiMnZtN2U0In0.wD3dcFAYUauUmayn7txEHe_RXTNDo11i_Ww9KAqkSqw ] Science team and our own experience.
+This episode is a must watch for all aspiring AI for science practitioners. A few highlights:
+Designing new polymers with AI: Heather’s group recently used AI to design new polymers that are significantly stronger. These materials were created and tested in the lab, and the scientists who built them were surprised by the designs. The AI had figured out certain building blocks could break in a novel way. The AI discovered a purely quantum mechanical effect, and after convincing their lab collaborators to actually synthesize it, the material turned out to be four times tougher!
+The twenty-two-atom ligand challenge: When asked about the role and need of human scientists, Heather points out that AI has a strong understanding of academic chemistry, but is still lacking intuition. Every time an LLM is updated, Heather asks it to design a ligand that contains exactly twenty-two heavy atoms. She has yet to find one that can succeed at this seemingly simple task that any expert could do in a second! Is this the chemistry counterpart to counting ‘r’s in strawberry?
+Side note: Heather joked that this comment would date itself immediately, so we decided to see if this was still true three months after recording. We found some interesting results! We asked both Claude and ChatGPT to design a 22 atom ligand for both a metal-organic framework (MOF) and a Kinase protein. 
+For the Kinase, both models got it right: Claude pulled out RDKit in a python script and iterated on several designs, whereas ChatGPT just one-shotted it. 
+For MOFs, both models got it wrong, generating ligands with 21, 23, or 24 atoms, yet stubbornly not getting 22 atoms. 
+Is there something different about how LLMs reason in the materials and bio domains?
+Materials vs biology: The two biggest domains of AI in science have been biology and materials. We asked Heather if there could be an AlphaFold moment for materials. Her answer reframes how we should think about the field:
+First, the datasets in material science are woefully lacking in comparison to the bio world. The closest to ground truth in most cases are noisy DFT datasets. These are just approximations to the real world! The datasets that are accurate are all boring, as Heather quipped “We have really good datasets for really boring chemistry.” Furthermore, good experimental structures are hard to come by and require interpretation. So generating generating high-quality, novel datasets at scale would really drive the field forward.
+More philosophically, AlphaFold is making predictions in a fairly limited space: there are just twenty amino acids. Sure, even here AlphaFold doesn’t get everything right, but it seems plausible that one could learn the entire design space. For materials, each element is a new set of interactions and chemistry, with little to no transferability. This is a massive open problem in material science that we hope some of the smartest AI scientists will want to work on!
+The difficulties of trusting the literature: Heather’s team has spent the last few years using NLP and later LLMs to extract data from literature. Even a few thousand data points from these papers can be valuable for guiding her group’s work. One surprising result: sometimes the reported values for a property (say temperature) do not match up with the graphs in the papers! So there’s lots of potential in using LLMs to mine data from the literature, just do it with care.
+The role of academia in an ever-changing world: One theme that has been running through many of our conversations has been the changing role of the academic — and the scientist — in science. When startups are raising $100s of millions and hyperscalers and Big Pharma are all ramping up AI-for-science efforts, the academic researcher needs both resources and judgement about problems to chase more than ever.
+Resources include data that is organized for machine learning, access to high throughput experimentation labs, and compute resources. These are all things that academics can build together. More importantly, Heather emphasizes curiosity about problems that haven’t hit the radar of the heavily capitalized AI companies. After so many years on the forefront of AI for Science, Heather’s judgement that Chemical Engineering and Material Science still need curious people asking questions with no clear path to money is a welcome beacon in the AI fog.
+Full Video podcast 
+Is on Youtube [ https://substack.com/redirect/07488607-b4f9-4bba-a743-930c4d5a0eba?j=eyJ1IjoiMnZtN2U0In0.wD3dcFAYUauUmayn7txEHe_RXTNDo11i_Ww9KAqkSqw ]!
+
+Unsubscribe https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cubGF0ZW50LnNwYWNlL2FjdGlvbi9kaXNhYmxlX2VtYWlsP3Rva2VuPWV5SjFjMlZ5WDJsa0lqb3hOelF3TXpZME5qQXNJbkJ2YzNSZmFXUWlPakU1TVRjNU9UWTBOaXdpYVdGMElqb3hOemMwTXpjeE1qa3hMQ0psZUhBaU9qRTRNRFU1TURjeU9URXNJbWx6Y3lJNkluQjFZaTB4TURnME1EZzVJaXdpYzNWaUlqb2laR2x6WVdKc1pWOWxiV0ZwYkNKOS5naldqeDIzaGl3V2tMS0Exb1lFX3BrdUd2M3Bvd3lnclBscjVEQWplcmtNIiwicCI6MTkxNzk5NjQ2LCJzIjoxMDg0MDg5LCJmIjpmYWxzZSwidSI6MTc0MDM2NDYwLCJpYXQiOjE3NzQzNzEyOTEsImV4cCI6MjA4OTk0NzI5MSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.I_eyBtKUVO9KkGlmaXHITmC67vKKXnXboa8SerC1AU4?

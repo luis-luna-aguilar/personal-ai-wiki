@@ -113,5 +113,39 @@ grep "^## \[" wiki/log.md | tail -20
 ## [2026-04-21] apply | Hermes Agent | 2 pages updated (state-of/agents, wiki/index), 1 created (tools/hermes-agent); reused existing source summary `sources/newsletters/ainews-2026-04-21`
 ## [2026-04-21] apply | Claude Opus 4.7 | 2 pages updated (state-of/models, wiki/index), 1 created (models/claude-opus-4-7); reused existing source summary `sources/newsletters/ainews-2026-04-21`
 ## [2026-04-21] apply | Claude Cowork | 2 pages updated (state-of/agents, wiki/index), 3 created (tools/claude-cowork, sources/articles/claude-cowork-launch, sources/tweets/aakash-gupta-cowork); applied without adding a new subcategory per proposal comments
+## [2026-04-21] triage | Personal digest 2026-04-15 to 2026-04-21 | 9 proposals generated, 1 skipped
 ## [2026-04-21] apply | Anthropic/AWS compute infrastructure | 2 pages updated (state-of/models, wiki/index), 1 created (trends/compute-infrastructure); reused existing source summary `sources/newsletters/ainews-2026-04-21`
 ## [2026-04-21] ingest | Every Mini-Vibe Check on Claude Managed Agents | 3 pages updated, 1 created
+## [2026-04-21] ingest | Qwen 3.6 35B-A3B crosses into practical local-agent territory | 2 pages updated, 2 created
+## [2026-04-21] ingest | Knowledge layer | 1 page updated, 2 created
+## [2026-04-21] ingest | Gemini browser and utility updates | 2 pages updated, 1 created
+## [2026-04-21] apply | Gemini Deep Research and Deep Research Max | 1 page updated (tools/gemini), 1 created (sources/articles/gemini-deep-research-max)
+## [2026-04-21] ingest | Claude Opus 4.7 — capability gains with reliability tradeoffs | 3 pages updated, 2 created
+## [2026-04-21] ingest | Claude Design and live artifacts expand Anthropic beyond chat | 4 pages updated, 2 created
+## [2026-04-21] ingest | AI in biology — Noetik and GPT-Rosalind | 3 pages updated, 2 created
+## [2026-04-21] ingest | Every — We Need to Talk About AI Autopilot | 2 pages updated, 4 created
+## [2026-04-21] ingest | Agentic orchestration patterns | 2 pages updated, 5 created; added subcategory `agentic-orchestration-patterns`
+## [2026-04-21] ingest | Agentic coding UIs converge on supervision, not editing | 4 pages updated, 2 created
+## [2026-04-21] apply | Orca | 3 pages updated (state-of/coding, state-of/agents, wiki/index), 2 created (tools/orca, sources/articles/orca-homepage)
+
+## [2026-04-21] triage | Personal digest 2026-04-08 to 2026-04-14 | 7 proposals generated, 1 skipped
+## [2026-04-21] apply | Anthropic platform expansion | 2 pages updated (tools/claude-managed-agents, state-of/agents), 1 created (sources/newsletters/anthropic-platform-expansion-april-2026); clarified Anthropic custom agents/productivity-surface context
+## [2026-04-21] apply | Coding agent control planes | 4 pages updated (tools/cursor, state-of/coding, state-of/agents, wiki/index), 1 created (sources/newsletters/coding-agent-control-planes)
+## [2026-04-21] apply | Harness engineering patterns | 2 pages updated (concepts/harness, workflows/agentic-orchestration-patterns), 1 created (sources/newsletters/harness-engineering-patterns)
+## [2026-04-21] apply | AI adoption is management | 2 pages updated (training/company-wide-ai-enablement, trends/agents-reshape-organizations), 1 created (sources/newsletters/ai-adoption-is-management)
+## [2026-04-21] apply | Open agentic coding models | 2 pages updated (state-of/models, wiki/index), 3 created (models/glm-5-1, models/minimax-m2-7, sources/newsletters/open-agentic-coding-models)
+## [2026-04-21] apply | Restricted frontier deployment | 1 page updated (state-of/models), 2 created (trends/restricted-frontier-deployment, sources/newsletters/restricted-frontier-deployment)
+## [2026-04-21] apply | Claude productivity surfaces | 3 pages updated (tools/claude-cowork, state-of/agents, tools/claude-managed-agents), 1 created (sources/tweets/claude-productivity-surfaces)
+## [2026-04-21] triage | Personal digest 2026-04-01 to 2026-04-07 | 5 proposals generated, 3 skipped
+## [2026-04-21] apply | Claude Code leak architecture lessons | 3 pages updated (tools/claude-code, concepts/harness, state-of/coding), 1 created (sources/newsletters/claude-code-leak-architecture)
+## [2026-04-21] apply | Cursor 3 orchestration bet | 2 pages updated (tools/cursor, state-of/coding), 1 created (sources/newsletters/cursor-3-orchestration-bet)
+## [2026-04-21] apply | Harness engineering in early April | 2 pages updated (concepts/harness, workflows/agentic-orchestration-patterns), 1 created (sources/newsletters/harness-engineering-early-april)
+## [2026-04-21] apply | Agent-native organizations in early April | 2 pages updated (training/company-wide-ai-enablement, trends/agents-reshape-organizations), 1 created (sources/newsletters/agent-native-organizations-early-april)
+## [2026-04-21] apply | Open-weight momentum in early April | 3 pages updated (state-of/models, state-of/computer-use, wiki/index), 2 created (trends/open-weight-momentum-broadens, sources/newsletters/open-weight-momentum-early-april)
+## [2026-04-21] triage | Personal digest 2026-03-24 to 2026-03-31 | 6 proposals generated, 1 skipped
+## [2026-04-21] apply | Claude computer use in late March | 2 pages updated (state-of/computer-use, tools/claude-code), 1 created (sources/newsletters/claude-computer-use-late-march)
+## [2026-04-21] apply | Agent coworkers as an operating pattern | 2 pages updated (training/company-wide-ai-enablement, trends/agents-reshape-organizations), 1 created (sources/newsletters/agent-coworkers-operating-pattern)
+## [2026-04-21] apply | Open-agent orchestration in late March | 2 pages updated (workflows/agentic-orchestration-patterns, state-of/agents), 1 created (sources/newsletters/open-agent-orchestration-late-march)
+## [2026-04-21] apply | Voice becomes an agent interface | 1 page updated (wiki/index), 2 created (trends/voice-becomes-agent-interface, sources/newsletters/voice-becomes-agent-interface)
+## [2026-04-21] apply | Runtime improvements improve agent economics | 1 page updated (trends/compute-infrastructure), 1 created (sources/newsletters/runtime-improvements-improve-agent-economics)
+## [2026-04-21] apply | AI-native product-building lessons in late March | 1 page updated (training/company-wide-ai-enablement), 1 created (sources/newsletters/ai-native-product-building-lessons-late-march)

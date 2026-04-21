@@ -169,6 +169,7 @@ gmail:
       - news@velab.dev
       - hello@every.to
       - thecode@mail.joinsuperhuman.ai
+      - thebatch@deeplearning.ai
 
   # Patterns for detecting Email Me app forwards.
   # Only sender matching is used — Email Me has no distinguishing subject prefix.
