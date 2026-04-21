@@ -20,6 +20,7 @@ This is a personal knowledge base that tracks the fast-moving AI landscape: tool
 8. **Token efficiency.** Do not read `wiki/history/` unless asked. Do not walk the whole wiki — use `wiki/index.md` to find the right pages.
 9. **Use Claude Code's or Codex's native search tools** (Grep, Glob, Read). Do not build or use a custom search CLI.
 10. **Prefer the substantive source.** If a tweet mainly points to a linked article, paper, repo, or similar fuller source, ingest the fuller source and ignore the tweet unless the tweet adds unique information.
+11. **State-of claims are replaceable.** When a source changes who leads a subcategory, update the current state-of page to reflect the new leader set rather than accumulating stale "best" claims. Preserve the change in `## Recent changes` (and `wiki/history/` if needed), and keep multiple leaders only when the source-backed current state is genuinely ambiguous.
 
 ## Directory layout
 
@@ -126,6 +127,12 @@ State-of pages (`wiki/state-of/*.md`) are dashboards organized by **subcategory*
 ```
 
 A tool belongs to a state-of page if its frontmatter `domains:` includes that page's domain. State-of pages do not list tools whose subcategories aren't represented — add a new subcategory section only when a tool exists in it.
+
+When a new source says something is now state-of-the-art / leading / best-in-class in a subcategory:
+- Update the relevant leader line(s) in place so the page remains a snapshot of the current state, not an accumulation of outdated winners.
+- If the previous leader is no longer clearly leading, demote or remove the old wording rather than leaving two contradictory "leader" claims side by side.
+- Record the transition in `## Recent changes` with enough detail to understand what changed and when.
+- If the new evidence is mixed rather than decisive, keep multiple entries and phrase them as co-leaders or area-specific leaders instead of forcing a single winner.
 
 ### Tool / model / workflow pages
 
@@ -277,10 +284,17 @@ Triggered when the user drops a newsletter into `raw/newsletters/` and says **"t
 
 **Triage file format:**
 
+A triage file may reference a single source or multiple sources (e.g. when generated from a batch of emails). Use `source:` for a single file and `sources:` for a list. Each signal includes a `*Source:*` line pointing to the exact raw file it came from.
+
 ```markdown
 ---
 type: triage
-source: raw/newsletters/2026-04-09-the-batch.md
+source: raw/newsletters/2026-04-09-the-batch.md   # single source
+# — OR —
+sources:                                            # multi-source (email digest)
+  - raw/newsletters/2026-04-09-the-batch.md
+  - raw/articles/2026-04-09-some-article.md
+  - raw/tweets/2026-04-09-twitter-com-handle-status-123.md
 status: pending
 ---
 
@@ -289,31 +303,105 @@ status: pending
 ## Signals
 
 - [ ] **[coding]** Cursor 3 released, 74% SWE-bench
+    *Source:* `raw/newsletters/2026-04-09-the-batch.md`
     *Impact:* updates `state-of/coding.md`, `tools/cursor.md`; demotes previous leader line
     *Recommended:* full ingest
 
 - [ ] **[models]** Anthropic announces Opus 4.7 preview
+    *Source:* `raw/newsletters/2026-04-09-the-batch.md`
     *Impact:* new entry on `models/claude-opus.md` or separate page; bump `state-of/models.md`
     *Recommended:* full ingest
 
 - [ ] **[marketing]** Vendor blog: "10 ways AI is changing X"
+    *Source:* `raw/articles/2026-04-09-vendor-blog.md`
     *Impact:* nothing new
     *Recommended:* skip
 
 - [ ] **[misc]** ChatGPT adds voice feature
+    *Source:* `raw/newsletters/2026-04-09-the-batch.md`
     *Impact:* consumer side, outside current scope
     *Recommended:* skip
 ```
 
 **Processing a triage:** When the user says "process the triage" (or similar), re-read the triage file, then:
 
-1. **Fetch linked sources for checked items.** For each **checked** item, follow the primary link(s) from the newsletter using `scripts/fetch_url.py` to retrieve the fuller source (article, tweet thread, blog post, etc.). This produces richer content for the proposal than the newsletter summary alone. If a fetch fails, fall back to the newsletter summary and note the gap in the proposal. Unchecked items are not fetched.
-2. **Generate proposals.** For each checked item, generate a proposal at `proposals/YYYY-MM-DD-<slug>.md` using the fetched source content (not just the newsletter blurb). Thin signals (one-liners, minor updates) still get a proposal — just a small one.
-3. **Nothing is applied directly from a triage.** Every change goes through the proposal → approval → apply cycle. Unchecked items are ignored.
+1. **Use already-fetched content.** For email digest triages (Workflow 4), URL content was already fetched during the triage step — use those existing `raw/` files. For standard newsletter triages, fetch now: run `scripts/fetch_url.py` for each checked item's primary URL. If a fetch fails, fall back to the newsletter summary and note the gap.
+2. **Video check.** If a fetched source turns out to be primarily a video with no useful text (tweet with only a video embed, YouTube link, etc.), do not generate a proposal — note it as `[video — skip]` and move on.
+3. **Generate proposals.** For each checked item that passed the video check, generate a proposal at `proposals/YYYY-MM-DD-<slug>.md` using the full source content. Thin signals still get a proposal — just a small one.
+4. **Nothing is applied directly from a triage.** Every change goes through the proposal → approval → apply cycle. Unchecked items are ignored.
 
 Then move the triage file to `proposals/triage/applied/` and append a log entry: `## [YYYY-MM-DD] triage | <name> | N proposals, K skipped`.
 
-### 4. Proposal format (dry-run diff)
+### 4. Email digest (daily or weekly batch)
+
+#### Step 1 — Fetch (script)
+
+`scripts/gmail_fetch.py` saves each email as an individual `raw/` file and writes a **skeleton manifest** at `proposals/triage/<slug>.md` with `status: pending-analysis`. The manifest lists all saved files but has no signals — it is NOT a finished triage.
+
+- Newsletter emails → `raw/newsletters/YYYY-MM-DD-<slug>.md`
+- Email Me URL forwards → `raw/articles/` or `raw/tweets/` (stub only, `fetched: false`)
+
+#### Step 2 — Triage this digest (Claude)
+
+Triggered **automatically** whenever `gmail_fetch.py` completes and produces a manifest (i.e. whenever the script runs in a Claude Code session). Do NOT wait for the user to say "triage this" — proceed immediately. The user's intent in running the script is to get a finished triage report to read, not a skeleton.
+
+**Steps:**
+
+1. **Fetch all URL stubs.** For every source listed in the manifest frontmatter that has `fetched: false`, run `scripts/fetch_url.py --type <article|tweet> --url <URL>`. This replaces the stub with full content. Do this for ALL stubs upfront, in parallel if possible, before writing any signals. If a fetch fails, note it and continue.
+
+2. **Read all newsletters.** Read every `raw/newsletters/` file listed in the manifest in full.
+
+3. **Group by topic.** Across all fetched articles, tweets, and newsletters, identify the distinct topics and themes. If multiple sources mention the same thing (same model release, same tool, same debate), merge them into one signal. Do not create one signal per source — create one signal per topic.
+
+4. **Write consolidated signals.** Overwrite the manifest's `## Signals` section. Each signal covers one topic and follows this format:
+
+```markdown
+- [ ] **[domain]** Topic title — one sharp sentence
+
+    **What it is:** 2–4 sentences explaining the topic clearly enough that the user can decide whether to ingest. Include specifics: version numbers, benchmark scores, names, claims.
+
+    **Why it matters:** 1–2 sentences on the relevance to the wiki's scope.
+
+    **Sources:**
+      - `raw/tweets/2026-04-21-xcom-example.md` — Jasper Polak tweet amplifying the McKinsey piece
+      - `raw/newsletters/2026-04-21-ainews-...md` — AINews summary with additional context
+
+    **Primary URL:** https://... (the most authoritative source to fetch for the proposal)
+    **Recommended:** full ingest | lightweight ingest | skip
+```
+
+5. **Update frontmatter.** Change `status: pending-analysis` → `status: pending` once signals are written.
+
+**Rules for signals:**
+- Use the controlled vocabulary for `[domain]` tags (check `wiki/_schema/tags.md`). Use `[?]` only if truly unclassifiable.
+- If a topic appears in 3+ sources, that's a strong signal — flag it as high-priority.
+- Video-only content: mark `**Recommended:** skip — video` and do not create a signal for ingestion.
+- Depth over breadth: 8 rich signals beat 20 shallow ones. Merge aggressively.
+- The user cannot approve what they cannot understand. Every signal must have enough detail to make the approve/skip decision without opening the source files.
+
+#### Step 3 — Process (same as standard triage)
+
+When the user says "process the triage", follow standard Workflow 3 processing. URL content is already fetched from Step 2, so use the existing `raw/` files rather than re-fetching. Generate proposals for each checked item.
+
+**Daily flow:**
+```
+gmail_fetch.py --account ai --days 1
+→ raw/{newsletters,articles,tweets}/2026-04-21-*.md
+→ proposals/triage/2026-04-21-ai-digest.md  (skeleton, status: pending-analysis)
+→ "triage this digest" → Claude fetches URLs, reads newsletters, groups topics
+→ user reviews and checks signals
+→ "process the triage" → proposals generated
+```
+
+**Backlog flow (personal Gmail, week by week):**
+```
+gmail_fetch.py --account personal --week 2026-W01
+→ raw/**/2026-01-*.md files
+→ proposals/triage/2026-W01-personal-digest.md  (skeleton)
+→ same triage → process flow
+```
+
+### 5. Proposal format (dry-run diff)
 
 ```markdown
 ---

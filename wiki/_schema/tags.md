@@ -7,11 +7,13 @@ Valid values for the `tags:` field in frontmatter. Tags are for cross-cutting at
 - **`anthropic`** — vendor/org: Anthropic
 - **`github`** — vendor/org: GitHub (Microsoft)
 - **`open-source`** — license/openness: publicly available source code under an OSS license
+- **`open-weights`** — license/openness: weights are publicly released without necessarily being under a standard OSS license
 - **`closed-source`** — license/openness: proprietary, no public source
 - **`cli`** — ecosystem: tool is distributed primarily as a command-line interface
 - **`beta`** — flavor: pre-GA product (public or private beta)
 - **`spec-driven`** — flavor: aligned with the spec-driven-development approach
 - **`agentic`** — flavor: agent-centric product or workflow (multi-step, autonomous, tool-using)
+- **`moonshot-ai`** — vendor/org: Moonshot AI (Kimi)
 - **`perplexity`** — vendor/org: Perplexity AI
 - **`google`** — vendor/org: Google / DeepMind
 - **`openai`** — vendor/org: OpenAI

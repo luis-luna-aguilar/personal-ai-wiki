@@ -4,8 +4,8 @@ type: tool
 domains: [agents]
 subcategory: agent-orchestration
 tags: [anthropic, closed-source, agentic]
-as_of: 2026-04-09
-sources: [managed-agents]
+as_of: 2026-04-15
+sources: [managed-agents, every-managed-agents-vibe-check]
 ---
 
 # Claude Managed Agents
@@ -20,22 +20,26 @@ Those three pieces are:
 
 Anthropic's core idea is that these pieces should be decoupled so the system can keep evolving as models improve, without forcing users to rebuild around each model generation's quirks.
 
-## Current status (as of 2026-04-09)
+## Current status (as of 2026-04-15)
 
-- Presented as a hosted Claude Platform service for long-running agents
-- Framed more as an architecture/platform pattern than as a fully fleshed-out product launch
+- Public beta service on the Claude Platform for long-running agents
+- Handles agent infrastructure primitives including sessions, memory, tool use, and credentials
 - Core abstractions in the post: `session`, `harness`, `sandbox`
 - Harness is decoupled from the execution container and calls tools through a generic interface like `execute(name, input) -> string`
 - Session lives outside the harness as an append-only event log and can be resumed with operations like `wake(sessionId)`, `getSession(id)`, `emitEvent(id, event)`, and `getEvents()`
 - Sandboxes are provisioned on demand instead of being assumed to exist for every session from the start
 - Designed to connect Claude to customer infrastructure, including resources in a customer's own VPC
 - Supports MCP-backed tools with OAuth credentials stored outside the sandbox in a secure vault
+- Every reports that Spiral used the service to spin up a new agent in a few hours; the cited benefit was less custom infrastructure maintenance, not just faster initial coding
+- Existing agents can be updated through the dashboard by changing the system prompt or underlying model and saving
 
 ## Why it matters
 
 Many agent systems still bundle the model loop, execution environment, secrets, and state into one long-lived process or container. Anthropic's claim is that this becomes brittle over time: fixes made for one model generation can turn into dead weight for the next.
 
 Managed Agents moves the durable state outside the live context window and keeps credentials outside the sandbox where generated code runs. That makes it easier to recover from failures, reconnect a session to a fresh harness, attach multiple execution environments, and change the implementation underneath without changing the top-level shape of the system.
+
+Every's practitioner read adds a product-adoption angle: if the hosted primitive works well enough, teams that have been building custom agent infrastructure may redirect effort away from sessions, memory, tool calling, credentials, and prompt/model deployment machinery toward the domain-specific behavior of the agent itself.
 
 ## Architecture
 
@@ -77,13 +81,16 @@ The simple reason is that sessions that do not need a sandbox immediately can st
 - Security model is structural, not only prompt- or policy-based
 - Better fit for enterprise setups where Claude needs to reach customer-owned infrastructure
 - Makes multi-agent and multi-environment orchestration easier to reason about
+- Reduces the amount of custom agent infrastructure product teams have to maintain if the hosted service fits their use case
+- Dashboard-based prompt/model updates can make existing agents easier to iterate
 
 ## Weaknesses / caveats
 
 - The source is an engineering architecture post, not full product documentation
 - No pricing, availability tiering, or detailed public API surface is captured here
 - Reported latency improvements are vendor-internal numbers
-- The post explains the platform shape better than the current user-facing ergonomics, limits, or adoption
+- Every's Spiral example is a practitioner anecdote, not a broad evaluation
+- The post and mini-vibe-check explain the platform shape better than current limits, production constraints, or failure cases
 
 ## Related
 
@@ -92,8 +99,10 @@ The simple reason is that sessions that do not need a sandbox immediately can st
 
 ## Recent changes
 
+- [2026-04-15] Every reported Claude Managed Agents is in public beta and highlighted Spiral's use of it to create an agent in a few hours while offloading sessions, memory, tool use, and credential handling
 - [2026-04-09] Page created from Anthropic's "Scaling Managed Agents: Decoupling the brain from the hands" engineering post
 
 ## Sources
 
 - [[sources/articles/managed-agents]]
+- [[sources/articles/every-managed-agents-vibe-check]]

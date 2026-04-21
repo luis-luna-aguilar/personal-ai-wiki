@@ -137,3 +137,42 @@ fetch_url:
 # Log file location.
 # ---------------------------------------------------------------------------
 log_file: wiki/log.md
+
+# ---------------------------------------------------------------------------
+# Gmail fetch settings (used by scripts/gmail_fetch.py).
+# ---------------------------------------------------------------------------
+gmail:
+  # Credentials live in scripts/gmail_credentials/ (gitignored).
+  # ai-client.json / personal-client.json = OAuth2 Desktop app credentials.
+  # ai-token.json / personal-token.json   = cached OAuth tokens (auto-generated).
+  accounts:
+    ai:
+      label: AI Gmail
+      email: luisluna.ai.feed@gmail.com
+    personal:
+      label: Personal Gmail
+      email: luislunaaguilar@gmail.com
+  # Both accounts use gmail.modify scope. The script only calls read and
+  # messages.modify methods — it never composes or sends.
+  processed_label: AI-Wiki-Processed
+
+  # Sender whitelist: only emails from these addresses are saved and triaged.
+  # Everything else is labelled AI-Wiki-Processed and removed from inbox silently.
+  # Matching is substring-based on the full From: header, so "substack.com" matches
+  # any Substack sender without listing each one individually.
+  whitelist:
+    senders:
+      - info@emailmeapp.net   # Email Me app (always required)
+      - superhuman@mail.joinsuperhuman.ai
+      - swyx+ainews@substack.com
+      - swyx@substack.com
+      - news@velab.dev
+      - hello@every.to
+      - thecode@mail.joinsuperhuman.ai
+
+  # Patterns for detecting Email Me app forwards.
+  # Only sender matching is used — Email Me has no distinguishing subject prefix.
+  # Add more sender addresses here if you use other URL-forward services.
+  email_me:
+    senders:
+      - info@emailmeapp.net

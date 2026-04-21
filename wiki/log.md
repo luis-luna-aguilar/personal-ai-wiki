@@ -104,3 +104,14 @@ grep "^## \[" wiki/log.md | tail -20
 
 ## [2026-04-16] triage | The Code 2026-04-16 | 1 proposals, 5 skipped
 ## [2026-04-16] ingest | OpenAI — "The next evolution of the Agents SDK" | 3 pages updated, 2 created
+
+## [2026-04-21] triage | AI digest 2026-04-20 to 2026-04-21 | 8 proposals generated, 2 skipped (Google DeepMind strike team, Qwen3.6-Max-Preview)
+## [2026-04-21] ingest | McKinsey — "AI is Everywhere. The Agentic Organization Isn't Yet." | 2 pages updated, 1 created
+## [2026-04-21] ingest | LeWorldModel (LeWM) — Stable End-to-End JEPA from Pixels | 1 page updated, 2 created
+## [2026-04-21] apply | Kimi K2.6 | 2 pages updated (state-of/models, wiki/index), 3 created (models/kimi-k2-6, sources/articles/kimi-k2-6-blog, sources/newsletters/ainews-2026-04-21); added tags `moonshot-ai`, `open-weights`; clarified state-of leader replacement rules in LLM-INSTRUCTIONS
+## [2026-04-21] apply | Codex Chronicle | 2 pages updated (tools/codex, trends/proprietary-data-becomes-model-moat); reused existing source summary `sources/newsletters/ainews-2026-04-21`
+## [2026-04-21] apply | Hermes Agent | 2 pages updated (state-of/agents, wiki/index), 1 created (tools/hermes-agent); reused existing source summary `sources/newsletters/ainews-2026-04-21`
+## [2026-04-21] apply | Claude Opus 4.7 | 2 pages updated (state-of/models, wiki/index), 1 created (models/claude-opus-4-7); reused existing source summary `sources/newsletters/ainews-2026-04-21`
+## [2026-04-21] apply | Claude Cowork | 2 pages updated (state-of/agents, wiki/index), 3 created (tools/claude-cowork, sources/articles/claude-cowork-launch, sources/tweets/aakash-gupta-cowork); applied without adding a new subcategory per proposal comments
+## [2026-04-21] apply | Anthropic/AWS compute infrastructure | 2 pages updated (state-of/models, wiki/index), 1 created (trends/compute-infrastructure); reused existing source summary `sources/newsletters/ainews-2026-04-21`
+## [2026-04-21] ingest | Every Mini-Vibe Check on Claude Managed Agents | 3 pages updated, 1 created

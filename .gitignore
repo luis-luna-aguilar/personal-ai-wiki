@@ -1,0 +1,12 @@
+# OAuth tokens — never commit
+scripts/gmail_credentials/*-client.json
+scripts/gmail_credentials/*-token.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# OS
+.DS_Store

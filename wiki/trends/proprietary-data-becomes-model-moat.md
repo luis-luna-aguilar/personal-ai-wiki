@@ -3,8 +3,8 @@ title: Proprietary data becomes model moat
 type: trend
 domains: [models]
 tags: []
-as_of: 2026-04-10
-sources: [market-for-making-ai-better]
+as_of: 2026-04-21
+sources: [market-for-making-ai-better, ainews-2026-04-21]
 ---
 
 # Proprietary data becomes model moat
@@ -13,7 +13,7 @@ The trend: as frontier model quality converges, more of the advantage may come f
 
 This is not only about selling data to labs. The same company can license its data externally, fine-tune an internal model with it, or do both. The strongest position is a flywheel: production work generates proprietary traces, those traces become training/eval data, and the resulting model becomes cheaper or better for that company's own use case.
 
-## Current status (as of 2026-04-10)
+## Current status (as of 2026-04-21)
 
 - AI labs and intermediaries are actively seeking non-public operational data, not just public web corpora
 - The highest-value datasets tend to be both **high quality** and **continuously growing**
@@ -26,6 +26,8 @@ This is not only about selling data to labs. The same company can license its da
 If this trend holds, "best model" stops being a single global ranking and becomes more local to a workflow or industry. A company with years of support tickets, decision logs, matter histories, analyst notes, or other expert traces may have a stronger path to useful AI than a company that only consumes generic frontier APIs.
 
 The bottleneck also shifts upstream from model access to **measurement**. Teams that define credible evals for real work first get to decide what "good" means in that domain, which shapes training demand and product direction.
+
+**Ambient memory capture as a new moat vector.** OpenAI's Codex Chronicle (April 2026) passively captures screen context and builds on-device memories from it. This is a different flavor of the proprietary-data moat: the data is not coming from a company's operational systems, but from an individual user's work history. As context accumulates, switching tools can mean losing accumulated context. Harrison Chase's framing is that "memory will be the great lock-in."
 
 ## Signals in this source
 
@@ -49,8 +51,10 @@ The bottleneck also shifts upstream from model access to **measurement**. Teams 
 
 ## Recent changes
 
+- [2026-04-21] Added ambient memory capture vector — Codex Chronicle as personal-context lock-in
 - [2026-04-10] Trend opened from Every's "The Market for Making AI Better" essay
 
 ## Sources
 
 - [[sources/articles/market-for-making-ai-better]]
+- [[sources/newsletters/ainews-2026-04-21]]
