@@ -15,7 +15,7 @@ Two signals from April 21-22 that both speak to the same underlying question: ho
 
 ## Intended changes
 
-- [ ] **Update** `wiki/trends/agents-reshape-organizations.md` — add trust battery pattern and AI sandwich architecture to Concrete signals; add org architecture prediction
+- [x] **Update** `wiki/trends/agents-reshape-organizations.md` — add trust battery pattern and AI sandwich architecture to Concrete signals; add org architecture prediction
     > **Append to `## Concrete signals`:**
     > ```
     > - **Trust batteries as a concrete autonomy-granting mechanism.** Every's reporting on Claudie (Every's internal AI employee) documents a "trust battery" model for agentic autonomy: a judge agent reviews Claudie's interactions nightly, adjusts a trust percentage, and Claudie self-updates her memory and behavior from negative feedback. Claudie started at 20% trust (vs 50% for human new hires) and earns higher autonomy over time. The trust battery is wired to observable behavior, not time-based promotion — a reusable design for any agent that needs to earn scope gradually.
@@ -27,7 +27,7 @@ Two signals from April 21-22 that both speak to the same underlying question: ho
     > - [2026-04-22] Added trust-battery pattern (Claudie/Every) and AI sandwich org architecture; Dan Shipper prediction: two org models coexist, single-purpose fleet loses
     > ```
 
-- [ ] **Update** `wiki/training/company-wide-ai-enablement.md` — add trust battery as a proven pattern; add tokenmaxxing as a failure mode
+- [x] **Update** `wiki/training/company-wide-ai-enablement.md` — add trust battery as a proven pattern; add tokenmaxxing as a failure mode
     > **Append to `## Proven patterns`:**
     > ```
     > - **Trust battery with judge agent.** Grant autonomy incrementally rather than all at once. Implement a nightly judge agent that reviews interactions, scores behavior, adjusts a trust percentage, and lets the primary agent self-update memory from negative feedback. Start at a deliberately low trust level (Every's Claudie: 20% vs 50% for human new hires) and let the agent earn scope through demonstrated reliability rather than through time or configuration changes.
@@ -38,7 +38,7 @@ Two signals from April 21-22 that both speak to the same underlying question: ho
     > - **Tokenmaxxing — measuring token spend as a productivity proxy.** Meta's internal "Claudeonomics" leaderboard ranked 85,000 employees by AI token usage; within weeks employees were leaving agents idle to climb the rankings. One OpenAI engineer processed 210 billion tokens in a single week (enough to fill Wikipedia 33 times). Dubbed "tokenmaxxing," this mirrors the early 2000s lines-of-code mistake exactly. Reasoning models compound the problem by generating inner-monologue tokens as a function of architecture, not work done. Reward outcomes and quality; token spend is a cost center, not a productivity signal.
     > ```
 
-- [ ] **Create** `wiki/sources/newsletters/every-ai-sandwich-april-2026.md` — source summary
+- [x] **Create** `wiki/sources/newsletters/every-ai-sandwich-april-2026.md` — source summary
     > See draft below
 
 ## Page drafts

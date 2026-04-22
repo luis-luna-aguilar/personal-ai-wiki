@@ -13,7 +13,7 @@ Hugging Face shipped ml-intern, an open-source agent that runs the complete post
 
 ## Intended changes
 
-- [ ] **Update** `wiki/state-of/agents.md` — add `Autonomous research agents` subcategory with ml-intern as the opening entry
+- [x] **Update** `wiki/state-of/agents.md` — add `Autonomous research agents` subcategory with ml-intern as the opening entry
     > **Add new subcategory section before `## Recent changes`:**
     > ```
     > ### Autonomous research agents
@@ -27,12 +27,12 @@ Hugging Face shipped ml-intern, an open-source agent that runs the complete post
     > - [2026-04-22] Added `Autonomous research agents` subcategory; [[tools/hf-ml-intern]] is the first publicly verified agent to close the full ML post-training loop end-to-end
     > ```
 
-- [ ] **Create** `wiki/tools/hf-ml-intern.md` — new tool page
+- [x] **Create** `wiki/tools/hf-ml-intern.md` — new tool page
     > See draft below
 
 ## Schema / vocabulary additions
 
-- [ ] Add new subcategory `autonomous-research-agent` to `wiki/_schema/subcategories.md`
+- [x] Add new subcategory `autonomous-research-agent` to `wiki/_schema/subcategories.md`
     > ```
     > ### autonomous-research-agent
     > - **Parent domain(s):** agents

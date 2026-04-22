@@ -180,3 +180,12 @@ grep "^## \[" wiki/log.md | tail -20
 ## [2026-04-22] ingest | Anthropic Pentagon deployment boundaries in late February | 1 page updated, 1 created
 ## [2026-04-22] ingest | Qwen 3.5 medium models in late February | 2 pages updated, 1 created
 ## [2026-04-22] triage | AI Email Digest 2026-04-21 to 2026-04-22 | 8 proposals generated, 3 skipped (Cursor/SpaceX acquisition, Anthropic Mythos leak, Monologue Notes)
+
+## [2026-04-22] ingest | Shopify AI phase transition — Latent Space (April 2026) | 2 pages updated (harness, company-wide-ai-enablement), 2 created (ai-enablement-software-development, shopify-latent-space-april-2026)
+## [2026-04-22] ingest | Gemini Deep Research Max benchmarks — AINews | 2 pages updated (tools/gemini, state-of/agents)
+## [2026-04-22] ingest | Qwen 3.6 community reception + Max Preview | 2 pages updated (models/qwen-3-6-35b-a3b, state-of/models)
+## [2026-04-22] ingest | HF ml-intern autonomous research agent | 1 page updated (state-of/agents), 1 created (tools/hf-ml-intern); schema: autonomous-research-agent
+## [2026-04-22] ingest | Hermes Agent expansion + Claude Code recap + harness additions | 3 pages updated (tools/hermes-agent, tools/claude-code, concepts/harness), 1 created (sources/thecode-april-22-2026)
+## [2026-04-22] ingest | GPT-Image-2 launch | 1 page updated (state-of/models), 2 created (models/gpt-image-2, sources/ainews-2026-04-22); schema: image-generation-model
+## [2026-04-22] ingest | AI security surface — vibe-coding defaults + agent-as-watchdog | 1 page updated (training/anti-autopilot-review-friction), 1 created (sources/every-vibe-check-april-21-2026)
+## [2026-04-22] ingest | Agent org patterns — trust batteries, AI sandwich, tokenmaxxing | 2 pages updated (trends/agents-reshape-organizations, training/company-wide-ai-enablement), 1 created (sources/every-ai-sandwich-april-2026)

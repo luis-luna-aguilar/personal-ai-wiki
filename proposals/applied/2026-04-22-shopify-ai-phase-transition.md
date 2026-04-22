@@ -77,3 +77,7 @@ Full Latent Space podcast episode with Shopify CTO Mikhail Parakhin. Richest rea
 - Three internal systems: Tangle (ML workflow engine), Tangent (auto-research agent loop), SimGym (customer simulation, 0.7 correlation target with add-to-cart)
 - Liquid AI used for 30ms search query understanding; Qwen alternatives lose on efficiency for batch distillation
 ````
+
+## Comments
+
+-  let's do some work here. I want to separate the company-wide AI enablement of processes that are outside of coding from those that are coding-related because this Shopify repo is heavy on code. I bet there are some notes in that same file that are heavy on code. I think the software development case is very different from the rest so we want to have a separate file for it.  please review this proposal, considering that, and check the current AI enablement file for stuff that we can move to the code file.

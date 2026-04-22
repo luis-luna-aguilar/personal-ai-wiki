@@ -1,8 +1,8 @@
 ---
 title: Anti-autopilot review friction
 type: training
-as_of: 2026-04-21
-sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february]
+as_of: 2026-04-22
+sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026]
 ---
 
 # Anti-autopilot review friction
@@ -24,6 +24,7 @@ As AI output gets more fluent and more often correct, people stop truly checking
 - **Use forcing functions.** Make the human judge before the AI answer becomes the default anchor
 - **Use stopping rules.** Deliberate friction is not only about catching errors; it also helps break the "one more prompt" loop that turns useful AI sessions into compulsive overwork
 - **Review the gates, not only the output.** In agent-heavy coding workflows, judgment increasingly belongs on specs, acceptance criteria, and verification scripts instead of only on generated diffs
+- **Agent-as-watchdog.** A lightweight background agent monitors a relevant external surface (public social channels, issue trackers, partner APIs) for brand mentions, security anomalies, or policy violations — nightly or on a schedule — and routes findings to humans for judgment. Every's Claudie workflow (X monitoring for brand/security mentions) is a practical example: the agent does the scanning and pattern-detection; humans review and decide. Low setup cost, continuous coverage, judgment stays human.
 
 ## Failure modes
 
@@ -31,6 +32,8 @@ As AI output gets more fluent and more often correct, people stop truly checking
 - Letting fluency stand in for correctness
 - Reviewing too many AI outputs in a row without reset
 - Using AI to replace the judgment layer rather than the execution layer
+- **Vibe-coding default inheritance.** AI coding tools (Lovable and similar) generate working prototypes with insecure defaults — Supabase row-level security off, public access rules on storage, API keys embedded in client-side code. The code looks complete and runs correctly, so it passes review without triggering concern. Users inherit the AI's insecure-by-default configurations unless they know to audit them specifically. This is distinct from hallucination: the code is correct code with an insecure configuration choice.
+- **AI tooling layer as supply-chain attack surface.** The Vercel/Context AI breach (April 2026): a third-party AI integration vendor was compromised, exposing Vercel customer credentials. As AI tool dependencies proliferate, the AI tooling layer becomes a new supply-chain attack surface separate from the application layer.
 
 ## Sources
 
@@ -38,3 +41,4 @@ As AI output gets more fluent and more often correct, people stop truly checking
 - [[sources/newsletters/every-youre-the-manager-now]]
 - [[sources/newsletters/ai-work-intensification-march]]
 - [[sources/newsletters/post-vibe-coding-verification-february]]
+- [[sources/newsletters/every-vibe-check-april-21-2026]]

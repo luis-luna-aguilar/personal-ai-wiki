@@ -16,7 +16,7 @@ Three small but coherent updates that all touch the harness layer. (1) Hermes Ag
 
 ## Intended changes
 
-- [ ] **Update** `wiki/tools/hermes-agent.md` — add recursive spawn depth, Scarf GUI, Skillkit; update as_of
+- [x] **Update** `wiki/tools/hermes-agent.md` — add recursive spawn depth, Scarf GUI, Skillkit; update as_of
     > **Add to `## Current status (as of 2026-04-21)`:**
     > ```
     > - Recursive spawn depth now supported (in addition to spawn width) — enables deeper hierarchical decomposition of long-horizon tasks into nested subagent trees
@@ -30,7 +30,7 @@ Three small but coherent updates that all touch the harness layer. (1) Hermes Ag
     > - [2026-04-22] Recursive spawn depth support added; Scarf macOS GUI launched; Skillkit native support
     > ```
 
-- [ ] **Update** `wiki/tools/claude-code.md` — add /recap and /fewer-permission-prompts skill; update as_of
+- [x] **Update** `wiki/tools/claude-code.md` — add /recap and /fewer-permission-prompts skill; update as_of
     > **Add to `## Current status (as of 2026-04-21)`:**
     > ```
     > - `/recap`: auto-generates a one-line summary of the last session after 3+ turns of inactivity — triggered only once per gap, never back-to-back, also available on demand via `/recap`
@@ -43,7 +43,7 @@ Three small but coherent updates that all touch the harness layer. (1) Hermes Ag
     > - [2026-04-22] Added /recap (session gap summaries after inactivity) and /fewer-permission-prompts skill (history-based allowlist generator)
     > ```
 
-- [ ] **Update** `wiki/concepts/harness.md` — add agent-friendly CLI design principle and DSPy 3.2 note
+- [x] **Update** `wiki/concepts/harness.md` — add agent-friendly CLI design principle and DSPy 3.2 note
     > **Append to `## What good harness engineering looks like`:**
     > ```
     > - **Agent-friendly CLI design.** Tools built for human interactive use break agent pipelines: interactive prompts stall agents, undocumented flags require inference, and missing non-interactive modes force workarounds. Agent-facing CLI tools should be non-interactive by default, expose all behaviors through explicit flags, and document internal conventions. This applies equally to the tools the agent calls and to the CLIs agents themselves expose. (Source: Cursor engineer Eric Zakariasson, relayed by The Code newsletter.)
@@ -54,7 +54,7 @@ Three small but coherent updates that all touch the harness layer. (1) Hermes Ag
     > - [[sources/newsletters/ainews-2026-04-22]]
     > ```
 
-- [ ] **Create** `wiki/sources/newsletters/thecode-april-22-2026.md` — source summary
+- [x] **Create** `wiki/sources/newsletters/thecode-april-22-2026.md` — source summary
     > See draft below
 
 ## Page drafts

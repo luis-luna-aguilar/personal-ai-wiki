@@ -4,8 +4,8 @@ type: tool
 domains: [agents, coding]
 subcategory: agent-orchestration
 tags: [open-source, agentic]
-as_of: 2026-04-21
-sources: [ainews-2026-04-21]
+as_of: 2026-04-22
+sources: [ainews-2026-04-21, ainews-2026-04-22]
 ---
 
 # Hermes Agent
@@ -14,13 +14,16 @@ NousResearch's open-source autonomous agent framework. Reached 100K+ GitHub star
 
 **GitHub:** [NousResearch/hermes-agent](https://github.com/nousresearch/hermes-agent)
 
-## Current status (as of 2026-04-21)
+## Current status (as of 2026-04-22)
 
 - v0.10.0 (April 16, 2026): 118 bundled skills, multi-layer memory, six messaging integrations (Telegram, Discord, Slack, WhatsApp, Signal, CLI)
 - 100K+ GitHub stars in under two months; framed in AINews as one of the fastest-growing open agent frameworks of 2026
 - Native Ollama support; Copilot CLI integration via Ollama; cloud deployment templates
 - Ecosystem: hermes-skill-factory, maestro, icarus-plugin, Hermes Workspace V2, Browser Use integrations
 - Self-improving loop: creates reusable skills from experience (closed learning loop)
+- Recursive spawn depth now supported (in addition to spawn width) — enables deeper hierarchical decomposition of long-horizon tasks into nested subagent trees
+- macOS GUI: Scarf — desktop interface for local Hermes workflows
+- Skillkit native support added
 
 ## Key orchestration patterns
 
@@ -36,8 +39,10 @@ Described as a four-layer memory system with periodic consolidation vs OpenClaw'
 
 ## Recent changes
 
+- [2026-04-22] Recursive spawn depth support added; Scarf macOS GUI launched; Skillkit native support
 - [2026-04-21] 100K stars milestone; v0.10.0 ships 118 bundled skills; Kimi K2.6 and Qwen3.6 both cite Hermes as a day-0 launch partner
 
 ## Sources
 
 - [[sources/newsletters/ainews-2026-04-21]]
+- [[sources/newsletters/ainews-2026-04-22]]

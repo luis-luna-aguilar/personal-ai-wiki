@@ -3,8 +3,8 @@ title: Agents reshape organizations (leverage moves from individual to org)
 type: trend
 domains: [agents, coding]
 tags: [agentic]
-as_of: 2026-04-21
-sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, openclaw-operating-pattern-march, openclaw-operating-pattern-february]
+as_of: 2026-04-22
+sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, openclaw-operating-pattern-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026]
 ---
 
 # Agents reshape organizations (leverage moves from individual to org)
@@ -32,6 +32,9 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - **Ramp publishes concrete internal adoption numbers.** Ramp reports 99.5% of employees active on AI tools, 84% using coding agents weekly, 1,500+ apps shipped in six weeks by 800+ builders, and non-engineers accounting for 12% of human-initiated PRs on the production codebase.
 - **The org model itself changes.** Ramp describes a central team owning platforms, connectors, and enablement while functional teams build on top, which is exactly the kind of operating redesign this trend predicts.
 - **Company design is being reframed explicitly.** Block's "from hierarchy to intelligence" essay pushes the strongest version of the thesis in this batch: organizations historically route information through managers because information had to move through people; AI systems may increasingly absorb part of that routing layer directly.
+- **Trust batteries as a concrete autonomy-granting mechanism.** Every's reporting on Claudie (Every's internal AI employee) documents a "trust battery" model for agentic autonomy: a judge agent reviews Claudie's interactions nightly, adjusts a trust percentage, and Claudie self-updates her memory and behavior from negative feedback. Claudie started at 20% trust (vs 50% for human new hires) and earns higher autonomy over time. The trust battery is wired to observable behavior, not time-based promotion — a reusable design for any agent that needs to earn scope gradually.
+- **The AI sandwich as a practical org architecture template.** Framing from Every's Dan Shipper: humans do the planning (framing the problem) and the review (taste and judgment), while AI does the execution in the middle. The human role is not eliminated — it moves to the two ends that require authentic intent and independent evaluation.
+- **Org architecture prediction: two models will coexist, one will lose.** Dan Shipper's forecast: (a) personal AI assistants with rich, maintained relationships will work well for high-trust, customizable tasks; (b) company-wide super-agents with department plugins will win for low-maintenance, lower-customization use cases. A third model — fleets of single-purpose agents — is predicted to lose because they require high maintenance without the relationship depth that makes personal assistants valuable.
 - **McKinsey names the bottleneck: workflow redesign, not technology.** "AI is Everywhere. The Agentic Organization Isn't Yet" (McKinsey, 2026) reports that 80%+ of companies are not seeing bottom-line impact from AI investments despite large spending. The diagnosis: companies are running pilots inside unchanged processes rather than redesigning workflows end-to-end. The unlock is "end-to-end workflow reimagination" — rethinking the entire process (e.g., insurance underwriting, hire-to-onboard) rather than speeding up individual tasks. McKinsey introduces the distinction between humans "in the loop" (executing parts of a workflow) vs. "above the loop" (providing judgment over an agent-run process) as the structural end state for knowledge work.
 - **The org-chart argument is spreading.** A thin signal relayed from Postman's founder argues AI-era teams should run with wider spans of control and fewer layers between leaders and ICs. This fits the same direction of travel, but the current source quality here is weak.
 
@@ -53,6 +56,7 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 
 ## Recent changes
 
+- [2026-04-22] Added trust-battery pattern (Claudie/Every) and AI sandwich org architecture; Dan Shipper prediction: two org models coexist, single-purpose fleet loses
 - [2026-03-04] OpenClaw cluster provided an early concrete signal of AI-native organizational behavior: named personal agents in shared channels, agent-to-agent coordination, and humans supervising many agents as if they were teammates
 - [2026-04-21] Added McKinsey (2026) as the strongest third-party signal yet: 80%+ no bottom-line ROI, workflow redesign named as the blocker, "above the loop" distinction introduced
 - [2026-04-10] Added weak supporting signal from Postman founder's AI-era org-chart thesis (wider spans, fewer layers)
@@ -67,3 +71,4 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - [[sources/tweets/postman-ai-org-chart]]
 - [[sources/newsletters/agent-coworkers-operating-pattern]]
 - [[sources/newsletters/openclaw-operating-pattern-march]]
+- [[sources/newsletters/every-ai-sandwich-april-2026]]

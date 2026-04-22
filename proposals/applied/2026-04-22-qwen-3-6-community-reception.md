@@ -13,7 +13,7 @@ AINews LocalLlama recap sharpens the Qwen 3.6 35B-A3B niche with real community 
 
 ## Intended changes
 
-- [ ] **Update** `wiki/models/qwen-3-6-35b-a3b.md` — add community reception data and Max Preview note; update as_of
+- [x] **Update** `wiki/models/qwen-3-6-35b-a3b.md` — add community reception data and Max Preview note; update as_of
     > **Replace `## Current status (as of 2026-04-21)` block:**
     > ```
     > ## Current status (as of 2026-04-22)
@@ -40,7 +40,7 @@ AINews LocalLlama recap sharpens the Qwen 3.6 35B-A3B niche with real community 
     > - [2026-04-22] Added community reception niche data (coding/tools > creative/translation); added Qwen 3.6 Max Preview section (proprietary, 600-700B est., top Chinese AA-Intelligence Index)
     > ```
 
-- [ ] **Update** `wiki/state-of/models.md` — add Qwen niche note and Kimi/Opus community signal to Coding models section
+- [x] **Update** `wiki/state-of/models.md` — add Qwen niche note and Kimi/Opus community signal to Coding models section
     > **Update the `[[models/qwen-3-6-35b-a3b]]` line in `### Coding models`:**
     > ```
     > Before:

@@ -6,7 +6,7 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
-Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration-ui`, `agent-orchestration`, `coding-model`, `frontier-multimodal-model`, `legal-ai`, `model-orchestration`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration-ui`, `agent-orchestration`, `coding-model`, `frontier-multimodal-model`, `legal-ai`, `model-orchestration`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`
 
 ### spec-driven-development
 - **Parent domain(s):** coding
@@ -97,6 +97,18 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Applies to types:** tool
 - **Definition:** Document editors and shared writing surfaces built for humans and agents to draft, revise, comment, and maintain the same working artifacts.
 - **Examples:** [[tools/proof]]
+
+### autonomous-research-agent
+- **Parent domain(s):** agents
+- **Applies to types:** tool
+- **Definition:** Agents that run a closed loop over a research or experimentation process — reading sources, designing experiments, executing jobs, evaluating results, and iterating — with minimal human steering.
+- **Examples:** [[tools/hf-ml-intern]]
+
+### image-generation-model
+- **Parent domain(s):** models
+- **Applies to types:** model
+- **Definition:** Models specialized for text-to-image generation, image editing, and visual synthesis tasks, distinct from general-purpose multimodal models.
+- **Examples:** [[models/gpt-image-2]]
 
 ### Format
 

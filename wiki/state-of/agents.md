@@ -3,8 +3,8 @@ title: State of Agents
 type: state-of
 domains: [agents]
 tags: []
-as_of: 2026-04-21
-sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents, cursor-cloud-agents-march, cursor-cloud-agents-february]
+as_of: 2026-04-22
+sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, ainews-2026-04-22, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents, cursor-cloud-agents-march, cursor-cloud-agents-february]
 ---
 
 # State of Agents
@@ -48,8 +48,16 @@ Document surfaces built for humans and agents to collaborate inside the same wor
 
 - [[tools/proof]] — Every's web document editor is the clearest current example of the "agent-native document" thesis: plans, memos, and working docs are treated as shared human/AI artifacts with provenance, comments, and tracked edits built into the document itself *(as of 2026-03-15)*
 
+### Autonomous research agents
+
+Agents that close the full research loop end-to-end — reading literature, collecting data, running experiments, evaluating results, and iterating — with minimal human steering between steps.
+
+- [[tools/hf-ml-intern]] — Hugging Face; open-source ML post-training research loop agent; reads papers, collects datasets, launches training jobs, evaluates, and iterates; GPQA 10% → 32% in <10 hours on Qwen3-1.7B *(as of 2026-04-22)*
+
 ## Recent changes
 
+- [2026-04-22] Added `Autonomous research agents` subcategory; [[tools/hf-ml-intern]] is the first publicly verified agent to close the full ML post-training loop end-to-end
+- [2026-04-22] Google Deep Research Max scores (93.3% DeepSearchQA) and HF ml-intern autonomous loop mark the emergence of a distinct "full-stack research agent" tier — see [[tools/gemini]] and [[tools/hf-ml-intern]]
 - [2026-02-25] Cursor's cloud-agent rollout already showed the orchestration-ui pattern in product form: remote agent computers, self-verification, and video artifacts for human review
 - [2026-03-06] Cursor's cloud-agent walkthrough made the category's supervision thesis explicit before the later 3.1 control-plane polish: remote agents, review videos, and human oversight over many workers
 - [2026-04-22] Added `Agent-native documents` to capture document surfaces built for shared human/agent drafting; [[tools/proof]] is the first example

@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: [anthropic, cli, agentic]
-as_of: 2026-04-21
-sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february]
+as_of: 2026-04-22
+sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026]
 ---
 
 # Claude Code
@@ -27,6 +27,8 @@ Anthropic's terminal-first AI coding agent. Runs in the shell, operates autonomo
 - Routines let a workflow run on a schedule, from an API call, or in response to an event on Anthropic's infrastructure
 - The early-April source leak made the product's underlying architecture more legible: layered memory, repo-state awareness, explicit permission modes, and cache-friendly subagent parallelism appear to be core design choices rather than implementation accidents
 - Desktop redesign pushes the product toward multi-session supervision rather than a single terminal loop
+- `/recap`: auto-generates a one-line summary of the last session after 3+ turns of inactivity — triggered only once per gap, never back-to-back, also available on demand via `/recap`
+- `/fewer-permission-prompts` skill (Boris Cherny): scans session history to identify safe bash and MCP commands that repeatedly trigger permission prompts, then produces an allowlist to approve them once permanently; best run after a few days of work so there's enough history to pull from
 
 ## Monitor tool
 
@@ -61,6 +63,7 @@ That matters because it shifts the product story away from "Anthropic has a stro
 
 ## Recent changes
 
+- [2026-04-22] Added /recap (session gap summaries after inactivity) and /fewer-permission-prompts skill (history-based allowlist generator)
 - [2026-02-27] Claude Code added auto-memory for project-local recall of commands, preferences, and architecture context
 - [2026-02-28] Boris previewed `/batch` and `/simplify` as built-in primitives for parallel migrations and automated cleanup
 - [2026-03-07] Claude Code added local scheduled tasks plus `/loop`, giving the terminal agent an explicit recurring-work primitive before the later hosted-routines layer
@@ -82,3 +85,4 @@ That matters because it shifts the product story away from "Anthropic has a stro
 - [[sources/newsletters/claude-code-scheduled-tasks-march]]
 - [[sources/newsletters/anthropic-persistent-workflow-surfaces-february]]
 - [[sources/newsletters/memory-vs-context-rot-february]]
+- [[sources/newsletters/thecode-april-22-2026]]

@@ -13,7 +13,7 @@ Two breach patterns from the same week: Vercel customer credentials exposed via 
 
 ## Intended changes
 
-- [ ] **Update** `wiki/training/anti-autopilot-review-friction.md` — add vibe-coding security defaults as a failure mode and agent-as-watchdog as a proven pattern
+- [x] **Update** `wiki/training/anti-autopilot-review-friction.md` — add vibe-coding security defaults as a failure mode and agent-as-watchdog as a proven pattern
     > **Append to `## Failure modes`:**
     > ```
     > - **Vibe-coding default inheritance.** AI coding tools (Lovable and similar) generate working prototypes with insecure defaults — Supabase row-level security off, public access rules on storage, API keys embedded in client-side code. The code looks complete and runs correctly, so it passes review without triggering concern. Users inherit the AI's insecure-by-default configurations unless they know to audit them specifically. This is distinct from hallucination: the code is correct code with an insecure configuration choice.
@@ -25,7 +25,7 @@ Two breach patterns from the same week: Vercel customer credentials exposed via 
     > - **Agent-as-watchdog.** A lightweight background agent monitors a relevant external surface (public social channels, issue trackers, partner APIs) for brand mentions, security anomalies, or policy violations — nightly or on a schedule — and routes findings to humans for judgment. Every's Claudie workflow (X monitoring for brand/security mentions) is a practical example: the agent does the scanning and pattern-detection; humans review and decide. Low setup cost, continuous coverage, judgment stays human.
     > ```
 
-- [ ] **Create** `wiki/sources/newsletters/every-vibe-check-april-21-2026.md` — source summary
+- [x] **Create** `wiki/sources/newsletters/every-vibe-check-april-21-2026.md` — source summary
     > See draft below
 
 ## Page drafts

@@ -35,7 +35,8 @@ Foundation models. One page per model family or generation.
 - [[models/kimi-k2-6]] — Moonshot AI open-weight 1T-param MoE; open-source SOTA coding/agent benchmark claims; 300-agent Claw Groups *(as_of: 2026-04-21)*
 - [[models/minimax-m2-7]] — open-weight coding and agent model with unusually strong late-March cost/performance claims for tool-heavy work *(as_of: 2026-03-22)*
 - [[models/muse-spark]] — Meta's new multimodal model; source emphasizes compute-efficient scaling vs prior Llama 4 Maverick generation *(as_of: 2026-04-10)*
-- [[models/qwen-3-6-35b-a3b]] — Alibaba open-weight coding model; practical local-agent threshold on roughly 24GB-class hardware *(as_of: 2026-04-21)*
+- [[models/gpt-image-2]] — OpenAI image generation model; #1 all image arena categories by +242 Elo margin; thinking mode + web search; design-to-code bridge *(as_of: 2026-04-22)*
+- [[models/qwen-3-6-35b-a3b]] — Alibaba open-weight coding model; community niche: coding/tools > creative/translation; Qwen 3.6 Max Preview (600-700B, likely proprietary) *(as_of: 2026-04-22)*
 
 ## Tools
 
@@ -54,9 +55,10 @@ Tools and products built on top of models. One page per tool.
 - [[tools/perplexity-computer]] — Perplexity's 19-model orchestration agent; connects to 400+ apps and 12K+ financial institutions *(as_of: 2026-04-10)*
 - [[tools/proof]] — Every's web document editor for shared human/agent drafting, revision, and document collaboration *(as_of: 2026-03-15)*
 - [[tools/gemini]] — Google's AI assistant; custom visualizations, notebooks, Chrome Skills, Gemini 3.1 Flash TTS, and native Mac app *(as_of: 2026-04-21)*
-- [[tools/claude-code]] — Anthropic's terminal-first AI coding agent; Monitor plus hosted routines push it toward supervised multi-session workflows *(as_of: 2026-04-21)*
+- [[tools/claude-code]] — Anthropic's terminal-first AI coding agent; Monitor plus hosted routines push it toward supervised multi-session workflows *(as_of: 2026-04-22)*
 - [[tools/codex]] — OpenAI's cloud-based coding agent via CLI and ChatGPT; increasingly framed around app use, memory, and repeatable ongoing tasks *(as_of: 2026-04-21)*
-- [[tools/hermes-agent]] — NousResearch open-source agent framework; 100K+ stars; multi-layer memory, self-improving skills, stateless sub-agent parallelism *(as_of: 2026-04-21)*
+- [[tools/hermes-agent]] — NousResearch open-source agent framework; 100K+ stars; multi-layer memory, self-improving skills, recursive spawn depth, Scarf macOS GUI *(as_of: 2026-04-22)*
+- [[tools/hf-ml-intern]] — Hugging Face open-source autonomous ML post-training agent; closes the full research loop end-to-end; GPQA 10%→32% in <10h *(as_of: 2026-04-22)*
 - [[tools/openai-agents-sdk]] — OpenAI's updated agent SDK: model-native harness, native sandbox execution, durable checkpoint / rehydration, and provider-neutral manifests *(as_of: 2026-04-15)*
 - [[tools/orca]] — open-source worktree IDE for supervising multiple coding agents across isolated branches, terminals, diffs, and review flows *(as_of: 2026-04-21)*
 
@@ -107,6 +109,7 @@ Practical guidance for teaching teams and businesses to use AI well.
 - [[training/ai-style-guides]] — how to externalize editorial taste and anti-patterns so AI writing stops drifting generic *(as_of: 2026-03-19)*
 - [[training/anti-autopilot-review-friction]] — deliberate review friction to stop fluent AI output from being accepted without independent judgment *(as_of: 2026-04-21)*
 - [[training/company-wide-ai-enablement]] — operating patterns for broad AI adoption: defaults, access, social proof, platform-plus-spokes org design, and workflow redesign around agents *(as_of: 2026-04-21)*
+- [[training/ai-enablement-software-development]] — engineering-specific AI adoption: critique loops, CI/CD as bottleneck, Shopify phase-transition evidence, junior talent pipeline *(as_of: 2026-04-22)*
 
 ## Sources
 
@@ -117,12 +120,12 @@ See `wiki/sources/` — source summaries are not indexed here (they're many and 
 ## Page count
 
 - state-of: 7 (6 populated, 1 skeleton)
-- models: 8
-- tools: 18
+- models: 9
+- tools: 19
 - benchmarks: 0
 - workflows: 2
 - concepts: 9
 - trends: 7
-- training: 4
+- training: 5
 
-**Total content pages: 55.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 58.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.

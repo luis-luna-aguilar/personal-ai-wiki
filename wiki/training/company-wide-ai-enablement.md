@@ -1,8 +1,8 @@
 ---
 title: Company-wide AI enablement
 type: training
-as_of: 2026-04-21
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february]
+as_of: 2026-04-22
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026]
 ---
 
 # Company-wide AI enablement
@@ -34,8 +34,6 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 - **Exploration budget.** Removing token caps and access restrictions gives people room to discover high-leverage use cases before ROI is obvious
 - **End-to-end workflow ownership.** Best use cases cut across multiple teams; redesigning the whole workflow (who owns what, where humans stay in vs. above the loop) beats optimizing individual steps
 - **Cross-level redesign teams.** Process re-imagination needs both leaders who can identify lighthouse use cases and employees deep in the day-to-day work — not just one or the other
-- **Persistence beats intimidation.** Many non-engineers can cross into building by repeatedly asking the model to explain itself, revising instructions, and iterating through confusion instead of giving up at the first broken prototype
-- **Reliability still needs architecture.** Fast prototyping does not remove the need to decide what cannot fail, how information is structured, and which parts of the workflow need engineering-grade reliability
 - **Operational-complexity targeting.** Some of the highest-leverage AI opportunities sit inside messy, regulated, service-heavy businesses where software is only one piece of the workflow
 - **Reward outcomes, not AI usage.** Teams stall or drift when "used AI" becomes the goal; quality and throughput improvements are the only metrics that matter
 - **Concrete example promotion.** A single visible example of someone using AI to rethink the work itself can unlock broader adoption better than generic encouragement to "use AI more"
@@ -43,6 +41,7 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 - **Start with one durable personal agent role.** Early OpenClaw onboarding guidance reinforces that adoption is easier when each person starts with one persistent, messaging-native agent with a bounded job before expanding into a larger swarm of helpers
 - **Agent-to-agent collaboration in shared channels.** Every's March OpenClaw reporting showed personal agents explaining failures to each other, broadcasting to groups, and operating as named participants in team communication
 - **Proof-based status rules.** A practical reliability pattern from the OpenClaw cluster: agents should not say "done" or "working on it" without concrete evidence such as a process ID, file path, URL, or command output
+- **Trust battery with judge agent.** Grant autonomy incrementally rather than all at once. Implement a nightly judge agent that reviews interactions, scores behavior, adjusts a trust percentage, and lets the primary agent self-update memory from negative feedback. Start at a deliberately low trust level (Every's Claudie: 20% vs 50% for human new hires) and let the agent earn scope through demonstrated reliability rather than through time or configuration changes.
 
 ## Failure modes
 
@@ -53,11 +52,11 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 - Letting fluent AI output pass as "reviewed" without forcing humans to form an independent judgment first
 - **Running AI pilots inside unchanged processes.** Individual adoption without redesigning the surrounding workflow keeps the organization stuck in pilot mode — one analyst using Claude inside an otherwise unchanged 75-person firm. McKinsey's framing: the blocker is work redesign, not technology
 - **Point solutions masquerading as transformation.** Taking one task and using AI to do it faster is not the same as reimagining the workflow end-to-end
-- **Prototype velocity mistaken for product quality.** Teams can ship something impressive-looking in a day, then discover it has no coherent architecture, weak reliability boundaries, and no clear sense of what cannot fail
 - Assuming an apparently replaceable human workflow will be accepted when automated; customers and coworkers are often more forgiving of humans making the same mistakes
 - **AI work intensification.** Early workplace reporting suggests AI often expands task scope, blurs work/life boundaries, and encourages many parallel threads rather than simply reducing workload
 - **Compulsive "one more prompt" loops.** Teams can become more productive in bursts while also degrading attention, recovery time, and judgment unless managers design explicit stopping points and protected focus windows
 - **False-completion behavior.** Always-on agents often sound confident before any real action has started; teams need explicit instructions that status updates require proof
+- **Tokenmaxxing — measuring token spend as a productivity proxy.** Meta's internal "Claudeonomics" leaderboard ranked 85,000 employees by AI token usage; within weeks employees were leaving agents idle to climb the rankings. One OpenAI engineer processed 210 billion tokens in a single week (enough to fill Wikipedia 33 times). Dubbed "tokenmaxxing," this mirrors the early 2000s lines-of-code mistake exactly. Reasoning models compound the problem by generating inner-monologue tokens as a function of architecture, not work done. Reward outcomes and quality; token spend is a cost center, not a productivity signal.
 
 ## Humans in the loop vs. above the loop
 
@@ -80,7 +79,7 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - Helena / Plus One / sidekick framing reinforces that many organizations are testing agents as bounded teammates rather than as generic assistants
 - Linear argues that opening a SaaS product to agents can expand the real user base beyond humans without abandoning the original product mission
 - Block explicitly frames the company-design problem as shifting from hierarchy toward intelligence — useful as a directional organizational signal even if still early
-- Ramp: AI usage up 6,300% YoY; 99.5% of employees active on AI tools; 84% using coding agents weekly; 1,500+ apps shipped in six weeks by 800+ builders; non-engineers account for 12% of human-initiated PRs
+- Ramp: AI usage up 6,300% YoY; 99.5% of employees active on AI tools
 - Ramp attributes adoption to a preconfigured internal agent (`Glass`), a shared skills marketplace (`Dojo`), and visible social reinforcement
 - McKinsey (2026): 80%+ of companies say they're not yet seeing bottom-line impact from AI investments despite massive investment
 - McKinsey: 75% of roles need fundamental reshaping right now; nearly half of leaders report skill gaps in their organization
@@ -88,9 +87,9 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - Their examples suggest AI compresses market research and iteration cycles materially, but reliability and integration into live systems remain the hard part
 - Their receptionist pilot found that customers churned more under AI even when error rates matched humans, reinforcing that perceived tolerance and trust shape adoption
 
-## The junior talent problem
+## See also
 
-Agentic AI is removing the "grunt work" through which junior employees historically built pattern recognition. If entry-level work disappears entirely, there's a pipeline problem: senior talent runs out within a decade. McKinsey's framing: learning and development should move from a periodic sidecar to the center of the employee journey. Junior employees who start with AI tools from day one don't have 20 years of pattern recognition — but they also don't face the hurdle of disrupting an established career-long workflow.
+- [[training/ai-enablement-software-development]] — engineering-specific patterns: critique loops, CI/CD as bottleneck, Shopify evidence, junior talent pipeline
 
 ## Open questions
 
@@ -109,3 +108,4 @@ Agentic AI is removing the "grunt work" through which junior employees historica
 - [[sources/newsletters/ai-native-product-building-lessons-late-march]]
 - [[sources/newsletters/ai-work-intensification-march]]
 - [[sources/newsletters/ai-for-boring-businesses]]
+- [[sources/newsletters/every-ai-sandwich-april-2026]]

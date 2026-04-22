@@ -13,7 +13,7 @@ AINews provided benchmark scores and workflow details for Google Deep Research M
 
 ## Intended changes
 
-- [ ] **Update** `wiki/tools/gemini.md` — add benchmark scores and two missing capability details to Current status
+- [x] **Update** `wiki/tools/gemini.md` — add benchmark scores and two missing capability details to Current status
     > **Replace in `## Current status (as of 2026-04-21)`:**
     > ```
     > Before:
@@ -36,7 +36,7 @@ AINews provided benchmark scores and workflow details for Google Deep Research M
     > - [2026-04-22] Added benchmark scores for Deep Research Max (93.3% DeepSearchQA, 85.9% BrowseComp, 54.6% HLE); added collaborative planning and code execution capabilities from AINews coverage
     > ```
 
-- [ ] **Update** `wiki/state-of/agents.md` — note research agents as an emerging subcategory signal
+- [x] **Update** `wiki/state-of/agents.md` — note research agents as an emerging subcategory signal
     > **Append to `## Recent changes`:**
     > ```
     > - [2026-04-22] Google Deep Research Max scores (93.3% DeepSearchQA) and HF ml-intern autonomous loop mark the emergence of a distinct "full-stack research agent" tier — see [[tools/gemini]] and [[tools/hf-ml-intern]]
