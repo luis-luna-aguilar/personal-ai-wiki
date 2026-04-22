@@ -561,8 +561,44 @@ When spilling: open the history file (or create it), append the spilled entry wi
 | `link_check.py` | Report broken `[[wikilinks]]` | "check links" |
 | `tag_compliance.py` | Report tags/domains/subcategories not in `_schema/` | "check tag compliance" |
 | `lint_all.py` | Chain all four | "run lint", "lint the wiki" |
+| `build_podcast.sh <1\|2\|3\|all>` | Generate podcast markdown files from wiki content | "build podcast files", "generate podcasts", "rebuild podcast" |
 
-Run via `python scripts/<name>.py`. These are cheap — run them whenever asked.
+Run via `python scripts/<name>.py` or `bash scripts/<name>.sh`. These are cheap — run them whenever asked.
+
+## Podcast workflow
+
+The wiki is periodically exported as three ~40-minute podcast source files. The full spec lives in `podcast/directions.md`.
+
+### Generate podcast files
+
+Triggered by **"build podcast files"**, **"generate podcasts"**, **"rebuild podcast"**, or similar.
+
+```bash
+bash scripts/build_podcast.sh all
+```
+
+Output lands in `podcast/out/` (gitignored). Three files:
+- `block-1-state-of-play.md` — state-of pages + model pages + benchmarks
+- `block-2-tools-workflows.md` — tool pages + workflow pages
+- `block-3-concepts-trends-training.md` — concept pages + trend pages + training pages
+
+Each file begins with a framing intro from `podcast/block-N-*.md` so the podcast tool knows the episode objective.
+
+### Analyze whether the split needs updating
+
+Triggered by **"check podcast split"**, **"should I resplit the podcast"**, or similar.
+
+Run this analysis **without modifying any files** — report only:
+
+1. Word count per current block: `wc -w wiki/<dir>/*.md` for each dir in each block.
+2. Flag any block that has grown past **15,000 words** — that block likely needs to be split.
+3. Flag any wiki directory not currently assigned to a block (new folders are easy to miss).
+4. Suggest a revised split if needed, showing which dirs move where and the estimated new word counts.
+5. If the user approves a new split, update:
+   - The relevant `podcast/block-N-*.md` intro file (title, objective, sources listed)
+   - The `case` branch in `scripts/build_podcast.sh`
+   - The block table in `podcast/directions.md`
+   - This section in `LLM-INSTRUCTIONS.md`
 
 ### Semantic lint (LLM, costly, explicit only)
 

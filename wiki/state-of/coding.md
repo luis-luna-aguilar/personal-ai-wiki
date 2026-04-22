@@ -4,7 +4,7 @@ type: state-of
 domains: [coding]
 tags: []
 as_of: 2026-04-21
-sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit, cursor-bugbot-learning, claude-code-routines, openai-codex-ongoing-tasks, orca-homepage, coding-agent-control-planes, claude-code-leak-architecture, cursor-3-orchestration-bet, skills-and-plugin-packaging-late-march]
+sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit, cursor-bugbot-learning, claude-code-routines, openai-codex-ongoing-tasks, orca-homepage, coding-agent-control-planes, claude-code-leak-architecture, cursor-3-orchestration-bet, skills-and-plugin-packaging-late-march, cursor-cloud-agents-march, claude-code-scheduled-tasks-march, codex-security-march]
 ---
 
 # State of Coding
@@ -25,7 +25,7 @@ Tools where a structured natural-language spec is the primary input to AI coding
 
 Coding tools whose primary UI is built around managing one or more AI coding agents (local and cloud), rather than file-centric editing with AI assistance bolted on.
 
-- [[tools/cursor]] — Cursor remains the clearest reference point for the category: Cursor 3 and 3.1 treat coding as agent supervision work first, with tiled multi-agent control, local↔cloud handoff, branch-aware remote execution, plugin-marketplace extensibility, and Bugbot learning loops from production PR feedback *(as of 2026-04-14)*
+- [[tools/cursor]] — Cursor remains the clearest reference point for the category: by early March its cloud-agent story was already explicitly about remote agents booting environments, testing their own work, returning demo videos, and giving humans a supervision surface for review rather than just an IDE with AI features *(as of 2026-03-06)*
 - [[tools/orca]] — Open-source worktree IDE for running Claude Code, Codex, and other coding agents side by side with built-in terminals, file review, diff review, and CI/PR status tracking *(as of 2026-04-21)*
 
 ### Agentic DevOps
@@ -38,8 +38,8 @@ Tools that turn app-stack setup into a repeatable command-line workflow across m
 
 CLI-based AI coding agents that still anchor in the terminal, but are increasingly expanding into supervised workspaces with repeatable workflows, background execution, and broader agent control surfaces.
 
-- [[tools/claude-code]] — Anthropic; terminal-first agent with Monitor wakeups, hosted routines, and a product direction toward multi-session supervision *(as of 2026-04-21)*
-- [[tools/codex]] — OpenAI; cloud coding agent via CLI and ChatGPT, increasingly framed around app use, memory, and repeatable ongoing tasks *(as of 2026-04-21)*
+- [[tools/claude-code]] — Anthropic; terminal-first agent whose March scheduled tasks and `/loop` features made recurring background work first-class before the later Monitor / routines expansion pushed it further toward supervised workflow automation *(as of 2026-03-07)*
+- [[tools/codex]] — OpenAI; cloud coding agent via CLI and ChatGPT, now extending beyond generation into review/validation work through Codex Security and broader repeatable-task positioning *(as of 2026-03-09)*
 
 ### Agent toolkits
 
@@ -49,6 +49,9 @@ Toolkits that package a developer platform's docs, schemas, validation, and rela
 
 ## Recent changes
 
+- [2026-03-06] Cursor's cloud-agents walkthrough made the workspace thesis explicit: remote agents test their own work, return demo videos, and give humans a supervision surface rather than just an AI-enhanced editor
+- [2026-03-07] Claude Code added local scheduled tasks and `/loop`, making recurring background coding work a first-class terminal-agent primitive
+- [2026-03-09] Codex Security expanded Codex from code generation into vulnerability review and validation
 - [2026-03-23] Late-March signals suggest skills, plugins, hooks, and related packaging are solidifying into the core abstraction layer for coding agents rather than remaining scattered configuration details
 - [2026-04-21] Early-April Claude Code leak reinforced that harness quality — memory layering, repo-state awareness, permission boundaries, and subagent design — is becoming a core competitive dimension in coding agents
 - [2026-04-14] Cursor 3.1 added tiled multi-agent supervision and stronger control-plane UX, reinforcing the shift from AI-enhanced IDEs toward agent workspaces

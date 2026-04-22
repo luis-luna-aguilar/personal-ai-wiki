@@ -30,6 +30,7 @@ Foundation models. One page per model family or generation.
 
 - [[models/claude-opus-4-7]] — Anthropic flagship multimodal model; stronger on explicit coding, document, and visual artifact tasks, but with reported reliability tradeoffs *(as_of: 2026-04-21)*
 - [[models/composer-2]] — Cursor's in-house coding model for complex long-horizon engineering work; late-March sources add benchmarks, pricing claims, and Kimi-k2.5 lineage *(as_of: 2026-03-23)*
+- [[models/gpt-5-4]] — OpenAI frontier model for reasoning, browsing, coding, and agent-style work; strong overall, but still not the clear winner on writing or design *(as_of: 2026-03-08)*
 - [[models/glm-5-1]] — open-weight coding/agent model contender from the early-April open-model wave *(as_of: 2026-04-08)*
 - [[models/kimi-k2-6]] — Moonshot AI open-weight 1T-param MoE; open-source SOTA coding/agent benchmark claims; 300-agent Claw Groups *(as_of: 2026-04-21)*
 - [[models/minimax-m2-7]] — open-weight coding and agent model with unusually strong late-March cost/performance claims for tool-heavy work *(as_of: 2026-03-22)*
@@ -116,7 +117,7 @@ See `wiki/sources/` — source summaries are not indexed here (they're many and 
 ## Page count
 
 - state-of: 7 (6 populated, 1 skeleton)
-- models: 7
+- models: 8
 - tools: 18
 - benchmarks: 0
 - workflows: 2
@@ -124,4 +125,4 @@ See `wiki/sources/` — source summaries are not indexed here (they're many and 
 - trends: 7
 - training: 4
 
-**Total content pages: 54.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 55.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.

@@ -4,7 +4,7 @@ type: trend
 domains: [models, agents]
 tags: [anthropic]
 as_of: 2026-04-08
-sources: [restricted-frontier-deployment]
+sources: [restricted-frontier-deployment, anthropic-pentagon-boundaries-february]
 ---
 
 # Restricted frontier deployment
@@ -16,6 +16,7 @@ The trend: frontier labs may increasingly stop treating "ship the latest model b
 - Anthropic's Mythos / Glasswing cluster is the clearest current example in the wiki
 - The captured sources repeatedly frame the model as materially stronger on cyber or coding-adjacent offensive tasks than prior public systems
 - The notable change is strategic behavior, not just model quality: limited release, heavier safety framing, and public discussion of why broad deployment is being constrained
+- Restricted deployment may also show up as customer-boundary enforcement, not only withheld public releases: Anthropic's late-February Pentagon dispute suggests labs may increasingly fight over allowed use cases and contract terms even when the model itself already exists
 
 ## Why it matters
 
@@ -35,3 +36,4 @@ This could become a major structural shift in frontier AI. If labs increasingly 
 ## Sources
 
 - [[sources/newsletters/restricted-frontier-deployment]]
+- [[sources/newsletters/anthropic-pentagon-boundaries-february]]

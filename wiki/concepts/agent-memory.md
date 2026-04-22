@@ -4,7 +4,7 @@ type: concept
 domains: [agents]
 tags: [agentic]
 as_of: 2026-03-23
-sources: [agent-memory-without-vector-db]
+sources: [agent-memory-without-vector-db, memory-vs-context-rot-february]
 ---
 
 # Agent memory
@@ -27,6 +27,8 @@ Many agent systems fail not because they lack storage, but because they surface 
 - Separate "store everything" from "understand what matters"
 - Treat memory retrieval as a mini-analysis task, not only a nearest-neighbor lookup
 - Keep the extracted facts legible so humans can inspect what the agent thinks it remembers
+- Treat persistent memory as a tradeoff, not a free upgrade: better recall can be offset by stale instructions, contradictory preferences, and "context rot"
+- Prefer memory structures humans can inspect and prune instead of silent accumulation
 
 ## Caveats
 
@@ -36,3 +38,4 @@ Many agent systems fail not because they lack storage, but because they surface 
 ## Sources
 
 - [[sources/newsletters/agent-memory-without-vector-db]]
+- [[sources/newsletters/memory-vs-context-rot-february]]

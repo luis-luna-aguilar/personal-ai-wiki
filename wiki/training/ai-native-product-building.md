@@ -3,7 +3,7 @@ title: AI-native product building
 type: training
 domains: [coding]
 as_of: 2026-03-23
-sources: [ai-native-product-building-lessons-late-march, vibe-coding-reliability-and-distribution]
+sources: [ai-native-product-building-lessons-late-march, vibe-coding-reliability-and-distribution, post-vibe-coding-verification-february]
 ---
 
 # AI-native product building
@@ -24,6 +24,8 @@ AI-native product building means using models and agents to collapse the cost of
 - **Expect slower fixes than builds.** Vibe-fixing is possible, but outage debugging can still take hours
 - **Use AI for leverage, not certainty.** The model can generate many possible fixes; the human still chooses which theory of the bug is coherent
 - **Invest in distribution.** When building gets cheaper, standing out and getting users gets harder
+- **Move judgment upstream.** As agents generate more code, the most valuable human work shifts toward writing specs, acceptance criteria, and deterministic verification steps instead of skimming large diffs after the fact
+- **Fight cognitive debt deliberately.** Use walkthroughs, explanations, and other artifacts that make generated systems understandable enough to extend safely later
 
 ## Failure modes
 
@@ -40,3 +42,4 @@ The old scarcity was implementation bandwidth. The new scarcity is knowing what 
 
 - [[sources/newsletters/ai-native-product-building-lessons-late-march]]
 - [[sources/newsletters/vibe-coding-reliability-and-distribution]]
+- [[sources/newsletters/post-vibe-coding-verification-february]]

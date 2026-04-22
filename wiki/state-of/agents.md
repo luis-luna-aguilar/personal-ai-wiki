@@ -4,7 +4,7 @@ type: state-of
 domains: [agents]
 tags: []
 as_of: 2026-04-21
-sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents]
+sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents, cursor-cloud-agents-march, cursor-cloud-agents-february]
 ---
 
 # State of Agents
@@ -19,7 +19,7 @@ Surfaces (desktop, web, mobile, chat) where humans supervise, hand off, and revi
 
 - [[tools/claude-design]] — Anthropic; research-preview artifact-generation surface for prototypes, slides, and one-pagers, pushing Claude toward generated business artifacts rather than chat-only output *(as of 2026-04-21)*
 - [[tools/claude-cowork]] — Anthropic; desktop knowledge-work agent with Live Artifacts, released alongside [[tools/claude-design]] as part of a broader push toward generated dashboards, reports, and prototypes; the earlier Claude for Word beta suggests this artifact/productivity direction started before Cowork itself *(as of 2026-04-21)*
-- [[tools/cursor]] — Cursor 3.1's tiled Agents Window, saved layouts, and cloud-agent branch control make the workspace feel increasingly like a human supervision layer for many coding agents rather than a single-agent IDE *(as of 2026-04-14)*
+- [[tools/cursor]] — Cursor's cloud-agent walkthrough made the orchestration-ui thesis explicit before the April 3.1 polish pass: agents run remotely, test their own work, return videos, and hand the human a supervision layer over many coding agents rather than a single-agent IDE *(as of 2026-03-06)*
 - [[tools/orca]] — Open-source desktop surface for supervising multiple coding agents across isolated worktrees, with live status reporting, diff review, and CI visibility *(as of 2026-04-21)*
 
 ### Agent orchestration
@@ -50,6 +50,8 @@ Document surfaces built for humans and agents to collaborate inside the same wor
 
 ## Recent changes
 
+- [2026-02-25] Cursor's cloud-agent rollout already showed the orchestration-ui pattern in product form: remote agent computers, self-verification, and video artifacts for human review
+- [2026-03-06] Cursor's cloud-agent walkthrough made the category's supervision thesis explicit before the later 3.1 control-plane polish: remote agents, review videos, and human oversight over many workers
 - [2026-04-22] Added `Agent-native documents` to capture document surfaces built for shared human/agent drafting; [[tools/proof]] is the first example
 - [2026-04-21] Added [[tools/orca]] under `Agent orchestration UIs`; worktree-first desktop supervision layer for Claude Code, Codex, and similar agents
 - [2026-03-31] Backfilled late-March signal: open-agent stacks were already converging on CLI-first execution, worktree coordination, and packaged reusable agents before the April orchestration/control-plane wave became clearer

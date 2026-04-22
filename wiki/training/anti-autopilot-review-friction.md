@@ -2,7 +2,7 @@
 title: Anti-autopilot review friction
 type: training
 as_of: 2026-04-21
-sources: [every-ai-autopilot, every-youre-the-manager-now]
+sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february]
 ---
 
 # Anti-autopilot review friction
@@ -22,6 +22,8 @@ As AI output gets more fluent and more often correct, people stop truly checking
 - **Build in a gap.** Review later, or in a different interface, after attention has reset
 - **Require acceptance reasons.** Don't accept "sounds good"; require a defensible why
 - **Use forcing functions.** Make the human judge before the AI answer becomes the default anchor
+- **Use stopping rules.** Deliberate friction is not only about catching errors; it also helps break the "one more prompt" loop that turns useful AI sessions into compulsive overwork
+- **Review the gates, not only the output.** In agent-heavy coding workflows, judgment increasingly belongs on specs, acceptance criteria, and verification scripts instead of only on generated diffs
 
 ## Failure modes
 
@@ -34,3 +36,5 @@ As AI output gets more fluent and more often correct, people stop truly checking
 
 - [[sources/newsletters/every-ai-autopilot]]
 - [[sources/newsletters/every-youre-the-manager-now]]
+- [[sources/newsletters/ai-work-intensification-march]]
+- [[sources/newsletters/post-vibe-coding-verification-february]]

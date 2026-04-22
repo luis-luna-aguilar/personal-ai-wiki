@@ -5,7 +5,7 @@ domains: [coding, agents]
 subcategory: agentic-coding-workspace
 tags: [closed-source, agentic]
 as_of: 2026-04-14
-sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models]
+sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models, cursor-cloud-agents-march, cursor-cloud-agents-february]
 ---
 
 # Cursor
@@ -17,6 +17,8 @@ The strongest interpretive signal from the early-April reaction cycle is that Cu
 ## Current status (as of 2026-04-14)
 
 - **Cursor 3** is the current shipped version, announced in the "Meet the new Cursor" post on cursor.com/blog
+- Late-February launch coverage already described the practical surface that the March 6 walkthrough later explained more cleanly: isolated cloud computers, self-testing agents, and video demos as review artifacts
+- The March 6 cloud-agents walkthrough made the intended interaction model unusually explicit: remote agents boot their own environment, run the code, test changes, produce demo videos, and expose live remote control over the VM for human verification
 - **Cursor 3.1** extends Cursor 3 with a tiled Agents Window for managing multiple agents side by side
 - New top-level interface built from scratch (not the VS Code fork) and centered on agents
 - Inherently multi-workspace: humans and agents work across multiple repos simultaneously
@@ -29,6 +31,9 @@ The strongest interpretive signal from the early-April reaction cycle is that Cu
 
 ## What's new in Cursor 3
 
+- **Cloud agents as first-class workers.** The March walkthrough clarifies that the key shift is not just running agents in the cloud, but giving them enough environment control to onboard themselves, execute tests, and return reviewable artifacts instead of speculative diffs.
+- **Video-first review.** Cursor increasingly treats demo videos as the first pass on review: not a replacement for diff review, but a faster way to decide which agent output is worth iterating with.
+- **Remote control over the agent VM.** Humans can take over the live environment, inspect terminals, and verify behavior directly rather than trusting screenshots or commit messages alone.
 - **All your agents in one place.** Local and cloud agents (kicked off from desktop, mobile, web, Slack, GitHub, Linear) appear in one sidebar.
 - **Run many agents in parallel.** Cloud agents produce demos and screenshots for the human to verify; same experience as `cursor.com/agents`, now embedded.
 - **Local ↔ cloud handoff.** Move a session from cloud to local for hands-on edits; move local → cloud to keep long-running tasks alive while offline.
@@ -59,6 +64,8 @@ The strongest interpretive signal from the early-April reaction cycle is that Cu
 
 ## Recent changes
 
+- [2026-02-25] Cursor cloud agents rolled out with isolated VMs, self-testing, and demo-video review before the later March walkthrough made the product thesis explicit
+- [2026-03-06] Cloud-agents walkthrough made Cursor's thesis explicit: remote agents should test their own changes, return demo videos, and hand humans a supervision surface instead of just a diff
 - [2026-04-14] Cursor 3.1 added a tiled Agents Window, saved layouts, branch selection for cloud agents, and stronger supervision controls for parallel agent work
 - [2026-04-10] Bugbot learned rules: production PR feedback now turns into active review rules; Cursor reports 78.13% resolution across 50,310 public PRs
 - [2026-04-10] Cloud agents now auto-attach demo videos and screenshots to GitHub PRs
@@ -70,3 +77,5 @@ The strongest interpretive signal from the early-April reaction cycle is that Cu
 - [[sources/articles/cursor-pr-demos]]
 - [[sources/newsletters/coding-agent-control-planes]]
 - [[sources/newsletters/cursor-3-orchestration-bet]]
+- [[sources/newsletters/cursor-cloud-agents-march]]
+- [[sources/newsletters/cursor-cloud-agents-february]]

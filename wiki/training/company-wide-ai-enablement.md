@@ -2,7 +2,7 @@
 title: Company-wide AI enablement
 type: training
 as_of: 2026-04-21
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses]
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february]
 ---
 
 # Company-wide AI enablement
@@ -39,6 +39,10 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 - **Operational-complexity targeting.** Some of the highest-leverage AI opportunities sit inside messy, regulated, service-heavy businesses where software is only one piece of the workflow
 - **Reward outcomes, not AI usage.** Teams stall or drift when "used AI" becomes the goal; quality and throughput improvements are the only metrics that matter
 - **Concrete example promotion.** A single visible example of someone using AI to rethink the work itself can unlock broader adoption better than generic encouragement to "use AI more"
+- **Messaging-native personal agents.** OpenClaw-style assistants living in WhatsApp, Telegram, Discord, SMS, or Slack reduce activation energy because the agent shows up where people already work and communicate
+- **Start with one durable personal agent role.** Early OpenClaw onboarding guidance reinforces that adoption is easier when each person starts with one persistent, messaging-native agent with a bounded job before expanding into a larger swarm of helpers
+- **Agent-to-agent collaboration in shared channels.** Every's March OpenClaw reporting showed personal agents explaining failures to each other, broadcasting to groups, and operating as named participants in team communication
+- **Proof-based status rules.** A practical reliability pattern from the OpenClaw cluster: agents should not say "done" or "working on it" without concrete evidence such as a process ID, file path, URL, or command output
 
 ## Failure modes
 
@@ -51,6 +55,9 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 - **Point solutions masquerading as transformation.** Taking one task and using AI to do it faster is not the same as reimagining the workflow end-to-end
 - **Prototype velocity mistaken for product quality.** Teams can ship something impressive-looking in a day, then discover it has no coherent architecture, weak reliability boundaries, and no clear sense of what cannot fail
 - Assuming an apparently replaceable human workflow will be accepted when automated; customers and coworkers are often more forgiving of humans making the same mistakes
+- **AI work intensification.** Early workplace reporting suggests AI often expands task scope, blurs work/life boundaries, and encourages many parallel threads rather than simply reducing workload
+- **Compulsive "one more prompt" loops.** Teams can become more productive in bursts while also degrading attention, recovery time, and judgment unless managers design explicit stopping points and protected focus windows
+- **False-completion behavior.** Always-on agents often sound confident before any real action has started; teams need explicit instructions that status updates require proof
 
 ## Humans in the loop vs. above the loop
 
@@ -97,5 +104,8 @@ Agentic AI is removing the "grunt work" through which junior employees historica
 - [[sources/articles/ramp-ai-adoption-playbook]]
 - [[sources/articles/mckinsey-agentic-org]]
 - [[sources/newsletters/agent-coworkers-operating-pattern]]
+- [[sources/newsletters/openclaw-operating-pattern-march]]
+- [[sources/newsletters/openclaw-operating-pattern-february]]
 - [[sources/newsletters/ai-native-product-building-lessons-late-march]]
+- [[sources/newsletters/ai-work-intensification-march]]
 - [[sources/newsletters/ai-for-boring-businesses]]

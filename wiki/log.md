@@ -162,3 +162,21 @@ grep "^## \[" wiki/log.md | tail -20
 ## [2026-04-22] ingest | Harness engineering as a systems problem | 2 pages updated, 1 created
 ## [2026-04-22] ingest | Perplexity Personal Computer | 2 pages updated, 1 created
 ## [2026-04-22] apply | Proof as an agent-native document tool | 2 pages updated (state-of/agents, wiki/index), 2 created (tools/proof, sources/newsletters/proof-agent-native-documents); added subcategory `agent-native-documents`
+## [2026-04-22] triage | Personal digest 2026-03-03 to 2026-03-09 | 7 proposals generated, 0 skipped
+## [2026-04-22] ingest | Cursor cloud agents and the supervision workspace thesis | 3 pages updated, 1 created
+## [2026-04-22] ingest | Claude Code scheduled tasks and `/loop` | 2 pages updated, 1 created
+## [2026-04-22] ingest | Codex Security | 2 pages updated, 1 created
+## [2026-04-22] ingest | GPT-5.4 | 2 pages updated, 2 created
+## [2026-04-22] ingest | OpenClaw as an operating pattern | 2 pages updated, 1 created
+## [2026-04-22] ingest | AI work intensification | 2 pages updated, 1 created
+## [2026-04-22] ingest | Harness engineering debate in March | 1 page updated, 1 created
+## [2026-04-22] triage | Personal digest 2026-02-24 to 2026-03-02 | 8 proposals generated, 0 skipped
+## [2026-04-22] ingest | Cursor cloud agents in late February | 2 pages updated, 1 created
+## [2026-04-22] ingest | Anthropic persistent workflow surfaces in late February | 2 pages updated, 1 created
+## [2026-04-22] ingest | Desktop and mobile computer-use surfaces in late February | 1 page updated, 1 created
+## [2026-04-22] ingest | OpenClaw operating pattern in late February | 2 pages updated, 1 created
+## [2026-04-22] ingest | Memory versus context rot in late February | 2 pages updated, 1 created
+## [2026-04-22] ingest | Post-vibe-coding verification and cognitive debt in late February | 2 pages updated, 1 created
+## [2026-04-22] ingest | Anthropic Pentagon deployment boundaries in late February | 1 page updated, 1 created
+## [2026-04-22] ingest | Qwen 3.5 medium models in late February | 2 pages updated, 1 created
+## [2026-04-22] triage | AI Email Digest 2026-04-21 to 2026-04-22 | 8 proposals generated, 3 skipped (Cursor/SpaceX acquisition, Anthropic Mythos leak, Monologue Notes)

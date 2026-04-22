@@ -4,7 +4,7 @@ type: concept
 domains: [agents]
 tags: [agentic]
 as_of: 2026-04-21
-sources: [agentic-thinking-lin, langchain-better-harness, openai-agents-sdk-evolution, notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, claude-code-leak-architecture, harness-engineering-early-april, skills-and-plugin-packaging-late-march, harness-engineering-march]
+sources: [agentic-thinking-lin, langchain-better-harness, openai-agents-sdk-evolution, notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, claude-code-leak-architecture, harness-engineering-early-april, skills-and-plugin-packaging-late-march, harness-engineering-march, harness-debate-march]
 ---
 
 # Harness (agent)
@@ -29,6 +29,8 @@ The analogy to model training is explicit in the field: just as training data sh
 In the reasoning era, the competitive edge was in model training — better RL, stronger feedback signals. In the agentic era, as [[sources/articles/agentic-thinking-lin|Junyang Lin argues]], the edge is in the harness: environment quality, prompt precision, tool design, and the ability to iterate on behavior without retraining the model. Harness engineering is increasingly treated as a first-class discipline.
 
 OpenAI's April 15, 2026 Agents SDK post gives a concrete vendor example of this broader definition: the harness includes configurable memory, sandbox-aware orchestration, Codex-like filesystem tools, MCP, skills, AGENTS.md, shell, and `apply_patch`. OpenAI explicitly argues the harness should stay separate from compute so credentials remain outside execution sandboxes and runs can survive sandbox failure via snapshotting and rehydration.
+
+The March 5, 2026 "Is Harness Engineering real?" debate sharpened the field's core argument. The "big model" side claims stronger reasoning models should collapse large amounts of scaffolding; the "big harness" side argues production advantage still comes from context packaging, tools, loop design, evaluation, and workflow engineering. The useful takeaway is not that one side fully wins, but that the harness has become legible enough to be a first-class competitive surface.
 
 Late-March sources add a more distribution-oriented layer to this idea: teams do not only want a good harness inside one project. They want reusable packaging for the fuzzy operating judgment that makes the harness good in the first place. That is why plugin marketplaces, skills folders, and installable bundles keep surfacing across coding-agent ecosystems.
 
@@ -77,6 +79,7 @@ The two are related but not identical. Many real-world "agent" improvements actu
 - [[sources/tweets/garrytan-confusion-protocol]]
 - [[sources/tweets/matt-pocock-ddd-adr]]
 - [[sources/newsletters/harness-engineering-patterns]]
+- [[sources/newsletters/harness-debate-march]]
 - [[sources/newsletters/claude-code-leak-architecture]]
 - [[sources/newsletters/harness-engineering-early-april]]
 - [[sources/newsletters/skills-and-plugin-packaging-late-march]]

@@ -5,7 +5,7 @@ domains: [agents]
 subcategory: agent-orchestration-ui
 tags: [anthropic, agentic]
 as_of: 2026-04-21
-sources: [claude-cowork-launch, aakash-gupta-cowork, claude-design-launch, claude-productivity-surfaces, anthropic-desktop-agent-expansion-late-march]
+sources: [claude-cowork-launch, aakash-gupta-cowork, claude-design-launch, claude-productivity-surfaces, anthropic-desktop-agent-expansion-late-march, anthropic-persistent-workflow-surfaces-february]
 ---
 
 # Claude Cowork
@@ -15,6 +15,7 @@ Anthropic's desktop agent for knowledge work. It works across local files, folde
 ## Current status (as of 2026-04-21)
 
 - Desktop-first agent that works where most knowledge work happens: local files, folders, and everyday applications
+- Scheduled tasks arrived in late February, letting Cowork run recurring briefs, spreadsheet updates, and similar automations on a cadence while the desktop app stayed open
 - Late-March source material frames Cowork as a more user-friendly, VM-backed superset of Claude Code for non-terminal-native users rather than as a separate narrow productivity toy
 - Anthropic explicitly tied Cowork to local-first agent workflows: the VM acts as both safety boundary and capability unlock, letting Claude install tools, run scripts, and operate more independently without the dead-end UX of approving every command
 - Dispatch, introduced in March, made Cowork persistent: users could assign work from their phone and return later to a still-running desktop conversation
@@ -36,6 +37,7 @@ Cowork also did not appear from nowhere. The earlier Claude for Word beta sugges
 
 ## Recent changes
 
+- [2026-02-25] Cowork added scheduled tasks, making recurring delegated work first-class before the later Dispatch / Channels / Live Artifacts expansion
 - [2026-04-21] Added late-March framing: Cowork is positioned as a VM-backed, local-first delegated desktop workflow, not only an April artifact surface
 - [2026-04-21] Added earlier April precursor: Claude for Word beta signaled Anthropic's move into in-app document workflows before Cowork / Live Artifacts
 - [2026-04-21] Live Artifacts shipped for connected dashboards, trackers, and reports
@@ -47,3 +49,4 @@ Cowork also did not appear from nowhere. The earlier Claude for Word beta sugges
 - [[sources/tweets/claude-design-launch]]
 - [[sources/tweets/claude-productivity-surfaces]]
 - [[sources/newsletters/anthropic-desktop-agent-expansion-late-march]]
+- [[sources/newsletters/anthropic-persistent-workflow-surfaces-february]]
