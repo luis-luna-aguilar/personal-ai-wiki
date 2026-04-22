@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 type: index
-as_of: 2026-04-21
+as_of: 2026-04-22
 ---
 
 # Wiki Index
@@ -29,10 +29,10 @@ Read-me-first dashboards per domain.
 Foundation models. One page per model family or generation.
 
 - [[models/claude-opus-4-7]] — Anthropic flagship multimodal model; stronger on explicit coding, document, and visual artifact tasks, but with reported reliability tradeoffs *(as_of: 2026-04-21)*
-- [[models/composer-2]] — Cursor's in-house frontier coding model; stub *(as_of: 2026-04-02)*
+- [[models/composer-2]] — Cursor's in-house coding model for complex long-horizon engineering work; late-March sources add benchmarks, pricing claims, and Kimi-k2.5 lineage *(as_of: 2026-03-23)*
 - [[models/glm-5-1]] — open-weight coding/agent model contender from the early-April open-model wave *(as_of: 2026-04-08)*
 - [[models/kimi-k2-6]] — Moonshot AI open-weight 1T-param MoE; open-source SOTA coding/agent benchmark claims; 300-agent Claw Groups *(as_of: 2026-04-21)*
-- [[models/minimax-m2-7]] — open-weight coding model paired with MMX-CLI for tool-heavy workflows *(as_of: 2026-04-13)*
+- [[models/minimax-m2-7]] — open-weight coding and agent model with unusually strong late-March cost/performance claims for tool-heavy work *(as_of: 2026-03-22)*
 - [[models/muse-spark]] — Meta's new multimodal model; source emphasizes compute-efficient scaling vs prior Llama 4 Maverick generation *(as_of: 2026-04-10)*
 - [[models/qwen-3-6-35b-a3b]] — Alibaba open-weight coding model; practical local-agent threshold on roughly 24GB-class hardware *(as_of: 2026-04-21)*
 
@@ -51,6 +51,7 @@ Tools and products built on top of models. One page per tool.
 - [[tools/shopify-ai-toolkit]] — Shopify's plugin / skills / MCP integration layer for AI-assisted Shopify app development *(as_of: 2026-04-10)*
 - [[tools/tessl]] — CLI + MCP framework exploring spec-as-source; private beta *(as_of: 2025-10-15)*
 - [[tools/perplexity-computer]] — Perplexity's 19-model orchestration agent; connects to 400+ apps and 12K+ financial institutions *(as_of: 2026-04-10)*
+- [[tools/proof]] — Every's web document editor for shared human/agent drafting, revision, and document collaboration *(as_of: 2026-03-15)*
 - [[tools/gemini]] — Google's AI assistant; custom visualizations, notebooks, Chrome Skills, Gemini 3.1 Flash TTS, and native Mac app *(as_of: 2026-04-21)*
 - [[tools/claude-code]] — Anthropic's terminal-first AI coding agent; Monitor plus hosted routines push it toward supervised multi-session workflows *(as_of: 2026-04-21)*
 - [[tools/codex]] — OpenAI's cloud-based coding agent via CLI and ChatGPT; increasingly framed around app use, memory, and repeatable ongoing tasks *(as_of: 2026-04-21)*
@@ -75,6 +76,7 @@ Reusable patterns and recipes.
 
 Ideas and techniques (RAG, context engineering, compound engineering, etc.).
 
+- [[concepts/agent-memory]] — long-term agent memory as a retrieval-and-reasoning problem, not only a vector-database problem *(as_of: 2026-03-23)*
 - [[concepts/agent-improvement-loop]] — trace-centered workflow for improving AI agents through tracing, evals, review, and regression testing *(as_of: 2026-04-09)*
 - [[concepts/functional-emotions]] — emotion-concept representations in LLMs can causally shape behavior without implying subjective feeling *(as_of: 2026-04-02)*
 - [[concepts/harness]] — scaffolding that wraps a model into an acting agent; prompts, tools, orchestration, environment, evals *(as_of: 2026-04-21)*
@@ -100,6 +102,8 @@ Things being watched that haven't solidified yet.
 
 Practical guidance for teaching teams and businesses to use AI well.
 
+- [[training/ai-native-product-building]] — practical guidance for the post-vibe-coding bottleneck shift: reliability, debugging, distribution, and product judgment *(as_of: 2026-03-23)*
+- [[training/ai-style-guides]] — how to externalize editorial taste and anti-patterns so AI writing stops drifting generic *(as_of: 2026-03-19)*
 - [[training/anti-autopilot-review-friction]] — deliberate review friction to stop fluent AI output from being accepted without independent judgment *(as_of: 2026-04-21)*
 - [[training/company-wide-ai-enablement]] — operating patterns for broad AI adoption: defaults, access, social proof, platform-plus-spokes org design, and workflow redesign around agents *(as_of: 2026-04-21)*
 
@@ -113,11 +117,11 @@ See `wiki/sources/` — source summaries are not indexed here (they're many and 
 
 - state-of: 7 (6 populated, 1 skeleton)
 - models: 7
-- tools: 17
+- tools: 18
 - benchmarks: 0
 - workflows: 2
-- concepts: 8
+- concepts: 9
 - trends: 7
-- training: 2
+- training: 4
 
-**Total content pages: 50.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 54.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.

@@ -4,34 +4,39 @@ type: model
 domains: [models, coding]
 subcategory: coding-model
 tags: [open-weights, agentic]
-as_of: 2026-04-13
-sources: [open-agentic-coding-models]
+as_of: 2026-03-22
+sources: [open-agentic-coding-models, late-march-small-coding-models]
 ---
 
 # MiniMax M2.7
 
-MiniMax M2.7 is an open-weight coding model positioned for agentic engineering workloads. In the captured source set, its significance comes from the combination of credible coding-benchmark claims and an accompanying CLI that reduces setup friction for tool-heavy use.
+MiniMax M2.7 is an open-weight coding and agent model that looks more consequential than the current page suggests. The strongest late-March signal is not only benchmark competitiveness, but economics: it is repeatedly framed as one of the most attractive "cheap but capable" models for agentic coding work.
 
-## Current status (as of 2026-04-13)
+## Current status (as of 2026-03-22)
 
-- Open-weight coding model released on Hugging Face
-- Source claims benchmark competitiveness on SWE-Pro and Terminal Bench 2
-- Released alongside MMX-CLI, which is framed as providing native tool access without MCP setup
+- 220B-parameter MoE model positioned for coding and general agentic tasks
+- MiniMax says an earlier checkpoint helped with 30-50% of the RL team's own workflows, framing the model as partially self-improving during development
+- Reported benchmark claims include 56.22% on SWE-Pro and 55.6% on VIBE-Pro
+- Source coverage also claims native multi-agent collaboration and 97% skill adherence across 40+ tools
+- Pricing cited in the late-March sources is roughly `$0.30 / $1.20` per million input/output tokens, materially below several direct competitors
 
 ## Strengths
 
-- Couples the model with an execution surface rather than shipping weights alone
-- Reinforces the trend that open coding stacks are becoming more usable for practical agent workflows
+- Strong cost/performance signal for agentic coding workloads
+- Benchmarks and product framing both emphasize tool-heavy work, not only static code completion
+- Looks usable in real agent stacks, not only impressive on paper
 
 ## Weaknesses / caveats
 
-- Benchmark claims are relayed through newsletter coverage in the captured source set
-- Hardware and licensing details in the source set are incomplete and should be treated cautiously
+- Most claims in the current source set are relayed through newsletters rather than a direct technical report
+- The strongest criticism is indirect: if the pricing and token-efficiency comparison is correct, OpenAI's small-model tier looks weak against it, but that is still one practitioner's interpretation rather than settled consensus
 
 ## Recent changes
 
+- [2026-04-21] Late-March sources sharpened the picture: M2.7 now reads as a cost/performance leader in the affordable coding-model tier, not only an open-weight release with a CLI
 - [2026-04-13] Page created from digest synthesis covering M2.7's open-weight release and MMX-CLI pairing
 
 ## Sources
 
 - [[sources/newsletters/open-agentic-coding-models]]
+- [[sources/newsletters/late-march-small-coding-models]]

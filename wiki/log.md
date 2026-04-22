@@ -138,6 +138,7 @@ grep "^## \[" wiki/log.md | tail -20
 ## [2026-04-21] apply | Claude productivity surfaces | 3 pages updated (tools/claude-cowork, state-of/agents, tools/claude-managed-agents), 1 created (sources/tweets/claude-productivity-surfaces)
 ## [2026-04-21] triage | Personal digest 2026-04-01 to 2026-04-07 | 5 proposals generated, 3 skipped
 ## [2026-04-21] apply | Claude Code leak architecture lessons | 3 pages updated (tools/claude-code, concepts/harness, state-of/coding), 1 created (sources/newsletters/claude-code-leak-architecture)
+## [2026-04-22] triage | Personal digest 2026-03-10 to 2026-03-16 | 5 proposals, 0 skipped
 ## [2026-04-21] apply | Cursor 3 orchestration bet | 2 pages updated (tools/cursor, state-of/coding), 1 created (sources/newsletters/cursor-3-orchestration-bet)
 ## [2026-04-21] apply | Harness engineering in early April | 2 pages updated (concepts/harness, workflows/agentic-orchestration-patterns), 1 created (sources/newsletters/harness-engineering-early-april)
 ## [2026-04-21] apply | Agent-native organizations in early April | 2 pages updated (training/company-wide-ai-enablement, trends/agents-reshape-organizations), 1 created (sources/newsletters/agent-native-organizations-early-april)
@@ -149,3 +150,15 @@ grep "^## \[" wiki/log.md | tail -20
 ## [2026-04-21] apply | Voice becomes an agent interface | 1 page updated (wiki/index), 2 created (trends/voice-becomes-agent-interface, sources/newsletters/voice-becomes-agent-interface)
 ## [2026-04-21] apply | Runtime improvements improve agent economics | 1 page updated (trends/compute-infrastructure), 1 created (sources/newsletters/runtime-improvements-improve-agent-economics)
 ## [2026-04-21] apply | AI-native product-building lessons in late March | 1 page updated (training/company-wide-ai-enablement), 1 created (sources/newsletters/ai-native-product-building-lessons-late-march)
+## [2026-04-21] triage | Personal digest 2026-03-17 to 2026-03-23 | 6 proposals generated, 1 skipped
+## [2026-04-21] ingest | Anthropic desktop-agent expansion in late March | 3 pages updated, 1 created
+## [2026-04-21] ingest | Late-March small coding models | 5 pages updated, 1 created
+## [2026-04-21] ingest | Agent memory without vector databases | 1 page updated, 2 created
+## [2026-04-21] ingest | Skills and plugin packaging in late March | 4 pages updated, 1 created
+## [2026-04-21] ingest | AI style guides | 1 page updated, 2 created
+## [2026-04-21] ingest | AI-native product building | 1 page updated, 2 created
+## [2026-04-22] ingest | AI for boring businesses | 1 page updated, 1 created
+## [2026-04-22] ingest | Coding agents shift toward review and concurrent supervision | 2 pages updated, 1 created
+## [2026-04-22] ingest | Harness engineering as a systems problem | 2 pages updated, 1 created
+## [2026-04-22] ingest | Perplexity Personal Computer | 2 pages updated, 1 created
+## [2026-04-22] apply | Proof as an agent-native document tool | 2 pages updated (state-of/agents, wiki/index), 2 created (tools/proof, sources/newsletters/proof-agent-native-documents); added subcategory `agent-native-documents`

@@ -4,27 +4,41 @@ type: model
 domains: [coding, models]
 subcategory: coding-model
 tags: [closed-source]
-as_of: 2026-04-02
-sources: [cursor-3-launch]
+as_of: 2026-03-23
+sources: [cursor-3-launch, late-march-small-coding-models]
 ---
 
 # Composer 2
 
-Composer 2 is Cursor's own frontier coding model, positioned as the model behind agent work in [[tools/cursor|Cursor 3]]. This page is a stub — almost everything we know comes from a single passing mention in the Cursor 3 launch post; a dedicated Composer 2 source ingest is pending.
+Composer 2 is Cursor's in-house coding model for complex long-horizon engineering work. It is no longer just a stub-level mention from the Cursor 3 launch: late-March sources add benchmark claims, pricing claims, and the now-disclosed fact that Cursor started from Moonshot's Kimi-k2.5 before doing continued pretraining and reinforcement learning.
 
-## Current status (as of 2026-04-02)
+## Current status (as of 2026-03-23)
 
-- Cursor's in-house frontier coding model
-- Marketed with "high usage limits" inside Cursor
-- Used by Cursor 3 for iterative agent work and quick local edits
-- No published benchmark numbers in the source we have so far
-- Closed; only available inside Cursor products
-- A standalone Composer 2 announcement post exists at `cursor.com/blog/composer-2` — pending follow-up ingest
+- Cursor positions Composer 2 as its own model for complex, long-term coding tasks
+- Reported benchmark claims: 61.7 on TerminalBench 2.0 and 73.7 on SWE-bench Multilingual
+- Source coverage says it trails GPT-5.4 slightly, but beats Anthropic's Opus 4.6 on those cited coding benchmarks
+- Launch pricing claim in the source set: about `$0.50` per million input tokens, roughly one-tenth of some frontier competitors
+- Later source coverage says Cursor did not train it from scratch: the model reportedly starts from Moonshot's open Kimi-k2.5, then adds continued pretraining plus Cursor-specific finetuning / RL
+- Available only inside Cursor products; no standalone API
+
+## Strengths
+
+- Clearer benchmark story than the original stub implied
+- Integrated tightly into Cursor's agent workspace, so the model and product can co-evolve
+- Low-cost positioning matters if the benchmark claims hold up in real usage
+
+## Weaknesses / caveats
+
+- Benchmarks and pricing come through secondary reporting in the captured source set
+- The Kimi-k2.5 disclosure created credibility friction around the launch story
+- Closed distribution makes independent evaluation harder than for open-weight peers
 
 ## Recent changes
 
+- [2026-04-21] Late-March model coverage turned Composer 2 from a stub into a real current-state page with benchmark, pricing, and lineage claims
 - [2026-04-02] Page created (stub) from a passing mention in the Cursor 3 launch post
 
 ## Sources
 
 - [[sources/articles/cursor-3-launch]]
+- [[sources/newsletters/late-march-small-coding-models]]

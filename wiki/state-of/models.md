@@ -4,7 +4,7 @@ type: state-of
 domains: [models]
 tags: []
 as_of: 2026-04-21
-sources: [muse-spark, kimi-k2-6-blog, ainews-2026-04-21, every-opus-4-7-vibe-check, vectorlab-opus-4-7-flop, vectorlab-qwen-3-6-local-threshold, open-agentic-coding-models, restricted-frontier-deployment, open-weight-momentum-early-april]
+sources: [muse-spark, kimi-k2-6-blog, ainews-2026-04-21, every-opus-4-7-vibe-check, vectorlab-opus-4-7-flop, vectorlab-qwen-3-6-local-threshold, open-agentic-coding-models, restricted-frontier-deployment, open-weight-momentum-early-april, late-march-small-coding-models]
 ---
 
 # State of Models
@@ -25,12 +25,14 @@ General-purpose frontier models competing on broad multimodal capability rather 
 Open-weight and frontier models evaluated primarily for agentic coding tasks.
 
 - [[models/kimi-k2-6]] — Moonshot AI; open-weight 1T-param MoE; open-source SOTA claims: HLE w/ tools 54.0, SWE-Bench Pro 58.6, SWE-bench Multilingual 76.7, BrowseComp 83.2; 4K+ tool calls, 12+ hour continuous runs *(as of 2026-04-21)*
+- [[models/minimax-m2-7]] — MiniMax; 220B MoE coding / agent model; late-March sources describe unusually strong cost-performance: 56.22% SWE-Pro, 55.6% VIBE-Pro, native multi-agent collaboration, and roughly `$0.30 / $1.20` per million input/output tokens *(as of 2026-03-22)*
+- [[models/composer-2]] — Cursor's in-house coding model; positioned for complex long-horizon coding tasks with reported 61.7 TerminalBench 2.0 and 73.7 SWE-bench Multilingual, plus unusually low input-token pricing inside Cursor; later disclosure says it starts from Moonshot's Kimi-k2.5 and adds continued pretraining plus RL *(as of 2026-03-23)*
 - [[models/qwen-3-6-35b-a3b]] — Alibaba; open-weight MoE coding model increasingly described as the first practical local-agent baseline for roughly 24GB-class local hardware, such as a higher-memory MacBook Pro or comparable GPU setup *(as of 2026-04-21)*
 - [[models/glm-5-1]] — open-weight contender described in the captured sources as a top benchmark performer for coding and agent workflows *(as of 2026-04-08)*
-- [[models/minimax-m2-7]] — open-weight coding model paired with MMX-CLI; notable because the stack is pitched as runnable/usable, not just benchmarked *(as of 2026-04-13)*
 
 ## Recent changes
 
+- [2026-03-23] Late-March small-model cluster sharpened the affordable coding tier: MiniMax M2.7 looks stronger on practical economics, while Composer 2 graduated from a Cursor-only mention to a real model with benchmark and lineage claims
 - [2026-04-07] Early-April open-weight momentum broadened beyond coding-only releases: Gemma 4 became a notable open multimodal adoption signal; see [[trends/open-weight-momentum-broadens]]
 - [2026-04-13] Added [[models/minimax-m2-7]] and [[models/glm-5-1]] under `Coding models`; earlier April sources show open coding-model momentum was broader than the later Qwen/Kimi cluster alone
 - [2026-04-08] Mythos / Glasswing cluster suggests a new trend: frontier capability may increasingly be deployed selectively rather than broadly — see [[trends/restricted-frontier-deployment]]

@@ -4,7 +4,7 @@ type: concept
 domains: [agents]
 tags: [agentic]
 as_of: 2026-04-21
-sources: [agentic-thinking-lin, langchain-better-harness, openai-agents-sdk-evolution, notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, claude-code-leak-architecture, harness-engineering-early-april]
+sources: [agentic-thinking-lin, langchain-better-harness, openai-agents-sdk-evolution, notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, claude-code-leak-architecture, harness-engineering-early-april, skills-and-plugin-packaging-late-march, harness-engineering-march]
 ---
 
 # Harness (agent)
@@ -19,15 +19,18 @@ The analogy to model training is explicit in the field: just as training data sh
 - **Tool suite** — which tools the model can call, their descriptions, when to use them
 - **Orchestration logic** — how the agent loops, when it escalates, how sub-agents are coordinated
 - **Execution environment** — browser, terminal, code sandbox, API layers, memory systems
+- **Storage / compute boundary** — many practical agent stacks now separate durable shared context (repos, filesystems, knowledge stores) from isolated execution sandboxes so multiple agents can collaborate without sharing one unsafe runtime
 - **Evaluation layer** — evals and traces that measure whether the agent behaves as intended
 - **Context-shaping layer** — practical systems increasingly treat repo state, recent edits, local instructions, and memory retrieval policy as part of the harness boundary, not as incidental prompt stuffing
-- **Reusable operating modules** — skills, hook scripts, and lightweight knowledge layers increasingly act as composable pieces of the harness, not just ad hoc project artifacts
+- **Reusable operating modules** — skills, hook scripts, slash commands, and plugin bundles increasingly act as composable pieces of the harness, not just ad hoc project artifacts
 
 ## Why it matters
 
 In the reasoning era, the competitive edge was in model training — better RL, stronger feedback signals. In the agentic era, as [[sources/articles/agentic-thinking-lin|Junyang Lin argues]], the edge is in the harness: environment quality, prompt precision, tool design, and the ability to iterate on behavior without retraining the model. Harness engineering is increasingly treated as a first-class discipline.
 
 OpenAI's April 15, 2026 Agents SDK post gives a concrete vendor example of this broader definition: the harness includes configurable memory, sandbox-aware orchestration, Codex-like filesystem tools, MCP, skills, AGENTS.md, shell, and `apply_patch`. OpenAI explicitly argues the harness should stay separate from compute so credentials remain outside execution sandboxes and runs can survive sandbox failure via snapshotting and rehydration.
+
+Late-March sources add a more distribution-oriented layer to this idea: teams do not only want a good harness inside one project. They want reusable packaging for the fuzzy operating judgment that makes the harness good in the first place. That is why plugin marketplaces, skills folders, and installable bundles keep surfacing across coding-agent ecosystems.
 
 In practice, a harness is not only the loop logic. Recent source material reinforces that stable context packaging matters just as much: the folder, local instructions, reusable skills, and accumulated project memory often determine whether the same base model behaves like a specialist or a generic assistant.
 
@@ -44,6 +47,8 @@ In practice, a harness is not only the loop logic. Recent source material reinfo
 - **Skills as the reusable abstraction** let teams share operating judgment as modules instead of only sharing code snippets or prompts.
 - **Hook-based reliability plumbing** invokes the right capability at the right moment instead of hoping the model notices a textual instruction.
 - **Externalized knowledge layers** help the harness retrieve the right context without dumping everything into the prompt.
+- **Robust loop primitives** give agents a clean way to keep going, pause, rewind, and resume without relying on awkward prompt hacks like reissuing "loop forever" in a brittle session.
+- **Decoupled shared context with isolated execution** lets teams of agents coordinate through the same source of truth while keeping actual runs sandboxed and failure-contained.
 
 ## Harness vs model
 
@@ -74,3 +79,5 @@ The two are related but not identical. Many real-world "agent" improvements actu
 - [[sources/newsletters/harness-engineering-patterns]]
 - [[sources/newsletters/claude-code-leak-architecture]]
 - [[sources/newsletters/harness-engineering-early-april]]
+- [[sources/newsletters/skills-and-plugin-packaging-late-march]]
+- [[sources/newsletters/harness-engineering-march]]

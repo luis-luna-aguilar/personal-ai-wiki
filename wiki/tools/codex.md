@@ -5,7 +5,7 @@ domains: [coding]
 subcategory: terminal-coding-agent
 tags: [openai, closed-source, agentic]
 as_of: 2026-04-21
-sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks]
+sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march]
 ---
 
 # Codex
@@ -15,6 +15,7 @@ OpenAI's cloud-based coding agent, accessed via CLI and ChatGPT. Runs tasks asyn
 ## Current status (as of 2026-04-21)
 
 - Cloud coding agent accessible from ChatGPT and CLI
+- OpenAI's March 2026 best-practices guide made the intended operating model unusually explicit: give Codex a clear goal/context/constraints/done-when structure, move durable repo guidance into `AGENTS.md`, connect live external systems with MCP, turn repeated work into skills, and automate workflows only after they are stable manually
 - OpenAI now frames Codex as broader than code editing: it can use Mac apps, connect to more tools, create images, learn from prior actions, remember work preferences, and take on repeatable tasks
 - Product direction increasingly overlaps with computer use and ongoing workflow automation, not just one-shot coding sessions
 
@@ -36,6 +37,7 @@ Research preview. Background agents monitor recent screen activity, build memori
 
 - [2026-04-21] OpenAI reframes Codex around app use, memory/preferences, image creation, and repeatable tasks
 - [2026-04-21] Codex Chronicle research preview — ambient screen memory; macOS Pro rollout
+- [2026-03-11] Best-practices guide codified the AGENTS.md + MCP + skills + automation workflow as the default way to get better Codex results
 - [2026-04-10] Page created from OpenAI Pro tier pricing announcement
 
 ## Sources
@@ -43,3 +45,4 @@ Research preview. Background agents monitor recent screen activity, build memori
 - [[sources/articles/openai-pro-100]]
 - [[sources/newsletters/ainews-2026-04-21]]
 - [[sources/tweets/openai-codex-ongoing-tasks]]
+- [[sources/newsletters/coding-agents-review-and-orchestration-march]]

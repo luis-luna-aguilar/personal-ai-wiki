@@ -5,7 +5,7 @@ domains: [coding, agents]
 subcategory: agentic-coding-workspace
 tags: [closed-source, agentic]
 as_of: 2026-04-14
-sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet]
+sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models]
 ---
 
 # Cursor
@@ -23,7 +23,7 @@ The strongest interpretive signal from the early-April reaction cycle is that Cu
 - Branch selection for cloud agents and improved search/filter controls make the cloud-agent layer feel more like a supervision surface than a background feature
 - Cloud agents auto-attach demo videos and screenshots to PRs for visual review *(as of 2026-04-10)*
 - **Bugbot** now learns rules from production PR feedback; Cursor reports a 78.13% resolution rate across 50,310 public PRs and 44,000+ learned rules across 110,000+ repos *(as of 2026-04-10)*
-- Backed by [[models/composer-2|Composer 2]], Cursor's own frontier coding model with high usage limits
+- Backed by [[models/composer-2|Composer 2]], Cursor's own coding model for complex long-horizon tasks; late-March coverage adds reported 61.7 TerminalBench 2.0, 73.7 SWE-bench Multilingual, low input-token pricing, and the now-disclosed Kimi-k2.5 base-model lineage
 - Plugin marketplace ("Cursor Marketplace") supports MCPs, skills, and subagents, with one-click install and private team marketplaces
 - Legacy "Cursor IDE" mode still available — switch back at any time
 

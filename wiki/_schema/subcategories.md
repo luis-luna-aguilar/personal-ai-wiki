@@ -6,7 +6,7 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
-Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration-ui`, `agent-orchestration`, `coding-model`, `frontier-multimodal-model`, `legal-ai`, `model-orchestration`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration-ui`, `agent-orchestration`, `coding-model`, `frontier-multimodal-model`, `legal-ai`, `model-orchestration`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`
 
 ### spec-driven-development
 - **Parent domain(s):** coding
@@ -91,6 +91,12 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Applies to types:** workflow | concept
 - **Definition:** Reusable design patterns for orchestrating one or more agents across planning, delegation, evaluation, ambiguity handling, and recovery.
 - **Examples:** [[workflows/agentic-orchestration-patterns]]
+
+### agent-native-documents
+- **Parent domain(s):** agents
+- **Applies to types:** tool
+- **Definition:** Document editors and shared writing surfaces built for humans and agents to draft, revise, comment, and maintain the same working artifacts.
+- **Examples:** [[tools/proof]]
 
 ### Format
 

@@ -4,7 +4,7 @@ type: state-of
 domains: [agents]
 tags: []
 as_of: 2026-04-21
-sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march]
+sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents]
 ---
 
 # State of Agents
@@ -42,11 +42,17 @@ Agent-compatible tools that let a model provision external services and receive 
 
 - [[tools/stripe-cli]] — Stripe explicitly pitches the CLI `projects` flow for "you or your agents": provision services across providers, sync credentials back to the environment, and manage upgrades or billing from the CLI *(as of 2026-04-09)*
 
+### Agent-native documents
+
+Document surfaces built for humans and agents to collaborate inside the same working artifact, with revision, provenance, and comments happening in-place instead of around pasted AI output.
+
+- [[tools/proof]] — Every's web document editor is the clearest current example of the "agent-native document" thesis: plans, memos, and working docs are treated as shared human/AI artifacts with provenance, comments, and tracked edits built into the document itself *(as of 2026-03-15)*
+
 ## Recent changes
 
+- [2026-04-22] Added `Agent-native documents` to capture document surfaces built for shared human/agent drafting; [[tools/proof]] is the first example
 - [2026-04-21] Added [[tools/orca]] under `Agent orchestration UIs`; worktree-first desktop supervision layer for Claude Code, Codex, and similar agents
 - [2026-03-31] Backfilled late-March signal: open-agent stacks were already converging on CLI-first execution, worktree coordination, and packaged reusable agents before the April orchestration/control-plane wave became clearer
 - [2026-04-21] Added earlier Anthropic productivity-surface precursor: Claude for Word beta helps explain Cowork / Live Artifacts as expansion of an existing direction
 - [2026-04-15] Anthropic's Managed Agents now reads as part of a broader platform cluster: hosted runtime, custom agents, and Claude Code long-running monitor/loop patterns
 - [2026-04-14] Cursor 3.1 added tiled multi-agent supervision and stronger control-plane UX, reinforcing the shift from AI-enhanced IDEs toward agent workspaces
-- [2026-04-15] Every's mini-vibe-check added a practitioner signal for [[tools/claude-managed-agents]]: Spiral used the public beta to create an agent in a few hours, with the main benefit being less custom agent-infrastructure maintenance.

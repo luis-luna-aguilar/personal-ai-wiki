@@ -2,7 +2,7 @@
 title: Company-wide AI enablement
 type: training
 as_of: 2026-04-21
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march]
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses]
 ---
 
 # Company-wide AI enablement
@@ -13,6 +13,7 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 
 - Start with a clear expectation from leadership that AI use is part of how work gets done
 - Treat adoption as management and workflow design, not as software procurement
+- Reward outcomes, speed, and quality improvements, not AI usage metrics by themselves
 - Lower the activation barrier with one preconfigured agent surface, SSO, and pre-connected workplace tools
 - Pair a small central platform team with distributed builders in each function
 - Make usage and wins visible through demos, shared channels, office hours, and public examples
@@ -35,6 +36,9 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 - **Cross-level redesign teams.** Process re-imagination needs both leaders who can identify lighthouse use cases and employees deep in the day-to-day work — not just one or the other
 - **Persistence beats intimidation.** Many non-engineers can cross into building by repeatedly asking the model to explain itself, revising instructions, and iterating through confusion instead of giving up at the first broken prototype
 - **Reliability still needs architecture.** Fast prototyping does not remove the need to decide what cannot fail, how information is structured, and which parts of the workflow need engineering-grade reliability
+- **Operational-complexity targeting.** Some of the highest-leverage AI opportunities sit inside messy, regulated, service-heavy businesses where software is only one piece of the workflow
+- **Reward outcomes, not AI usage.** Teams stall or drift when "used AI" becomes the goal; quality and throughput improvements are the only metrics that matter
+- **Concrete example promotion.** A single visible example of someone using AI to rethink the work itself can unlock broader adoption better than generic encouragement to "use AI more"
 
 ## Failure modes
 
@@ -46,6 +50,7 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 - **Running AI pilots inside unchanged processes.** Individual adoption without redesigning the surrounding workflow keeps the organization stuck in pilot mode — one analyst using Claude inside an otherwise unchanged 75-person firm. McKinsey's framing: the blocker is work redesign, not technology
 - **Point solutions masquerading as transformation.** Taking one task and using AI to do it faster is not the same as reimagining the workflow end-to-end
 - **Prototype velocity mistaken for product quality.** Teams can ship something impressive-looking in a day, then discover it has no coherent architecture, weak reliability boundaries, and no clear sense of what cannot fail
+- Assuming an apparently replaceable human workflow will be accepted when automated; customers and coworkers are often more forgiving of humans making the same mistakes
 
 ## Humans in the loop vs. above the loop
 
@@ -72,6 +77,9 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - Ramp attributes adoption to a preconfigured internal agent (`Glass`), a shared skills marketplace (`Dojo`), and visible social reinforcement
 - McKinsey (2026): 80%+ of companies say they're not yet seeing bottom-line impact from AI investments despite massive investment
 - McKinsey: 75% of roles need fundamental reshaping right now; nearly half of leaders report skill gaps in their organization
+- Boulton and Watt argues operationally complex "boring businesses" such as funeral homes and aesthetic-clinic platforms may be stronger AI targets than software-native demos because software is becoming easier to build while real-world workflow complexity stays scarce
+- Their examples suggest AI compresses market research and iteration cycles materially, but reliability and integration into live systems remain the hard part
+- Their receptionist pilot found that customers churned more under AI even when error rates matched humans, reinforcing that perceived tolerance and trust shape adoption
 
 ## The junior talent problem
 
@@ -90,3 +98,4 @@ Agentic AI is removing the "grunt work" through which junior employees historica
 - [[sources/articles/mckinsey-agentic-org]]
 - [[sources/newsletters/agent-coworkers-operating-pattern]]
 - [[sources/newsletters/ai-native-product-building-lessons-late-march]]
+- [[sources/newsletters/ai-for-boring-businesses]]

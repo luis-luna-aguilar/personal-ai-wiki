@@ -5,7 +5,7 @@ domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: [anthropic, cli, agentic]
 as_of: 2026-04-21
-sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march]
+sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march]
 ---
 
 # Claude Code
@@ -16,8 +16,11 @@ Anthropic's terminal-first AI coding agent. Runs in the shell, operates autonomo
 
 - Terminal CLI agent with persistent project context via `CLAUDE.md`
 - Supports subagents, hooks, and background/event-driven flows
+- March 2026 already hinted at the later supervision direction: Code Review introduced a managed multi-agent PR-review system on Anthropic infrastructure, while `/btw` enabled side-chain conversations during active work instead of forcing users to interrupt the main thread
 - Late-March rollout introduced cloud-following workflows from web/mobile sessions for PR auto-fix and comment-resolution tasks, a useful precursor to the later routines / multi-session-supervision story
+- Claude Code Channels extended that direction: existing sessions could be messaged from Telegram or Discord, making the coding agent reachable from the phone without turning it into a separate product
 - Monitor tool wakes the agent on external events instead of token-expensive polling
+- Recurring tasks, announced alongside Channels, reinforced the shift from one-off terminal loops toward repeatable delegated workflows
 - Routines let a workflow run on a schedule, from an API call, or in response to an event on Anthropic's infrastructure
 - The early-April source leak made the product's underlying architecture more legible: layered memory, repo-state awareness, explicit permission modes, and cache-friendly subagent parallelism appear to be core design choices rather than implementation accidents
 - Desktop redesign pushes the product toward multi-session supervision rather than a single terminal loop
@@ -55,9 +58,11 @@ That matters because it shifts the product story away from "Anthropic has a stro
 
 ## Recent changes
 
+- [2026-04-21] Added late-March Channels / recurring-tasks context: phone-triggered continuation and scheduled workflows strengthen the multi-session supervision direction
 - [2026-04-21] Added architecture note from the early-April leak cluster: layered memory, repo-state injection, explicit permissions, and cache-efficient subagent parallelism now read as core Claude Code design choices
 - [2026-04-21] Routines announced — scheduled / event-driven Claude Code workflows on Anthropic-hosted infrastructure
 - [2026-04-10] Monitor tool announced — event-driven background scripts for Claude Code
+- [2026-03-10] Code Review and `/btw` made verified PR review plus side-thread supervision first-class parts of the Claude Code workflow
 - [2026-03-27] Claude Code gained unattended cloud-following workflows from web/mobile sessions for PR fixes and comment resolution
 
 ## Sources
@@ -66,3 +71,5 @@ That matters because it shifts the product story away from "Anthropic has a stro
 - [[sources/tweets/claude-code-routines]]
 - [[sources/newsletters/claude-code-leak-architecture]]
 - [[sources/newsletters/claude-computer-use-late-march]]
+- [[sources/newsletters/anthropic-desktop-agent-expansion-late-march]]
+- [[sources/newsletters/coding-agents-review-and-orchestration-march]]
