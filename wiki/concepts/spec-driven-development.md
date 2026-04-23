@@ -4,20 +4,22 @@ type: concept
 domains: [coding, agents]
 subcategory: spec-driven-development
 tags: [spec-driven]
-as_of: 2025-10-15
-sources: [sdd-3-tools-fowler]
+as_of: 2026-04-22
+sources: [sdd-3-tools-fowler, spec-is-new-code]
 ---
 
 # Spec-Driven Development (SDD)
 
 A loosely-defined AI-assisted coding approach where a structured, behavior-oriented artifact written in natural language — the **spec** — is authored before code and used as the primary input to AI coding agents. The term is still in flux and already semantically diffused: some practitioners use "spec" as a synonym for "detailed prompt," while self-labeled SDD tools differ substantially in how they structure and maintain specs.
 
-## Current status (as of 2025-10-15)
+## Current status (as of 2026-04-22)
 
-- Term is new and contested; no shared definition across tools
-- Three self-labeled SDD tools exist: [[tools/kiro]], [[tools/spec-kit]], [[tools/tessl]]
-- Real-world usage reports are scarce; most tutorials are greenfield from-scratch apps
-- Healthy skepticism in the practitioner community about whether SDD amplifies or solves existing AI-coding pain points
+- The ecosystem is independently converging on spec-first approaches from multiple directions — not just dedicated SDD tools
+- GitHub Spec-Kit: 77,000 stars as of April 2026; agent-agnostic; works across Claude Code, Cursor, and others
+- OpenAI Symphony: monitors issue trackers, spins up autonomous agents per issue; requires a `SPEC.md` as the contract between human and agent
+- "The Ralph Loop": PRD placed in an infinite agent loop; progress persists in files and git (not in context window), so the agent can resume across sessions
+- Plan mode in Claude Code and Cursor is now framed as a lightweight built-in SDD step — the ecosystem is absorbing the concept at the platform level
+- The core argument gaining traction: agent failures are mostly *communication failures*, not model failures. The problem is ambiguity in instructions, not model capability.
 
 ## The three levels of SDD
 
@@ -41,6 +43,17 @@ Tools disagree on structure, level of detail, and file topology (Kiro: 3 files; 
 
 An important distinction: **specs** describe a particular feature or change; the **memory bank** is the broader codebase context (rules files, architecture overviews, project conventions) that is relevant across all AI coding sessions. Tools have their own names for memory bank: Kiro calls it "steering," spec-kit calls it the "constitution," Tessl uses a `.tessl/framework` folder plus `AGENTS.md`/`KNOWLEDGE.md`.
 
+## New patterns (2026)
+
+### The Ralph Loop
+A PRD lives in an infinite agent loop. The agent executes steps, writes progress to files and git commits after each step, and can be interrupted and resumed without losing state. The loop continues until the PRD is complete. Key insight: progress in files/git, not in the context window.
+
+### OpenAI Symphony
+Monitors your issue tracker, identifies new issues, spins up autonomous coding agents per issue. Requires a `SPEC.md` as the formal contract between human intent and agent execution. No `SPEC.md` → no agent run.
+
+### Plan mode as lightweight SDD
+Built-in plan modes in Claude Code (shift-tab) and Cursor act as a minimal spec-and-plan step before execution. The ecosystem is absorbing SDD at the platform level for users who never use a dedicated SDD tool.
+
 ## Open questions and critiques
 
 From the Fowler review:
@@ -55,7 +68,9 @@ From the Fowler review:
 ## Recent changes
 
 - [2025-10-15] Page created from Fowler's "Understanding Spec-Driven Development: Kiro, spec-kit, and Tessl"
+- [2026-04-22] Added ecosystem convergence signal: Spec-Kit 77k stars, OpenAI Symphony, The Ralph Loop, and plan mode as built-in SDD step
 
 ## Sources
 
 - [[sources/articles/sdd-3-tools-fowler]]
+- [[sources/tweets/spec-is-new-code]]

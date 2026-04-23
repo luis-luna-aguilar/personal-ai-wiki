@@ -25,17 +25,20 @@ Read-me-first dashboards per domain.
 - [[state-of/science]] — current state of AI in scientific research *(as_of: 2026-04-22)*
 - [[state-of/creative]] — current state of AI creative tools across video, avatar, slides, and UI generation *(as_of: 2026-04-22)*
 - [[state-of/healthcare]] — current state of AI in healthcare workflows, medical knowledge, and patient operations *(as_of: 2026-04-22)*
+- [[state-of/cybersecurity]] — current state of AI applied to cybersecurity: attack surfaces, vulnerability detection, and security tooling *(as_of: 2026-04-22)*
 
 ## Models
 
 Foundation models. One page per model family or generation.
 
+- [[models/claude-mythos-preview]] — Anthropic restricted-preview model; autonomous zero-day discovery; Project Glasswing; not publicly available *(as_of: 2026-04-22)*
 - [[models/claude-opus-4-7]] — Anthropic flagship multimodal model; stronger on explicit coding, document, and visual artifact tasks, but with reported reliability tradeoffs *(as_of: 2026-04-21)*
 - [[models/composer-2]] — Cursor's in-house coding model for complex long-horizon engineering work; late-March sources add benchmarks, pricing claims, and Kimi-k2.5 lineage *(as_of: 2026-03-23)*
 - [[models/gpt-5-4]] — OpenAI frontier model for reasoning, browsing, coding, and agent-style work *(as_of: 2026-03-08)*
 - [[models/glm-5-1]] — open-weight coding/agent model contender from the early-April open-model wave *(as_of: 2026-04-08)*
 - [[models/gpt-image-2]] — OpenAI image generation model; #1 across image-arena categories by a wide Elo margin *(as_of: 2026-04-22)*
 - [[models/kimi-k2-6]] — Moonshot AI open-weight 1T-param MoE; strong coding and agent benchmark claims *(as_of: 2026-04-21)*
+- [[models/nano-banana-2]] — Google image generation model; Gemini world understanding + real-time web search grounding *(as_of: 2026-04-22)*
 - [[models/minimax-m2-7]] — open-weight coding and agent model with unusually strong late-March cost/performance claims *(as_of: 2026-03-22)*
 - [[models/muse-spark]] — Meta's new multimodal model; source emphasizes compute-efficient scaling *(as_of: 2026-04-10)*
 - [[models/qwen-3-6-35b-a3b]] — Alibaba open-weight coding model; coding/tools niche sharper than creative use *(as_of: 2026-04-22)*
@@ -66,6 +69,7 @@ Tools and products built on top of models. One page per tool.
 - [[tools/hf-ml-intern]] — Hugging Face open-source autonomous ML post-training agent *(as_of: 2026-04-22)*
 - [[tools/hippocratic-ai]] — safety-focused healthcare agent company centered on medical workflows *(as_of: 2026-04-22)*
 - [[tools/hume-evi-3]] — speech-to-speech voice model emphasizing emotional and empathic conversation *(as_of: 2026-04-22)*
+- [[tools/gstack]] — Garry Tan's open-source Claude Code config; 23 slash commands simulating a virtual engineering team; 810× pace claim *(as_of: 2026-04-22)*
 - [[tools/kiro]] — VS Code-based spec-driven development tool built around a 3-doc workflow *(as_of: 2025-10-15)*
 - [[tools/kora]] — healthcare operations assistant for scheduling and patient-service workflows *(as_of: 2026-04-22)*
 - [[tools/landingai-agentic-document-extraction]] — agentic document-intelligence system for forms, tables, and visually complex PDFs *(as_of: 2026-04-22)*
@@ -116,6 +120,8 @@ Ideas and techniques.
 - [[concepts/leworldmodel]] — LeWM JEPA world model with SIGReg and much faster planning than DINO-WM *(as_of: 2026-03-13)*
 - [[concepts/mcp]] — open protocol for exposing tools, resources, and prompts to AI hosts and agents *(as_of: 2026-04-22)*
 - [[concepts/spec-driven-development]] — SDD concept, three-level taxonomy, and critiques *(as_of: 2025-10-15)*
+- [[concepts/slopsquatting]] — supply-chain attack via LLM-hallucinated package names; 19.7% hallucination rate (USENIX 2025) *(as_of: 2026-04-22)*
+- [[concepts/quantization]] — LLM weight compression: 4× smaller, 2× faster, 5-10% accuracy loss; makes local deployment practical *(as_of: 2026-04-22)*
 
 ## Trends
 
@@ -147,12 +153,12 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 
 ## Page count
 
-- state-of: 9
-- models: 9
-- tools: 42
+- state-of: 10
+- models: 11
+- tools: 43
 - benchmarks: 1
 - workflows: 3
-- concepts: 11
+- concepts: 13
 - trends: 7
 - training: 5
 

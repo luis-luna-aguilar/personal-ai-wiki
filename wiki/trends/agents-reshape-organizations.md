@@ -4,7 +4,7 @@ type: trend
 domains: [agents, coding]
 tags: [agentic]
 as_of: 2026-04-22
-sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, openclaw-operating-pattern-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026]
+sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, openclaw-operating-pattern-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, cursor-third-era]
 ---
 
 # Agents reshape organizations (leverage moves from individual to org)
@@ -36,6 +36,7 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - **The AI sandwich as a practical org architecture template.** Framing from Every's Dan Shipper: humans do the planning (framing the problem) and the review (taste and judgment), while AI does the execution in the middle. The human role is not eliminated — it moves to the two ends that require authentic intent and independent evaluation.
 - **Org architecture prediction: two models will coexist, one will lose.** Dan Shipper's forecast: (a) personal AI assistants with rich, maintained relationships will work well for high-trust, customizable tasks; (b) company-wide super-agents with department plugins will win for low-maintenance, lower-customization use cases. A third model — fleets of single-purpose agents — is predicted to lose because they require high maintenance without the relationship depth that makes personal assistants valuable.
 - **McKinsey names the bottleneck: workflow redesign, not technology.** "AI is Everywhere. The Agentic Organization Isn't Yet" (McKinsey, 2026) reports that 80%+ of companies are not seeing bottom-line impact from AI investments despite large spending. The diagnosis: companies are running pilots inside unchanged processes rather than redesigning workflows end-to-end. The unlock is "end-to-end workflow reimagination" — rethinking the entire process (e.g., insurance underwriting, hire-to-onboard) rather than speeding up individual tasks. McKinsey introduces the distinction between humans "in the loop" (executing parts of a workflow) vs. "above the loop" (providing judgment over an agent-run process) as the structural end state for knowledge work.
+- **Cursor's internal development has already crossed the threshold.** Michael Truell's April 2026 essay reports 35% of Cursor's internal PRs are now created by autonomous cloud agents operating on their own VMs — not a research claim, an operational report from a company actively building this way. The third-era developer pattern he describes (agents write ~100% of code, human role shifts to problem definition and artifact review) is already the default for part of his own team.
 - **The org-chart argument is spreading.** A thin signal relayed from Postman's founder argues AI-era teams should run with wider spans of control and fewer layers between leaders and ICs. This fits the same direction of travel, but the current source quality here is weak.
 
 ## What to watch
@@ -56,6 +57,7 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 
 ## Recent changes
 
+- [2026-04-22] Added Cursor/Truell internal data: 35% of PRs from cloud agents; third-era dev pattern operational inside Cursor itself
 - [2026-04-22] Added trust-battery pattern (Claudie/Every) and AI sandwich org architecture; Dan Shipper prediction: two org models coexist, single-purpose fleet loses
 - [2026-03-04] OpenClaw cluster provided an early concrete signal of AI-native organizational behavior: named personal agents in shared channels, agent-to-agent coordination, and humans supervising many agents as if they were teammates
 - [2026-04-21] Added McKinsey (2026) as the strongest third-party signal yet: 80%+ no bottom-line ROI, workflow redesign named as the blocker, "above the loop" distinction introduced
@@ -72,3 +74,4 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - [[sources/newsletters/agent-coworkers-operating-pattern]]
 - [[sources/newsletters/openclaw-operating-pattern-march]]
 - [[sources/newsletters/every-ai-sandwich-april-2026]]
+- [[sources/tweets/cursor-third-era]]

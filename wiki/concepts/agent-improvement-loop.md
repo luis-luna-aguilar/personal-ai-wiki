@@ -3,8 +3,8 @@ title: Agent improvement loop
 type: concept
 domains: [agents]
 tags: [agentic]
-as_of: 2026-04-10
-sources: [trace-agent-improvement-loop, langchain-better-harness, cursor-bugbot-learning]
+as_of: 2026-04-22
+sources: [trace-agent-improvement-loop, langchain-better-harness, cursor-bugbot-learning, self-improving-skills]
 ---
 
 # Agent improvement loop
@@ -61,6 +61,21 @@ Tested with Claude Sonnet 4.6 and GLM-5. Results showed near-full generalization
 
 Cursor's Bugbot shows what the improvement loop looks like when shipped inside a user-facing product. Instead of relying only on offline experiments, Bugbot turns feedback from merged PRs into candidate rules, evaluates those rules on later PRs, activates rules that keep earning good signal, and disables rules that perform poorly. That is the same core loop in more operational form: production traces plus human feedback become structured changes to the harness.
 
+## Self-improving skills
+
+A variation of the improvement loop applied at the *skill/prompt* level rather than the full agent harness. The problem: skills in a Claude Code skills folder are static, but the environment around them isn't. A skill that worked last month may quietly start failing when the codebase changes, the model updates, or user request patterns shift. The failures are often invisible until someone notices degraded output.
+
+**The closed loop approach (tricalt, April 2026):** Treat skills as living components, not fixed prompt files. Diagnose which component is failing (routing? individual instructions? tool call?). Close the feedback loop by automatically scoring outputs and proposing targeted changes.
+
+**The meta-skill approach (Ole Lehmann, April 2026):** A single meta-skill that improves any other skill automatically:
+1. Run the target skill and score the output
+2. Find what's failing in the score
+3. Make one small change to the skill prompt
+4. Run it again to see if the score went up
+5. Keep the change if it improved; discard if not
+
+This mirrors the Better-Harness pattern at the prompt level. The loop is based on Karpathy's "autoresearch" method applied to prompt optimization. Can run on autopilot; the meta-skill improves the target skill without human intervention.
+
 ## Caveats
 
 - This is a conceptual guide from LangChain, not an independent market survey.
@@ -72,9 +87,11 @@ Cursor's Bugbot shows what the improvement loop looks like when shipped inside a
 - [2026-04-10] Added Cursor Bugbot as a production example of live feedback turning into agent rules
 - [2026-04-10] Added Better-Harness section — LangChain's autonomous harness hill-climbing system
 - [2026-04-09] Page created from LangChain's conceptual guide "The Agent Improvement Loop Starts with a Trace"
+- [2026-04-22] Added self-improving skills pattern: closed feedback loop for skill drift; meta-skill 5-step prompt optimization loop
 
 ## Sources
 
 - [[sources/articles/trace-agent-improvement-loop]]
 - [[sources/articles/langchain-better-harness]]
 - [[sources/articles/cursor-bugbot-learning]]
+- [[sources/tweets/self-improving-skills]]

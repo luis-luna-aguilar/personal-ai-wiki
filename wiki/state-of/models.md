@@ -4,7 +4,7 @@ type: state-of
 domains: [models]
 tags: []
 as_of: 2026-04-22
-sources: [muse-spark, kimi-k2-6-blog, ainews-2026-04-21, ainews-2026-04-22, every-opus-4-7-vibe-check, vectorlab-opus-4-7-flop, vectorlab-qwen-3-6-local-threshold, open-agentic-coding-models, restricted-frontier-deployment, open-weight-momentum-early-april, late-march-small-coding-models, gpt-5-4-march, qwen-3-5-medium-february]
+sources: [muse-spark, kimi-k2-6-blog, ainews-2026-04-21, ainews-2026-04-22, every-opus-4-7-vibe-check, vectorlab-opus-4-7-flop, vectorlab-qwen-3-6-local-threshold, open-agentic-coding-models, restricted-frontier-deployment, open-weight-momentum-early-april, late-march-small-coding-models, gpt-5-4-march, qwen-3-5-medium-february, glasswing, nano-banana-2-tweet]
 ---
 
 # State of Models
@@ -36,6 +36,13 @@ Open-weight and frontier models evaluated primarily for agentic coding tasks.
 Specialized models for text-to-image synthesis, image editing, and visual design artifacts.
 
 - [[models/gpt-image-2]] — OpenAI; #1 across all image arena categories by a +242 Elo margin on text-to-image; thinking mode + web search integration; design-to-code bridge *(as of 2026-04-22)*
+- [[models/nano-banana-2]] — Google; powered by Gemini world understanding + real-time web search imagery; can reflect real-world conditions (current events, weather) in generated images *(as of 2026-04-22)*
+
+### Security / cyber-offense capability
+
+Frontier models deployed selectively for autonomous cybersecurity research rather than broadly.
+
+- [[models/claude-mythos-preview]] — Anthropic; restricted preview model; autonomously identifies zero-days at scale in major OSes and browsers; used in Project Glasswing with partners Cisco, AWS, Microsoft; not publicly available *(as of 2026-04-22)*
 
 ## Recent changes
 
@@ -50,3 +57,5 @@ Specialized models for text-to-image synthesis, image editing, and visual design
 - [2026-04-22] Added `Image generation` subcategory; [[models/gpt-image-2]] debuts as dominant arena leader by +242 Elo margin on text-to-image; also updates the image-as-spec pattern for coding agents
 - [2026-04-22] Qwen 3.6 35B-A3B niche sharpened: strong for coding/tools, weaker for creative/translation; Qwen 3.6 Max Preview live but likely proprietary-only
 - [2026-04-22] Kimi K2.6: community framing as practical Opus 4.7 replacement for ~85% of tasks
+- [2026-04-22] Added `Security / cyber-offense capability` subcategory; [[models/claude-mythos-preview]] confirms restricted-frontier pattern with autonomous zero-day discovery across major OSes/browsers
+- [2026-04-22] Added [[models/nano-banana-2]] to `Image generation` subcategory; Google enters the arena with Gemini+web-search-grounded image generation

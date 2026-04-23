@@ -5,7 +5,7 @@ domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: [anthropic, cli, agentic]
 as_of: 2026-04-22
-sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026]
+sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix]
 ---
 
 # Claude Code
@@ -29,6 +29,10 @@ Anthropic's terminal-first AI coding agent. Runs in the shell, operates autonomo
 - Desktop redesign pushes the product toward multi-session supervision rather than a single terminal loop
 - `/recap`: auto-generates a one-line summary of the last session after 3+ turns of inactivity — triggered only once per gap, never back-to-back, also available on demand via `/recap`
 - `/fewer-permission-prompts` skill (Boris Cherny): scans session history to identify safe bash and MCP commands that repeatedly trigger permission prompts, then produces an allowlist to approve them once permanently; best run after a few days of work so there's enough history to pull from
+
+- Built-in `--worktree` flag: run `claude --worktree` to give each Claude Code session its own isolated git worktree, enabling multiple agents to work in parallel without interfering with each other's file changes; Boris Cherny (Claude Code creator) announced; Matt Pocock calls it "my new default"
+- `/autofix-pr` now triggerable from CLI: run `/autofix-pr` after finishing a PR, and it sends your session to the cloud so the PR autofixer has full context to address CI failures and reviewer comments
+- Remote Control: `claude remote-control` spawns a new local Claude Code session from the mobile app (available on Max, Team, and Enterprise plans at version ≥2.1.74); lets you kick off sessions from your phone
 
 ## Monitor tool
 
@@ -63,6 +67,7 @@ That matters because it shifts the product story away from "Anthropic has a stro
 
 ## Recent changes
 
+- [2026-04-22] Added --worktree flag (built-in parallel isolated git worktrees), /autofix-pr CLI trigger, and Remote Control mobile session spawning
 - [2026-04-22] Added /recap (session gap summaries after inactivity) and /fewer-permission-prompts skill (history-based allowlist generator)
 - [2026-02-27] Claude Code added auto-memory for project-local recall of commands, preferences, and architecture context
 - [2026-02-28] Boris previewed `/batch` and `/simplify` as built-in primitives for parallel migrations and automated cleanup
@@ -86,3 +91,4 @@ That matters because it shifts the product story away from "Anthropic has a stro
 - [[sources/newsletters/anthropic-persistent-workflow-surfaces-february]]
 - [[sources/newsletters/memory-vs-context-rot-february]]
 - [[sources/newsletters/thecode-april-22-2026]]
+- [[sources/tweets/claude-code-worktree-autofix]]

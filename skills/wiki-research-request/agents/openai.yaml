@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wiki Research Request"
+  short_description: "Turn wiki gaps into research briefs"
+  default_prompt: "Use $wiki-research-request to turn a weak or missing wiki topic into a detailed deep-research request."

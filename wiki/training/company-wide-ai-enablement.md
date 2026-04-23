@@ -2,7 +2,7 @@
 title: Company-wide AI enablement
 type: training
 as_of: 2026-04-22
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026]
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents]
 ---
 
 # Company-wide AI enablement
@@ -38,6 +38,8 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 - **Reward outcomes, not AI usage.** Teams stall or drift when "used AI" becomes the goal; quality and throughput improvements are the only metrics that matter
 - **Concrete example promotion.** A single visible example of someone using AI to rethink the work itself can unlock broader adoption better than generic encouragement to "use AI more"
 - **Messaging-native personal agents.** OpenClaw-style assistants living in WhatsApp, Telegram, Discord, SMS, or Slack reduce activation energy because the agent shows up where people already work and communicate
+- **Let AI write the agent instructions.** Every found that telling Notion AI what the agent should accomplish and letting it generate the instructions works better than writing detailed step-by-step instructions manually. Over-prescribing ("create a database, then add a relation, then filter by...") tends to confuse the model. State the outcome; let the agent figure out implementation.
+- **Interconnected databases are the agent's brain.** Every's agents work because strategy, calendar, tasks, people, and meeting notes all live in Notion and reference each other. An agent querying isolated tables has no coordination leverage; agents querying an interconnected knowledge graph become genuinely powerful coordinators.
 - **Start with one durable personal agent role.** Early OpenClaw onboarding guidance reinforces that adoption is easier when each person starts with one persistent, messaging-native agent with a bounded job before expanding into a larger swarm of helpers
 - **Agent-to-agent collaboration in shared channels.** Every's March OpenClaw reporting showed personal agents explaining failures to each other, broadcasting to groups, and operating as named participants in team communication
 - **Proof-based status rules.** A practical reliability pattern from the OpenClaw cluster: agents should not say "done" or "working on it" without concrete evidence such as a process ID, file path, URL, or command output
@@ -83,6 +85,7 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - Ramp attributes adoption to a preconfigured internal agent (`Glass`), a shared skills marketplace (`Dojo`), and visible social reinforcement
 - McKinsey (2026): 80%+ of companies say they're not yet seeing bottom-line impact from AI investments despite massive investment
 - McKinsey: 75% of roles need fundamental reshaping right now; nearly half of leaders report skill gaps in their organization
+- Every (April 2026, Source Code event): 25-person media/product company running four custom Notion AI agents for cross-database coordination. Anton (prioritization agent): COO messages it in Slack to get a prioritized task list cross-referencing launch calendar, strategy docs, and task lists. Three other agents automate scheduling and project coordination. Key insight: agents become powerful when they query *interconnected* Notion databases — strategy, calendar, tasks, people, and meeting notes all referencing each other. Core operating principles from this deployment: describe outcomes not steps; don't write agent instructions yourself (let AI generate them); the richness of the underlying database is the agent's brain.
 - Boulton and Watt argues operationally complex "boring businesses" such as funeral homes and aesthetic-clinic platforms may be stronger AI targets than software-native demos because software is becoming easier to build while real-world workflow complexity stays scarce
 - Their examples suggest AI compresses market research and iteration cycles materially, but reliability and integration into live systems remain the hard part
 - Their receptionist pilot found that customers churned more under AI even when error rates matched humans, reinforcing that perceived tolerance and trust shape adoption
@@ -109,3 +112,4 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - [[sources/newsletters/ai-work-intensification-march]]
 - [[sources/newsletters/ai-for-boring-businesses]]
 - [[sources/newsletters/every-ai-sandwich-april-2026]]
+- [[sources/articles/every-four-agents]]

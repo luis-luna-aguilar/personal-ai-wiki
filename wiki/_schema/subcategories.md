@@ -170,6 +170,12 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Definition:** AI products specialized for financial analysis, modeling, investment workflows, or finance-specific knowledge work.
 - **Examples:** [[tools/hebbia]]
 
+### visual-design-prototyping
+- **Parent domain(s):** creative, agents
+- **Applies to types:** tool
+- **Definition:** Tools for collaborative visual design, prototyping, slides, one-pagers, and marketing assets through conversational AI, going beyond UI layout generation into full design-to-artifact workflows.
+- **Examples:** [[tools/claude-design]]
+
 ### deep-research-tool
 - **Parent domain(s):** agents
 - **Applies to types:** tool

@@ -4,8 +4,8 @@ type: tool
 domains: [coding]
 subcategory: terminal-coding-agent
 tags: [openai, closed-source, agentic]
-as_of: 2026-04-21
-sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march]
+as_of: 2026-04-22
+sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026]
 ---
 
 # Codex
@@ -19,6 +19,9 @@ OpenAI's cloud-based coding agent, accessed via CLI and ChatGPT. Runs tasks asyn
 - March 2026 also expanded Codex into security review: Codex Security is a research-preview application-security agent that builds repo context, finds vulnerabilities, validates them in sandboxes, and proposes fixes
 - OpenAI now frames Codex as broader than code editing: it can use Mac apps, connect to more tools, create images, learn from prior actions, remember work preferences, and take on repeatable tasks
 - Product direction increasingly overlaps with computer use and ongoing workflow automation, not just one-shot coding sessions
+- **Subagents in Codex:** parallel specialized agents can now be spun up inside Codex to keep the main context window clean, tackle independent task parts in parallel, and be steered independently as work unfolds
+- **Usage-based pricing** rolling out for ChatGPT Business and Enterprise plans — no fixed seat costs; teams pay for what they use; lowers the adoption barrier for organizations that want to test at scale before committing
+- **PR code review via ChatGPT subscription:** connect GitHub, enable Codex code review, then trigger with "@codex review this" on any PR; available on Plus and above
 
 ## Pricing (as of 2026-04-21)
 
@@ -36,6 +39,7 @@ Research preview. Background agents monitor recent screen activity, build memori
 
 ## Recent changes
 
+- [2026-04-22] Subagents now in Codex; usage-based pricing for Business/Enterprise; PR code review available via ChatGPT subscription
 - [2026-03-09] Codex Security launched in research preview, extending Codex into vulnerability review and validation workflows
 - [2026-04-21] OpenAI reframes Codex around app use, memory/preferences, image creation, and repeatable tasks
 - [2026-04-21] Codex Chronicle research preview — ambient screen memory; macOS Pro rollout
@@ -49,3 +53,4 @@ Research preview. Background agents monitor recent screen activity, build memori
 - [[sources/tweets/openai-codex-ongoing-tasks]]
 - [[sources/newsletters/coding-agents-review-and-orchestration-march]]
 - [[sources/newsletters/codex-security-march]]
+- [[sources/tweets/codex-updates-april-2026]]

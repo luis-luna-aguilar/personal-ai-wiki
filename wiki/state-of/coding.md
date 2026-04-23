@@ -3,7 +3,7 @@ title: State of Coding
 type: state-of
 domains: [coding]
 tags: []
-as_of: 2026-04-21
+as_of: 2026-04-22
 sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit, cursor-bugbot-learning, claude-code-routines, openai-codex-ongoing-tasks, orca-homepage, coding-agent-control-planes, claude-code-leak-architecture, cursor-3-orchestration-bet, skills-and-plugin-packaging-late-march, cursor-cloud-agents-march, claude-code-scheduled-tasks-march, codex-security-march]
 ---
 
@@ -25,7 +25,7 @@ Tools where a structured natural-language spec is the primary input to AI coding
 
 Coding tools whose primary UI is built around managing one or more AI coding agents (local and cloud), rather than file-centric editing with AI assistance bolted on.
 
-- [[tools/cursor]] — Cursor remains the clearest reference point for the category: by early March its cloud-agent story was already explicitly about remote agents booting environments, testing their own work, returning demo videos, and giving humans a supervision surface for review rather than just an IDE with AI features *(as of 2026-03-06)*
+- [[tools/cursor]] — Cursor 3 is a full rewrite as a cloud-agent orchestration platform; 35% of Cursor's internal PRs now from autonomous cloud agents; 2:1 agent-to-Tab users; Truell defines this as the "third era" where cloud agents run independently and developers review artifacts, not diffs *(as of 2026-04-22)*
 - [[tools/orca]] — Open-source worktree IDE for running Claude Code, Codex, and other coding agents side by side with built-in terminals, file review, diff review, and CI/PR status tracking *(as of 2026-04-21)*
 
 ### Agentic DevOps
@@ -39,7 +39,7 @@ Tools that turn app-stack setup into a repeatable command-line workflow across m
 CLI-based AI coding agents that still anchor in the terminal, but are increasingly expanding into supervised workspaces with repeatable workflows, background execution, and broader agent control surfaces.
 
 - [[tools/claude-code]] — Anthropic; terminal-first agent whose March scheduled tasks and `/loop` features made recurring background work first-class before the later Monitor / routines expansion pushed it further toward supervised workflow automation *(as of 2026-03-07)*
-- [[tools/codex]] — OpenAI; cloud coding agent via CLI and ChatGPT, now extending beyond generation into review/validation work through Codex Security and broader repeatable-task positioning *(as of 2026-03-09)*
+- [[tools/codex]] — OpenAI; cloud coding agent via CLI and ChatGPT, now extending into repeatable and ongoing-task workflows *(as of 2026-03-09)*
 
 ### Agent toolkits
 
@@ -59,3 +59,5 @@ Toolkits that package a developer platform's docs, schemas, validation, and rela
 - [2026-04-21] Claude Code routines and Codex ongoing-task/computer-use push reinforce a shift from single-loop CLI agents toward supervised, repeatable agent workflows
 - [2026-04-10] Cursor Bugbot learned rules: production PR feedback now turns into active review rules; Cursor reports 78.13% resolution across 50,310 public PRs
 - [2026-04-10] Added `agent-toolkits` subcategory with [[tools/shopify-ai-toolkit]]
+- [2026-04-22] Cursor 3 confirmed as cloud-agent orchestration bet: 35% internal PRs from cloud agents, 2:1 agent-to-Tab user ratio per Truell essay
+- [2026-04-22] Moved Codex Security (vulnerability review/validation) to [[state-of/cybersecurity]]; slopsquatting documented there

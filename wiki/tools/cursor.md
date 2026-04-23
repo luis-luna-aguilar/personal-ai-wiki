@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents]
 subcategory: agentic-coding-workspace
 tags: [closed-source, agentic]
-as_of: 2026-04-14
-sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models, cursor-cloud-agents-march, cursor-cloud-agents-february]
+as_of: 2026-04-22
+sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models, cursor-cloud-agents-march, cursor-cloud-agents-february, cursor-third-era]
 ---
 
 # Cursor
@@ -48,6 +48,16 @@ The strongest interpretive signal from the early-April reaction cycle is that Cu
 - **Branch selection for cloud agents.** More explicit control over where remote work lands.
 - **Improved search filters.** Better navigation across the agent workspace.
 
+## The third era thesis
+
+Michael Truell's April 2026 essay defines three eras of AI software development:
+
+1. **Tab autocomplete** — code written keystroke-by-keystroke with AI fill-in
+2. **Synchronous agents** — prompt-and-response loops, developer in the loop at every step; practical only for a few agents in parallel (they compete for local machine resources)
+3. **Cloud agents** — agents running on their own VMs over hours; developer defines the problem and reviews artifacts (videos, previews, logs) rather than diffs; many in parallel is practical
+
+Internal Cursor data (as of April 2026): 35% of PRs merged internally at Cursor are now created by autonomous cloud agents. Agent users now outnumber Tab users 2:1 (was the reverse in March 2025); agent usage has grown 15× in one year. Truell's profile of a "third era developer": agents write ~100% of their code, they spend time on problem breakdown and artifact review, they spin up multiple agents simultaneously instead of hand-holding one.
+
 ## Strengths
 
 - First-class support for orchestrating multiple agents across repos
@@ -61,9 +71,12 @@ The strongest interpretive signal from the early-April reaction cycle is that Cu
 - Vendor framing emphasizes a "third era" narrative — usefulness for everyday brownfield work is not yet demonstrated by external usage reports
 - Requires buying into a new mental model (agent sessions as the unit of work) — users coming from the IDE-centric Cursor will need to relearn the surface
 - The strongest external commentary on Cursor 3 treats it as a bold orchestration bet, not a settled win; the category direction looks real, but the ideal product shape is still being worked out
+- Dan Shipper's vibe check (April 2026) after a week of internal Every testing: fast desktop performance, local↔cloud demo videos are a "wow moment," but "it's still an early product and it's not clear who will love it." The rewrite deprioritizes the IDE, which alienates sizable existing Cursor fans. Summary: "the right strategic move, but an awkward in-between stage."
 
 ## Recent changes
 
+- [2026-04-22] Added Truell's third-era data: 35% of Cursor internal PRs from cloud agents; 2:1 agent-to-Tab user ratio; 15× agent usage growth YoY
+- [2026-04-22] Added Shipper vibe check: promising direction, awkward transition, early-product caveats
 - [2026-02-25] Cursor cloud agents rolled out with isolated VMs, self-testing, and demo-video review before the later March walkthrough made the product thesis explicit
 - [2026-03-06] Cloud-agents walkthrough made Cursor's thesis explicit: remote agents should test their own changes, return demo videos, and hand humans a supervision surface instead of just a diff
 - [2026-04-14] Cursor 3.1 added a tiled Agents Window, saved layouts, branch selection for cloud agents, and stronger supervision controls for parallel agent work
@@ -79,3 +92,4 @@ The strongest interpretive signal from the early-April reaction cycle is that Cu
 - [[sources/newsletters/cursor-3-orchestration-bet]]
 - [[sources/newsletters/cursor-cloud-agents-march]]
 - [[sources/newsletters/cursor-cloud-agents-february]]
+- [[sources/tweets/cursor-third-era]]

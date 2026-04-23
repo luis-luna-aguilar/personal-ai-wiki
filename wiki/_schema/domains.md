@@ -15,6 +15,7 @@ Domains are high-level areas of use. They correspond to state-of pages in `wiki/
 - **`science`** — AI applied to scientific research: data analysis at scale, experiment automation, accelerating discovery
 - **`creative`** — AI tools for image, video, slides, avatar, and UI generation
 - **`healthcare`** — AI applied to clinical workflows, medical knowledge, transcription, patient operations, and healthcare delivery
+- **`cybersecurity`** — AI applied to security: attack surface analysis, vulnerability detection, supply chain risk, and AI-specific threat vectors
 
 ## Conventions
 

@@ -189,3 +189,21 @@ grep "^## \[" wiki/log.md | tail -20
 ## [2026-04-22] ingest | GPT-Image-2 launch | 1 page updated (state-of/models), 2 created (models/gpt-image-2, sources/ainews-2026-04-22); schema: image-generation-model
 ## [2026-04-22] ingest | AI security surface — vibe-coding defaults + agent-as-watchdog | 1 page updated (training/anti-autopilot-review-friction), 1 created (sources/every-vibe-check-april-21-2026)
 ## [2026-04-22] ingest | Agent org patterns — trust batteries, AI sandwich, tokenmaxxing | 2 pages updated (trends/agents-reshape-organizations, training/company-wide-ai-enablement), 1 created (sources/every-ai-sandwich-april-2026)
+## [2026-04-22] triage | URL batch 2026-04-22 | 15 proposals generated, 53 skipped; Glasswing/Mythos, Claude Design, Cursor 3rd era, slopsquatting, gstack, Simon Willison/Lenny, Prof Devs Control, Every 4 agents, Spec Is New Code, Claude Code features, Codex updates, self-improving skills, cognitive overhead, Nano Banana 2, quantization
+## [2026-04-22] schema | added domain `cybersecurity`
+## [2026-04-22] ingest | slopcop / slopsquatting — LLM hallucinated packages as supply chain attack | 2 pages updated (state-of/coding, state-of/cybersecurity), 3 created (concepts/slopsquatting, state-of/cybersecurity, sources/repos/slopcop-repo)
+## [2026-04-22] ingest | "The Spec Is the New Code" — SDD ecosystem convergence | 1 page updated (concepts/spec-driven-development), 1 created (sources/tweets/spec-is-new-code)
+## [2026-04-22] ingest | Simon Willison / Lenny — AI coding inflection takeaways | 2 pages updated (training/ai-enablement-software-development, training/anti-autopilot-review-friction), 1 created (sources/tweets/lennysan-simonw-interview)
+## [2026-04-22] ingest | Self-improving agent skills — auto-improvement loops | 1 page updated (concepts/agent-improvement-loop), 1 created (sources/tweets/self-improving-skills)
+## [2026-04-22] ingest | Quantization — ngrok blog explainer | 2 created (concepts/quantization, sources/articles/ngrok-quantization)
+## [2026-04-22] schema | added subcategory `visual-design-prototyping`
+## [2026-04-22] ingest | Agentic cognitive overhead — Addy Osmani / Simon Willison | 1 page updated (training/ai-enablement-software-development), 1 created (sources/tweets/agentic-cognitive-overhead)
+## [2026-04-22] ingest | Claude Code features — worktrees, /autofix-pr, Remote Control | 1 page updated (tools/claude-code), 1 created (sources/tweets/claude-code-worktree-autofix)
+## [2026-04-22] ingest | Claude Design full launch — Anthropic Labs | 2 pages updated (tools/claude-design, state-of/creative), 1 created (sources/articles/claude-design-anthropic-labs); schema: visual-design-prototyping
+## [2026-04-22] ingest | Codex updates — subagents, usage-based pricing, PR review | 1 page updated (tools/codex), 1 created (sources/tweets/codex-updates-april-2026)
+## [2026-04-22] ingest | Cursor third era — Truell essay + Shipper vibe check | 3 pages updated (tools/cursor, state-of/coding, trends/agents-reshape-organizations), 1 created (sources/tweets/cursor-third-era)
+## [2026-04-22] ingest | Every — 25-person company on four Notion agents | 1 page updated (training/company-wide-ai-enablement), 1 created (sources/articles/every-four-agents)
+## [2026-04-22] ingest | Project Glasswing — Claude Mythos Preview | 4 pages updated (state-of/models, state-of/cybersecurity, trends/restricted-frontier-deployment, state-of/models), 2 created (models/claude-mythos-preview, sources/articles/glasswing)
+## [2026-04-22] ingest | gstack — Garry Tan's Claude Code virtual team config | 2 pages updated (training/ai-enablement-software-development), 2 created (tools/gstack, sources/repos/garrytan-gstack-repo)
+## [2026-04-22] ingest | Nano Banana 2 — Google image generation model | 1 page updated (state-of/models), 2 created (models/nano-banana-2, sources/tweets/nano-banana-2-tweet)
+## [2026-04-22] ingest | Professional devs control — field research N=99 | 1 page updated (training/anti-autopilot-review-friction), 1 created (sources/tweets/prof-devs-control)

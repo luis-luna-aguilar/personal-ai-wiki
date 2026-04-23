@@ -2,7 +2,7 @@
 title: Anti-autopilot review friction
 type: training
 as_of: 2026-04-22
-sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026]
+sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026, lennysan-simonw-interview, prof-devs-control]
 ---
 
 # Anti-autopilot review friction
@@ -23,8 +23,28 @@ As AI output gets more fluent and more often correct, people stop truly checking
 - **Require acceptance reasons.** Don't accept "sounds good"; require a defensible why
 - **Use forcing functions.** Make the human judge before the AI answer becomes the default anchor
 - **Use stopping rules.** Deliberate friction is not only about catching errors; it also helps break the "one more prompt" loop that turns useful AI sessions into compulsive overwork
+- **Professionals control, not vibe.** Field research (N=13 observations, N=99 surveys; 3–41 years of experience) finds 100% of observed developers controlled software design and implementation regardless of task familiarity. They control via: detailed prompts with explicit context (12× observed), 70+ step external plans executed 5-6 steps at a time, and user rules that enforce project conventions. Enjoyment average: 5.11/6 — but from collaboration, not delegation. "I do everything with assistance, but never let the agent be completely autonomous."
 - **Review the gates, not only the output.** In agent-heavy coding workflows, judgment increasingly belongs on specs, acceptance criteria, and verification scripts instead of only on generated diffs
 - **Agent-as-watchdog.** A lightweight background agent monitors a relevant external surface (public social channels, issue trackers, partner APIs) for brand mentions, security anomalies, or policy violations — nightly or on a schedule — and routes findings to humans for judgment. Every's Claudie workflow (X monitoring for brand/security mentions) is a practical example: the agent does the scanning and pattern-detection; humans review and decide. Low setup cost, continuous coverage, judgment stays human.
+
+## What works and what fails (empirical ratios)
+
+From field research (N=99 surveys; suitable:unsuitable ratios):
+
+**Works well:**
+- Small, well-scoped tasks — 33:1
+- Tedious, repetitive work — 26:0
+- Scaffolding and boilerplate — 25:0
+- Following well-defined plans — 28:2
+- Writing tests — 19:2
+- Writing documentation — 20:0
+
+**Fails consistently:**
+- Complex tasks requiring domain knowledge — 3:16
+- Business logic — 2:15
+- One-shotting code without modification — 5:23
+- Integrating with existing or legacy code — 3:17
+- Replacing human decision-making — 0:12
 
 ## Failure modes
 
@@ -34,6 +54,7 @@ As AI output gets more fluent and more often correct, people stop truly checking
 - Using AI to replace the judgment layer rather than the execution layer
 - **Vibe-coding default inheritance.** AI coding tools (Lovable and similar) generate working prototypes with insecure defaults — Supabase row-level security off, public access rules on storage, API keys embedded in client-side code. The code looks complete and runs correctly, so it passes review without triggering concern. Users inherit the AI's insecure-by-default configurations unless they know to audit them specifically. This is distinct from hallucination: the code is correct code with an insecure configuration choice.
 - **AI tooling layer as supply-chain attack surface.** The Vercel/Context AI breach (April 2026): a third-party AI integration vendor was compromised, exposing Vercel customer credentials. As AI tool dependencies proliferate, the AI tooling layer becomes a new supply-chain attack surface separate from the application layer.
+- **The "lethal trifecta" of agent security (Simon Willison).** When an AI agent has access to private data AND exposure to untrusted content (incoming emails, scraped web pages) AND the ability to send data externally (reply to email, post to API), prompt injection cannot be reliably prevented. Any malicious instruction in untrusted content can override the agent's intended behavior. This trifecta cannot be reliably solved with current techniques, and Willison predicts a "Challenger disaster" for AI security if it hasn't already happened. Review criteria for new agent designs: does this agent have all three legs of the trifecta?
 
 ## Sources
 
@@ -42,3 +63,5 @@ As AI output gets more fluent and more often correct, people stop truly checking
 - [[sources/newsletters/ai-work-intensification-march]]
 - [[sources/newsletters/post-vibe-coding-verification-february]]
 - [[sources/newsletters/every-vibe-check-april-21-2026]]
+- [[sources/tweets/lennysan-simonw-interview]]
+- [[sources/tweets/prof-devs-control]]
