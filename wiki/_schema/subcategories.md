@@ -6,7 +6,7 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
-Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration-ui`, `agent-orchestration`, `coding-model`, `frontier-multimodal-model`, `legal-ai`, `model-orchestration`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration-ui`, `agent-orchestration`, `coding-model`, `frontier-multimodal-model`, `legal-ai`, `model-orchestration`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`
 
 ### spec-driven-development
 - **Parent domain(s):** coding
@@ -109,6 +109,72 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Applies to types:** model
 - **Definition:** Models specialized for text-to-image generation, image editing, and visual synthesis tasks, distinct from general-purpose multimodal models.
 - **Examples:** [[models/gpt-image-2]]
+
+### agent-framework
+- **Parent domain(s):** agents
+- **Applies to types:** tool
+- **Definition:** SDKs and development kits for building, running, and testing custom agents, including orchestration primitives, tool integration, and runtime patterns.
+- **Examples:** [[tools/google-adk]]
+
+### science-agent-platform
+- **Parent domain(s):** science, agents
+- **Applies to types:** tool
+- **Definition:** Platforms built to run or supervise agentic research workflows across literature review, experimentation, hypothesis generation, or scientific knowledge work.
+- **Examples:** [[tools/futurehouse]]
+
+### speech-to-text
+- **Parent domain(s):** agents, healthcare
+- **Applies to types:** tool
+- **Definition:** Products focused primarily on transcription, speech recognition, and converting audio into structured text for downstream human or agent workflows.
+- **Examples:** [[tools/elevenlabs-scribe]]
+
+### voice-models
+- **Parent domain(s):** agents
+- **Applies to types:** tool
+- **Definition:** AI voice products centered on expressive text-to-speech, speech-to-speech conversation, or voice cloning as a primary interface or output surface.
+- **Examples:** [[tools/hume-evi-3]], [[tools/eleven-v3]]
+
+### ai-video-generation
+- **Parent domain(s):** creative
+- **Applies to types:** tool
+- **Definition:** Tools for generating or editing video from prompts, images, or clips, including systems that add synchronized audio or produce end-to-end media artifacts.
+- **Examples:** [[tools/seedance-2]], [[tools/dream-machine]]
+
+### ai-avatar-video
+- **Parent domain(s):** creative
+- **Applies to types:** tool
+- **Definition:** Products built around synthetic presenters, talking avatars, or reusable digital personas for videos, communication, or marketing.
+- **Examples:** [[tools/heygen]]
+
+### ui-generation
+- **Parent domain(s):** creative, coding
+- **Applies to types:** tool
+- **Definition:** Tools that generate UI layouts, interface artifacts, or design-to-code drafts from prompts, screenshots, or structured instructions.
+- **Examples:** [[tools/stitch]]
+
+### document-intelligence
+- **Parent domain(s):** agents, finance, healthcare
+- **Applies to types:** tool
+- **Definition:** AI products specialized for extracting, structuring, querying, or reasoning over documents, PDFs, forms, and tables.
+- **Examples:** [[tools/mistral-document-ai]], [[tools/landingai-agentic-document-extraction]]
+
+### healthcare-ai
+- **Parent domain(s):** healthcare
+- **Applies to types:** tool
+- **Definition:** End-to-end AI products built specifically for clinical, provider, patient, or healthcare-operations workflows rather than generic horizontal assistants.
+- **Examples:** [[tools/dragon-copilot]], [[tools/open-evidence]]
+
+### finance-ai
+- **Parent domain(s):** finance
+- **Applies to types:** tool
+- **Definition:** AI products specialized for financial analysis, modeling, investment workflows, or finance-specific knowledge work.
+- **Examples:** [[tools/hebbia]]
+
+### deep-research-tool
+- **Parent domain(s):** agents
+- **Applies to types:** tool
+- **Definition:** Tools that autonomously plan, search, read, synthesize, and iterate across many sources to produce longer-horizon research outputs rather than answer in a single pass.
+- **Examples:** [[tools/deep-research]]
 
 ### Format
 

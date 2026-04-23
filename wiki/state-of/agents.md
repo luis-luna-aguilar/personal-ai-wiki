@@ -4,7 +4,7 @@ type: state-of
 domains: [agents]
 tags: []
 as_of: 2026-04-22
-sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, ainews-2026-04-22, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents, cursor-cloud-agents-march, cursor-cloud-agents-february]
+sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, ainews-2026-04-22, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents, cursor-cloud-agents-march, cursor-cloud-agents-february, google-adk, openai-deep-research, gemini-deep-research-max, futurehouse-homepage, uipath-maestro-introduction, anthropic-mcp, google-a2a, legacy-ai-tools-roadmap-xlsx]
 ---
 
 # State of Agents
@@ -29,6 +29,19 @@ Platforms that run or coordinate long-horizon agents across execution environmen
 - [[tools/claude-managed-agents]] — Anthropic's public-beta hosted runtime separates session, harness, and sandbox; the surrounding April product cadence makes it look like the platform backbone behind a broader Anthropic agent stack, not just an isolated architecture post *(as of 2026-04-15)*
 - [[tools/openai-agents-sdk]] — OpenAI's updated SDK combines a model-native harness with native sandbox execution, durable checkpoint / rehydration, provider-neutral manifests, and built-in support for MCP, skills, AGENTS.md, shell, and `apply_patch` *(as of 2026-04-15)*
 - [[tools/hermes-agent]] — NousResearch; open-source autonomous agent framework; 100K+ GitHub stars; four-layer memory with periodic consolidation; stateless sub-agent parallelism, LLM-driven replanning, directory-local context injection *(as of 2026-04-21)*
+- [[tools/uipath-maestro]] — enterprise orchestration layer for agents, robots, people, and long-running process flows; stronger fit for operational orchestration than for pure research-agent work *(as of 2026-04-22)*
+
+### Agent frameworks
+
+SDKs and development kits for building custom agents with tools, multi-agent patterns, and runtime scaffolding.
+
+- [[tools/google-adk]] — Google's open-source Agent Development Kit for building and deploying custom agents; better treated as framework infrastructure than as an end-user assistant *(as of 2026-04-22)*
+
+### Deep research tools
+
+Longer-horizon research agents that plan, search, read, synthesize, and return multi-step research outputs rather than answer in one pass.
+
+- [[tools/deep-research]] — cross-vendor product category now concretely shipped by OpenAI and Google; strong enough to split from assistant pages into its own tool space *(as of 2026-04-22)*
 
 ### Model orchestration
 
@@ -54,8 +67,18 @@ Agents that close the full research loop end-to-end — reading literature, coll
 
 - [[tools/hf-ml-intern]] — Hugging Face; open-source ML post-training research loop agent; reads papers, collects datasets, launches training jobs, evaluates, and iterates; GPQA 10% → 32% in <10 hours on Qwen3-1.7B *(as of 2026-04-22)*
 
+### Science agent platforms
+
+Platforms built to support literature-driven or discovery-oriented scientific work, without necessarily closing the full autonomous experiment loop end to end.
+
+- [[tools/futurehouse]] — science-agent platform aimed at research and discovery workflows, distinct from generic chat assistants with science demos *(as of 2026-04-22)*
+
 ## Recent changes
 
+- [2026-04-22] Added `Agent frameworks` with [[tools/google-adk]]; active framework layer should be represented directly instead of forced into orchestration-only categories
+- [2026-04-22] Added `Deep research tools` with [[tools/deep-research]]; OpenAI and Google now make this a distinct product category
+- [2026-04-22] Added `Science agent platforms` with [[tools/futurehouse]]; science-agent infrastructure deserves a slot between orchestration and full autonomous research
+- [2026-04-22] Added [[tools/uipath-maestro]] under `Agent orchestration`; enterprise orchestration for agents and robots broadens the category beyond hosted agent runtimes
 - [2026-04-22] Added `Autonomous research agents` subcategory; [[tools/hf-ml-intern]] is the first publicly verified agent to close the full ML post-training loop end-to-end
 - [2026-04-22] Google Deep Research Max scores (93.3% DeepSearchQA) and HF ml-intern autonomous loop mark the emergence of a distinct "full-stack research agent" tier — see [[tools/gemini]] and [[tools/hf-ml-intern]]
 - [2026-02-25] Cursor's cloud-agent rollout already showed the orchestration-ui pattern in product form: remote agent computers, self-verification, and video artifacts for human review

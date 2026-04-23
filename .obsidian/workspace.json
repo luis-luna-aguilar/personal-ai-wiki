@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a3ea99a198029296",
+        "id": "e08ab8ee7148cfed",
         "type": "tabs",
         "children": [
           {
-            "id": "13b179a232cb30f9",
+            "id": "b63c5d995499eb3d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "wiki/tools/kora.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "kora"
             }
           }
         ]
@@ -176,34 +180,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "13b179a232cb30f9",
+  "active": "b63c5d995499eb3d",
   "lastOpenFiles": [
-    "proposals/applied/2026-04-22-agent-org-patterns.md",
-    "proposals/applied/2026-04-22-ai-security-surface.md",
-    "proposals/applied/2026-04-22-gpt-image-2.md",
-    "proposals/applied/2026-04-22-hermes-claude-code-harness.md",
-    "proposals/applied/2026-04-22-hf-ml-intern.md",
-    "proposals/applied/2026-04-22-qwen-3-6-community-reception.md",
-    "wiki/sources/newsletters/every-ai-sandwich-april-2026.md",
-    "wiki/sources/newsletters/every-vibe-check-april-21-2026.md",
-    "wiki/sources/newsletters/thecode-april-22-2026.md",
-    "wiki/sources/newsletters/ainews-2026-04-22.md",
-    "wiki/models/gpt-image-2.md",
-    "wiki/tools/hf-ml-intern.md",
-    "proposals/applied/2026-04-22-gemini-deep-research-update.md",
-    "proposals/2026-04-22-agent-org-patterns.md",
-    "proposals/2026-04-22-ai-security-surface.md",
-    "proposals/applied/2026-04-22-shopify-ai-phase-transition.md",
-    "proposals/2026-04-22-gemini-deep-research-update.md",
-    "wiki/sources/newsletters/shopify-latent-space-april-2026.md",
-    "wiki/training/ai-enablement-software-development.md",
-    "proposals/2026-04-22-gpt-image-2.md",
-    "proposals/2026-04-22-hermes-claude-code-harness.md",
-    "proposals/2026-04-22-hf-ml-intern.md",
-    "proposals/2026-04-22-legacy-xlsx-ingestion-proposal.md",
-    "proposals/2026-04-22-qwen-3-6-community-reception.md",
-    "proposals/2026-04-22-shopify-ai-phase-transition.md",
-    "proposals/2026-04-22-legacy-xlsx-ingest-now-batch.md",
+    "wiki/workflows/flex-processing.md",
+    "wiki/tools/dragon-copilot.md",
+    "wiki/tools/deep-research.md",
+    "wiki/state-of/healthcare.md",
+    "wiki/state-of/creative.md",
+    "wiki/concepts/mcp.md",
+    "wiki/concepts/a2a.md",
+    "wiki/benchmarks/swe-polybench.md",
+    "proposals/triage/2026-04-22-batch.md",
+    "raw/tweets/2026-04-22-mattpocockuk-2025242370816487487.md",
+    "raw/tweets/2026-04-22-heygurisingh-2025572300658287030.md",
+    "raw/articles/2026-04-22-everyto-source-code-how-we-run-a-25-person-company-on-four-a.md",
+    "raw/tweets/2026-04-22-sundarpichai-2027057726170509724.md",
+    "raw/tweets/2026-04-22-mntruell-2026736314272591924.md",
+    "raw/tweets/2026-04-22-felixcraftai-2032887884827554258.md",
+    "raw/tweets/2026-04-22-gregisenberg-2006382073418752250.md",
+    "raw/tweets/2026-04-22-omarsar0-2006390906371629222.md",
+    "raw/tweets/2026-04-22-bcherny-2025007393290272904.md",
+    "raw/tweets/2026-04-22-addyosmani-2029372736267805081.md",
+    "raw/tweets/2026-04-22-shannholmberg-2031049690175652235.md",
+    "raw/tweets/2026-04-22-derrickcchoi-2031023512534634758.md",
+    "raw/tweets/2026-04-22-bcherny-2007179832300581177.md",
+    "raw/tweets/2026-04-22-simonw-2025990408514523517.md",
+    "raw/tweets/2026-04-22-omarsar0-2006063755449504154.md",
+    "raw/tweets/2026-04-22-zarazhangrui-2024892806029082734.md",
+    "raw/tweets/2026-04-22-koylanai-2031121107164467659.md",
     "raw/notes/AI Tools & Roadmap.xlsx",
     "raw/notes/AI Tools & Roadmap (1).xlsx",
     "podcast/out/block-3-concepts-trends-training.html",

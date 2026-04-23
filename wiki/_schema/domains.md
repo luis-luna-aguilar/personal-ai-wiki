@@ -13,6 +13,8 @@ Domains are high-level areas of use. They correspond to state-of pages in `wiki/
 - **`computer-use`** — AI agents that operate through application UIs, connect to third-party services, and execute multi-step workflows on behalf of users
 - **`finance`** — AI applied to personal and institutional finance: budgeting, investment tracking, financial data analysis, fintech integrations
 - **`science`** — AI applied to scientific research: data analysis at scale, experiment automation, accelerating discovery
+- **`creative`** — AI tools for image, video, slides, avatar, and UI generation
+- **`healthcare`** — AI applied to clinical workflows, medical knowledge, transcription, patient operations, and healthcare delivery
 
 ## Conventions
 

@@ -3,8 +3,8 @@ title: State of Finance
 type: state-of
 domains: [finance]
 tags: []
-as_of: 2026-04-10
-sources: [perplexity-computer-plaid]
+as_of: 2026-04-22
+sources: [perplexity-computer-plaid, hebbia-homepage, legacy-ai-tools-roadmap-xlsx]
 ---
 
 # State of Finance
@@ -13,7 +13,11 @@ Current state of AI applied to personal and institutional finance — budgeting,
 
 ## Subcategories
 
-_(No dedicated finance-AI subcategories yet. Subcategories will be added as tools are ingested.)_
+### Finance AI
+
+AI products specialized for financial analysis, modeling, and document-heavy finance workflows.
+
+- [[tools/hebbia]] — document-heavy knowledge-work platform with especially strong practical relevance in finance analysis and modeling workflows *(as of 2026-04-22)*
 
 ## Signals
 
@@ -21,4 +25,5 @@ _(No dedicated finance-AI subcategories yet. Subcategories will be added as tool
 
 ## Recent changes
 
+- [2026-04-22] Added `Finance AI` subcategory with [[tools/hebbia]] as the first dedicated finance-workflow product in the wiki
 - [2026-04-10] Page seeded from Perplexity Computer's Plaid integration signal (Superhuman AI newsletter)
