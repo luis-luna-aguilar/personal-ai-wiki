@@ -8,6 +8,8 @@ Chronological append-only record of wiki activity. Entries start with:
 
 Valid ops: `ingest`, `triage`, `reject`, `apply`, `lint`, `query-verify`, `schema`.
 
+## [2026-04-23] apply | Google Cloud Next 2026 | 6 pages updated (tools/gemini, tools/google-adk, trends/compute-infrastructure, state-of/agents, state-of/models, wiki/index), 1 created (sources/articles/google-cloud-next-2026)
+
 ## [2026-04-23] schema | structural reorganization | merged agent-orchestration-ui + agent-orchestration + model-orchestration → agent-orchestration; moved claude-design to creative only; moved Deep Research content from gemini to deep-research; fixed genspark-slides placement in state-of/creative
 
 ## [2026-04-23] apply | AI-native engineering interviews | 2 pages updated (training/ai-enablement-software-development, wiki/index)

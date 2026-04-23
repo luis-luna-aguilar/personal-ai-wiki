@@ -4,7 +4,7 @@ type: state-of
 domains: [models]
 tags: []
 as_of: 2026-04-23
-sources: [muse-spark, kimi-k2-6-blog, ainews-2026-04-21, ainews-2026-04-22, every-opus-4-7-vibe-check, vectorlab-opus-4-7-flop, vectorlab-qwen-3-6-local-threshold, open-agentic-coding-models, restricted-frontier-deployment, open-weight-momentum-early-april, late-march-small-coding-models, gpt-5-4-march, qwen-3-5-medium-february, glasswing, nano-banana-2-tweet]
+sources: [muse-spark, kimi-k2-6-blog, ainews-2026-04-21, ainews-2026-04-22, every-opus-4-7-vibe-check, vectorlab-opus-4-7-flop, vectorlab-qwen-3-6-local-threshold, open-agentic-coding-models, restricted-frontier-deployment, open-weight-momentum-early-april, late-march-small-coding-models, gpt-5-4-march, qwen-3-5-medium-february, glasswing, nano-banana-2-tweet, google-cloud-next-2026]
 ---
 
 # State of Models
@@ -53,6 +53,7 @@ Frontier models deployed selectively for autonomous cybersecurity research rathe
 
 ## Recent changes
 
+- [2026-04-23] Google Cloud Next '26: Gemini 3.1 Pro, Gemini 3.1 Flash Image, Gemma 4, Lyria 3, and Gemini Embedding 2 surfaced as Google's active platform model stack
 - [2026-04-23] Added 'Specialized utility models' subcategory; [[models/openai-privacy-filter]] is the first entry — on-device PII redaction, 1.5B MoE, Apache 2.0
 - [2026-04-23] Added [[models/qwen-3-6-27b]] to Coding models; dense 27B beats prior 397B MoE on all coding benchmarks; day-0 open ecosystem support
 - [2026-03-08] Added [[models/gpt-5-4]] under `Frontier multimodal models`; strongest captured March signal for general-purpose reasoning, browsing, and agent work, with Claude still stronger on writing/taste

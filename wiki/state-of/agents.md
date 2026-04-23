@@ -4,7 +4,7 @@ type: state-of
 domains: [agents]
 tags: []
 as_of: 2026-04-23
-sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, ainews-2026-04-22, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents, cursor-cloud-agents-march, cursor-cloud-agents-february, google-adk, openai-deep-research, gemini-deep-research-max, futurehouse-homepage, uipath-maestro-introduction, anthropic-mcp, google-a2a, legacy-ai-tools-roadmap-xlsx, microsoft-foundry-agents-2026]
+sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, ainews-2026-04-22, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents, cursor-cloud-agents-march, cursor-cloud-agents-february, google-adk, openai-deep-research, gemini-deep-research-max, futurehouse-homepage, uipath-maestro-introduction, anthropic-mcp, google-a2a, legacy-ai-tools-roadmap-xlsx, microsoft-foundry-agents-2026, google-cloud-next-2026]
 ---
 
 # State of Agents
@@ -33,7 +33,7 @@ Platforms, surfaces, and patterns for running, supervising, or routing AI agents
 
 SDKs and development kits for building custom agents with tools, multi-agent patterns, and runtime scaffolding.
 
-- [[tools/google-adk]] — Google's open-source Agent Development Kit for building and deploying custom agents; better treated as framework infrastructure than as an end-user assistant *(as of 2026-04-22)*
+- [[tools/google-adk]] — Google; open-source ADK now positioned as the developer layer inside Gemini Enterprise Agent Platform; Agent Studio adds a low-code wrapper, and Model Garden expands the surrounding stack to 200+ models *(as of 2026-04-23)*
 
 ### Deep research tools
 
@@ -67,6 +67,7 @@ Platforms built to support literature-driven or discovery-oriented scientific wo
 
 ## Recent changes
 
+- [2026-04-23] Google Cloud Next '26: Gemini Enterprise Agent Platform replaces Vertex AI; ADK now sits inside a fuller enterprise stack with Agent Studio, Workspace Intelligence GA, and Knowledge Catalog
 - [2026-04-23] Added [[tools/microsoft-foundry-agents]] under `Agent orchestration`; Microsoft is now a serious enterprise hosted-agent platform contender with VM-per-session isolation, persistent resume, and a fuller governance stack
 - [2026-04-23] Added [[workflows/skillify-agent-reliability]]; Garry Tan's 10-step "thin harness / fat skills" agent reliability pattern — most detailed published treatment of agent skill architecture and failure prevention
 - [2026-04-22] Added `Agent frameworks` with [[tools/google-adk]]; active framework layer should be represented directly instead of forced into orchestration-only categories

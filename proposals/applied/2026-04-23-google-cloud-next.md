@@ -5,7 +5,7 @@ sources:
   - raw/newsletters/2026-04-23-ainews-tasteful-tokenmaxxing.md
   - raw/tweets/2026-04-23-googlecloud-2046995814019469538.md
   - raw/articles/2026-04-23-cloudgooglecom-blog-products-ai-machine-learning-introducing.md
-status: pending
+status: applied
 created: 2026-04-23
 ---
 

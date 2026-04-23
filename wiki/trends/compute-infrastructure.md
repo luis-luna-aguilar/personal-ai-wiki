@@ -3,16 +3,17 @@ title: Compute infrastructure as decisive competitive moat
 type: trend
 domains: [models]
 tags: [anthropic]
-as_of: 2026-04-21
-sources: [ainews-2026-04-21, runtime-improvements-improve-agent-economics]
+as_of: 2026-04-23
+sources: [ainews-2026-04-21, runtime-improvements-improve-agent-economics, google-cloud-next-2026]
 ---
 
 # Compute infrastructure as decisive competitive moat
 
 Frontier AI labs are securing compute capacity at a scale that creates structural competitive advantages beyond what algorithm quality alone can overcome. As of 2026, access to multi-gigawatt compute is diverging rapidly between labs with strategic infrastructure partnerships and those without.
 
-## Current status (as of 2026-04-21)
+## Current status (as of 2026-04-23)
 
+- Google TPU v8 announced at Cloud Next '26: split into 8t for training and 8i for inference; Google claims ~3× compute per pod vs Ironwood for 8t, 1,152 TPUs per pod for 8i, and up to 1 million TPUs in a single 8t cluster
 - Anthropic secured up to 5 GW of compute with Amazon alongside a $5B investment, with up to $20B more available
 - Memory and chip supply constraints still matter on multi-year timescales, so large reserved capacity is not a trivial procurement detail
 - Open-weight labs are still shipping competitive coding and agent models with much less disclosed infrastructure scale, so algorithmic efficiency remains a live counterforce
@@ -38,9 +39,11 @@ But runtime improvements such as TurboQuant-style KV-cache compression can also 
 
 ## Recent changes
 
+- [2026-04-23] Added Google TPU v8: 8t training (~3× Ironwood per pod), 8i inference (1,152 TPUs/pod); Google claims 1M-TPU single cluster, widening the hardware-scale gap
 - [2026-04-21] Trend opened from Anthropic/AWS 5 GW + $5B announcement
 
 ## Sources
 
 - [[sources/newsletters/ainews-2026-04-21]]
 - [[sources/newsletters/runtime-improvements-improve-agent-economics]]
+- [[sources/articles/google-cloud-next-2026]]

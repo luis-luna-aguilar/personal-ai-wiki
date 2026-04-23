@@ -17,7 +17,7 @@ When adding a new wiki page, add its index entry under the correct section. One 
 Read-me-first dashboards per domain.
 
 - [[state-of/coding]] — current state of AI coding tools and workflows *(as_of: 2026-04-21)*
-- [[state-of/models]] — current state of foundation models *(as_of: 2026-04-22)*
+- [[state-of/models]] — current state of foundation models *(as_of: 2026-04-23)*
 - [[state-of/agents]] — current state of agentic systems and tool use *(as_of: 2026-04-23)*
 - [[state-of/legal]] — current state of AI in legal practice *(as_of: 2026-04-22)*
 - [[state-of/computer-use]] — current state of AI computer-use agents *(as_of: 2026-04-22)*
@@ -61,9 +61,9 @@ Tools and products built on top of models. One page per tool.
 - [[tools/eleven-v3]] — expressive text-to-speech model optimized for high-control generated voice output *(as_of: 2026-04-22)*
 - [[tools/elevenlabs-scribe]] — speech-to-text product line for real-time and enterprise transcription workflows *(as_of: 2026-04-22)*
 - [[tools/futurehouse]] — science-agent platform for research and discovery workflows *(as_of: 2026-04-22)*
-- [[tools/gemini]] — Google's AI assistant with deep research, browser utilities, and productivity features *(as_of: 2026-04-22)*
+- [[tools/gemini]] — Gemini umbrella page covering Google's assistant surfaces plus the new Gemini Enterprise Agent Platform *(as_of: 2026-04-23)*
 - [[tools/genspark-slides]] — AI slides workflow inside Genspark's broader agent/content product surface *(as_of: 2026-04-22)*
-- [[tools/google-adk]] — Google's open-source Agent Development Kit for building and deploying custom agents *(as_of: 2026-04-22)*
+- [[tools/google-adk]] — Google's open-source agent framework, now positioned as the developer layer inside Gemini Enterprise Agent Platform *(as_of: 2026-04-23)*
 - [[tools/harvey]] — legal AI platform; thin stub from a single editorial source *(as_of: 2026-04-02)*
 - [[tools/hebbia]] — finance-oriented AI knowledge-work platform for document-heavy analysis *(as_of: 2026-04-22)*
 - [[tools/hermes-agent]] — NousResearch open-source agent framework with memory, replanning, and recursive agent patterns *(as_of: 2026-04-22)*
@@ -133,7 +133,7 @@ Things being watched that haven't solidified yet.
 
 - [[trends/agents-reshape-organizations]] — leverage moves from individual to org as autonomous agents take coordination work *(as_of: 2026-04-21)*
 - [[trends/ai-in-science]] — biology and drug discovery provide the clearest current signal *(as_of: 2026-04-21)*
-- [[trends/compute-infrastructure]] — frontier compute scale diverging; Anthropic/AWS 5 GW deal as inflection point *(as_of: 2026-04-21)*
+- [[trends/compute-infrastructure]] — frontier compute scale diverging across Anthropic/AWS and Google's TPU v8 push *(as_of: 2026-04-23)*
 - [[trends/open-weight-momentum-broadens]] — open-weight competition is spreading beyond coding into multimodal and computer-use systems *(as_of: 2026-04-07)*
 - [[trends/proprietary-data-becomes-model-moat]] — proprietary operational data and domain evals may become stronger moats as model quality converges *(as_of: 2026-04-10)*
 - [[trends/restricted-frontier-deployment]] — frontier labs may increasingly withhold or selectively deploy their highest-capability systems *(as_of: 2026-04-08)*

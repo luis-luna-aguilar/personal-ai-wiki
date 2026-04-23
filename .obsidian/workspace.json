@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "proposals/2026-04-23-google-cloud-next.md",
+                "file": "proposals/2026-04-23-anthropic-mcp-cowork-bedrock.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-04-23-google-cloud-next"
+              "title": "2026-04-23-anthropic-mcp-cowork-bedrock"
             }
           }
         ]
@@ -182,6 +182,9 @@
   },
   "active": "b1b902b0d68b54f2",
   "lastOpenFiles": [
+    "proposals/2026-04-23-google-cloud-next.md",
+    "proposals/applied/2026-04-23-google-cloud-next.md",
+    "wiki/sources/articles/google-cloud-next-2026.md",
     "proposals/2026-04-23-anthropic-mcp-cowork-bedrock.md",
     "raw/articles/Building agents that reach production systems with MCP _ Claude.pdf",
     "proposals/applied/2026-04-23-ai-native-engineering-interviews.md",
@@ -212,11 +215,9 @@
     "personal-wiki-agent/app/query_instructions.md",
     "wiki/models/openai-privacy-filter.md",
     "proposals/2026-04-22-claude-code-ultrareview.md",
-    "proposals/2026-04-23-google-cloud-next.md",
     "proposals/2026-04-23-gpt-5-5-spud-launch.md",
     "proposals/2026-04-23-openai-privacy-filter.md",
     "proposals/applied/2026-04-23-qwen-3-6-27b.md",
-    "wiki/sources/newsletters/the-code-2026-04-23.md",
     "raw/assets/2026-04-09-langchain-2039028327030079565.jpg"
   ]
 }
