@@ -4,7 +4,7 @@ type: source
 source_type: newsletter
 source_file: raw/newsletters/2026-03-20-when-your-vibe-coded-app-goes-viraland-then-goes.md
 ingested: 2026-04-21
-domains: [coding, training]
+domains: [coding]
 ---
 
 # Vibe coding, reliability, and distribution

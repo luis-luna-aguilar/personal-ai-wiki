@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "proposals/2026-04-23-anthropic-mcp-cowork-bedrock.md",
+                "file": "proposals/2026-04-23-gpt-5-5-spud-launch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-04-23-anthropic-mcp-cowork-bedrock"
+              "title": "2026-04-23-gpt-5-5-spud-launch"
             }
           }
         ]
@@ -182,10 +182,17 @@
   },
   "active": "b1b902b0d68b54f2",
   "lastOpenFiles": [
+    "proposals/2026-04-23-openai-workspace-agents.md",
+    "proposals/2026-04-23-personal-wiki-agent-frameworks.md",
+    "wiki/tools/gemini-deep-research.md",
+    "wiki/tools/openai-deep-research.md",
+    "wiki/concepts/deep-research.md",
+    "wiki/benchmarks/swe-bench.md",
+    "wiki/state-of/voice.md",
+    "proposals/2026-04-23-anthropic-mcp-cowork-bedrock.md",
     "proposals/2026-04-23-google-cloud-next.md",
     "proposals/applied/2026-04-23-google-cloud-next.md",
     "wiki/sources/articles/google-cloud-next-2026.md",
-    "proposals/2026-04-23-anthropic-mcp-cowork-bedrock.md",
     "raw/articles/Building agents that reach production systems with MCP _ Claude.pdf",
     "proposals/applied/2026-04-23-ai-native-engineering-interviews.md",
     "proposals/2026-04-23-ai-native-engineering-interviews.md",
@@ -211,13 +218,6 @@
     "wiki/sources/articles/claude-code-ultrareview.md",
     "proposals/applied/2026-04-23-openai-privacy-filter.md",
     "personal-wiki-agent/app/prompts/system.md",
-    "personal-wiki-agent/app/prompts/answer_format.md",
-    "personal-wiki-agent/app/query_instructions.md",
-    "wiki/models/openai-privacy-filter.md",
-    "proposals/2026-04-22-claude-code-ultrareview.md",
-    "proposals/2026-04-23-gpt-5-5-spud-launch.md",
-    "proposals/2026-04-23-openai-privacy-filter.md",
-    "proposals/applied/2026-04-23-qwen-3-6-27b.md",
     "raw/assets/2026-04-09-langchain-2039028327030079565.jpg"
   ]
 }

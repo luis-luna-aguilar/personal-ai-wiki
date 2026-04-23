@@ -2,7 +2,7 @@
 title: Hermes Agent
 type: tool
 domains: [agents, coding]
-subcategory: agent-orchestration
+subcategory: agent-framework
 tags: [open-source, agentic]
 as_of: 2026-04-22
 sources: [ainews-2026-04-21, ainews-2026-04-22]

@@ -4,7 +4,7 @@ type: source
 source_type: newsletter
 source_file: raw/newsletters/2026-03-19-how-to-build-an-ai-style-guide.md
 ingested: 2026-04-21
-domains: [training]
+domains: []
 ---
 
 # How to build an AI style guide

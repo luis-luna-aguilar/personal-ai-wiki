@@ -1,0 +1,53 @@
+---
+title: SWE-bench
+type: benchmark
+domains: [coding, models]
+tags: []
+as_of: 2026-04-23
+sources: [amazon-swe-polybench, kimi-k2-6-blog, ainews-2026-04-22, late-march-small-coding-models]
+---
+
+# SWE-bench
+
+SWE-bench is the de facto standard benchmark for evaluating AI software engineering capability on real GitHub issues. Models are scored on their ability to resolve issues in open-source Python repositories by generating a patch that passes the test suite.
+
+## Variants
+
+- **SWE-bench Verified** — a human-curated subset of ~500 tasks where the issue and test suite are confirmed to be well-formed; considered the most reliable variant
+- **SWE-bench Pro / SWE-Pro** — harder task set with more complex multi-file and cross-repo issues
+- **SWE-bench Multilingual** — extends the benchmark beyond Python to multiple programming languages
+
+## Current leaderboard (as of 2026-04-23)
+
+Scores are % of issues resolved. Higher is better.
+
+| Model | Variant | Score | As of |
+|---|---|---|---|
+| [[models/qwen-3-6-27b]] | SWE-bench Verified | 77.2% | 2026-04-23 |
+| [[models/qwen-3-6-27b]] | SWE-bench Pro | 53.5% | 2026-04-23 |
+| [[models/composer-2]] | SWE-bench Multilingual | 73.7% | 2026-03-23 |
+| [[models/minimax-m2-7]] | SWE-Pro | 56.22% | 2026-03-22 |
+| [[models/kimi-k2-6]] | SWE-bench (various) | SOTA claims | 2026-04-22 |
+
+*Note: claims are vendor-reported unless otherwise noted. Independent replication is not always available.*
+
+## Why it matters
+
+SWE-bench is the most widely cited benchmark for comparing coding model and coding agent performance. It provides a concrete proxy for whether a model can resolve real engineering problems, not just generate syntactically correct code.
+
+## Caveats
+
+- Results vary significantly depending on scaffolding (harness, tools, retry budget) — model scores and agent-system scores are not directly comparable
+- Vendor-reported scores may not reflect reproducible independent runs
+- Task distribution skews toward Python and well-maintained open-source repos; multilingual and brownfield enterprise work may behave differently
+- See also [[benchmarks/swe-polybench]] for a multilingual extension of the SWE-bench idea from Amazon Science
+
+## Recent changes
+
+- [2026-04-23] Page created; compiled leaderboard from model pages referencing SWE-bench scores
+
+## Sources
+
+- [[sources/articles/kimi-k2-6-blog]]
+- [[sources/newsletters/late-march-small-coding-models]]
+- [[sources/newsletters/ainews-2026-04-22]]

@@ -38,8 +38,8 @@ Tools that turn app-stack setup into a repeatable command-line workflow across m
 
 CLI-based AI coding agents that still anchor in the terminal, but are increasingly expanding into supervised workspaces with repeatable workflows, background execution, and broader agent control surfaces.
 
-- [[tools/claude-code]] — Anthropic; terminal-first agent whose March scheduled tasks and `/loop` features made recurring background work first-class before the later Monitor / routines expansion pushed it further toward supervised workflow automation *(as of 2026-03-07)*
-- [[tools/codex]] — OpenAI; cloud coding agent via CLI and ChatGPT, now extending into repeatable and ongoing-task workflows *(as of 2026-03-09)*
+- [[tools/claude-code]] — Anthropic; terminal-first agent expanding toward supervised multi-session workflows: Monitor, Routines, /ultrareview, --worktree, Remote Control, and /autofix-pr all shipped since March; harness architecture increasingly treated as core competitive differentiator *(as of 2026-04-23)*
+- [[tools/codex]] — OpenAI; cloud coding agent via CLI and ChatGPT; expanded in April into subagents, PR code review, usage-based pricing, and Codex Chronicle ambient screen memory; direction increasingly overlaps with computer use *(as of 2026-04-22)*
 
 ### Agent toolkits
 

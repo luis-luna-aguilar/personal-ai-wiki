@@ -15,9 +15,9 @@ OpenAI launched Workspace Agents — Codex-powered, shareable team agents that r
 
 ## Intended changes
 
-- [ ] **Update** `wiki/tools/codex.md` — add Workspace Agents section; update Recent changes
-- [ ] **Update** `wiki/state-of/agents.md` — add OpenAI workspace agents to Agent orchestration UIs; prepend Recent changes entry
-- [ ] **Create** `wiki/sources/newsletters/superhuman-2026-04-23.md` — source summary (shared; covers workspace agents, tokenmaxxing, Privacy Filter)
+- [x] **Update** `wiki/tools/codex.md` — add Workspace Agents section; update Recent changes
+- [x] **Update** `wiki/state-of/agents.md` — add OpenAI workspace agents to Agent orchestration UIs; prepend Recent changes entry
+- [x] **Create** `wiki/sources/newsletters/superhuman-2026-04-23.md` — source summary (shared; covers workspace agents, tokenmaxxing, Privacy Filter)
 
 ## Page drafts
 

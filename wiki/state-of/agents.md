@@ -25,7 +25,6 @@ Platforms, surfaces, and patterns for running, supervising, or routing AI agents
 - [[tools/claude-managed-agents]] — Anthropic's hosted runtime; separates session, harness, and sandbox; platform backbone behind a broader Anthropic agent stack *(as of 2026-04-15)*
 - [[tools/microsoft-foundry-agents]] — Microsoft; hosted runtime with per-session VM isolation, persistent filesystems, Entra Agent ID governance, MCP Toolbox, and multi-framework support *(as of 2026-04-23)*
 - [[tools/openai-agents-sdk]] — model-native harness with native sandbox execution, durable checkpoint / rehydration, and provider-neutral manifests *(as of 2026-04-15)*
-- [[tools/hermes-agent]] — NousResearch; open-source; four-layer memory, stateless sub-agent parallelism, LLM-driven replanning *(as of 2026-04-21)*
 - [[tools/uipath-maestro]] — enterprise orchestration for agents, robots, and people; stronger fit for operational process flows than pure research workloads *(as of 2026-04-22)*
 - [[workflows/advisor-strategy]] — small executor (Sonnet/Haiku) drives the loop; escalates to Opus only when stuck; +2.7% SWE-bench Multilingual, −11.9% cost vs Sonnet alone *(as of 2026-04-09)*
 
@@ -34,12 +33,14 @@ Platforms, surfaces, and patterns for running, supervising, or routing AI agents
 SDKs and development kits for building custom agents with tools, multi-agent patterns, and runtime scaffolding.
 
 - [[tools/google-adk]] — Google; open-source ADK now positioned as the developer layer inside Gemini Enterprise Agent Platform; Agent Studio adds a low-code wrapper, and Model Garden expands the surrounding stack to 200+ models *(as of 2026-04-23)*
+- [[tools/hermes-agent]] — NousResearch; open-source; four-layer memory, stateless sub-agent parallelism, LLM-driven replanning; 100K+ GitHub stars; 118 bundled skills *(as of 2026-04-22)*
 
 ### Deep research tools
 
-Longer-horizon research agents that plan, search, read, synthesize, and return multi-step research outputs rather than answer in one pass.
+Longer-horizon research agents that plan, search, read, synthesize, and return multi-step research outputs rather than answer in one pass. See [[concepts/deep-research]] for the category concept.
 
-- [[tools/deep-research]] — cross-vendor product category now concretely shipped by OpenAI and Google; strong enough to split from assistant pages into its own tool space *(as of 2026-04-22)*
+- [[tools/openai-deep-research]] — OpenAI's productized deep research agent; available via ChatGPT and API *(as of 2026-04-22)*
+- [[tools/gemini-deep-research]] — Gemini Deep Research and Deep Research Max; most fully benchmarked public implementation (93.3% DeepSearchQA, 85.9% BrowseComp on Max tier); MCP support for internal data *(as of 2026-04-22)*
 
 ### Agentic DevOps
 
@@ -70,8 +71,8 @@ Platforms built to support literature-driven or discovery-oriented scientific wo
 - [2026-04-23] Google Cloud Next '26: Gemini Enterprise Agent Platform replaces Vertex AI; ADK now sits inside a fuller enterprise stack with Agent Studio, Workspace Intelligence GA, and Knowledge Catalog
 - [2026-04-23] Added [[tools/microsoft-foundry-agents]] under `Agent orchestration`; Microsoft is now a serious enterprise hosted-agent platform contender with VM-per-session isolation, persistent resume, and a fuller governance stack
 - [2026-04-23] Added [[workflows/skillify-agent-reliability]]; Garry Tan's 10-step "thin harness / fat skills" agent reliability pattern — most detailed published treatment of agent skill architecture and failure prevention
-- [2026-04-22] Added `Agent frameworks` with [[tools/google-adk]]; active framework layer should be represented directly instead of forced into orchestration-only categories
-- [2026-04-22] Added `Deep research tools` with [[tools/deep-research]]; OpenAI and Google now make this a distinct product category
+- [2026-04-22] Added `Agent frameworks` with [[tools/google-adk]]; active framework layer should be represented directly instead of forced into orchestration-only categories; [[tools/hermes-agent]] reclassified here from agent-orchestration
+- [2026-04-22] Added `Deep research tools`; restructured as concept ([[concepts/deep-research]]) + individual tool pages ([[tools/openai-deep-research]], [[tools/gemini-deep-research]])
 - [2026-04-22] Added `Science agent platforms` with [[tools/futurehouse]]; science-agent infrastructure deserves a slot between orchestration and full autonomous research
 - [2026-04-22] Added [[tools/uipath-maestro]] under `Agent orchestration`; enterprise orchestration for agents and robots broadens the category beyond hosted agent runtimes
 - [2026-04-22] Added `Autonomous research agents` subcategory; [[tools/hf-ml-intern]] is the first publicly verified agent to close the full ML post-training loop end-to-end
@@ -79,7 +80,7 @@ Platforms built to support literature-driven or discovery-oriented scientific wo
 - [2026-02-25] Cursor's cloud-agent rollout already showed the orchestration-ui pattern in product form: remote agent computers, self-verification, and video artifacts for human review
 - [2026-03-06] Cursor's cloud-agent walkthrough made the category's supervision thesis explicit before the later 3.1 control-plane polish: remote agents, review videos, and human oversight over many workers
 - [2026-04-22] Added `Agent-native documents` to capture document surfaces built for shared human/agent drafting; [[tools/proof]] is the first example
-- [2026-04-21] Added [[tools/orca]] under `Agent orchestration UIs`; worktree-first desktop supervision layer for Claude Code, Codex, and similar agents
+- [2026-04-21] Added [[tools/orca]] under `Agent orchestration`; worktree-first desktop supervision layer for Claude Code, Codex, and similar agents
 - [2026-03-31] Backfilled late-March signal: open-agent stacks were already converging on CLI-first execution, worktree coordination, and packaged reusable agents before the April orchestration/control-plane wave became clearer
 - [2026-04-21] Added earlier Anthropic productivity-surface precursor: Claude for Word beta helps explain Cowork / Live Artifacts as expansion of an existing direction
 - [2026-04-15] Anthropic's Managed Agents now reads as part of a broader platform cluster: hosted runtime, custom agents, and Claude Code long-running monitor/loop patterns

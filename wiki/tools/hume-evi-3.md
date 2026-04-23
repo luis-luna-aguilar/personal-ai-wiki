@@ -1,7 +1,7 @@
 ---
 title: Hume EVI 3
 type: tool
-domains: [agents]
+domains: [agents, voice]
 subcategory: voice-models
 tags: [closed-source]
 as_of: 2026-04-22

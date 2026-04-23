@@ -45,13 +45,13 @@ This material is not yet represented in the wiki and is directly relevant to the
 
 ## Intended changes
 
-- [ ] **Create** `wiki/tools/deep-agents.md` — new tool page for LangChain's Deep Agents harness
-- [ ] **Create** `wiki/tools/goose.md` — new tool page for Goose as an open-source local agent platform
-- [ ] **Create** `wiki/tools/pydantic-ai.md` — new tool page for provider-agnostic Python agent framework with MCP/OpenRouter support
-- [ ] **Create** `wiki/tools/smolagents.md` — new tool page for Hugging Face's lightweight open-source agent library
-- [ ] **Update** `wiki/workflows/agentic-orchestration-patterns.md` — add note that Deep Agents represents a “batteries-included harness” direction while Goose represents a local-agent-product direction
-- [ ] **Update** `wiki/concepts/mcp.md` — append a practical note on local-vs-remote MCP deployment surfaces across Claude Desktop and ChatGPT
-- [ ] **Create** one or more `wiki/sources/articles/*.md` or `wiki/sources/repos/*.md` summary pages after the relevant primary sources are fetched into `raw/`
+- [x] **Create** `wiki/tools/deep-agents.md` — new tool page for LangChain's Deep Agents harness
+- [x] **Create** `wiki/tools/goose.md` — new tool page for Goose as an open-source local agent platform
+- [x] **Create** `wiki/tools/pydantic-ai.md` — new tool page for provider-agnostic Python agent framework with MCP/OpenRouter support
+- [x] **Create** `wiki/tools/smolagents.md` — new tool page for Hugging Face's lightweight open-source agent library
+- [x] **Update** `wiki/workflows/agentic-orchestration-patterns.md` — add note that Deep Agents represents a “batteries-included harness” direction while Goose represents a local-agent-product direction
+- [x] **Update** `wiki/concepts/mcp.md` — append a practical note on local-vs-remote MCP deployment surfaces across Claude Desktop and ChatGPT
+- [x] **Create** one or more `wiki/sources/articles/*.md` or `wiki/sources/repos/*.md` summary pages after the relevant primary sources are fetched into `raw/`
 
 ## Recommended ingest order
 
@@ -100,9 +100,13 @@ This material is not yet represented in the wiki and is directly relevant to the
 ## Open questions
 
 - Should these framework pages live under `wiki/tools/` individually, or should some of them be covered by a single comparative workflow/concept page?
+	-  let's skip the month as tools because they are 
 - Should the MCP deployment guidance live only on `wiki/concepts/mcp.md`, or also on a new workflow page about “deploying personal knowledge agents”?
+	-  let's keep it in concept 
 - Should OpenRouter's own Agent SDK be represented, or is it less important than the other frameworks because the current implementation decision moved to Deep Agents?
+	-  let's skip this one
 - Do we want to ingest all four frameworks now, or only the two that matter most for the Personal Wiki Agent decision: Deep Agents and Goose?
+	- Hello Sam 
 
 ## Suggested page shapes
 

@@ -17,6 +17,15 @@ Valid values for the `tags:` field in frontmatter. Tags are for cross-cutting at
 - **`perplexity`** — vendor/org: Perplexity AI
 - **`google`** — vendor/org: Google / DeepMind
 - **`openai`** — vendor/org: OpenAI
+- **`microsoft`** — vendor/org: Microsoft
+- **`meta`** — vendor/org: Meta (Llama, Muse Spark, etc.)
+- **`mistral`** — vendor/org: Mistral AI
+- **`alibaba`** — vendor/org: Alibaba (Qwen family)
+- **`elevenlabs`** — vendor/org: ElevenLabs
+- **`bytedance`** — vendor/org: ByteDance / Seed
+- **`minimax`** — vendor/org: MiniMax
+- **`nousresearch`** — vendor/org: NousResearch
+- **`huggingface`** — vendor/org: Hugging Face
 
 ## Conventions
 

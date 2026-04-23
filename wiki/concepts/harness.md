@@ -73,6 +73,11 @@ The two are related but not identical. Many real-world "agent" improvements actu
 - This page reflects the broader definition, consistent with [[sources/articles/agentic-thinking-lin|Lin's essay]] and [[sources/articles/langchain-better-harness|LangChain's Better-Harness]] framing.
 - Some practitioners now implicitly split "harness" from "folder-level context." The distinction is useful operationally even if the vocabulary is not yet standardized.
 
+## Related
+
+- [[concepts/agent-improvement-loop]] — the loop for improving a harness systematically via traces, evals, and targeted changes
+- [[workflows/skillify-agent-reliability]] — pattern for encoding agent failures as permanent tested skills; "thin harness / fat skills" architecture
+
 ## Sources
 
 - [[sources/articles/agentic-thinking-lin]]

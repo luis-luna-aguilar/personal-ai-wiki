@@ -69,7 +69,7 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Examples:** [[tools/claude-code]], [[tools/codex]]
 
 ### agent-toolkits
-- **Parent domain(s):** coding
+- **Parent domain(s):** coding, agents
 - **Applies to types:** tool
 - **Definition:** Toolkits that package a specific developer platform's docs, schemas, validation, and related capabilities for AI coding tools via plugins, skills, or MCP servers.
 - **Examples:** [[tools/shopify-ai-toolkit]]
@@ -111,13 +111,13 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Examples:** [[tools/futurehouse]]
 
 ### speech-to-text
-- **Parent domain(s):** agents, healthcare
+- **Parent domain(s):** agents, healthcare, voice
 - **Applies to types:** tool
 - **Definition:** Products focused primarily on transcription, speech recognition, and converting audio into structured text for downstream human or agent workflows.
 - **Examples:** [[tools/elevenlabs-scribe]]
 
 ### voice-models
-- **Parent domain(s):** agents
+- **Parent domain(s):** agents, voice
 - **Applies to types:** tool
 - **Definition:** AI voice products centered on expressive text-to-speech, speech-to-speech conversation, or voice cloning as a primary interface or output surface.
 - **Examples:** [[tools/hume-evi-3]], [[tools/eleven-v3]]

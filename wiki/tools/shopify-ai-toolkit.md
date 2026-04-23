@@ -1,7 +1,7 @@
 ---
 title: Shopify AI Toolkit
 type: tool
-domains: [coding]
+domains: [coding, agents]
 subcategory: agent-toolkits
 tags: [agentic]
 as_of: 2026-04-10

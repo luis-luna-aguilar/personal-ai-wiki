@@ -16,7 +16,7 @@ When adding a new wiki page, add its index entry under the correct section. One 
 
 Read-me-first dashboards per domain.
 
-- [[state-of/coding]] — current state of AI coding tools and workflows *(as_of: 2026-04-21)*
+- [[state-of/coding]] — current state of AI coding tools and workflows *(as_of: 2026-04-22)*
 - [[state-of/models]] — current state of foundation models *(as_of: 2026-04-23)*
 - [[state-of/agents]] — current state of agentic systems and tool use *(as_of: 2026-04-23)*
 - [[state-of/legal]] — current state of AI in legal practice *(as_of: 2026-04-22)*
@@ -26,6 +26,7 @@ Read-me-first dashboards per domain.
 - [[state-of/creative]] — current state of AI creative tools across video, avatar, slides, and UI generation *(as_of: 2026-04-22)*
 - [[state-of/healthcare]] — current state of AI in healthcare workflows, medical knowledge, and patient operations *(as_of: 2026-04-22)*
 - [[state-of/cybersecurity]] — current state of AI applied to cybersecurity: attack surfaces, vulnerability detection, and security tooling *(as_of: 2026-04-22)*
+- [[state-of/voice]] — current state of AI voice tools: text-to-speech, speech-to-speech, and speech-to-text *(as_of: 2026-04-23)*
 
 ## Models
 
@@ -55,7 +56,8 @@ Tools and products built on top of models. One page per tool.
 - [[tools/claude-managed-agents]] — Anthropic's hosted long-horizon agent runtime concept built around decoupled session, harness, and sandbox abstractions *(as_of: 2026-04-15)*
 - [[tools/codex]] — OpenAI's cloud-based coding agent via CLI and ChatGPT *(as_of: 2026-04-21)*
 - [[tools/cursor]] — Cursor 3.1 agentic coding workspace with tiled supervision, local↔cloud handoff, and Bugbot learned rules *(as_of: 2026-04-14)*
-- [[tools/deep-research]] — cross-vendor long-horizon research-agent category now productized by OpenAI and Google *(as_of: 2026-04-22)*
+- [[tools/openai-deep-research]] — OpenAI's deep research agent; multi-step web research; available via ChatGPT and API *(as_of: 2026-04-22)*
+- [[tools/gemini-deep-research]] — Gemini Deep Research and Deep Research Max; most benchmarked public implementation; MCP support for internal data *(as_of: 2026-04-22)*
 - [[tools/dragon-copilot]] — Microsoft's clinician-facing voice assistant for healthcare documentation and workflow automation *(as_of: 2026-04-22)*
 - [[tools/dream-machine]] — Luma's generative-video surface for creation and editing workflows *(as_of: 2026-04-22)*
 - [[tools/eleven-v3]] — expressive text-to-speech model optimized for high-control generated voice output *(as_of: 2026-04-22)*
@@ -98,6 +100,7 @@ Tools and products built on top of models. One page per tool.
 
 Benchmark pages. Current leaderboards and methodology.
 
+- [[benchmarks/swe-bench]] — de facto standard software engineering benchmark; leaderboard of model SWE-bench Verified/Pro/Multilingual scores *(as_of: 2026-04-23)*
 - [[benchmarks/swe-polybench]] — Amazon Science benchmark for multilingual and broader software engineering evaluation *(as_of: 2026-04-22)*
 
 ## Workflows
@@ -122,6 +125,7 @@ Ideas and techniques.
 - [[concepts/harness]] — scaffolding that wraps a model into an acting agent: prompts, tools, orchestration, environment, evals *(as_of: 2026-04-21)*
 - [[concepts/knowledge-layer]] — compiled, maintained context layer between raw sources and agents *(as_of: 2026-04-21)*
 - [[concepts/leworldmodel]] — LeWM JEPA world model with SIGReg and much faster planning than DINO-WM *(as_of: 2026-03-13)*
+- [[concepts/deep-research]] — category concept for longer-horizon research agents that plan, search, synthesize, and iterate *(as_of: 2026-04-22)*
 - [[concepts/mcp]] — open protocol for exposing tools, resources, and prompts to AI hosts and agents *(as_of: 2026-04-22)*
 - [[concepts/spec-driven-development]] — SDD concept, three-level taxonomy, and critiques *(as_of: 2025-10-15)*
 - [[concepts/slopsquatting]] — supply-chain attack via LLM-hallucinated package names; 19.7% hallucination rate (USENIX 2025) *(as_of: 2026-04-22)*
@@ -157,13 +161,13 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 
 ## Page count
 
-- state-of: 10
+- state-of: 11
 - models: 13
-- tools: 44
-- benchmarks: 1
+- tools: 45
+- benchmarks: 2
 - workflows: 4
-- concepts: 13
+- concepts: 14
 - trends: 7
 - training: 5
 
-**Total content pages: 91.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 97.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.

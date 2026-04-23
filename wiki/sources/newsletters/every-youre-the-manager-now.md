@@ -4,7 +4,7 @@ type: source
 source_type: newsletter
 source_file: raw/newsletters/2026-04-16-youre-the-manager-now.md
 ingested: 2026-04-21
-domains: [training, coding]
+domains: [coding]
 ---
 
 # Every — You’re the Manager Now

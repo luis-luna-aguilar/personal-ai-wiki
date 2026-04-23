@@ -4,7 +4,7 @@ type: source
 source_type: newsletter
 source_file: raw/newsletters/2026-04-20-we-need-to-talk-about-ai-autopilot.md
 ingested: 2026-04-21
-domains: [training]
+domains: []
 ---
 
 # Every — We Need to Talk About AI Autopilot

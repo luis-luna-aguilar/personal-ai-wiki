@@ -1,12 +1,9 @@
 ---
 title: Perplexity Computer
 type: tool
-domains:
-  - computer-use
+domains: [computer-use, finance]
 subcategory: computer-use
-tags:
-  - perplexity
-  - closed-source
+tags: [perplexity, closed-source]
 as_of: 2026-04-10
 sources:
   - perplexity-computer-plaid

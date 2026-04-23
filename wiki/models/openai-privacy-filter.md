@@ -5,7 +5,7 @@ domains: [models, cybersecurity]
 subcategory: utility-model
 tags: [openai, open-weights]
 as_of: 2026-04-23
-sources: [ainews-2026-04-23, the-code-2026-04-23, superhuman-2026-04-23]
+sources: [ainews-2026-04-23, the-code-2026-04-23]
 ---
 
 # OpenAI Privacy Filter
@@ -37,4 +37,3 @@ Most enterprise AI pipelines face a real blocking question: "can we send this da
 
 - [[sources/newsletters/ainews-2026-04-23]]
 - [[sources/newsletters/the-code-2026-04-23]]
-- [[sources/newsletters/superhuman-2026-04-23]]

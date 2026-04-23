@@ -16,6 +16,7 @@ Domains are high-level areas of use. They correspond to state-of pages in `wiki/
 - **`creative`** — AI tools for image, video, slides, avatar, and UI generation
 - **`healthcare`** — AI applied to clinical workflows, medical knowledge, transcription, patient operations, and healthcare delivery
 - **`cybersecurity`** — AI applied to security: attack surface analysis, vulnerability detection, supply chain risk, and AI-specific threat vectors
+- **`voice`** — AI voice products: text-to-speech, speech-to-speech conversation, voice cloning, and speech-to-text transcription as primary interface or output
 
 ## Conventions
 

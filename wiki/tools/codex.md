@@ -1,7 +1,7 @@
 ---
 title: Codex
 type: tool
-domains: [coding]
+domains: [coding, cybersecurity]
 subcategory: terminal-coding-agent
 tags: [openai, closed-source, agentic]
 as_of: 2026-04-22

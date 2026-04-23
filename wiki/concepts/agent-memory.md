@@ -30,6 +30,10 @@ Many agent systems fail not because they lack storage, but because they surface 
 - Treat persistent memory as a tradeoff, not a free upgrade: better recall can be offset by stale instructions, contradictory preferences, and "context rot"
 - Prefer memory structures humans can inspect and prune instead of silent accumulation
 
+## Related
+
+- [[concepts/knowledge-layer]] — complementary concept: a compiled, maintained context surface that sits above raw sources; where agent-memory focuses on retrieval mechanics, the knowledge layer focuses on how content is structured and maintained
+
 ## Caveats
 
 - The current source set is centered on one startup's claims and a benchmark delta reported through newsletter coverage

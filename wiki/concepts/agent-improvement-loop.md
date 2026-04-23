@@ -89,6 +89,11 @@ This mirrors the Better-Harness pattern at the prompt level. The loop is based o
 - [2026-04-09] Page created from LangChain's conceptual guide "The Agent Improvement Loop Starts with a Trace"
 - [2026-04-22] Added self-improving skills pattern: closed feedback loop for skill drift; meta-skill 5-step prompt optimization loop
 
+## Related
+
+- [[concepts/harness]] — the harness is what the improvement loop iterates on; better traces → targeted harness changes
+- [[workflows/skillify-agent-reliability]] — complementary pattern: encodes failures as permanent skills rather than harness-level prompt changes; works at the skill/script layer instead of the orchestration layer
+
 ## Sources
 
 - [[sources/articles/trace-agent-improvement-loop]]

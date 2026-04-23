@@ -22,6 +22,10 @@ A knowledge layer is a compiled, maintained context surface that sits between ra
 
 The core claim is not just retrieval quality. A maintained knowledge layer changes the agent's starting point from "guess from whatever I can find right now" to "act from a curated, versioned memory of this domain." That makes agent behavior more cumulative, more inspectable, and easier to improve over time.
 
+## Related
+
+- [[concepts/agent-memory]] — complementary concept: long-term memory as a retrieval-and-reasoning problem; the knowledge layer addresses the *content* layer, agent memory addresses the *retrieval mechanics*
+
 ## Caveats
 
 - The strongest current source is a practitioner essay, not an academic benchmark or vendor-neutral comparison
