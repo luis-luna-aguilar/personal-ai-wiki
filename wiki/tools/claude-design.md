@@ -1,7 +1,7 @@
 ---
 title: Claude Design
 type: tool
-domains: [creative, agents]
+domains: [creative]
 subcategory: visual-design-prototyping
 tags: [anthropic, closed-source, beta]
 as_of: 2026-04-22

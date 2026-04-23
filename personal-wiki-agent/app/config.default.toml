@@ -1,0 +1,35 @@
+[personal_wiki_agent]
+provider = "openrouter"
+model = "openrouter:qwen/qwen3.6-plus"
+# max_steps is kept for documentation purposes only.
+# It is NOT passed as a LangGraph recursion_limit — deepagents manages that at 9,999.
+# Tune max_files and max_search_results to control how much the agent reads per query.
+max_steps = 10
+max_files = 8
+max_search_results = 12
+include_personal_by_default = false
+require_index_first = true
+stale_after_days = 30
+hard_stale_after_days = 90
+return_consulted_pages = true
+return_gaps = true
+answer_style = "concise_analyst"
+log_level = "INFO"
+log_tool_calls = true
+log_model_io = true
+persist_query_history = true
+
+[personal_wiki_agent.transport]
+enable_local_mcp = true
+enable_remote_mcp = false
+
+[personal_wiki_agent.paths]
+repo_root = "../.."
+index_path = "../../wiki/index.md"
+personal_root = "../../personal"
+wiki_root = "../../wiki"
+log_path = "../../wiki/log.md"
+proposals_root = "../../proposals"
+runtime_logs_dir = "../logs"
+runtime_log_file = "../logs/personal-wiki-agent.log"
+query_history_dir = "../logs/queries"

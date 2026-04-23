@@ -14,11 +14,7 @@ Google's AI assistant product, built on the Gemini model family. Combines conver
 
 ## Current status (as of 2026-04-22)
 
-- Deep Research and Deep Research Max launched in paid public preview via the Gemini API
-- Built on Gemini 3.1 Pro for long-horizon research workflows across web and custom sources
-- Benchmark scores (Max variant): 93.3% DeepSearchQA, 85.9% BrowseComp, 54.6% HLE
-- Capabilities: MCP support (arbitrary MCP servers for internal data), multimodal inputs (PDF, CSV, image, audio, video), code execution, collaborative planning (user can adjust the research plan mid-run), real-time progress streaming
-- Native charts and infographics generated inline inside analytical reports
+- Deep Research and Deep Research Max available via the Gemini API — see [[tools/deep-research]] for capabilities and benchmarks
 - Chrome Skills: reusable Gemini prompts that run as one-click browser workflows
 - Native Gemini Mac app
 

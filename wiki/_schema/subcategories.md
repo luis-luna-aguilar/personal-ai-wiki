@@ -6,7 +6,7 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
-Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration-ui`, `agent-orchestration`, `coding-model`, `frontier-multimodal-model`, `legal-ai`, `model-orchestration`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-multimodal-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`
 
 ### spec-driven-development
 - **Parent domain(s):** coding
@@ -20,17 +20,11 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Definition:** Coding tools whose primary UI is built around managing one or more AI coding agents (local and/or cloud), rather than file-centric editing with AI assistance bolted on.
 - **Examples:** [[tools/cursor]]
 
-### agent-orchestration-ui
-- **Parent domain(s):** agents
-- **Applies to types:** tool
-- **Definition:** Surfaces (desktop, web, mobile, chat-integration) that let a human supervise, hand off, and merge work across multiple AI agents running in parallel.
-- **Examples:** [[tools/cursor]]
-
 ### agent-orchestration
 - **Parent domain(s):** agents
-- **Applies to types:** tool
-- **Definition:** Platforms that run or coordinate long-horizon agents across one or more execution environments, with durable state and orchestration separated from any single local process or container.
-- **Examples:** [[tools/claude-managed-agents]]
+- **Applies to types:** tool | workflow
+- **Definition:** Platforms, surfaces, and patterns for running, supervising, or internally routing AI agents — spanning hosted runtimes, human-supervision UIs, and multi-model coordination patterns within a single agentic task.
+- **Examples:** [[tools/claude-managed-agents]], [[tools/claude-cowork]], [[workflows/advisor-strategy]]
 
 ### coding-model
 - **Parent domain(s):** models, coding
@@ -49,12 +43,6 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Applies to types:** tool
 - **Definition:** End-to-end AI products built specifically for legal workflows (matters, contracts, research, drafting), as distinct from generic horizontal assistants applied to legal use cases.
 - **Examples:** [[tools/harvey]]
-
-### model-orchestration
-- **Parent domain(s):** agents
-- **Applies to types:** workflow | concept
-- **Definition:** Patterns that combine models of different sizes or costs inside a single agentic task — e.g. a small executor escalating to a larger advisor, or a large orchestrator delegating to small workers. Concerned with how an agent is internally structured, not with the user-facing surface.
-- **Examples:** [[workflows/advisor-strategy]]
 
 ### agentic-devops
 - **Parent domain(s):** coding, agents
@@ -181,6 +169,12 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Applies to types:** tool
 - **Definition:** Tools that autonomously plan, search, read, synthesize, and iterate across many sources to produce longer-horizon research outputs rather than answer in a single pass.
 - **Examples:** [[tools/deep-research]]
+
+### utility-model
+- **Parent domain(s):** models
+- **Applies to types:** model
+- **Definition:** Small, narrow-purpose models built to solve a specific infrastructure or pipeline task (e.g. PII redaction, classification, embedding) rather than general-purpose generation or reasoning.
+- **Examples:** [[models/openai-privacy-filter]]
 
 ### Format
 

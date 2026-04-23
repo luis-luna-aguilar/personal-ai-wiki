@@ -71,6 +71,19 @@ One playbook per source type. The LLM follows the playbook when ingesting. Setti
   2. Produce a bulleted signal list with checkboxes. Recommend action per signal.
   3. Wait for the user to check boxes and say "process the triage."
 
+## deep-research
+
+- **Raw folder:** `raw/deep-research/`
+- **Filename:** `YYYY-MM-DD-topic.md`
+- **Ingest style:** research-triage
+- **Playbook:**
+  1. **Never ingest directly.** Always write a triage file first at `proposals/triage/`.
+  2. Treat the report as a synthesis artifact: useful for clustering topics and finding leads, but not automatically trustworthy on specific claims.
+  3. Group the report into thematic clusters, not one signal per claim.
+  4. For each signal, record the likely wiki impact, confidence/evidence shape, and whether the item needs verification before proposal.
+  5. When processing checked items, verify important claims against stronger underlying sources before drafting proposals.
+  6. Prefer several focused proposals over one omnibus proposal, because research reports are usually broad and mixed-quality.
+
 ## meeting
 
 - **Raw folder:** `raw/meetings/`

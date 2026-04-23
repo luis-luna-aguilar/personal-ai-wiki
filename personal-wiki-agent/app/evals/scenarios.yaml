@@ -1,0 +1,12 @@
+scenarios:
+  - name: factual_question
+    prompt: "What is the current state of AI coding tools?"
+    include_personal_views: false
+  - name: judgment_question
+    prompt: "Should I prioritize MCP for internal agent tooling?"
+    context: "I care about interoperability and durable leverage."
+    include_personal_views: true
+  - name: recent_changes
+    prompt: "What has changed recently in agent frameworks and orchestration?"
+    include_personal_views: false
+

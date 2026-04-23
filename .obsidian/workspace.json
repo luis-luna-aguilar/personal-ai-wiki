@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "57157a86b6de0c75",
+        "id": "246a209883d95f1f",
         "type": "tabs",
         "children": [
           {
-            "id": "c74f420b995e0fe1",
+            "id": "b1b902b0d68b54f2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "proposals/2026-04-23-google-cloud-next.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2026-04-23-google-cloud-next"
             }
           }
         ]
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 281.5
   },
   "right": {
     "id": "62a57cc027336b11",
@@ -176,44 +180,43 @@
       "bases:Create new base": false
     }
   },
-  "active": "32d5ab9afeaf3323",
+  "active": "b1b902b0d68b54f2",
   "lastOpenFiles": [
-    "proposals/applied/2026-04-22-professional-devs-control.md",
-    "proposals/applied/2026-04-22-nano-banana-2.md",
-    "proposals/applied/2026-04-22-gstack.md",
-    "proposals/applied/2026-04-22-glasswing-mythos-preview.md",
-    "proposals/applied/2026-04-22-every-four-agents.md",
-    "proposals/applied/2026-04-22-cursor-third-era.md",
-    "proposals/applied/2026-04-22-codex-updates.md",
-    "proposals/applied/2026-04-22-claude-design-update.md",
-    "proposals/applied/2026-04-22-claude-code-features.md",
-    "proposals/applied/2026-04-22-agentic-cognitive-overhead.md",
-    "wiki/models/nano-banana-2.md",
-    "wiki/models/claude-mythos-preview.md",
-    "wiki/tools/gstack.md",
-    "wiki/sources/tweets/prof-devs-control.md",
-    "wiki/sources/tweets/nano-banana-2-tweet.md",
-    "wiki/sources/repos/garrytan-gstack-repo.md",
-    "wiki/sources/articles/glasswing.md",
-    "wiki/sources/articles/every-four-agents.md",
-    "wiki/sources/tweets/cursor-third-era.md",
-    "wiki/sources/tweets/codex-updates-april-2026.md",
-    "wiki/sources/articles/claude-design-anthropic-labs.md",
-    "wiki/sources/tweets/claude-code-worktree-autofix.md",
-    "wiki/sources/tweets/agentic-cognitive-overhead.md",
-    "proposals/2026-04-22-agentic-cognitive-overhead.md",
-    "proposals/2026-04-22-claude-code-features.md",
-    "proposals/applied/2026-04-22-quantization.md",
-    "research-requests",
-    "skills/wiki-research-request/agents/openai.yaml",
-    "skills/wiki-research-request/references",
-    "skills/wiki-research-request/agents",
-    "skills/wiki-research-request",
-    "skills",
-    "raw/notes/AI Tools & Roadmap.xlsx",
-    "raw/notes/AI Tools & Roadmap (1).xlsx",
-    "podcast/out/block-3-concepts-trends-training.html",
-    "podcast/out/block-2-tools-workflows.html",
+    "proposals/2026-04-23-anthropic-mcp-cowork-bedrock.md",
+    "raw/articles/Building agents that reach production systems with MCP _ Claude.pdf",
+    "proposals/applied/2026-04-23-ai-native-engineering-interviews.md",
+    "proposals/2026-04-23-ai-native-engineering-interviews.md",
+    "proposals/2026-04-22-microsoft-foundry-hosted-agents.md",
+    "proposals/applied/2026-04-22-microsoft-foundry-hosted-agents.md",
+    "wiki/sources/articles/microsoft-foundry-agents-2026.md",
+    "wiki/tools/microsoft-foundry-agents.md",
+    "proposals/triage/2026-04-23-agents-evals-research-report.md",
+    "personal-wiki-agent/logs/queries/7277a83a51c0-response-final.json",
+    "personal-wiki-agent/logs/queries/7277a83a51c0-response-raw.json",
+    "personal-wiki-agent/logs/queries/7277a83a51c0-request.json",
+    "personal-wiki-agent/app/__pycache__/engine.cpython-314.pyc",
+    "personal-wiki-agent/app/__pycache__/__init__.cpython-314.pyc",
+    "personal-wiki-agent/logs/queries/a9825e2fcc6e-request.json",
+    "personal-wiki-agent/logs/queries/f215d5d05505-request.json",
+    "personal-wiki-agent/logs/queries/6e681ab4c94a-request.json",
+    "personal-wiki-agent/app/__pycache__/server.cpython-311.pyc",
+    "personal-wiki-agent/FUTURE_WORK.md",
+    "proposals/2026-04-22-anthropic-81k-economics.md",
+    "proposals/applied/2026-04-22-anthropic-81k-economics.md",
+    "wiki/sources/articles/anthropic-81k-economics.md",
+    "proposals/applied/2026-04-22-claude-code-ultrareview.md",
+    "wiki/sources/articles/claude-code-ultrareview.md",
+    "proposals/applied/2026-04-23-openai-privacy-filter.md",
+    "personal-wiki-agent/app/prompts/system.md",
+    "personal-wiki-agent/app/prompts/answer_format.md",
+    "personal-wiki-agent/app/query_instructions.md",
+    "wiki/models/openai-privacy-filter.md",
+    "proposals/2026-04-22-claude-code-ultrareview.md",
+    "proposals/2026-04-23-google-cloud-next.md",
+    "proposals/2026-04-23-gpt-5-5-spud-launch.md",
+    "proposals/2026-04-23-openai-privacy-filter.md",
+    "proposals/applied/2026-04-23-qwen-3-6-27b.md",
+    "wiki/sources/newsletters/the-code-2026-04-23.md",
     "raw/assets/2026-04-09-langchain-2039028327030079565.jpg"
   ]
 }

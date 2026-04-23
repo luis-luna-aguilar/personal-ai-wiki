@@ -29,10 +29,7 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 ### Visual design & prototyping
 
 - [[tools/claude-design]] — Anthropic; research preview for collaborative prototype, slide, one-pager, and marketing-asset creation; powered by Opus 4.7; brand onboarding from codebase + design files; Pro/Max/Team/Enterprise *(as of 2026-04-22)*
-
-### Agent-native documents
-
-- [[tools/genspark-slides]] — presentation-generation workflow that fits the broader human/agent document-artifact pattern *(as of 2026-04-22)*
+- [[tools/genspark-slides]] — AI presentation generation inside Genspark's broader agent/content surface *(as of 2026-04-22)*
 
 ## Recent changes
 

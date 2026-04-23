@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 type: index
-as_of: 2026-04-22
+as_of: 2026-04-23
 ---
 
 # Wiki Index
@@ -18,7 +18,7 @@ Read-me-first dashboards per domain.
 
 - [[state-of/coding]] — current state of AI coding tools and workflows *(as_of: 2026-04-21)*
 - [[state-of/models]] — current state of foundation models *(as_of: 2026-04-22)*
-- [[state-of/agents]] — current state of agentic systems and tool use *(as_of: 2026-04-22)*
+- [[state-of/agents]] — current state of agentic systems and tool use *(as_of: 2026-04-23)*
 - [[state-of/legal]] — current state of AI in legal practice *(as_of: 2026-04-22)*
 - [[state-of/computer-use]] — current state of AI computer-use agents *(as_of: 2026-04-22)*
 - [[state-of/finance]] — current state of AI in finance *(as_of: 2026-04-22)*
@@ -41,7 +41,9 @@ Foundation models. One page per model family or generation.
 - [[models/nano-banana-2]] — Google image generation model; Gemini world understanding + real-time web search grounding *(as_of: 2026-04-22)*
 - [[models/minimax-m2-7]] — open-weight coding and agent model with unusually strong late-March cost/performance claims *(as_of: 2026-03-22)*
 - [[models/muse-spark]] — Meta's new multimodal model; source emphasizes compute-efficient scaling *(as_of: 2026-04-10)*
-- [[models/qwen-3-6-35b-a3b]] — Alibaba open-weight coding model; coding/tools niche sharper than creative use *(as_of: 2026-04-22)*
+- [[models/openai-privacy-filter]] — OpenAI open-weight MoE for on-device PII detection and redaction; 1.5B-total / 50M-active; Apache 2.0 *(as_of: 2026-04-23)*
+- [[models/qwen-3-6-27b]] — Alibaba dense 27B open-weight; beats prior 397B MoE on all coding benchmarks; runs under 20 GB RAM *(as_of: 2026-04-23)*
+- [[models/qwen-3-6-35b-a3b]] — Alibaba open-weight MoE coding/agent model; 24GB-class local baseline; benchmark lead now held by 27B dense sibling *(as_of: 2026-04-22)*
 
 ## Tools
 
@@ -73,6 +75,7 @@ Tools and products built on top of models. One page per tool.
 - [[tools/kiro]] — VS Code-based spec-driven development tool built around a 3-doc workflow *(as_of: 2025-10-15)*
 - [[tools/kora]] — healthcare operations assistant for scheduling and patient-service workflows *(as_of: 2026-04-22)*
 - [[tools/landingai-agentic-document-extraction]] — agentic document-intelligence system for forms, tables, and visually complex PDFs *(as_of: 2026-04-22)*
+- [[tools/microsoft-foundry-agents]] — Microsoft's hosted enterprise agent runtime with per-session VM isolation, persistent resume, and governance controls *(as_of: 2026-04-23)*
 - [[tools/mistral-document-ai]] — document-intelligence product for extracting and structuring enterprise documents *(as_of: 2026-04-22)*
 - [[tools/open-evidence]] — physician-oriented medical evidence and clinical-question tool *(as_of: 2026-04-22)*
 - [[tools/openai-agents-sdk]] — OpenAI's updated agent SDK with native sandbox, checkpoints, and provider-neutral manifests *(as_of: 2026-04-15)*
@@ -104,6 +107,7 @@ Reusable patterns and recipes.
 - [[workflows/advisor-strategy]] — Anthropic's small-executor + Opus-advisor escalation pattern *(as_of: 2026-04-09)*
 - [[workflows/agentic-orchestration-patterns]] — reusable patterns for multi-agent systems: ambiguity gates, scoped context, and failure-aware replanning *(as_of: 2026-04-21)*
 - [[workflows/flex-processing]] — lower-cost asynchronous processing pattern for non-urgent OpenAI workloads *(as_of: 2026-04-22)*
+- [[workflows/skillify-agent-reliability]] — Garry Tan's pattern for turning agent failures into permanent tested skills; 10-step checklist and "thin harness / fat skills" architecture *(as_of: 2026-04-23)*
 
 ## Concepts
 
@@ -143,7 +147,7 @@ Practical guidance for teaching teams and businesses to use AI well.
 - [[training/ai-style-guides]] — how to externalize editorial taste and anti-patterns so AI writing stops drifting generic *(as_of: 2026-03-19)*
 - [[training/anti-autopilot-review-friction]] — deliberate review friction to stop fluent AI output from being accepted without independent judgment *(as_of: 2026-04-21)*
 - [[training/company-wide-ai-enablement]] — operating patterns for broad AI adoption *(as_of: 2026-04-21)*
-- [[training/ai-enablement-software-development]] — engineering-specific AI adoption: critique loops, CI/CD as bottleneck, and junior talent pipeline risk *(as_of: 2026-04-22)*
+- [[training/ai-enablement-software-development]] — engineering-specific AI adoption: critique loops, AI-native hiring, CI/CD bottlenecks, and junior talent pipeline risk *(as_of: 2026-04-23)*
 
 ## Sources
 
@@ -154,12 +158,12 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 ## Page count
 
 - state-of: 10
-- models: 11
-- tools: 43
+- models: 13
+- tools: 44
 - benchmarks: 1
-- workflows: 3
+- workflows: 4
 - concepts: 13
 - trends: 7
 - training: 5
 
-**Total content pages: 87.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 91.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.

@@ -2,7 +2,7 @@
 title: Claude Cowork
 type: tool
 domains: [agents]
-subcategory: agent-orchestration-ui
+subcategory: agent-orchestration
 tags: [anthropic, agentic]
 as_of: 2026-04-21
 sources: [claude-cowork-launch, aakash-gupta-cowork, claude-design-launch, claude-productivity-surfaces, anthropic-desktop-agent-expansion-late-march, anthropic-persistent-workflow-surfaces-february]

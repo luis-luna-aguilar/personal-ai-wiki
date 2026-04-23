@@ -6,6 +6,10 @@
 Generated: YYYY-MM-DD
 Status: draft
 
+## Context for the researcher
+
+Briefly explain what this wiki is, what kind of knowledge base it is, and what the research will later be used for. Assume the researcher has never seen the wiki before.
+
 ## Purpose
 
 Explain why this topic matters to the wiki and what future wiki improvement the research should enable.
@@ -36,6 +40,12 @@ State the concrete target for the deep-research pass.
 - Priority source type
 - Priority source type
 
+## Tools and vendors to map
+
+- Relevant tools, frameworks, or platforms to investigate
+- Relevant tools, frameworks, or platforms to investigate
+- Relevant tools, frameworks, or platforms to investigate
+
 ## What to extract from each useful source
 
 - Publication date or date of record
@@ -44,7 +54,7 @@ State the concrete target for the deep-research pass.
 - Metrics, benchmarks, or evaluation methods
 - Failure modes and limitations
 - Concrete examples or case studies
-- Relevant links, repos, tools, papers, talks, or datasets
+- Relevant links, repos, tools, frameworks, vendors, papers, talks, or datasets
 
 ## Desired final wiki outputs
 

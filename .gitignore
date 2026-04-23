@@ -7,9 +7,14 @@ __pycache__/
 *.pyc
 *.pyo
 .pytest_cache/
+*.egg-info/
 
 # OS
 .DS_Store
 
 # Podcast build output (generated from wiki content)
 podcast/out/
+
+# Personal Wiki Agent runtime artifacts
+personal-wiki-agent/logs/
+personal-wiki-agent/app/config.local.toml

@@ -1,8 +1,8 @@
 ---
 title: Company-wide AI enablement
 type: training
-as_of: 2026-04-22
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents]
+as_of: 2026-04-23
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics]
 ---
 
 # Company-wide AI enablement
@@ -44,6 +44,7 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 - **Agent-to-agent collaboration in shared channels.** Every's March OpenClaw reporting showed personal agents explaining failures to each other, broadcasting to groups, and operating as named participants in team communication
 - **Proof-based status rules.** A practical reliability pattern from the OpenClaw cluster: agents should not say "done" or "working on it" without concrete evidence such as a process ID, file path, URL, or command output
 - **Trust battery with judge agent.** Grant autonomy incrementally rather than all at once. Implement a nightly judge agent that reviews interactions, scores behavior, adjusts a trust percentage, and lets the primary agent self-update memory from negative feedback. Start at a deliberately low trust level (Every's Claudie: 20% vs 50% for human new hires) and let the agent earn scope through demonstrated reliability rather than through time or configuration changes.
+- **Tasteful tokenmaxxing: depth over breadth.** The emerging leadership consensus (AIE Miami, April 2026) is not "burn more tokens" or "burn fewer tokens" but *how* you burn them. Shopify CTO Mikhail Parakhin: prefer serial autoresearch loops (depth) over kicking off 5, 10, 50 parallel LLM runs (breadth). Reid Hoffman's middle ground: track how people use AI, not just how much — team-wide experimentation plus regular check-ins to surface what's actually working. Dex Horthy (coiner of "Context Engineering") publicly retracted his earlier vibe-coding-only stance and encouraged engineers to read the code. The practical signal: measure the *quality* of token use, not the quantity.
 
 ## Failure modes
 
@@ -58,7 +59,7 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 - **AI work intensification.** Early workplace reporting suggests AI often expands task scope, blurs work/life boundaries, and encourages many parallel threads rather than simply reducing workload
 - **Compulsive "one more prompt" loops.** Teams can become more productive in bursts while also degrading attention, recovery time, and judgment unless managers design explicit stopping points and protected focus windows
 - **False-completion behavior.** Always-on agents often sound confident before any real action has started; teams need explicit instructions that status updates require proof
-- **Tokenmaxxing — measuring token spend as a productivity proxy.** Meta's internal "Claudeonomics" leaderboard ranked 85,000 employees by AI token usage; within weeks employees were leaving agents idle to climb the rankings. One OpenAI engineer processed 210 billion tokens in a single week (enough to fill Wikipedia 33 times). Dubbed "tokenmaxxing," this mirrors the early 2000s lines-of-code mistake exactly. Reasoning models compound the problem by generating inner-monologue tokens as a function of architecture, not work done. Reward outcomes and quality; token spend is a cost center, not a productivity signal.
+- **Tokenmaxxing — measuring token spend as a productivity proxy.** Meta's internal "Claudeonomics" leaderboard ranked 85,000 employees by AI token usage; within weeks employees were leaving agents idle to climb the rankings. One OpenAI engineer processed 210 billion tokens in a single week (enough to fill Wikipedia 33 times). Dubbed "tokenmaxxing," this mirrors the early 2000s lines-of-code mistake exactly. Reasoning models compound the problem by generating inner-monologue tokens as a function of architecture, not work done. Jensen Huang publicly said he'd be "deeply alarmed" if engineers weren't burning tokens worth half their annual salary — amplifying the leaderboard pressure. Reward outcomes and quality; token spend is a cost center, not a productivity signal. (See also: "Tasteful tokenmaxxing" in Proven patterns for the emerging middle-ground guidance.)
 
 ## Humans in the loop vs. above the loop
 
@@ -89,6 +90,15 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - Boulton and Watt argues operationally complex "boring businesses" such as funeral homes and aesthetic-clinic platforms may be stronger AI targets than software-native demos because software is becoming easier to build while real-world workflow complexity stays scarce
 - Their examples suggest AI compresses market research and iteration cycles materially, but reliability and integration into live systems remain the hard part
 - Their receptionist pilot found that customers churned more under AI even when error rates matched humans, reinforcing that perceived tolerance and trust shape adoption
+
+**Anthropic 81K-person economics survey (April 2026):** The largest direct survey of Claude users on AI's economic impact (80,508 respondents). Key quantified findings:
+- **Scope, not speed, is the primary productivity driver.** 48% of users who described productivity gains cited expanded scope (doing new or previously impossible tasks); 40% cited speed; quality and cost were minor. The common "AI makes you faster" framing understates the more significant "AI makes you capable of new things" effect.
+- **Mean self-reported productivity: 5.1/7** — "substantially more productive." ~3% reported negative or neutral impact.
+- **Job threat correlates with observed AI exposure.** People in occupations where Claude does the highest share of tasks worry about displacement 3× more often than those in low-exposure roles. Elementary school teachers were less worried than software engineers, consistent with task distribution data.
+- **U-shaped threat relationship with speedup.** Both those *slowed down* by AI (creative workers who find it stifling) and those experiencing the *largest speedups* express the most job displacement concern. The moderate-speedup middle group is least worried. If a role's tasks shrink dramatically in time required, workers sense future viability uncertainty.
+- **Benefits flow to workers more than employers.** Most respondents who named a beneficiary cited themselves. Only 10% said employers were extracting more work. But this is uneven across career stage.
+- **Early-career workers are worse positioned.** 60% of early-career respondents personally benefited from AI vs 80% of senior professionals. Early-career workers also expressed significantly higher job displacement concern, consistent with tentative signs of slowdowns in hiring of recent graduates.
+- **Wage-productivity relationship is U-shaped.** Highest-paid workers (software developers, management) report the largest gains. But some lowest-wage workers also report large gains — often for side projects or new capabilities. Mid-tier scientific and legal professionals are the least enthusiastic.
 
 ## See also
 

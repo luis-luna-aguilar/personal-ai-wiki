@@ -8,6 +8,28 @@ Chronological append-only record of wiki activity. Entries start with:
 
 Valid ops: `ingest`, `triage`, `reject`, `apply`, `lint`, `query-verify`, `schema`.
 
+## [2026-04-23] schema | structural reorganization | merged agent-orchestration-ui + agent-orchestration + model-orchestration → agent-orchestration; moved claude-design to creative only; moved Deep Research content from gemini to deep-research; fixed genspark-slides placement in state-of/creative
+
+## [2026-04-23] apply | AI-native engineering interviews | 2 pages updated (training/ai-enablement-software-development, wiki/index)
+
+## [2026-04-23] apply | Microsoft Foundry Hosted Agents | 2 pages updated (state-of/agents, wiki/index), 2 created (tools/microsoft-foundry-agents, sources/articles/microsoft-foundry-agents-2026)
+
+## [2026-04-23] apply | Qwen 3.6 27B | 2 pages updated (state-of/models, models/qwen-3-6-35b-a3b), 3 created (models/qwen-3-6-27b, sources/newsletters/ainews-2026-04-23, sources/newsletters/the-code-2026-04-23)
+
+## [2026-04-23] apply | Skillify — Agent Reliability Pattern | 1 page updated (state-of/agents), 2 created (workflows/skillify-agent-reliability, sources/tweets/garrytan-skillify-2026-04-23)
+
+## [2026-04-23] triage | Email Digest — Ai — 2026-04-22 to 2026-04-23 | 3 new proposals, 1 existing proposal updated, 0 skipped; signals: Anthropic 81K economics survey, Microsoft Foundry Hosted Agents, Claude Code /ultrareview, Google GEAP full blog (merged into 2026-04-23-google-cloud-next.md)
+
+## [2026-04-23] triage | Email Digest — Ai — 2026-04-23 | 8 proposals generated, 2 skipped (SpaceX/Cursor, Claude Mythos); signals: Qwen3.6-27B, OpenAI Workspace Agents, Google Cloud Next, OpenAI Privacy Filter, Anthropic MCP+Cowork/Bedrock, Skillify pattern, Tokenmaxxing, AI-native engineering interviews
+
+## [2026-04-23] apply | Anthropic 81K Economics Survey | 1 page updated (training/company-wide-ai-enablement), 1 created (sources/articles/anthropic-81k-economics)
+
+## [2026-04-23] apply | Claude Code /ultrareview | 1 page updated (tools/claude-code), 1 created (sources/articles/claude-code-ultrareview)
+
+## [2026-04-23] apply | OpenAI Privacy Filter | 2 pages updated (state-of/models, wiki/index), 1 created (models/openai-privacy-filter); schema: utility-model subcategory added
+
+## [2026-04-23] apply | Tokenmaxxing — Tasteful vs. Wasteful | 1 page updated (training/company-wide-ai-enablement: Jensen Huang quote added to tokenmaxxing failure mode, "tasteful tokenmaxxing" proven pattern added)
+
 To see the most recent activity:
 
 ```bash

@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: [anthropic, cli, agentic]
-as_of: 2026-04-22
-sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix]
+as_of: 2026-04-23
+sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview]
 ---
 
 # Claude Code
@@ -47,6 +47,28 @@ The Monitor tool (announced 2026-04-10) lets Claude Code create background scrip
 
 Routines extend Claude Code from local terminal sessions into repeatable hosted workflows. A routine packages a prompt, repo, and connectors into a workflow that can run on a schedule, from an API call, or in response to an event on Anthropic's infrastructure.
 
+## /ultrareview
+
+Cloud multi-agent code review, introduced in v2.1.86 as a research preview. Unlike `/review` (single-pass, seconds, runs locally), ultrareview launches a fleet of reviewer agents in a remote sandbox that independently reproduces and verifies each finding before reporting it — so results focus on real bugs rather than style suggestions.
+
+- Runs entirely in a remote cloud sandbox; terminal stays free while it runs
+- Many reviewer agents explore the change in parallel, surfacing issues a single-pass review would miss
+- Runs as a background task (~5-10 minutes); findings appear as a notification in your session
+- Can review the diff between your current branch and the default branch (including uncommitted and staged changes), or a GitHub PR by number (`/ultrareview <PR-number>`)
+- Requires authentication with a Claude.ai account — not available with API key only, and not available on Amazon Bedrock, Google Cloud Vertex AI, or Microsoft Foundry
+- Not available to organizations with Zero Data Retention enabled
+
+**Pricing:**
+| Plan | Included free runs | After free runs |
+| --- | --- | --- |
+| Pro | 3 free through May 5, 2026 | billed as extra usage |
+| Max | 3 free through May 5, 2026 | billed as extra usage |
+| Team and Enterprise | none | billed as extra usage |
+
+Paid reviews typically cost $5–$20 depending on change size. Extra usage must be enabled on the account before launching a paid review; run `/extra-usage` to check or enable it. Use `/tasks` to monitor or stop a running review.
+
+Use `/review` for fast feedback while iterating. Use `/ultrareview` before merging a substantial change when you want a deeper pass with independent verification.
+
 ## Architecture lessons from the leak
 
 The April 1, 2026 Claude Code leak clarified what Anthropic had already decided mattered in frontier coding agents. The repeated takeaways across technical summaries were consistent: durable context is layered instead of dumped into one giant prompt; repo state and recent work are treated as first-class context; permission boundaries are explicit; and subagents are structured to reuse context efficiently instead of re-paying setup cost from scratch.
@@ -67,6 +89,7 @@ That matters because it shifts the product story away from "Anthropic has a stro
 
 ## Recent changes
 
+- [2026-04-23] /ultrareview added (v2.1.86+, research preview): cloud multi-agent code review with independent finding verification; 5-10 min background; 3 free runs for Pro/Max through May 5, 2026; then $5-20 extra usage; requires Claude.ai login; not on Bedrock/Vertex AI/Foundry
 - [2026-04-22] Added --worktree flag (built-in parallel isolated git worktrees), /autofix-pr CLI trigger, and Remote Control mobile session spawning
 - [2026-04-22] Added /recap (session gap summaries after inactivity) and /fewer-permission-prompts skill (history-based allowlist generator)
 - [2026-02-27] Claude Code added auto-memory for project-local recall of commands, preferences, and architecture context

@@ -2,7 +2,7 @@
 title: Advisor strategy
 type: workflow
 domains: [agents]
-subcategory: model-orchestration
+subcategory: agent-orchestration
 tags: [anthropic, agentic]
 as_of: 2026-04-09
 sources: [advisor-strategy]

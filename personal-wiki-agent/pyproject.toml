@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "personal-wiki-agent"
+version = "0.1.0"
+description = "Deep Agents-powered MCP and CLI interface for Luis's personal wiki."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "deepagents>=0.0.5",
+  "langchain-openrouter>=0.0.3",
+  "mcp>=1.10.0",
+]
+
+[project.scripts]
+personal-wiki-agent = "app.cli:main"
+personal-wiki-agent-mcp = "app.server:main"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]

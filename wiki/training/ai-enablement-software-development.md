@@ -1,8 +1,8 @@
 ---
 title: AI enablement — software development
 type: training
-as_of: 2026-04-22
-sources: [ramp-ai-adoption-playbook, shopify-latent-space-april-2026, lennysan-simonw-interview, agentic-cognitive-overhead, garrytan-gstack-repo]
+as_of: 2026-04-23
+sources: [ramp-ai-adoption-playbook, shopify-latent-space-april-2026, lennysan-simonw-interview, agentic-cognitive-overhead, garrytan-gstack-repo, the-code-2026-04-23]
 ---
 
 # AI enablement — software development
@@ -44,6 +44,16 @@ AI adoption inside engineering teams has moved fastest, but the bottlenecks and 
 - Red/green TDD is Simon's highest-leverage agentic engineering pattern: agents write tests first, watch them fail, write the implementation, watch them pass. The 5-word prompt "use red/green TDD" encodes the full workflow because agents recognize the jargon.
 - "Hoarding things you know how to do": Simon maintains 193 small HTML/JS tools and a separate research repo of coding-agent experiments. When a new problem arrives, he points Claude Code at past projects and says "combine these two approaches." The knowledge base compounds.
 
+## Hiring AI-native engineers
+
+Traditional coding interviews became obsolete once Claude Code and Codex started passing them trivially. The old rubric mostly measures syntax recall and framework knowledge, which no longer tells you much about how strong someone will be in an AI-native engineering environment. Karat's position is especially notable here because it has run interview volume at real industry scale, not just for one internal team.
+
+- **Live AI-assisted builds.** The better replacement is an open-ended build session where candidates use their AI tool of choice to ship something real under time pressure. Sierra and Augment Code both described versions of this pattern.
+- **Evaluate product taste and architectural judgment.** The signal shifts from "did they remember the API?" to "what did they build, what tradeoffs did they make, and why?"
+- **Calibration gets harder.** Open-ended interviews are more subjective and require stronger debrief discipline, but they also surface standout strengths that leetcode-style filters miss.
+
+Practical implication: interview loops now need to test whether a candidate can direct AI well, make coherent architectural calls, and produce something that feels product-ready, not whether they can outperform a coding agent at syntax recall.
+
 ## The junior talent problem
 
 Agentic AI is removing the "grunt work" through which junior engineers historically built pattern recognition. If entry-level coding work disappears entirely, there's a pipeline problem: senior talent runs out within a decade. McKinsey's framing: learning and development should move from a periodic sidecar to the center of the employee journey. Junior engineers who start with AI tools from day one don't face the hurdle of disrupting an established workflow — but they also don't accumulate 20 years of pattern recognition through practice.
@@ -57,3 +67,4 @@ Mid-career engineers may be the most vulnerable group — more so than juniors o
 - [[sources/tweets/lennysan-simonw-interview]]
 - [[sources/tweets/agentic-cognitive-overhead]]
 - [[sources/repos/garrytan-gstack-repo]]
+- [[sources/newsletters/the-code-2026-04-23]]

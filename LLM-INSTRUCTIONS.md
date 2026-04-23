@@ -26,7 +26,7 @@ This is a personal knowledge base that tracks the fast-moving AI landscape: tool
 
 ```
 raw/                       # Immutable sources. You READ but never modify.
-  articles/  tweets/  papers/  podcasts/  repos/  newsletters/  meetings/  notes/
+  articles/  tweets/  papers/  podcasts/  repos/  newsletters/  deep-research/  meetings/  notes/
   assets/                  # Images from Obsidian Web Clipper / fetch_url.py
 
 wiki/                      # You own this. Current state.
@@ -273,14 +273,16 @@ Triggered when the user gives you a URL and says **"ingest"** or **"fetch and in
 
 **If fetch fails:** tell the user, suggest they paste the content or use Obsidian Web Clipper. Do not fall back to `WebFetch`.
 
-### 3. Triage (newsletter / batch of signals)
+### 3. Triage (newsletter / batch of signals / research reports)
 
-Triggered when the user drops a newsletter into `raw/newsletters/` and says **"triage this"** or similar.
+Triggered when the user drops a newsletter into `raw/newsletters/`, a research memo into `raw/deep-research/`, or a similar high-breadth source and says **"triage this"** or similar.
 
 **Steps:**
 1. Read the newsletter.
 2. Write `proposals/triage/YYYY-MM-DD-<slug>.md` using the triage format below.
 3. Do **not** create any ingest proposals yet. Wait for user to check boxes and say "process the triage."
+
+**Special rule for deep-research reports:** treat them as synthesis artifacts, not as canonical sources. They are useful for topic discovery, source discovery, and clustering, but they may contain hallucinations, over-compressed taxonomies, or weak secondary sourcing. Never write wiki proposals from a research report alone when the claim depends on a specific framework, number, benchmark score, vendor practice, or named tool. Use the report to identify clusters and to find better primary sources behind those clusters.
 
 **Triage file format:**
 
@@ -323,12 +325,68 @@ status: pending
     *Recommended:* skip
 ```
 
+**Research-report triage format:** When the source is a deep-research report, cluster by topic area rather than by individual claim. Each signal should include a quick confidence judgment and a verification recommendation.
+
+```markdown
+---
+type: triage
+source: raw/deep-research/2026-04-23-agents-evals.md
+status: pending
+---
+
+# Triage: Agent Evals Research Report — 2026-04-23
+
+## Signals
+
+- [ ] **[agents]** Agent eval taxonomy and operating model
+
+    **What it is:** The report proposes a broad taxonomy covering capability, regression, trajectory, unit-level, and online evals, plus distinctions between coding and workflow agents.
+
+    **Why it matters:** Strong fit for `concepts/` and `training/`; likely updates `concepts/harness.md` and `concepts/agent-improvement-loop.md`.
+
+    **Evidence shape:** mixed synthesis; some likely grounded in strong sources, but framing appears normalized by the report author.
+    **Source quality:** mixed primary and secondary
+    **Verification:** verify before proposal
+    **Recommended:** verify-first
+
+- [ ] **[coding]** Evals for agentic software development
+
+    **What it is:** Practical guidance for deterministic checks, coding-task-specific eval patterns, shadow mode, CI quality gates, and converting artifacts into eval cases.
+
+    **Why it matters:** Strong fit for a training page on engineering evals and autonomy.
+
+    **Evidence shape:** promising, with concrete named tools and company examples.
+    **Source quality:** mixed primary and secondary
+    **Verification:** verify before proposal
+    **Recommended:** verify-first
+
+- [ ] **[agents]** Benchmarks and eval tools landscape
+
+    **What it is:** Benchmark families, observability/eval platforms, and supporting tools mentioned across the report.
+
+    **Why it matters:** May create or update benchmark pages and selected tool pages.
+
+    **Evidence shape:** useful source-discovery map, but too noisy to trust directly.
+    **Source quality:** mixed, noisy
+    **Verification:** required; use primary docs or benchmark papers
+    **Recommended:** verify-first
+```
+
 **Processing a triage:** When the user says "process the triage" (or similar), re-read the triage file, then:
 
 1. **Use already-fetched content.** For email digest triages (Workflow 4), URL content was already fetched during the triage step — use those existing `raw/` files. For standard newsletter triages, fetch now: run `scripts/fetch_url.py` for each checked item's primary URL. If a fetch fails, fall back to the newsletter summary and note the gap.
 2. **Video check.** If a fetched source turns out to be primarily a video with no useful text (tweet with only a video embed, YouTube link, etc.), do not generate a proposal — note it as `[video — skip]` and move on.
 3. **Generate proposals.** For each checked item that passed the video check, generate a proposal at `proposals/YYYY-MM-DD-<slug>.md` using the full source content. Thin signals still get a proposal — just a small one.
 4. **Nothing is applied directly from a triage.** Every change goes through the proposal → approval → apply cycle. Unchecked items are ignored.
+
+**Processing a research-report triage:** When the source is a deep-research report, the checked items follow a stricter path:
+
+1. **Do not treat the report itself as sufficient evidence.** Re-open the checked report sections and note the key claims, but verify the important claims against better sources before writing proposals.
+2. **Prioritize primary sources.** For each checked item, fetch and read the best available sources behind the report: official docs, benchmark papers/sites, engineering blogs from the relevant company, public repos, or authoritative technical writeups. Avoid relying on generic SEO blogs, thin Medium posts, or listicles when a stronger source exists.
+3. **Use the report as a map, not the proof.** The report is acceptable as a supporting source summary page later, but the resulting proposal should be grounded mainly in the verified underlying sources.
+4. **Split aggressively by topic cluster.** Research reports are usually too wide for one proposal. Prefer several focused proposals over one omnibus proposal.
+5. **Create tool-specific proposals only when the tool clearly matters.** A tool mentioned in the report does not automatically deserve a `tools/` page. Only promote tools that appear durable, relevant to the wiki's scope, and well-supported by stronger sources.
+6. **If verification fails, downgrade instead of forcing.** When a framework, metric, or named pattern cannot be grounded cleanly, either omit it from the proposal or leave it in the triage as `hold`.
 
 Then move the triage file to `proposals/triage/applied/` and append a log entry: `## [YYYY-MM-DD] triage | <name> | N proposals, K skipped`.
 

@@ -3,9 +3,15 @@
 Generated: 2026-04-22
 Status: draft
 
+## Context for the researcher
+
+This research will feed a personal Obsidian-based AI knowledge wiki. The wiki tracks the current state of AI tools, models, workflows, concepts, trends, benchmarks, and practical training guidance. It is not trying to produce an academic literature review or a vendor leaderboard for its own sake. The end goal is to turn the research into concise, source-backed pages that help a practitioner understand the space, compare options, and teach teams how to operate well with AI systems.
+
+The wiki already has strong coverage of agentic development, coding agents, harness engineering, and organizational AI adoption. It is weaker on evals: the wiki mentions that evals, traces, review gates, and verification are essential for agent autonomy, but it does not yet contain a practical, reusable map of how to do evals in software work or normal business/knowledge-work tasks. This research should close that gap.
+
 ## Purpose
 
-This wiki already treats agentic development, harness engineering, agent supervision, and organizational AI adoption as major themes. It repeatedly says evals, traces, review gates, and CI/CD are critical to giving agents more autonomy, but it does not yet contain a practical eval strategy that can be used to train people or teams.
+The wiki already treats agentic development, harness engineering, agent supervision, and organizational AI adoption as major themes. It repeatedly says evals, traces, review gates, and CI/CD are critical to giving agents more autonomy, but it does not yet contain a practical eval strategy that can be used to train people or teams.
 
 The goal of this research is to build the missing operational layer: how teams should design, run, interpret, and maintain evals for AI agents doing software-development work and for agents doing normal knowledge-work tasks.
 
@@ -23,13 +29,14 @@ The goal of this research is to build the missing operational layer: how teams s
 - No dedicated concept page for agent evals, task evals, or eval-driven agent development.
 - No training page that teaches teams how to build evals before increasing agent autonomy.
 - No taxonomy separating deterministic tests, rubric-based human review, LLM-as-judge, simulation, trace evals, benchmark suites, production monitoring, and regression tests.
-- No guidance for software-development evals beyond generic "tests/CI/CD/review are bottlenecks."
+- No guidance for software-development evals beyond generic "tests/CI/CD/review are bottlenecks." No typing of evals, classifications, explorations of the different kind of evals we can do on software.
 - No guidance for normal business-task agents: research, email, support, sales ops, finance analysis, legal drafting, scheduling, document processing, or workflow automation.
 - No autonomy ladder showing what eval evidence is required before moving from "assistant" to "in the loop" to "above the loop" to more autonomous execution.
 - No patterns for maintaining eval suites over time: mining production traces, preventing overfitting, building holdout sets, refreshing stale tasks, and deciding when an eval is no longer useful.
 - No guidance on evaluator reliability: when LLM judges are acceptable, when humans must label, how to calibrate rubrics, how to measure inter-rater agreement, and how to detect judge drift.
 - No implementation recipes for turning specs, acceptance criteria, PR comments, support tickets, SOPs, or role handbooks into eval cases.
 - No list of benchmark families worth tracking for agent capability claims, nor a warning about where public benchmarks fail to predict production usefulness.
+- No lessons learned and benchmarks from people that had implemented evals across their agentic tasks and software tasks.
 
 ## Research objective
 
@@ -75,6 +82,16 @@ The research should focus on what people can actually do: eval patterns, example
 - Public repositories that include eval harnesses, task sets, judge prompts, benchmark adapters, or regression-test examples.
 - Podcasts or conference talks only when they include specific operational details not present in written docs.
 
+## Tools and vendors to map
+
+Treat tool discovery as a core part of the assignment. Identify which tools are useful for designing, running, scoring, tracing, and monitoring evals for agents.
+
+- General eval and observability platforms for LLMs and agents, such as LangSmith, Braintrust, Humanloop, Promptfoo, OpenAI eval-related tooling, Anthropic tooling, Google tooling, inspect-style frameworks, and comparable products.
+- Coding-agent-specific or software-eval-adjacent tools, such as CI-integrated evaluation harnesses, benchmark runners, regression-test tooling, code-review evaluators, judge pipelines, sandboxed task runners, and trace/telemetry systems.
+- Workflow-agent and business-task eval tooling, such as simulation frameworks, test harnesses for support/sales/research workflows, rubric/grading systems, human-review operations tools, and monitoring products for long-running agents.
+- Any open-source frameworks, repos, or templates that make it easier for teams to stand up evals without building everything from scratch.
+- For each tool, capture what it is good for, what type of evals it supports, where it fits in the stack, its likely user, and its limitations.
+
 ## What to extract from each useful source
 
 - Publication date or date of record.
@@ -86,6 +103,8 @@ The research should focus on what people can actually do: eval patterns, example
 - How teams avoid overfitting, such as holdout sets, hidden tests, trace splits, periodic refreshes, or human review of proposed harness changes.
 - How evals connect to operational decisions: deployment, rollback, permission changes, autonomy increases, model choice, prompt/harness changes, or user training.
 - Concrete examples, templates, prompts, rubrics, dashboards, or eval cases that can be adapted into training material.
+- Which tools, frameworks, or vendors are mentioned or implied, and whether practitioners actually use them in production.
+- For each tool worth tracking: category, core use case, strengths, weaknesses, notable integrations, and whether it is better for coding agents, business-task agents, or both.
 - Failure modes: benchmark mismatch, judge bias, brittle tests, stale evals, false positives/negatives, gaming, cost explosion, review fatigue, or evals that reward the wrong behavior.
 
 ## Desired final wiki outputs
@@ -93,6 +112,7 @@ The research should focus on what people can actually do: eval patterns, example
 - New concept page candidate: `wiki/concepts/agent-evals.md` or `wiki/concepts/task-evals.md`, covering taxonomy, online/offline loops, judge reliability, trace mining, and autonomy gating.
 - New training page candidate: `wiki/training/evals-for-agentic-software-development.md`, focused on software teams using coding agents.
 - New training page candidate: `wiki/training/evals-for-agentic-work.md`, focused on normal business/task agents and manager-level supervision.
+- New tool pages or updates for eval-specific tools if the research finds products important enough to track directly.
 - Update candidate: [[wiki/concepts/harness]] with a tighter link from harness design to eval design.
 - Update candidate: [[wiki/concepts/agent-improvement-loop]] with more concrete eval-suite and trace-mining patterns.
 - Update candidate: [[wiki/training/ai-enablement-software-development]] with a practical "eval stack" for coding-agent adoption.
@@ -107,11 +127,3 @@ The research should focus on what people can actually do: eval patterns, example
 - Do not focus on RLHF, pretraining, or model-lab internal evaluation unless it transfers directly to user-facing agent evals.
 - Do not produce a vendor catalog unless it helps explain practical eval patterns.
 - Do not assume software-development evals and normal task-agent evals are the same; compare them explicitly.
-
-## Ingestion notes
-
-- Existing domains `agents` and `coding` are enough for most likely pages.
-- Existing tag `agentic` can be used, but a future proposal may need a new `evals` tag if multiple pages become eval-centered.
-- Existing subcategory `agentic-orchestration-patterns` may cover workflow pages, but a future proposal may be needed if the research produces a distinct workflow type for eval-driven agent development.
-- Any new wiki content should preserve the wiki's current-state style: practical, dated, source-backed, and concise on main pages.
-- If the research produces a long playbook, keep the wiki page concise and place detail in source summaries or separate focused training pages.

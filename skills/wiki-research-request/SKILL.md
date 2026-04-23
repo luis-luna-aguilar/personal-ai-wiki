@@ -22,11 +22,13 @@ Use this skill to turn "the wiki is missing or weak on X" into a precise researc
 
 Use `references/research-request-template.md` as the starting structure. Adapt section names when useful, but keep these core elements:
 
+- **Context for the researcher:** A short standalone explanation of what this wiki is, how it is used, and what kind of deliverable the research should support. Do not assume the researcher knows the wiki.
 - **Purpose:** The reason this research matters to the wiki and the user.
 - **Current wiki baseline:** Concise synthesis of existing coverage with links to relevant wiki pages.
 - **Known gaps:** Specific missing information, not generic "needs more research."
 - **Research questions:** Actionable questions a deep-research agent can answer.
 - **Source priorities:** Which sources to seek first, such as vendor docs, engineering blogs, academic papers, benchmark reports, practitioner case studies, talks, podcasts, or public repos.
+- **Tools and vendors to map:** Relevant products, frameworks, and infra that could help with the topic. Tool discovery is a first-class part of the research, not a side note.
 - **Desired outputs:** The pages, concepts, training guidance, benchmarks, or proposals the later ingest should be able to create or update.
 - **Exclusions:** What the research should not spend time on.
 - **Ingestion notes:** Candidate wiki destinations and schema implications. If a new tag/domain/subcategory may be needed, call it out as a future proposal, not as an already-approved change.
@@ -34,8 +36,9 @@ Use `references/research-request-template.md` as the starting structure. Adapt s
 ## Quality Bar
 
 - Make the request detailed enough that a separate researcher can run with it without this conversation.
+- Make the request standalone. Do not rely on phrases like "this wiki" without first explaining what the wiki is and what it contains.
 - Tie gaps to actual wiki content. Avoid saying the wiki lacks something unless you checked relevant pages.
 - Prefer operational questions over abstract surveys. The wiki is for tools, workflows, concepts, trends, and training guidance.
+- Treat tool discovery as mandatory when it is relevant to the topic. The final research request should ask which tools, frameworks, platforms, and evaluation products are useful in practice.
 - Ask for patterns, examples, failure modes, metrics, and implementation recipes, not only definitions.
 - Keep the research request source-seeking, not conclusion-heavy. It should define what to investigate, not pretend the research has already been done.
-

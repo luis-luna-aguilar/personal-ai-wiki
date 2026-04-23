@@ -2,7 +2,7 @@
 title: Flex processing
 type: workflow
 domains: [agents]
-subcategory: model-orchestration
+subcategory: agent-orchestration
 tags: [openai]
 as_of: 2026-04-22
 sources: [openai-flex-processing, legacy-ai-tools-roadmap-xlsx]

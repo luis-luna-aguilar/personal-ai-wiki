@@ -3,33 +3,31 @@ title: State of Agents
 type: state-of
 domains: [agents]
 tags: []
-as_of: 2026-04-22
-sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, ainews-2026-04-22, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents, cursor-cloud-agents-march, cursor-cloud-agents-february, google-adk, openai-deep-research, gemini-deep-research-max, futurehouse-homepage, uipath-maestro-introduction, anthropic-mcp, google-a2a, legacy-ai-tools-roadmap-xlsx]
+as_of: 2026-04-23
+sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, ainews-2026-04-22, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents, cursor-cloud-agents-march, cursor-cloud-agents-february, google-adk, openai-deep-research, gemini-deep-research-max, futurehouse-homepage, uipath-maestro-introduction, anthropic-mcp, google-a2a, legacy-ai-tools-roadmap-xlsx, microsoft-foundry-agents-2026]
 ---
 
 # State of Agents
 
 Current state of agentic systems — tool use, multi-step autonomy, orchestration frameworks. Organized by subcategory. Multiple leaders per subcategory are expected.
 
+_Coding agents (Claude Code, Codex, Cursor) are tracked in [[state-of/coding]]._
+
 ## Subcategories
-
-### Agent orchestration UIs
-
-Surfaces (desktop, web, mobile, chat) where humans supervise, hand off, and review work across multiple AI agents running in parallel.
-
-- [[tools/claude-design]] — Anthropic; research-preview artifact-generation surface for prototypes, slides, and one-pagers, pushing Claude toward generated business artifacts rather than chat-only output *(as of 2026-04-21)*
-- [[tools/claude-cowork]] — Anthropic; desktop knowledge-work agent with Live Artifacts, released alongside [[tools/claude-design]] as part of a broader push toward generated dashboards, reports, and prototypes; the earlier Claude for Word beta suggests this artifact/productivity direction started before Cowork itself *(as of 2026-04-21)*
-- [[tools/cursor]] — Cursor's cloud-agent walkthrough made the orchestration-ui thesis explicit before the April 3.1 polish pass: agents run remotely, test their own work, return videos, and hand the human a supervision layer over many coding agents rather than a single-agent IDE *(as of 2026-03-06)*
-- [[tools/orca]] — Open-source desktop surface for supervising multiple coding agents across isolated worktrees, with live status reporting, diff review, and CI visibility *(as of 2026-04-21)*
 
 ### Agent orchestration
 
-Platforms that run or coordinate long-horizon agents across execution environments, instead of only exposing a local loop or a thin UI over one agent.
+Platforms, surfaces, and patterns for running, supervising, or routing AI agents — spanning hosted runtimes, human-supervision UIs, and multi-model coordination within a single agentic task.
 
-- [[tools/claude-managed-agents]] — Anthropic's public-beta hosted runtime separates session, harness, and sandbox; the surrounding April product cadence makes it look like the platform backbone behind a broader Anthropic agent stack, not just an isolated architecture post *(as of 2026-04-15)*
-- [[tools/openai-agents-sdk]] — OpenAI's updated SDK combines a model-native harness with native sandbox execution, durable checkpoint / rehydration, provider-neutral manifests, and built-in support for MCP, skills, AGENTS.md, shell, and `apply_patch` *(as of 2026-04-15)*
-- [[tools/hermes-agent]] — NousResearch; open-source autonomous agent framework; 100K+ GitHub stars; four-layer memory with periodic consolidation; stateless sub-agent parallelism, LLM-driven replanning, directory-local context injection *(as of 2026-04-21)*
-- [[tools/uipath-maestro]] — enterprise orchestration layer for agents, robots, people, and long-running process flows; stronger fit for operational orchestration than for pure research-agent work *(as of 2026-04-22)*
+- [[tools/claude-cowork]] — Anthropic; desktop knowledge-work agent with Live Artifacts; VM-backed local-first execution; scheduled and persistent tasks *(as of 2026-04-21)*
+- [[tools/cursor]] — cloud-agent supervision layer: agents run remotely, test their own work, return videos for human review *(as of 2026-03-06)*
+- [[tools/orca]] — open-source desktop surface for supervising multiple coding agents across isolated worktrees, with live status, diff review, and CI visibility *(as of 2026-04-21)*
+- [[tools/claude-managed-agents]] — Anthropic's hosted runtime; separates session, harness, and sandbox; platform backbone behind a broader Anthropic agent stack *(as of 2026-04-15)*
+- [[tools/microsoft-foundry-agents]] — Microsoft; hosted runtime with per-session VM isolation, persistent filesystems, Entra Agent ID governance, MCP Toolbox, and multi-framework support *(as of 2026-04-23)*
+- [[tools/openai-agents-sdk]] — model-native harness with native sandbox execution, durable checkpoint / rehydration, and provider-neutral manifests *(as of 2026-04-15)*
+- [[tools/hermes-agent]] — NousResearch; open-source; four-layer memory, stateless sub-agent parallelism, LLM-driven replanning *(as of 2026-04-21)*
+- [[tools/uipath-maestro]] — enterprise orchestration for agents, robots, and people; stronger fit for operational process flows than pure research workloads *(as of 2026-04-22)*
+- [[workflows/advisor-strategy]] — small executor (Sonnet/Haiku) drives the loop; escalates to Opus only when stuck; +2.7% SWE-bench Multilingual, −11.9% cost vs Sonnet alone *(as of 2026-04-09)*
 
 ### Agent frameworks
 
@@ -42,12 +40,6 @@ SDKs and development kits for building custom agents with tools, multi-agent pat
 Longer-horizon research agents that plan, search, read, synthesize, and return multi-step research outputs rather than answer in one pass.
 
 - [[tools/deep-research]] — cross-vendor product category now concretely shipped by OpenAI and Google; strong enough to split from assistant pages into its own tool space *(as of 2026-04-22)*
-
-### Model orchestration
-
-Patterns that combine models of different sizes or costs inside a single agentic task. Concerned with *how* agents are structured internally (which model runs the loop, which model steps in when), not with the user-facing surface.
-
-- [[workflows/advisor-strategy]] — Anthropic: a small executor (Sonnet or Haiku) drives the loop and escalates to Opus as an *advisor* only when stuck. Shipped as a server-side `advisor_20260301` tool on the Claude API, making it a one-line change to a Messages request. Reported +2.7% on SWE-bench Multilingual *and* −11.9% cost for Sonnet+Opus-advisor vs Sonnet alone *(as of 2026-04-09)*
 
 ### Agentic DevOps
 
@@ -75,6 +67,8 @@ Platforms built to support literature-driven or discovery-oriented scientific wo
 
 ## Recent changes
 
+- [2026-04-23] Added [[tools/microsoft-foundry-agents]] under `Agent orchestration`; Microsoft is now a serious enterprise hosted-agent platform contender with VM-per-session isolation, persistent resume, and a fuller governance stack
+- [2026-04-23] Added [[workflows/skillify-agent-reliability]]; Garry Tan's 10-step "thin harness / fat skills" agent reliability pattern — most detailed published treatment of agent skill architecture and failure prevention
 - [2026-04-22] Added `Agent frameworks` with [[tools/google-adk]]; active framework layer should be represented directly instead of forced into orchestration-only categories
 - [2026-04-22] Added `Deep research tools` with [[tools/deep-research]]; OpenAI and Google now make this a distinct product category
 - [2026-04-22] Added `Science agent platforms` with [[tools/futurehouse]]; science-agent infrastructure deserves a slot between orchestration and full autonomous research

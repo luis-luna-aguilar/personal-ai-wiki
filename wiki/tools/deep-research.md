@@ -14,14 +14,17 @@ Deep Research is the emerging product category for longer-horizon research agent
 
 ## Current status (as of 2026-04-22)
 
-- OpenAI and Google both ship Deep Research-style products
-- Product shape is converging on planning, browsing, source synthesis, and asynchronous or extended research runs
-- Gemini's current surface is especially explicit about multimodal grounding, MCP access, and report generation
+- OpenAI and Google both ship productized versions; the category is no longer a preview feature buried inside an assistant
+- Product shape is converging on: planning phase → web browsing → source synthesis → asynchronous or extended research runs
+- Gemini's variant is the most fully specified publicly: 93.3% DeepSearchQA, 85.9% BrowseComp, 54.6% HLE on the Max tier
+- Gemini Deep Research Max capabilities: MCP support (arbitrary MCP servers for internal data), multimodal inputs (PDF, CSV, image, audio, video), code execution, collaborative planning (user can adjust the research plan mid-run), real-time progress streaming, native charts and infographics generated inline in analytical reports
+- Both OpenAI and Google offer API access to their Deep Research variants; Gemini's is built on Gemini 3.1 Pro
 
 ## Why it matters
 
-- This is a distinct workflow class, not just "chat with search"
-- Deep Research products are becoming a practical bridge between assistants and more autonomous knowledge-work agents
+- Distinct workflow class, not just "chat with search" — the planning and iteration loop is the product
+- Becoming a practical bridge between assistants and more autonomous knowledge-work agents
+- MCP integration (Gemini) means Deep Research can reach internal data sources, not just the public web
 
 ## Sources
 
