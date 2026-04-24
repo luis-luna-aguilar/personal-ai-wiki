@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f9893bdb4268ef14",
+        "id": "89084c5a2446dc22",
         "type": "tabs",
         "children": [
           {
-            "id": "3e5fbf4858e9b659",
+            "id": "bdf2b1302114e014",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -176,8 +176,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "3e5fbf4858e9b659",
+  "active": "32d5ab9afeaf3323",
   "lastOpenFiles": [
+    "proposals/applied/2026-04-24-agent-evals-concept.md",
+    "wiki/concepts/agent-evals.md",
+    "proposals/2026-04-24-agent-evals-concept.md",
+    "proposals/applied/2026-04-24-autonomy-ladder.md",
+    "proposals/2026-04-24-autonomy-ladder.md",
     "README.md",
     "proposals/applied/2026-04-24-benchmark-map.md",
     "wiki/benchmarks/terminal-bench.md",
@@ -186,8 +191,6 @@
     "wiki/benchmarks/tau-bench.md",
     "wiki/benchmarks/webarena.md",
     "wiki/benchmarks/osworld.md",
-    "proposals/2026-04-24-agent-evals-concept.md",
-    "proposals/2026-04-24-autonomy-ladder.md",
     "proposals/2026-04-24-benchmark-map.md",
     "DEFERRED.md",
     "personal/takes/test-backlog.md",
@@ -202,9 +205,6 @@
     "wiki/sources/deep-research",
     "proposals/2026-04-24-eval-tools.md",
     "proposals/applied/2026-04-24-claude-code-one-time-scheduling.md",
-    "wiki/sources/tweets/claude-code-one-time-scheduling.md",
-    "proposals/2026-04-24-claude-code-one-time-scheduling.md",
-    "proposals/2026-04-24-claude-managed-agents-memory.md",
     "raw/articles/Building agents that reach production systems with MCP _ Claude.pdf",
     "personal-wiki-agent/logs/queries/7277a83a51c0-response-final.json",
     "personal-wiki-agent/logs/queries/7277a83a51c0-response-raw.json",

@@ -20,7 +20,7 @@ The analogy to model training is explicit in the field: just as training data sh
 - **Orchestration logic** — how the agent loops, when it escalates, how sub-agents are coordinated
 - **Execution environment** — browser, terminal, code sandbox, API layers, memory systems
 - **Storage / compute boundary** — many practical agent stacks now separate durable shared context (repos, filesystems, knowledge stores) from isolated execution sandboxes so multiple agents can collaborate without sharing one unsafe runtime
-- **Evaluation layer** — evals and traces that measure whether the agent behaves as intended
+- **Evaluation layer** — evals and traces that measure whether the agent behaves as intended; see [[concepts/agent-evals]] for the taxonomy of eval categories and the trajectory-vs-result distinction
 - **Context-shaping layer** — practical systems increasingly treat repo state, recent edits, local instructions, and memory retrieval policy as part of the harness boundary, not as incidental prompt stuffing
 - **Reusable operating modules** — skills, hook scripts, slash commands, and plugin bundles increasingly act as composable pieces of the harness, not just ad hoc project artifacts
 
@@ -75,6 +75,7 @@ The two are related but not identical. Many real-world "agent" improvements actu
 
 ## Related
 
+- [[concepts/agent-evals]] — taxonomy of agent evaluation categories and why trajectory quality matters alongside final results
 - [[concepts/agent-improvement-loop]] — the loop for improving a harness systematically via traces, evals, and targeted changes
 - [[workflows/skillify-agent-reliability]] — pattern for encoding agent failures as permanent tested skills; "thin harness / fat skills" architecture
 

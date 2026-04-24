@@ -128,6 +128,7 @@ Reusable patterns and recipes.
 Ideas and techniques.
 
 - [[concepts/a2a]] — Google protocol for communication and delegation between agents across systems *(as_of: 2026-04-22)*
+- [[concepts/agent-evals]] — taxonomy of agent evaluation categories and the trajectory-vs-result distinction *(as_of: 2026-04-23)*
 - [[concepts/agent-improvement-loop]] — trace-centered workflow for improving AI agents through tracing, evals, regression testing, and eval-suite upkeep *(as_of: 2026-04-24)*
 - [[concepts/agent-memory]] — long-term agent memory as a retrieval-and-reasoning problem *(as_of: 2026-03-23)*
 - [[concepts/agentic-thinking]] — proposed successor to reasoning thinking; models that reason in order to act *(as_of: 2026-04-10)*
@@ -160,8 +161,8 @@ Practical guidance for teaching teams and businesses to use AI well.
 
 - [[training/ai-native-product-building]] — practical guidance for the post-vibe-coding bottleneck shift *(as_of: 2026-03-23)*
 - [[training/ai-style-guides]] — how to externalize editorial taste and anti-patterns so AI writing stops drifting generic *(as_of: 2026-03-19)*
-- [[training/anti-autopilot-review-friction]] — deliberate review friction to stop fluent AI output from being accepted without independent judgment *(as_of: 2026-04-21)*
-- [[training/company-wide-ai-enablement]] — operating patterns for broad AI adoption *(as_of: 2026-04-21)*
+- [[training/anti-autopilot-review-friction]] — deliberate review friction to stop fluent AI output from being accepted without independent judgment *(as_of: 2026-04-23)*
+- [[training/company-wide-ai-enablement]] — operating patterns for broad AI adoption, agent governance, and staged autonomy *(as_of: 2026-04-23)*
 - [[training/ai-enablement-software-development]] — engineering-specific AI adoption: critique loops, AI-native hiring, CI/CD bottlenecks, and junior talent pipeline risk *(as_of: 2026-04-23)*
 - [[training/evals-for-agentic-software-development]] — eval stack for coding agents: deterministic gates, task-specific patterns, MVES, shadow mode, trace mining *(as_of: 2026-04-23)*
 - [[training/evals-for-agentic-work]] — eval patterns for workflow and task agents: pass^k reliability, task-specific metrics, simulated users *(as_of: 2026-04-23)*
@@ -179,8 +180,8 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 - tools: 49
 - benchmarks: 8
 - workflows: 4
-- concepts: 14
+- concepts: 15
 - trends: 7
 - training: 7
 
-**Total content pages: 110.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 111.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.

@@ -1,8 +1,8 @@
 ---
 title: Anti-autopilot review friction
 type: training
-as_of: 2026-04-22
-sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026, lennysan-simonw-interview, prof-devs-control]
+as_of: 2026-04-23
+sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026, lennysan-simonw-interview, prof-devs-control, agents-evals-deep-research]
 ---
 
 # Anti-autopilot review friction
@@ -26,6 +26,7 @@ As AI output gets more fluent and more often correct, people stop truly checking
 - **Professionals control, not vibe.** Field research (N=13 observations, N=99 surveys; 3–41 years of experience) finds 100% of observed developers controlled software design and implementation regardless of task familiarity. They control via: detailed prompts with explicit context (12× observed), 70+ step external plans executed 5-6 steps at a time, and user rules that enforce project conventions. Enjoyment average: 5.11/6 — but from collaboration, not delegation. "I do everything with assistance, but never let the agent be completely autonomous."
 - **Review the gates, not only the output.** In agent-heavy coding workflows, judgment increasingly belongs on specs, acceptance criteria, and verification scripts instead of only on generated diffs
 - **Agent-as-watchdog.** A lightweight background agent monitors a relevant external surface (public social channels, issue trackers, partner APIs) for brand mentions, security anomalies, or policy violations — nightly or on a schedule — and routes findings to humans for judgment. Every's Claudie workflow (X monitoring for brand/security mentions) is a practical example: the agent does the scanning and pattern-detection; humans review and decide. Low setup cost, continuous coverage, judgment stays human.
+- **Escalation evals as a forcing function.** Before granting an agent autonomous action, test whether it knows when not to act. Inject adversarial examples and out-of-scope requests into the eval suite and verify the agent reliably triggers a human handoff rather than hallucinating a response. This is review friction applied at the design stage: it forces you to define the edge cases before the agent encounters them in production.
 
 ## What works and what fails (empirical ratios)
 
@@ -65,3 +66,4 @@ From field research (N=99 surveys; suitable:unsuitable ratios):
 - [[sources/newsletters/every-vibe-check-april-21-2026]]
 - [[sources/tweets/lennysan-simonw-interview]]
 - [[sources/tweets/prof-devs-control]]
+- [[sources/deep-research/2026-04-23-agents-evals]]

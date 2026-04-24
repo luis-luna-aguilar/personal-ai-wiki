@@ -15,10 +15,10 @@ The five-level structure is well-established in agent safety literature. The spe
 
 ## Intended changes
 
-- [ ] **Update** `wiki/training/company-wide-ai-enablement.md` — add a new "## Autonomy ladder" section under Proven patterns; update `as_of` and `sources`
+- [x] **Update** `wiki/training/company-wide-ai-enablement.md` — add a new "## Autonomy ladder" section under Proven patterns; update `as_of` and `sources`
     > See diff below
 
-- [ ] **Update** `wiki/training/anti-autopilot-review-friction.md` — add one bullet to Proven patterns: escalation evals as a review friction forcing function; update `as_of` and `sources`
+- [x] **Update** `wiki/training/anti-autopilot-review-friction.md` — add one bullet to Proven patterns: escalation evals as a review friction forcing function; update `as_of` and `sources`
     > See diff below
 
 ## Diffs
@@ -68,4 +68,6 @@ Update frontmatter:
 ## Open questions
 
 - Is the "False Escalation Rate" term worth including by name, or should it just be described in plain language? It's from the report and may be report-normalized.
+	- just plain language
 - The "Authority Graph" is intentionally omitted from the draft because it appears to be a report-synthesized abstraction without a strong primary source. If the user wants it included, it should be clearly attributed as a report framing.
+	- ok

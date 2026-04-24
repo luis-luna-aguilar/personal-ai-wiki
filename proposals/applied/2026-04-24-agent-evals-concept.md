@@ -13,19 +13,19 @@ Agent evaluation differs fundamentally from model evaluation because you are tes
 
 ## Intended changes
 
-- [ ] **Create** `wiki/concepts/agent-evals.md` — new concept page on agent evaluation taxonomy and trajectory framing
+- [x] **Create** `wiki/concepts/agent-evals.md` — new concept page on agent evaluation taxonomy and trajectory framing
     > See draft below
 
-- [ ] **Update** `wiki/concepts/harness.md` — add trajectory eval framing to the evaluation layer bullet; add wikilink to `agent-evals`
+- [x] **Update** `wiki/concepts/harness.md` — add trajectory eval framing to the evaluation layer bullet; add wikilink to `agent-evals`
     > **Before (in `## What a harness includes`):**
     > `- **Evaluation layer** — evals and traces that measure whether the agent behaves as intended`
     > **After:**
     > `- **Evaluation layer** — evals and traces that measure whether the agent behaves as intended; see [[concepts/agent-evals]] for the taxonomy of eval categories and the trajectory-vs-result distinction`
 
-- [ ] **Create** `wiki/sources/deep-research/2026-04-23-agents-evals.md` — source summary for the research report
+- [x] **Create** `wiki/sources/deep-research/2026-04-23-agents-evals.md` — source summary for the research report
     > See draft below
 
-- [ ] **Update** `wiki/index.md` — add `[[concepts/agent-evals]]` entry under Concepts; add source type note
+- [x] **Update** `wiki/index.md` — add `[[concepts/agent-evals]]` entry under Concepts; add source type note
     > **Add under Concepts:**
     > `- [[concepts/agent-evals]] — taxonomy of agent evaluation categories and the trajectory-vs-result distinction *(as_of: 2026-04-23)*`
 
@@ -145,4 +145,6 @@ A deep-research report synthesizing current operational practices for evaluating
 ## Open questions
 
 - Should the source summary live in `wiki/sources/deep-research/` (matching the raw folder structure) or in `wiki/sources/articles/` since there's no `deep-research` source subdirectory yet? Creating `wiki/sources/deep-research/` is proposed here.
+	- Please create the deep research one
 - The harness.md update is a tiny patch — approve if the link is useful; skip if it's premature before the concept page is applied.
+	- approved

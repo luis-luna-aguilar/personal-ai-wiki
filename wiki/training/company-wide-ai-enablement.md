@@ -2,7 +2,7 @@
 title: Company-wide AI enablement
 type: training
 as_of: 2026-04-23
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics]
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research]
 ---
 
 # Company-wide AI enablement
@@ -60,6 +60,26 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 - **Compulsive "one more prompt" loops.** Teams can become more productive in bursts while also degrading attention, recovery time, and judgment unless managers design explicit stopping points and protected focus windows
 - **False-completion behavior.** Always-on agents often sound confident before any real action has started; teams need explicit instructions that status updates require proof
 - **Tokenmaxxing — measuring token spend as a productivity proxy.** Meta's internal "Claudeonomics" leaderboard ranked 85,000 employees by AI token usage; within weeks employees were leaving agents idle to climb the rankings. One OpenAI engineer processed 210 billion tokens in a single week (enough to fill Wikipedia 33 times). Dubbed "tokenmaxxing," this mirrors the early 2000s lines-of-code mistake exactly. Reasoning models compound the problem by generating inner-monologue tokens as a function of architecture, not work done. Jensen Huang publicly said he'd be "deeply alarmed" if engineers weren't burning tokens worth half their annual salary — amplifying the leaderboard pressure. Reward outcomes and quality; token spend is a cost center, not a productivity signal. (See also: "Tasteful tokenmaxxing" in Proven patterns for the emerging middle-ground guidance.)
+
+## Autonomy ladder
+
+A practical governance model for expanding what an agent is allowed to do: treat autonomy not as a binary switch but as a staged ladder where each step up requires eval evidence that the agent can handle the broader authority safely.
+
+**Five levels:**
+
+| Level | Name | What the agent can do |
+|---|---|---|
+| 0 | Read-only assistant | Synthesizes, proposes, retrieves. Human executes everything. |
+| 1 | Human-mediated actions | Drafts artifacts such as emails, code, and notes. Human reviews and executes. |
+| 2 | Guarded actions | Executes low-risk actions autonomously. High-risk actions require explicit human approval. |
+| 3 | Conditional autonomy | Manages multi-step workflows autonomously but pauses at predefined high-risk checkpoints. |
+| 4/5 | High to full autonomy | Executes end to end within strict policy boundaries. Reports to humans only on completion or unresolvable anomaly. |
+
+**Promoting between levels requires eval evidence, not just elapsed time.** To move an agent from Level 1 to Level 2, the eval suite must prove the agent reliably adheres to role-based access controls and policy boundaries. To move to Level 3, the agent must pass escalation evals: inject adversarial and out-of-scope queries into the test suite and measure whether the agent triggers a human handoff rather than hallucinating an action. The failure mode being tested is simple: does the agent know what it does not know?
+
+**Practical permission controls:** transitions should be enforced mechanically, not by judgment alone. Common mechanisms include pass-rate thresholds over a rolling window of consecutive traces, cost-based throttling that freezes spending when a runaway loop is detected, and tracking how often the agent escalates cases that humans later approve unchanged. Specific thresholds should be calibrated per organization; the values cited in the research report are directional, not universal.
+
+**The practical implication for enablement:** do not deploy a new agent at Level 3 or 4 because the vendor demo looked good. Start at Level 1, build an eval suite, and promote based on measured evidence. The enablement question becomes: what eval evidence would make us comfortable giving this agent more authority?
 
 ## Humans in the loop vs. above the loop
 
@@ -124,3 +144,4 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - [[sources/newsletters/ai-for-boring-businesses]]
 - [[sources/newsletters/every-ai-sandwich-april-2026]]
 - [[sources/articles/every-four-agents]]
+- [[sources/deep-research/2026-04-23-agents-evals]]
