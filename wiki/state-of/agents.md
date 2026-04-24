@@ -21,7 +21,6 @@ Platforms, surfaces, and patterns for running, supervising, or routing AI agents
 
 - [[tools/claude-cowork]] — Anthropic; desktop knowledge-work agent with Live Artifacts; VM-backed local-first execution; scheduled and persistent tasks *(as of 2026-04-21)*
 - [[tools/codex]] (Workspace Agents) — OpenAI; Codex-powered shareable team agents in Slack and ChatGPT; scheduled/background execution; Business/Enterprise/Edu/Teachers rollout *(as of 2026-04-23)*
-- [[tools/cursor]] — cloud-agent supervision layer: agents run remotely, test their own work, return videos for human review *(as of 2026-03-06)*
 - [[tools/orca]] — open-source desktop surface for supervising multiple coding agents across isolated worktrees, with live status, diff review, and CI visibility *(as of 2026-04-21)*
 - [[tools/claude-managed-agents]] — Anthropic's hosted runtime; separates session, harness, sandbox, and now file-backed built-in memory with shared stores and auditability *(as of 2026-04-24)*
 - [[tools/microsoft-copilot]] — Microsoft; agentic default mode inside Word, Excel, and PowerPoint; takes multi-step native actions in documents, worksheets, and presentations while users stay in control *(as of 2026-04-22)*
@@ -82,8 +81,6 @@ Platforms built to support literature-driven or discovery-oriented scientific wo
 - [2026-04-22] Added [[tools/uipath-maestro]] under `Agent orchestration`; enterprise orchestration for agents and robots broadens the category beyond hosted agent runtimes
 - [2026-04-22] Added `Autonomous research agents` subcategory; [[tools/hf-ml-intern]] is the first publicly verified agent to close the full ML post-training loop end-to-end
 - [2026-04-22] Google Deep Research Max scores (93.3% DeepSearchQA) and HF ml-intern autonomous loop mark the emergence of a distinct "full-stack research agent" tier — see [[tools/gemini]] and [[tools/hf-ml-intern]]
-- [2026-02-25] Cursor's cloud-agent rollout already showed the orchestration-ui pattern in product form: remote agent computers, self-verification, and video artifacts for human review
-- [2026-03-06] Cursor's cloud-agent walkthrough made the category's supervision thesis explicit before the later 3.1 control-plane polish: remote agents, review videos, and human oversight over many workers
 - [2026-04-22] Added `Agent-native documents` to capture document surfaces built for shared human/agent drafting; [[tools/proof]] is the first example
 - [2026-04-21] Added [[tools/orca]] under `Agent orchestration`; worktree-first desktop supervision layer for Claude Code, Codex, and similar agents
 - [2026-03-31] Backfilled late-March signal: open-agent stacks were already converging on CLI-first execution, worktree coordination, and packaged reusable agents before the April orchestration/control-plane wave became clearer

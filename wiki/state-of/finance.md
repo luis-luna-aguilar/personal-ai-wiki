@@ -19,7 +19,9 @@ AI products specialized for financial analysis, modeling, and document-heavy fin
 
 - [[tools/hebbia]] — document-heavy knowledge-work platform with especially strong practical relevance in finance analysis and modeling workflows *(as of 2026-04-22)*
 
-## Signals
+### Personal finance AI
+
+Consumer-facing AI tools that connect to financial accounts and assist with budgeting, tracking, and everyday money workflows.
 
 - [[tools/perplexity-computer]] — Perplexity Computer connects to 12,000+ financial institutions via Plaid, letting users build custom budgeting/tracking tools inside an AI chat interface *(as of 2026-04-10)*
 

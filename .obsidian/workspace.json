@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "89084c5a2446dc22",
+        "id": "2402a2077643108e",
         "type": "tabs",
         "children": [
           {
-            "id": "bdf2b1302114e014",
+            "id": "eb62f48577584361",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -176,8 +176,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "32d5ab9afeaf3323",
+  "active": "eb62f48577584361",
   "lastOpenFiles": [
+    "wiki/sources/papers/curiosity-driven-imagination.md",
     "proposals/applied/2026-04-24-agent-evals-concept.md",
     "wiki/concepts/agent-evals.md",
     "proposals/2026-04-24-agent-evals-concept.md",
@@ -204,7 +205,6 @@
     "wiki/sources/deep-research/2026-04-23-agents-evals.md",
     "wiki/sources/deep-research",
     "proposals/2026-04-24-eval-tools.md",
-    "proposals/applied/2026-04-24-claude-code-one-time-scheduling.md",
     "raw/articles/Building agents that reach production systems with MCP _ Claude.pdf",
     "personal-wiki-agent/logs/queries/7277a83a51c0-response-final.json",
     "personal-wiki-agent/logs/queries/7277a83a51c0-response-raw.json",

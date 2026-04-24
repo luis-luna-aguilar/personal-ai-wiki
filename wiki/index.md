@@ -184,4 +184,4 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 - trends: 7
 - training: 7
 
-**Total content pages: 111.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 115.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.

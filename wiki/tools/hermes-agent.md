@@ -1,7 +1,7 @@
 ---
 title: Hermes Agent
 type: tool
-domains: [agents, coding]
+domains: [agents]
 subcategory: agent-framework
 tags: [open-source, agentic]
 as_of: 2026-04-22
