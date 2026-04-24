@@ -5,7 +5,7 @@ sources:
   - raw/articles/2026-04-23-tco-d47tgmzhnl.md
   - raw/tweets/2026-04-23-awsai-2046670809289081344.md
   - raw/newsletters/2026-04-23-openai-drops-a-privacy-focused-model.md
-status: pending
+status: applied
 created: 2026-04-23
 ---
 
@@ -16,12 +16,10 @@ Two Anthropic agent-platform signals on the same day: (1) a full Anthropic blog 
 
 ## Intended changes
 
-- [ ] **Update** `wiki/concepts/mcp.md` — add guidance section on APIs vs CLIs vs MCP decision; update as_of
-- [ ] **Update** `wiki/tools/claude-cowork.md` — add AWS Bedrock deployment section; update as_of; prepend Recent changes entry
-- [ ] **Create** `wiki/sources/articles/anthropic-mcp-production-systems.md` — source summary for Anthropic's MCP blog post
-- [ ] **Create** `wiki/sources/tweets/awsai-cowork-bedrock-2026-04-23.md` — source summary for AWS Bedrock availability tweet
-
-*Note: The full Anthropic article is now available locally as `raw/articles/Building agents that reach production systems with MCP _ Claude.pdf`, so the MCP update below reflects the actual article rather than the earlier tweet stub.*
+- [x] **Update** `wiki/concepts/mcp.md` — add guidance section on APIs vs CLIs vs MCP decision; update as_of
+- [x] **Update** `wiki/tools/claude-cowork.md` — add AWS Bedrock deployment section; update as_of; prepend Recent changes entry
+- [x] **Create** `wiki/sources/articles/anthropic-mcp-production-systems.md` — source summary for Anthropic's MCP blog post
+- [x] **Create** `wiki/sources/tweets/awsai-cowork-bedrock-2026-04-23.md` — source summary for AWS Bedrock availability tweet
 
 ## Page drafts
 
@@ -136,7 +134,3 @@ AWS AI announcement: Claude Cowork is in public research preview on Amazon Bedro
 - Claude Cowork available via Amazon Bedrock in public research preview
 - All prompts, files, and model responses stay within the customer's AWS account
 ````
-
-## Comments
-
-- I manually downloaded the blocked article so you can re-do this proposal. You can find it here: raw/articles/Building agents that reach production systems with MCP _ Claude.pdf

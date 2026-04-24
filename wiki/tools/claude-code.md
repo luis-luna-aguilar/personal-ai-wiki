@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: [anthropic, cli, agentic]
-as_of: 2026-04-23
-sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview]
+as_of: 2026-04-24
+sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling]
 ---
 
 # Claude Code
@@ -25,6 +25,7 @@ Anthropic's terminal-first AI coding agent. Runs in the shell, operates autonomo
 - Monitor tool wakes the agent on external events instead of token-expensive polling
 - Recurring tasks, announced alongside Channels, reinforced the shift from one-off terminal loops toward repeatable delegated workflows
 - Routines let a workflow run on a schedule, from an API call, or in response to an event on Anthropic's infrastructure
+- One-time scheduling is now available from the CLI and Routines UI via `Schedule -> Once`, extending the existing recurring-work story into delayed single-run tasks
 - The early-April source leak made the product's underlying architecture more legible: layered memory, repo-state awareness, explicit permission modes, and cache-friendly subagent parallelism appear to be core design choices rather than implementation accidents
 - Desktop redesign pushes the product toward multi-session supervision rather than a single terminal loop
 - `/recap`: auto-generates a one-line summary of the last session after 3+ turns of inactivity — triggered only once per gap, never back-to-back, also available on demand via `/recap`
@@ -89,6 +90,7 @@ That matters because it shifts the product story away from "Anthropic has a stro
 
 ## Recent changes
 
+- [2026-04-24] Added one-time scheduling from CLI / Routines UI via `Schedule -> Once`, extending Claude Code's scheduled-workflow support beyond recurring runs
 - [2026-04-23] /ultrareview added (v2.1.86+, research preview): cloud multi-agent code review with independent finding verification; 5-10 min background; 3 free runs for Pro/Max through May 5, 2026; then $5-20 extra usage; requires Claude.ai login; not on Bedrock/Vertex AI/Foundry
 - [2026-04-22] Added --worktree flag (built-in parallel isolated git worktrees), /autofix-pr CLI trigger, and Remote Control mobile session spawning
 - [2026-04-22] Added /recap (session gap summaries after inactivity) and /fewer-permission-prompts skill (history-based allowlist generator)
@@ -115,3 +117,4 @@ That matters because it shifts the product story away from "Anthropic has a stro
 - [[sources/newsletters/memory-vs-context-rot-february]]
 - [[sources/newsletters/thecode-april-22-2026]]
 - [[sources/tweets/claude-code-worktree-autofix]]
+- [[sources/tweets/claude-code-one-time-scheduling]]

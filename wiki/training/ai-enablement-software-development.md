@@ -17,6 +17,7 @@ AI adoption inside engineering teams has moved fastest, but the bottlenecks and 
 - Build or adopt code review tooling that spends real compute on expensive models; external tools are optimized for speed, not review quality
 - Apply critique loops (generator + critic + redo) to PR review, research synthesis, and any task with a clear correctness signal
 - Allow non-engineers to attempt building: many can cross the threshold through iterative prompting without a formal coding background
+- Design an explicit eval suite before granting a coding agent permission to open PRs autonomously — see [[training/evals-for-agentic-software-development]]
 
 ## Proven patterns
 
@@ -59,6 +60,10 @@ Practical implication: interview loops now need to test whether a candidate can 
 Agentic AI is removing the "grunt work" through which junior engineers historically built pattern recognition. If entry-level coding work disappears entirely, there's a pipeline problem: senior talent runs out within a decade. McKinsey's framing: learning and development should move from a periodic sidecar to the center of the employee journey. Junior engineers who start with AI tools from day one don't face the hurdle of disrupting an established workflow — but they also don't accumulate 20 years of pattern recognition through practice.
 
 Mid-career engineers may be the most vulnerable group — more so than juniors or seniors. AI amplifies decades of pattern recognition (seniors benefit most), and dramatically accelerates juniors (Cloudflare/Shopify: ramp-up from a month to a week). Mid-career engineers without deep accumulated expertise, who have already captured the beginner boost, are in the most precarious position.
+
+## See also
+
+- [[training/evals-for-agentic-software-development]] — eval stack for coding agents: MVES, task-specific patterns, shadow mode, trace mining
 
 ## Sources
 

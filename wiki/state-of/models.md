@@ -3,8 +3,8 @@ title: State of Models
 type: state-of
 domains: [models]
 tags: []
-as_of: 2026-04-23
-sources: [muse-spark, kimi-k2-6-blog, ainews-2026-04-21, ainews-2026-04-22, every-opus-4-7-vibe-check, vectorlab-opus-4-7-flop, vectorlab-qwen-3-6-local-threshold, open-agentic-coding-models, restricted-frontier-deployment, open-weight-momentum-early-april, late-march-small-coding-models, gpt-5-4-march, qwen-3-5-medium-february, glasswing, nano-banana-2-tweet, google-cloud-next-2026]
+as_of: 2026-04-24
+sources: [muse-spark, kimi-k2-6-blog, ainews-2026-04-21, ainews-2026-04-22, every-opus-4-7-vibe-check, vectorlab-opus-4-7-flop, vectorlab-qwen-3-6-local-threshold, open-agentic-coding-models, restricted-frontier-deployment, open-weight-momentum-early-april, late-march-small-coding-models, gpt-5-4-march, qwen-3-5-medium-february, glasswing, nano-banana-2-tweet, google-cloud-next-2026, openai-gpt-5-5-launch, danshipper-gpt-5-5-vibe-check, deepseek-v4-preview]
 ---
 
 # State of Models
@@ -17,7 +17,7 @@ Current state of foundation models — frontier and otherwise. Organized by subc
 
 General-purpose frontier models competing on broad multimodal capability rather than narrow specialization.
 
-- [[models/gpt-5-4]] — OpenAI's March frontier update looked like the strongest general-purpose reasoning / browsing / agent model in the captured source cycle, though the same coverage still gives Claude the edge on writing, personality, and design-heavy work *(as of 2026-03-08)*
+- [[models/gpt-5-5]] — OpenAI's April 2026 frontier model; leads on Terminal-Bench 2.0, GDPval, ARC-AGI-2, CyberGym, and BixBench; Claude Opus 4.7 still leads on SWE-Bench Pro, MCP Atlas, FinanceAgent, and some planning-heavy work *(as of 2026-04-23)*
 - [[models/claude-opus-4-7]] — Anthropic flagship; stronger on explicit coding, document, and visual artifact tasks, but early user reports describe more literal behavior and mixed long-context reliability *(as of 2026-04-21)*
 - [[models/muse-spark]] — Meta's new multimodal model; the captured launch source emphasizes scaling efficiency and claims Llama 4 Maverick-level capability with over an order of magnitude less training compute *(as of 2026-04-10)*
 
@@ -31,6 +31,7 @@ Open-weight and frontier models evaluated primarily for agentic coding tasks.
 - [[models/qwen-3-6-27b]] — Alibaba; dense 27B (Apache 2.0); beats prior 397B MoE on all coding benchmarks (SWE-bench Verified 77.2, SWE-bench Pro 53.5); runnable under 20 GB RAM; day-0 vLLM/Unsloth/llama.cpp/Ollama *(as of 2026-04-23)*
 - [[models/qwen-3-6-35b-a3b]] — Alibaba; MoE variant; practical local-agent baseline on 24GB-class hardware; benchmark lead now held by 27B dense sibling *(as of 2026-04-22)*
 - [[models/glm-5-1]] — open-weight contender described in the captured sources as a top benchmark performer for coding and agent workflows *(as of 2026-04-08)*
+- [[models/deepseek-v4]] — DeepSeek; preview open-weight MoE release built explicitly for long-context agent traces; 1M context, much cheaper KV-cache behavior than prior DeepSeek, and competitive agent benchmark results *(as of 2026-04-24)*
 
 ### Image generation
 
@@ -53,6 +54,8 @@ Frontier models deployed selectively for autonomous cybersecurity research rathe
 
 ## Recent changes
 
+- [2026-04-24] Added [[models/deepseek-v4]] under `Coding models`; DeepSeek's open-weight story now centers on long-context agent workloads, not just cheaper general reasoning
+- [2026-04-23] GPT-5.5 released; replaces GPT-5.4 as the current OpenAI frontier model in the wiki; OpenAI leads more public benchmark categories again, while Claude Opus 4.7 retains some important engineering/tool-use edges
 - [2026-04-23] Google Cloud Next '26: Gemini 3.1 Pro, Gemini 3.1 Flash Image, Gemma 4, Lyria 3, and Gemini Embedding 2 surfaced as Google's active platform model stack
 - [2026-04-23] Added 'Specialized utility models' subcategory; [[models/openai-privacy-filter]] is the first entry — on-device PII redaction, 1.5B MoE, Apache 2.0
 - [2026-04-23] Added [[models/qwen-3-6-27b]] to Coding models; dense 27B beats prior 397B MoE on all coding benchmarks; day-0 open ecosystem support

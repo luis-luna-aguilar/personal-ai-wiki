@@ -3,15 +3,15 @@ title: Agent improvement loop
 type: concept
 domains: [agents]
 tags: [agentic]
-as_of: 2026-04-22
-sources: [trace-agent-improvement-loop, langchain-better-harness, cursor-bugbot-learning, self-improving-skills]
+as_of: 2026-04-24
+sources: [trace-agent-improvement-loop, langchain-better-harness, cursor-bugbot-learning, self-improving-skills, agents-evals-deep-research]
 ---
 
 # Agent improvement loop
 
 A workflow for improving AI agents by studying **execution traces**: records of what the agent actually did during a run, including model calls, tool calls, intermediate steps, and outputs. The loop is: collect traces, score or review them, identify recurring failure patterns, make targeted changes, validate those changes offline, then redeploy and repeat.
 
-## Current status (as of 2026-04-10)
+## Current status (as of 2026-04-24)
 
 - LangChain frames tracing as the foundation for systematic agent improvement, not just debugging
 - The loop spans both staging and production, with production traces treated as the most valuable source of real failures
@@ -76,6 +76,26 @@ A variation of the improvement loop applied at the *skill/prompt* level rather t
 
 This mirrors the Better-Harness pattern at the prompt level. The loop is based on Karpathy's "autoresearch" method applied to prompt optimization. Can run on autopilot; the meta-skill improves the target skill without human intervention.
 
+## Eval suite hygiene
+
+An eval suite that is not actively maintained will betray you. If you run the same 50 hand-authored test cases indefinitely, the agent optimizes for passing those exact cases and starts failing on the real failure modes that did not exist when the cases were written. The suite needs to evolve as fast as the agent and the environment do.
+
+**Four practices that prevent eval rot:**
+
+**1. Continuous trace mining.** Once an agent is deployed, even in shadow mode, monitor production logs actively. When a user reports a bad response, or when the agent triggers an error, extract that execution trace, anonymize it, and convert it into a new test case. Production failures are more valuable than synthetic cases because they reflect real failure modes, not imagined ones.
+
+When a production incident occurs, for example an agent approving an action that violated policy, that incident should yield a regression test. Generate synthetic variations of the failing interaction so the agent learns the underlying principle, not just the exact case.
+
+**2. Hidden holdout sets.** Maintain a separate set of eval cases that the development team cannot see during normal work. Periodically test against this blind holdout to get an unbiased measure of generalization. If you only test on cases developers have already seen, you are measuring memorization, not capability.
+
+This applies in both directions: do not let holdout cases leak into training data, and do not let eval designers inspect them when writing new cases.
+
+**3. Periodic refresh.** The environment changes. APIs update. Company policies change. Support ticket formats shift. Eval cases built against deprecated documentation will falsely penalize a correct agent. Review and update cases regularly: weekly for fast-moving agent surfaces, monthly at minimum for stable ones.
+
+**4. Retiring stale tests.** A test that achieves a 100% pass rate across many consecutive updates is no longer providing much signal. It is measuring something the agent has already mastered. Archive it and redirect compute toward edge cases and new failure modes instead.
+
+**The meta-rule:** treat the eval suite as a product, not a one-time artifact. It has a maintenance burden, it goes stale, and it needs active curation to stay useful.
+
 ## Caveats
 
 - This is a conceptual guide from LangChain, not an independent market survey.
@@ -84,15 +104,18 @@ This mirrors the Better-Harness pattern at the prompt level. The loop is based o
 
 ## Recent changes
 
+- [2026-04-24] Added eval suite hygiene section: holdout sets, trace mining, periodic refresh, and retiring stale tests
+- [2026-04-22] Added self-improving skills pattern: closed feedback loop for skill drift; meta-skill 5-step prompt optimization loop
 - [2026-04-10] Added Cursor Bugbot as a production example of live feedback turning into agent rules
 - [2026-04-10] Added Better-Harness section — LangChain's autonomous harness hill-climbing system
 - [2026-04-09] Page created from LangChain's conceptual guide "The Agent Improvement Loop Starts with a Trace"
-- [2026-04-22] Added self-improving skills pattern: closed feedback loop for skill drift; meta-skill 5-step prompt optimization loop
 
 ## Related
 
 - [[concepts/harness]] — the harness is what the improvement loop iterates on; better traces → targeted harness changes
 - [[workflows/skillify-agent-reliability]] — complementary pattern: encodes failures as permanent skills rather than harness-level prompt changes; works at the skill/script layer instead of the orchestration layer
+- [[training/evals-for-agentic-software-development]] — coding-agent eval patterns for deterministic gates, shadow mode, and trace-derived regression suites
+- [[training/evals-for-agentic-work]] — workflow-agent eval patterns for reliability, simulation, and production-safe evaluation
 
 ## Sources
 
@@ -100,3 +123,4 @@ This mirrors the Better-Harness pattern at the prompt level. The loop is based o
 - [[sources/articles/langchain-better-harness]]
 - [[sources/articles/cursor-bugbot-learning]]
 - [[sources/tweets/self-improving-skills]]
+- [[sources/deep-research/2026-04-23-agents-evals]]

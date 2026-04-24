@@ -1,23 +1,22 @@
 ---
 type: proposal
-status: pending
+status: applied
 created: 2026-04-23
 ---
 
-# Proposal: Personal Wiki Agent Framework Research (Deep Agents, Goose, Pydantic AI, smolagents, MCP deployment)
+# Proposal: Personal Wiki Agent Framework Research (Deep Agents, Goose, MCP deployment)
 
 ## Summary
 
 This proposal captures the framework and deployment research done while designing the Personal Wiki Agent. The most important conclusions:
 
 - **Deep Agents** looks like the best harness fit for building a dedicated `use_personal_wiki` agent with planning, file tools, subagents, permissions, and a strong custom contract.
-- **Goose** is a serious alternative when the priority is local-first deployment on Luis's own machine with MCP, OpenRouter, and a desktop/CLI agent product already in place.
-- **Pydantic AI** is a strong Python-native alternative with explicit OpenRouter and MCP support, but feels more framework-like than harness-like.
-- **smolagents** is open source (Apache 2.0), model-agnostic, and OpenRouter-compatible, but remains more lightweight and experimental than the main recommendation.
+- **Goose** is a serious alternative when the priority is local-first deployment on Luis's own machine with MCP and a desktop/CLI agent product already in place.
+- **Pydantic AI** and **smolagents** remain useful comparison points, but they are not important enough for first-pass standalone wiki coverage.
 - **Claude Desktop** supports local MCP servers directly.
 - **ChatGPT** currently documents remote MCP/custom connectors rather than localhost-only desktop attachment, so remote exposure may be required for ChatGPT use.
 
-This material is not yet represented in the wiki and is directly relevant to the new `personal-wiki-agent/` subproject.
+Only the reusable parts belong in the wiki. The framework choice for the Personal Wiki Agent itself is an implementation decision for the `personal-wiki-agent/` subproject, not durable wiki knowledge.
 
 ## Research URLs
 
@@ -36,7 +35,6 @@ This material is not yet represented in the wiki and is directly relevant to the
 - smolagents docs: https://huggingface.co/docs/smolagents/index
 - smolagents repo: https://github.com/huggingface/smolagents
 - OpenRouter LangChain integration: https://openrouter.ai/docs/guides/community/langchain
-- OpenRouter Agent SDK landing page: https://openrouter.ai/sdk
 - Claude Desktop local MCP help: https://support.anthropic.com/en/articles/10949351-getting-started-with-model-context-protocol-mcp-on-claude-for-desktop
 - Claude remote MCP help: https://support.anthropic.com/en/articles/11175166-getting-started-with-custom-integrations-using-remote-mcp
 - OpenAI MCP docs: https://platform.openai.com/docs/mcp
@@ -45,21 +43,16 @@ This material is not yet represented in the wiki and is directly relevant to the
 
 ## Intended changes
 
-- [x] **Create** `wiki/tools/deep-agents.md` — new tool page for LangChain's Deep Agents harness
-- [x] **Create** `wiki/tools/goose.md` — new tool page for Goose as an open-source local agent platform
-- [x] **Create** `wiki/tools/pydantic-ai.md` — new tool page for provider-agnostic Python agent framework with MCP/OpenRouter support
-- [x] **Create** `wiki/tools/smolagents.md` — new tool page for Hugging Face's lightweight open-source agent library
-- [x] **Update** `wiki/workflows/agentic-orchestration-patterns.md` — add note that Deep Agents represents a “batteries-included harness” direction while Goose represents a local-agent-product direction
+- [x] **Update** `wiki/workflows/agentic-orchestration-patterns.md` — add a brief general note that Deep Agents represents a batteries-included harness direction while Goose represents a local-agent-product direction
 - [x] **Update** `wiki/concepts/mcp.md` — append a practical note on local-vs-remote MCP deployment surfaces across Claude Desktop and ChatGPT
-- [x] **Create** one or more `wiki/sources/articles/*.md` or `wiki/sources/repos/*.md` summary pages after the relevant primary sources are fetched into `raw/`
+- [x] **Create** source summary pages only for the primary sources actually used in the reusable wiki updates
 
 ## Recommended ingest order
 
 1. Deep Agents docs + LangGraph repo
 2. Goose docs + repo
-3. Pydantic AI OpenRouter + MCP docs
-4. smolagents docs + repo
-5. Claude/OpenAI MCP deployment docs
+3. Claude/OpenAI MCP deployment docs
+4. Pydantic AI and smolagents only if broader reusable framework coverage becomes warranted later
 
 ## Key claims extracted
 
@@ -81,12 +74,12 @@ This material is not yet represented in the wiki and is directly relevant to the
 
 - Pydantic AI is model-agnostic and explicitly supports OpenRouter
 - Supports MCP both as client and server
-- Strong Python-native option if the project values Python ergonomics and MCP/OpenRouter clarity over a more opinionated prebuilt harness
+- Strong Python-native option if the project values Python ergonomics and MCP clarity over a more opinionated prebuilt harness
 
 ### smolagents
 
 - smolagents is open source and Apache 2.0 licensed
-- Model-agnostic; supports OpenRouter-style OpenAI-compatible configuration
+- Model-agnostic; supports OpenAI-compatible configuration
 - Supports MCP tools
 - Lightweight and promising, but still more minimal and experimental than the main recommendation
 
@@ -97,53 +90,27 @@ This material is not yet represented in the wiki and is directly relevant to the
 - ChatGPT currently documents custom connectors around remote MCP servers, not localhost-only desktop attachment
 - This suggests a likely split: local MCP first for Claude Desktop, remote MCP later for ChatGPT compatibility
 
-## Open questions
+## Resolved decisions
 
-- Should these framework pages live under `wiki/tools/` individually, or should some of them be covered by a single comparative workflow/concept page?
-	-  let's skip the month as tools because they are 
-- Should the MCP deployment guidance live only on `wiki/concepts/mcp.md`, or also on a new workflow page about “deploying personal knowledge agents”?
-	-  let's keep it in concept 
-- Should OpenRouter's own Agent SDK be represented, or is it less important than the other frameworks because the current implementation decision moved to Deep Agents?
-	-  let's skip this one
-- Do we want to ingest all four frameworks now, or only the two that matter most for the Personal Wiki Agent decision: Deep Agents and Goose?
-	- Hello Sam 
+- Do **not** create standalone `wiki/tools/` pages for these frameworks in the first pass. They are better captured as a comparative framework-selection page because the current need is implementation choice, not broad tool-catalog coverage.
+- Keep the MCP deployment guidance on `wiki/concepts/mcp.md`, not on a separate workflow page.
+- Skip OpenRouter's own Agent SDK for now.
+- Narrow the first-pass ingest to **Deep Agents**, **Goose**, and the **Claude/OpenAI MCP deployment docs**. Keep Pydantic AI and smolagents as secondary comparison notes unless they become active implementation candidates.
+- Do **not** ingest the Personal Wiki Agent framework-selection decision itself into the wiki. That belongs in project-local docs for `personal-wiki-agent/`, not in the knowledge base.
 
-## Suggested page shapes
+## Suggested reusable wiki coverage
 
-### wiki/tools/deep-agents.md
-
-- What it is
-- Why it matters as an agent harness
-- Built-in primitives: planning, filesystems, subagents, permissions, skills
-- Fit for provider-agnostic specialized agents
-- Caveats
-
-### wiki/tools/goose.md
-
-- What it is
-- Why it matters as a local-first open-source agent platform
-- OpenRouter + MCP support
-- Desktop/CLI/API surface
-- Caveats
-
-### wiki/tools/pydantic-ai.md
-
-- What it is
-- Why it matters as a Python-native model-agnostic framework
-- OpenRouter support
-- MCP client/server support
-- Caveats
-
-### wiki/tools/smolagents.md
-
-- What it is
-- Why it matters as a minimal open-source agent library
-- OpenRouter/OpenAI-compatible support
-- MCP support
-- Caveats: lightweight, more experimental
+- `wiki/concepts/mcp.md`: practical note on local vs remote MCP deployment surfaces across Claude Desktop and ChatGPT
+- `wiki/workflows/agentic-orchestration-patterns.md`: short note that current agent systems are splitting between batteries-included harnesses and local-agent products
+- Project-local docs inside `personal-wiki-agent/`: the actual framework decision, rationale, and implementation choice
 
 ## Notes for application
 
 - These sources were researched live on the web and have **not** yet been fetched into `raw/`
 - Before applying this proposal to the wiki, fetch the primary docs/pages you want to treat as source-of-record
-- If you want the leanest first pass, ingest only **Deep Agents**, **Goose**, and the **Claude/OpenAI MCP deployment docs**
+- The lean reusable first pass should ingest only the sources needed for **MCP deployment guidance** and any very short general framing added to `agentic-orchestration-patterns`
+- The Personal Wiki Agent framework decision itself should be documented outside the wiki
+
+## Comments
+
+- let's not ingest the workflow on the personal wiki agent framework selection. That's an operational task that has nothing to do with knowledge. It's just a decision made based on knowledge but it's not knowledge itself 

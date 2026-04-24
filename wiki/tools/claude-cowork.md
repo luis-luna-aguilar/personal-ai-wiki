@@ -4,8 +4,8 @@ type: tool
 domains: [agents]
 subcategory: agent-orchestration
 tags: [anthropic, agentic]
-as_of: 2026-04-21
-sources: [claude-cowork-launch, aakash-gupta-cowork, claude-design-launch, claude-productivity-surfaces, anthropic-desktop-agent-expansion-late-march, anthropic-persistent-workflow-surfaces-february]
+as_of: 2026-04-23
+sources: [claude-cowork-launch, aakash-gupta-cowork, claude-design-launch, claude-productivity-surfaces, anthropic-desktop-agent-expansion-late-march, anthropic-persistent-workflow-surfaces-february, awsai-cowork-bedrock-2026-04-23]
 ---
 
 # Claude Cowork
@@ -27,6 +27,10 @@ Anthropic's desktop agent for knowledge work. It works across local files, folde
 - Reported connectors include Slack, Salesforce, Google Drive, Asana, and Jira
 - Released in the same product moment as [[tools/claude-design]], Anthropic's research-preview surface for prototypes, slides, and one-pagers
 
+## AWS Bedrock deployment (as of 2026-04-23)
+
+Claude Cowork is now available via Amazon Bedrock in public research preview. The main enterprise implication is deployment shape rather than new end-user behavior: organizations can run Cowork through their own AWS environment, with prompts, files, and model responses kept within the customer's AWS account.
+
 ## Why it matters
 
 Cowork pushes agent UX beyond chat and toward delegated desktop work. Live Artifacts also puts competitive pressure on dashboard and internal-tool products by making connected reports and trackers much easier to create inside a general-purpose agent workflow. Alongside [[tools/claude-design]], it also signals a broader Anthropic move toward artifact-first interfaces rather than chat-only interactions.
@@ -37,6 +41,7 @@ Cowork also did not appear from nowhere. The earlier Claude for Word beta sugges
 
 ## Recent changes
 
+- [2026-04-23] AWS Bedrock public research preview: Cowork now available via Bedrock, keeping prompts, files, and model responses within the customer's AWS account
 - [2026-02-25] Cowork added scheduled tasks, making recurring delegated work first-class before the later Dispatch / Channels / Live Artifacts expansion
 - [2026-04-21] Added late-March framing: Cowork is positioned as a VM-backed, local-first delegated desktop workflow, not only an April artifact surface
 - [2026-04-21] Added earlier April precursor: Claude for Word beta signaled Anthropic's move into in-app document workflows before Cowork / Live Artifacts
@@ -50,3 +55,4 @@ Cowork also did not appear from nowhere. The earlier Claude for Word beta sugges
 - [[sources/tweets/claude-productivity-surfaces]]
 - [[sources/newsletters/anthropic-desktop-agent-expansion-late-march]]
 - [[sources/newsletters/anthropic-persistent-workflow-surfaces-february]]
+- [[sources/tweets/awsai-cowork-bedrock-2026-04-23]]

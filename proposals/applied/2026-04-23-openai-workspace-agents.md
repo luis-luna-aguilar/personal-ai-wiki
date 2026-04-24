@@ -4,7 +4,7 @@ sources:
   - raw/newsletters/2026-04-23-openai-drops-a-privacy-focused-model.md
   - raw/newsletters/2026-04-23-anthropics-unreleased-model-got-hacked.md
   - raw/newsletters/2026-04-23-ainews-tasteful-tokenmaxxing.md
-status: pending
+status: applied
 created: 2026-04-23
 ---
 

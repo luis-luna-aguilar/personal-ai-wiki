@@ -21,6 +21,7 @@ This is a personal knowledge base that tracks the fast-moving AI landscape: tool
 9. **Use Claude Code's or Codex's native search tools** (Grep, Glob, Read). Do not build or use a custom search CLI.
 10. **Prefer the substantive source.** If a tweet mainly points to a linked article, paper, repo, or similar fuller source, ingest the fuller source and ignore the tweet unless the tweet adds unique information.
 11. **State-of claims are replaceable.** When a source changes who leads a subcategory, update the current state-of page to reflect the new leader set rather than accumulating stale "best" claims. Preserve the change in `## Recent changes` (and `wiki/history/` if needed), and keep multiple leaders only when the source-backed current state is genuinely ambiguous.
+12. **Superseded versions move to history.** When a tool or model version is clearly replaced by a newer current version, create or update the new current page, move the old version page to the mirrored path under `wiki/history/`, and remove the old version from current-state indexes and dashboards unless sources still describe both as current.
 
 ## Directory layout
 
@@ -181,6 +182,7 @@ Tool, model, and workflow pages should be concise by default once the wiki is pa
 - Add only the sections that materially change understanding; do not repeat the same point under "Current status", "Strengths", and "What it is trying to solve".
 - Default target is roughly 150-300 words of body content for routine ingests unless the source genuinely introduces multiple distinct ideas that need separate treatment.
 - If the source is mostly setup, positioning, or one core claim, prefer a shorter page and rely on the source summary / raw source for extra detail.
+- If a tool or model version is superseded, the old page should not remain in the live `wiki/tools/` or `wiki/models/` directories. Archive it under the mirrored `wiki/history/` path and keep only the new current version in live state-of pages and `wiki/index.md`.
 
 ### Concept / trend pages
 

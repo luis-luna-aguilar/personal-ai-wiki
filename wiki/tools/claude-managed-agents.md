@@ -4,8 +4,8 @@ type: tool
 domains: [agents]
 subcategory: agent-orchestration
 tags: [anthropic, closed-source, agentic]
-as_of: 2026-04-15
-sources: [managed-agents, every-managed-agents-vibe-check, anthropic-platform-expansion-april-2026]
+as_of: 2026-04-24
+sources: [managed-agents, every-managed-agents-vibe-check, anthropic-platform-expansion-april-2026, claude-managed-agents-memory]
 ---
 
 # Claude Managed Agents
@@ -20,7 +20,7 @@ Those three pieces are:
 
 Anthropic's core idea is that these pieces should be decoupled so the system can keep evolving as models improve, without forcing users to rebuild around each model generation's quirks.
 
-## Current status (as of 2026-04-15)
+## Current status (as of 2026-04-24)
 
 - Public beta service on the Claude Platform for long-running agents
 - Official launch framing: developers specify tasks and tools while Anthropic handles orchestration, permissions, and sandboxing
@@ -34,6 +34,10 @@ Anthropic's core idea is that these pieces should be decoupled so the system can
 - Supports MCP-backed tools with OAuth credentials stored outside the sandbox in a secure vault
 - Every reports that Spiral used the service to spin up a new agent in a few hours; the cited benefit was less custom infrastructure maintenance, not just faster initial coding
 - Existing agents can be updated through the dashboard by changing the system prompt or underlying model and saving
+- Built-in memory is now in public beta: memories are mounted as files on the agent filesystem instead of hidden inside a proprietary opaque memory layer
+- Memory stores can be shared across agents with scoped permissions (for example org-wide read-only plus per-user read/write)
+- Changes are tracked with audit logs and surfaced as session events in the Claude Console; developers can roll back or redact prior memory state
+- Anthropic is explicitly pitching memory as a way to replace custom retrieval / memory infrastructure for long-running agent deployments
 
 ## Why it matters
 
@@ -44,6 +48,8 @@ Managed Agents moves the durable state outside the live context window and keeps
 Every's practitioner read adds a product-adoption angle: if the hosted primitive works well enough, teams that have been building custom agent infrastructure may redirect effort away from sessions, memory, tool calling, credentials, and prompt/model deployment machinery toward the domain-specific behavior of the agent itself.
 
 It also looks less like a one-off architecture post when viewed alongside the surrounding Anthropic product cadence. Managed Agents, custom agents inside Claude, and Claude Code's event-driven/background workflows all point toward the same direction: Anthropic wants the durable agent loop to live on its platform rather than only inside one local session or one-off prompt.
+
+Anthropic is making a strong product bet on inspectable file-backed memory rather than magical hidden persistence. That matters because it keeps memory legible to developers, reviewable for enterprise governance, and compatible with the same bash/code tools agents already use.
 
 ## Architecture
 
@@ -105,6 +111,7 @@ The simple reason is that sessions that do not need a sandbox immediately can st
 
 ## Recent changes
 
+- [2026-04-24] Built-in memory launched in public beta: file-backed stores, scoped sharing, audit logs, rollback/redaction controls, and Claude Console event visibility
 - [2026-04-15] Official launch framing and adjacent custom-agent / long-running-workflow signals make Managed Agents look less like a one-off architecture post and more like Anthropic's core platform direction
 - [2026-04-15] Every reported Claude Managed Agents is in public beta and highlighted Spiral's use of it to create an agent in a few hours while offloading sessions, memory, tool use, and credential handling
 - [2026-04-09] Page created from Anthropic's "Scaling Managed Agents: Decoupling the brain from the hands" engineering post
@@ -114,3 +121,4 @@ The simple reason is that sessions that do not need a sandbox immediately can st
 - [[sources/articles/managed-agents]]
 - [[sources/articles/every-managed-agents-vibe-check]]
 - [[sources/newsletters/anthropic-platform-expansion-april-2026]]
+- [[sources/articles/claude-managed-agents-memory]]

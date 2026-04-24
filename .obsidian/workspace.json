@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "246a209883d95f1f",
+        "id": "b7f8c3d61d718749",
         "type": "tabs",
         "children": [
           {
-            "id": "b1b902b0d68b54f2",
+            "id": "dc05d90007fb05ae",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "proposals/2026-04-23-gpt-5-5-spud-launch.md",
+                "file": "personal/takes/test-backlog.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-04-23-gpt-5-5-spud-launch"
+              "title": "test-backlog"
             }
           }
         ]
@@ -180,27 +180,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "b1b902b0d68b54f2",
+  "active": "dc05d90007fb05ae",
   "lastOpenFiles": [
-    "proposals/2026-04-23-openai-workspace-agents.md",
-    "proposals/2026-04-23-personal-wiki-agent-frameworks.md",
-    "wiki/tools/gemini-deep-research.md",
-    "wiki/tools/openai-deep-research.md",
-    "wiki/concepts/deep-research.md",
-    "wiki/benchmarks/swe-bench.md",
-    "wiki/state-of/voice.md",
-    "proposals/2026-04-23-anthropic-mcp-cowork-bedrock.md",
-    "proposals/2026-04-23-google-cloud-next.md",
-    "proposals/applied/2026-04-23-google-cloud-next.md",
-    "wiki/sources/articles/google-cloud-next-2026.md",
+    "personal/takes/my-claude-code-toolkit.md",
+    "proposals/2026-04-24-benchmark-map.md",
+    "proposals/applied/2026-04-24-eval-lifecycle.md",
+    "proposals/2026-04-24-eval-lifecycle.md",
+    "proposals/applied/2026-04-24-eval-tools.md",
+    "wiki/tools/langfuse.md",
+    "wiki/tools/promptfoo.md",
+    "wiki/tools/braintrust.md",
+    "wiki/sources/deep-research/2026-04-23-agents-evals.md",
+    "wiki/sources/deep-research",
+    "proposals/2026-04-24-eval-tools.md",
+    "proposals/applied/2026-04-24-claude-code-one-time-scheduling.md",
+    "wiki/sources/tweets/claude-code-one-time-scheduling.md",
+    "proposals/2026-04-24-claude-code-one-time-scheduling.md",
+    "proposals/2026-04-24-autonomy-ladder.md",
+    "proposals/2026-04-24-agent-evals-concept.md",
+    "proposals/2026-04-24-claude-managed-agents-memory.md",
+    "proposals/applied/2026-04-24-claude-managed-agents-memory.md",
+    "wiki/sources/articles/claude-managed-agents-memory.md",
+    "proposals/applied/2026-04-24-codex-broader-computer-work.md",
+    "wiki/sources/newsletters/codex-broader-computer-work-2026-04-24.md",
+    "proposals/2026-04-24-codex-broader-computer-work.md",
+    "proposals/applied/2026-04-24-deepseek-v4-preview.md",
+    "wiki/sources/articles/deepseek-v4-preview.md",
+    "wiki/models/deepseek-v4.md",
+    "proposals/2026-04-24-deepseek-v4-preview.md",
+    "proposals/2026-04-24-microsoft-copilot-agent-mode-office.md",
     "raw/articles/Building agents that reach production systems with MCP _ Claude.pdf",
-    "proposals/applied/2026-04-23-ai-native-engineering-interviews.md",
-    "proposals/2026-04-23-ai-native-engineering-interviews.md",
-    "proposals/2026-04-22-microsoft-foundry-hosted-agents.md",
-    "proposals/applied/2026-04-22-microsoft-foundry-hosted-agents.md",
-    "wiki/sources/articles/microsoft-foundry-agents-2026.md",
-    "wiki/tools/microsoft-foundry-agents.md",
-    "proposals/triage/2026-04-23-agents-evals-research-report.md",
     "personal-wiki-agent/logs/queries/7277a83a51c0-response-final.json",
     "personal-wiki-agent/logs/queries/7277a83a51c0-response-raw.json",
     "personal-wiki-agent/logs/queries/7277a83a51c0-request.json",
@@ -209,15 +218,6 @@
     "personal-wiki-agent/logs/queries/a9825e2fcc6e-request.json",
     "personal-wiki-agent/logs/queries/f215d5d05505-request.json",
     "personal-wiki-agent/logs/queries/6e681ab4c94a-request.json",
-    "personal-wiki-agent/app/__pycache__/server.cpython-311.pyc",
-    "personal-wiki-agent/FUTURE_WORK.md",
-    "proposals/2026-04-22-anthropic-81k-economics.md",
-    "proposals/applied/2026-04-22-anthropic-81k-economics.md",
-    "wiki/sources/articles/anthropic-81k-economics.md",
-    "proposals/applied/2026-04-22-claude-code-ultrareview.md",
-    "wiki/sources/articles/claude-code-ultrareview.md",
-    "proposals/applied/2026-04-23-openai-privacy-filter.md",
-    "personal-wiki-agent/app/prompts/system.md",
     "raw/assets/2026-04-09-langchain-2039028327030079565.jpg"
   ]
 }

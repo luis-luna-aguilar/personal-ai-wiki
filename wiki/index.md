@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 type: index
-as_of: 2026-04-23
+as_of: 2026-04-24
 ---
 
 # Wiki Index
@@ -22,10 +22,10 @@ Read-me-first dashboards per domain.
 - [[state-of/legal]] — current state of AI in legal practice *(as_of: 2026-04-22)*
 - [[state-of/computer-use]] — current state of AI computer-use agents *(as_of: 2026-04-22)*
 - [[state-of/finance]] — current state of AI in finance *(as_of: 2026-04-22)*
-- [[state-of/science]] — current state of AI in scientific research *(as_of: 2026-04-22)*
+- [[state-of/science]] — current state of AI in scientific research *(as_of: 2026-04-23)*
 - [[state-of/creative]] — current state of AI creative tools across video, avatar, slides, and UI generation *(as_of: 2026-04-22)*
 - [[state-of/healthcare]] — current state of AI in healthcare workflows, medical knowledge, and patient operations *(as_of: 2026-04-22)*
-- [[state-of/cybersecurity]] — current state of AI applied to cybersecurity: attack surfaces, vulnerability detection, and security tooling *(as_of: 2026-04-22)*
+- [[state-of/cybersecurity]] — current state of AI applied to cybersecurity: attack surfaces, vulnerability detection, and frontier model capability *(as_of: 2026-04-23)*
 - [[state-of/voice]] — current state of AI voice tools: text-to-speech, speech-to-speech, and speech-to-text *(as_of: 2026-04-23)*
 
 ## Models
@@ -33,9 +33,10 @@ Read-me-first dashboards per domain.
 Foundation models. One page per model family or generation.
 
 - [[models/claude-mythos-preview]] — Anthropic restricted-preview model; autonomous zero-day discovery; Project Glasswing; not publicly available *(as_of: 2026-04-22)*
-- [[models/claude-opus-4-7]] — Anthropic flagship multimodal model; stronger on explicit coding, document, and visual artifact tasks, but with reported reliability tradeoffs *(as_of: 2026-04-21)*
+- [[models/claude-opus-4-7]] — Anthropic flagship multimodal model; still strong on SWE-Bench Pro, MCP Atlas, and planning-heavy work despite new GPT-5.5 competition *(as_of: 2026-04-23)*
 - [[models/composer-2]] — Cursor's in-house coding model for complex long-horizon engineering work; late-March sources add benchmarks, pricing claims, and Kimi-k2.5 lineage *(as_of: 2026-03-23)*
-- [[models/gpt-5-4]] — OpenAI frontier model for reasoning, browsing, coding, and agent-style work *(as_of: 2026-03-08)*
+- [[models/deepseek-v4]] — DeepSeek preview release for long-context open agent workloads; 1M context, lower KV-cache cost, and competitive agent benchmark results *(as_of: 2026-04-24)*
+- [[models/gpt-5-5]] — OpenAI frontier model for coding, knowledge work, science, and cyber tasks; GPT-5.4 now archived to history *(as_of: 2026-04-23)*
 - [[models/glm-5-1]] — open-weight coding/agent model contender from the early-April open-model wave *(as_of: 2026-04-08)*
 - [[models/gpt-image-2]] — OpenAI image generation model; #1 across image-arena categories by a wide Elo margin *(as_of: 2026-04-22)*
 - [[models/kimi-k2-6]] — Moonshot AI open-weight 1T-param MoE; strong coding and agent benchmark claims *(as_of: 2026-04-21)*
@@ -51,10 +52,11 @@ Foundation models. One page per model family or generation.
 Tools and products built on top of models. One page per tool.
 
 - [[tools/claude-code]] — Anthropic's terminal-first AI coding agent; monitoring and routines push it toward supervised multi-session workflows *(as_of: 2026-04-22)*
-- [[tools/claude-cowork]] — Anthropic's desktop knowledge-work agent across local files and workplace apps *(as_of: 2026-04-21)*
+- [[tools/claude-cowork]] — Anthropic's desktop knowledge-work agent; now also available in public research preview via Amazon Bedrock *(as_of: 2026-04-23)*
 - [[tools/claude-design]] — Anthropic's research-preview artifact-generation surface for prototypes, slides, and one-pagers *(as_of: 2026-04-21)*
-- [[tools/claude-managed-agents]] — Anthropic's hosted long-horizon agent runtime concept built around decoupled session, harness, and sandbox abstractions *(as_of: 2026-04-15)*
-- [[tools/codex]] — OpenAI's cloud-based coding agent via CLI and ChatGPT *(as_of: 2026-04-21)*
+- [[tools/claude-managed-agents]] — Anthropic's hosted long-horizon agent runtime; now adds file-backed built-in memory with shared stores and enterprise audit controls *(as_of: 2026-04-24)*
+- [[tools/braintrust]] — eval dataset management and trace-to-dataset conversion for agent pipelines *(as_of: 2026-04-23)*
+- [[tools/codex]] — OpenAI's cloud-based agent surface; still coding-first, but increasingly framed as a broader computer-work system for docs, browser flows, sheets, and repeatable tasks *(as_of: 2026-04-24)*
 - [[tools/cursor]] — Cursor 3.1 agentic coding workspace with tiled supervision, local↔cloud handoff, and Bugbot learned rules *(as_of: 2026-04-14)*
 - [[tools/openai-deep-research]] — OpenAI's deep research agent; multi-step web research; available via ChatGPT and API *(as_of: 2026-04-22)*
 - [[tools/gemini-deep-research]] — Gemini Deep Research and Deep Research Max; most benchmarked public implementation; MCP support for internal data *(as_of: 2026-04-22)*
@@ -65,7 +67,7 @@ Tools and products built on top of models. One page per tool.
 - [[tools/futurehouse]] — science-agent platform for research and discovery workflows *(as_of: 2026-04-22)*
 - [[tools/gemini]] — Gemini umbrella page covering Google's assistant surfaces plus the new Gemini Enterprise Agent Platform *(as_of: 2026-04-23)*
 - [[tools/genspark-slides]] — AI slides workflow inside Genspark's broader agent/content product surface *(as_of: 2026-04-22)*
-- [[tools/google-adk]] — Google's open-source agent framework, now positioned as the developer layer inside Gemini Enterprise Agent Platform *(as_of: 2026-04-23)*
+- [[tools/google-adk]] — Google's open-source agent framework; ADK 2.0 now clearly centers graph workflows, coordinator-specialist routing, A2A handoffs, and sandboxed execution *(as_of: 2026-04-24)*
 - [[tools/harvey]] — legal AI platform; thin stub from a single editorial source *(as_of: 2026-04-02)*
 - [[tools/hebbia]] — finance-oriented AI knowledge-work platform for document-heavy analysis *(as_of: 2026-04-22)*
 - [[tools/hermes-agent]] — NousResearch open-source agent framework with memory, replanning, and recursive agent patterns *(as_of: 2026-04-22)*
@@ -76,7 +78,9 @@ Tools and products built on top of models. One page per tool.
 - [[tools/gstack]] — Garry Tan's open-source Claude Code config; 23 slash commands simulating a virtual engineering team; 810× pace claim *(as_of: 2026-04-22)*
 - [[tools/kiro]] — VS Code-based spec-driven development tool built around a 3-doc workflow *(as_of: 2025-10-15)*
 - [[tools/kora]] — healthcare operations assistant for scheduling and patient-service workflows *(as_of: 2026-04-22)*
+- [[tools/langfuse]] — open-source LLM observability and eval tracing platform *(as_of: 2026-04-23)*
 - [[tools/landingai-agentic-document-extraction]] — agentic document-intelligence system for forms, tables, and visually complex PDFs *(as_of: 2026-04-22)*
+- [[tools/microsoft-copilot]] — Microsoft's assistant surface across Microsoft 365; now agentic by default in Word, Excel, and PowerPoint *(as_of: 2026-04-22)*
 - [[tools/microsoft-foundry-agents]] — Microsoft's hosted enterprise agent runtime with per-session VM isolation, persistent resume, and governance controls *(as_of: 2026-04-23)*
 - [[tools/mistral-document-ai]] — document-intelligence product for extracting and structuring enterprise documents *(as_of: 2026-04-22)*
 - [[tools/open-evidence]] — physician-oriented medical evidence and clinical-question tool *(as_of: 2026-04-22)*
@@ -84,6 +88,7 @@ Tools and products built on top of models. One page per tool.
 - [[tools/orca]] — open-source worktree IDE for supervising multiple coding agents across isolated branches *(as_of: 2026-04-21)*
 - [[tools/perplexity-computer]] — Perplexity's 19-model orchestration agent connected to apps and financial institutions *(as_of: 2026-04-10)*
 - [[tools/pig]] — Windows-focused computer-use platform with product, API, and SDK layers *(as_of: 2026-04-22)*
+- [[tools/promptfoo]] — assertion-based CLI eval framework for LLM outputs and agent tool routing *(as_of: 2026-04-23)*
 - [[tools/proof]] — Every's web document editor for shared human/agent drafting and revision *(as_of: 2026-03-15)*
 - [[tools/seedance-2]] — ByteDance Seed's multimodal audio-video generation product *(as_of: 2026-04-22)*
 - [[tools/shopify-ai-toolkit]] — Shopify's plugin / skills / MCP integration layer for AI-assisted app development *(as_of: 2026-04-10)*
@@ -108,7 +113,7 @@ Benchmark pages. Current leaderboards and methodology.
 Reusable patterns and recipes.
 
 - [[workflows/advisor-strategy]] — Anthropic's small-executor + Opus-advisor escalation pattern *(as_of: 2026-04-09)*
-- [[workflows/agentic-orchestration-patterns]] — reusable patterns for multi-agent systems: ambiguity gates, scoped context, and failure-aware replanning *(as_of: 2026-04-21)*
+- [[workflows/agentic-orchestration-patterns]] — reusable patterns for multi-agent systems: ambiguity gates, scoped context, hybrid graphs, coordinator-specialist routing, and failure-aware replanning *(as_of: 2026-04-24)*
 - [[workflows/flex-processing]] — lower-cost asynchronous processing pattern for non-urgent OpenAI workloads *(as_of: 2026-04-22)*
 - [[workflows/skillify-agent-reliability]] — Garry Tan's pattern for turning agent failures into permanent tested skills; 10-step checklist and "thin harness / fat skills" architecture *(as_of: 2026-04-23)*
 
@@ -117,7 +122,7 @@ Reusable patterns and recipes.
 Ideas and techniques.
 
 - [[concepts/a2a]] — Google protocol for communication and delegation between agents across systems *(as_of: 2026-04-22)*
-- [[concepts/agent-improvement-loop]] — trace-centered workflow for improving AI agents through tracing, evals, and regression testing *(as_of: 2026-04-09)*
+- [[concepts/agent-improvement-loop]] — trace-centered workflow for improving AI agents through tracing, evals, regression testing, and eval-suite upkeep *(as_of: 2026-04-24)*
 - [[concepts/agent-memory]] — long-term agent memory as a retrieval-and-reasoning problem *(as_of: 2026-03-23)*
 - [[concepts/agentic-thinking]] — proposed successor to reasoning thinking; models that reason in order to act *(as_of: 2026-04-10)*
 - [[concepts/curiosity-driven-imagination]] — agent recovery pattern: explore when stuck, learn new steps, and turn them into guided rewards *(as_of: 2025-03-06)*
@@ -126,7 +131,7 @@ Ideas and techniques.
 - [[concepts/knowledge-layer]] — compiled, maintained context layer between raw sources and agents *(as_of: 2026-04-21)*
 - [[concepts/leworldmodel]] — LeWM JEPA world model with SIGReg and much faster planning than DINO-WM *(as_of: 2026-03-13)*
 - [[concepts/deep-research]] — category concept for longer-horizon research agents that plan, search, synthesize, and iterate *(as_of: 2026-04-22)*
-- [[concepts/mcp]] — open protocol for exposing tools, resources, and prompts to AI hosts and agents *(as_of: 2026-04-22)*
+- [[concepts/mcp]] — open protocol for exposing tools, resources, and prompts to AI hosts and agents; now with clearer local-vs-remote deployment guidance *(as_of: 2026-04-23)*
 - [[concepts/spec-driven-development]] — SDD concept, three-level taxonomy, and critiques *(as_of: 2025-10-15)*
 - [[concepts/slopsquatting]] — supply-chain attack via LLM-hallucinated package names; 19.7% hallucination rate (USENIX 2025) *(as_of: 2026-04-22)*
 - [[concepts/quantization]] — LLM weight compression: 4× smaller, 2× faster, 5-10% accuracy loss; makes local deployment practical *(as_of: 2026-04-22)*
@@ -138,7 +143,7 @@ Things being watched that haven't solidified yet.
 - [[trends/agents-reshape-organizations]] — leverage moves from individual to org as autonomous agents take coordination work *(as_of: 2026-04-21)*
 - [[trends/ai-in-science]] — biology and drug discovery provide the clearest current signal *(as_of: 2026-04-21)*
 - [[trends/compute-infrastructure]] — frontier compute scale diverging across Anthropic/AWS and Google's TPU v8 push *(as_of: 2026-04-23)*
-- [[trends/open-weight-momentum-broadens]] — open-weight competition is spreading beyond coding into multimodal and computer-use systems *(as_of: 2026-04-07)*
+- [[trends/open-weight-momentum-broadens]] — open-weight competition is spreading beyond coding into multimodal, computer-use, and now more serious long-context agent systems *(as_of: 2026-04-24)*
 - [[trends/proprietary-data-becomes-model-moat]] — proprietary operational data and domain evals may become stronger moats as model quality converges *(as_of: 2026-04-10)*
 - [[trends/restricted-frontier-deployment]] — frontier labs may increasingly withhold or selectively deploy their highest-capability systems *(as_of: 2026-04-08)*
 - [[trends/voice-becomes-agent-interface]] — voice, texting, and real-time audio are becoming agent surfaces rather than side features *(as_of: 2026-03-30)*
@@ -152,6 +157,8 @@ Practical guidance for teaching teams and businesses to use AI well.
 - [[training/anti-autopilot-review-friction]] — deliberate review friction to stop fluent AI output from being accepted without independent judgment *(as_of: 2026-04-21)*
 - [[training/company-wide-ai-enablement]] — operating patterns for broad AI adoption *(as_of: 2026-04-21)*
 - [[training/ai-enablement-software-development]] — engineering-specific AI adoption: critique loops, AI-native hiring, CI/CD bottlenecks, and junior talent pipeline risk *(as_of: 2026-04-23)*
+- [[training/evals-for-agentic-software-development]] — eval stack for coding agents: deterministic gates, task-specific patterns, MVES, shadow mode, trace mining *(as_of: 2026-04-23)*
+- [[training/evals-for-agentic-work]] — eval patterns for workflow and task agents: pass^k reliability, task-specific metrics, simulated users *(as_of: 2026-04-23)*
 
 ## Sources
 
@@ -162,12 +169,12 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 ## Page count
 
 - state-of: 11
-- models: 13
-- tools: 45
+- models: 14
+- tools: 49
 - benchmarks: 2
 - workflows: 4
 - concepts: 14
 - trends: 7
-- training: 5
+- training: 7
 
-**Total content pages: 97.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 104.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.

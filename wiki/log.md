@@ -8,6 +8,28 @@ Chronological append-only record of wiki activity. Entries start with:
 
 Valid ops: `ingest`, `triage`, `reject`, `apply`, `lint`, `query-verify`, `schema`.
 
+## [2026-04-24] apply | Eval lifecycle expansion | 3 pages updated (wiki/concepts/agent-improvement-loop, wiki/sources/deep-research/2026-04-23-agents-evals, wiki/index); proposal archived
+
+## [2026-04-24] apply | Evals for agentic software development | 2 pages updated (wiki/index, training/ai-enablement-software-development), 1 created (training/evals-for-agentic-software-development)
+
+## [2026-04-24] apply | Google ADK 2.0 orchestration patterns | 2 pages updated (tools/google-adk, workflows/agentic-orchestration-patterns), 1 created (sources/tweets/googlecloudtech-adk-2-orchestration-patterns); wiki/index blurbs refreshed
+
+## [2026-04-24] apply | Evals for workflow and task agents | 2 pages updated (wiki/index, training/company-wide-ai-enablement), 1 created (training/evals-for-agentic-work)
+
+## [2026-04-24] triage | Email Digest — Ai — 2026-04-23 to 2026-04-24 | 2 full-ingest candidates, 2 verify-first, 1 lightweight, 1 hold; skipped as duplicates/promos: GPT-5.5 repeat coverage, McKinsey repeat coverage, Every Codex camp promo; signals: DeepSeek V4 Preview, Managed Agents memory, Codex broader computer-work surface, Claude Code one-time scheduling, Microsoft Copilot agent mode
+
+## [2026-04-24] triage | Email Digest — Ai — 2026-04-23 to 2026-04-24 (processed) | 5 proposals generated, 0 skipped; proposals: DeepSeek V4 Preview, Claude Managed Agents memory, Codex broader computer-work surface, Claude Code one-time scheduling, Microsoft Copilot agent mode in Office
+
+## [2026-04-24] triage | Agent Evals Research Report — 2026-04-23 | 7 proposals generated, 0 skipped; signals: agent eval taxonomy (concept page), coding evals training page, autonomy ladder (training updates), workflow evals training page, benchmark map (6 new + 2 updated), eval tool pages (Braintrust/Promptfoo/Langfuse), eval lifecycle update; signal 5 (LLM-as-judge) folded into proposals 2 and 4
+
+## [2026-04-23] apply | Personal Wiki Agent framework research (reusable subset) | 3 pages updated (workflows/agentic-orchestration-patterns, concepts/mcp, wiki/index), 4 created (sources/articles/deep-agents-overview, sources/articles/goose-platform, sources/articles/anthropic-mcp-deployment-surfaces, sources/articles/openai-chatgpt-mcp-surfaces)
+
+## [2026-04-23] apply | OpenAI Workspace Agents | 3 pages updated (tools/codex, state-of/agents, wiki/index), 1 created (sources/newsletters/superhuman-2026-04-23)
+
+## [2026-04-23] apply | GPT-5.5 launch | 6 pages updated (tools/codex, state-of/models, models/claude-opus-4-7, state-of/cybersecurity, state-of/science, wiki/index), 4 created (models/gpt-5-5, history/models/gpt-5-4, sources/articles/openai-gpt-5-5-launch, sources/tweets/danshipper-gpt-5-5-vibe-check), 1 removed from current (models/gpt-5-4); operating rule updated in LLM-INSTRUCTIONS for superseded versions
+
+## [2026-04-23] apply | Anthropic MCP production guidance + Cowork on Bedrock | 4 pages updated (concepts/mcp, tools/claude-cowork, state-of/agents, wiki/index), 2 created (sources/articles/anthropic-mcp-production-systems, sources/tweets/awsai-cowork-bedrock-2026-04-23)
+
 ## [2026-04-23] apply | Google Cloud Next 2026 | 6 pages updated (tools/gemini, tools/google-adk, trends/compute-infrastructure, state-of/agents, state-of/models, wiki/index), 1 created (sources/articles/google-cloud-next-2026)
 
 ## [2026-04-23] schema | structural reorganization | merged agent-orchestration-ui + agent-orchestration + model-orchestration → agent-orchestration; moved claude-design to creative only; moved Deep Research content from gemini to deep-research; fixed genspark-slides placement in state-of/creative
@@ -232,3 +254,9 @@ grep "^## \[" wiki/log.md | tail -20
 ## [2026-04-22] ingest | Nano Banana 2 — Google image generation model | 1 page updated (state-of/models), 2 created (models/nano-banana-2, sources/tweets/nano-banana-2-tweet)
 ## [2026-04-22] ingest | Professional devs control — field research N=99 | 1 page updated (training/anti-autopilot-review-friction), 1 created (sources/tweets/prof-devs-control)
 ## [2026-04-23] lint | wiki-wide contradiction and categorization audit | 16 issues resolved: 5 schema fixes (tags, domains, subcategories); 6 domain corrections (codex +cybersecurity, perplexity-computer +finance, voice tools +voice, shopify-ai-toolkit +agents); hermes-agent reclassified agent-orchestration→agent-framework; cowork removed from computer-use; state-of/coding terminal-agent dates updated; "Agent orchestration UIs" label corrected; 6 new pages (state-of/voice, benchmarks/swe-bench, concepts/deep-research, tools/openai-deep-research, tools/gemini-deep-research); tools/deep-research retired to redirect; cross-links added between harness, agent-improvement-loop, skillify, knowledge-layer, agent-memory
+## [2026-04-24] ingest | Copilot's agentic capabilities in Word, Excel, and PowerPoint are generally available | 2 pages updated, 2 created
+## [2026-04-24] ingest | DeepSeek V4 Preview | 3 pages updated, 2 created
+## [2026-04-24] ingest | Codex broadens into computer work | 3 pages updated, 1 created
+## [2026-04-24] ingest | Built-in memory for Claude Managed Agents | 3 pages updated, 1 created
+## [2026-04-24] ingest | Claude Code one-time scheduling | 1 page updated, 1 created
+## [2026-04-24] ingest | Eval observability tool pages (Braintrust, Promptfoo, Langfuse) | 1 page updated, 4 created; schema: agent-eval-tooling

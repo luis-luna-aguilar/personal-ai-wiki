@@ -4,8 +4,8 @@ type: workflow
 domains: [agents]
 subcategory: agentic-orchestration-patterns
 tags: [agentic]
-as_of: 2026-04-21
-sources: [notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, harness-engineering-early-april, open-agent-orchestration-late-march, skills-and-plugin-packaging-late-march, harness-engineering-march]
+as_of: 2026-04-24
+sources: [notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, harness-engineering-early-april, open-agent-orchestration-late-march, skills-and-plugin-packaging-late-march, harness-engineering-march, deep-agents-overview, goose-platform, googlecloudtech-adk-2-orchestration-patterns]
 ---
 
 # Agentic orchestration patterns
@@ -30,8 +30,14 @@ Reusable patterns for getting better behavior from one or more agents without de
 - **Loop controls that are first-class.** Long-running agent work needs explicit pause, resume, rewind, and transparent-session controls rather than fragile prompt conventions.
 - **Eval-driven simplification.** Prefer the simplest harness that passes evals. A cleaner representation layer and stronger verification often beat "smarter-looking" orchestration.
 - **Thin harness, fat skills, fat code.** Put fuzzy human-like operating judgment into reusable skills and deterministic work into code, while keeping the harness itself small and legible.
+- **Harnesses and hosts are separating.** Deep Agents-style systems package planning, filesystem context, subagents, permissions, and memory into a batteries-included harness for specialized agent behavior. Goose-style systems package provider setup, MCP, and desktop/CLI/API surfaces into a local agent host product. Those are different layers, and teams should not confuse framework choice with host-surface choice.
 - **Demos over memos.** Prototype working flows behind flags or internal demos before locking in a long design-document process.
 - **Self-rebuild culture.** In fast-moving agent systems, teams must be willing to replace their own scaffolding repeatedly as model and environment capabilities change.
+- **Hybrid graph orchestration.** When some steps must never be skipped or reordered, represent the workflow as a graph with deterministic nodes and AI-driven nodes instead of leaving the whole procedure inside prompt text.
+- **Coordinator-specialist routing.** Replace "god agents" with a coordinator that routes between smaller specialists with narrower context, tools, and responsibilities.
+- **Composable skills with progressive disclosure.** Skills work best as small, reusable units with clear interfaces; load their full context only when invoked so agents can have broad capability surfaces without always paying the token cost.
+- **Cross-language delegation through a common protocol.** In larger organizations, useful agent systems often span Python, TypeScript, Go, and Java teams; protocolized handoff matters more than assuming one language or one repo owns the whole workflow.
+- **Sandboxed executors for evidence-producing steps.** If a step needs real code execution, parsing, tests, or transformations, run it in an isolated workspace with explicit limits instead of asking the model to simulate execution in text.
 
 ## Where these patterns surfaced
 
@@ -44,6 +50,8 @@ Reusable patterns for getting better behavior from one or more agents without de
 - Late-March OpenClaw / Plus One coverage reinforced CLI-first execution, one-click packaging, and worktree-style coordination as practical open-agent product directions before the later April orchestration wave.
 - Late-March coding-agent coverage suggests a clear packaging race: marketplaces and skill bundles are becoming the transport layer for agent behavior across teams.
 - Practitioner commentary also suggests "skill" does not mean the same thing everywhere: some ecosystems package reference-heavy technical instructions, while others package more open-ended problem-solving approaches.
+- Current framework docs make a layer split more explicit than earlier commentary did: Deep Agents is an agent harness, while Goose is a local agent product with desktop, CLI, API, provider, and MCP surfaces.
+- Google's ADK 2.0 thread makes an enterprise version of the same thesis concrete: reliable orchestration comes from structural control over sequence, handoff, and execution boundaries, not just more detailed prompts.
 
 ## Failure modes
 
@@ -54,6 +62,8 @@ Reusable patterns for getting better behavior from one or more agents without de
 - Treating orchestrator complexity as a substitute for stable context packaging
 - Confusing more agents with more leverage when the human review bottleneck does not move
 - Building cool tools with no concrete user journey or evaluation target
+- Encoding mandatory workflow order only in natural-language instructions and expecting the model not to compress or reorder the procedure over time
+- Building one giant "do everything" agent instead of separating specialists with narrower permissions and clearer handoff boundaries
 
 ## Sources
 
@@ -66,3 +76,5 @@ Reusable patterns for getting better behavior from one or more agents without de
 - [[sources/newsletters/open-agent-orchestration-late-march]]
 - [[sources/newsletters/skills-and-plugin-packaging-late-march]]
 - [[sources/newsletters/harness-engineering-march]]
+- [[sources/articles/deep-agents-overview]]
+- [[sources/articles/goose-platform]]

@@ -3,7 +3,7 @@ type: proposal
 sources:
   - raw/articles/Introducing GPT-5.5_ OpenAI.pdf
   - raw/tweets/2026-04-23-danshipper-2047375686688473134.md
-status: pending
+status: applied
 created: 2026-04-23
 ---
 
@@ -15,10 +15,10 @@ OpenAI released GPT-5.5 on April 23, 2026, billing it as "our smartest and most 
 
 ## Intended changes
 
-- [ ] **Create** `wiki/models/gpt-5-5.md` — new model page
+- [x] **Create** `wiki/models/gpt-5-5.md` — new model page
     > See draft below
 
-- [ ] **Update** `wiki/state-of/models.md` — replace GPT-5.4 line with GPT-5.5 under `Frontier multimodal models`; add recent-changes entry; update `as_of`
+- [x] **Update** `wiki/state-of/models.md` — replace GPT-5.4 line with GPT-5.5 under `Frontier multimodal models`; add recent-changes entry; update `as_of`
     > **Before:** `- [[models/gpt-5-4]] — OpenAI's March frontier update looked like the strongest general-purpose reasoning / browsing / agent model in the captured source cycle, though the same coverage still gives Claude the edge on writing, personality, and design-heavy work *(as of 2026-03-08)*`
     > **After:**  `- [[models/gpt-5-5]] — OpenAI's April 2026 frontier model; leads on Terminal-Bench 2.0 (82.7%), GDPval (84.9%), FrontierMath, BixBench, ARC-AGI-2, and CyberGym; Claude Opus 4.7 leads on SWE-Bench Pro, MCP Atlas, FinanceAgent, and long-context; GPT-5.5 Pro variant available for harder tasks *(as of 2026-04-23)*`
     >
@@ -27,7 +27,7 @@ OpenAI released GPT-5.5 on April 23, 2026, billing it as "our smartest and most 
     >
     > Update `as_of:` to `2026-04-23`
 
-- [ ] **Update** `wiki/models/claude-opus-4-7.md` — add competitive benchmarking note; update `as_of`
+- [x] **Update** `wiki/models/claude-opus-4-7.md` — add competitive benchmarking note; update `as_of`
     > Add to `## Weaknesses / caveats`:
     > `- GPT-5.5 (April 2026) leads on Terminal-Bench 2.0 (82.7% vs 69.4%), GDPval, FrontierMath, and ARC-AGI-2; Opus 4.7 retains leads on SWE-Bench Pro (64.3% vs 58.6%), MCP Atlas (79.1% vs 75.3%), FinanceAgent (64.4% vs 60.0%), and long-context graph tasks; also leads on plan quality and front-end/full-stack work per practitioner vibe check (Every)`
     >
@@ -36,7 +36,7 @@ OpenAI released GPT-5.5 on April 23, 2026, billing it as "our smartest and most 
     >
     > Update `as_of:` to `2026-04-23`
 
-- [ ] **Update** `wiki/tools/codex.md` — note GPT-5.5 now powers Codex; add Fast mode; add internal-usage stat; update `as_of`
+- [x] **Update** `wiki/tools/codex.md` — note GPT-5.5 now powers Codex; add Fast mode; add internal-usage stat; update `as_of`
     > Add to `## Current status`:
     > `- GPT-5.5 now powers Codex across Plus/Pro/Business/Enterprise/Edu/Go plans; 400K context window`
     > `- Fast mode: 1.5× faster token generation, 2.5× cost`
@@ -48,7 +48,7 @@ OpenAI released GPT-5.5 on April 23, 2026, billing it as "our smartest and most 
     >
     > Update `as_of:` to `2026-04-23`
 
-- [ ] **Update** `wiki/state-of/cybersecurity.md` — add GPT-5.5 to frontier cyber capabilities; add Trusted Access for Cyber; update `as_of`
+- [x] **Update** `wiki/state-of/cybersecurity.md` — add GPT-5.5 to frontier cyber capabilities; add Trusted Access for Cyber; update `as_of`
     > Under `## Subcategories → Frontier model capabilities (offensive)`, add:
     > `- [[models/gpt-5-5]] — CyberGym: 81.8% (Claude Opus 4.7: 73.1%); CTF tasks (internal): 88.1%; bio/chem and cyber capabilities rated "High" under Preparedness Framework; deployed publicly with tighter classifiers rather than restricted-access-only *(as of 2026-04-23)*`
     >
@@ -60,7 +60,7 @@ OpenAI released GPT-5.5 on April 23, 2026, billing it as "our smartest and most 
     >
     > Update `as_of:` to `2026-04-23`
 
-- [ ] **Update** `wiki/state-of/science.md` — add frontier model scientific research subcategory with GPT-5.5; update `as_of`
+- [x] **Update** `wiki/state-of/science.md` — add frontier model scientific research subcategory with GPT-5.5; update `as_of`
     > Add new subcategory:
     > ```
     > ### Frontier model scientific capabilities
@@ -75,10 +75,10 @@ OpenAI released GPT-5.5 on April 23, 2026, billing it as "our smartest and most 
     >
     > Update `as_of:` to `2026-04-23`
 
-- [ ] **Create** `wiki/sources/articles/openai-gpt-5-5-launch.md` — article source summary
+- [x] **Create** `wiki/sources/articles/openai-gpt-5-5-launch.md` — article source summary
     > See draft below
 
-- [ ] **Update** `wiki/sources/tweets/danshipper-gpt-5-5-vibe-check.md` — add reference to official article as primary source
+- [x] **Update** `wiki/sources/tweets/danshipper-gpt-5-5-vibe-check.md` — add reference to official article as primary source
     > Add to frontmatter `sources:` field and note in body that the article is the primary canonical source
 
 ## Page drafts
@@ -207,4 +207,6 @@ Official launch announcement for GPT-5.5. Covers model capabilities, benchmark t
 ## Open questions
 
 - Should I keep `[[models/gpt-5-4]]` as a demoted/superseded entry in `state-of/models.md`, or remove it entirely? (Currently proposing replacement.)
+	-  please propose a way to move it to the history pages, and archive them there, but for any model or tool replaced by a new version, theres no reason to keep the older version, and the LLM instructions should know that and act accordingly
 - The `Frontier model scientific capabilities` subcategory in `state-of/science.md` is new — approve addition to `wiki/_schema/subcategories.md`?
+	- No, thats a very weird subcategory, too niche, not a real one

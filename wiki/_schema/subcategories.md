@@ -6,7 +6,7 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
-Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-multimodal-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-multimodal-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`
 
 ### spec-driven-development
 - **Parent domain(s):** coding
@@ -103,6 +103,12 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Applies to types:** tool
 - **Definition:** SDKs and development kits for building, running, and testing custom agents, including orchestration primitives, tool integration, and runtime patterns.
 - **Examples:** [[tools/google-adk]]
+
+### agent-eval-tooling
+- **Parent domain(s):** agents
+- **Applies to types:** tool
+- **Definition:** Platforms and frameworks specialized for evaluating, tracing, and monitoring AI agent and LLM pipeline behavior — covering dataset management, assertion-based testing, LLM-as-a-judge scoring, and production observability.
+- **Examples:** [[tools/braintrust]], [[tools/promptfoo]], [[tools/langfuse]]
 
 ### science-agent-platform
 - **Parent domain(s):** science, agents

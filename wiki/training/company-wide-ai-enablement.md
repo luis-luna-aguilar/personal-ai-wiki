@@ -103,6 +103,7 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 ## See also
 
 - [[training/ai-enablement-software-development]] — engineering-specific patterns: critique loops, CI/CD as bottleneck, Shopify evidence, junior talent pipeline
+- [[training/evals-for-agentic-work]] — eval patterns for workflow and task agents: reliability metrics, task-specific patterns, simulated users
 
 ## Open questions
 
