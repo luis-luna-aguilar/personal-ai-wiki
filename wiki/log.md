@@ -8,6 +8,8 @@ Chronological append-only record of wiki activity. Entries start with:
 
 Valid ops: `ingest`, `triage`, `reject`, `apply`, `lint`, `query-verify`, `schema`.
 
+## [2026-04-24] apply | Agent benchmark map | 4 pages updated (wiki/benchmarks/swe-bench, wiki/benchmarks/swe-polybench, wiki/sources/deep-research/2026-04-23-agents-evals, wiki/index), 6 created (benchmarks/osworld, benchmarks/webarena, benchmarks/tau-bench, benchmarks/gaia, benchmarks/toolbench, benchmarks/terminal-bench); proposal archived
+
 ## [2026-04-24] apply | Eval lifecycle expansion | 3 pages updated (wiki/concepts/agent-improvement-loop, wiki/sources/deep-research/2026-04-23-agents-evals, wiki/index); proposal archived
 
 ## [2026-04-24] apply | Evals for agentic software development | 2 pages updated (wiki/index, training/ai-enablement-software-development), 1 created (training/evals-for-agentic-software-development)

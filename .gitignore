@@ -15,8 +15,10 @@ __pycache__/
 # Podcast build output (generated from wiki content)
 podcast/out/
 
-# Private personal notes
-personal/
+# Private personal notes — track structure, not content
+personal/**
+!personal/**/
+!personal/**/.gitkeep
 
 # Personal Wiki Agent runtime artifacts
 personal-wiki-agent/logs/

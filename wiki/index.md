@@ -106,7 +106,13 @@ Tools and products built on top of models. One page per tool.
 Benchmark pages. Current leaderboards and methodology.
 
 - [[benchmarks/swe-bench]] — de facto standard software engineering benchmark; leaderboard of model SWE-bench Verified/Pro/Multilingual scores *(as_of: 2026-04-23)*
-- [[benchmarks/swe-polybench]] — Amazon Science benchmark for multilingual and broader software engineering evaluation *(as_of: 2026-04-22)*
+- [[benchmarks/swe-polybench]] — Amazon Science benchmark for multilingual and broader software engineering evaluation *(as_of: 2026-04-23)*
+- [[benchmarks/osworld]] — computer-use benchmark across Ubuntu, Windows, and macOS; exposes GUI grounding gap *(as_of: 2026-04-23)*
+- [[benchmarks/webarena]] — stateful web navigation benchmark across realistic web environments *(as_of: 2026-04-23)*
+- [[benchmarks/tau-bench]] — policy adherence benchmark; introduces pass^k multi-trial reliability metric *(as_of: 2026-04-23)*
+- [[benchmarks/gaia]] — generalized AI agent benchmark for multimodal reasoning, web browsing, and tool use *(as_of: 2026-04-23)*
+- [[benchmarks/toolbench]] — enterprise API-chaining benchmark across 16,000+ real RESTful APIs *(as_of: 2026-04-23)*
+- [[benchmarks/terminal-bench]] — CLI and system-administration benchmark in isolated container environments *(as_of: 2026-04-23)*
 
 ## Workflows
 
@@ -171,10 +177,10 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 - state-of: 11
 - models: 14
 - tools: 49
-- benchmarks: 2
+- benchmarks: 8
 - workflows: 4
 - concepts: 14
 - trends: 7
 - training: 7
 
-**Total content pages: 104.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 110.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.

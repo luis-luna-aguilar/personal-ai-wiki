@@ -4,7 +4,7 @@ type: benchmark
 domains: [coding, models]
 tags: []
 as_of: 2026-04-23
-sources: [amazon-swe-polybench, kimi-k2-6-blog, ainews-2026-04-22, late-march-small-coding-models]
+sources: [amazon-swe-polybench, kimi-k2-6-blog, ainews-2026-04-22, late-march-small-coding-models, agents-evals-deep-research]
 ---
 
 # SWE-bench
@@ -16,6 +16,14 @@ SWE-bench is the de facto standard benchmark for evaluating AI software engineer
 - **SWE-bench Verified** — a human-curated subset of ~500 tasks where the issue and test suite are confirmed to be well-formed; considered the most reliable variant
 - **SWE-bench Pro / SWE-Pro** — harder task set with more complex multi-file and cross-repo issues
 - **SWE-bench Multilingual** — extends the benchmark beyond Python to multiple programming languages
+
+## Data contamination and SWE-bench Pro
+
+SWE-bench Verified has faced a significant credibility problem: OpenAI explicitly deprecated their internal use of it due to severe data contamination. Models absorbed the evaluation repository code into their pre-training data, meaning high scores reflected memorization rather than autonomous problem-solving ability.
+
+The successor addressing this is **SWE-bench Pro**, which evaluates against private, proprietary codebases and strictly copyleft-licensed repositories. SWE-bench Pro scores should be treated as the more meaningful measure of real engineering capability going forward.
+
+**Practical implication:** When comparing agents on SWE-bench Verified, treat scores with skepticism, especially for models with large and recent pre-training corpora. SWE-bench Pro and SWE-bench Multilingual scores are better proxies for generalizable capability.
 
 ## Current leaderboard (as of 2026-04-23)
 
@@ -44,6 +52,7 @@ SWE-bench is the most widely cited benchmark for comparing coding model and codi
 
 ## Recent changes
 
+- [2026-04-24] Added contamination warning for SWE-bench Verified; reframed SWE-bench Pro as the more meaningful successor
 - [2026-04-23] Page created; compiled leaderboard from model pages referencing SWE-bench scores
 
 ## Sources
@@ -51,3 +60,4 @@ SWE-bench is the most widely cited benchmark for comparing coding model and codi
 - [[sources/articles/kimi-k2-6-blog]]
 - [[sources/newsletters/late-march-small-coding-models]]
 - [[sources/newsletters/ainews-2026-04-22]]
+- [[sources/deep-research/2026-04-23-agents-evals]]
