@@ -55,13 +55,17 @@ Tools and products built on top of models. One page per tool.
 - [[tools/claude-cowork]] — Anthropic's desktop knowledge-work agent; now also available in public research preview via Amazon Bedrock *(as_of: 2026-04-23)*
 - [[tools/claude-design]] — Anthropic's research-preview artifact-generation surface for prototypes, slides, and one-pagers *(as_of: 2026-04-21)*
 - [[tools/claude-managed-agents]] — Anthropic's hosted long-horizon agent runtime; now adds file-backed built-in memory with shared stores and enterprise audit controls *(as_of: 2026-04-24)*
+- [[tools/agentrial]] — statistical multi-trial eval framework for agent reliability, trajectory attribution, and CI regression gates *(as_of: 2026-04-24)*
 - [[tools/braintrust]] — eval dataset management and trace-to-dataset conversion for agent pipelines *(as_of: 2026-04-23)*
+- [[tools/browserbase]] — cloud browser infrastructure for browser agents, automated testing, and proof-artifact capture *(as_of: 2026-04-24)*
+- [[tools/checkly]] — synthetic verification and Monitoring as Code built around Playwright and API checks *(as_of: 2026-04-24)*
 - [[tools/codex]] — OpenAI's cloud-based agent surface; still coding-first, but increasingly framed as a broader computer-work system for docs, browser flows, sheets, and repeatable tasks *(as_of: 2026-04-24)*
 - [[tools/cursor]] — Cursor 3.1 agentic coding workspace with tiled supervision, local↔cloud handoff, and Bugbot learned rules *(as_of: 2026-04-14)*
 - [[tools/openai-deep-research]] — OpenAI's deep research agent; multi-step web research; available via ChatGPT and API *(as_of: 2026-04-22)*
 - [[tools/gemini-deep-research]] — Gemini Deep Research and Deep Research Max; most benchmarked public implementation; MCP support for internal data *(as_of: 2026-04-22)*
 - [[tools/dragon-copilot]] — Microsoft's clinician-facing voice assistant for healthcare documentation and workflow automation *(as_of: 2026-04-22)*
 - [[tools/dream-machine]] — Luma's generative-video surface for creation and editing workflows *(as_of: 2026-04-22)*
+- [[tools/e2b]] — isolated sandbox runtime for agent code execution, tests, and verification loops *(as_of: 2026-04-24)*
 - [[tools/eleven-v3]] — expressive text-to-speech model optimized for high-control generated voice output *(as_of: 2026-04-22)*
 - [[tools/elevenlabs-scribe]] — speech-to-text product line for real-time and enterprise transcription workflows *(as_of: 2026-04-22)*
 - [[tools/futurehouse]] — science-agent platform for research and discovery workflows *(as_of: 2026-04-22)*
@@ -77,6 +81,8 @@ Tools and products built on top of models. One page per tool.
 - [[tools/hume-evi-3]] — speech-to-speech voice model emphasizing emotional and empathic conversation *(as_of: 2026-04-22)*
 - [[tools/gstack]] — Garry Tan's open-source Claude Code config; 23 slash commands simulating a virtual engineering team; 810× pace claim *(as_of: 2026-04-22)*
 - [[tools/kiro]] — VS Code-based spec-driven development tool built around a 3-doc workflow *(as_of: 2025-10-15)*
+- [[tools/k8sgpt]] — Kubernetes diagnostics and triage tool usable by humans and agents *(as_of: 2026-04-24)*
+- [[tools/kagent]] — Kubernetes-native runtime and governance layer for production AI agents *(as_of: 2026-04-24)*
 - [[tools/kora]] — healthcare operations assistant for scheduling and patient-service workflows *(as_of: 2026-04-22)*
 - [[tools/langfuse]] — open-source LLM observability and eval tracing platform *(as_of: 2026-04-23)*
 - [[tools/landingai-agentic-document-extraction]] — agentic document-intelligence system for forms, tables, and visually complex PDFs *(as_of: 2026-04-22)*
@@ -90,8 +96,10 @@ Tools and products built on top of models. One page per tool.
 - [[tools/pig]] — Windows-focused computer-use platform with product, API, and SDK layers *(as_of: 2026-04-22)*
 - [[tools/promptfoo]] — assertion-based CLI eval framework for LLM outputs and agent tool routing *(as_of: 2026-04-23)*
 - [[tools/proof]] — Every's web document editor for shared human/agent drafting and revision *(as_of: 2026-03-15)*
+- [[tools/stagehand]] — browser automation framework for AI agents and browser self-verification loops *(as_of: 2026-04-24)*
 - [[tools/seedance-2]] — ByteDance Seed's multimodal audio-video generation product *(as_of: 2026-04-22)*
 - [[tools/shopify-ai-toolkit]] — Shopify's plugin / skills / MCP integration layer for AI-assisted app development *(as_of: 2026-04-10)*
+- [[tools/skyflo]] — approval-gated AI control layer for Kubernetes and CI/CD operations *(as_of: 2026-04-24)*
 - [[tools/spec-kit]] — GitHub's CLI SDD scaffolder with slash commands *(as_of: 2025-10-15)*
 - [[tools/stitch]] — Google's UI-generation surface at the design-to-code boundary *(as_of: 2026-04-22)*
 - [[tools/stripe-cli]] — Stripe CLI `projects` workflow for provisioning and managing app-stack services *(as_of: 2026-04-09)*
@@ -162,9 +170,10 @@ Practical guidance for teaching teams and businesses to use AI well.
 - [[training/ai-native-product-building]] — practical guidance for the post-vibe-coding bottleneck shift *(as_of: 2026-03-23)*
 - [[training/ai-style-guides]] — how to externalize editorial taste and anti-patterns so AI writing stops drifting generic *(as_of: 2026-03-19)*
 - [[training/anti-autopilot-review-friction]] — deliberate review friction to stop fluent AI output from being accepted without independent judgment *(as_of: 2026-04-23)*
+- [[training/agentic-infrastructure-operations]] — safe operating patterns for infrastructure agents: read-only diagnosis, propose-only plans, approval-gated mutations, sandboxing, and post-deploy verification *(as_of: 2026-04-24)*
 - [[training/company-wide-ai-enablement]] — operating patterns for broad AI adoption, agent governance, and staged autonomy *(as_of: 2026-04-23)*
 - [[training/ai-enablement-software-development]] — engineering-specific AI adoption: critique loops, AI-native hiring, CI/CD bottlenecks, and junior talent pipeline risk *(as_of: 2026-04-23)*
-- [[training/evals-for-agentic-software-development]] — eval stack for coding agents: deterministic gates, task-specific patterns, MVES, shadow mode, trace mining *(as_of: 2026-04-23)*
+- [[training/evals-for-agentic-software-development]] — eval stack for coding agents: deterministic gates, sandboxed execution, QA artifact capture, browser self-verification, MVES, and trace mining *(as_of: 2026-04-24)*
 - [[training/evals-for-agentic-work]] — eval patterns for workflow and task agents: pass^k reliability, task-specific metrics, simulated users *(as_of: 2026-04-23)*
 
 ## Sources
@@ -177,11 +186,11 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 
 - state-of: 11
 - models: 14
-- tools: 49
+- tools: 57
 - benchmarks: 8
 - workflows: 4
 - concepts: 15
 - trends: 7
-- training: 7
+- training: 8
 
-**Total content pages: 115.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 124.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.

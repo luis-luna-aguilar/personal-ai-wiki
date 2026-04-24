@@ -1,8 +1,8 @@
 ---
 title: AI enablement — software development
 type: training
-as_of: 2026-04-23
-sources: [ramp-ai-adoption-playbook, shopify-latent-space-april-2026, lennysan-simonw-interview, agentic-cognitive-overhead, garrytan-gstack-repo, the-code-2026-04-23]
+as_of: 2026-04-24
+sources: [ramp-ai-adoption-playbook, shopify-latent-space-april-2026, lennysan-simonw-interview, agentic-cognitive-overhead, garrytan-gstack-repo, the-code-2026-04-23, qa-tooling-for-software-agents-deep-research]
 ---
 
 # AI enablement — software development
@@ -17,12 +17,14 @@ AI adoption inside engineering teams has moved fastest, but the bottlenecks and 
 - Build or adopt code review tooling that spends real compute on expensive models; external tools are optimized for speed, not review quality
 - Apply critique loops (generator + critic + redo) to PR review, research synthesis, and any task with a clear correctness signal
 - Allow non-engineers to attempt building: many can cross the threshold through iterative prompting without a formal coding background
+- Treat QA as part of the eval system: capture structured browser/session artifacts that can be converted into durable regression tests for coding agents
 - Design an explicit eval suite before granting a coding agent permission to open PRs autonomously — see [[training/evals-for-agentic-software-development]]
 
 ## Proven patterns
 
 - **Critique loops over parallel swarms.** Running fewer agents with multi-turn critique loops (one agent generates, a separate model critiques, the generating agent redoes) beats running many agents in parallel, even though critique loops are slower. Applies to PR review, research synthesis, and any task with a clear correctness signal. Observed by Shopify at scale
 - **Persistence beats intimidation.** Many non-engineers can cross into building by repeatedly asking the model to explain itself, revising instructions, and iterating through confusion instead of giving up at the first broken prototype
+- **QA as dataset maintainer.** In AI-native engineering teams, QA creates leverage by turning exploratory sessions, HAR files, DOM traces, and browser runs into reusable eval cases. The role shifts from "last manual check before merge" toward maintaining the highest-signal regression corpus.
 - **Reliability still needs architecture.** Fast prototyping does not remove the need to decide what cannot fail, how information is structured, and which parts of the workflow need engineering-grade reliability
 - **Shared workflow marketplace.** Internal skills or templates let one person's discovery become everyone else's shortcut; Ramp's `Dojo` skills marketplace is the clearest example at scale
 
@@ -63,7 +65,8 @@ Mid-career engineers may be the most vulnerable group — more so than juniors o
 
 ## See also
 
-- [[training/evals-for-agentic-software-development]] — eval stack for coding agents: MVES, task-specific patterns, shadow mode, trace mining
+- [[training/evals-for-agentic-software-development]] — eval stack for coding agents: sandboxed execution, QA artifact capture, browser self-verification, MVES, and trace mining
+- [[sources/deep-research/2026-04-24-qa-tooling-for-software-agents]] — source summary for the tooling layer behind coding-agent verification
 
 ## Sources
 

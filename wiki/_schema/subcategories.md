@@ -47,8 +47,8 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 ### agentic-devops
 - **Parent domain(s):** coding, agents
 - **Applies to types:** tool
-- **Definition:** CLI-native tools that provision and manage third-party app infrastructure and credentials across multiple providers, in workflows designed to be executable by humans or agents.
-- **Examples:** [[tools/stripe-cli]]
+- **Definition:** Tools and control planes that let humans or agents provision, diagnose, operate, verify, and safely mutate infrastructure through repeatable, auditable interfaces — spanning provisioning CLIs, Kubernetes diagnostics, approval-gated execution layers, and post-deploy verification.
+- **Examples:** [[tools/stripe-cli]], [[tools/kagent]], [[tools/k8sgpt]], [[tools/skyflo]], [[tools/checkly]]
 
 ### computer-use
 - **Parent domain(s):** computer-use

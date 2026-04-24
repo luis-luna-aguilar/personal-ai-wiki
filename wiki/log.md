@@ -8,6 +8,13 @@ Chronological append-only record of wiki activity. Entries start with:
 
 Valid ops: `ingest`, `triage`, `reject`, `apply`, `lint`, `query-verify`, `schema`.
 
+## [2026-04-24] apply | Broaden agentic DevOps tooling coverage | 4 pages updated (wiki/_schema/subcategories, state-of/agents, state-of/coding, wiki/index), 4 created (tools/kagent, tools/k8sgpt, tools/skyflo, tools/checkly); proposal archived
+
+## [2026-04-24] apply | Training page for safe agentic infrastructure operations | 3 pages updated (training/company-wide-ai-enablement, training/anti-autopilot-review-friction, wiki/index), 2 created (training/agentic-infrastructure-operations, sources/deep-research/2026-04-24-agentic-devops); proposal archived
+
+## [2026-04-24] apply | QA tooling layer for software-agent verification | 3 pages updated (training/evals-for-agentic-software-development, training/ai-enablement-software-development, wiki/index); reused existing source summary wiki/sources/deep-research/2026-04-24-qa-tooling-for-software-agents; proposal archived
+
+## [2026-04-24] apply | Core tool pages for software-agent verification infrastructure | 1 page updated (wiki/index), 5 created (tools/e2b, tools/agentrial, tools/stagehand, tools/browserbase, sources/deep-research/2026-04-24-qa-tooling-for-software-agents); proposal archived
 ## [2026-04-24] apply | Agent eval taxonomy and trajectory framing | 3 pages updated (concepts/harness, wiki/sources/deep-research/2026-04-23-agents-evals, wiki/index), 1 created (concepts/agent-evals); proposal archived
 
 ## [2026-04-24] apply | Autonomy ladder and eval-gated permission governance | 4 pages updated (training/company-wide-ai-enablement, training/anti-autopilot-review-friction, wiki/sources/deep-research/2026-04-23-agents-evals, wiki/index); proposal archived
@@ -27,6 +34,14 @@ Valid ops: `ingest`, `triage`, `reject`, `apply`, `lint`, `query-verify`, `schem
 ## [2026-04-24] triage | Email Digest — Ai — 2026-04-23 to 2026-04-24 (processed) | 5 proposals generated, 0 skipped; proposals: DeepSeek V4 Preview, Claude Managed Agents memory, Codex broader computer-work surface, Claude Code one-time scheduling, Microsoft Copilot agent mode in Office
 
 ## [2026-04-24] triage | Agent Evals Research Report — 2026-04-23 | 7 proposals generated, 0 skipped; signals: agent eval taxonomy (concept page), coding evals training page, autonomy ladder (training updates), workflow evals training page, benchmark map (6 new + 2 updated), eval tool pages (Braintrust/Promptfoo/Langfuse), eval lifecycle update; signal 5 (LLM-as-judge) folded into proposals 2 and 4
+
+## [2026-04-24] triage | QA Tooling for Software Agents Research Report — 2026-04-24 | 6 proposals generated, 0 skipped; signals: execution sandboxes, dual-track trajectory/output tooling, QA-to-eval pipeline, browser self-verification, proof-artifact lineage, selective tooling map (E2B/Agentrial/Stagehand/Browserbase as strongest candidates)
+
+## [2026-04-24] triage | Agentic DevOps Research Report — 2026-04-24 | 7 proposals generated, 0 skipped; signals: broader agentic-devops category framing, tri-state execution governance, deterministic policy engines, MCP/A2A operations context, Kubernetes/observability agent tooling shortlist, mandatory sandboxing, and a likely training-page gap around safe infrastructure operations
+
+## [2026-04-24] triage | QA Tooling for Software Agents Research Report — 2026-04-24 (processed) | 2 proposal files created; scope split into training/process guidance and selective tool-page promotion
+
+## [2026-04-24] triage | Agentic DevOps Research Report — 2026-04-24 (processed) | 2 proposal files created; scope split into training guidance and selective tool/state-of expansion
 
 ## [2026-04-23] apply | Personal Wiki Agent framework research (reusable subset) | 3 pages updated (workflows/agentic-orchestration-patterns, concepts/mcp, wiki/index), 4 created (sources/articles/deep-agents-overview, sources/articles/goose-platform, sources/articles/anthropic-mcp-deployment-surfaces, sources/articles/openai-chatgpt-mcp-surfaces)
 

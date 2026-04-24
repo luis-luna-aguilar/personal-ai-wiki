@@ -1,8 +1,8 @@
 ---
 title: Evals for agentic software development
 type: training
-as_of: 2026-04-23
-sources: [agents-evals-deep-research]
+as_of: 2026-04-24
+sources: [agents-evals-deep-research, qa-tooling-for-software-agents-deep-research]
 ---
 
 # Evals for agentic software development
@@ -30,6 +30,22 @@ Qualitative and trajectory-based evals that run only after Layer 1 passes. What 
 **Layer 3 — Online monitoring:**
 Asynchronous scoring of production traces to detect drift, cost spikes, or trajectory degradation in live deployments. This feeds the trace mining loop (see Proven patterns).
 
+## Tooling layer
+
+The practical eval stack for coding agents now splits cleanly into two tracks:
+
+- **Trajectory tooling** evaluates *how* the agent worked: tool selection, file navigation, retries, and where the path broke.
+- **Output verification** evaluates *what* the agent produced: does the patch compile, pass tests, and behave correctly in a real environment?
+
+This makes the earlier trajectory-vs-result distinction operational rather than conceptual. A good stack usually combines:
+
+- **Isolated execution runtimes** such as [[tools/e2b]] so agent-generated code runs away from the host machine
+- **Trajectory evaluators** such as [[tools/agentrial]] that measure consistency and identify which step diverged between passing and failing runs
+- **Output harnesses** such as SWE-bench-style patch execution or the team's own repo-native test suite
+- **Browser verification** for frontend-changing work, using Playwright directly or AI-assisted layers such as [[tools/stagehand]]
+
+The key design rule: do not let agent-generated code be evaluated only as text. Run it in an isolated environment, test it, and capture the artifacts.
+
 ## Minimum Viable Eval Suite (MVES)
 
 A practical starting point for teams deploying a coding agent that will open real PRs:
@@ -39,7 +55,7 @@ A practical starting point for teams deploying a coding agent that will open rea
 3. **Cost and latency thresholds** — hard limits on token consumption and wall-clock time per task to prevent runaway loops
 4. **LLM-as-judge for code review** — a capable secondary model prompted with a specific rubric (style guide, security anti-patterns, readability) to grade the output; useful for things unit tests cannot catch
 
-As the agent matures: add visual regression checks for frontend changes (before/after screenshots), dynamic test generation (agent writes a failing test before writing the fix), and multi-repo impact checks.
+As the agent matures: add visual regression and browser-based verification for frontend changes, dynamic test generation (agent writes a failing test before writing the fix), and proof-artifact capture so successful runs leave behind replayable traces, screenshots, or videos rather than only a green checkmark.
 
 ## Task-specific eval patterns
 
@@ -81,6 +97,22 @@ Production artifacts (bug reports, PR review comments, postmortems) are the high
 
 When a production incident occurs, it should always yield a regression test. Use an LLM to generate synthetic variations of the failing interaction so the agent learns the underlying principle, not just the specific case.
 
+## QA-to-eval pipeline
+
+The most useful new role for QA in agentic development is not maintaining brittle manual click scripts. It is curating the artifacts that become durable regression cases for coding agents.
+
+Practical pattern:
+
+1. QA performs exploratory testing in staging
+2. Capture structured telemetry: HAR, DOM snapshots, console logs, or Playwright traces
+3. Convert those artifacts into deterministic Playwright tests
+4. Commit the generated tests into the repo
+5. Run them as CI gates for future agent-authored changes
+
+The important lesson is negative as well as positive: pure "video-to-test" is not enough. Video is useful for human context, but reusable agent evals need structural traces, not just pixels.
+
+This changes the QA boundary. QA becomes a producer of eval datasets and proof artifacts, not only the final downstream checker of a completed feature.
+
 ## LLM-as-judge for code review
 
 For qualitative review signals (readability, architectural coherence, security anti-patterns) that unit tests cannot catch, a capable secondary model can grade the primary agent's output. To prevent judge drift:
@@ -90,6 +122,22 @@ For qualitative review signals (readability, architectural coherence, security a
 - **Human audits** — periodically sample 5–10% of LLM-judged evals for manual review; measure Inter-Rater Agreement (IRA) to detect when the judge has drifted
 
 Observability platforms (Braintrust, Promptfoo, Langfuse) support trace ingestion and assertion-based grading. A concrete example: a `skill-used` assertion in Promptfoo can verify that the agent routed a query to the SQL tool rather than hallucinating data from its weights — grading internal reasoning, not just the final output.
+
+## Browser self-verification and proof artifacts
+
+For frontend-changing work, "tests passed" is not enough. A stronger pattern is:
+
+1. The agent writes the code
+2. The agent opens the app in a browser
+3. The agent verifies the intended UI or workflow
+4. The run emits trace, screenshot, or video artifacts for human review
+
+This can be done with deterministic Playwright alone, but AI-assisted browser layers are increasingly useful when selectors are unstable or the agent needs to reason over page semantics. [[tools/stagehand]] and [[tools/browserbase]] are the clearest concrete examples from this report. The output should still be a replayable artifact, not only a verbal claim that the feature worked.
+
+Proof artifacts matter for two reasons:
+
+- they make review faster because humans can inspect the run without reproducing it locally
+- they improve the eval loop because the exact browser trace can become the next regression case
 
 ## Proven patterns
 
@@ -120,5 +168,6 @@ Observability platforms (Braintrust, Promptfoo, Langfuse) support trace ingestio
 ## Sources
 
 - [[sources/deep-research/2026-04-23-agents-evals]]
+- [[sources/deep-research/2026-04-24-qa-tooling-for-software-agents]]
 - [[sources/articles/ramp-ai-adoption-playbook]]
 - [[sources/newsletters/shopify-latent-space-april-2026]]

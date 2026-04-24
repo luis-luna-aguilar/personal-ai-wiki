@@ -1,7 +1,7 @@
 ---
 type: triage
 source: raw/deep-research/2026-04-23 Agents Evals.md
-status: pending
+status: applied
 ---
 
 # Triage: Agent Evals Research Report — 2026-04-23

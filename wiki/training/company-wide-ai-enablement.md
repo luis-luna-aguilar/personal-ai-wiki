@@ -1,8 +1,8 @@
 ---
 title: Company-wide AI enablement
 type: training
-as_of: 2026-04-23
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research]
+as_of: 2026-04-24
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research]
 ---
 
 # Company-wide AI enablement
@@ -19,6 +19,7 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 - Make usage and wins visible through demos, shared channels, office hours, and public examples
 - Move from point solutions to end-to-end workflow re-imagination — the step change in value comes from rethinking an entire process (e.g., insurance underwriting, hire-to-onboard), not from speeding up individual tasks
 - Raise performance expectations only as the tooling becomes good enough to support them
+- For production infrastructure workflows, start even narrower than normal: read-only first, then propose-only, then mutate-with-approval after explicit evidence that the agent can operate safely
 
 ## Proven patterns
 
@@ -123,6 +124,7 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 ## See also
 
 - [[training/ai-enablement-software-development]] — engineering-specific patterns: critique loops, CI/CD as bottleneck, Shopify evidence, junior talent pipeline
+- [[training/agentic-infrastructure-operations]] — practical guidance for safe agent use around production infrastructure, deployment safety, and post-action verification
 - [[training/evals-for-agentic-work]] — eval patterns for workflow and task agents: reliability metrics, task-specific patterns, simulated users
 
 ## Open questions
@@ -145,3 +147,4 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - [[sources/newsletters/every-ai-sandwich-april-2026]]
 - [[sources/articles/every-four-agents]]
 - [[sources/deep-research/2026-04-23-agents-evals]]
+- [[sources/deep-research/2026-04-24-agentic-devops]]

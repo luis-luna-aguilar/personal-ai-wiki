@@ -1,7 +1,7 @@
 ---
 type: proposal
 source: raw/deep-research/2026-04-23 Agents Evals.md
-status: pending
+status: applied
 created: 2026-04-24
 ---
 
