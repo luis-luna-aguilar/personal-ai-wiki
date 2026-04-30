@@ -28,7 +28,7 @@ Anthropic's restricted-preview frontier model, demonstrated through Project Glas
 
 ## Why it matters
 
-Mythos Preview is the first public evidence of an Anthropic model operating autonomously at a capability threshold that materially changes the cyber-threat model for critical infrastructure. It confirms the [[trends/restricted-frontier-deployment]] pattern: Anthropic chose partner-access-only rather than broad public release, framing the announcement as a safety mobilization event.
+Mythos Preview is the first public evidence of an Anthropic model operating autonomously at a capability threshold that materially changes the cyber-threat model for critical infrastructure. It confirms the [Restricted frontier deployment](../trends/restricted-frontier-deployment.md) pattern: Anthropic chose partner-access-only rather than broad public release, framing the announcement as a safety mobilization event.
 
 ## Caveats
 
@@ -38,4 +38,4 @@ Mythos Preview is the first public evidence of an Anthropic model operating auto
 
 ## Sources
 
-- [[sources/articles/glasswing]]
+- [Project Glasswing](../sources/articles/glasswing.md)

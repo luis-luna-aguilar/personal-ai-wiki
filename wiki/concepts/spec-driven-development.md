@@ -29,7 +29,7 @@ Per Birgitta Böckeler's taxonomy on martinfowler.com:
 2. **Spec-anchored** — The spec is kept and evolved over the lifetime of the feature, re-used across future changes.
 3. **Spec-as-source** — The spec is *the* source file. Humans only edit the spec; generated code is marked do-not-edit.
 
-All SDD tools are at least spec-first. Fewer commit to spec-anchored. Only [[tools/tessl]] is actively exploring spec-as-source.
+All SDD tools are at least spec-first. Fewer commit to spec-anchored. Only [Tessl Framework](../tools/tessl.md) is actively exploring spec-as-source.
 
 ## What is a spec?
 
@@ -72,5 +72,5 @@ From the Fowler review:
 
 ## Sources
 
-- [[sources/articles/sdd-3-tools-fowler]]
-- [[sources/tweets/spec-is-new-code]]
+- [Understanding Spec-Driven Development — Kiro, spec-kit, and Tessl (Fowler)](../sources/articles/sdd-3-tools-fowler.md)
+- ["The Spec Is the New Code" — Julian De Angelis](../sources/tweets/spec-is-new-code.md)

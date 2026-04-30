@@ -15,7 +15,7 @@ Long-form article by Julian De Angelis. Argues that agent failures are primarily
 
 ## Influenced pages
 
-- [[concepts/spec-driven-development]] — updated current status; added Ralph Loop, Symphony, and plan-mode-as-SDD patterns
+- [Spec-Driven Development (SDD)](../../concepts/spec-driven-development.md) — updated current status; added Ralph Loop, Symphony, and plan-mode-as-SDD patterns
 
 ## Key claims extracted
 

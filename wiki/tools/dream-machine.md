@@ -19,6 +19,6 @@ Dream Machine is Luma's generative video product. It belongs in AI video generat
 
 ## Sources
 
-- [[sources/articles/luma-dream-machine]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [Luma Dream Machine page](../sources/articles/luma-dream-machine.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

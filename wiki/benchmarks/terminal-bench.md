@@ -36,4 +36,4 @@ The reported sub-65% frontier score on tasks that a competent systems engineer w
 
 ## Sources
 
-- [[sources/deep-research/2026-04-23-agents-evals]]
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)

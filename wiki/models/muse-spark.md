@@ -36,4 +36,4 @@ The strongest signal in this source is not a benchmark table. It is Meta claimin
 
 ## Sources
 
-- [[sources/articles/muse-spark]]
+- [Introducing Muse Spark: Scaling Towards Personal Superintelligence](../sources/articles/muse-spark.md)

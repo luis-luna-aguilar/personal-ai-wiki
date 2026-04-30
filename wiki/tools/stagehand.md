@@ -33,4 +33,4 @@ Stagehand is an AI-era browser automation framework built by Browserbase. It sit
 
 ## Sources
 
-- [[sources/deep-research/2026-04-24-qa-tooling-for-software-agents]]
+- [Practical tooling layer for evals in agentic software development](../sources/deep-research/2026-04-24-qa-tooling-for-software-agents.md)

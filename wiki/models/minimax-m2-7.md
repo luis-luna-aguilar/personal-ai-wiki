@@ -38,5 +38,5 @@ MiniMax M2.7 is an open-weight coding and agent model that looks more consequent
 
 ## Sources
 
-- [[sources/newsletters/open-agentic-coding-models]]
-- [[sources/newsletters/late-march-small-coding-models]]
+- [Open agentic coding models](../sources/newsletters/open-agentic-coding-models.md)
+- [Late-March small coding models](../sources/newsletters/late-march-small-coding-models.md)

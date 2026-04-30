@@ -15,8 +15,8 @@ Garry Tan's post is a compact articulation of a useful orchestration rule: when 
 
 ## Influenced pages
 
-- [[workflows/agentic-orchestration-patterns]] — adds ambiguity gates as a reusable orchestration pattern
-- [[concepts/harness]] — provides a concrete example of clarification logic as part of harness design
+- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — adds ambiguity gates as a reusable orchestration pattern
+- [Harness (agent)](../../concepts/harness.md) — provides a concrete example of clarification logic as part of harness design
 
 ## Key claims extracted
 

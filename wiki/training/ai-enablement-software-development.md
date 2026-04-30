@@ -18,7 +18,7 @@ AI adoption inside engineering teams has moved fastest, but the bottlenecks and 
 - Apply critique loops (generator + critic + redo) to PR review, research synthesis, and any task with a clear correctness signal
 - Allow non-engineers to attempt building: many can cross the threshold through iterative prompting without a formal coding background
 - Treat QA as part of the eval system: capture structured browser/session artifacts that can be converted into durable regression tests for coding agents
-- Design an explicit eval suite before granting a coding agent permission to open PRs autonomously — see [[training/evals-for-agentic-software-development]]
+- Design an explicit eval suite before granting a coding agent permission to open PRs autonomously — see [Evals for agentic software development](evals-for-agentic-software-development.md)
 
 ## Proven patterns
 
@@ -41,7 +41,7 @@ AI adoption inside engineering teams has moved fastest, but the bottlenecks and 
 - Shopify built its own PR review tool because no external tool spends enough compute on expensive models during review — a signal that review quality is the next frontier
 - Shopify's internal systems: Tangle (content-addressed ML workflow engine, dev→prod in one click), Tangent (auto-research agent loop that democratizes ML experimentation to PMs), SimGym (customer simulation on historical data, targeting 0.7 correlation with add-to-cart events as a proxy eval for product changes)
 - Ramp: 84% of employees using coding agents weekly; 1,500+ apps shipped in six weeks by 800+ builders; non-engineers account for 12% of human-initiated PRs — `Dojo` skills marketplace is a key driver of the non-engineer coding adoption
-- Garry Tan (YC CEO, April 2026): 3 production services + 40+ features shipped in 60 days part-time while running YC full-time. Measured at 810× his 2013 coding pace by "logical code change" (methodology and reproduction script published in the gstack repo). More than one-third of his PRs are from agents. Open-sourced his Claude Code configuration as [[tools/gstack]]: 23 slash commands that simulate a virtual team of specialist agents.
+- Garry Tan (YC CEO, April 2026): 3 production services + 40+ features shipped in 60 days part-time while running YC full-time. Measured at 810× his 2013 coding pace by "logical code change" (methodology and reproduction script published in the gstack repo). More than one-third of his PRs are from agents. Open-sourced his Claude Code configuration as [gstack](../tools/gstack.md): 23 slash commands that simulate a virtual team of specialist agents.
 - Simon Willison / Lenny interview (April 2026): November 2025 named as the reliability inflection point — GPT 5.1 and Claude Opus 4.5 crossed a threshold where coding agents went from "mostly works" to "almost always does what you want." Engineers who experimented over the holiday break realized the change. Cloudflare and Shopify each hired 1,000 interns because AI cut ramp-up time from a month to a week.
 - "Dark factory" at StrongDM: policy is nobody writes code, nobody reads code. A swarm of AI-simulated users (fake employees making real-system requests) runs 24/7 at ~$10,000/day in token costs. They built simulated versions of Slack, Jira, and Okta from API docs to test without rate limits. This is the most radical current example of AI-native software development.
 - Red/green TDD is Simon's highest-leverage agentic engineering pattern: agents write tests first, watch them fail, write the implementation, watch them pass. The 5-word prompt "use red/green TDD" encodes the full workflow because agents recognize the jargon.
@@ -65,14 +65,14 @@ Mid-career engineers may be the most vulnerable group — more so than juniors o
 
 ## See also
 
-- [[training/evals-for-agentic-software-development]] — eval stack for coding agents: sandboxed execution, QA artifact capture, browser self-verification, MVES, and trace mining
-- [[sources/deep-research/2026-04-24-qa-tooling-for-software-agents]] — source summary for the tooling layer behind coding-agent verification
+- [Evals for agentic software development](evals-for-agentic-software-development.md) — eval stack for coding agents: sandboxed execution, QA artifact capture, browser self-verification, MVES, and trace mining
+- [Practical tooling layer for evals in agentic software development](../sources/deep-research/2026-04-24-qa-tooling-for-software-agents.md) — source summary for the tooling layer behind coding-agent verification
 
 ## Sources
 
-- [[sources/articles/ramp-ai-adoption-playbook]]
-- [[sources/newsletters/shopify-latent-space-april-2026]]
-- [[sources/tweets/lennysan-simonw-interview]]
-- [[sources/tweets/agentic-cognitive-overhead]]
-- [[sources/repos/garrytan-gstack-repo]]
-- [[sources/newsletters/the-code-2026-04-23]]
+- [Ramp AI adoption playbook](../sources/articles/ramp-ai-adoption-playbook.md)
+- [Shopify AI phase transition — Latent Space podcast (April 2026)](../sources/newsletters/shopify-latent-space-april-2026.md)
+- [Lenny Rachitsky — Simon Willison interview takeaways](../sources/tweets/lennysan-simonw-interview.md)
+- [Agentic cognitive overhead — personal ceiling for parallel agents](../sources/tweets/agentic-cognitive-overhead.md)
+- [gstack — Garry Tan's Claude Code virtual engineering team](../sources/repos/garrytan-gstack-repo.md)
+- [The Code — OpenAI drops a privacy focused model](../sources/newsletters/the-code-2026-04-23.md)

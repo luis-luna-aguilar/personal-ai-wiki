@@ -13,8 +13,8 @@ This source summary groups a late-March cluster on open-agent orchestration. The
 
 ## Influenced pages
 
-- [[workflows/agentic-orchestration-patterns]] — adds CLI-first, worktree-based, and packaged-agent patterns
-- [[state-of/agents]] — records the late-March open-stack precursor to the clearer April orchestration wave
+- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — adds CLI-first, worktree-based, and packaged-agent patterns
+- [Agents](../../history/state-of/agents.md) — records the late-March open-stack precursor to the clearer April orchestration wave
 
 ## Key claims extracted
 

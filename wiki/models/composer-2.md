@@ -40,5 +40,5 @@ Composer 2 is Cursor's in-house coding model for complex long-horizon engineerin
 
 ## Sources
 
-- [[sources/articles/cursor-3-launch]]
-- [[sources/newsletters/late-march-small-coding-models]]
+- [Meet the new Cursor (Cursor 3 launch)](../sources/articles/cursor-3-launch.md)
+- [Late-March small coding models](../sources/newsletters/late-march-small-coding-models.md)

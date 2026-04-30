@@ -21,4 +21,4 @@ Competitive framing that emphasizes Live Artifacts as pressure on dashboard and 
 
 ## Influenced pages
 
-- [[tools/claude-cowork]] — supporting context on pressure against dashboard and internal-tool products
+- [Claude Cowork](../../tools/claude-cowork.md) — supporting context on pressure against dashboard and internal-tool products

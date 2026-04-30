@@ -40,4 +40,4 @@ Quantization is what makes local model deployment practical. Without it, running
 
 ## Sources
 
-- [[sources/articles/ngrok-quantization]]
+- [Quantization from the ground up — ngrok blog](../sources/articles/ngrok-quantization.md)

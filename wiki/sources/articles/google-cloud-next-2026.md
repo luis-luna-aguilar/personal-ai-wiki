@@ -15,11 +15,11 @@ Google's Cloud Next 2026 announcements combined infrastructure and agent-platfor
 
 ## Influenced pages
 
-- [[tools/gemini]] — Gemini Enterprise Agent Platform details, model stack, and enterprise components
-- [[tools/google-adk]] — ADK reframed as the open developer layer inside the broader platform
-- [[trends/compute-infrastructure]] — TPU v8 hardware scale and competitive implications
-- [[state-of/agents]] — Google strengthened in the enterprise agent-platform layer
-- [[state-of/models]] — Google clarified its active model stack across Gemini, Gemma, Lyria, and embeddings
+- [Gemini](../../tools/gemini.md) — Gemini Enterprise Agent Platform details, model stack, and enterprise components
+- [Google ADK](../../tools/google-adk.md) — ADK reframed as the open developer layer inside the broader platform
+- [Compute infrastructure as decisive competitive moat](../../trends/compute-infrastructure.md) — TPU v8 hardware scale and competitive implications
+- [Agents](../../history/state-of/agents.md) — Google strengthened in the enterprise agent-platform layer
+- [Models](../../history/state-of/models.md) — Google clarified its active model stack across Gemini, Gemma, Lyria, and embeddings
 
 ## Key claims extracted
 

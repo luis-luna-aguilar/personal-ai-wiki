@@ -15,8 +15,8 @@ Anthropic presents Managed Agents, a hosted Claude Platform runtime for long-hor
 
 ## Influenced pages
 
-- [[tools/claude-managed-agents]] — new tool page, main subject of the ingest
-- [[state-of/agents]] — adds a broader `agent-orchestration` subcategory entry for Claude Managed Agents
+- [Claude Managed Agents](../../tools/claude-managed-agents.md) — new tool page, main subject of the ingest
+- [Agents](../../history/state-of/agents.md) — adds a broader `agent-orchestration` subcategory entry for Claude Managed Agents
 
 ## Key claims extracted
 

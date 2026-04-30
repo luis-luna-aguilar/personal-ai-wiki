@@ -25,6 +25,6 @@ UiPath Maestro is an orchestration layer for agents, robots, people, and enterpr
 
 ## Sources
 
-- [[sources/articles/uipath-maestro-introduction]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [UiPath Maestro introduction](../sources/articles/uipath-maestro-introduction.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

@@ -17,8 +17,8 @@ Secondary source: Basel Ismail's PSA tweet (`raw/tweets/2026-04-22-baselismail-2
 
 ## Influenced pages
 
-- [[concepts/slopsquatting]] — new page created
-- [[state-of/cybersecurity]] — new page created with `AI-specific attack surfaces` section
+- [Slopsquatting](../../concepts/slopsquatting.md) — new page created
+- [State of Cybersecurity](../../state-of/cybersecurity.md) — new page created with `AI-specific attack surfaces` section
 
 ## Key claims extracted
 

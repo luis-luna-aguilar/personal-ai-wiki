@@ -15,11 +15,11 @@ Birgitta Böckeler's survey of three self-labeled SDD tools, published on martin
 
 ## Influenced pages
 
-- [[concepts/spec-driven-development]] — initial concept page, taxonomy and critiques
-- [[tools/kiro]] — initial tool page
-- [[tools/spec-kit]] — initial tool page
-- [[tools/tessl]] — initial tool page
-- [[state-of/coding]] — first subcategory populated (`spec-driven-development`)
+- [Spec-Driven Development (SDD)](../../concepts/spec-driven-development.md) — initial concept page, taxonomy and critiques
+- [Kiro](../../tools/kiro.md) — initial tool page
+- [spec-kit](../../tools/spec-kit.md) — initial tool page
+- [Tessl Framework](../../tools/tessl.md) — initial tool page
+- [Coding](../../history/state-of/coding.md) — first subcategory populated (`spec-driven-development`)
 
 ## Key claims extracted
 

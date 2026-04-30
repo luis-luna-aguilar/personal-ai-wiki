@@ -56,5 +56,5 @@ The bottleneck also shifts upstream from model access to **measurement**. Teams 
 
 ## Sources
 
-- [[sources/articles/market-for-making-ai-better]]
-- [[sources/newsletters/ainews-2026-04-21]]
+- [The Market for Making AI Better](../sources/articles/market-for-making-ai-better.md)
+- [AINews — Moonshot Kimi K2.6, Hermes Agent, Codex Chronicle (2026-04-21)](../sources/newsletters/ainews-2026-04-21.md)

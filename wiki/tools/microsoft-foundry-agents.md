@@ -41,4 +41,4 @@ Microsoft Foundry Hosted Agents is Microsoft's hosted enterprise agent runtime i
 
 ## Sources
 
-- [[sources/articles/microsoft-foundry-agents-2026]]
+- [Introducing the new hosted agents in Foundry Agent Service](../sources/articles/microsoft-foundry-agents-2026.md)

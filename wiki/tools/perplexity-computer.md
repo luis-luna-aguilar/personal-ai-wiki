@@ -51,5 +51,5 @@ Autonomous AI agent launched 2026-02-25 that orchestrates 19 different AI models
 
 ## Sources
 
-- [[sources/articles/perplexity-computer-plaid]]
-- [[sources/newsletters/perplexity-personal-computer]]
+- [Perplexity Computer — Plaid financial integrations](../sources/articles/perplexity-computer-plaid.md)
+- [Perplexity Personal Computer](../sources/newsletters/perplexity-personal-computer.md)

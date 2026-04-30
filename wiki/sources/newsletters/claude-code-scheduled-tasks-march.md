@@ -14,8 +14,8 @@ This source cluster captures the moment Claude Code stopped looking like only an
 
 ## Influenced pages
 
-- [[tools/claude-code]] — earlier product evidence for recurring automation
-- [[state-of/coding]] — strengthens the terminal-agent → workflow-engine story
+- [Claude Code](../../tools/claude-code.md) — earlier product evidence for recurring automation
+- [Coding](../../history/state-of/coding.md) — strengthens the terminal-agent → workflow-engine story
 
 ## Key claims extracted
 

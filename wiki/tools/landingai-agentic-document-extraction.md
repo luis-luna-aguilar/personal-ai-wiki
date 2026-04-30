@@ -20,6 +20,6 @@ LandingAI's Agentic Document Extraction is a document-intelligence system built 
 
 ## Sources
 
-- [[sources/articles/landingai-agentic-document-extraction]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [LandingAI Agentic Document Extraction page](../sources/articles/landingai-agentic-document-extraction.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

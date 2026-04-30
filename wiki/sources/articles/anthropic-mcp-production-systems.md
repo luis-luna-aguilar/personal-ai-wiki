@@ -15,7 +15,7 @@ Anthropic's April 22 MCP guidance post. It is the clearest current explanation o
 
 ## Influenced pages
 
-- [[concepts/mcp]] — production guidance for APIs vs CLIs vs MCP; server/client design patterns; skills pairing
+- [Model Context Protocol](../../concepts/mcp.md) — production guidance for APIs vs CLIs vs MCP; server/client design patterns; skills pairing
 
 ## Key claims extracted
 

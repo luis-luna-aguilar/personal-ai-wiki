@@ -37,5 +37,5 @@ Alibaba's dense 27B open-weight coding model. Despite being 14× smaller than th
 
 ## Sources
 
-- [[sources/newsletters/ainews-2026-04-23]]
-- [[sources/newsletters/the-code-2026-04-23]]
+- [AINews — Tasteful Tokenmaxxing](../sources/newsletters/ainews-2026-04-23.md)
+- [The Code — OpenAI drops a privacy focused model](../sources/newsletters/the-code-2026-04-23.md)

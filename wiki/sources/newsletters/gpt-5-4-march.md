@@ -14,8 +14,8 @@ This source cluster treats GPT-5.4 as OpenAI's strongest general-purpose model i
 
 ## Influenced pages
 
-- [[models/gpt-5-4]] — new model page
-- [[state-of/models]] — adds GPT-5.4 under `Frontier multimodal models`
+- [GPT-5.4](../../history/models/gpt-5-4.md) — new model page
+- [Models](../../history/state-of/models.md) — adds GPT-5.4 under `Frontier multimodal models`
 
 ## Key claims extracted
 

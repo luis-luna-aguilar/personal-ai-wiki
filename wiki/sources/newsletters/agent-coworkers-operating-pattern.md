@@ -13,8 +13,8 @@ This source summary groups a late-March Every cluster on internal agent coworker
 
 ## Influenced pages
 
-- [[training/company-wide-ai-enablement]] — adds practical patterns for making internal agents reliable
-- [[trends/agents-reshape-organizations]] — strengthens the signal that agents are being treated as named coworkers, not just utilities
+- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — adds practical patterns for making internal agents reliable
+- [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — strengthens the signal that agents are being treated as named coworkers, not just utilities
 
 ## Key claims extracted
 

@@ -14,5 +14,5 @@ Anthropic announced Claude for Word beta, letting users draft, edit, and revise 
 
 ## Influenced pages
 
-- [[tools/claude-cowork]]
-- [[state-of/agents]]
+- [Claude Cowork](../../tools/claude-cowork.md)
+- [Agents](../../history/state-of/agents.md)

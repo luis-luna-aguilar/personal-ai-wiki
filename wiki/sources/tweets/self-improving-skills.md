@@ -15,7 +15,7 @@ Two sources. (1) tricalt article: skills are static but environments drift; trea
 
 ## Influenced pages
 
-- [[concepts/agent-improvement-loop]] — self-improving skills section added
+- [Agent improvement loop](../../concepts/agent-improvement-loop.md) — self-improving skills section added
 
 ## Key claims extracted
 

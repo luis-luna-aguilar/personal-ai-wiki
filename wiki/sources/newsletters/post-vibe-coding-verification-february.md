@@ -14,8 +14,8 @@ This source cluster argues that the bottleneck after vibe coding is no longer wr
 
 ## Influenced pages
 
-- [[training/ai-native-product-building]] — adds upstream verification and cognitive-debt guidance
-- [[training/anti-autopilot-review-friction]] — shifts review judgment toward specs and verifiers
+- [AI-native product building](../../training/ai-native-product-building.md) — adds upstream verification and cognitive-debt guidance
+- [Anti-autopilot review friction](../../training/anti-autopilot-review-friction.md) — shifts review judgment toward specs and verifiers
 
 ## Key claims extracted
 

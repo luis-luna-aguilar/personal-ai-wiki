@@ -28,5 +28,5 @@ McKinsey Podcast transcript with Senior Partner Alexis Krivkovich. Argues that c
 
 ## Influenced pages
 
-- [[training/company-wide-ai-enablement]] — major additions: pilot mode failure mode, above-the-loop distinction, McKinsey evidence, junior talent problem
-- [[trends/agents-reshape-organizations]] — McKinsey as strongest third-party signal for org redesign thesis
+- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — major additions: pilot mode failure mode, above-the-loop distinction, McKinsey evidence, junior talent problem
+- [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — McKinsey as strongest third-party signal for org redesign thesis

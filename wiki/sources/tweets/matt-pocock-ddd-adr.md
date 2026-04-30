@@ -15,8 +15,8 @@ Matt Pocock's DDD note is short, but it maps cleanly onto agent orchestration co
 
 ## Influenced pages
 
-- [[workflows/agentic-orchestration-patterns]] — adds shared language and decision records as supporting orchestration ideas
-- [[concepts/harness]] — reinforces that context shape and decision memory are part of harness quality
+- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — adds shared language and decision records as supporting orchestration ideas
+- [Harness (agent)](../../concepts/harness.md) — reinforces that context shape and decision memory are part of harness quality
 
 ## Key claims extracted
 

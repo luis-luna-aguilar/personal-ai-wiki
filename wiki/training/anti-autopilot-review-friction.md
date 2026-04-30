@@ -60,12 +60,12 @@ From field research (N=99 surveys; suitable:unsuitable ratios):
 
 ## Sources
 
-- [[sources/newsletters/every-ai-autopilot]]
-- [[sources/newsletters/every-youre-the-manager-now]]
-- [[sources/newsletters/ai-work-intensification-march]]
-- [[sources/newsletters/post-vibe-coding-verification-february]]
-- [[sources/newsletters/every-vibe-check-april-21-2026]]
-- [[sources/tweets/lennysan-simonw-interview]]
-- [[sources/tweets/prof-devs-control]]
-- [[sources/deep-research/2026-04-23-agents-evals]]
-- [[sources/deep-research/2026-04-24-agentic-devops]]
+- [Every — We Need to Talk About AI Autopilot](../sources/newsletters/every-ai-autopilot.md)
+- [Every — You’re the Manager Now](../sources/newsletters/every-youre-the-manager-now.md)
+- [AI work intensification](../sources/newsletters/ai-work-intensification-march.md)
+- [Post-vibe-coding verification and cognitive debt in late February](../sources/newsletters/post-vibe-coding-verification-february.md)
+- [Every — Mini Vibe Check (Claude Design + AI security, April 21 2026)](../sources/newsletters/every-vibe-check-april-21-2026.md)
+- [Lenny Rachitsky — Simon Willison interview takeaways](../sources/tweets/lennysan-simonw-interview.md)
+- ["Professional Software Developers Don't Vibe, They Control" — research summary](../sources/tweets/prof-devs-control.md)
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)
+- [Agentic infrastructure and operations](../sources/deep-research/2026-04-24-agentic-devops.md)

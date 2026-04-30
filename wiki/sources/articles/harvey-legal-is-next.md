@@ -15,9 +15,9 @@ Editorial blog post by **Gabe Pereyra** (Harvey), published Apr 2 2026. Half mem
 
 ## Influenced pages
 
-- [[state-of/legal]] — first content for this state-of page; created the `legal` domain
-- [[tools/harvey]] — initial (thin) tool stub
-- [[trends/agents-reshape-organizations]] — first trends page; built around the source's structural argument
+- [State of Legal](../../state-of/legal.md) — first content for this state-of page; created the `legal` domain
+- [Harvey](../../tools/harvey.md) — initial (thin) tool stub
+- [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — first trends page; built around the source's structural argument
 
 ## Key claims extracted (concrete)
 

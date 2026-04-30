@@ -26,4 +26,4 @@ Google's image generation model. Uses Gemini's understanding of the world plus r
 
 ## Sources
 
-- [[sources/tweets/nano-banana-2-tweet]]
+- [Sundar Pichai — Nano Banana 2 image model announcement](../sources/tweets/nano-banana-2-tweet.md)

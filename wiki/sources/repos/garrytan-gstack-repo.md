@@ -15,8 +15,8 @@ GitHub repo README for gstack: 23 slash commands simulating specialist agent rol
 
 ## Influenced pages
 
-- [[tools/gstack]] — new page created
-- [[training/ai-enablement-software-development]] — Garry Tan productivity evidence added
+- [gstack](../../tools/gstack.md) — new page created
+- [AI enablement — software development](../../training/ai-enablement-software-development.md) — Garry Tan productivity evidence added
 
 ## Key claims extracted
 

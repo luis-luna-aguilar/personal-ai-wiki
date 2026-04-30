@@ -13,9 +13,9 @@ This source summary captures the early-April Claude Code leak cluster as an arch
 
 ## Influenced pages
 
-- [[tools/claude-code]] — clarifies the product as a harness-heavy coding agent, not only a strong model in a CLI
-- [[concepts/harness]] — adds more concrete examples of what frontier harness engineering now includes
-- [[state-of/coding]] — supports the broader claim that harness quality is a key coding-agent differentiator
+- [Claude Code](../../tools/claude-code.md) — clarifies the product as a harness-heavy coding agent, not only a strong model in a CLI
+- [Harness (agent)](../../concepts/harness.md) — adds more concrete examples of what frontier harness engineering now includes
+- [Coding](../../history/state-of/coding.md) — supports the broader claim that harness quality is a key coding-agent differentiator
 
 ## Key claims extracted
 

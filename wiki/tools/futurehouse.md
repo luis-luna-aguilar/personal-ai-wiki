@@ -25,6 +25,6 @@ FutureHouse is a science-agent platform aimed at research and discovery workflow
 
 ## Sources
 
-- [[sources/articles/futurehouse-homepage]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [FutureHouse platform page](../sources/articles/futurehouse-homepage.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

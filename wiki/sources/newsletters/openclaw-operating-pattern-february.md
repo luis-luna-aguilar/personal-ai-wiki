@@ -14,8 +14,8 @@ This source adds a practical onboarding layer to the OpenClaw story. The key shi
 
 ## Influenced pages
 
-- [[training/company-wide-ai-enablement]] — adds first-agent onboarding as a practical adoption pattern
-- [[trends/agents-reshape-organizations]] — reinforces early-March movement from demos to operational usage
+- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — adds first-agent onboarding as a practical adoption pattern
+- [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — reinforces early-March movement from demos to operational usage
 
 ## Key claims extracted
 

@@ -53,4 +53,4 @@ Joint-Embedding Predictive Architectures (JEPAs) predict future states in abstra
 
 ## Influenced pages
 
-- [[concepts/leworldmodel]] — new concept page
+- [LeWorldModel (LeWM)](../../concepts/leworldmodel.md) — new concept page

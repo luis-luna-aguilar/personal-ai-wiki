@@ -38,4 +38,4 @@ Microsoft's cross-application assistant surface inside Microsoft 365. The April 
 
 ## Sources
 
-- [[sources/articles/microsoft-copilot-agent-mode-office]]
+- [Copilot's agentic capabilities in Word, Excel, and PowerPoint are generally available](../sources/articles/microsoft-copilot-agent-mode-office.md)

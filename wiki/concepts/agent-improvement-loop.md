@@ -112,15 +112,15 @@ This applies in both directions: do not let holdout cases leak into training dat
 
 ## Related
 
-- [[concepts/harness]] — the harness is what the improvement loop iterates on; better traces → targeted harness changes
-- [[workflows/skillify-agent-reliability]] — complementary pattern: encodes failures as permanent skills rather than harness-level prompt changes; works at the skill/script layer instead of the orchestration layer
-- [[training/evals-for-agentic-software-development]] — coding-agent eval patterns for deterministic gates, shadow mode, and trace-derived regression suites
-- [[training/evals-for-agentic-work]] — workflow-agent eval patterns for reliability, simulation, and production-safe evaluation
+- [Harness (agent)](harness.md) — the harness is what the improvement loop iterates on; better traces → targeted harness changes
+- [Skillify — Agent Reliability Pattern](../workflows/skillify-agent-reliability.md) — complementary pattern: encodes failures as permanent skills rather than harness-level prompt changes; works at the skill/script layer instead of the orchestration layer
+- [Evals for agentic software development](../training/evals-for-agentic-software-development.md) — coding-agent eval patterns for deterministic gates, shadow mode, and trace-derived regression suites
+- [Evals for workflow and task agents](../training/evals-for-agentic-work.md) — workflow-agent eval patterns for reliability, simulation, and production-safe evaluation
 
 ## Sources
 
-- [[sources/articles/trace-agent-improvement-loop]]
-- [[sources/articles/langchain-better-harness]]
-- [[sources/articles/cursor-bugbot-learning]]
-- [[sources/tweets/self-improving-skills]]
-- [[sources/deep-research/2026-04-23-agents-evals]]
+- [The Agent Improvement Loop Starts with a Trace — LangChain](../sources/articles/trace-agent-improvement-loop.md)
+- ["Better Harness: A Recipe for Harness Hill-Climbing with Evals" — LangChain](../sources/articles/langchain-better-harness.md)
+- [Bugbot now self-improves with learned rules](../sources/articles/cursor-bugbot-learning.md)
+- [Self-improving agent skills — auto-improvement loops](../sources/tweets/self-improving-skills.md)
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)

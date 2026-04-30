@@ -44,4 +44,4 @@ GPT-5.4 is OpenAI's March 2026 update to the GPT-5 line. The source cluster pres
 
 ## Sources
 
-- [[sources/newsletters/gpt-5-4-march]]
+- [GPT-5.4](../../sources/newsletters/gpt-5-4-march.md)

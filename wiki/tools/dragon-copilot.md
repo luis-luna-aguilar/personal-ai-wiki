@@ -20,6 +20,6 @@ Dragon Copilot is Microsoft's unified clinical voice assistant for healthcare. I
 
 ## Sources
 
-- [[sources/articles/dragon-copilot-launch]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [Microsoft Dragon Copilot launch](../sources/articles/dragon-copilot-launch.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

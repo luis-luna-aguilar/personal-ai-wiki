@@ -55,7 +55,7 @@ The Haiku-as-executor result is the most interesting data point: it opens a high
 
 ## Related
 
-- [[state-of/agents]]
+- [Agents](../history/state-of/agents.md)
 
 ## Recent changes
 
@@ -63,4 +63,4 @@ The Haiku-as-executor result is the most interesting data point: it opens a high
 
 ## Sources
 
-- [[sources/articles/advisor-strategy]]
+- [The advisor strategy — Claude blog](../sources/articles/advisor-strategy.md)

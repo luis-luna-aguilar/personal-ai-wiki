@@ -32,4 +32,4 @@ Kagent is a Kubernetes-native framework for building, deploying, and managing AI
 
 ## Sources
 
-- [[sources/deep-research/2026-04-24-agentic-devops]]
+- [Agentic infrastructure and operations](../sources/deep-research/2026-04-24-agentic-devops.md)

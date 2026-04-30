@@ -232,9 +232,9 @@ The hard part is making these checkpoints real. The system needs reliable ways t
 
 ## Influenced pages
 
-- [[concepts/curiosity-driven-imagination]] — new concept page for the paper's main idea
-- [[state-of/agents]] — recent change noting a pattern for agent recovery
-- [[state-of/science]] — recent change noting the robotics research result
+- [Curiosity-driven imagination](../../concepts/curiosity-driven-imagination.md) — new concept page for the paper's main idea
+- [Agents](../../history/state-of/agents.md) — recent change noting a pattern for agent recovery
+- [State of Science](../../state-of/science.md) — recent change noting the robotics research result
 
 ## Key claims extracted
 

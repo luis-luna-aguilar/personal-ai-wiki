@@ -15,10 +15,10 @@ Cursor's official launch post for Cursor 3, on cursor.com/blog. Frames Cursor 3 
 
 ## Influenced pages
 
-- [[tools/cursor]] — initial tool page (created from this source)
-- [[models/composer-2]] — stub model page created from a passing mention
-- [[state-of/coding]] — added new `agentic-coding-workspace` subcategory with Cursor
-- [[state-of/agents]] — first content; added `agent-orchestration-ui` subcategory with Cursor
+- [Cursor](../../tools/cursor.md) — initial tool page (created from this source)
+- [Composer 2](../../models/composer-2.md) — stub model page created from a passing mention
+- [Coding](../../history/state-of/coding.md) — added new `agentic-coding-workspace` subcategory with Cursor
+- [Agents](../../history/state-of/agents.md) — first content; added `agent-orchestration-ui` subcategory with Cursor
 
 ## Key claims extracted
 

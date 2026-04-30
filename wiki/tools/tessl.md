@@ -10,7 +10,7 @@ sources: [sdd-3-tools-fowler]
 
 # Tessl Framework
 
-The [[concepts/spec-driven-development|SDD]] tool furthest along the spec-as-source direction. A CLI that also doubles as an MCP server, scaffolds workspace config for a variety of coding assistants, and treats the spec as a living artifact that can round-trip with code. Currently in private beta.
+The [SDD](../concepts/spec-driven-development.md) tool furthest along the spec-as-source direction. A CLI that also doubles as an MCP server, scaffolds workspace config for a variety of coding assistants, and treats the spec as a living artifact that can round-trip with code. Currently in private beta.
 
 ## Current status (as of 2025-10-15)
 
@@ -51,4 +51,4 @@ Lives in `.tessl/framework/` with additional conventions via `KNOWLEDGE.md` and 
 
 ## Sources
 
-- [[sources/articles/sdd-3-tools-fowler]]
+- [Understanding Spec-Driven Development — Kiro, spec-kit, and Tessl (Fowler)](../sources/articles/sdd-3-tools-fowler.md)

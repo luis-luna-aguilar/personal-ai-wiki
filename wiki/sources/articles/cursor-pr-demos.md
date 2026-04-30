@@ -15,7 +15,7 @@ Cursor can now attach demos and screenshots of cloud agent work to the GitHub PR
 
 ## Influenced pages
 
-- [[tools/cursor]] — new recent change, status update
+- [Cursor](../../tools/cursor.md) — new recent change, status update
 
 ## Key claims extracted
 

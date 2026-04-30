@@ -10,7 +10,7 @@ sources: [vectorlab-qwen-3-6-local-threshold, qwen-3-5-medium-february, ainews-2
 
 # Qwen 3.6 35B-A3B
 
-Alibaba's open-weight MoE coding model. The practical local-agent framing has been partly superseded by the April 2026 release of [[models/qwen-3-6-27b]], a 27B dense sibling that beats the 397B MoE on all major coding benchmarks. The 35B-A3B remains a strong MoE option for 24GB-class hardware, with a better active-parameter efficiency profile for deployment environments that suit MoE.
+Alibaba's open-weight MoE coding model. The practical local-agent framing has been partly superseded by the April 2026 release of [Qwen 3.6 27B](qwen-3-6-27b.md), a 27B dense sibling that beats the 397B MoE on all major coding benchmarks. The 35B-A3B remains a strong MoE option for 24GB-class hardware, with a better active-parameter efficiency profile for deployment environments that suit MoE.
 
 ## Current status (as of 2026-04-22)
 
@@ -37,11 +37,11 @@ Qwen 3.6 Max Preview went live on Qwen Chat (chat.qwen.ai) in April 2026. Commun
 
 ## Recent changes
 
-- [2026-04-23] [[models/qwen-3-6-27b]] released — 27B dense sibling outperforms this model and the prior 397B flagship on SWE-bench and all major coding evals; see that page for current benchmark leader
+- [2026-04-23] [Qwen 3.6 27B](qwen-3-6-27b.md) released — 27B dense sibling outperforms this model and the prior 397B flagship on SWE-bench and all major coding evals; see that page for current benchmark leader
 - [2026-04-22] Added community reception niche data (coding/tools > creative/translation); added Qwen 3.6 Max Preview section (proprietary, 600-700B est., top Chinese AA-Intelligence Index)
 
 ## Sources
 
-- [[sources/newsletters/vectorlab-qwen-3-6-local-threshold]]
-- [[sources/newsletters/qwen-3-5-medium-february]]
-- [[sources/newsletters/ainews-2026-04-22]]
+- [Vector Lab — Qwen 3.6 as a local-agent threshold](../sources/newsletters/vectorlab-qwen-3-6-local-threshold.md)
+- [Qwen 3.5 medium models in late February](../sources/newsletters/qwen-3-5-medium-february.md)
+- [AINews — 2026-04-22 (GPT-Image-2, Hermes, Deep Research Max)](../sources/newsletters/ainews-2026-04-22.md)

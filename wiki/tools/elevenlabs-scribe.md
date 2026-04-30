@@ -20,6 +20,6 @@ ElevenLabs Scribe is the company's speech-to-text product line. It belongs in th
 
 ## Sources
 
-- [[sources/articles/elevenlabs-scribe]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [ElevenLabs Scribe speech-to-text page](../sources/articles/elevenlabs-scribe.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

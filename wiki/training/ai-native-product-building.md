@@ -40,6 +40,6 @@ The old scarcity was implementation bandwidth. The new scarcity is knowing what 
 
 ## Sources
 
-- [[sources/newsletters/ai-native-product-building-lessons-late-march]]
-- [[sources/newsletters/vibe-coding-reliability-and-distribution]]
-- [[sources/newsletters/post-vibe-coding-verification-february]]
+- [AI-native product-building lessons in late March](../sources/newsletters/ai-native-product-building-lessons-late-march.md)
+- [Vibe coding, reliability, and distribution](../sources/newsletters/vibe-coding-reliability-and-distribution.md)
+- [Post-vibe-coding verification and cognitive debt in late February](../sources/newsletters/post-vibe-coding-verification-february.md)

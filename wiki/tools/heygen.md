@@ -19,6 +19,6 @@ HeyGen is an avatar-video platform for synthetic presenters and reusable digital
 
 ## Sources
 
-- [[sources/articles/heygen-homepage]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [HeyGen official page](../sources/articles/heygen-homepage.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

@@ -15,16 +15,16 @@ Current state of AI in healthcare — clinical documentation, medical knowledge 
 
 ### Healthcare AI
 
-- [[tools/dragon-copilot]] — Microsoft's clinician-facing voice assistant for documentation, retrieval, and healthcare workflow automation *(as of 2026-04-22)*
-- [[tools/hippocratic-ai]] — healthcare-specific conversational agent company with a safety-heavy product framing *(as of 2026-04-22)*
-- [[tools/tempus]] — larger clinical-data and precision-medicine platform with AI workflow surfaces *(as of 2026-04-22)*
-- [[tools/zo]] — Zocdoc's patient-access and scheduling phone assistant *(as of 2026-04-22)*
-- [[tools/open-evidence]] — physician-oriented evidence and medical-answer layer *(as of 2026-04-22)*
-- [[tools/kora]] — healthcare operations assistant for scheduling and patient-service workflows *(as of 2026-04-22)*
+- [Dragon Copilot](../tools/dragon-copilot.md) — Microsoft's clinician-facing voice assistant for documentation, retrieval, and healthcare workflow automation *(as of 2026-04-22)*
+- [Hippocratic AI](../tools/hippocratic-ai.md) — healthcare-specific conversational agent company with a safety-heavy product framing *(as of 2026-04-22)*
+- [Tempus](../tools/tempus.md) — larger clinical-data and precision-medicine platform with AI workflow surfaces *(as of 2026-04-22)*
+- [Zo](../tools/zo.md) — Zocdoc's patient-access and scheduling phone assistant *(as of 2026-04-22)*
+- [OpenEvidence](../tools/open-evidence.md) — physician-oriented evidence and medical-answer layer *(as of 2026-04-22)*
+- [Kora](../tools/kora.md) — healthcare operations assistant for scheduling and patient-service workflows *(as of 2026-04-22)*
 
 ### Speech to text
 
-- [[tools/elevenlabs-scribe]] — enterprise-oriented transcription stack with relevance for medical and operational documentation workflows *(as of 2026-04-22)*
+- [ElevenLabs Scribe](../tools/elevenlabs-scribe.md) — enterprise-oriented transcription stack with relevance for medical and operational documentation workflows *(as of 2026-04-22)*
 
 ## Recent changes
 
@@ -32,12 +32,12 @@ Current state of AI in healthcare — clinical documentation, medical knowledge 
 
 ## Sources
 
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
-- [[sources/articles/dragon-copilot-launch]]
-- [[sources/articles/hippocratic-ai-homepage]]
-- [[sources/articles/tempus-homepage]]
-- [[sources/articles/zocdoc-zo]]
-- [[sources/articles/open-evidence-homepage]]
-- [[sources/articles/konko-kora-homepage]]
-- [[sources/articles/elevenlabs-scribe]]
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
+- [Microsoft Dragon Copilot launch](../sources/articles/dragon-copilot-launch.md)
+- [Hippocratic AI official page](../sources/articles/hippocratic-ai-homepage.md)
+- [Tempus official page](../sources/articles/tempus-homepage.md)
+- [Zocdoc Zo launch](../sources/articles/zocdoc-zo.md)
+- [OpenEvidence official page](../sources/articles/open-evidence-homepage.md)
+- [Konko Kora official page](../sources/articles/konko-kora-homepage.md)
+- [ElevenLabs Scribe speech-to-text page](../sources/articles/elevenlabs-scribe.md)
 

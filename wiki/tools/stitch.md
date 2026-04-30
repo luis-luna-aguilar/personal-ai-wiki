@@ -20,6 +20,6 @@ Stitch is Google's UI generation surface for turning prompts and references into
 
 ## Sources
 
-- [[sources/articles/stitch-google]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [Google Stitch page](../sources/articles/stitch-google.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

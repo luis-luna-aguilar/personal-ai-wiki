@@ -15,8 +15,8 @@ General-audience AI newsletter covering the April 22-23 window. The most reusabl
 
 ## Influenced pages
 
-- [[tools/codex]] — Workspace Agents details
-- [[state-of/agents]] — OpenAI gains a clearer agent-orchestration/team-agent signal
+- [Codex](../../tools/codex.md) — Workspace Agents details
+- [Agents](../../history/state-of/agents.md) — OpenAI gains a clearer agent-orchestration/team-agent signal
 
 ## Key claims extracted
 

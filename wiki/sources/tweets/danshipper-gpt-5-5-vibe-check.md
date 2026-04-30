@@ -15,8 +15,8 @@ Every's practitioner take on GPT-5.5 after three weeks of internal use. This is 
 
 ## Influenced pages
 
-- [[models/gpt-5-5]] — practical strengths and weaknesses versus Claude Opus 4.7
-- [[models/claude-opus-4-7]] — practitioner comparison caveats
+- [GPT-5.5](../../models/gpt-5-5.md) — practical strengths and weaknesses versus Claude Opus 4.7
+- [Claude Opus 4.7](../../models/claude-opus-4-7.md) — practitioner comparison caveats
 
 ## Key claims extracted
 

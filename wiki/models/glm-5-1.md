@@ -34,4 +34,4 @@ GLM-5.1 is an open-weight model positioned as a frontier open contender for codi
 
 ## Sources
 
-- [[sources/newsletters/open-agentic-coding-models]]
+- [Open agentic coding models](../sources/newsletters/open-agentic-coding-models.md)

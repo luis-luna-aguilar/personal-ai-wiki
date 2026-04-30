@@ -33,4 +33,4 @@ Agentrial is an open-source statistical evaluation framework for AI agents. Its 
 
 ## Sources
 
-- [[sources/deep-research/2026-04-24-qa-tooling-for-software-agents]]
+- [Practical tooling layer for evals in agentic software development](../sources/deep-research/2026-04-24-qa-tooling-for-software-agents.md)

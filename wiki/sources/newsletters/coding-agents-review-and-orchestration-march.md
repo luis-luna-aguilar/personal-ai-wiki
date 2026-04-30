@@ -14,8 +14,8 @@ This source summary groups an early-March cluster on how coding-agent products w
 
 ## Influenced pages
 
-- [[tools/claude-code]] — adds the March Code Review and `/btw` signals as early evidence of the product's supervision direction
-- [[tools/codex]] — grounds the product's AGENTS.md / MCP / skills / automation framing in an earlier first-party guide
+- [Claude Code](../../tools/claude-code.md) — adds the March Code Review and `/btw` signals as early evidence of the product's supervision direction
+- [Codex](../../tools/codex.md) — grounds the product's AGENTS.md / MCP / skills / automation framing in an earlier first-party guide
 
 ## Key claims extracted
 

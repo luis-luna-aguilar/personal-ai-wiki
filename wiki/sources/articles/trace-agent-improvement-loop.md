@@ -16,7 +16,7 @@ The article is both a conceptual framework and product positioning for LangSmith
 
 ## Influenced pages
 
-- [[concepts/agent-improvement-loop]] — new concept page for the trace-centered improvement loop
+- [Agent improvement loop](../../concepts/agent-improvement-loop.md) — new concept page for the trace-centered improvement loop
 
 ## Key claims extracted
 

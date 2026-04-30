@@ -15,7 +15,7 @@ Full-length essay published as a tweet thread by Garry Tan (YC CEO). Describes t
 
 ## Influenced pages
 
-- [[workflows/skillify-agent-reliability]] — new workflow page; primary source
+- [Skillify — Agent Reliability Pattern](../../workflows/skillify-agent-reliability.md) — new workflow page; primary source
 
 ## Key claims extracted
 

@@ -26,5 +26,5 @@ AI is increasingly moving from generic scientific assistance toward domain-speci
 
 ## Sources
 
-- [[sources/newsletters/noetik-cancer-trials]]
-- [[sources/tweets/gpt-rosalind-launch]]
+- [Latent Space — Noetik and cancer-trial failure](../sources/newsletters/noetik-cancer-trials.md)
+- [GPT-Rosalind launch](../sources/tweets/gpt-rosalind-launch.md)

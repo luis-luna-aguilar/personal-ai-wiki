@@ -123,9 +123,9 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 
 ## See also
 
-- [[training/ai-enablement-software-development]] — engineering-specific patterns: critique loops, CI/CD as bottleneck, Shopify evidence, junior talent pipeline
-- [[training/agentic-infrastructure-operations]] — practical guidance for safe agent use around production infrastructure, deployment safety, and post-action verification
-- [[training/evals-for-agentic-work]] — eval patterns for workflow and task agents: reliability metrics, task-specific patterns, simulated users
+- [AI enablement — software development](ai-enablement-software-development.md) — engineering-specific patterns: critique loops, CI/CD as bottleneck, Shopify evidence, junior talent pipeline
+- [Agentic infrastructure operations](agentic-infrastructure-operations.md) — practical guidance for safe agent use around production infrastructure, deployment safety, and post-action verification
+- [Evals for workflow and task agents](evals-for-agentic-work.md) — eval patterns for workflow and task agents: reliability metrics, task-specific patterns, simulated users
 
 ## Open questions
 
@@ -136,15 +136,15 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 
 ## Sources
 
-- [[sources/articles/ramp-ai-adoption-playbook]]
-- [[sources/articles/mckinsey-agentic-org]]
-- [[sources/newsletters/agent-coworkers-operating-pattern]]
-- [[sources/newsletters/openclaw-operating-pattern-march]]
-- [[sources/newsletters/openclaw-operating-pattern-february]]
-- [[sources/newsletters/ai-native-product-building-lessons-late-march]]
-- [[sources/newsletters/ai-work-intensification-march]]
-- [[sources/newsletters/ai-for-boring-businesses]]
-- [[sources/newsletters/every-ai-sandwich-april-2026]]
-- [[sources/articles/every-four-agents]]
-- [[sources/deep-research/2026-04-23-agents-evals]]
-- [[sources/deep-research/2026-04-24-agentic-devops]]
+- [Ramp AI adoption playbook](../sources/articles/ramp-ai-adoption-playbook.md)
+- [McKinsey — "AI is Everywhere. The Agentic Organization Isn't Yet."](../sources/articles/mckinsey-agentic-org.md)
+- [Agent coworkers as an operating pattern](../sources/newsletters/agent-coworkers-operating-pattern.md)
+- [OpenClaw as an operating pattern](../sources/newsletters/openclaw-operating-pattern-march.md)
+- [OpenClaw operating pattern in late February](../sources/newsletters/openclaw-operating-pattern-february.md)
+- [AI-native product-building lessons in late March](../sources/newsletters/ai-native-product-building-lessons-late-march.md)
+- [AI work intensification](../sources/newsletters/ai-work-intensification-march.md)
+- [AI for boring businesses](../sources/newsletters/ai-for-boring-businesses.md)
+- [Every — "You're the Bread in the AI Sandwich" (April 2026)](../sources/newsletters/every-ai-sandwich-april-2026.md)
+- [How We Run a 25-person Company on Four AI Agents](../sources/articles/every-four-agents.md)
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)
+- [Agentic infrastructure and operations](../sources/deep-research/2026-04-24-agentic-devops.md)

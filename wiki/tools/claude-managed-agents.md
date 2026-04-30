@@ -106,8 +106,8 @@ The simple reason is that sessions that do not need a sandbox immediately can st
 
 ## Related
 
-- [[workflows/advisor-strategy]]
-- [[state-of/agents]]
+- [Advisor strategy](../workflows/advisor-strategy.md)
+- [Agents](../history/state-of/agents.md)
 
 ## Recent changes
 
@@ -118,7 +118,7 @@ The simple reason is that sessions that do not need a sandbox immediately can st
 
 ## Sources
 
-- [[sources/articles/managed-agents]]
-- [[sources/articles/every-managed-agents-vibe-check]]
-- [[sources/newsletters/anthropic-platform-expansion-april-2026]]
-- [[sources/articles/claude-managed-agents-memory]]
+- [Scaling Managed Agents: Decoupling the brain from the hands](../sources/articles/managed-agents.md)
+- [Mini-Vibe Check: Claude Managed Agents Handle the Infrastructure Work](../sources/articles/every-managed-agents-vibe-check.md)
+- [Anthropic platform expansion — April 2026](../sources/newsletters/anthropic-platform-expansion-april-2026.md)
+- [Built-in memory for Claude Managed Agents](../sources/articles/claude-managed-agents-memory.md)

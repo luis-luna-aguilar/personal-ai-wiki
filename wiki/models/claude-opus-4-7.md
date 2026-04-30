@@ -16,7 +16,7 @@ Anthropic's current flagship multimodal model. It appears stronger than 4.6 on e
 
 - #1 in Vision & Document Arena, with wins in diagram, homework, and OCR categories
 - Stronger on well-specified coding and interface, slide, and document generation tasks
-- Powers [[tools/claude-design]], Anthropic's research-preview surface for prototypes, slides, and one-pagers
+- Powers [Claude Design](../tools/claude-design.md), Anthropic's research-preview surface for prototypes, slides, and one-pagers
 - Hands-on reviews describe a sharper "say exactly what you mean" bias than Opus 4.6
 - Multiple reports describe regressions in long-context retrieval, adaptive-reasoning behavior, or general reliability on loosely specified work
 - New tokenizer appears to increase effective token usage on some workloads versus 4.6
@@ -42,7 +42,7 @@ Anthropic's current flagship multimodal model. It appears stronger than 4.6 on e
 
 ## Sources
 
-- [[sources/newsletters/ainews-2026-04-21]]
-- [[sources/newsletters/every-opus-4-7-vibe-check]]
-- [[sources/newsletters/vectorlab-opus-4-7-flop]]
-- [[sources/tweets/claude-design-launch]]
+- [AINews — Moonshot Kimi K2.6, Hermes Agent, Codex Chronicle (2026-04-21)](../sources/newsletters/ainews-2026-04-21.md)
+- [Every — Vibe Check: Opus 4.7 Stopped Reading Between the Lines](../sources/newsletters/every-opus-4-7-vibe-check.md)
+- [Vector Lab — Opus 4.7 is a Flop](../sources/newsletters/vectorlab-opus-4-7-flop.md)
+- [Claude Design launch](../sources/tweets/claude-design-launch.md)

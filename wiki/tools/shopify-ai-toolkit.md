@@ -41,4 +41,4 @@ Shopify AI Toolkit is Shopify's integration layer for connecting general-purpose
 
 ## Sources
 
-- [[sources/articles/shopify-ai-toolkit]]
+- [Shopify AI Toolkit](../sources/articles/shopify-ai-toolkit.md)

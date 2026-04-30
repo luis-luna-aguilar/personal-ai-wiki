@@ -37,4 +37,4 @@ As more writing gets produced through AI, the real risk is not only factual erro
 
 ## Sources
 
-- [[sources/newsletters/how-to-build-an-ai-style-guide]]
+- [How to build an AI style guide](../sources/newsletters/how-to-build-an-ai-style-guide.md)

@@ -32,4 +32,4 @@ K8sGPT is a Kubernetes diagnostic tool that scans cluster state and explains pro
 
 ## Sources
 
-- [[sources/deep-research/2026-04-24-agentic-devops]]
+- [Agentic infrastructure and operations](../sources/deep-research/2026-04-24-agentic-devops.md)

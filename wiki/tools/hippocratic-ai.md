@@ -20,6 +20,6 @@ Hippocratic AI is a healthcare-focused agent company centered on safety-constrai
 
 ## Sources
 
-- [[sources/articles/hippocratic-ai-homepage]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [Hippocratic AI official page](../sources/articles/hippocratic-ai-homepage.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

@@ -20,6 +20,6 @@ Wilson is a legal AI product focused on in-house legal workflows. The product ap
 
 ## Sources
 
-- [[sources/articles/wilson-homepage]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [Wilson official product page](../sources/articles/wilson-homepage.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

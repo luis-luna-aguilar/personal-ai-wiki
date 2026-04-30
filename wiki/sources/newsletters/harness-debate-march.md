@@ -14,7 +14,7 @@ This source is useful because it states the debate plainly. One camp argues fron
 
 ## Influenced pages
 
-- [[concepts/harness]] — strengthens the conceptual framing of harness engineering as a first-class systems question
+- [Harness (agent)](../../concepts/harness.md) — strengthens the conceptual framing of harness engineering as a first-class systems question
 
 ## Key claims extracted
 

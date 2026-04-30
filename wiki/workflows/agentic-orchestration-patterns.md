@@ -67,14 +67,14 @@ Reusable patterns for getting better behavior from one or more agents without de
 
 ## Sources
 
-- [[sources/newsletters/notion-token-town]]
-- [[sources/newsletters/ainews-openclaw-2026-04-18]]
-- [[sources/tweets/garrytan-confusion-protocol]]
-- [[sources/tweets/matt-pocock-ddd-adr]]
-- [[sources/newsletters/harness-engineering-patterns]]
-- [[sources/newsletters/harness-engineering-early-april]]
-- [[sources/newsletters/open-agent-orchestration-late-march]]
-- [[sources/newsletters/skills-and-plugin-packaging-late-march]]
-- [[sources/newsletters/harness-engineering-march]]
-- [[sources/articles/deep-agents-overview]]
-- [[sources/articles/goose-platform]]
+- [Notion's Token Town / software factory discussion](../sources/newsletters/notion-token-town.md)
+- [AINews — The Two Sides of OpenClaw (harness section)](../sources/newsletters/ainews-openclaw-2026-04-18.md)
+- [Garry Tan on ambiguity gates / confusion protocol](../sources/tweets/garrytan-confusion-protocol.md)
+- [Matt Pocock on shared language, bounded contexts, and ADRs](../sources/tweets/matt-pocock-ddd-adr.md)
+- [Harness engineering patterns](../sources/newsletters/harness-engineering-patterns.md)
+- [Harness engineering in early April](../sources/newsletters/harness-engineering-early-april.md)
+- [Open-agent orchestration in late March](../sources/newsletters/open-agent-orchestration-late-march.md)
+- [Skills and plugin packaging in late March](../sources/newsletters/skills-and-plugin-packaging-late-march.md)
+- [Harness engineering in mid-March](../sources/newsletters/harness-engineering-march.md)
+- [Deep Agents overview](../sources/articles/deep-agents-overview.md)
+- [Goose platform overview](../sources/articles/goose-platform.md)

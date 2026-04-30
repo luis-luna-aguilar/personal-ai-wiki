@@ -14,8 +14,8 @@ This March source cluster is less about one product launch than about a new orga
 
 ## Influenced pages
 
-- [[trends/agents-reshape-organizations]] — early evidence for agent coworkers inside live organizational channels
-- [[training/company-wide-ai-enablement]] — practical patterns and failure modes for messaging-native agent adoption
+- [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — early evidence for agent coworkers inside live organizational channels
+- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — practical patterns and failure modes for messaging-native agent adoption
 
 ## Key claims extracted
 

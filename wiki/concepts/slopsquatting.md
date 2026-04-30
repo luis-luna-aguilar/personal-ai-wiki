@@ -41,4 +41,4 @@ Checks performed: registry publication age, lifetime download count, presence of
 
 ## Sources
 
-- [[sources/repos/slopcop-repo]]
+- [slopcop — CLI tool against LLM-hallucinated malicious packages](../sources/repos/slopcop-repo.md)

@@ -31,8 +31,8 @@ Model Context Protocol, usually shortened to MCP, is an open protocol for exposi
 
 ## Sources
 
-- [[sources/articles/anthropic-mcp]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
-- [[sources/articles/anthropic-mcp-deployment-surfaces]]
-- [[sources/articles/openai-chatgpt-mcp-surfaces]]
-- [[sources/articles/anthropic-mcp-production-systems]]
+- [Anthropic Model Context Protocol launch](../sources/articles/anthropic-mcp.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
+- [Anthropic MCP deployment surfaces](../sources/articles/anthropic-mcp-deployment-surfaces.md)
+- [OpenAI and ChatGPT MCP surfaces](../sources/articles/openai-chatgpt-mcp-surfaces.md)
+- [Building agents that reach production systems with MCP](../sources/articles/anthropic-mcp-production-systems.md)

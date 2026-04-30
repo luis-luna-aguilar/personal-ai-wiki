@@ -106,15 +106,15 @@ That matters because it shifts the product story away from "Anthropic has a stro
 
 ## Sources
 
-- [[sources/articles/claude-code-monitor]]
-- [[sources/tweets/claude-code-routines]]
-- [[sources/newsletters/claude-code-leak-architecture]]
-- [[sources/newsletters/claude-computer-use-late-march]]
-- [[sources/newsletters/anthropic-desktop-agent-expansion-late-march]]
-- [[sources/newsletters/coding-agents-review-and-orchestration-march]]
-- [[sources/newsletters/claude-code-scheduled-tasks-march]]
-- [[sources/newsletters/anthropic-persistent-workflow-surfaces-february]]
-- [[sources/newsletters/memory-vs-context-rot-february]]
-- [[sources/newsletters/thecode-april-22-2026]]
-- [[sources/tweets/claude-code-worktree-autofix]]
-- [[sources/tweets/claude-code-one-time-scheduling]]
+- [Claude Code Monitor tool announcement](../sources/articles/claude-code-monitor.md)
+- [Claude Code routines launch](../sources/tweets/claude-code-routines.md)
+- [Claude Code leak architecture lessons](../sources/newsletters/claude-code-leak-architecture.md)
+- [Claude computer use in late March](../sources/newsletters/claude-computer-use-late-march.md)
+- [Anthropic desktop-agent expansion in late March](../sources/newsletters/anthropic-desktop-agent-expansion-late-march.md)
+- [Coding agents move toward review and concurrent supervision](../sources/newsletters/coding-agents-review-and-orchestration-march.md)
+- [Claude Code scheduled tasks and `/loop`](../sources/newsletters/claude-code-scheduled-tasks-march.md)
+- [Anthropic persistent workflow surfaces in late February](../sources/newsletters/anthropic-persistent-workflow-surfaces-february.md)
+- [Memory versus context rot in late February](../sources/newsletters/memory-vs-context-rot-february.md)
+- [The Code newsletter — 2026-04-22 (Cursor/SpaceX, Claude Code recap, CLI design)](../sources/newsletters/thecode-april-22-2026.md)
+- [Claude Code — worktrees, /autofix-pr CLI, Remote Control](../sources/tweets/claude-code-worktree-autofix.md)
+- [Claude Code one-time scheduling](../sources/tweets/claude-code-one-time-scheduling.md)

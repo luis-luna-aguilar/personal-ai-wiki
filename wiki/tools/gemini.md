@@ -47,7 +47,7 @@ Google is now using Gemini as the umbrella brand over both assistant and enterpr
 - Payhawk: Financial Controller Agent with Memory Bank; 50%+ faster expense submission
 
 **Other Gemini surfaces already tracked here:**
-- Deep Research and Deep Research Max available via the Gemini API — see [[tools/gemini-deep-research]] for capabilities and benchmarks; see [[concepts/deep-research]] for the category
+- Deep Research and Deep Research Max available via the Gemini API — see [Gemini Deep Research](gemini-deep-research.md) for capabilities and benchmarks; see [Deep Research (concept)](../concepts/deep-research.md) for the category
 - Chrome Skills: reusable Gemini prompts that run as one-click browser workflows
 - Native Gemini Mac app
 
@@ -73,6 +73,6 @@ Google is now using Gemini as the umbrella brand over both assistant and enterpr
 
 ## Sources
 
-- [[sources/newsletters/gemini-browser-utility-updates]]
-- [[sources/articles/gemini-deep-research-max]]
-- [[sources/articles/google-cloud-next-2026]]
+- [Gemini browser and utility updates](../sources/newsletters/gemini-browser-utility-updates.md)
+- [Gemini Deep Research and Deep Research Max launch](../sources/articles/gemini-deep-research-max.md)
+- [Google Cloud Next 2026 — TPU v8 and Gemini Enterprise Agent Platform](../sources/articles/google-cloud-next-2026.md)

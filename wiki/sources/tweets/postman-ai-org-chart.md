@@ -14,7 +14,7 @@ This source is only a weak supporting signal. The captured X page did not expose
 
 ## Influenced pages
 
-- [[trends/agents-reshape-organizations]] — adds a weak supporting signal that org-chart redesign is becoming part of the AI-era management conversation
+- [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — adds a weak supporting signal that org-chart redesign is becoming part of the AI-era management conversation
 
 ## Key claims extracted
 

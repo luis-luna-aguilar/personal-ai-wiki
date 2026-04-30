@@ -13,7 +13,7 @@ This source summary groups a late-March infrastructure cluster. The key takeaway
 
 ## Influenced pages
 
-- [[trends/compute-infrastructure]] — adds the runtime-efficiency and hardware-pricing counterforce to the "compute moat" story
+- [Compute infrastructure as decisive competitive moat](../../trends/compute-infrastructure.md) — adds the runtime-efficiency and hardware-pricing counterforce to the "compute moat" story
 
 ## Key claims extracted
 

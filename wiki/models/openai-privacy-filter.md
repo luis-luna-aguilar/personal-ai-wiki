@@ -35,5 +35,5 @@ Most enterprise AI pipelines face a real blocking question: "can we send this da
 
 ## Sources
 
-- [[sources/newsletters/ainews-2026-04-23]]
-- [[sources/newsletters/the-code-2026-04-23]]
+- [AINews — Tasteful Tokenmaxxing](../sources/newsletters/ainews-2026-04-23.md)
+- [The Code — OpenAI drops a privacy focused model](../sources/newsletters/the-code-2026-04-23.md)

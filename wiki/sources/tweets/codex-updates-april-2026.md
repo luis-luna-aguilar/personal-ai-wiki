@@ -15,7 +15,7 @@ Three OpenAI Codex updates from April 2026. Subagents via OpenAI Devs tweet; usa
 
 ## Influenced pages
 
-- [[tools/codex]] — three new features added
+- [Codex](../../tools/codex.md) — three new features added
 
 ## Key claims extracted
 

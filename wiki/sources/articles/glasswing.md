@@ -15,10 +15,10 @@ Anthropic's public disclosure of Project Glasswing and Claude Mythos Preview. Th
 
 ## Influenced pages
 
-- [[models/claude-mythos-preview]] — new page created
-- [[state-of/models]] — new security subcategory added
-- [[state-of/cybersecurity]] — Mythos Preview added under frontier model capabilities
-- [[trends/restricted-frontier-deployment]] — trend confirmed with concrete public disclosure
+- [Claude Mythos Preview](../../models/claude-mythos-preview.md) — new page created
+- [Models](../../history/state-of/models.md) — new security subcategory added
+- [State of Cybersecurity](../../state-of/cybersecurity.md) — Mythos Preview added under frontier model capabilities
+- [Restricted frontier deployment](../../trends/restricted-frontier-deployment.md) — trend confirmed with concrete public disclosure
 
 ## Key claims extracted
 

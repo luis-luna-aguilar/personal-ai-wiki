@@ -20,6 +20,6 @@ Hume EVI 3 is a speech-to-speech voice model centered on emotionally aware conve
 
 ## Sources
 
-- [[sources/articles/hume-evi-3]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [Hume EVI 3 launch](../sources/articles/hume-evi-3.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

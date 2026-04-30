@@ -15,8 +15,8 @@ Digest-level synthesis around OpenAI's recent Codex updates. The most reusable s
 
 ## Influenced pages
 
-- [[tools/codex]] — sharper current-status framing
-- [[state-of/coding]] — Codex's category line now needs to acknowledge the broader surface area
+- [Codex](../../tools/codex.md) — sharper current-status framing
+- [Coding](../../history/state-of/coding.md) — Codex's category line now needs to acknowledge the broader surface area
 
 ## Key claims extracted
 

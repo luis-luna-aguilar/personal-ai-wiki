@@ -32,4 +32,4 @@ Unlike OSWorld, WebArena focuses on web-native tasks rather than full desktop co
 
 ## Sources
 
-- [[sources/deep-research/2026-04-23-agents-evals]]
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)

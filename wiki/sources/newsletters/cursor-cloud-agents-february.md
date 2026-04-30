@@ -14,8 +14,8 @@ This source cluster captures the rollout moment for Cursor's cloud-agent model b
 
 ## Influenced pages
 
-- [[tools/cursor]] — adds earlier rollout context for the cloud-agent shift
-- [[state-of/agents]] — reinforces the supervision-layer reading of Cursor
+- [Cursor](../../tools/cursor.md) — adds earlier rollout context for the cloud-agent shift
+- [Agents](../../history/state-of/agents.md) — reinforces the supervision-layer reading of Cursor
 
 ## Key claims extracted
 

@@ -110,4 +110,4 @@ That could help with:
 
 ## Sources
 
-- [[sources/papers/curiosity-driven-imagination]]
+- [Curiosity-Driven Imagination: Discovering Plan Operators and Learning Associated Policies for Open-World Adaptation](../sources/papers/curiosity-driven-imagination.md)

@@ -14,8 +14,8 @@ Anthropic announces the "advisor strategy" — pairing Opus (advisor) with Sonne
 
 ## Influenced pages
 
-- [[workflows/advisor-strategy]] — new page, main subject of the ingest
-- [[state-of/agents]] — new `model-orchestration` subcategory created; advisor strategy placed under it
+- [Advisor strategy](../../workflows/advisor-strategy.md) — new page, main subject of the ingest
+- [Agents](../../history/state-of/agents.md) — new `model-orchestration` subcategory created; advisor strategy placed under it
 
 ## Key claims extracted
 

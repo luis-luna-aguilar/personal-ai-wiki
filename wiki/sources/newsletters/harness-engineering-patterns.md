@@ -13,8 +13,8 @@ This source summary groups several closely aligned signals about how agents shou
 
 ## Influenced pages
 
-- [[workflows/agentic-orchestration-patterns]] — adds folder-scoped specialization, evaluator separation, and thin-harness framing
-- [[concepts/harness]] — clarifies the distinction between context packaging and loop logic
+- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — adds folder-scoped specialization, evaluator separation, and thin-harness framing
+- [Harness (agent)](../../concepts/harness.md) — clarifies the distinction between context packaging and loop logic
 
 ## Key claims extracted
 

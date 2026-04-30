@@ -13,7 +13,7 @@ OpenAI's current MCP documentation emphasizes remote MCP servers and connectors,
 
 ## Influenced pages
 
-- [[concepts/mcp]] — practical note that OpenAI/ChatGPT currently point more toward remote MCP deployment than local-only desktop attachment
+- [Model Context Protocol](../../concepts/mcp.md) — practical note that OpenAI/ChatGPT currently point more toward remote MCP deployment than local-only desktop attachment
 
 ## Key claims extracted
 

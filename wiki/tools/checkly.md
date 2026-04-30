@@ -32,4 +32,4 @@ Checkly is a synthetic monitoring platform centered on Playwright-based browser 
 
 ## Sources
 
-- [[sources/deep-research/2026-04-24-agentic-devops]]
+- [Agentic infrastructure and operations](../sources/deep-research/2026-04-24-agentic-devops.md)

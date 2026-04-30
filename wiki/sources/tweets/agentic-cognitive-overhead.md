@@ -15,7 +15,7 @@ Two converging sources. Addy Osmani: "more agents running doesn't mean more of y
 
 ## Influenced pages
 
-- [[training/ai-enablement-software-development]] — cognitive overhead failure mode and guidance added
+- [AI enablement — software development](../../training/ai-enablement-software-development.md) — cognitive overhead failure mode and guidance added
 
 ## Key claims extracted
 

@@ -46,4 +46,4 @@ Claude Design extends Anthropic into a domain previously owned by Figma, Canva, 
 
 ## Sources
 
-- [[sources/articles/claude-design-anthropic-labs]]
+- [Introducing Claude Design by Anthropic Labs](../sources/articles/claude-design-anthropic-labs.md)

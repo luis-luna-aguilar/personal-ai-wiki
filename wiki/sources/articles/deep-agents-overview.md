@@ -13,7 +13,7 @@ LangChain's overview page for Deep Agents. The key framing is that Deep Agents i
 
 ## Influenced pages
 
-- [[workflows/agentic-orchestration-patterns]] — adds a clearer batteries-included harness example to the orchestration-pattern landscape
+- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — adds a clearer batteries-included harness example to the orchestration-pattern landscape
 
 ## Key claims extracted
 

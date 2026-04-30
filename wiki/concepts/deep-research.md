@@ -30,8 +30,8 @@ The key distinction from "chat with search": the agent controls the search loop,
 
 ## Current implementations
 
-- [[tools/openai-deep-research]] — OpenAI's productized version; available via ChatGPT and API
-- [[tools/gemini-deep-research]] — Gemini Deep Research and Deep Research Max; the most fully benchmarked public variant (93.3% DeepSearchQA, 85.9% BrowseComp, 54.6% HLE on Max tier)
+- [OpenAI Deep Research](../tools/openai-deep-research.md) — OpenAI's productized version; available via ChatGPT and API
+- [Gemini Deep Research](../tools/gemini-deep-research.md) — Gemini Deep Research and Deep Research Max; the most fully benchmarked public variant (93.3% DeepSearchQA, 85.9% BrowseComp, 54.6% HLE on Max tier)
 
 ## Caveats
 
@@ -41,6 +41,6 @@ The key distinction from "chat with search": the agent controls the search loop,
 
 ## Sources
 
-- [[sources/articles/openai-deep-research]]
-- [[sources/articles/gemini-deep-research-max]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [OpenAI Deep Research guide](../sources/articles/openai-deep-research.md)
+- [Gemini Deep Research and Deep Research Max launch](../sources/articles/gemini-deep-research-max.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)

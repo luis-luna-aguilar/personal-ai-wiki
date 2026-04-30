@@ -14,9 +14,9 @@ Cursor describes Bugbot's shift from purely offline improvement to a live learni
 
 ## Influenced pages
 
-- [[tools/cursor]] — adds a substantive Bugbot product update and refreshes current status
-- [[concepts/agent-improvement-loop]] — adds a concrete example of a production system turning live feedback into structured agent improvements
-- [[state-of/coding]] — refreshes Cursor's line with the Bugbot signal
+- [Cursor](../../tools/cursor.md) — adds a substantive Bugbot product update and refreshes current status
+- [Agent improvement loop](../../concepts/agent-improvement-loop.md) — adds a concrete example of a production system turning live feedback into structured agent improvements
+- [Coding](../../history/state-of/coding.md) — refreshes Cursor's line with the Bugbot signal
 
 ## Key claims extracted
 

@@ -14,13 +14,13 @@ Deep-research synthesis on production-grade AI tooling for infrastructure operat
 
 ## Influenced pages
 
-- [[training/agentic-infrastructure-operations]] — new training page for safe agentic operations around live infrastructure
-- [[training/company-wide-ai-enablement]] — infrastructure-specific example of staged autonomy and approval gating
-- [[training/anti-autopilot-review-friction]] — why review friction matters more, not less, in production mutations
-- [[tools/kagent]] — Kubernetes-native agent runtime / control plane
-- [[tools/k8sgpt]] — Kubernetes diagnostics surface usable by humans and agents
-- [[tools/skyflo]] — approval-gated AI control layer for Kubernetes and CI/CD
-- [[tools/checkly]] — post-deploy synthetic verification with Playwright and Monitoring as Code
+- [Agentic infrastructure operations](../../training/agentic-infrastructure-operations.md) — new training page for safe agentic operations around live infrastructure
+- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — infrastructure-specific example of staged autonomy and approval gating
+- [Anti-autopilot review friction](../../training/anti-autopilot-review-friction.md) — why review friction matters more, not less, in production mutations
+- [Kagent](../../tools/kagent.md) — Kubernetes-native agent runtime / control plane
+- [K8sGPT](../../tools/k8sgpt.md) — Kubernetes diagnostics surface usable by humans and agents
+- [Skyflo](../../tools/skyflo.md) — approval-gated AI control layer for Kubernetes and CI/CD
+- [Checkly](../../tools/checkly.md) — post-deploy synthetic verification with Playwright and Monitoring as Code
 
 ## Key claims extracted
 

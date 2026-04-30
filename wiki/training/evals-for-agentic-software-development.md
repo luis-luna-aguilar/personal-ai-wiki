@@ -39,10 +39,10 @@ The practical eval stack for coding agents now splits cleanly into two tracks:
 
 This makes the earlier trajectory-vs-result distinction operational rather than conceptual. A good stack usually combines:
 
-- **Isolated execution runtimes** such as [[tools/e2b]] so agent-generated code runs away from the host machine
-- **Trajectory evaluators** such as [[tools/agentrial]] that measure consistency and identify which step diverged between passing and failing runs
+- **Isolated execution runtimes** such as [E2B](../tools/e2b.md) so agent-generated code runs away from the host machine
+- **Trajectory evaluators** such as [Agentrial](../tools/agentrial.md) that measure consistency and identify which step diverged between passing and failing runs
 - **Output harnesses** such as SWE-bench-style patch execution or the team's own repo-native test suite
-- **Browser verification** for frontend-changing work, using Playwright directly or AI-assisted layers such as [[tools/stagehand]]
+- **Browser verification** for frontend-changing work, using Playwright directly or AI-assisted layers such as [Stagehand](../tools/stagehand.md)
 
 The key design rule: do not let agent-generated code be evaluated only as text. Run it in an isolated environment, test it, and capture the artifacts.
 
@@ -132,7 +132,7 @@ For frontend-changing work, "tests passed" is not enough. A stronger pattern is:
 3. The agent verifies the intended UI or workflow
 4. The run emits trace, screenshot, or video artifacts for human review
 
-This can be done with deterministic Playwright alone, but AI-assisted browser layers are increasingly useful when selectors are unstable or the agent needs to reason over page semantics. [[tools/stagehand]] and [[tools/browserbase]] are the clearest concrete examples from this report. The output should still be a replayable artifact, not only a verbal claim that the feature worked.
+This can be done with deterministic Playwright alone, but AI-assisted browser layers are increasingly useful when selectors are unstable or the agent needs to reason over page semantics. [Stagehand](../tools/stagehand.md) and [Browserbase](../tools/browserbase.md) are the clearest concrete examples from this report. The output should still be a replayable artifact, not only a verbal claim that the feature worked.
 
 Proof artifacts matter for two reasons:
 
@@ -158,7 +158,7 @@ Proof artifacts matter for two reasons:
 
 - Ramp: Inspect coding agent initiates >50% of merged PRs; runs in isolated Modal VMs with full-stack environment; shadow mode + sandbox validation is the core safety mechanism
 - Shopify (April 2026): built an internal PR review tool specifically because external tools do not spend enough compute on expensive models during review — review quality, not code generation, is the current frontier bottleneck
-- See [[training/ai-enablement-software-development]] for broader Shopify and Ramp adoption patterns
+- See [AI enablement — software development](ai-enablement-software-development.md) for broader Shopify and Ramp adoption patterns
 
 ## Open questions
 
@@ -167,7 +167,7 @@ Proof artifacts matter for two reasons:
 
 ## Sources
 
-- [[sources/deep-research/2026-04-23-agents-evals]]
-- [[sources/deep-research/2026-04-24-qa-tooling-for-software-agents]]
-- [[sources/articles/ramp-ai-adoption-playbook]]
-- [[sources/newsletters/shopify-latent-space-april-2026]]
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)
+- [Practical tooling layer for evals in agentic software development](../sources/deep-research/2026-04-24-qa-tooling-for-software-agents.md)
+- [Ramp AI adoption playbook](../sources/articles/ramp-ai-adoption-playbook.md)
+- [Shopify AI phase transition — Latent Space podcast (April 2026)](../sources/newsletters/shopify-latent-space-april-2026.md)

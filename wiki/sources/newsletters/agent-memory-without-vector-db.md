@@ -13,7 +13,7 @@ This source is useful because it turns "memory" from a vague agent feature into 
 
 ## Influenced pages
 
-- [[concepts/agent-memory]] — opens a dedicated page for long-term memory architectures in agents
+- [Agent memory](../../concepts/agent-memory.md) — opens a dedicated page for long-term memory architectures in agents
 
 ## Key claims extracted
 

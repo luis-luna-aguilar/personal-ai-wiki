@@ -25,6 +25,6 @@ Flex processing is OpenAI's lower-cost asynchronous execution mode for workloads
 
 ## Sources
 
-- [[sources/articles/openai-flex-processing]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [OpenAI Flex processing guide](../sources/articles/openai-flex-processing.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

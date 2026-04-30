@@ -25,7 +25,7 @@ Anthropic's desktop agent for knowledge work. It works across local files, folde
 - Anthropic had already been pushing Claude into document-native productivity surfaces earlier in April via Claude for Word beta, which drafts, edits, and revises documents with tracked changes from a sidebar
 - Live Artifacts shipped in April 2026: dashboards, trackers, and reports wired to connectors that auto-refresh on open
 - Reported connectors include Slack, Salesforce, Google Drive, Asana, and Jira
-- Released in the same product moment as [[tools/claude-design]], Anthropic's research-preview surface for prototypes, slides, and one-pagers
+- Released in the same product moment as [Claude Design](claude-design.md), Anthropic's research-preview surface for prototypes, slides, and one-pagers
 
 ## AWS Bedrock deployment (as of 2026-04-23)
 
@@ -33,7 +33,7 @@ Claude Cowork is now available via Amazon Bedrock in public research preview. Th
 
 ## Why it matters
 
-Cowork pushes agent UX beyond chat and toward delegated desktop work. Live Artifacts also puts competitive pressure on dashboard and internal-tool products by making connected reports and trackers much easier to create inside a general-purpose agent workflow. Alongside [[tools/claude-design]], it also signals a broader Anthropic move toward artifact-first interfaces rather than chat-only interactions.
+Cowork pushes agent UX beyond chat and toward delegated desktop work. Live Artifacts also puts competitive pressure on dashboard and internal-tool products by making connected reports and trackers much easier to create inside a general-purpose agent workflow. Alongside [Claude Design](claude-design.md), it also signals a broader Anthropic move toward artifact-first interfaces rather than chat-only interactions.
 
 Cowork now reads less like a one-off desktop shell around Claude and more like Anthropic's bet on a general delegated-computer workflow. The same week introduced persistent sessions and then Channels, which suggests the real product is not "desktop app" versus "terminal app" but a continuous agent that can move between local computer, remote session, and mobile supervision.
 
@@ -49,10 +49,10 @@ Cowork also did not appear from nowhere. The earlier Claude for Word beta sugges
 
 ## Sources
 
-- [[sources/articles/claude-cowork-launch]]
-- [[sources/tweets/aakash-gupta-cowork]]
-- [[sources/tweets/claude-design-launch]]
-- [[sources/tweets/claude-productivity-surfaces]]
-- [[sources/newsletters/anthropic-desktop-agent-expansion-late-march]]
-- [[sources/newsletters/anthropic-persistent-workflow-surfaces-february]]
-- [[sources/tweets/awsai-cowork-bedrock-2026-04-23]]
+- [Claude Cowork — Anthropic product page](../sources/articles/claude-cowork-launch.md)
+- [Aakash Gupta — Claude Cowork and dashboard-tool pressure](../sources/tweets/aakash-gupta-cowork.md)
+- [Claude Design launch](../sources/tweets/claude-design-launch.md)
+- [Claude productivity surfaces](../sources/tweets/claude-productivity-surfaces.md)
+- [Anthropic desktop-agent expansion in late March](../sources/newsletters/anthropic-desktop-agent-expansion-late-march.md)
+- [Anthropic persistent workflow surfaces in late February](../sources/newsletters/anthropic-persistent-workflow-surfaces-february.md)
+- [AWS AI — Claude Cowork now available via Amazon Bedrock](../sources/tweets/awsai-cowork-bedrock-2026-04-23.md)

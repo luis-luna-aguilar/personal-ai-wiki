@@ -13,7 +13,7 @@ Goose's official docs position it as a local agent product rather than only a na
 
 ## Influenced pages
 
-- [[workflows/agentic-orchestration-patterns]] — adds a concrete example of the local agent host/product direction, contrasted with harness-first systems like Deep Agents
+- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — adds a concrete example of the local agent host/product direction, contrasted with harness-first systems like Deep Agents
 
 ## Key claims extracted
 

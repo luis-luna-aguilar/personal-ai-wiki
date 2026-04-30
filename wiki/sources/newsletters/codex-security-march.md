@@ -14,8 +14,8 @@ This source cluster marks Codex's move into security review. Instead of only wri
 
 ## Influenced pages
 
-- [[tools/codex]] — adds a security-review capability surface
-- [[state-of/coding]] — sharpens the trend toward coding agents as review/validation systems
+- [Codex](../../tools/codex.md) — adds a security-review capability surface
+- [Coding](../../history/state-of/coding.md) — sharpens the trend toward coding agents as review/validation systems
 
 ## Key claims extracted
 

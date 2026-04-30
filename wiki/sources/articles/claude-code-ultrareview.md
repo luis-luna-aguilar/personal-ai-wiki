@@ -15,7 +15,7 @@ Official Claude Code documentation page for the /ultrareview command, introduced
 
 ## Influenced pages
 
-- [[tools/claude-code]] — new /ultrareview section added
+- [Claude Code](../../tools/claude-code.md) — new /ultrareview section added
 
 ## Key claims extracted
 

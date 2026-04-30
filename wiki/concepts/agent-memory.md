@@ -32,7 +32,7 @@ Many agent systems fail not because they lack storage, but because they surface 
 
 ## Related
 
-- [[concepts/knowledge-layer]] — complementary concept: a compiled, maintained context surface that sits above raw sources; where agent-memory focuses on retrieval mechanics, the knowledge layer focuses on how content is structured and maintained
+- [Knowledge layer](knowledge-layer.md) — complementary concept: a compiled, maintained context surface that sits above raw sources; where agent-memory focuses on retrieval mechanics, the knowledge layer focuses on how content is structured and maintained
 
 ## Caveats
 
@@ -41,5 +41,5 @@ Many agent systems fail not because they lack storage, but because they surface 
 
 ## Sources
 
-- [[sources/newsletters/agent-memory-without-vector-db]]
-- [[sources/newsletters/memory-vs-context-rot-february]]
+- [Agent memory without vector databases](../sources/newsletters/agent-memory-without-vector-db.md)
+- [Memory versus context rot in late February](../sources/newsletters/memory-vs-context-rot-february.md)

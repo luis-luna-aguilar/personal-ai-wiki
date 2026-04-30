@@ -36,4 +36,4 @@ The claim is that a language model can contain internal representations of emoti
 
 ## Sources
 
-- [[sources/articles/emotion-concepts-function]]
+- [Emotion concepts and their function in a large language model — Anthropic](../sources/articles/emotion-concepts-function.md)

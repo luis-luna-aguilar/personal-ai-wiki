@@ -15,7 +15,7 @@ Anthropic argues that Claude Sonnet 4.5 contains internal emotion-concept repres
 
 ## Influenced pages
 
-- [[concepts/functional-emotions]] — new concept page for emotion-concept representations that causally shape model behavior
+- [Functional emotions in LLMs](../../concepts/functional-emotions.md) — new concept page for emotion-concept representations that causally shape model behavior
 
 ## Key claims extracted
 

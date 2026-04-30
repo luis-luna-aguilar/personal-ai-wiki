@@ -29,4 +29,4 @@ ToolBench is directly relevant for evaluating agents that must interact with ent
 
 ## Sources
 
-- [[sources/deep-research/2026-04-23-agents-evals]]
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)

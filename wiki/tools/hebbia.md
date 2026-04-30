@@ -19,6 +19,6 @@ Hebbia is an AI knowledge-work platform with especially strong relevance in fina
 
 ## Sources
 
-- [[sources/articles/hebbia-homepage]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [Hebbia official page](../sources/articles/hebbia-homepage.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

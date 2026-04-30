@@ -20,6 +20,6 @@ Eleven v3 is ElevenLabs' expressive text-to-speech model. Its core role is high-
 
 ## Sources
 
-- [[sources/articles/eleven-v3]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [Eleven v3 docs](../sources/articles/eleven-v3.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

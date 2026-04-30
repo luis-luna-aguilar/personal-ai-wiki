@@ -36,4 +36,4 @@ End-to-end autonomous research loops — not just coding demos — are the new f
 
 ## Sources
 
-- [[sources/newsletters/ainews-2026-04-22]]
+- [AINews — 2026-04-22 (GPT-Image-2, Hermes, Deep Research Max)](../sources/newsletters/ainews-2026-04-22.md)

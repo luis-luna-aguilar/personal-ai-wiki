@@ -42,6 +42,6 @@ Google ADK is Google's open-source Agent Development Kit for building and runnin
 
 ## Sources
 
-- [[sources/articles/google-adk]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
-- [[sources/articles/google-cloud-next-2026]]
+- [Google Agent Development Kit docs](../sources/articles/google-adk.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
+- [Google Cloud Next 2026 — TPU v8 and Gemini Enterprise Agent Platform](../sources/articles/google-cloud-next-2026.md)

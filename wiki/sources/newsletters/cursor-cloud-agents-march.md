@@ -14,9 +14,9 @@ This source is less important as a feature list than as a statement of interface
 
 ## Influenced pages
 
-- [[tools/cursor]] — adds earlier evidence for Cursor's supervision-first product shape
-- [[state-of/coding]] — strengthens Cursor's position as the clearest `agentic-coding-workspace` reference point
-- [[state-of/agents]] — supports Cursor's inclusion under `Agent orchestration UIs`
+- [Cursor](../../tools/cursor.md) — adds earlier evidence for Cursor's supervision-first product shape
+- [Coding](../../history/state-of/coding.md) — strengthens Cursor's position as the clearest `agentic-coding-workspace` reference point
+- [Agents](../../history/state-of/agents.md) — supports Cursor's inclusion under `Agent orchestration UIs`
 
 ## Key claims extracted
 

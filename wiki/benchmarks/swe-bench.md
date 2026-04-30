@@ -31,11 +31,11 @@ Scores are % of issues resolved. Higher is better.
 
 | Model | Variant | Score | As of |
 |---|---|---|---|
-| [[models/qwen-3-6-27b]] | SWE-bench Verified | 77.2% | 2026-04-23 |
-| [[models/qwen-3-6-27b]] | SWE-bench Pro | 53.5% | 2026-04-23 |
-| [[models/composer-2]] | SWE-bench Multilingual | 73.7% | 2026-03-23 |
-| [[models/minimax-m2-7]] | SWE-Pro | 56.22% | 2026-03-22 |
-| [[models/kimi-k2-6]] | SWE-bench (various) | SOTA claims | 2026-04-22 |
+| [Qwen 3.6 27B](../models/qwen-3-6-27b.md) | SWE-bench Verified | 77.2% | 2026-04-23 |
+| [Qwen 3.6 27B](../models/qwen-3-6-27b.md) | SWE-bench Pro | 53.5% | 2026-04-23 |
+| [Composer 2](../models/composer-2.md) | SWE-bench Multilingual | 73.7% | 2026-03-23 |
+| [MiniMax M2.7](../models/minimax-m2-7.md) | SWE-Pro | 56.22% | 2026-03-22 |
+| [Kimi K2.6](../models/kimi-k2-6.md) | SWE-bench (various) | SOTA claims | 2026-04-22 |
 
 *Note: claims are vendor-reported unless otherwise noted. Independent replication is not always available.*
 
@@ -48,7 +48,7 @@ SWE-bench is the most widely cited benchmark for comparing coding model and codi
 - Results vary significantly depending on scaffolding (harness, tools, retry budget) — model scores and agent-system scores are not directly comparable
 - Vendor-reported scores may not reflect reproducible independent runs
 - Task distribution skews toward Python and well-maintained open-source repos; multilingual and brownfield enterprise work may behave differently
-- See also [[benchmarks/swe-polybench]] for a multilingual extension of the SWE-bench idea from Amazon Science
+- See also [SWE-PolyBench](swe-polybench.md) for a multilingual extension of the SWE-bench idea from Amazon Science
 
 ## Recent changes
 
@@ -57,7 +57,7 @@ SWE-bench is the most widely cited benchmark for comparing coding model and codi
 
 ## Sources
 
-- [[sources/articles/kimi-k2-6-blog]]
-- [[sources/newsletters/late-march-small-coding-models]]
-- [[sources/newsletters/ainews-2026-04-22]]
-- [[sources/deep-research/2026-04-23-agents-evals]]
+- [Kimi K2.6 — Advancing Open-Source Coding](../sources/articles/kimi-k2-6-blog.md)
+- [Late-March small coding models](../sources/newsletters/late-march-small-coding-models.md)
+- [AINews — 2026-04-22 (GPT-Image-2, Hermes, Deep Research Max)](../sources/newsletters/ainews-2026-04-22.md)
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)

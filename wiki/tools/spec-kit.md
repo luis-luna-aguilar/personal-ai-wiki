@@ -10,7 +10,7 @@ sources: [sdd-3-tools-fowler]
 
 # spec-kit
 
-GitHub's open-source take on [[concepts/spec-driven-development|spec-driven development]]. Distributed as a CLI that scaffolds a workspace with prompt files, templates, and a memory bank, then interacts with the user through slash commands inside their coding assistant (Copilot, Cursor, etc.). It is the most customizable of the three SDD tools Birgitta Böckeler reviewed, because all its artifacts live directly in the user's workspace.
+GitHub's open-source take on [spec-driven development](../concepts/spec-driven-development.md). Distributed as a CLI that scaffolds a workspace with prompt files, templates, and a memory bank, then interacts with the user through slash commands inside their coding assistant (Copilot, Cursor, etc.). It is the most customizable of the three SDD tools Birgitta Böckeler reviewed, because all its artifacts live directly in the user's workspace.
 
 ## Current status (as of 2025-10-15)
 
@@ -54,4 +54,4 @@ One spec is made up of many files. In Böckeler's test, a single spec directory 
 
 ## Sources
 
-- [[sources/articles/sdd-3-tools-fowler]]
+- [Understanding Spec-Driven Development — Kiro, spec-kit, and Tessl (Fowler)](../sources/articles/sdd-3-tools-fowler.md)

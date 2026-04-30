@@ -15,7 +15,7 @@ Google introduces two upgraded Gemini API research agents built on Gemini 3.1 Pr
 
 ## Influenced pages
 
-- [[tools/gemini]] — expands the page from browser/productivity utilities into API-level autonomous research capabilities
+- [Gemini](../../tools/gemini.md) — expands the page from browser/productivity utilities into API-level autonomous research capabilities
 
 ## Key claims extracted
 

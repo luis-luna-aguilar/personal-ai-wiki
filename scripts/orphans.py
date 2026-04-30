@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Report wiki pages with no inbound [[wikilinks]].
+"""Report wiki pages with no inbound internal links.
 
 Scan and exempt paths live in config.yml under `orphans`.
 
 A page is an orphan if:
   - It lives under a scan_paths directory, AND
   - It is NOT under an exempt_paths directory, AND
-  - No other page (also under scan_paths) links to it via [[slug]] or [[folder/slug]]
+  - No other page (also under scan_paths) links to it via a relative Markdown link
 
 Usage:
     python scripts/orphans.py           # human report
@@ -22,23 +22,30 @@ from collections import defaultdict
 from pathlib import Path
 
 from _lib import (  # type: ignore
-    VAULT_ROOT,
-    extract_wikilinks,
+    WIKI_ROOT,
+    extract_markdown_links,
     iter_pages,
     load_config,
     resolve_path,
 )
 
 
-def _link_candidates(page_path: Path, wiki_root: Path) -> set[str]:
-    """Return the set of [[...]] targets that would resolve to this page."""
-    rel = page_path.relative_to(wiki_root).with_suffix("")
-    parts = rel.parts
-    candidates = {rel.as_posix(), parts[-1]}
-    # Also accept parent/slug forms.
-    for i in range(1, len(parts)):
-        candidates.add("/".join(parts[i:]))
-    return candidates
+def _markdown_target_key(source_path: Path, target: str, wiki_root: Path) -> str | None:
+    """Return a wiki-relative key for an internal Markdown link target."""
+    if not target or target.startswith("#"):
+        return None
+    if "://" in target or target.startswith(("mailto:", "tel:")):
+        return None
+    target = target.split("#", 1)[0].split("?", 1)[0]
+    if not target.endswith(".md"):
+        return None
+
+    resolved = (source_path.parent / target).resolve()
+    try:
+        rel = resolved.relative_to(wiki_root.resolve())
+    except ValueError:
+        return None
+    return rel.with_suffix("").as_posix()
 
 
 def main() -> int:
@@ -53,11 +60,15 @@ def main() -> int:
 
     all_pages = iter_pages(scan_roots)
 
-    # Collect all wikilink targets used anywhere.
+    wiki_root = WIKI_ROOT
+
+    # Collect all internal link targets used anywhere.
     link_counts: dict[str, int] = defaultdict(int)
     for page in all_pages:
-        for target in extract_wikilinks(page.body):
-            link_counts[target.strip().lower()] += 1
+        for target in extract_markdown_links(page.body):
+            key = _markdown_target_key(page.path, target, wiki_root)
+            if key:
+                link_counts[key.lower()] += 1
 
     # Determine which pages are exempt.
     def is_exempt(p: Path) -> bool:
@@ -68,18 +79,15 @@ def main() -> int:
         return False
 
     # For each non-exempt page, check if any of its candidate link-names was used.
-    wiki_root = VAULT_ROOT / "wiki"
     orphans = []
     for page in all_pages:
         if is_exempt(page.path):
             continue
-        # Must be inside wiki/ for candidate computation.
         try:
-            candidates = _link_candidates(page.path, wiki_root)
+            candidate = page.path.relative_to(wiki_root).with_suffix("").as_posix().lower()
         except ValueError:
             continue
-        lc = {c.lower() for c in candidates}
-        if any(link_counts.get(c, 0) > 0 for c in lc):
+        if link_counts.get(candidate, 0) > 0:
             continue
         orphans.append(page.rel)
 

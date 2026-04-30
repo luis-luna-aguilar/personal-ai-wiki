@@ -14,8 +14,8 @@ This source summary groups Every's March cluster around Proof. The main signal i
 
 ## Influenced pages
 
-- [[tools/proof]] — new tool page for the product and its document-collaboration model
-- [[state-of/agents]] — adds a dedicated `Agent-native documents` subsection
+- [Proof](../../tools/proof.md) — new tool page for the product and its document-collaboration model
+- [Agents](../../history/state-of/agents.md) — adds a dedicated `Agent-native documents` subsection
 
 ## Key claims extracted
 

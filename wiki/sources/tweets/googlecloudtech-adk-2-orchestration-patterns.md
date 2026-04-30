@@ -14,8 +14,8 @@ Long-form Google Cloud Tech thread explaining how Google wants teams to structur
 
 ## Influenced pages
 
-- [[tools/google-adk]] — ADK 2.0 orchestration model and runtime details
-- [[workflows/agentic-orchestration-patterns]] — reusable patterns around graph control, handoff, skill composition, protocolized delegation, and sandboxed execution
+- [Google ADK](../../tools/google-adk.md) — ADK 2.0 orchestration model and runtime details
+- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — reusable patterns around graph control, handoff, skill composition, protocolized delegation, and sandboxed execution
 
 ## Key claims extracted
 

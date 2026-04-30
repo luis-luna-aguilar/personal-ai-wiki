@@ -37,4 +37,4 @@ A proposed successor to "reasoning thinking" (the o1/R1 wave). Where reasoning m
 
 ## Sources
 
-- [[sources/articles/agentic-thinking-lin]]
+- [From 'Reasoning' Thinking to 'Agentic' Thinking by Junyang Lin](../sources/articles/agentic-thinking-lin.md)

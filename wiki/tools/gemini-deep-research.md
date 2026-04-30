@@ -10,7 +10,7 @@ sources: [gemini-deep-research-max, ainews-2026-04-22]
 
 # Gemini Deep Research
 
-Google's deep research agent, available in two tiers: Deep Research (standard) and Deep Research Max. The Max tier is the most fully benchmarked publicly available deep research implementation as of April 2026. Runs on [[tools/gemini]] (Gemini 3.1 Pro on the Max tier).
+Google's deep research agent, available in two tiers: Deep Research (standard) and Deep Research Max. The Max tier is the most fully benchmarked publicly available deep research implementation as of April 2026. Runs on [Gemini](gemini.md) (Gemini 3.1 Pro on the Max tier).
 
 ## Current status (as of 2026-04-22)
 
@@ -31,7 +31,7 @@ Google's deep research agent, available in two tiers: Deep Research (standard) a
 
 Gemini Deep Research Max is currently the most benchmarked and feature-rich public deep research implementation. The MCP integration in particular extends the category from "public web research" to "internal knowledge research," which meaningfully broadens enterprise applicability.
 
-See [[concepts/deep-research]] for the category concept and [[tools/openai-deep-research]] for OpenAI's implementation.
+See [Deep Research (concept)](../concepts/deep-research.md) for the category concept and [OpenAI Deep Research](openai-deep-research.md) for OpenAI's implementation.
 
 ## Recent changes
 
@@ -39,5 +39,5 @@ See [[concepts/deep-research]] for the category concept and [[tools/openai-deep-
 
 ## Sources
 
-- [[sources/articles/gemini-deep-research-max]]
-- [[sources/newsletters/ainews-2026-04-22]]
+- [Gemini Deep Research and Deep Research Max launch](../sources/articles/gemini-deep-research-max.md)
+- [AINews — 2026-04-22 (GPT-Image-2, Hermes, Deep Research Max)](../sources/newsletters/ainews-2026-04-22.md)

@@ -14,7 +14,7 @@ This source cluster is less about a single policy spat than about deployment bou
 
 ## Influenced pages
 
-- [[trends/restricted-frontier-deployment]] — broadens the trend from withheld launches to contested deployment boundaries
+- [Restricted frontier deployment](../../trends/restricted-frontier-deployment.md) — broadens the trend from withheld launches to contested deployment boundaries
 
 ## Key claims extracted
 

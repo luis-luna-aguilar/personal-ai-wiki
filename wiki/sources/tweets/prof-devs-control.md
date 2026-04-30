@@ -15,7 +15,7 @@ Research paper summary by Elvis (omarsar0). Field observations (N=13) and survey
 
 ## Influenced pages
 
-- [[training/anti-autopilot-review-friction]] — empirical "professionals control" pattern added; task-type ratios section added
+- [Anti-autopilot review friction](../../training/anti-autopilot-review-friction.md) — empirical "professionals control" pattern added; task-type ratios section added
 
 ## Key claims extracted
 

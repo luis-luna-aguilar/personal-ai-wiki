@@ -14,8 +14,8 @@ Ramp publishes a detailed internal account of how it pushed AI adoption across t
 
 ## Influenced pages
 
-- [[training/company-wide-ai-enablement]] — new practical page distilling the operating patterns for broad AI adoption
-- [[trends/agents-reshape-organizations]] — adds a concrete company data point showing non-engineers and distributed teams building through internal agents
+- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — new practical page distilling the operating patterns for broad AI adoption
+- [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — adds a concrete company data point showing non-engineers and distributed teams building through internal agents
 
 ## Key claims extracted
 

@@ -15,7 +15,7 @@ AWS AI announcement that Claude Cowork is in public research preview on Amazon B
 
 ## Influenced pages
 
-- [[tools/claude-cowork]] — Bedrock deployment option and data-residency framing
+- [Claude Cowork](../../tools/claude-cowork.md) — Bedrock deployment option and data-residency framing
 
 ## Key claims extracted
 

@@ -15,9 +15,9 @@ Perplexity's Computer feature now connects with 12,000+ financial institutions t
 
 ## Influenced pages
 
-- [[tools/perplexity-computer]] — new page created (enriched with web research)
-- [[state-of/computer-use]] — new state-of page created
-- [[state-of/finance]] — new state-of page seeded
+- [Perplexity Computer](../../tools/perplexity-computer.md) — new page created (enriched with web research)
+- [State of Computer Use](../../state-of/computer-use.md) — new state-of page created
+- [State of Finance](../../state-of/finance.md) — new state-of page seeded
 
 ## Key claims extracted
 

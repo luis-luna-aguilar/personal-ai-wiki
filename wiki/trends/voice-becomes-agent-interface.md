@@ -29,4 +29,4 @@ As agents move into more continuous, ambient, or mobile workflows, voice becomes
 
 ## Sources
 
-- [[sources/newsletters/voice-becomes-agent-interface]]
+- [Voice becomes an agent interface](../sources/newsletters/voice-becomes-agent-interface.md)

@@ -31,4 +31,4 @@ It is useful for selecting foundation models, tracking long-term capability chan
 
 ## Sources
 
-- [[sources/deep-research/2026-04-23-agents-evals]]
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)

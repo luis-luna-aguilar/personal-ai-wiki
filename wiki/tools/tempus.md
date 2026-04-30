@@ -20,6 +20,6 @@ Tempus is an AI-enabled healthcare and precision-medicine platform. In this wiki
 
 ## Sources
 
-- [[sources/articles/tempus-homepage]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [Tempus official page](../sources/articles/tempus-homepage.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

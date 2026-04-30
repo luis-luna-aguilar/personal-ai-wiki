@@ -12,6 +12,9 @@ __pycache__/
 # OS
 .DS_Store
 
+# Obsidian local vault settings and workspace state
+.obsidian/
+
 # Podcast build output (generated from wiki content)
 podcast/out/
 

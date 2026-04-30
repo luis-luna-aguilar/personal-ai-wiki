@@ -13,8 +13,8 @@ This source summary captures the Mythos / Glasswing cluster as a strategic deplo
 
 ## Influenced pages
 
-- [[trends/restricted-frontier-deployment]]
-- [[state-of/models]]
+- [Restricted frontier deployment](../../trends/restricted-frontier-deployment.md)
+- [Models](../../history/state-of/models.md)
 
 ## Key claims extracted
 

@@ -15,7 +15,7 @@ Every's Brandon Gell (COO) and Austin Tedesco (head of growth) walkthrough of fo
 
 ## Influenced pages
 
-- [[training/company-wide-ai-enablement]] — four-agent case study added; two new proven patterns added
+- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — four-agent case study added; two new proven patterns added
 
 ## Key claims extracted
 

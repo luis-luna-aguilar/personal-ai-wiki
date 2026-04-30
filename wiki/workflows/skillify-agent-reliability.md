@@ -73,12 +73,12 @@ The pattern is not specific to any particular harness or model. The 10-step chec
 
 ## Related
 
-- [[concepts/harness]] — the thin harness is the other half of the "thin harness / fat skills" duality
-- [[concepts/agent-improvement-loop]] — complementary improvement loop; operates at the harness/eval layer rather than the skill/script layer; the two approaches address different failure modes
-- [[workflows/agentic-orchestration-patterns]] — overlapping concern: agent reliability and recovery patterns
-- [[tools/gstack]] — Garry Tan's Claude Code config (related system; gstack is the Claude Code layer, GBrain/OpenClaw is the personal agent layer where Skillify lives)
-- [[tools/hermes-agent]] — NousResearch's `skill_manage` tool does skill creation but without the test/eval coverage; the essay explicitly discusses Hermes as a comparison case
+- [Harness (agent)](../concepts/harness.md) — the thin harness is the other half of the "thin harness / fat skills" duality
+- [Agent improvement loop](../concepts/agent-improvement-loop.md) — complementary improvement loop; operates at the harness/eval layer rather than the skill/script layer; the two approaches address different failure modes
+- [Agentic orchestration patterns](agentic-orchestration-patterns.md) — overlapping concern: agent reliability and recovery patterns
+- [gstack](../tools/gstack.md) — Garry Tan's Claude Code config (related system; gstack is the Claude Code layer, GBrain/OpenClaw is the personal agent layer where Skillify lives)
+- [Hermes Agent](../tools/hermes-agent.md) — NousResearch's `skill_manage` tool does skill creation but without the test/eval coverage; the essay explicitly discusses Hermes as a comparison case
 
 ## Sources
 
-- [[sources/tweets/garrytan-skillify-2026-04-23]]
+- [Garry Tan — How to really stop your agents from making the same mistakes (Skillify)](../sources/tweets/garrytan-skillify-2026-04-23.md)

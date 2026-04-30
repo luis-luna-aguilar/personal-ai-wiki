@@ -14,8 +14,8 @@ This source cluster shows Anthropic moving from one-shot sessions toward persist
 
 ## Influenced pages
 
-- [[tools/claude-code]] — adds late-February persistence and built-in workflow primitives
-- [[tools/claude-cowork]] — adds scheduled-task context
+- [Claude Code](../../tools/claude-code.md) — adds late-February persistence and built-in workflow primitives
+- [Claude Cowork](../../tools/claude-cowork.md) — adds scheduled-task context
 
 ## Key claims extracted
 

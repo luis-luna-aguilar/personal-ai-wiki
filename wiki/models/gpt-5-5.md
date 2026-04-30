@@ -41,5 +41,5 @@ OpenAI's April 2026 frontier model, positioned as "our smartest and most intuiti
 
 ## Sources
 
-- [[sources/articles/openai-gpt-5-5-launch]]
-- [[sources/tweets/danshipper-gpt-5-5-vibe-check]]
+- [Introducing GPT-5.5 — OpenAI](../sources/articles/openai-gpt-5-5-launch.md)
+- [Dan Shipper — GPT-5.5 vibe check](../sources/tweets/danshipper-gpt-5-5-vibe-check.md)

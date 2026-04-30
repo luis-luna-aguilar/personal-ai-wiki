@@ -33,4 +33,4 @@ gstack is one of the first open-source, practitioner-validated Claude Code setup
 
 ## Sources
 
-- [[sources/repos/garrytan-gstack-repo]]
+- [gstack — Garry Tan's Claude Code virtual engineering team](../sources/repos/garrytan-gstack-repo.md)

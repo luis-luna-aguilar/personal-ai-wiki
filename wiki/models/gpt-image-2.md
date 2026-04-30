@@ -35,4 +35,4 @@ AINews's editorial framing: image generation is becoming a front end for coding 
 
 ## Sources
 
-- [[sources/newsletters/ainews-2026-04-22]]
+- [AINews — 2026-04-22 (GPT-Image-2, Hermes, Deep Research Max)](../sources/newsletters/ainews-2026-04-22.md)

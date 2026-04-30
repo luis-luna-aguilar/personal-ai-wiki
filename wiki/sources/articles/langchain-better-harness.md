@@ -15,7 +15,7 @@ LangChain shares Better-Harness, an open-source prototype for autonomously impro
 
 ## Influenced pages
 
-- [[concepts/agent-improvement-loop]] — added Better-Harness section as concrete implementation
+- [Agent improvement loop](../../concepts/agent-improvement-loop.md) — added Better-Harness section as concrete implementation
 
 ## Key claims extracted
 

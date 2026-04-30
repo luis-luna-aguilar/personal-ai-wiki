@@ -112,6 +112,12 @@ sources: [claude-opus-46-launch, swe-bench-april]   # IDs matching files in wiki
 
 ## Page body conventions
 
+### Internal links
+
+- `wiki/index.md` uses GitBook-compatible relative Markdown links, for example `[tools/claude-code](tools/claude-code.md)`.
+- Page bodies should use relative Markdown links that resolve from the current file's directory, for example `[Claude Code](../tools/claude-code.md)` from a state-of page.
+- Do not add editor-specific wiki link syntax in page bodies. `scripts/link_check.py` reports that syntax as invalid.
+
 ### State-of pages
 
 State-of pages (`wiki/state-of/*.md`) are dashboards organized by **subcategory**, not flat rankings. Each subcategory lists 1..N leaders. Ambiguity is valid. Format:
@@ -120,12 +126,12 @@ State-of pages (`wiki/state-of/*.md`) are dashboards organized by **subcategory*
 # State of Coding
 
 ## Terminal / agentic coding
-- [[Claude Code]] — Anthropic; terminal-first agent loop *(as of 2026-04-09)*
-- [[Codex]] — OpenAI direct competitor *(as of 2026-04-09)*
+- [Claude Code](../tools/claude-code.md) — Anthropic; terminal-first agent loop *(as of 2026-04-09)*
+- [Codex](../tools/codex.md) — OpenAI direct competitor *(as of 2026-04-09)*
 
 ## IDE-integrated pair programming
-- [[Cursor]] — Leads SWE-bench at 74% *(as of 2026-04-09)*
-- [[Windsurf]] — Close competitor *(as of 2026-03-28)*
+- [Cursor](../tools/cursor.md) — Leads SWE-bench at 74% *(as of 2026-04-09)*
+- Windsurf — Close competitor *(as of 2026-03-28)*
 
 ## Recent changes
 - [2026-04-09] Cursor 3 released, 74% SWE-bench (was 68%)
@@ -176,8 +182,8 @@ Brief present-tense description. Current version, what it is, what it's good at.
 <!-- max 5 entries; oldest spills to wiki/history/tools/cursor.md -->
 
 ## Sources
-- [[sources/articles/cursor-3-release]]
-- [[sources/articles/cursor-vs-windsurf-review]]
+- [Cursor 3 release announcement](../sources/articles/cursor-3-release.md)
+- [Cursor vs. Windsurf review](../sources/articles/cursor-vs-windsurf-review.md)
 ```
 
 Tool, model, and workflow pages should be concise by default once the wiki is past the earliest bootstrap stage.
@@ -242,9 +248,9 @@ domains: [coding]
 One-paragraph summary.
 
 ## Influenced pages
-- [[tools/cursor]] — version bump, SWE-bench update
-- [[state-of/coding]] — updated leader line
-- [[benchmarks/swe-bench]] — new data point
+- [Cursor](../../tools/cursor.md) — version bump, SWE-bench update
+- [State of Coding](../../state-of/coding.md) — updated leader line
+- [SWE-bench](../../benchmarks/swe-bench.md) — new data point
 
 ## Key claims extracted
 - Cursor 3 released 2026-04-05
@@ -395,7 +401,7 @@ status: pending
 5. **Create tool-specific proposals only when the tool clearly matters.** A tool mentioned in the report does not automatically deserve a `tools/` page. Only promote tools that appear durable, relevant to the wiki's scope, and well-supported by stronger sources.
 6. **If verification fails, downgrade instead of forcing.** When a framework, metric, or named pattern cannot be grounded cleanly, either omit it from the proposal or leave it in the triage as `hold`.
 
-Then move the triage file to `proposals/triage/applied/` and append a log entry: `## [YYYY-MM-DD] triage | <name> | N proposals, K skipped`.
+Then move the triage file to `proposals/triage/applied/` and append a log entry: `- [YYYY-MM-DD] **triage** | <name> | N proposals, K skipped`.
 
 ### 4. Email digest (daily or weekly batch)
 
@@ -484,8 +490,8 @@ Two-sentence TL;DR of the source.
 ## Intended changes
 
 - [ ] **Update** `wiki/state-of/coding.md` — bump Cursor line, update as_of
-    > **Before:** `- [[Cursor]] — Leads SWE-bench at 68% (as of 2026-03-22)`
-    > **After:**  `- [[Cursor]] — Leads SWE-bench at 74% (as of 2026-04-09)`
+    > **Before:** `- [Cursor](../tools/cursor.md) — Leads SWE-bench at 68% (as of 2026-03-22)`
+    > **After:**  `- [Cursor](../tools/cursor.md) — Leads SWE-bench at 74% (as of 2026-04-09)`
 
 - [ ] **Update** `wiki/tools/cursor.md` — version bump, new recent-change entry
     > See draft below
@@ -557,16 +563,16 @@ Triggered by **"apply this proposal"** / **"apply proposals/xxx.md"**.
 2. For each **checked** item, perform the action using the draft content **as it now appears in the file** (the user may have edited drafts).
 3. Update `wiki/index.md` with any new pages.
 4. Update `wiki/_schema/` files for any approved vocabulary additions.
-5. Append a log entry: `## [YYYY-MM-DD] ingest | <source title> | <N> pages updated, <M> created`.
+5. Append a log entry: `- [YYYY-MM-DD] **ingest** | <source title> | <N> pages updated, <M> created`.
 6. Move the proposal file to `proposals/applied/`.
-7. Run an inline wikilink sanity check on everything you wrote; fix any broken links before reporting done.
+7. Run an internal link sanity check on everything you wrote; fix any broken links before reporting done.
 8. Report a short summary to the user.
 
 **Never apply an unchecked item.** Never apply a draft that has been deleted from the file. If the file is in an inconsistent state (checked boxes reference deleted drafts), stop and ask. If what you see in the editor/session conflicts with the last version you remember, trust the fresh on-disk read.
 
 ### 6. Reject proposal
 
-Triggered by **"reject this proposal"**. Move the file to `proposals/rejected/` with no further action. Log: `## [YYYY-MM-DD] reject | <proposal name>`.
+Triggered by **"reject this proposal"**. Move the file to `proposals/rejected/` with no further action. Log: `- [YYYY-MM-DD] **reject** | <proposal name>`.
 
 ### 7. Query (ask)
 
@@ -576,7 +582,7 @@ Triggered by **"ask:"**, **"based on the wiki..."**, or similar question-shaped 
 1. Read `wiki/index.md` first.
 2. Identify relevant pages (usually a state-of page + 2–5 specific pages, and training pages when the question is about adoption or enablement).
 3. Read only those pages. Do not walk the tree.
-4. Synthesize an answer with wikilinks to sources.
+4. Synthesize an answer with links to sources.
 5. **Always include a confidence header** based on the freshness of the underlying pages:
 
 ```
@@ -622,8 +628,8 @@ When spilling: open the history file (or create it), append the spilled entry wi
 | Script | Purpose | Trigger phrase |
 |---|---|---|
 | `stale.py` | Report pages whose `as_of` exceeds threshold | "show stale pages", "what's stale" |
-| `orphans.py` | Report pages with no inbound wikilinks | "find orphan pages" |
-| `link_check.py` | Report broken `[[wikilinks]]` | "check links" |
+| `orphans.py` | Report pages with no inbound internal links | "find orphan pages" |
+| `link_check.py` | Report broken Markdown links and editor-specific link syntax in wiki page bodies | "check links" |
 | `tag_compliance.py` | Report tags/domains/subcategories not in `_schema/` | "check tag compliance" |
 | `lint_all.py` | Chain all four | "run lint", "lint the wiki" |
 | `build_podcast.sh <1\|2\|3\|all>` | Generate podcast markdown files from wiki content | "build podcast files", "generate podcasts", "rebuild podcast" |
@@ -686,23 +692,23 @@ Run these **only when the user explicitly asks with one of these phrases**:
 
 ## Log format
 
-`wiki/log.md` is append-only. Every entry starts with:
+`wiki/log.md` is append-only. Every entry starts with a compact list item, not a Markdown heading:
 
 ```
-## [YYYY-MM-DD] <op> | <subject> | <summary>
+- [YYYY-MM-DD] **<op>** | <subject> | <summary>
 ```
 
 Where `<op>` is one of: `ingest`, `triage`, `reject`, `apply`, `lint`, `query-verify`, `schema`.
 
 Examples:
 ```
-## [2026-04-09] ingest | Cursor 3 release | 3 pages updated, 2 created
-## [2026-04-09] triage | The Batch 2026-04-09 | 3 full, 1 note, 1 skipped
-## [2026-04-09] schema | added subcategory `coding-benchmarks`
-## [2026-04-09] lint | stale: 2 pages, orphans: 0, broken links: 0
+- [2026-04-09] **ingest** | Cursor 3 release | 3 pages updated, 2 created
+- [2026-04-09] **triage** | The Batch 2026-04-09 | 3 full, 1 note, 1 skipped
+- [2026-04-09] **schema** | added subcategory `coding-benchmarks`
+- [2026-04-09] **lint** | stale: 2 pages, orphans: 0, broken links: 0
 ```
 
-`grep "^## \[" wiki/log.md | tail -20` gives the last 20 events.
+`grep "^- \[" wiki/log.md | tail -20` gives the last 20 events.
 
 ## Bootstrapping exception
 

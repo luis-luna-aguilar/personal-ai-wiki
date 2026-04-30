@@ -15,7 +15,7 @@ Small product update from Noah Zweben: Claude Code now supports delayed one-time
 
 ## Influenced pages
 
-- [[tools/claude-code]] — small current-status update
+- [Claude Code](../../tools/claude-code.md) — small current-status update
 
 ## Key claims extracted
 

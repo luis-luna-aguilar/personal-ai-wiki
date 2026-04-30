@@ -13,8 +13,8 @@ This source summary groups the late-March source cluster around Anthropic's comp
 
 ## Influenced pages
 
-- [[state-of/computer-use]] — adds Anthropic's March computer-use push as an early major category signal
-- [[tools/claude-code]] — adds the cloud-following PR-fix / comment-resolution precursor to later hosted workflow features
+- [State of Computer Use](../../state-of/computer-use.md) — adds Anthropic's March computer-use push as an early major category signal
+- [Claude Code](../../tools/claude-code.md) — adds the cloud-following PR-fix / comment-resolution precursor to later hosted workflow features
 
 ## Key claims extracted
 

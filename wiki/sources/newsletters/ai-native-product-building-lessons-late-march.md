@@ -13,7 +13,7 @@ This source summary groups a late-March cluster on building products with AI. Th
 
 ## Influenced pages
 
-- [[training/company-wide-ai-enablement]] — adds practical guidance on persistence, architecture, and the gap between prototypes and reliable products
+- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — adds practical guidance on persistence, architecture, and the gap between prototypes and reliable products
 
 ## Key claims extracted
 

@@ -17,18 +17,18 @@ Current state of AI applied to scientific research — data analysis at scale, e
 
 Tools built to run or supervise literature-driven, hypothesis-oriented, or discovery-oriented scientific workflows.
 
-- [[tools/futurehouse]] — science-agent platform aimed at research and discovery workflows rather than generic assistant use *(as of 2026-04-22)*
+- [FutureHouse](../tools/futurehouse.md) — science-agent platform aimed at research and discovery workflows rather than generic assistant use *(as of 2026-04-22)*
 
 ### Frontier models used in science
 
 General-purpose frontier models whose published evaluation or reported use now makes them relevant to practical scientific-research work, even if they are not science-only products.
 
-- [[models/gpt-5-5]] — OpenAI; BixBench 80.5%, meaningful GeneBench gains over GPT-5.4, and launch examples spanning bioinformatics analysis, theorem proving, and early research assistance *(as of 2026-04-23)*
+- [GPT-5.5](../models/gpt-5-5.md) — OpenAI; BixBench 80.5%, meaningful GeneBench gains over GPT-5.4, and launch examples spanning bioinformatics analysis, theorem proving, and early research assistance *(as of 2026-04-23)*
 
 ## Recent changes
 
-- [2026-04-23] Added `Frontier models used in science` with [[models/gpt-5-5]]; OpenAI is now making explicit science-performance claims rather than only general-reasoning claims
-- [2026-04-22] Added `Science agent platforms` with [[tools/futurehouse]] as the first productized science-agent signal from the legacy workbook exception
+- [2026-04-23] Added `Frontier models used in science` with [GPT-5.5](../models/gpt-5-5.md); OpenAI is now making explicit science-performance claims rather than only general-reasoning claims
+- [2026-04-22] Added `Science agent platforms` with [FutureHouse](../tools/futurehouse.md) as the first productized science-agent signal from the legacy workbook exception
 - [2026-04-21] Biology and drug discovery emerge as the strongest current productization signal: Noetik's tumor-response models and OpenAI's GPT-Rosalind
-- [2025-03-06] Added [[concepts/curiosity-driven-imagination]] — robotics paper on agents learning new recovery steps when the world changes
-- [2026-04-10] Page created alongside [[trends/ai-in-science]]
+- [2025-03-06] Added [Curiosity-driven imagination](../concepts/curiosity-driven-imagination.md) — robotics paper on agents learning new recovery steps when the world changes
+- [2026-04-10] Page created alongside [AI in Science](../trends/ai-in-science.md)

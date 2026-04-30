@@ -14,8 +14,8 @@ Meta introduces Muse Spark as a multimodal model and uses the post mainly to arg
 
 ## Influenced pages
 
-- [[models/muse-spark]] — new model page for Muse Spark
-- [[state-of/models]] — first populated model subcategory entry
+- [Muse Spark](../../models/muse-spark.md) — new model page for Muse Spark
+- [Models](../../history/state-of/models.md) — first populated model subcategory entry
 
 ## Key claims extracted
 

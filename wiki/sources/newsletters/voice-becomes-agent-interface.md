@@ -13,7 +13,7 @@ This source summary groups a late-March cluster on conversational and audio inte
 
 ## Influenced pages
 
-- [[trends/voice-becomes-agent-interface]] — new trend page tracking voice as an agent surface
+- [Voice becomes an agent interface](../../trends/voice-becomes-agent-interface.md) — new trend page tracking voice as an agent surface
 
 ## Key claims extracted
 

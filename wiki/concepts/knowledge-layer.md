@@ -24,7 +24,7 @@ The core claim is not just retrieval quality. A maintained knowledge layer chang
 
 ## Related
 
-- [[concepts/agent-memory]] — complementary concept: long-term memory as a retrieval-and-reasoning problem; the knowledge layer addresses the *content* layer, agent memory addresses the *retrieval mechanics*
+- [Agent memory](agent-memory.md) — complementary concept: long-term memory as a retrieval-and-reasoning problem; the knowledge layer addresses the *content* layer, agent memory addresses the *retrieval mechanics*
 
 ## Caveats
 
@@ -33,4 +33,4 @@ The core claim is not just retrieval quality. A maintained knowledge layer chang
 
 ## Sources
 
-- [[sources/articles/knowledge-layer-architecture]]
+- [AI Knowledge Layer](../sources/articles/knowledge-layer-architecture.md)

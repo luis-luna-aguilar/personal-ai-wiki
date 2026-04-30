@@ -14,7 +14,7 @@ Every publishes an editorial essay by Alex Duffy arguing that the emerging marke
 
 ## Influenced pages
 
-- [[trends/proprietary-data-becomes-model-moat]] — new trend page capturing the thesis that proprietary operational data and domain evals are becoming an AI moat
+- [Proprietary data becomes model moat](../../trends/proprietary-data-becomes-model-moat.md) — new trend page capturing the thesis that proprietary operational data and domain evals are becoming an AI moat
 
 ## Key claims extracted
 

@@ -25,6 +25,6 @@ Agent2Agent, or A2A, is Google's protocol for communication between agents acros
 
 ## Sources
 
-- [[sources/articles/google-a2a]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [Google A2A launch](../sources/articles/google-a2a.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

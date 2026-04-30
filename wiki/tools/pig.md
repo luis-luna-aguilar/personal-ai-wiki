@@ -30,6 +30,6 @@ Pig is a Windows-focused computer-use platform. It is better understood as compu
 
 ## Sources
 
-- [[sources/articles/pig-homepage]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [Pig official product page](../sources/articles/pig-homepage.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

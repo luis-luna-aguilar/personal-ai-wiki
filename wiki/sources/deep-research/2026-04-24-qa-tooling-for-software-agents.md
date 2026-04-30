@@ -14,12 +14,12 @@ Deep-research synthesis focused on the concrete verification stack for software 
 
 ## Influenced pages
 
-- [[training/evals-for-agentic-software-development]] — adds the tooling layer: sandboxes, dual-track evals, QA artifact capture, browser verification, and proof artifacts
-- [[training/ai-enablement-software-development]] — adds a clearer role for QA as a producer of reusable eval artifacts
-- [[tools/e2b]] — isolated sandbox runtime for agent execution and test runs
-- [[tools/agentrial]] — multi-trial statistical eval runner for agent consistency and regression detection
-- [[tools/stagehand]] — browser automation framework for self-verification loops
-- [[tools/browserbase]] — browser infrastructure for agent browser sessions, artifact capture, and end-to-end testing
+- [Evals for agentic software development](../../training/evals-for-agentic-software-development.md) — adds the tooling layer: sandboxes, dual-track evals, QA artifact capture, browser verification, and proof artifacts
+- [AI enablement — software development](../../training/ai-enablement-software-development.md) — adds a clearer role for QA as a producer of reusable eval artifacts
+- [E2B](../../tools/e2b.md) — isolated sandbox runtime for agent execution and test runs
+- [Agentrial](../../tools/agentrial.md) — multi-trial statistical eval runner for agent consistency and regression detection
+- [Stagehand](../../tools/stagehand.md) — browser automation framework for self-verification loops
+- [Browserbase](../../tools/browserbase.md) — browser infrastructure for agent browser sessions, artifact capture, and end-to-end testing
 
 ## Key claims extracted
 

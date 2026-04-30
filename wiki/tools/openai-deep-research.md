@@ -20,8 +20,8 @@ OpenAI's productized deep research agent. Available via ChatGPT and the OpenAI A
 
 ## Why it matters
 
-Along with Gemini Deep Research, this establishes long-horizon research agents as a standard product category rather than a research demo. See [[concepts/deep-research]] for the category concept and [[tools/gemini-deep-research]] for Google's implementation with published benchmark scores.
+Along with Gemini Deep Research, this establishes long-horizon research agents as a standard product category rather than a research demo. See [Deep Research (concept)](../concepts/deep-research.md) for the category concept and [Gemini Deep Research](gemini-deep-research.md) for Google's implementation with published benchmark scores.
 
 ## Sources
 
-- [[sources/articles/openai-deep-research]]
+- [OpenAI Deep Research guide](../sources/articles/openai-deep-research.md)

@@ -44,5 +44,5 @@ Described as a four-layer memory system with periodic consolidation vs OpenClaw'
 
 ## Sources
 
-- [[sources/newsletters/ainews-2026-04-21]]
-- [[sources/newsletters/ainews-2026-04-22]]
+- [AINews — Moonshot Kimi K2.6, Hermes Agent, Codex Chronicle (2026-04-21)](../sources/newsletters/ainews-2026-04-21.md)
+- [AINews — 2026-04-22 (GPT-Image-2, Hermes, Deep Research Max)](../sources/newsletters/ainews-2026-04-22.md)

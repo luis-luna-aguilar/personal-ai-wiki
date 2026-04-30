@@ -14,8 +14,8 @@ This source summary groups the March 12 launch cluster around Perplexity Persona
 
 ## Influenced pages
 
-- [[tools/perplexity-computer]] — clarifies the product's digital-proxy framing and dedicated-machine model
-- [[state-of/computer-use]] — sharpens the category signal around persistent computer-use agents
+- [Perplexity Computer](../../tools/perplexity-computer.md) — clarifies the product's digital-proxy framing and dedicated-machine model
+- [State of Computer Use](../../state-of/computer-use.md) — sharpens the category signal around persistent computer-use agents
 
 ## Key claims extracted
 

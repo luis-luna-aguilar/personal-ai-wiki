@@ -14,8 +14,8 @@ This source cluster makes the memory tradeoff explicit. Anthropic shipped useful
 
 ## Influenced pages
 
-- [[concepts/agent-memory]] — adds the tradeoff framing directly to the concept
-- [[tools/claude-code]] — adds caveat context around auto-memory
+- [Agent memory](../../concepts/agent-memory.md) — adds the tradeoff framing directly to the concept
+- [Claude Code](../../tools/claude-code.md) — adds caveat context around auto-memory
 
 ## Key claims extracted
 

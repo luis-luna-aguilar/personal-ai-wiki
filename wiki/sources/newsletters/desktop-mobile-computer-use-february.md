@@ -14,7 +14,7 @@ This source cluster expands the computer-use category beyond browser agents or p
 
 ## Influenced pages
 
-- [[state-of/computer-use]] — broadens the category signal beyond remote desktop proxies
+- [State of Computer Use](../../state-of/computer-use.md) — broadens the category signal beyond remote desktop proxies
 
 ## Key claims extracted
 

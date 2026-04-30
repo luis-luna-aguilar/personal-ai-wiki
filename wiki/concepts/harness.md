@@ -11,7 +11,7 @@ sources: [agentic-thinking-lin, langchain-better-harness, openai-agents-sdk-evol
 
 The scaffolding that wraps an AI model and turns it into an agent capable of acting in the world. A harness defines *what* the model can do (tools, APIs, memory), *how* it reasons and plans (system prompt, instructions, routing logic), and *what environment* it operates in (browser, terminal, code sandbox, external services).
 
-The analogy to model training is explicit in the field: just as training data shapes a model, the harness shapes an agent's behavior. As [[sources/articles/langchain-better-harness|LangChain's Better-Harness]] frames it: `harness + evals + harness engineering → better agent` mirrors `model + training data + gradient descent → better model`.
+The analogy to model training is explicit in the field: just as training data shapes a model, the harness shapes an agent's behavior. As [LangChain's Better-Harness](../sources/articles/langchain-better-harness.md) frames it: `harness + evals + harness engineering → better agent` mirrors `model + training data + gradient descent → better model`.
 
 ## What a harness includes
 
@@ -20,13 +20,13 @@ The analogy to model training is explicit in the field: just as training data sh
 - **Orchestration logic** — how the agent loops, when it escalates, how sub-agents are coordinated
 - **Execution environment** — browser, terminal, code sandbox, API layers, memory systems
 - **Storage / compute boundary** — many practical agent stacks now separate durable shared context (repos, filesystems, knowledge stores) from isolated execution sandboxes so multiple agents can collaborate without sharing one unsafe runtime
-- **Evaluation layer** — evals and traces that measure whether the agent behaves as intended; see [[concepts/agent-evals]] for the taxonomy of eval categories and the trajectory-vs-result distinction
+- **Evaluation layer** — evals and traces that measure whether the agent behaves as intended; see [Agent evals](agent-evals.md) for the taxonomy of eval categories and the trajectory-vs-result distinction
 - **Context-shaping layer** — practical systems increasingly treat repo state, recent edits, local instructions, and memory retrieval policy as part of the harness boundary, not as incidental prompt stuffing
 - **Reusable operating modules** — skills, hook scripts, slash commands, and plugin bundles increasingly act as composable pieces of the harness, not just ad hoc project artifacts
 
 ## Why it matters
 
-In the reasoning era, the competitive edge was in model training — better RL, stronger feedback signals. In the agentic era, as [[sources/articles/agentic-thinking-lin|Junyang Lin argues]], the edge is in the harness: environment quality, prompt precision, tool design, and the ability to iterate on behavior without retraining the model. Harness engineering is increasingly treated as a first-class discipline.
+In the reasoning era, the competitive edge was in model training — better RL, stronger feedback signals. In the agentic era, as [Junyang Lin argues](../sources/articles/agentic-thinking-lin.md), the edge is in the harness: environment quality, prompt precision, tool design, and the ability to iterate on behavior without retraining the model. Harness engineering is increasingly treated as a first-class discipline.
 
 OpenAI's April 15, 2026 Agents SDK post gives a concrete vendor example of this broader definition: the harness includes configurable memory, sandbox-aware orchestration, Codex-like filesystem tools, MCP, skills, AGENTS.md, shell, and `apply_patch`. OpenAI explicitly argues the harness should stay separate from compute so credentials remain outside execution sandboxes and runs can survive sandbox failure via snapshotting and rehydration.
 
@@ -58,7 +58,7 @@ In practice, a harness is not only the loop logic. Recent source material reinfo
 
 ## Harness vs model
 
-A well-engineered harness can compensate for a weaker model. A poor harness can cripple a strong one. This is why [[sources/articles/langchain-better-harness|Better-Harness]] and similar systems focus on *harness hill-climbing* — iteratively improving the harness using evals as a signal, separate from any model update.
+A well-engineered harness can compensate for a weaker model. A poor harness can cripple a strong one. This is why [Better-Harness](../sources/articles/langchain-better-harness.md) and similar systems focus on *harness hill-climbing* — iteratively improving the harness using evals as a signal, separate from any model update.
 
 ## Harness vs folder-level context
 
@@ -70,30 +70,30 @@ The two are related but not identical. Many real-world "agent" improvements actu
 ## Caveats
 
 - The term has no single agreed definition across the field. Some sources use it narrowly (just the prompt + tool config); others include the full execution environment and orchestration layer.
-- This page reflects the broader definition, consistent with [[sources/articles/agentic-thinking-lin|Lin's essay]] and [[sources/articles/langchain-better-harness|LangChain's Better-Harness]] framing.
+- This page reflects the broader definition, consistent with [Lin's essay](../sources/articles/agentic-thinking-lin.md) and [LangChain's Better-Harness](../sources/articles/langchain-better-harness.md) framing.
 - Some practitioners now implicitly split "harness" from "folder-level context." The distinction is useful operationally even if the vocabulary is not yet standardized.
 
 ## Related
 
-- [[concepts/agent-evals]] — taxonomy of agent evaluation categories and why trajectory quality matters alongside final results
-- [[concepts/agent-improvement-loop]] — the loop for improving a harness systematically via traces, evals, and targeted changes
-- [[workflows/skillify-agent-reliability]] — pattern for encoding agent failures as permanent tested skills; "thin harness / fat skills" architecture
+- [Agent evals](agent-evals.md) — taxonomy of agent evaluation categories and why trajectory quality matters alongside final results
+- [Agent improvement loop](agent-improvement-loop.md) — the loop for improving a harness systematically via traces, evals, and targeted changes
+- [Skillify — Agent Reliability Pattern](../workflows/skillify-agent-reliability.md) — pattern for encoding agent failures as permanent tested skills; "thin harness / fat skills" architecture
 
 ## Sources
 
-- [[sources/articles/agentic-thinking-lin]]
-- [[sources/articles/langchain-better-harness]]
-- [[sources/articles/openai-agents-sdk-evolution]]
-- [[sources/newsletters/notion-token-town]]
-- [[sources/newsletters/ainews-openclaw-2026-04-18]]
-- [[sources/tweets/garrytan-confusion-protocol]]
-- [[sources/tweets/matt-pocock-ddd-adr]]
-- [[sources/newsletters/harness-engineering-patterns]]
-- [[sources/newsletters/harness-debate-march]]
-- [[sources/newsletters/claude-code-leak-architecture]]
-- [[sources/newsletters/harness-engineering-early-april]]
-- [[sources/newsletters/skills-and-plugin-packaging-late-march]]
-- [[sources/newsletters/harness-engineering-march]]
-- [[sources/newsletters/shopify-latent-space-april-2026]]
-- [[sources/newsletters/ainews-2026-04-22]]
-- [[sources/newsletters/thecode-april-22-2026]]
+- [From 'Reasoning' Thinking to 'Agentic' Thinking by Junyang Lin](../sources/articles/agentic-thinking-lin.md)
+- ["Better Harness: A Recipe for Harness Hill-Climbing with Evals" — LangChain](../sources/articles/langchain-better-harness.md)
+- [The next evolution of the Agents SDK](../sources/articles/openai-agents-sdk-evolution.md)
+- [Notion's Token Town / software factory discussion](../sources/newsletters/notion-token-town.md)
+- [AINews — The Two Sides of OpenClaw (harness section)](../sources/newsletters/ainews-openclaw-2026-04-18.md)
+- [Garry Tan on ambiguity gates / confusion protocol](../sources/tweets/garrytan-confusion-protocol.md)
+- [Matt Pocock on shared language, bounded contexts, and ADRs](../sources/tweets/matt-pocock-ddd-adr.md)
+- [Harness engineering patterns](../sources/newsletters/harness-engineering-patterns.md)
+- [Is harness engineering real?](../sources/newsletters/harness-debate-march.md)
+- [Claude Code leak architecture lessons](../sources/newsletters/claude-code-leak-architecture.md)
+- [Harness engineering in early April](../sources/newsletters/harness-engineering-early-april.md)
+- [Skills and plugin packaging in late March](../sources/newsletters/skills-and-plugin-packaging-late-march.md)
+- [Harness engineering in mid-March](../sources/newsletters/harness-engineering-march.md)
+- [Shopify AI phase transition — Latent Space podcast (April 2026)](../sources/newsletters/shopify-latent-space-april-2026.md)
+- [AINews — 2026-04-22 (GPT-Image-2, Hermes, Deep Research Max)](../sources/newsletters/ainews-2026-04-22.md)
+- [The Code newsletter — 2026-04-22 (Cursor/SpaceX, Claude Code recap, CLI design)](../sources/newsletters/thecode-april-22-2026.md)

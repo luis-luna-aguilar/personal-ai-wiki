@@ -15,8 +15,8 @@ Latent Space's Notion interview is useful less as product news than as a window 
 
 ## Influenced pages
 
-- [[workflows/agentic-orchestration-patterns]] — adds demos-over-memos, self-rebuild culture, and MCP-vs-CLI orchestration judgment
-- [[concepts/harness]] — sharpens what practical harness engineering looks like in production teams
+- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — adds demos-over-memos, self-rebuild culture, and MCP-vs-CLI orchestration judgment
+- [Harness (agent)](../../concepts/harness.md) — sharpens what practical harness engineering looks like in production teams
 
 ## Key claims extracted
 

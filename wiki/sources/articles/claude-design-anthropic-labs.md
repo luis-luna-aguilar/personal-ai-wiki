@@ -15,8 +15,8 @@ Anthropic's full launch post for Claude Design. Describes the product as a colla
 
 ## Influenced pages
 
-- [[tools/claude-design]] — major content update; thin stub replaced with full description
-- [[state-of/creative]] — new `Visual design & prototyping` subcategory added
+- [Claude Design](../../tools/claude-design.md) — major content update; thin stub replaced with full description
+- [State of Creative](../../state-of/creative.md) — new `Visual design & prototyping` subcategory added
 
 ## Key claims extracted
 

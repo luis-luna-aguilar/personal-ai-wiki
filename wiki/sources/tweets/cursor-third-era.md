@@ -17,9 +17,9 @@ Secondary source: Dan Shipper's vibe check (`raw/tweets/2026-04-22-danshipper-20
 
 ## Influenced pages
 
-- [[tools/cursor]] — third-era data added; vibe check caveats added
-- [[state-of/coding]] — Cursor line updated with third-era framing
-- [[trends/agents-reshape-organizations]] — Truell internal data added as concrete signal
+- [Cursor](../../tools/cursor.md) — third-era data added; vibe check caveats added
+- [Coding](../../history/state-of/coding.md) — Cursor line updated with third-era framing
+- [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — Truell internal data added as concrete signal
 
 ## Key claims extracted
 

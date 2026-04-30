@@ -19,6 +19,6 @@ Genspark Slides is an AI slide-generation workflow inside Genspark's broader pro
 
 ## Sources
 
-- [[sources/articles/genspark-slides]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [Genspark Slides product page](../sources/articles/genspark-slides.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

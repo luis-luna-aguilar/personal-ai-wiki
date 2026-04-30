@@ -19,6 +19,6 @@ Kora is Konko's healthcare operations assistant. The strongest current signal is
 
 ## Sources
 
-- [[sources/articles/konko-kora-homepage]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [Konko Kora official page](../sources/articles/konko-kora-homepage.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

@@ -13,7 +13,7 @@ This source reframes style guides as machine-facing operating instructions rathe
 
 ## Influenced pages
 
-- [[training/ai-style-guides]] — opens a dedicated practical page for writing-system guidance
+- [AI style guides](../../training/ai-style-guides.md) — opens a dedicated practical page for writing-system guidance
 
 ## Key claims extracted
 

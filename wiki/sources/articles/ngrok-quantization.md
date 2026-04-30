@@ -15,7 +15,7 @@ ngrok engineering blog explainer on LLM quantization. Covers: what makes models 
 
 ## Influenced pages
 
-- [[concepts/quantization]] — new concept page created
+- [Quantization](../../concepts/quantization.md) — new concept page created
 
 ## Key claims extracted
 

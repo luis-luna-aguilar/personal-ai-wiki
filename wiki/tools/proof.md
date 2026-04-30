@@ -38,4 +38,4 @@ Proof is Every's web document editor for shared human/agent writing work. Its co
 
 ## Sources
 
-- [[sources/newsletters/proof-agent-native-documents]]
+- [Proof and agent-native documents](../sources/newsletters/proof-agent-native-documents.md)

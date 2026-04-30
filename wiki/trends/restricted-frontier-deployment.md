@@ -45,6 +45,6 @@ This could become a major structural shift in frontier AI. If labs increasingly 
 
 ## Sources
 
-- [[sources/newsletters/restricted-frontier-deployment]]
-- [[sources/newsletters/anthropic-pentagon-boundaries-february]]
-- [[sources/articles/glasswing]]
+- [Restricted frontier deployment](../sources/newsletters/restricted-frontier-deployment.md)
+- [Anthropic Pentagon deployment boundaries in late February](../sources/newsletters/anthropic-pentagon-boundaries-february.md)
+- [Project Glasswing](../sources/articles/glasswing.md)

@@ -19,6 +19,6 @@ Zo is Zocdoc's AI phone assistant for patient-access workflows. It fits healthca
 
 ## Sources
 
-- [[sources/articles/zocdoc-zo]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [Zocdoc Zo launch](../sources/articles/zocdoc-zo.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

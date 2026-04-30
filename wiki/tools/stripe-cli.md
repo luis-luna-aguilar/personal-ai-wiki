@@ -51,4 +51,4 @@ The key claim is not only convenience for developers, but **delegatability**: an
 
 ## Sources
 
-- [[sources/articles/stripe-cli]]
+- [Stripe CLI `projects` developer preview](../sources/articles/stripe-cli.md)

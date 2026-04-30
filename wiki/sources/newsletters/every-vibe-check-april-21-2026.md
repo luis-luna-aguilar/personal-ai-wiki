@@ -15,7 +15,7 @@ Every's mini vibe check newsletter. Three stories: (1) Claude Design vibe check 
 
 ## Influenced pages
 
-- [[training/anti-autopilot-review-friction]] — vibe-coding security defaults failure mode; agent-as-watchdog pattern
+- [Anti-autopilot review friction](../../training/anti-autopilot-review-friction.md) — vibe-coding security defaults failure mode; agent-as-watchdog pattern
 
 ## Key claims extracted
 

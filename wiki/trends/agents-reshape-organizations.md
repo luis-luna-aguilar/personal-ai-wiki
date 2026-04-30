@@ -48,7 +48,7 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 
 ## Related concepts
 
-- [[concepts/agentic-thinking]] — Junyang Lin argues the competitive edge is shifting from model training to environment design and harness engineering, reinforcing the thesis that organizational leverage matters more than individual model capability
+- [Agentic thinking](../concepts/agentic-thinking.md) — Junyang Lin argues the competitive edge is shifting from model training to environment design and harness engineering, reinforcing the thesis that organizational leverage matters more than individual model capability
 
 ## Open questions
 
@@ -67,11 +67,11 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 
 ## Sources
 
-- [[sources/articles/harvey-legal-is-next]]
-- [[sources/articles/ramp-ai-adoption-playbook]]
-- [[sources/articles/mckinsey-agentic-org]]
-- [[sources/tweets/postman-ai-org-chart]]
-- [[sources/newsletters/agent-coworkers-operating-pattern]]
-- [[sources/newsletters/openclaw-operating-pattern-march]]
-- [[sources/newsletters/every-ai-sandwich-april-2026]]
-- [[sources/tweets/cursor-third-era]]
+- [Autonomous agents are transforming engineering. Legal is next. (Pereyra / Harvey)](../sources/articles/harvey-legal-is-next.md)
+- [Ramp AI adoption playbook](../sources/articles/ramp-ai-adoption-playbook.md)
+- [McKinsey — "AI is Everywhere. The Agentic Organization Isn't Yet."](../sources/articles/mckinsey-agentic-org.md)
+- [Ivan Burazin relays Postman's AI-era org-chart thesis](../sources/tweets/postman-ai-org-chart.md)
+- [Agent coworkers as an operating pattern](../sources/newsletters/agent-coworkers-operating-pattern.md)
+- [OpenClaw as an operating pattern](../sources/newsletters/openclaw-operating-pattern-march.md)
+- [Every — "You're the Bread in the AI Sandwich" (April 2026)](../sources/newsletters/every-ai-sandwich-april-2026.md)
+- [Michael Truell — "The third era of AI software development"](../sources/tweets/cursor-third-era.md)

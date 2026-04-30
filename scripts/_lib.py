@@ -270,16 +270,17 @@ def load_config() -> dict:
 
 
 # ---------------------------------------------------------------------------
-# Wikilink extraction
+# Link extraction
 # ---------------------------------------------------------------------------
 
 
 WIKILINK_RE = re.compile(r"\[\[([^\[\]\|]+?)(?:\|[^\[\]]+)?\]\]")
+MARKDOWN_LINK_RE = re.compile(r"(?<!!)\[[^\]\n]+\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 
 
-def extract_wikilinks(text: str) -> list[str]:
-    """Return all [[wikilink]] targets in the text (without pipe aliases)."""
-    return [m.group(1).strip() for m in WIKILINK_RE.finditer(text)]
+def extract_markdown_links(text: str) -> list[str]:
+    """Return all Markdown link targets in the text."""
+    return [m.group(1).strip() for m in MARKDOWN_LINK_RE.finditer(text)]
 
 
 # ---------------------------------------------------------------------------

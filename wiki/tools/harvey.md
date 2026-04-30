@@ -31,4 +31,4 @@ Harvey is a legal AI platform aimed at law firms and in-house legal teams. The w
 
 ## Sources
 
-- [[sources/articles/harvey-legal-is-next]]
+- [Autonomous agents are transforming engineering. Legal is next. (Pereyra / Harvey)](../sources/articles/harvey-legal-is-next.md)

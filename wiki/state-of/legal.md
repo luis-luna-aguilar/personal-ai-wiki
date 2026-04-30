@@ -19,10 +19,10 @@ The picture here is very sparse — only one source ingested so far, and it is e
 
 End-to-end AI products built specifically for legal workflows (matters, contracts, research, drafting).
 
-- [[tools/harvey]] — legal AI platform; product surfaces include Assistant, Vault, Knowledge, Workflow Agents *(as of 2026-04-02)*
-- [[tools/wilson]] — legal AI for in-house teams, centered on contract review, redlines, and workflow support rather than a broad all-of-legal platform story *(as of 2026-04-22)*
+- [Harvey](../tools/harvey.md) — legal AI platform; product surfaces include Assistant, Vault, Knowledge, Workflow Agents *(as of 2026-04-02)*
+- [Wilson](../tools/wilson.md) — legal AI for in-house teams, centered on contract review, redlines, and workflow support rather than a broad all-of-legal platform story *(as of 2026-04-22)*
 
 ## Recent changes
 
-- [2026-04-22] Added [[tools/wilson]] under `Legal AI`; sharper in-house contract-operations signal than the earlier Harvey-only snapshot
+- [2026-04-22] Added [Wilson](../tools/wilson.md) under `Legal AI`; sharper in-house contract-operations signal than the earlier Harvey-only snapshot
 - [2026-04-02] First content. Created the `legal` domain and `legal-ai` subcategory after ingesting Harvey's "Legal is Next" post.

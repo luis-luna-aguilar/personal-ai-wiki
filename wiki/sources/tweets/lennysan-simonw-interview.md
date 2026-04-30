@@ -15,8 +15,8 @@ Eight-point summary of a Lenny Rachitsky interview with Simon Willison (prolific
 
 ## Influenced pages
 
-- [[training/ai-enablement-software-development]] — inflection point, mid-career risk, dark factory, TDD pattern added
-- [[training/anti-autopilot-review-friction]] — lethal trifecta failure mode added
+- [AI enablement — software development](../../training/ai-enablement-software-development.md) — inflection point, mid-career risk, dark factory, TDD pattern added
+- [Anti-autopilot review friction](../../training/anti-autopilot-review-friction.md) — lethal trifecta failure mode added
 
 ## Key claims extracted
 

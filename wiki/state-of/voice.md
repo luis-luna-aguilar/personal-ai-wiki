@@ -9,9 +9,9 @@ sources: [eleven-v3, hume-evi-3, elevenlabs-scribe, voice-becomes-agent-interfac
 
 # State of Voice AI
 
-Current state of AI voice products — text-to-speech, speech-to-speech conversation, and speech-to-text transcription. Voice is maturing from a feature into a primary agent interface layer. See [[trends/voice-becomes-agent-interface]] for the broader trend.
+Current state of AI voice products — text-to-speech, speech-to-speech conversation, and speech-to-text transcription. Voice is maturing from a feature into a primary agent interface layer. See [Voice becomes an agent interface](../trends/voice-becomes-agent-interface.md) for the broader trend.
 
-Healthcare voice tools (Dragon Copilot, Zo, Kora) are tracked in [[state-of/healthcare]] because their primary value is clinical workflow integration rather than the voice model layer itself.
+Healthcare voice tools (Dragon Copilot, Zo, Kora) are tracked in [State of Healthcare](healthcare.md) because their primary value is clinical workflow integration rather than the voice model layer itself.
 
 ## Subcategories
 
@@ -19,14 +19,14 @@ Healthcare voice tools (Dragon Copilot, Zo, Kora) are tracked in [[state-of/heal
 
 AI products centered on expressive text-to-speech, speech-to-speech conversation, or voice cloning as a primary interface or output surface.
 
-- [[tools/eleven-v3]] — ElevenLabs; high-control expressive text-to-speech; stronger for polished generated voice output than conversational turn-taking *(as of 2026-04-22)*
-- [[tools/hume-evi-3]] — Hume; speech-to-speech voice model with strong emotional and empathic conversation framing; fits the "voice as agent interface" direction *(as of 2026-04-22)*
+- [Eleven v3](../tools/eleven-v3.md) — ElevenLabs; high-control expressive text-to-speech; stronger for polished generated voice output than conversational turn-taking *(as of 2026-04-22)*
+- [Hume EVI 3](../tools/hume-evi-3.md) — Hume; speech-to-speech voice model with strong emotional and empathic conversation framing; fits the "voice as agent interface" direction *(as of 2026-04-22)*
 
 ### Speech to text
 
 Products focused primarily on transcription, speech recognition, and converting audio into structured text.
 
-- [[tools/elevenlabs-scribe]] — ElevenLabs; enterprise transcription stack for real-time and operational documentation workflows *(as of 2026-04-22)*
+- [ElevenLabs Scribe](../tools/elevenlabs-scribe.md) — ElevenLabs; enterprise transcription stack for real-time and operational documentation workflows *(as of 2026-04-22)*
 
 ## Recent changes
 

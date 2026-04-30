@@ -37,5 +37,5 @@ Moonshot AI's April 2026 open-weight coding model. The launch materials position
 
 ## Sources
 
-- [[sources/articles/kimi-k2-6-blog]]
-- [[sources/newsletters/ainews-2026-04-21]]
+- [Kimi K2.6 — Advancing Open-Source Coding](../sources/articles/kimi-k2-6-blog.md)
+- [AINews — Moonshot Kimi K2.6, Hermes Agent, Codex Chronicle (2026-04-21)](../sources/newsletters/ainews-2026-04-21.md)

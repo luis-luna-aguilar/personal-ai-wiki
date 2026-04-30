@@ -14,23 +14,23 @@ Deep-research synthesis covering eval design for coding agents and general workf
 
 ## Influenced pages
 
-- [[concepts/agent-evals]] — new concept page for agent eval taxonomy and the trajectory-vs-result distinction
-- [[concepts/agent-improvement-loop]] — adds eval suite hygiene guidance: trace mining, holdout sets, refresh cadence, and stale-test retirement
-- [[benchmarks/swe-bench]] — adds SWE-bench Verified contamination warning and reframes SWE-bench Pro as the more meaningful successor
-- [[benchmarks/swe-polybench]] — adds methodology detail: 2,110 instances, 4 languages, execution plus CST metrics
-- [[benchmarks/osworld]] — benchmark page for desktop computer-use evaluation across Ubuntu, Windows, and macOS
-- [[benchmarks/webarena]] — benchmark page for stateful web navigation agents
-- [[benchmarks/tau-bench]] — benchmark page for conversational policy adherence and pass^k reliability
-- [[benchmarks/gaia]] — benchmark page for generalized multimodal agent capability
-- [[benchmarks/toolbench]] — benchmark page for large-scale API-chaining and tool-use evaluation
-- [[benchmarks/terminal-bench]] — benchmark page for real CLI and system-administration tasks
-- [[training/evals-for-agentic-software-development]] — main synthesis source for coding-agent eval patterns
-- [[training/evals-for-agentic-work]] — main synthesis source for workflow-agent eval patterns
-- [[training/company-wide-ai-enablement]] — adds an autonomy ladder for eval-gated permission expansion across organization-wide agents
-- [[training/anti-autopilot-review-friction]] — adds escalation evals as a design-time forcing function for human handoff boundaries
-- [[tools/braintrust]] — lightweight tool page seeded from the report's trace-to-dataset workflow coverage
-- [[tools/promptfoo]] — lightweight tool page seeded from the report's assertion-based eval examples
-- [[tools/langfuse]] — lightweight tool page seeded from the report's observability-tooling coverage
+- [Agent evals](../../concepts/agent-evals.md) — new concept page for agent eval taxonomy and the trajectory-vs-result distinction
+- [Agent improvement loop](../../concepts/agent-improvement-loop.md) — adds eval suite hygiene guidance: trace mining, holdout sets, refresh cadence, and stale-test retirement
+- [SWE-bench](../../benchmarks/swe-bench.md) — adds SWE-bench Verified contamination warning and reframes SWE-bench Pro as the more meaningful successor
+- [SWE-PolyBench](../../benchmarks/swe-polybench.md) — adds methodology detail: 2,110 instances, 4 languages, execution plus CST metrics
+- [OSWorld](../../benchmarks/osworld.md) — benchmark page for desktop computer-use evaluation across Ubuntu, Windows, and macOS
+- [WebArena](../../benchmarks/webarena.md) — benchmark page for stateful web navigation agents
+- [tau-bench](../../benchmarks/tau-bench.md) — benchmark page for conversational policy adherence and pass^k reliability
+- [GAIA](../../benchmarks/gaia.md) — benchmark page for generalized multimodal agent capability
+- [ToolBench](../../benchmarks/toolbench.md) — benchmark page for large-scale API-chaining and tool-use evaluation
+- [Terminal-Bench](../../benchmarks/terminal-bench.md) — benchmark page for real CLI and system-administration tasks
+- [Evals for agentic software development](../../training/evals-for-agentic-software-development.md) — main synthesis source for coding-agent eval patterns
+- [Evals for workflow and task agents](../../training/evals-for-agentic-work.md) — main synthesis source for workflow-agent eval patterns
+- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — adds an autonomy ladder for eval-gated permission expansion across organization-wide agents
+- [Anti-autopilot review friction](../../training/anti-autopilot-review-friction.md) — adds escalation evals as a design-time forcing function for human handoff boundaries
+- [Braintrust](../../tools/braintrust.md) — lightweight tool page seeded from the report's trace-to-dataset workflow coverage
+- [Promptfoo](../../tools/promptfoo.md) — lightweight tool page seeded from the report's assertion-based eval examples
+- [Langfuse](../../tools/langfuse.md) — lightweight tool page seeded from the report's observability-tooling coverage
 
 ## Key claims extracted
 

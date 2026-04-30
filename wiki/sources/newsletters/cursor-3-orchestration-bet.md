@@ -13,8 +13,8 @@ This source summary captures the early-April reading of Cursor 3 as a category b
 
 ## Influenced pages
 
-- [[tools/cursor]] — sharper framing of Cursor 3 as a control-plane-style workspace
-- [[state-of/coding]] — supports the broader shift from AI-enhanced IDEs toward agent supervision surfaces
+- [Cursor](../../tools/cursor.md) — sharper framing of Cursor 3 as a control-plane-style workspace
+- [Coding](../../history/state-of/coding.md) — supports the broader shift from AI-enhanced IDEs toward agent supervision surfaces
 
 ## Key claims extracted
 

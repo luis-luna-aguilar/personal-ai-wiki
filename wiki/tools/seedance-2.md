@@ -20,6 +20,6 @@ Seedance 2.0 is ByteDance Seed's audio-video generation product. The important d
 
 ## Sources
 
-- [[sources/articles/seedance-2]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [Seedance 2.0 product page](../sources/articles/seedance-2.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

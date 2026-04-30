@@ -17,7 +17,7 @@ Note: Cowork live artifacts were already on the wiki from a previous ingest.
 
 ## Influenced pages
 
-- [[tools/claude-code]] — worktrees, /autofix-pr CLI, Remote Control added
+- [Claude Code](../../tools/claude-code.md) — worktrees, /autofix-pr CLI, Remote Control added
 
 ## Key claims extracted
 

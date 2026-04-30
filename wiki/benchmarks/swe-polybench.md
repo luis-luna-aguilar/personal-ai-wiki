@@ -25,6 +25,6 @@ SWE-PolyBench is a software engineering benchmark from Amazon Science that expan
 
 ## Sources
 
-- [[sources/articles/amazon-swe-polybench]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
-- [[sources/deep-research/2026-04-23-agents-evals]]
+- [SWE-PolyBench benchmark site](../sources/articles/amazon-swe-polybench.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)

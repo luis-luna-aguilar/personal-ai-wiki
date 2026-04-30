@@ -15,8 +15,8 @@ Junyang Lin (former Qwen tech lead, departed Alibaba March 2026) argues the reas
 
 ## Influenced pages
 
-- [[concepts/agentic-thinking]] — new page created
-- [[state-of/agents]] — recent change entry
+- [Agentic thinking](../../concepts/agentic-thinking.md) — new page created
+- [Agents](../../history/state-of/agents.md) — recent change entry
 
 ## Key claims extracted
 

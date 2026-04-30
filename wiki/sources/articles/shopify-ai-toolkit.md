@@ -14,8 +14,8 @@ Shopify's documentation page for the AI Toolkit, which packages Shopify platform
 
 ## Influenced pages
 
-- [[tools/shopify-ai-toolkit]] — new tool page, main subject of the ingest
-- [[state-of/coding]] — add an `agent-toolkits` subcategory and place Shopify AI Toolkit under it
+- [Shopify AI Toolkit](../../tools/shopify-ai-toolkit.md) — new tool page, main subject of the ingest
+- [Coding](../../history/state-of/coding.md) — add an `agent-toolkits` subcategory and place Shopify AI Toolkit under it
 
 ## Key claims extracted
 

@@ -13,7 +13,7 @@ This source pair is useful because it describes the post-vibe-coding bottleneck 
 
 ## Influenced pages
 
-- [[training/ai-native-product-building]] — opens a practical page on the new bottlenecks after cheap prototyping
+- [AI-native product building](../../training/ai-native-product-building.md) — opens a practical page on the new bottlenecks after cheap prototyping
 
 ## Key claims extracted
 

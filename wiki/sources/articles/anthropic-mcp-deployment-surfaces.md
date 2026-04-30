@@ -13,7 +13,7 @@ Anthropic's MCP help material now clearly distinguishes local MCP in Claude Desk
 
 ## Influenced pages
 
-- [[concepts/mcp]] — practical clarification on local versus remote MCP deployment surfaces across Claude clients
+- [Model Context Protocol](../../concepts/mcp.md) — practical clarification on local versus remote MCP deployment surfaces across Claude clients
 
 ## Key claims extracted
 

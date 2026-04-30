@@ -15,9 +15,9 @@ Technical writeup of DeepSeek V4's release, focused on why the model matters for
 
 ## Influenced pages
 
-- [[models/deepseek-v4]] — new page for the release
-- [[state-of/models]] — new `Coding models` entry
-- [[trends/open-weight-momentum-broadens]] — extends the trend into long-context open agent systems
+- [DeepSeek V4](../../models/deepseek-v4.md) — new page for the release
+- [Models](../../history/state-of/models.md) — new `Coding models` entry
+- [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — extends the trend into long-context open agent systems
 
 ## Key claims extracted
 

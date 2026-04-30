@@ -20,6 +20,6 @@ OpenEvidence is a physician-oriented medical information tool for evidence looku
 
 ## Sources
 
-- [[sources/articles/open-evidence-homepage]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [OpenEvidence official page](../sources/articles/open-evidence-homepage.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

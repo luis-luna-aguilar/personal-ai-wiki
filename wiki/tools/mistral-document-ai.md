@@ -20,6 +20,6 @@ Mistral Document AI is a document-intelligence product for extracting and struct
 
 ## Sources
 
-- [[sources/articles/mistral-document-ai]]
-- [[sources/notes/legacy-ai-tools-roadmap-xlsx]]
+- [Mistral Document AI page](../sources/articles/mistral-document-ai.md)
+- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

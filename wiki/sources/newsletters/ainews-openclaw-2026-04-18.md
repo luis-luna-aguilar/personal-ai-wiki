@@ -15,8 +15,8 @@ This AINews issue pulls together several independent signals pointing in the sam
 
 ## Influenced pages
 
-- [[workflows/agentic-orchestration-patterns]] — adds scoped context, failure-aware replanning, and eval-driven simplification as reusable patterns
-- [[concepts/harness]] — grounds harness engineering in concrete operational practices rather than abstract definitions
+- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — adds scoped context, failure-aware replanning, and eval-driven simplification as reusable patterns
+- [Harness (agent)](../../concepts/harness.md) — grounds harness engineering in concrete operational practices rather than abstract definitions
 
 ## Key claims extracted
 

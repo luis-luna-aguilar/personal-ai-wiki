@@ -13,8 +13,8 @@ This source summary groups a small early-April cluster on the organizational sha
 
 ## Influenced pages
 
-- [[training/company-wide-ai-enablement]] — adds more concrete activation patterns for broad AI adoption
-- [[trends/agents-reshape-organizations]] — strengthens the structural trend with Linear and Block signals
+- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — adds more concrete activation patterns for broad AI adoption
+- [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — strengthens the structural trend with Linear and Block signals
 
 ## Key claims extracted
 

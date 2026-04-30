@@ -39,4 +39,4 @@ It also gives a concrete example of what "harness" now means in frontier agent s
 
 ## Sources
 
-- [[sources/articles/openai-agents-sdk-evolution]]
+- [The next evolution of the Agents SDK](../sources/articles/openai-agents-sdk-evolution.md)

@@ -41,4 +41,4 @@ Orca is an open-source desktop IDE for supervising multiple AI coding agents acr
 
 ## Sources
 
-- [[sources/articles/orca-homepage]]
+- [Orca homepage / product overview](../sources/articles/orca-homepage.md)

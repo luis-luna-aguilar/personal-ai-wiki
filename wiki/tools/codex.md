@@ -65,12 +65,12 @@ Research preview. Background agents monitor recent screen activity, build memori
 
 ## Sources
 
-- [[sources/articles/openai-pro-100]]
-- [[sources/newsletters/ainews-2026-04-21]]
-- [[sources/tweets/openai-codex-ongoing-tasks]]
-- [[sources/newsletters/coding-agents-review-and-orchestration-march]]
-- [[sources/newsletters/codex-security-march]]
-- [[sources/tweets/codex-updates-april-2026]]
-- [[sources/articles/openai-gpt-5-5-launch]]
-- [[sources/newsletters/superhuman-2026-04-23]]
-- [[sources/newsletters/codex-broader-computer-work-2026-04-24]]
+- [OpenAI launches $100/mo Pro plan](../sources/articles/openai-pro-100.md)
+- [AINews — Moonshot Kimi K2.6, Hermes Agent, Codex Chronicle (2026-04-21)](../sources/newsletters/ainews-2026-04-21.md)
+- [OpenAI — Codex for (almost) everything](../sources/tweets/openai-codex-ongoing-tasks.md)
+- [Coding agents move toward review and concurrent supervision](../sources/newsletters/coding-agents-review-and-orchestration-march.md)
+- [Codex Security](../sources/newsletters/codex-security-march.md)
+- [Codex updates — subagents, usage-based pricing, PR review](../sources/tweets/codex-updates-april-2026.md)
+- [Introducing GPT-5.5 — OpenAI](../sources/articles/openai-gpt-5-5-launch.md)
+- [Superhuman — Anthropic's unreleased model got hacked](../sources/newsletters/superhuman-2026-04-23.md)
+- [Codex broadens into computer work](../sources/newsletters/codex-broader-computer-work-2026-04-24.md)

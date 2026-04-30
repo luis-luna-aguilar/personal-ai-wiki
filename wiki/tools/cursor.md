@@ -25,7 +25,7 @@ The strongest interpretive signal from the early-April reaction cycle is that Cu
 - Branch selection for cloud agents and improved search/filter controls make the cloud-agent layer feel more like a supervision surface than a background feature
 - Cloud agents auto-attach demo videos and screenshots to PRs for visual review *(as of 2026-04-10)*
 - **Bugbot** now learns rules from production PR feedback; Cursor reports a 78.13% resolution rate across 50,310 public PRs and 44,000+ learned rules across 110,000+ repos *(as of 2026-04-10)*
-- Backed by [[models/composer-2|Composer 2]], Cursor's own coding model for complex long-horizon tasks; late-March coverage adds reported 61.7 TerminalBench 2.0, 73.7 SWE-bench Multilingual, low input-token pricing, and the now-disclosed Kimi-k2.5 base-model lineage
+- Backed by [Composer 2](../models/composer-2.md), Cursor's own coding model for complex long-horizon tasks; late-March coverage adds reported 61.7 TerminalBench 2.0, 73.7 SWE-bench Multilingual, low input-token pricing, and the now-disclosed Kimi-k2.5 base-model lineage
 - Plugin marketplace ("Cursor Marketplace") supports MCPs, skills, and subagents, with one-click install and private team marketplaces
 - Legacy "Cursor IDE" mode still available — switch back at any time
 
@@ -86,10 +86,10 @@ Internal Cursor data (as of April 2026): 35% of PRs merged internally at Cursor 
 
 ## Sources
 
-- [[sources/articles/cursor-3-launch]]
-- [[sources/articles/cursor-pr-demos]]
-- [[sources/newsletters/coding-agent-control-planes]]
-- [[sources/newsletters/cursor-3-orchestration-bet]]
-- [[sources/newsletters/cursor-cloud-agents-march]]
-- [[sources/newsletters/cursor-cloud-agents-february]]
-- [[sources/tweets/cursor-third-era]]
+- [Meet the new Cursor (Cursor 3 launch)](../sources/articles/cursor-3-launch.md)
+- [Cursor ships PR demo attachments](../sources/articles/cursor-pr-demos.md)
+- [Coding agent control planes](../sources/newsletters/coding-agent-control-planes.md)
+- [Cursor 3 orchestration bet](../sources/newsletters/cursor-3-orchestration-bet.md)
+- [Cursor cloud agents and the supervision workspace thesis](../sources/newsletters/cursor-cloud-agents-march.md)
+- [Cursor cloud agents in late February](../sources/newsletters/cursor-cloud-agents-february.md)
+- [Michael Truell — "The third era of AI software development"](../sources/tweets/cursor-third-era.md)

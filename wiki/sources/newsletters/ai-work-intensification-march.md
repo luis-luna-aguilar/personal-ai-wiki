@@ -13,8 +13,8 @@ This source argues that AI often does not reduce work so much as increase the am
 
 ## Influenced pages
 
-- [[training/company-wide-ai-enablement]] — adds overwork / compulsion as an adoption failure mode
-- [[training/anti-autopilot-review-friction]] — adds stopping-rule framing to review friction
+- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — adds overwork / compulsion as an adoption failure mode
+- [Anti-autopilot review friction](../../training/anti-autopilot-review-friction.md) — adds stopping-rule framing to review friction
 
 ## Key claims extracted
 

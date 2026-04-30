@@ -14,8 +14,8 @@ This source summary groups a mid-March cluster on harness engineering before the
 
 ## Influenced pages
 
-- [[concepts/harness]] — adds concrete operational lessons on loop primitives and storage/compute separation
-- [[workflows/agentic-orchestration-patterns]] — adds reusable patterns for isolated execution and long-running loop control
+- [Harness (agent)](../../concepts/harness.md) — adds concrete operational lessons on loop primitives and storage/compute separation
+- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — adds reusable patterns for isolated execution and long-running loop control
 
 ## Key claims extracted
 
