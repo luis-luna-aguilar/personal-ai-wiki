@@ -1,5 +1,5 @@
 ---
-title: Every — Vibe Check: Opus 4.7 Stopped Reading Between the Lines
+title: 'Every — Vibe Check: Opus 4.7 Stopped Reading Between the Lines'
 type: source
 source_type: newsletter
 source_file: raw/newsletters/2026-04-17-vibe-check-opus-47-stopped-reading-between-the-l.md

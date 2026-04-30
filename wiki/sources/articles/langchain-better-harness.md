@@ -1,5 +1,5 @@
 ---
-title: "Better Harness: A Recipe for Harness Hill-Climbing with Evals" — LangChain
+title: '"Better Harness: A Recipe for Harness Hill-Climbing with Evals" — LangChain'
 type: source
 source_type: tweet
 source_file: raw/tweets/2026-04-10-vtrivedy10-2041927488918413589.md

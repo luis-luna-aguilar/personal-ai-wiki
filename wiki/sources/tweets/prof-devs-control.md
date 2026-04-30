@@ -1,5 +1,5 @@
 ---
-title: "Professional Software Developers Don't Vibe, They Control" — research summary
+title: '"Professional Software Developers Don''t Vibe, They Control" — research summary'
 type: source
 source_type: tweet
 source_file: raw/tweets/2026-04-22-omarsar0-2006063755449504154.md

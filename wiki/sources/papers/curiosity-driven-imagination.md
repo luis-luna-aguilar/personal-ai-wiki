@@ -1,5 +1,5 @@
 ---
-title: Curiosity-Driven Imagination: Discovering Plan Operators and Learning Associated Policies for Open-World Adaptation
+title: 'Curiosity-Driven Imagination: Discovering Plan Operators and Learning Associated Policies for Open-World Adaptation'
 type: source
 source_type: paper
 source_file: raw/papers/2503.04931v1.pdf

@@ -1,5 +1,5 @@
 ---
-title: Introducing Muse Spark: Scaling Towards Personal Superintelligence
+title: 'Introducing Muse Spark: Scaling Towards Personal Superintelligence'
 type: source
 source_type: article
 source_file: raw/articles/2026-04-10-aimetacom-blog-introducing-muse-spark-msl.md

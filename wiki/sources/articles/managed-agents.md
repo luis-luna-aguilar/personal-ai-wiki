@@ -1,5 +1,5 @@
 ---
-title: Scaling Managed Agents: Decoupling the brain from the hands
+title: 'Scaling Managed Agents: Decoupling the brain from the hands'
 type: source
 source_type: article
 source_file: raw/articles/2026-04-10-anthropiccom-engineering-managed-agents.md

@@ -1,5 +1,5 @@
 ---
-title: "The Spec Is the New Code" — Julian De Angelis
+title: '"The Spec Is the New Code" — Julian De Angelis'
 type: source
 source_type: tweet
 source_file: raw/tweets/2026-04-22-juliandeangeiis-2033303156340240481.md

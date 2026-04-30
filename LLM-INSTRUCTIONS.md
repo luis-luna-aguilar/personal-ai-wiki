@@ -92,6 +92,11 @@ sources: [claude-opus-46-launch, swe-bench-april]   # IDs matching files in wiki
 ---
 ```
 
+**YAML string safety:**
+- Frontmatter values must parse as valid YAML. For human-readable string fields such as `title`, quote the entire value when it contains a colon, quote marks, brackets, `#`, or an attribution suffix.
+- Never quote only part of a title. Use one YAML scalar for the whole value, for example: `title: '"The Spec Is the New Code" — Julian De Angelis'`.
+- When using single-quoted YAML strings, escape apostrophes by doubling them: `Don''t`.
+
 **Required fields by type:**
 - `title`, `type`, `as_of` — always required
 - `domains` — required for `tool`, `model`, `workflow`, `state-of`, `trend`; optional for `training`
