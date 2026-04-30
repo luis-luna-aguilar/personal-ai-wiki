@@ -1,5 +1,5 @@
 ---
-title: "From 'Reasoning' Thinking to 'Agentic' Thinking" — Junyang Lin
+title: From 'Reasoning' Thinking to 'Agentic' Thinking by Junyang Lin
 type: source
 source_type: article
 source_file: raw/articles/2026-04-10-justinlin610githubio-blog-from-reasoning-to-agentic-thinking.md
