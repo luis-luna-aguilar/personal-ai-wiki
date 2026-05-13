@@ -3,8 +3,8 @@ title: State of Agents
 type: state-of
 domains: [agents]
 tags: []
-as_of: 2026-04-24
-sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, ainews-2026-04-22, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents, cursor-cloud-agents-march, cursor-cloud-agents-february, google-adk, openai-deep-research, gemini-deep-research-max, futurehouse-homepage, uipath-maestro-introduction, anthropic-mcp, google-a2a, legacy-ai-tools-roadmap-xlsx, microsoft-foundry-agents-2026, google-cloud-next-2026, superhuman-2026-04-23, awsai-cowork-bedrock-2026-04-23, microsoft-copilot-agent-mode-office, claude-managed-agents-memory, agentic-devops-deep-research]
+as_of: 2026-05-05
+sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, ainews-2026-04-22, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents, cursor-cloud-agents-march, cursor-cloud-agents-february, google-adk, openai-deep-research, gemini-deep-research-max, futurehouse-homepage, uipath-maestro-introduction, anthropic-mcp, google-a2a, legacy-ai-tools-roadmap-xlsx, microsoft-foundry-agents-2026, google-cloud-next-2026, superhuman-2026-04-23, awsai-cowork-bedrock-2026-04-23, microsoft-copilot-agent-mode-office, claude-managed-agents-memory, agentic-devops-deep-research, agent-infrastructure-harness-2026-05-01, codex-for-work-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, inference-inflection-agent-runtime-2026-04-30, persistent-cloud-computers-agents-2026-05-01, production-agent-orchestration-2026-04-29]
 ---
 
 # State of Agents
@@ -20,7 +20,7 @@ _Coding agents (Claude Code, Codex, Cursor) are tracked in [Coding](../history/s
 Platforms, surfaces, and patterns for running, supervising, or routing AI agents — spanning hosted runtimes, human-supervision UIs, and multi-model coordination within a single agentic task.
 
 - [Claude Cowork](../tools/claude-cowork.md) — Anthropic; desktop knowledge-work agent with Live Artifacts; VM-backed local-first execution; scheduled and persistent tasks *(as of 2026-04-21)*
-- [Codex](../tools/codex.md) (Workspace Agents) — OpenAI; Codex-powered shareable team agents in Slack and ChatGPT; scheduled/background execution; Business/Enterprise/Edu/Teachers rollout *(as of 2026-04-23)*
+- [Codex](../tools/codex.md) (Workspace Agents) — OpenAI; shareable team agents in Slack and ChatGPT for scheduling, research, drafting, coding, and data analysis; now positioned as a broader computer-work agent (docs, sheets, slides, browser flows, connected apps) beyond software engineering *(as of 2026-05-01)*
 - [Orca](../tools/orca.md) — open-source desktop surface for supervising multiple coding agents across isolated worktrees, with live status, diff review, and CI visibility *(as of 2026-04-21)*
 - [Claude Managed Agents](../tools/claude-managed-agents.md) — Anthropic's hosted runtime; separates session, harness, sandbox, and now file-backed built-in memory with shared stores and auditability *(as of 2026-04-24)*
 - [Microsoft Copilot](../tools/microsoft-copilot.md) — Microsoft; agentic default mode inside Word, Excel, and PowerPoint; takes multi-step native actions in documents, worksheets, and presentations while users stay in control *(as of 2026-04-22)*
@@ -73,6 +73,12 @@ Platforms built to support literature-driven or discovery-oriented scientific wo
 
 ## Recent changes
 
+- [2026-05-05] Mistral Workflows (public preview): production-agent orchestration primitives now a shipped product — durable execution, state persistence, streaming, subagent coordination, and session resumption; signals these are table-stakes for hosted agent runtimes
+- [2026-05-05] Manus Cloud Computer introduces persistent Ubuntu environments for agents — SSH/web-terminal access, pre-installed tools, state that survives across sessions; contrasts with per-task ephemeral container model
+- [2026-05-05] Inference inflection framing: agent infrastructure needs extend beyond GPU compute to CPU orchestration, sandbox, browser, and execution capacity — compound infrastructure requirements
+- [2026-05-05] Model-pool routing and local-first browser agents emerge as a two-tier orchestration pattern: AI-managed orchestrators route across model pools at the top; local browser agents handle tasks client-side without cloud handoff
+- [2026-05-01] Production harness engineering expanding into deployment manifests, auth, RBAC, credential management, and artifact-backed multi-agent collaboration — beyond loop logic and evals alone
+- [2026-05-01] Codex Workspace Agents positioning sharpened: secondary newsletter coverage now frames Codex as a horizontal computer-work agent (docs, sheets, slides, research, planning, connected apps), not only software engineering; added to State of Computer Use as a horizontal entrant
 - [2026-04-24] Broadened `agentic-devops` from provisioning-only CLI workflows toward a fuller infrastructure-operations stack: diagnosis, approval-gated mutation, and post-deploy verification
 - [2026-04-24] Claude Managed Agents added built-in file-backed memory with shared stores, audit logs, and rollback controls; Anthropic's hosted-runtime story is becoming a more opinionated durable-agent platform
 - [2026-04-22] Microsoft Copilot's agentic mode in Word, Excel, and PowerPoint reached GA/default status; Microsoft is now pushing agent behavior directly into Office's core work canvas, not only hosted runtimes like Foundry

@@ -1,8 +1,8 @@
 ---
 title: Evals for agentic software development
 type: training
-as_of: 2026-04-24
-sources: [agents-evals-deep-research, qa-tooling-for-software-agents-deep-research]
+as_of: 2026-05-05
+sources: [agents-evals-deep-research, qa-tooling-for-software-agents-deep-research, cost-aware-agent-evaluation-2026-04-28, opus-4-7-tokenizer-economics-2026-04-30]
 ---
 
 # Evals for agentic software development
@@ -12,6 +12,9 @@ Coding agents produce output that looks correct before it compiles, runs, or lan
 ## Current guidance
 
 - Run deterministic gates (CI, linters, type-checkers, unit tests) before any AI-specific eval. AI evals only proceed after hard gates pass.
+- Track token spend and run-to-run variance alongside correctness. An agent that passes 95% of tasks but burns 10× expected tokens on each failure is not production-ready.
+- Set retry-behavior assertions: how an agent behaves after a failed step (sensible replanning vs. blind retry) affects both cost and reliability, and should be a first-class eval dimension.
+- Account for tokenizer differences across model versions. The same codebase may cost materially more to process when switching models if the new tokenizer maps code-heavy content to more tokens at the same per-token rate.
 - Define a Minimum Viable Eval Suite before granting a coding agent permission to open PRs autonomously.
 - Different coding tasks require different eval patterns — a blanket strategy misses failures specific to each task type.
 - Use shadow mode to evaluate agents safely against live production data before enabling real commits.
@@ -171,3 +174,5 @@ Proof artifacts matter for two reasons:
 - [Practical tooling layer for evals in agentic software development](../sources/deep-research/2026-04-24-qa-tooling-for-software-agents.md)
 - [Ramp AI adoption playbook](../sources/articles/ramp-ai-adoption-playbook.md)
 - [Shopify AI phase transition — Latent Space podcast (April 2026)](../sources/newsletters/shopify-latent-space-april-2026.md)
+- [Cost-aware agent evaluation](../sources/newsletters/cost-aware-agent-evaluation-2026-04-28.md)
+- [Opus 4.7 tokenizer economics](../sources/newsletters/opus-4-7-tokenizer-economics-2026-04-30.md)

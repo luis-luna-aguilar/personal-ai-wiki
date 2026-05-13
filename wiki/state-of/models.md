@@ -3,8 +3,8 @@ title: State of Models
 type: state-of
 domains: [models]
 tags: []
-as_of: 2026-04-25
-sources: [muse-spark, kimi-k2-6-blog, ainews-2026-04-21, ainews-2026-04-22, every-opus-4-7-vibe-check, vectorlab-opus-4-7-flop, vectorlab-qwen-3-6-local-threshold, open-agentic-coding-models, restricted-frontier-deployment, open-weight-momentum-early-april, late-march-small-coding-models, gpt-5-4-march, qwen-3-5-medium-february, glasswing, nano-banana-2-tweet, google-cloud-next-2026, openai-gpt-5-5-launch, danshipper-gpt-5-5-vibe-check, deepseek-v4-preview, ainews-2026-04-25]
+as_of: 2026-05-05
+sources: [muse-spark, kimi-k2-6-blog, ainews-2026-04-21, ainews-2026-04-22, every-opus-4-7-vibe-check, vectorlab-opus-4-7-flop, vectorlab-qwen-3-6-local-threshold, open-agentic-coding-models, restricted-frontier-deployment, open-weight-momentum-early-april, late-march-small-coding-models, gpt-5-4-march, qwen-3-5-medium-february, glasswing, nano-banana-2-tweet, google-cloud-next-2026, openai-gpt-5-5-launch, danshipper-gpt-5-5-vibe-check, deepseek-v4-preview, ainews-2026-04-25, qwen-3-6-27b-aa-2026-05-01, open-weight-economics-fragmenting-2026-04-30, open-weight-pricing-pressure-2026-04-29]
 ---
 
 # State of Models
@@ -28,7 +28,7 @@ Open-weight and frontier models evaluated primarily for agentic coding tasks.
 - [Kimi K2.6](../models/kimi-k2-6.md) — Moonshot AI; open-weight 1T-param MoE; SOTA coding/agent benchmark claims; 4K+ tool calls, 12+ hour runs; community now treating it as an Opus 4.7 replacement for ~85% of practical tasks *(as of 2026-04-22)*
 - [MiniMax M2.7](../models/minimax-m2-7.md) — MiniMax; 220B MoE coding / agent model; late-March sources describe unusually strong cost-performance: 56.22% SWE-Pro, 55.6% VIBE-Pro, native multi-agent collaboration, and roughly `$0.30 / $1.20` per million input/output tokens *(as of 2026-03-22)*
 - [Composer 2](../models/composer-2.md) — Cursor's in-house coding model; positioned for complex long-horizon coding tasks with reported 61.7 TerminalBench 2.0 and 73.7 SWE-bench Multilingual, plus unusually low input-token pricing inside Cursor; later disclosure says it starts from Moonshot's Kimi-k2.5 and adds continued pretraining plus RL *(as of 2026-03-23)*
-- [Qwen 3.6 27B](../models/qwen-3-6-27b.md) — Alibaba; dense 27B (Apache 2.0); beats prior 397B MoE on all coding benchmarks (SWE-bench Verified 77.2, SWE-bench Pro 53.5); runnable under 20 GB RAM; day-0 vLLM/Unsloth/llama.cpp/Ollama *(as of 2026-04-23)*
+- [Qwen 3.6 27B](../models/qwen-3-6-27b.md) — Alibaba; dense 27B (Apache 2.0); beats prior 397B MoE on all coding benchmarks (SWE-bench Verified 77.2, SWE-bench Pro 53.5); runnable under 20 GB RAM; day-0 vLLM/Unsloth/llama.cpp/Ollama; Artificial Analysis (via AINews) ranks it #1 under 150B with Intelligence Index 46 but notes unusually high output-token cost (~21× Gemma 4 31B on the suite) *(as of 2026-05-01)*
 - [Qwen 3.6 35B-A3B](../models/qwen-3-6-35b-a3b.md) — Alibaba; MoE variant; practical local-agent baseline on 24GB-class hardware; benchmark lead now held by 27B dense sibling *(as of 2026-04-22)*
 - [GLM-5.1](../models/glm-5-1.md) — open-weight contender described in the captured sources as a top benchmark performer for coding and agent workflows *(as of 2026-04-08)*
 - [DeepSeek V4](../models/deepseek-v4.md) — DeepSeek; released open-weight Pro/Flash MoE lineup with 1M context, MIT license, strong open-model agentic benchmark placement, and a major KV-cache / inference-systems story; still below the strongest closed frontier systems overall *(as of 2026-04-25)*
@@ -54,6 +54,9 @@ Frontier models deployed selectively for autonomous cybersecurity research rathe
 
 ## Recent changes
 
+- [2026-05-05] Open-weight economics fragmenting: no single model dominates across transparency, token efficiency, edge deployment, coding benchmarks, and inference cost; selection now driven by deployment constraint rather than a single ranking (editorial synthesis)
+- [2026-05-05] Open-weight pricing pressure on closed-frontier for coding assistants and RAG; closed frontier retains clearer advantages in long-context and complex agentic tasks (editorial synthesis, The Code)
+- [2026-05-01] Qwen 3.6 27B: Artificial Analysis (via AINews) confirms #1 ranking under 150B (Intelligence Index 46) but flags ~21× Gemma 4 31B output-token cost on the evaluation suite
 - [2026-04-25] DeepSeek V4 moved from preview to release framing: Pro/Flash specs, MIT license, API pricing, independent open-model placement, Ascend compatibility, and token-usage caveats
 - [2026-04-23] GPT-5.5 released; replaces GPT-5.4 as the current OpenAI frontier model in the wiki; OpenAI leads more public benchmark categories again, while Claude Opus 4.7 retains some important engineering/tool-use edges
 - [2026-04-23] Google Cloud Next '26: Gemini 3.1 Pro, Gemini 3.1 Flash Image, Gemma 4, Lyria 3, and Gemini Embedding 2 surfaced as Google's active platform model stack

@@ -3,8 +3,8 @@ title: Agent evals
 type: concept
 domains: [agents]
 tags: [agentic]
-as_of: 2026-04-23
-sources: [agents-evals-deep-research]
+as_of: 2026-05-05
+sources: [agents-evals-deep-research, cost-aware-agent-evaluation-2026-04-28]
 ---
 
 # Agent evals
@@ -28,6 +28,7 @@ A useful agent eval suite covers five categories, each catching a different clas
 - **Trajectory** — did the agent take a logical, efficient path? Did it avoid loops, call tools in the right order, and ask for clarification instead of guessing?
 - **Unit-level** — does each component of the architecture work correctly in isolation? Examples: tool routing, retrieval, parsing, or permission checks.
 - **Online (production)** — asynchronous scoring of live traffic to detect quality degradation, cost explosions, or latency spikes before users notice.
+- **Cost and variance** — tracking token spend per task run and run-to-run variance alongside correctness; agent evals that only measure capability miss the cost and reliability dimensions that matter for production deployment. Retries after failures, runaway loops, and tokenizer differences between model versions all affect real costs independently of output quality.
 
 These categories are complementary. A unit-level failure suggests a routing or retrieval problem. A trajectory failure points to broken planning. A capability failure means the agent cannot do the task at all.
 
@@ -54,3 +55,4 @@ Because the harness, tools, and environment are part of what you are evaluating:
 ## Sources
 
 - [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)
+- [Cost-aware agent evaluation](../sources/newsletters/cost-aware-agent-evaluation-2026-04-28.md)

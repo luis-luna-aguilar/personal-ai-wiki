@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents]
 subcategory: agentic-coding-workspace
 tags: [closed-source, agentic]
-as_of: 2026-04-22
-sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models, cursor-cloud-agents-march, cursor-cloud-agents-february, cursor-third-era]
+as_of: 2026-05-05
+sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models, cursor-cloud-agents-march, cursor-cloud-agents-february, cursor-third-era, ai-security-scanners-2026-05-01, cursor-sdk-agent-runtime-2026-04-30]
 ---
 
 # Cursor
@@ -73,8 +73,23 @@ Internal Cursor data (as of April 2026): 35% of PRs merged internally at Cursor 
 - The strongest external commentary on Cursor 3 treats it as a bold orchestration bet, not a settled win; the category direction looks real, but the ideal product shape is still being worked out
 - Dan Shipper's vibe check (April 2026) after a week of internal Every testing: fast desktop performance, local↔cloud demo videos are a "wow moment," but "it's still an early product and it's not clear who will love it." The rewrite deprioritizes the IDE, which alienates sizable existing Cursor fans. Summary: "the right strategic move, but an awkward in-between stage."
 
+## Cursor SDK (as of 2026-04-30)
+
+Cursor released a TypeScript SDK that exposes the Cursor agent runtime headlessly — outside the IDE. The SDK enables:
+
+- **CI/CD integration**: run Cursor agents inside automated pipelines without a desktop session
+- **Server automations**: trigger agent work from events, webhooks, or scheduled jobs on remote servers
+- **Cloud VM deployment**: deploy Cursor-powered agents on cloud compute without a local machine
+- **MCP server integration**: use the SDK as a backend behind MCP-compatible tool servers
+- **Model swapping**: switch underlying models without changing harness code
+- **Embedded product agents**: ship Cursor-powered agents inside other products
+
+The SDK repositions Cursor from a per-seat IDE product toward programmable agent infrastructure.
+
 ## Recent changes
 
+- [2026-04-30] Cursor SDK released: TypeScript SDK exposes the Cursor agent runtime headlessly for CI, automations, cloud VMs, MCP servers, model swapping, and embedded product agents; marks transition from IDE seat product toward agent infrastructure platform
+- [2026-05-01] Cursor Security Review reported: always-on PR review and scheduled codebase scans; source is AINews secondary coverage, primary Cursor page not yet fetched
 - [2026-04-22] Added Truell's third-era data: 35% of Cursor internal PRs from cloud agents; 2:1 agent-to-Tab user ratio; 15× agent usage growth YoY
 - [2026-04-22] Added Shipper vibe check: promising direction, awkward transition, early-product caveats
 - [2026-02-25] Cursor cloud agents rolled out with isolated VMs, self-testing, and demo-video review before the later March walkthrough made the product thesis explicit
@@ -93,3 +108,4 @@ Internal Cursor data (as of April 2026): 35% of PRs merged internally at Cursor 
 - [Cursor cloud agents and the supervision workspace thesis](../sources/newsletters/cursor-cloud-agents-march.md)
 - [Cursor cloud agents in late February](../sources/newsletters/cursor-cloud-agents-february.md)
 - [Michael Truell — "The third era of AI software development"](../sources/tweets/cursor-third-era.md)
+- [Cursor SDK as programmable coding-agent runtime](../sources/newsletters/cursor-sdk-agent-runtime-2026-04-30.md)

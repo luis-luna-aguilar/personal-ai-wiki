@@ -8,6 +8,36 @@ Chronological append-only record of wiki activity. Entries start with:
 
 Valid ops: `ingest`, `triage`, `reject`, `apply`, `lint`, `query-verify`, `schema`.
 
+- [2026-05-13] **apply** | Symphony and Devin terminal orchestration | 2 pages updated (tools/codex, state-of/coding), 1 created (sources/newsletters/symphony-devin-terminal-orchestration-2026-04-28)
+- [2026-05-13] **apply** | Stripe agent-native commerce and compute fraud | 2 pages updated (state-of/finance, trends/compute-infrastructure), 1 created (sources/newsletters/stripe-agent-native-commerce-fraud-2026-04-29)
+- [2026-05-13] **apply** | Production agent orchestration primitives (Mistral Workflows) | 2 pages updated (workflows/agentic-orchestration-patterns, state-of/agents), 1 created (sources/newsletters/production-agent-orchestration-2026-04-29)
+- [2026-05-13] **apply** | Persistent cloud computers for agents (Manus) | 2 pages updated (state-of/agents, trends/compute-infrastructure), 1 created (sources/newsletters/persistent-cloud-computers-agents-2026-05-01)
+- [2026-05-13] **apply** | Parallel Web Systems agent web API market signal | 1 page updated (trends/compute-infrastructure), 1 created (sources/newsletters/parallel-web-agent-apis-2026-04-30)
+- [2026-05-13] **apply** | Opus 4.7 tokenizer economics | 2 pages updated (models/claude-opus-4-7, training/evals-for-agentic-software-development), 1 created (sources/newsletters/opus-4-7-tokenizer-economics-2026-04-30)
+- [2026-05-13] **apply** | Open-weight pricing pressure on closed-frontier | 2 pages updated (trends/open-weight-momentum-broadens, state-of/models), 1 created (sources/newsletters/open-weight-pricing-pressure-2026-04-29)
+- [2026-05-13] **apply** | Open-weight economics fragmenting by deployment constraint | 2 pages updated (trends/open-weight-momentum-broadens, state-of/models), 1 created (sources/newsletters/open-weight-economics-fragmenting-2026-04-30)
+- [2026-05-13] **apply** | NVIDIA Nemotron 3 Nano Omni (caveated signal) | 1 page updated (trends/open-weight-momentum-broadens), 1 created (sources/newsletters/nvidia-nemotron-3-nano-omni-2026-04-29)
+- [2026-05-13] **apply** | Meta Ads MCP and CLI (source only; wiki updates deferred pending primary verification) | 0 pages updated, 1 created (sources/tweets/meta-ads-mcp-cli-2026-04-30)
+- [2026-05-13] **apply** | Local and offline agents become more credible | 2 pages updated (trends/open-weight-momentum-broadens, concepts/quantization), 1 created (sources/newsletters/local-offline-agents-2026-04-29)
+- [2026-05-13] **apply** | Knowledge-work OS agent apps | 2 pages updated (state-of/computer-use, trends/agents-reshape-organizations), 1 created (sources/newsletters/knowledge-work-os-agent-apps-2026-04-28)
+- [2026-05-13] **apply** | Inference inflection and agent runtime bottlenecks | 2 pages updated (trends/compute-infrastructure, state-of/agents), 1 created (sources/newsletters/inference-inflection-agent-runtime-2026-04-30)
+- [2026-05-13] **apply** | Gemini downloadable file generation | 2 pages updated (tools/gemini, state-of/computer-use), 1 created (sources/newsletters/gemini-downloadable-files-2026-04-30)
+- [2026-05-13] **apply** | Cursor SDK as programmable coding-agent runtime | 2 pages updated (tools/cursor, state-of/coding), 1 created (sources/newsletters/cursor-sdk-agent-runtime-2026-04-30)
+- [2026-05-13] **apply** | Cost-aware agent evaluation | 2 pages updated (training/evals-for-agentic-software-development, concepts/agent-evals), 1 created (sources/newsletters/cost-aware-agent-evaluation-2026-04-28)
+- [2026-05-13] **apply** | Claude creative tool connectors (Adobe, Blender, Ableton, etc.) | 2 pages updated (tools/claude-design, state-of/creative), 1 created (sources/newsletters/claude-creative-tool-connectors-2026-04-29)
+- [2026-05-13] **apply** | Claude Code for product-management workflows | 2 pages updated (tools/claude-code, training/company-wide-ai-enablement), 1 created (sources/newsletters/claude-code-product-management-2026-05-01)
+- [2026-05-13] **apply** | China-origin open agent-model releases | 1 page updated (trends/open-weight-momentum-broadens), 1 created (sources/newsletters/china-open-agent-models-2026-04-28)
+- [2026-05-13] **apply** | Amazon Quick work-context assistant (caveated stub) | 1 page updated (state-of/computer-use), 2 created (tools/amazon-quick, sources/newsletters/amazon-quick-work-context-assistant-2026-04-29)
+- [2026-05-13] **apply** | AI-managed orchestration and local browser agents | 2 pages updated (workflows/agentic-orchestration-patterns, state-of/agents), 1 created (sources/newsletters/ai-managed-orchestration-local-browser-agents-2026-04-28)
+- [2026-05-13] **apply** | Big Tech earnings and AI capex signal | 1 page updated (trends/compute-infrastructure), 1 created (sources/newsletters/ai-earnings-capex-2026-04-30)
+- [2026-05-13] **apply** | Qwen 3.6 27B Artificial Analysis follow-up | 2 pages updated (models/qwen-3-6-27b, state-of/models), 1 created (sources/newsletters/qwen-3-6-27b-aa-2026-05-01)
+- [2026-05-13] **apply** | Microsoft Word Legal Agent | 4 pages updated (state-of/legal, tools/microsoft-copilot, wiki/index, _schema note), 2 created (tools/microsoft-word-legal-agent, sources/articles/microsoft-word-legal-agent)
+- [2026-05-13] **apply** | Codex for Work positioning | 4 pages updated (tools/codex, state-of/computer-use, state-of/agents, wiki/index n/a), 1 created (sources/newsletters/codex-for-work-2026-05-01)
+- [2026-05-13] **apply** | AI security scanners as first-class products | 2 pages updated (state-of/cybersecurity, tools/cursor), 1 created (sources/newsletters/ai-security-scanners-2026-05-01)
+- [2026-05-13] **apply** | AI music as commercial category | 2 pages updated (state-of/creative, wiki/_schema/subcategories), 3 created (trends/ai-music-commercialization, sources/newsletters/ai-music-commercialization-2026-05-01); schema addition: ai-music-generation subcategory
+- [2026-05-13] **schema** | added subcategory `ai-music-generation`
+- [2026-05-13] **apply** | AI coding dictionary (Matt Pocock) | 2 pages updated (concepts/harness, wiki/index), 2 created (training/ai-coding-vocabulary, sources/repos/mattpocock-dictionary-of-ai-coding)
+- [2026-05-13] **apply** | Agent infrastructure harness and deployment primitives | 3 pages updated (concepts/harness, workflows/agentic-orchestration-patterns, state-of/agents), 1 created (sources/newsletters/agent-infrastructure-harness-2026-05-01)
 - [2026-04-25] **ingest** | Google-Anthropic compute report | 3 pages updated, 0 created
 - [2026-04-25] **ingest** | AINews DeepSeek V4 release follow-through | 4 pages updated, 1 created
 - [2026-04-25] **triage** | Email Digest — Ai — 2026-04-25 (processed) | 2 proposals generated, 0 skipped; proposals: DeepSeek V4 release follow-through, Google-Anthropic compute report
@@ -206,3 +236,8 @@ grep "^- \[" wiki/log.md | tail -20
 - [2026-04-24] **ingest** | Built-in memory for Claude Managed Agents | 3 pages updated, 1 created
 - [2026-04-24] **ingest** | Claude Code one-time scheduling | 1 page updated, 1 created
 - [2026-04-24] **ingest** | Eval observability tool pages (Braintrust, Promptfoo, Langfuse) | 1 page updated, 4 created; schema: agent-eval-tooling
+- [2026-05-05] **triage** | AI Email Digest 2026-05-01 | 8 proposals generated, 1 skipped (Contra Labs Human Creativity Benchmark unchecked)
+
+- [2026-05-05] **triage** | AI Email Digest 2026-04-30 to 2026-05-01 | 11 proposals generated, 1 skipped
+- [2026-05-05] **triage** | AI Email Digest 2026-04-29 to 2026-05-01 | 7 proposals generated, 5 skipped
+- [2026-05-05] **triage** | AI Email Digest 2026-04-28 to 2026-05-01 | 12 proposals generated, 1 skipped

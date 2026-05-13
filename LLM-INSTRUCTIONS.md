@@ -284,7 +284,7 @@ Triggered when the user gives you a URL and says **"ingest"** or **"fetch and in
 2. The script saves the markdown to the appropriate `raw/` subfolder and prints the path.
 3. Proceed as with file ingest, starting from step 2.
 
-**If fetch fails:** tell the user, suggest they paste the content or use Obsidian Web Clipper. Do not fall back to `WebFetch`.
+**If fetch fails:** retry once using the `compound-engineering:agent-browser` skill to open the URL in a real browser and read the rendered content. If that also fails, tell the user and suggest they paste the content or use Obsidian Web Clipper. Do not fall back to `WebFetch`.
 
 ### 3. Triage (newsletter / batch of signals / research reports)
 
@@ -387,7 +387,7 @@ status: pending
 
 **Processing a triage:** When the user says "process the triage" (or similar), re-read the triage file, then:
 
-1. **Use already-fetched content.** For email digest triages (Workflow 4), URL content was already fetched during the triage step — use those existing `raw/` files. For standard newsletter triages, fetch now: run `scripts/fetch_url.py` for each checked item's primary URL. If a fetch fails, fall back to the newsletter summary and note the gap.
+1. **Use already-fetched content.** For email digest triages (Workflow 4), URL content was already fetched during the triage step — use those existing `raw/` files. For standard newsletter triages, fetch now: run `scripts/fetch_url.py` for each checked item's primary URL. If a fetch fails, retry once using `compound-engineering:agent-browser` to open the URL in a real browser; if that also fails, fall back to the newsletter summary and note the gap.
 2. **Video check.** If a fetched source turns out to be primarily a video with no useful text (tweet with only a video embed, YouTube link, etc.), do not generate a proposal — note it as `[video — skip]` and move on.
 3. **Generate proposals.** For each checked item that passed the video check, generate a proposal at `proposals/YYYY-MM-DD-<slug>.md` using the full source content. Thin signals still get a proposal — just a small one.
 4. **Nothing is applied directly from a triage.** Every change goes through the proposal → approval → apply cycle. Unchecked items are ignored.
@@ -418,7 +418,7 @@ Triggered **automatically** whenever `gmail_fetch.py` completes and produces a m
 
 **Steps:**
 
-1. **Fetch all URL stubs.** For every source listed in the manifest frontmatter that has `fetched: false`, run `scripts/fetch_url.py --type <article|tweet> --url <URL>`. This replaces the stub with full content. Do this for ALL stubs upfront, in parallel if possible, before writing any signals. If a fetch fails, note it and continue.
+1. **Fetch all URL stubs.** For every source listed in the manifest frontmatter that has `fetched: false`, run `scripts/fetch_url.py --type <article|tweet> --url <URL>`. This replaces the stub with full content. Do this for ALL stubs upfront, in parallel if possible, before writing any signals. If a fetch fails, retry once using `compound-engineering:agent-browser` to open the URL in a real browser; if that also fails, note it and continue.
 
 2. **Read all newsletters.** Read every `raw/newsletters/` file listed in the manifest in full.
 
@@ -602,13 +602,13 @@ Triggered by **"ask-verify:"**, **"check the web"**, **"verify against web"**.
 
 **Steps:**
 1. Answer from the wiki first (as in step 7).
-2. Use `scripts/fetch_url.py` to pull relevant fresh web content **only if the user provides URLs**. If they don't, tell them what URLs would help.
+2. Use `scripts/fetch_url.py` to pull relevant fresh web content **only if the user provides URLs**. If they don't, tell them what URLs would help. If `fetch_url.py` fails for a URL, retry once using `compound-engineering:agent-browser`.
 3. Compare wiki to web. Report:
    - Where the wiki agrees with current web info
    - Where the wiki disagrees or is behind
    - Propose a dry-run update if anything new was found (don't apply automatically)
 
-**Do not** use `WebFetch` as a fallback. The browser-based script is the only supported web path.
+**Do not** use `WebFetch` as a fallback. `scripts/fetch_url.py` with `compound-engineering:agent-browser` as the retry is the only supported web path.
 
 ## History handling
 
@@ -734,7 +734,7 @@ Once out of bootstrap:
 - Do not modify `raw/` files.
 - Do not modify `wiki/` in response to new sources without going through a proposal.
 - Do not create a custom search CLI in `scripts/`. Use Claude Code's or Codex's Grep/Glob/Read.
-- Do not use `WebFetch` for source ingestion. Always use `scripts/fetch_url.py`.
+- Do not use `WebFetch` for source ingestion. Always use `scripts/fetch_url.py`; if it fails, retry with `compound-engineering:agent-browser`. Never fall back to `WebFetch`.
 - Do not add `confidence:` fields to source or wiki frontmatter. Confidence is query-time only.
 - Do not run semantic lint operations unless explicitly requested.
 - Do not read `wiki/history/` on routine queries.

@@ -4,8 +4,8 @@ type: tool
 domains: [models]
 subcategory: ai-assistant
 tags: [google, closed-source]
-as_of: 2026-04-23
-sources: [gemini-browser-utility-updates, gemini-deep-research-max, ainews-2026-04-22, google-cloud-next-2026]
+as_of: 2026-05-05
+sources: [gemini-browser-utility-updates, gemini-deep-research-max, ainews-2026-04-22, google-cloud-next-2026, gemini-downloadable-files-2026-04-30]
 ---
 
 # Gemini
@@ -46,6 +46,9 @@ Google is now using Gemini as the umbrella brand over both assistant and enterpr
 - Color Health: screening eligibility and appointment scheduling
 - Payhawk: Financial Controller Agent with Memory Bank; 50%+ faster expense submission
 
+**Downloadable file generation (as of 2026-04-30):**
+Gemini now generates downloadable artifacts directly from chat: Google Docs, Sheets, Slides; Microsoft Word, Excel, PowerPoint; PDF, CSV, LaTeX, TXT, RTF, and Markdown. File generation requires no external integration — output downloads inline from the conversation.
+
 **Other Gemini surfaces already tracked here:**
 - Deep Research and Deep Research Max available via the Gemini API — see [Gemini Deep Research](gemini-deep-research.md) for capabilities and benchmarks; see [Deep Research (concept)](../concepts/deep-research.md) for the category
 - Chrome Skills: reusable Gemini prompts that run as one-click browser workflows
@@ -65,6 +68,7 @@ Google is now using Gemini as the umbrella brand over both assistant and enterpr
 
 ## Recent changes
 
+- [2026-04-30] Downloadable file generation from chat: Google/Microsoft Office formats, PDF, CSV, LaTeX, TXT, RTF, Markdown — positions Gemini as an artifact-producing workplace assistant, not only conversational AI
 - [2026-04-23] Cloud Next '26: Gemini Enterprise Agent Platform replaces Vertex AI; Agent Studio, 200+ models, Workspace Intelligence GA, Knowledge Catalog, Gemini Embedding 2 GA, and broader agent governance stack
 - [2026-04-22] Added benchmark scores for Deep Research Max (93.3% DeepSearchQA, 85.9% BrowseComp, 54.6% HLE); added collaborative planning and code execution capabilities from AINews coverage
 - [2026-04-21] Added Deep Research and Deep Research Max: Gemini API public preview, MCP support, multimodal grounding, and native visual reports
@@ -76,3 +80,4 @@ Google is now using Gemini as the umbrella brand over both assistant and enterpr
 - [Gemini browser and utility updates](../sources/newsletters/gemini-browser-utility-updates.md)
 - [Gemini Deep Research and Deep Research Max launch](../sources/articles/gemini-deep-research-max.md)
 - [Google Cloud Next 2026 — TPU v8 and Gemini Enterprise Agent Platform](../sources/articles/google-cloud-next-2026.md)
+- [Gemini downloadable file generation](../sources/newsletters/gemini-downloadable-files-2026-04-30.md)

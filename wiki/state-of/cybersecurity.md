@@ -3,8 +3,8 @@ title: State of Cybersecurity
 type: state-of
 domains: [cybersecurity]
 tags: []
-as_of: 2026-04-23
-sources: [slopcop-repo, glasswing, openai-gpt-5-5-launch]
+as_of: 2026-05-01
+sources: [slopcop-repo, glasswing, openai-gpt-5-5-launch, ai-security-scanners-2026-05-01]
 ---
 
 # State of Cybersecurity
@@ -24,6 +24,8 @@ Attack vectors unique to or amplified by AI systems in development workflows.
 Coding agents extended into security review and vulnerability validation.
 
 - [Codex](../tools/codex.md) — Codex Security feature expands the coding agent into vulnerability review and validation work beyond code generation *(as of 2026-03-09)*
+- **Claude Security** — Anthropic; reported repo vulnerability scanner that validates findings and suggests fixes using Opus 4.7; source is AINews secondary coverage *(as of 2026-05-01)*
+- **Cursor Security Review** — Cursor; reported always-on PR review plus scheduled codebase scans; source is AINews secondary coverage *(as of 2026-05-01)*
 
 ### Frontier model capabilities (offensive)
 
@@ -40,6 +42,7 @@ Provider programs that expand access to higher-risk cyber capabilities for verif
 
 ## Recent changes
 
+- [2026-05-01] Added Claude Security and Cursor Security Review to AI-assisted vulnerability detection; both are secondary-source entries pending primary verification
 - [2026-04-23] Added [GPT-5.5](../models/gpt-5-5.md) under `Frontier model capabilities (offensive)` and noted OpenAI's Trusted Access for Cyber program for verified defenders
 - [2026-03-09] Codex Security launched: Codex extended into vulnerability review and validation
 - [2026-04-22] Page created; added `AI-specific attack surfaces` section with slopsquatting (USENIX 2025 evidence, 19.7% hallucination rate, slopcop mitigation)

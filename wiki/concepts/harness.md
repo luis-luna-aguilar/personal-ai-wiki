@@ -3,8 +3,8 @@ title: Harness (agent)
 type: concept
 domains: [agents]
 tags: [agentic]
-as_of: 2026-04-22
-sources: [agentic-thinking-lin, langchain-better-harness, openai-agents-sdk-evolution, notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, claude-code-leak-architecture, harness-engineering-early-april, skills-and-plugin-packaging-late-march, harness-engineering-march, harness-debate-march, shopify-latent-space-april-2026, ainews-2026-04-22, thecode-april-22-2026]
+as_of: 2026-05-01
+sources: [agentic-thinking-lin, langchain-better-harness, openai-agents-sdk-evolution, notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, claude-code-leak-architecture, harness-engineering-early-april, skills-and-plugin-packaging-late-march, harness-engineering-march, harness-debate-march, shopify-latent-space-april-2026, ainews-2026-04-22, thecode-april-22-2026, agent-infrastructure-harness-2026-05-01, mattpocock-dictionary-of-ai-coding]
 ---
 
 # Harness (agent)
@@ -23,6 +23,7 @@ The analogy to model training is explicit in the field: just as training data sh
 - **Evaluation layer** — evals and traces that measure whether the agent behaves as intended; see [Agent evals](agent-evals.md) for the taxonomy of eval categories and the trajectory-vs-result distinction
 - **Context-shaping layer** — practical systems increasingly treat repo state, recent edits, local instructions, and memory retrieval policy as part of the harness boundary, not as incidental prompt stuffing
 - **Reusable operating modules** — skills, hook scripts, slash commands, and plugin bundles increasingly act as composable pieces of the harness, not just ad hoc project artifacts
+- **Deployment manifest and access controls** — production harnesses increasingly package sandboxing, auth, RBAC (Role-Based Access Control — the rules that define which users and agents have permission to perform which operations), credential management, and frontend configuration into deployable artifacts. LangChain's DeepAgents expresses this as a `deepagents.toml` manifest; Agent Collabs uses Hugging Face dataset buckets (shared cloud storage) and Spaces (hosted isolated execution environments) to let heterogeneous agents collaborate through a common storage layer without sharing one mutable runtime.
 
 ## Why it matters
 
@@ -59,6 +60,8 @@ In practice, a harness is not only the loop logic. Recent source material reinfo
 ## Harness vs model
 
 A well-engineered harness can compensate for a weaker model. A poor harness can cripple a strong one. This is why [Better-Harness](../sources/articles/langchain-better-harness.md) and similar systems focus on *harness hill-climbing* — iteratively improving the harness using evals as a signal, separate from any model update.
+
+Practitioners are increasingly using a consistent vocabulary for these parts: **model** (the neural network weights that process each request — no memory between calls, no built-in ability to act independently), **harness** (the scaffold that adds tools, memory, and loop logic), **agent** (the user-facing system combining both), **context** (what the agent has available right now), **session** (one bounded run until reset or handoff), and **environment** (what the agent can actually act on). Teams that adopt this language spend less time misattributing problems to the wrong layer. See [AI coding vocabulary](../training/ai-coding-vocabulary.md).
 
 ## Harness vs folder-level context
 
@@ -97,3 +100,5 @@ The two are related but not identical. Many real-world "agent" improvements actu
 - [Shopify AI phase transition — Latent Space podcast (April 2026)](../sources/newsletters/shopify-latent-space-april-2026.md)
 - [AINews — 2026-04-22 (GPT-Image-2, Hermes, Deep Research Max)](../sources/newsletters/ainews-2026-04-22.md)
 - [The Code newsletter — 2026-04-22 (Cursor/SpaceX, Claude Code recap, CLI design)](../sources/newsletters/thecode-april-22-2026.md)
+- [Agent infrastructure, harness engineering, and collaborative agent systems](../sources/newsletters/agent-infrastructure-harness-2026-05-01.md)
+- [Matt Pocock — Dictionary of AI Coding](../sources/repos/mattpocock-dictionary-of-ai-coding.md)

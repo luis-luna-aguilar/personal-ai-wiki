@@ -4,8 +4,8 @@ type: tool
 domains: [creative]
 subcategory: visual-design-prototyping
 tags: [anthropic, closed-source, beta]
-as_of: 2026-04-22
-sources: [claude-design-anthropic-labs]
+as_of: 2026-05-05
+sources: [claude-design-anthropic-labs, claude-creative-tool-connectors-2026-04-29]
 ---
 
 # Claude Design
@@ -40,10 +40,24 @@ Claude Design extends Anthropic into a domain previously owned by Figma, Canva, 
 - Relies on Opus 4.7; early reports describe that model as more literal, which may affect design interpretation
 - Brand onboarding quality depends on how well structured the codebase and design files are
 
+## Creative tool connectors (as of 2026-04-29)
+
+Anthropic added Claude connectors for professional creative production tools — reported by Superhuman AI (secondary source; verify availability against Anthropic documentation):
+
+- **Adobe** (Creative Suite), **Affinity** (design suite alternative)
+- **Blender** (3D modeling and animation), **Fusion** (compositing and VFX)
+- **Ableton** (music production), **Splice** (sample library)
+- **SketchUp** (architectural and product 3D modeling)
+- **Resolume** (VJ/AV performance)
+
+This extends Claude beyond artifact generation into direct integration with creative-production software workflows.
+
 ## Recent changes
 
+- [2026-04-29] Creative tool connectors reported: Claude integrations for Adobe, Blender, Fusion, Ableton, Splice, SketchUp, Affinity, Resolume; moves Claude from artifact generation toward in-workflow creative-production integration (secondary coverage)
 - [2026-04-22] Full launch via Anthropic Labs; brand onboarding, PPTX/Canva export, group editing, web capture — replacing earlier thin stub
 
 ## Sources
 
 - [Introducing Claude Design by Anthropic Labs](../sources/articles/claude-design-anthropic-labs.md)
+- [Claude creative tool connectors](../sources/newsletters/claude-creative-tool-connectors-2026-04-29.md)

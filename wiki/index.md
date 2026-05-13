@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 type: index
-as_of: 2026-04-25
+as_of: 2026-05-13
 ---
 
 # Wiki Index
@@ -107,6 +107,8 @@ Tools and products built on top of models. One page per tool.
 - [tools/tessl](tools/tessl.md) — CLI + MCP framework exploring spec-as-source; private beta *(as_of: 2025-10-15)*
 - [tools/uipath-maestro](tools/uipath-maestro.md) — enterprise orchestration layer for agents, robots, people, and long-running workflows *(as_of: 2026-04-22)*
 - [tools/wilson](tools/wilson.md) — in-house-legal-focused AI product for contract review, redlines, and workflow support *(as_of: 2026-04-22)*
+- [tools/amazon-quick](tools/amazon-quick.md) — Amazon's reported desktop work-context assistant; personal knowledge graph from files, calendar, and Slack; Kiro CLI and Claude Code integration; caveated — pending primary Amazon verification *(as_of: 2026-04-29)*
+- [tools/microsoft-word-legal-agent](tools/microsoft-word-legal-agent.md) — Microsoft's contract-review and redlining agent inside Word; playbook review, tracked-change redlines, version comparison, deterministic document-edit resolution *(as_of: 2026-05-01)*
 - [tools/zo](tools/zo.md) — Zocdoc's AI phone assistant for scheduling and patient-access workflows *(as_of: 2026-04-22)*
 
 ## Benchmarks
@@ -162,6 +164,7 @@ Things being watched that haven't solidified yet.
 - [trends/proprietary-data-becomes-model-moat](trends/proprietary-data-becomes-model-moat.md) — proprietary operational data and domain evals may become stronger moats as model quality converges *(as_of: 2026-04-10)*
 - [trends/restricted-frontier-deployment](trends/restricted-frontier-deployment.md) — frontier labs may increasingly withhold or selectively deploy their highest-capability systems *(as_of: 2026-04-08)*
 - [trends/voice-becomes-agent-interface](trends/voice-becomes-agent-interface.md) — voice, texting, and real-time audio are becoming agent surfaces rather than side features *(as_of: 2026-03-30)*
+- [trends/ai-music-commercialization](trends/ai-music-commercialization.md) — AI music moving from novelty to commercial category; ElevenMusic, Suno, Udio as early anchors; rightsholder economics emerging *(as_of: 2026-05-01)*
 
 ## Training
 
@@ -175,6 +178,7 @@ Practical guidance for teaching teams and businesses to use AI well.
 - [training/ai-enablement-software-development](training/ai-enablement-software-development.md) — engineering-specific AI adoption: critique loops, AI-native hiring, CI/CD bottlenecks, and junior talent pipeline risk *(as_of: 2026-04-23)*
 - [training/evals-for-agentic-software-development](training/evals-for-agentic-software-development.md) — eval stack for coding agents: deterministic gates, sandboxed execution, QA artifact capture, browser self-verification, MVES, and trace mining *(as_of: 2026-04-24)*
 - [training/evals-for-agentic-work](training/evals-for-agentic-work.md) — eval patterns for workflow and task agents: pass^k reliability, task-specific metrics, simulated users *(as_of: 2026-04-23)*
+- [training/ai-coding-vocabulary](training/ai-coding-vocabulary.md) — shared language for agentic coding: model vs harness vs agent vs context vs session vs environment *(as_of: 2026-05-01)*
 
 ## Sources
 
@@ -186,11 +190,11 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 
 - state-of: 11
 - models: 14
-- tools: 57
+- tools: 59
 - benchmarks: 8
 - workflows: 4
 - concepts: 15
-- trends: 7
-- training: 8
+- trends: 8
+- training: 9
 
-**Total content pages: 124.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 128.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.

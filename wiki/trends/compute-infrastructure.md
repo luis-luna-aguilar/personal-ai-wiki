@@ -3,8 +3,8 @@ title: Compute infrastructure as decisive competitive moat
 type: trend
 domains: [models]
 tags: [anthropic]
-as_of: 2026-04-25
-sources: [ainews-2026-04-21, runtime-improvements-improve-agent-economics, google-cloud-next-2026, ainews-2026-04-25]
+as_of: 2026-05-05
+sources: [ainews-2026-04-21, runtime-improvements-improve-agent-economics, google-cloud-next-2026, ainews-2026-04-25, ai-earnings-capex-2026-04-30, inference-inflection-agent-runtime-2026-04-30, parallel-web-agent-apis-2026-04-30, persistent-cloud-computers-agents-2026-05-01, stripe-agent-native-commerce-fraud-2026-04-29]
 ---
 
 # Compute infrastructure as decisive competitive moat
@@ -45,6 +45,11 @@ But runtime improvements such as TurboQuant-style KV-cache compression can also 
 
 ## Recent changes
 
+- [2026-05-05] Stripe frames stolen compute (API keys, tokens, credits, free trials) as the emerging AI fraud surface — "compute is the new cash"; agents as autonomous purchasers create new commerce and payment-flow design challenges
+- [2026-05-05] Manus Cloud Computer: persistent Ubuntu environments with SSH/web-terminal access and tool state that survives across agent sessions; durable-agent runtime as an infrastructure category distinct from ephemeral-per-task containers
+- [2026-05-05] Parallel Web Systems raised at a $2B valuation (secondary coverage) for internet/research APIs optimized for AI agents — market signal that agent-oriented web access infrastructure is becoming a standalone investable category
+- [2026-05-05] AINews "inference inflection" framing: inference throughput is the dominant current bottleneck, and agent systems add a compound requirement — CPU, sandbox, browser, and execution capacity matter alongside GPU for production agent workloads
+- [2026-05-05] Superhuman reports Q1 2026 Big Tech earnings (Alphabet, Amazon, Meta, Microsoft) show AI revenue materializing while capex continues climbing; treat directional signal as confirmed, specific figures as pending primary verification
 - [2026-04-25] AINews cites an FT report that Google may invest up to $40B in Anthropic; direct FT fetch failed, so this remains a caveated watch item rather than a settled current-state claim
 - [2026-04-23] Added Google TPU v8: 8t training (~3× Ironwood per pod), 8i inference (1,152 TPUs/pod); Google claims 1M-TPU single cluster, widening the hardware-scale gap
 - [2026-04-21] Trend opened from Anthropic/AWS 5 GW + $5B announcement
@@ -55,3 +60,8 @@ But runtime improvements such as TurboQuant-style KV-cache compression can also 
 - [Runtime improvements improve agent economics](../sources/newsletters/runtime-improvements-improve-agent-economics.md)
 - [Google Cloud Next 2026 — TPU v8 and Gemini Enterprise Agent Platform](../sources/articles/google-cloud-next-2026.md)
 - [AINews - DeepSeek V4 Pro and Flash](../sources/newsletters/ainews-2026-04-25.md)
+- [Big Tech earnings and AI capex signal](../sources/newsletters/ai-earnings-capex-2026-04-30.md)
+- [Inference inflection and agent runtime bottlenecks](../sources/newsletters/inference-inflection-agent-runtime-2026-04-30.md)
+- [Parallel Web Systems as agent web API infrastructure](../sources/newsletters/parallel-web-agent-apis-2026-04-30.md)
+- [Persistent cloud computers for agents](../sources/newsletters/persistent-cloud-computers-agents-2026-05-01.md)
+- [Stripe agent-native commerce and compute fraud](../sources/newsletters/stripe-agent-native-commerce-fraud-2026-04-29.md)

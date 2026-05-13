@@ -6,7 +6,7 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
-Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-multimodal-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-multimodal-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`
 
 ### spec-driven-development
 - **Parent domain(s):** coding
@@ -181,6 +181,12 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Applies to types:** model
 - **Definition:** Small, narrow-purpose models built to solve a specific infrastructure or pipeline task (e.g. PII redaction, classification, embedding) rather than general-purpose generation or reasoning.
 - **Examples:** [OpenAI Privacy Filter](../models/openai-privacy-filter.md)
+
+### ai-music-generation
+- **Parent domain(s):** creative
+- **Applies to types:** tool
+- **Definition:** Tools for generating, editing, or publishing music and songs from prompts, reference audio, lyrics, or other AI-assisted composition workflows.
+- **Examples:** Suno, Udio, ElevenMusic
 
 ### Format
 

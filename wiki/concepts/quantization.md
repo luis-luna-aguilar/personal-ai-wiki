@@ -2,8 +2,8 @@
 title: Quantization
 type: concept
 domains: [models]
-as_of: 2026-04-22
-sources: [ngrok-quantization]
+as_of: 2026-05-05
+sources: [ngrok-quantization, local-offline-agents-2026-04-29]
 ---
 
 # Quantization
@@ -38,6 +38,11 @@ Quantization is what makes local model deployment practical. Without it, running
 - **Latency:** local inference has no network round-trip
 - **Open-weight models:** quantization is the primary reason open-weight models (Qwen3, Llama, etc.) are practically usable
 
+## Local agent feasibility (as of 2026-04-29)
+
+Quantization is increasingly the enabling layer for local and offline agents. AINews reports that hardware-aware Hugging Face model selection is now common practice — users match model size to local GPU/CPU capacity after quantization. Gemma family models running via MLX on Apple Silicon and browser-local agents running quantized models client-side are moving from demos toward practical workflows. The pattern: quantization + hardware-aware selection makes capable offline agents accessible without cloud API calls.
+
 ## Sources
 
 - [Quantization from the ground up — ngrok blog](../sources/articles/ngrok-quantization.md)
+- [Local and offline agents become more credible](../sources/newsletters/local-offline-agents-2026-04-29.md)

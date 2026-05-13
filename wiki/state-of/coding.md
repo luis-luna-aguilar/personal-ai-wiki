@@ -3,8 +3,8 @@ title: State of Coding
 type: state-of
 domains: [coding]
 tags: []
-as_of: 2026-04-24
-sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit, cursor-bugbot-learning, claude-code-routines, openai-codex-ongoing-tasks, orca-homepage, coding-agent-control-planes, claude-code-leak-architecture, cursor-3-orchestration-bet, skills-and-plugin-packaging-late-march, cursor-cloud-agents-march, claude-code-scheduled-tasks-march, codex-security-march, agentic-devops-deep-research]
+as_of: 2026-05-05
+sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit, cursor-bugbot-learning, claude-code-routines, openai-codex-ongoing-tasks, orca-homepage, coding-agent-control-planes, claude-code-leak-architecture, cursor-3-orchestration-bet, skills-and-plugin-packaging-late-march, cursor-cloud-agents-march, claude-code-scheduled-tasks-march, codex-security-march, agentic-devops-deep-research, cursor-sdk-agent-runtime-2026-04-30, symphony-devin-terminal-orchestration-2026-04-28]
 ---
 
 # State of Coding
@@ -25,7 +25,7 @@ Tools where a structured natural-language spec is the primary input to AI coding
 
 Coding tools whose primary UI is built around managing one or more AI coding agents (local and cloud), rather than file-centric editing with AI assistance bolted on.
 
-- [Cursor](../tools/cursor.md) — Cursor 3 is a full rewrite as a cloud-agent orchestration platform; 35% of Cursor's internal PRs now from autonomous cloud agents; 2:1 agent-to-Tab users; Truell defines this as the "third era" where cloud agents run independently and developers review artifacts, not diffs *(as of 2026-04-22)*
+- [Cursor](../tools/cursor.md) — Cursor 3 rebuilt as cloud-agent orchestration platform; SDK now exposes the runtime headlessly for CI, automations, cloud VMs, and embedded product agents; 35% of Cursor's internal PRs from cloud agents *(as of 2026-04-30)*
 - [Orca](../tools/orca.md) — Open-source worktree IDE for running Claude Code, Codex, and other coding agents side by side with built-in terminals, file review, diff review, and CI/PR status tracking *(as of 2026-04-21)*
 
 ### Agentic DevOps
@@ -52,6 +52,9 @@ Toolkits that package a developer platform's docs, schemas, validation, and rela
 
 ## Recent changes
 
+- [2026-05-05] OpenAI Symphony: open-source Codex orchestration spec for defining, invoking, and coordinating Codex subagents; issue-queue integration as the input surface (secondary coverage; verify against primary OpenAI documentation)
+- [2026-05-05] Devin for Terminal: Cognition AI's shell-native agent with local codebase/tool access and cloud handoff for longer tasks; reinforces terminal as a first-class coding orchestration surface
+- [2026-04-30] Cursor SDK released: TypeScript SDK exposes the Cursor agent runtime headlessly for CI pipelines, server automations, cloud VMs, MCP servers, and embedded product agents; Cursor expanding from IDE seat product toward programmable agent infrastructure
 - [2026-04-24] Broadened `agentic-devops` from provisioning-only CLI workflows toward a fuller infrastructure-operations stack: diagnosis, approval-gated mutation, and post-deploy verification
 - [2026-04-24] Codex's April direction now reads less like "coding with extras" and more like a broader computer-work agent that still happens to be anchored in software workflows
 - [2026-03-06] Cursor's cloud-agents walkthrough made the workspace thesis explicit: remote agents test their own work, return demo videos, and give humans a supervision surface rather than just an AI-enhanced editor

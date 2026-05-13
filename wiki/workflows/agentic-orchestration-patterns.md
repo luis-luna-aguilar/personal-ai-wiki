@@ -4,8 +4,8 @@ type: workflow
 domains: [agents]
 subcategory: agentic-orchestration-patterns
 tags: [agentic]
-as_of: 2026-04-24
-sources: [notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, harness-engineering-early-april, open-agent-orchestration-late-march, skills-and-plugin-packaging-late-march, harness-engineering-march, deep-agents-overview, goose-platform, googlecloudtech-adk-2-orchestration-patterns]
+as_of: 2026-05-05
+sources: [notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, harness-engineering-early-april, open-agent-orchestration-late-march, skills-and-plugin-packaging-late-march, harness-engineering-march, deep-agents-overview, goose-platform, googlecloudtech-adk-2-orchestration-patterns, agent-infrastructure-harness-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, production-agent-orchestration-2026-04-29]
 ---
 
 # Agentic orchestration patterns
@@ -38,6 +38,11 @@ Reusable patterns for getting better behavior from one or more agents without de
 - **Composable skills with progressive disclosure.** Skills work best as small, reusable units with clear interfaces; load their full context only when invoked so agents can have broad capability surfaces without always paying the token cost.
 - **Cross-language delegation through a common protocol.** In larger organizations, useful agent systems often span Python, TypeScript, Go, and Java teams; protocolized handoff matters more than assuming one language or one repo owns the whole workflow.
 - **Sandboxed executors for evidence-producing steps.** If a step needs real code execution, parsing, tests, or transformations, run it in an isolated workspace with explicit limits instead of asking the model to simulate execution in text.
+- **Config-driven agent deployment.** Production agent frameworks are packaging sandboxing, auth, RBAC (Role-Based Access Control — who can do what), credential handling, and frontend configuration into deployable manifests (such as a `deepagents.toml` file). Without this, each developer writes the same custom setup from scratch for every new agent project: spinning up sandboxes, storing credentials safely, and configuring who has access to what.
+- **Artifact-backed agent collaboration.** Multi-agent work is more durable when agents exchange work through a shared storage layer — such as a cloud dataset bucket or shared filesystem — rather than sharing a single runtime. Each agent runs in its own isolated environment and coordinates through the artifact store. Agent Collabs demonstrates this with Hugging Face: dataset buckets serve as shared storage, and Hugging Face Spaces provide each agent's isolated execution environment, letting agents built on different frameworks collaborate without coupling their runtimes.
+- **Model-pool routing by an AI-managed orchestrator.** Rather than hardcoding which model handles which task, a coordinator layer (e.g., Sakana Conductor) selects from a pool of available models based on the task type, cost, and current model availability. The coordinator decides routing; specialized models handle execution.
+- **Local-first browser agents.** For tasks that can be fully executed client-side, agents run entirely in the browser — no cloud handoff, no server-side compute. This reduces latency, cost, and privacy surface. The pattern is emerging as a complement to (not a replacement for) cloud-backed agents in orchestrated systems.
+- **Durable workflow execution.** Production agent workflows should survive process crashes and infrastructure interruptions. Checkpointing state (memory, partial outputs, tool results) after each major step and supporting resume-from-checkpoint prevents restarting an hours-long workflow from scratch. Mistral Workflows, OpenAI Agents SDK, and similar runtimes are standardizing this as expected infrastructure.
 
 ## Where these patterns surfaced
 
@@ -78,3 +83,6 @@ Reusable patterns for getting better behavior from one or more agents without de
 - [Harness engineering in mid-March](../sources/newsletters/harness-engineering-march.md)
 - [Deep Agents overview](../sources/articles/deep-agents-overview.md)
 - [Goose platform overview](../sources/articles/goose-platform.md)
+- [Agent infrastructure, harness engineering, and collaborative agent systems](../sources/newsletters/agent-infrastructure-harness-2026-05-01.md)
+- [AI-managed orchestration and local browser agents](../sources/newsletters/ai-managed-orchestration-local-browser-agents-2026-04-28.md)
+- [Production agent orchestration primitives](../sources/newsletters/production-agent-orchestration-2026-04-29.md)

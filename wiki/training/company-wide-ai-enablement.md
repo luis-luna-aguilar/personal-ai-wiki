@@ -1,8 +1,8 @@
 ---
 title: Company-wide AI enablement
 type: training
-as_of: 2026-04-24
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research]
+as_of: 2026-05-05
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01]
 ---
 
 # Company-wide AI enablement
@@ -39,6 +39,7 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 - **Reward outcomes, not AI usage.** Teams stall or drift when "used AI" becomes the goal; quality and throughput improvements are the only metrics that matter
 - **Concrete example promotion.** A single visible example of someone using AI to rethink the work itself can unlock broader adoption better than generic encouragement to "use AI more"
 - **Messaging-native personal agents.** OpenClaw-style assistants living in WhatsApp, Telegram, Discord, SMS, or Slack reduce activation energy because the agent shows up where people already work and communicate
+- **Terminal agents for non-engineering roles.** Claude Code is being used by product managers for roadmap drafting, PRD writing, ticket management, GitHub Projects tracking, and strategy documentation. The signal: the terminal-first agentic environment is becoming cross-functional, not only an engineering surface. Compound Engineering skills extend this further by packaging PM-specific workflows.
 - **Let AI write the agent instructions.** Every found that telling Notion AI what the agent should accomplish and letting it generate the instructions works better than writing detailed step-by-step instructions manually. Over-prescribing ("create a database, then add a relation, then filter by...") tends to confuse the model. State the outcome; let the agent figure out implementation.
 - **Interconnected databases are the agent's brain.** Every's agents work because strategy, calendar, tasks, people, and meeting notes all live in Notion and reference each other. An agent querying isolated tables has no coordination leverage; agents querying an interconnected knowledge graph become genuinely powerful coordinators.
 - **Start with one durable personal agent role.** Early OpenClaw onboarding guidance reinforces that adoption is easier when each person starts with one persistent, messaging-native agent with a bounded job before expanding into a larger swarm of helpers

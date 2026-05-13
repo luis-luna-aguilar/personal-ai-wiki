@@ -3,8 +3,8 @@ title: State of Legal
 type: state-of
 domains: [legal]
 tags: []
-as_of: 2026-04-22
-sources: [harvey-legal-is-next, wilson-homepage, legacy-ai-tools-roadmap-xlsx]
+as_of: 2026-05-01
+sources: [harvey-legal-is-next, wilson-homepage, legacy-ai-tools-roadmap-xlsx, microsoft-word-legal-agent]
 ---
 
 # State of Legal
@@ -21,8 +21,10 @@ End-to-end AI products built specifically for legal workflows (matters, contract
 
 - [Harvey](../tools/harvey.md) — legal AI platform; product surfaces include Assistant, Vault, Knowledge, Workflow Agents *(as of 2026-04-02)*
 - [Wilson](../tools/wilson.md) — legal AI for in-house teams, centered on contract review, redlines, and workflow support rather than a broad all-of-legal platform story *(as of 2026-04-22)*
+- [Microsoft Word Legal Agent](../tools/microsoft-word-legal-agent.md) — Microsoft; contract review and redlining agent inside Word, with playbook review, cited changes, tracked changes, version comparison, and deterministic document-edit resolution *(as of 2026-05-01)*
 
 ## Recent changes
 
+- [2026-05-01] Added [Microsoft Word Legal Agent](../tools/microsoft-word-legal-agent.md) under `Legal AI`; first native-Word contract-redlining agent with a deterministic edit resolution layer
 - [2026-04-22] Added [Wilson](../tools/wilson.md) under `Legal AI`; sharper in-house contract-operations signal than the earlier Harvey-only snapshot
 - [2026-04-02] First content. Created the `legal` domain and `legal-ai` subcategory after ingesting Harvey's "Legal is Next" post.

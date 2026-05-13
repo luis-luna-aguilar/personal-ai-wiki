@@ -4,8 +4,8 @@ type: tool
 domains: [coding, cybersecurity]
 subcategory: terminal-coding-agent
 tags: [openai, closed-source, agentic]
-as_of: 2026-04-24
-sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026, openai-gpt-5-5-launch, superhuman-2026-04-23, codex-broader-computer-work-2026-04-24]
+as_of: 2026-05-05
+sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026, openai-gpt-5-5-launch, superhuman-2026-04-23, codex-broader-computer-work-2026-04-24, codex-for-work-2026-05-01, symphony-devin-terminal-orchestration-2026-04-28]
 ---
 
 # Codex
@@ -54,6 +54,8 @@ Research preview. Background agents monitor recent screen activity, build memori
 
 ## Recent changes
 
+- [2026-04-28] OpenAI Symphony: described as an open-source Codex orchestration spec for defining, invoking, and coordinating Codex subagents; issue-tracker integration as the primary input surface; secondary coverage from The Code newsletter — verify spec details against primary OpenAI documentation
+- [2026-05-01] Codex for Work: secondary newsletter coverage explicitly frames Codex as a non-coding workplace agent for docs, sheets, slides, research, planning, and connected workplace apps; reported speed improvements (faster browser, `/chronicle`, `/goal`) not yet verified against primary OpenAI page
 - [2026-04-24] Secondary coverage hardens the broader product thesis: Codex is being positioned as a computer-work agent for docs, sheets, browser tasks, and recurring knowledge-work workflows, not only software engineering
 - [2026-04-23] Workspace Agents launched: shareable Codex-powered team agents for Slack and ChatGPT with scheduled/background execution; GPT-5.5 now powers Codex and OpenAI reports 85%+ internal weekly usage
 - [2026-04-22] Subagents now in Codex; usage-based pricing for Business/Enterprise; PR code review available via ChatGPT subscription
@@ -74,3 +76,4 @@ Research preview. Background agents monitor recent screen activity, build memori
 - [Introducing GPT-5.5 — OpenAI](../sources/articles/openai-gpt-5-5-launch.md)
 - [Superhuman — Anthropic's unreleased model got hacked](../sources/newsletters/superhuman-2026-04-23.md)
 - [Codex broadens into computer work](../sources/newsletters/codex-broader-computer-work-2026-04-24.md)
+- [Symphony and Devin for Terminal orchestration](../sources/newsletters/symphony-devin-terminal-orchestration-2026-04-28.md)

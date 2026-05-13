@@ -1,6 +1,10 @@
-# OAuth tokens — never commit
+# Local environment variables — never commit
+.env
+
+# OAuth tokens and client credentials — never commit
 scripts/gmail_credentials/*-client.json
 scripts/gmail_credentials/*-token.json
+scripts/gmail_credentials/*-token.json.*
 
 # Python cache
 __pycache__/

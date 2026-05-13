@@ -13,13 +13,15 @@ Scope used: gmail.modify (required to apply labels and remove INBOX label).
 The script never calls compose or send methods.
 
 Dependencies:
-    pip install google-auth-oauthlib google-api-python-client beautifulsoup4 markdownify
+    pip install google-auth-oauthlib google-api-python-client beautifulsoup4 markdownify python-dotenv
 
 Setup:
     1. In Google Cloud Console: enable Gmail API, create OAuth2 Desktop credentials.
-    2. Save the downloaded JSON to:
-         scripts/gmail_credentials/ai-client.json       (AI Gmail account)
-         scripts/gmail_credentials/personal-client.json (personal Gmail account)
+    2. Copy .env.example to .env at the repo root and fill in your client credentials:
+         AI_GMAIL_CLIENT_ID=...
+         AI_GMAIL_CLIENT_SECRET=...
+         PERSONAL_GMAIL_CLIENT_ID=...
+         PERSONAL_GMAIL_CLIENT_SECRET=...
     3. First run opens a browser for OAuth consent. Token is cached automatically at
          scripts/gmail_credentials/ai-token.json
          scripts/gmail_credentials/personal-token.json
@@ -34,6 +36,7 @@ from __future__ import annotations
 import argparse
 import base64
 import re
+import os
 import sys
 import unicodedata
 from datetime import date, datetime, timedelta, timezone
@@ -45,6 +48,11 @@ from urllib.parse import urlparse
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _lib import VAULT_ROOT, load_config  # type: ignore
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv(VAULT_ROOT / ".env")
+except ImportError:
+    pass  # dotenv optional; fall back to shell env
 
 CREDS_DIR = VAULT_ROOT / "scripts" / "gmail_credentials"
 TRIAGE_DIR = VAULT_ROOT / "proposals" / "triage"
@@ -118,17 +126,30 @@ def get_credentials(account: str):
     except ImportError:
         sys.exit(
             "Missing dependencies. Run:\n"
-            "  pip install google-auth-oauthlib google-api-python-client"
+            "  pip install google-auth-oauthlib google-api-python-client python-dotenv"
         )
 
-    client_file = CREDS_DIR / f"{account}-client.json"
-    token_file = CREDS_DIR / f"{account}-token.json"
+    prefix = account.upper().replace("-", "_")
+    client_id = os.environ.get(f"{prefix}_GMAIL_CLIENT_ID")
+    client_secret = os.environ.get(f"{prefix}_GMAIL_CLIENT_SECRET")
 
-    if not client_file.exists():
+    if not client_id or not client_secret:
         sys.exit(
-            f"Client credentials not found: {client_file}\n"
-            "Download OAuth2 Desktop credentials from Google Cloud Console and save there."
+            f"Missing env vars {prefix}_GMAIL_CLIENT_ID / {prefix}_GMAIL_CLIENT_SECRET.\n"
+            "Copy .env.example to .env and fill in your Google OAuth credentials."
         )
+
+    client_config = {
+        "installed": {
+            "client_id": client_id,
+            "client_secret": client_secret,
+            "redirect_uris": ["urn:ietf:wg:oauth:2.0:oob", "http://localhost"],
+            "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+            "token_uri": "https://oauth2.googleapis.com/token",
+        }
+    }
+
+    token_file = CREDS_DIR / f"{account}-token.json"
 
     creds = None
     if token_file.exists():
@@ -138,7 +159,7 @@ def get_credentials(account: str):
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file(str(client_file), GMAIL_SCOPES)
+            flow = InstalledAppFlow.from_client_config(client_config, GMAIL_SCOPES)
             creds = flow.run_local_server(port=0)
         CREDS_DIR.mkdir(parents=True, exist_ok=True)
         token_file.write_text(creds.to_json())

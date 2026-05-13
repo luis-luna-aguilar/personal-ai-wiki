@@ -3,8 +3,8 @@ title: Agents reshape organizations (leverage moves from individual to org)
 type: trend
 domains: [agents, coding]
 tags: [agentic]
-as_of: 2026-04-22
-sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, openclaw-operating-pattern-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, cursor-third-era]
+as_of: 2026-05-05
+sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, openclaw-operating-pattern-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, cursor-third-era, knowledge-work-os-agent-apps-2026-04-28]
 ---
 
 # Agents reshape organizations (leverage moves from individual to org)
@@ -57,6 +57,7 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 
 ## Recent changes
 
+- [2026-05-05] Workflow-container switching costs emerging: Every argues that left-sidebar desktop apps with agentic terminals (Codex, Claude, Cursor) are converging on a common interface shape; sticky workflow state across sessions creates platform-lock dynamics as organizations commit to one knowledge-work container
 - [2026-04-22] Added Cursor/Truell internal data: 35% of PRs from cloud agents; third-era dev pattern operational inside Cursor itself
 - [2026-04-22] Added trust-battery pattern (Claudie/Every) and AI sandwich org architecture; Dan Shipper prediction: two org models coexist, single-purpose fleet loses
 - [2026-03-04] OpenClaw cluster provided an early concrete signal of AI-native organizational behavior: named personal agents in shared channels, agent-to-agent coordination, and humans supervising many agents as if they were teammates
@@ -75,3 +76,4 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - [OpenClaw as an operating pattern](../sources/newsletters/openclaw-operating-pattern-march.md)
 - [Every — "You're the Bread in the AI Sandwich" (April 2026)](../sources/newsletters/every-ai-sandwich-april-2026.md)
 - [Michael Truell — "The third era of AI software development"](../sources/tweets/cursor-third-era.md)
+- [Agent desktop apps as the new OS for knowledge work](../sources/newsletters/knowledge-work-os-agent-apps-2026-04-28.md)

@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: [anthropic, cli, agentic]
-as_of: 2026-04-24
-sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling]
+as_of: 2026-05-05
+sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01]
 ---
 
 # Claude Code
@@ -90,6 +90,7 @@ That matters because it shifts the product story away from "Anthropic has a stro
 
 ## Recent changes
 
+- [2026-05-01] Claude Code as a product-management environment: Every profiles PM workflows inside Claude Code — roadmaps, PRDs, tickets, strategy docs, GitHub Projects tracking, and Compound Engineering skills; extends the tool beyond engineering into product operations
 - [2026-04-24] Added one-time scheduling from CLI / Routines UI via `Schedule -> Once`, extending Claude Code's scheduled-workflow support beyond recurring runs
 - [2026-04-23] /ultrareview added (v2.1.86+, research preview): cloud multi-agent code review with independent finding verification; 5-10 min background; 3 free runs for Pro/Max through May 5, 2026; then $5-20 extra usage; requires Claude.ai login; not on Bedrock/Vertex AI/Foundry
 - [2026-04-22] Added --worktree flag (built-in parallel isolated git worktrees), /autofix-pr CLI trigger, and Remote Control mobile session spawning
@@ -118,3 +119,4 @@ That matters because it shifts the product story away from "Anthropic has a stro
 - [The Code newsletter — 2026-04-22 (Cursor/SpaceX, Claude Code recap, CLI design)](../sources/newsletters/thecode-april-22-2026.md)
 - [Claude Code — worktrees, /autofix-pr CLI, Remote Control](../sources/tweets/claude-code-worktree-autofix.md)
 - [Claude Code one-time scheduling](../sources/tweets/claude-code-one-time-scheduling.md)
+- [Claude Code for product-management workflows](../sources/newsletters/claude-code-product-management-2026-05-01.md)
