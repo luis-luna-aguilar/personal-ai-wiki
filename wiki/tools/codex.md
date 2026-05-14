@@ -4,15 +4,15 @@ type: tool
 domains: [coding, cybersecurity]
 subcategory: terminal-coding-agent
 tags: [openai, closed-source, agentic]
-as_of: 2026-05-05
-sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026, openai-gpt-5-5-launch, superhuman-2026-04-23, codex-broader-computer-work-2026-04-24, codex-for-work-2026-05-01, symphony-devin-terminal-orchestration-2026-04-28]
+as_of: 2026-05-13
+sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026, openai-gpt-5-5-launch, superhuman-2026-04-23, codex-broader-computer-work-2026-04-24, codex-for-work-2026-05-01, symphony-devin-terminal-orchestration-2026-04-28, openai-daybreak-2026-05-13]
 ---
 
 # Codex
 
 OpenAI's cloud-based agent surface, accessed via CLI and ChatGPT. It started as a coding agent, but current product direction is expanding into a broader computer-work system that can operate across code, browser flows, documents, spreadsheets, and repeatable knowledge-work tasks.
 
-## Current status (as of 2026-04-24)
+## Current status (as of 2026-05-13)
 
 - Cloud coding agent accessible from ChatGPT and CLI
 - OpenAI's March 2026 best-practices guide made the intended operating model unusually explicit: give Codex a clear goal/context/constraints/done-when structure, move durable repo guidance into `AGENTS.md`, connect live external systems with MCP, turn repeated work into skills, and automate workflows only after they are stable manually
@@ -27,6 +27,8 @@ OpenAI's cloud-based agent surface, accessed via CLI and ChatGPT. It started as 
 - OpenAI reports 85%+ of the company uses Codex weekly across software engineering, finance, communications, marketing, data science, and product work
 - Secondary coverage is now converging on the same interpretation OpenAI hinted at earlier in the week: Codex is becoming a broader computer-work agent spanning browser flows, documents, spreadsheets, presentations, and repeatable knowledge-work tasks
 - Every's Codex-for-knowledge-work positioning reinforces that the product is being taught and marketed for drafting, research, summarization, parallel task execution, and lightweight internal-tool building — not just code edits
+- May 2026 secondary coverage continues to frame Codex as a workflow surface beyond coding: browser-pane work, docs, sheets, inbox triage, product-management commands, and repeatable command packs.
+- OpenAI's Daybreak announcement explicitly places Codex inside cyber-defense infrastructure alongside frontier models and security partners; details are thin pending a fuller official source.
 
 ## Workspace Agents (as of 2026-04-23)
 
@@ -77,3 +79,4 @@ Research preview. Background agents monitor recent screen activity, build memori
 - [Superhuman — Anthropic's unreleased model got hacked](../sources/newsletters/superhuman-2026-04-23.md)
 - [Codex broadens into computer work](../sources/newsletters/codex-broader-computer-work-2026-04-24.md)
 - [Symphony and Devin for Terminal orchestration](../sources/newsletters/symphony-devin-terminal-orchestration-2026-04-28.md)
+- [OpenAI Daybreak for cyber defenders](../sources/tweets/openai-daybreak-2026-05-13.md)

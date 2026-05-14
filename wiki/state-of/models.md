@@ -3,8 +3,8 @@ title: State of Models
 type: state-of
 domains: [models]
 tags: []
-as_of: 2026-05-05
-sources: [muse-spark, kimi-k2-6-blog, ainews-2026-04-21, ainews-2026-04-22, every-opus-4-7-vibe-check, vectorlab-opus-4-7-flop, vectorlab-qwen-3-6-local-threshold, open-agentic-coding-models, restricted-frontier-deployment, open-weight-momentum-early-april, late-march-small-coding-models, gpt-5-4-march, qwen-3-5-medium-february, glasswing, nano-banana-2-tweet, google-cloud-next-2026, openai-gpt-5-5-launch, danshipper-gpt-5-5-vibe-check, deepseek-v4-preview, ainews-2026-04-25, qwen-3-6-27b-aa-2026-05-01, open-weight-economics-fragmenting-2026-04-30, open-weight-pricing-pressure-2026-04-29]
+as_of: 2026-05-13
+sources: [muse-spark, kimi-k2-6-blog, ainews-2026-04-21, ainews-2026-04-22, every-opus-4-7-vibe-check, vectorlab-opus-4-7-flop, vectorlab-qwen-3-6-local-threshold, open-agentic-coding-models, restricted-frontier-deployment, open-weight-momentum-early-april, late-march-small-coding-models, gpt-5-4-march, qwen-3-5-medium-february, glasswing, nano-banana-2-tweet, google-cloud-next-2026, openai-gpt-5-5-launch, danshipper-gpt-5-5-vibe-check, deepseek-v4-preview, ainews-2026-04-25, qwen-3-6-27b-aa-2026-05-01, open-weight-economics-fragmenting-2026-04-30, open-weight-pricing-pressure-2026-04-29, anthropic-spacex-dreams-2026-05-07, arena-leaderboard-2026-05-13, end-of-finetuning-debate-2026-05-13, thinking-machines-interaction-2026-05-12, gpt-5-5-instant-default-2026-05-06]
 ---
 
 # State of Models
@@ -17,8 +17,10 @@ Current state of foundation models — frontier and otherwise. Organized by subc
 
 General-purpose frontier models competing on broad multimodal capability rather than narrow specialization.
 
-- [GPT-5.5](../models/gpt-5-5.md) — OpenAI's April 2026 frontier model; leads on Terminal-Bench 2.0, GDPval, ARC-AGI-2, CyberGym, and BixBench; Claude Opus 4.7 still leads on SWE-Bench Pro, MCP Atlas, FinanceAgent, and some planning-heavy work *(as of 2026-04-23)*
-- [Claude Opus 4.7](../models/claude-opus-4-7.md) — Anthropic flagship; stronger on explicit coding, document, and visual artifact tasks, but early user reports describe more literal behavior and mixed long-context reliability *(as of 2026-04-21)*
+- [Claude Opus 4.7](../models/claude-opus-4-7.md) — Anthropic flagship; Arena (May 2026): "most consistently dominant model," leads nearly every category *(as of 2026-05-13)*
+- [GPT-5.5](../models/gpt-5-5.md) — OpenAI; Arena (May 2026): strongest in math; leads on Terminal-Bench 2.0, GDPval, ARC-AGI-2, CyberGym, and BixBench *(as of 2026-05-13)*
+- **Gemini 3.1 Pro** — Google; Arena (May 2026): close second overall; leads creative writing *(as of 2026-05-13)*
+- **Grok 4.20** — xAI; Arena (May 2026): leads creative writing and hard prompts *(as of 2026-05-13)*
 - [Muse Spark](../models/muse-spark.md) — Meta's new multimodal model; the captured launch source emphasizes scaling efficiency and claims Llama 4 Maverick-level capability with over an order of magnitude less training compute *(as of 2026-04-10)*
 
 ### Coding models
@@ -32,6 +34,7 @@ Open-weight and frontier models evaluated primarily for agentic coding tasks.
 - [Qwen 3.6 35B-A3B](../models/qwen-3-6-35b-a3b.md) — Alibaba; MoE variant; practical local-agent baseline on 24GB-class hardware; benchmark lead now held by 27B dense sibling *(as of 2026-04-22)*
 - [GLM-5.1](../models/glm-5-1.md) — open-weight contender described in the captured sources as a top benchmark performer for coding and agent workflows *(as of 2026-04-08)*
 - [DeepSeek V4](../models/deepseek-v4.md) — DeepSeek; released open-weight Pro/Flash MoE lineup with 1M context, MIT license, strong open-model agentic benchmark placement, and a major KV-cache / inference-systems story; still below the strongest closed frontier systems overall *(as of 2026-04-25)*
+- **Meta Spark** — Meta; Arena (May 2026): leads coding category *(as of 2026-05-13)*
 
 ### Image generation
 
@@ -39,12 +42,21 @@ Specialized models for text-to-image synthesis, image editing, and visual design
 
 - [GPT-Image-2](../models/gpt-image-2.md) — OpenAI; #1 across all image arena categories by a +242 Elo margin on text-to-image; thinking mode + web search integration; design-to-code bridge *(as of 2026-04-22)*
 - [Nano Banana 2](../models/nano-banana-2.md) — Google; powered by Gemini world understanding + real-time web search imagery; can reflect real-world conditions (current events, weather) in generated images *(as of 2026-04-22)*
+- **Veo 3.1** — Google; Arena (May 2026): leads video generation category *(as of 2026-05-13)*
 
 ### Specialized utility models
 
 Narrow-purpose models built for a specific infrastructure or pipeline task, rather than general-purpose generation or reasoning.
 
 - [OpenAI Privacy Filter](../models/openai-privacy-filter.md) — OpenAI; 1.5B-total / 50M-active MoE for on-device PII detection and masking; 128k context; Apache 2.0; designed for cheap on-device preprocessing before cloud API calls *(as of 2026-04-23)*
+
+### Real-time voice / interaction models
+
+AI systems that process live audio and/or video streams and respond with sub-second latency — ambient co-presence rather than turn-taking chat. See [State of Voice AI](voice.md) for the broader product surface.
+
+- **TML-Interaction-Small** — Thinking Machines Lab (Mira Murati); 276B-parameter model; 200ms audio streams, 0.4s end-to-end response, mid-sentence interruption; processes live video and audio simultaneously; research preview *(as of 2026-05-12)*
+- [GPT-Realtime-2](../tools/gpt-realtime-2.md) — OpenAI; native streaming voice model with 128K context, adjustable reasoning effort, tool use, and interruption recovery *(as of 2026-05-08)*
+- **Gemini Magic Pointer** (Googlebook) — Google; OS-level cursor for the Googlebook laptop that activates Gemini when the user clicks anything on screen; integrates Gemini as a pointing intelligence layer *(as of 2026-05-13)*
 
 ### Security / cyber-offense capability
 
@@ -54,24 +66,13 @@ Frontier models deployed selectively for autonomous cybersecurity research rathe
 
 ## Recent changes
 
+- [2026-05-06] Secondary coverage says GPT-5.5 Instant became ChatGPT's new default model, replacing GPT-5.3 Instant; official verification still needed for exact rollout and hallucination claims.
+- [2026-05-13] Added merged `Real-time voice / interaction models` subcategory; TML-Interaction-Small (Thinking Machines Lab, 276B, 200ms audio, 0.4s response), GPT-Realtime-2, and Google Magic Pointer are first entries
+- [2026-05-13] "End of finetuning" debate: OpenAI deprecating finetuning APIs; consensus forming that long-context prompts suffice for ~80% of use cases; counterpoint from top tier (Cursor, Cognition $25B) is increased open-model RLFT, not decreased — weight specialization remains central to their custom-ASIC strategy
+- [2026-05-13] Arena leaderboard (May 2026): Claude Opus 4.7 "most consistently dominant" overall; Gemini 3.1 Pro close second/creative writing; Meta Spark leads coding; GPT-5.5 leads math; Grok 4.20 leads creative/hard prompts; GPT-Image-2 tops text-to-image; Veo 3.1 leads video
+- [2026-05-07] Anthropic signs compute deal with SpaceX Colossus 1: 220K+ NVIDIA GPUs; doubled Claude Code limits on paid plans immediately; notable context: Musk vs. Altman court battle ongoing
 - [2026-05-05] Open-weight economics fragmenting: no single model dominates across transparency, token efficiency, edge deployment, coding benchmarks, and inference cost; selection now driven by deployment constraint rather than a single ranking (editorial synthesis)
 - [2026-05-05] Open-weight pricing pressure on closed-frontier for coding assistants and RAG; closed frontier retains clearer advantages in long-context and complex agentic tasks (editorial synthesis, The Code)
 - [2026-05-01] Qwen 3.6 27B: Artificial Analysis (via AINews) confirms #1 ranking under 150B (Intelligence Index 46) but flags ~21× Gemma 4 31B output-token cost on the evaluation suite
 - [2026-04-25] DeepSeek V4 moved from preview to release framing: Pro/Flash specs, MIT license, API pricing, independent open-model placement, Ascend compatibility, and token-usage caveats
 - [2026-04-23] GPT-5.5 released; replaces GPT-5.4 as the current OpenAI frontier model in the wiki; OpenAI leads more public benchmark categories again, while Claude Opus 4.7 retains some important engineering/tool-use edges
-- [2026-04-23] Google Cloud Next '26: Gemini 3.1 Pro, Gemini 3.1 Flash Image, Gemma 4, Lyria 3, and Gemini Embedding 2 surfaced as Google's active platform model stack
-- [2026-04-23] Added 'Specialized utility models' subcategory; [OpenAI Privacy Filter](../models/openai-privacy-filter.md) is the first entry — on-device PII redaction, 1.5B MoE, Apache 2.0
-- [2026-04-23] Added [Qwen 3.6 27B](../models/qwen-3-6-27b.md) to Coding models; dense 27B beats prior 397B MoE on all coding benchmarks; day-0 open ecosystem support
-- [2026-03-08] Added [GPT-5.4](../history/models/gpt-5-4.md) under `Frontier multimodal models`; strongest captured March signal for general-purpose reasoning, browsing, and agent work, with Claude still stronger on writing/taste
-- [2026-03-23] Late-March small-model cluster sharpened the affordable coding tier: MiniMax M2.7 looks stronger on practical economics, while Composer 2 graduated from a Cursor-only mention to a real model with benchmark and lineage claims
-- [2026-04-07] Early-April open-weight momentum broadened beyond coding-only releases: Gemma 4 became a notable open multimodal adoption signal; see [Open-weight momentum broadens](../trends/open-weight-momentum-broadens.md)
-- [2026-04-13] Added [MiniMax M2.7](../models/minimax-m2-7.md) and [GLM-5.1](../models/glm-5-1.md) under `Coding models`; earlier April sources show open coding-model momentum was broader than the later Qwen/Kimi cluster alone
-- [2026-04-08] Mythos / Glasswing cluster suggests a new trend: frontier capability may increasingly be deployed selectively rather than broadly — see [Restricted frontier deployment](../trends/restricted-frontier-deployment.md)
-- [2026-04-21] Added [Qwen 3.6 35B-A3B](../models/qwen-3-6-35b-a3b.md) under `Coding models`; practical local-agent baseline on 24GB-class hardware
-- [2026-04-21] Anthropic/AWS: 5 GW compute secured, $5B investment, up to $20B more — see [Compute infrastructure as decisive competitive moat](../trends/compute-infrastructure.md)
-- [2026-04-21] Added [Claude Opus 4.7](../models/claude-opus-4-7.md) — #1 Vision & Document Arena
-- [2026-04-22] Added `Image generation` subcategory; [GPT-Image-2](../models/gpt-image-2.md) debuts as dominant arena leader by +242 Elo margin on text-to-image; also updates the image-as-spec pattern for coding agents
-- [2026-04-22] Qwen 3.6 35B-A3B niche sharpened: strong for coding/tools, weaker for creative/translation; Qwen 3.6 Max Preview live but likely proprietary-only
-- [2026-04-22] Kimi K2.6: community framing as practical Opus 4.7 replacement for ~85% of tasks
-- [2026-04-22] Added `Security / cyber-offense capability` subcategory; [Claude Mythos Preview](../models/claude-mythos-preview.md) confirms restricted-frontier pattern with autonomous zero-day discovery across major OSes/browsers
-- [2026-04-22] Added [Nano Banana 2](../models/nano-banana-2.md) to `Image generation` subcategory; Google enters the arena with Gemini+web-search-grounded image generation

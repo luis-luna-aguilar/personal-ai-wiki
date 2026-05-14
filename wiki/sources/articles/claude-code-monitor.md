@@ -16,7 +16,7 @@ Noah Zweben (Anthropic) announces the Monitor tool for Claude Code: background s
 ## Influenced pages
 
 - [Claude Code](../../tools/claude-code.md) — new page created
-- [Coding](../../history/state-of/coding.md) — added terminal-coding-agent subcategory
+- [Coding](../../state-of/coding.md) — added terminal-coding-agent subcategory
 
 ## Key claims extracted
 

@@ -17,8 +17,8 @@ Cursor's official launch post for Cursor 3, on cursor.com/blog. Frames Cursor 3 
 
 - [Cursor](../../tools/cursor.md) — initial tool page (created from this source)
 - [Composer 2](../../models/composer-2.md) — stub model page created from a passing mention
-- [Coding](../../history/state-of/coding.md) — added new `agentic-coding-workspace` subcategory with Cursor
-- [Agents](../../history/state-of/agents.md) — first content; added `agent-orchestration-ui` subcategory with Cursor
+- [Coding](../../state-of/coding.md) — added new `agentic-coding-workspace` subcategory with Cursor
+- [Agents](../../state-of/agents.md) — first content; added `agent-orchestration-ui` subcategory with Cursor
 
 ## Key claims extracted
 

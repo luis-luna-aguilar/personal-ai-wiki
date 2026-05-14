@@ -3,8 +3,8 @@ title: State of Coding
 type: state-of
 domains: [coding]
 tags: []
-as_of: 2026-05-05
-sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit, cursor-bugbot-learning, claude-code-routines, openai-codex-ongoing-tasks, orca-homepage, coding-agent-control-planes, claude-code-leak-architecture, cursor-3-orchestration-bet, skills-and-plugin-packaging-late-march, cursor-cloud-agents-march, claude-code-scheduled-tasks-march, codex-security-march, agentic-devops-deep-research, cursor-sdk-agent-runtime-2026-04-30, symphony-devin-terminal-orchestration-2026-04-28]
+as_of: 2026-05-13
+sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit, cursor-bugbot-learning, claude-code-routines, openai-codex-ongoing-tasks, orca-homepage, coding-agent-control-planes, claude-code-leak-architecture, cursor-3-orchestration-bet, skills-and-plugin-packaging-late-march, cursor-cloud-agents-march, claude-code-scheduled-tasks-march, codex-security-march, agentic-devops-deep-research, cursor-sdk-agent-runtime-2026-04-30, symphony-devin-terminal-orchestration-2026-04-28, end-of-finetuning-debate-2026-05-13, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, model-harness-fit-2026-05-13]
 ---
 
 # State of Coding
@@ -41,7 +41,7 @@ Tools that move AI coding systems closer to full software delivery by covering p
 
 CLI-based AI coding agents that still anchor in the terminal, but are increasingly expanding into supervised workspaces with repeatable workflows, background execution, and broader agent control surfaces.
 
-- [Claude Code](../tools/claude-code.md) — Anthropic; terminal-first agent expanding toward supervised multi-session workflows: Monitor, Routines, /ultrareview, --worktree, Remote Control, and /autofix-pr all shipped since March; harness architecture increasingly treated as core competitive differentiator *(as of 2026-04-23)*
+- [Claude Code](../tools/claude-code.md) — Anthropic; terminal-first agent expanding toward supervised multi-session workflows: `/goal` autonomous loops, Opus 4.7 fast mode, and Agent View (`claude agents`) multi-session supervision with `/bg` and `claude --bg` *(as of 2026-05-13)*
 - [Codex](../tools/codex.md) — OpenAI; cloud coding agent via CLI and ChatGPT, but current direction increasingly spills into browser work, documents, spreadsheets, and broader computer-use-style workflows *(as of 2026-04-24)*
 
 ### Agent toolkits
@@ -52,6 +52,9 @@ Toolkits that package a developer platform's docs, schemas, validation, and rela
 
 ## Recent changes
 
+- [2026-05-13] Model-harness fit is becoming a product moat: edit formats, action spaces, and tool-call reliability can matter as much as raw model benchmark scores in coding agents.
+- [2026-05-13] Codex and Claude Code are increasingly framed as workflow operating systems: command packs, browser-pane workflows, inbox triage, long-running goals, and multi-agent supervision are now part of the coding-agent competition.
+- [2026-05-13] Cognition $25B valuation round publicly confirmed; among top-tier coding shops increasing open-model RLFT investment (not decreasing) alongside OpenAI finetuning API deprecation
 - [2026-05-05] OpenAI Symphony: open-source Codex orchestration spec for defining, invoking, and coordinating Codex subagents; issue-queue integration as the input surface (secondary coverage; verify against primary OpenAI documentation)
 - [2026-05-05] Devin for Terminal: Cognition AI's shell-native agent with local codebase/tool access and cloud handoff for longer tasks; reinforces terminal as a first-class coding orchestration surface
 - [2026-04-30] Cursor SDK released: TypeScript SDK exposes the Cursor agent runtime headlessly for CI pipelines, server automations, cloud VMs, MCP servers, and embedded product agents; Cursor expanding from IDE seat product toward programmable agent infrastructure
@@ -59,13 +62,3 @@ Toolkits that package a developer platform's docs, schemas, validation, and rela
 - [2026-04-24] Codex's April direction now reads less like "coding with extras" and more like a broader computer-work agent that still happens to be anchored in software workflows
 - [2026-03-06] Cursor's cloud-agents walkthrough made the workspace thesis explicit: remote agents test their own work, return demo videos, and give humans a supervision surface rather than just an AI-enhanced editor
 - [2026-03-07] Claude Code added local scheduled tasks and `/loop`, making recurring background coding work a first-class terminal-agent primitive
-- [2026-03-09] Codex Security expanded Codex from code generation into vulnerability review and validation
-- [2026-03-23] Late-March signals suggest skills, plugins, hooks, and related packaging are solidifying into the core abstraction layer for coding agents rather than remaining scattered configuration details
-- [2026-04-21] Early-April Claude Code leak reinforced that harness quality — memory layering, repo-state awareness, permission boundaries, and subagent design — is becoming a core competitive dimension in coding agents
-- [2026-04-14] Cursor 3.1 added tiled multi-agent supervision and stronger control-plane UX, reinforcing the shift from AI-enhanced IDEs toward agent workspaces
-- [2026-04-21] Added [Orca](../tools/orca.md) under `agentic-coding-workspace`; open-source worktree IDE centered on parallel agent supervision
-- [2026-04-21] Claude Code routines and Codex ongoing-task/computer-use push reinforce a shift from single-loop CLI agents toward supervised, repeatable agent workflows
-- [2026-04-10] Cursor Bugbot learned rules: production PR feedback now turns into active review rules; Cursor reports 78.13% resolution across 50,310 public PRs
-- [2026-04-10] Added `agent-toolkits` subcategory with [Shopify AI Toolkit](../tools/shopify-ai-toolkit.md)
-- [2026-04-22] Cursor 3 confirmed as cloud-agent orchestration bet: 35% internal PRs from cloud agents, 2:1 agent-to-Tab user ratio per Truell essay
-- [2026-04-22] Moved Codex Security (vulnerability review/validation) to [State of Cybersecurity](cybersecurity.md); slopsquatting documented there

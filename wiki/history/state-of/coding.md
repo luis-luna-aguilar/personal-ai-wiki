@@ -4,3 +4,15 @@
 - [2026-04-02] Cursor 3 launched; added new `agentic-coding-workspace` subcategory and placed Cursor under it.
 - [2026-04-10] Added `terminal-coding-agent` subcategory with [Claude Code](../../tools/claude-code.md) and [Codex](../../tools/codex.md)
 - [2026-04-10] OpenAI launches $100/mo Pro tier — 5× Codex usage, exclusive Pro model, launch promo through 2026-05-31
+## Archived from current page on 2026-05-13
+
+- [2026-03-09] Codex Security expanded Codex from code generation into vulnerability review and validation
+- [2026-03-23] Late-March signals suggest skills, plugins, hooks, and related packaging are solidifying into the core abstraction layer for coding agents rather than remaining scattered configuration details
+- [2026-04-21] Early-April Claude Code leak reinforced that harness quality — memory layering, repo-state awareness, permission boundaries, and subagent design — is becoming a core competitive dimension in coding agents
+- [2026-04-14] Cursor 3.1 added tiled multi-agent supervision and stronger control-plane UX, reinforcing the shift from AI-enhanced IDEs toward agent workspaces
+- [2026-04-21] Added [Orca](../../tools/orca.md) under `agentic-coding-workspace`; open-source worktree IDE centered on parallel agent supervision
+- [2026-04-21] Claude Code routines and Codex ongoing-task/computer-use push reinforce a shift from single-loop CLI agents toward supervised, repeatable agent workflows
+- [2026-04-10] Cursor Bugbot learned rules: production PR feedback now turns into active review rules; Cursor reports 78.13% resolution across 50,310 public PRs
+- [2026-04-10] Added `agent-toolkits` subcategory with [Shopify AI Toolkit](../../tools/shopify-ai-toolkit.md)
+- [2026-04-22] Cursor 3 confirmed as cloud-agent orchestration bet: 35% internal PRs from cloud agents, 2:1 agent-to-Tab user ratio per Truell essay
+- [2026-04-22] Moved Codex Security (vulnerability review/validation) to [State of Cybersecurity](../../state-of/cybersecurity.md); slopsquatting documented there

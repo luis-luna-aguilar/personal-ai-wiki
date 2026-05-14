@@ -3,3 +3,21 @@
 - [2026-04-10] Gemini adds custom interactive visualizations in chat and notebooks (dedicated workspaces with grouped chats, file uploads, instructions); rolling out to paid accounts first
 - [2026-04-21] Added [Kimi K2.6](../../models/kimi-k2-6.md) under new `Coding models` subcategory
 - [2026-04-10] Added `frontier-multimodal-model` subcategory with [Muse Spark](../../models/muse-spark.md)
+## Archived from current page on 2026-05-13
+
+- [2026-04-23] Google Cloud Next '26: Gemini 3.1 Pro, Gemini 3.1 Flash Image, Gemma 4, Lyria 3, and Gemini Embedding 2 surfaced as Google's active platform model stack
+- [2026-04-23] Added 'Specialized utility models' subcategory; [OpenAI Privacy Filter](../../models/openai-privacy-filter.md) is the first entry — on-device PII redaction, 1.5B MoE, Apache 2.0
+- [2026-04-23] Added [Qwen 3.6 27B](../../models/qwen-3-6-27b.md) to Coding models; dense 27B beats prior 397B MoE on all coding benchmarks; day-0 open ecosystem support
+- [2026-03-08] Added [GPT-5.4](../models/gpt-5-4.md) under `Frontier multimodal models`; strongest captured March signal for general-purpose reasoning, browsing, and agent work, with Claude still stronger on writing/taste
+- [2026-03-23] Late-March small-model cluster sharpened the affordable coding tier: MiniMax M2.7 looks stronger on practical economics, while Composer 2 graduated from a Cursor-only mention to a real model with benchmark and lineage claims
+- [2026-04-07] Early-April open-weight momentum broadened beyond coding-only releases: Gemma 4 became a notable open multimodal adoption signal; see [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md)
+- [2026-04-13] Added [MiniMax M2.7](../../models/minimax-m2-7.md) and [GLM-5.1](../../models/glm-5-1.md) under `Coding models`; earlier April sources show open coding-model momentum was broader than the later Qwen/Kimi cluster alone
+- [2026-04-08] Mythos / Glasswing cluster suggests a new trend: frontier capability may increasingly be deployed selectively rather than broadly — see [Restricted frontier deployment](../../trends/restricted-frontier-deployment.md)
+- [2026-04-21] Added [Qwen 3.6 35B-A3B](../../models/qwen-3-6-35b-a3b.md) under `Coding models`; practical local-agent baseline on 24GB-class hardware
+- [2026-04-21] Anthropic/AWS: 5 GW compute secured, $5B investment, up to $20B more — see [Compute infrastructure as decisive competitive moat](../../trends/compute-infrastructure.md)
+- [2026-04-21] Added [Claude Opus 4.7](../../models/claude-opus-4-7.md) — #1 Vision & Document Arena
+- [2026-04-22] Added `Image generation` subcategory; [GPT-Image-2](../../models/gpt-image-2.md) debuts as dominant arena leader by +242 Elo margin on text-to-image; also updates the image-as-spec pattern for coding agents
+- [2026-04-22] Qwen 3.6 35B-A3B niche sharpened: strong for coding/tools, weaker for creative/translation; Qwen 3.6 Max Preview live but likely proprietary-only
+- [2026-04-22] Kimi K2.6: community framing as practical Opus 4.7 replacement for ~85% of tasks
+- [2026-04-22] Added `Security / cyber-offense capability` subcategory; [Claude Mythos Preview](../../models/claude-mythos-preview.md) confirms restricted-frontier pattern with autonomous zero-day discovery across major OSes/browsers
+- [2026-04-22] Added [Nano Banana 2](../../models/nano-banana-2.md) to `Image generation` subcategory; Google enters the arena with Gemini+web-search-grounded image generation

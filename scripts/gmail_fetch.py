@@ -20,15 +20,12 @@ Setup:
     2. Copy .env.example to .env at the repo root and fill in your client credentials:
          AI_GMAIL_CLIENT_ID=...
          AI_GMAIL_CLIENT_SECRET=...
-         PERSONAL_GMAIL_CLIENT_ID=...
-         PERSONAL_GMAIL_CLIENT_SECRET=...
     3. First run opens a browser for OAuth consent. Token is cached automatically at
          scripts/gmail_credentials/ai-token.json
-         scripts/gmail_credentials/personal-token.json
 
 Usage:
-    python scripts/gmail_fetch.py --account ai --days 1
-    python scripts/gmail_fetch.py --account personal --week 2026-W15
+    python scripts/gmail_fetch.py --days 1
+    python scripts/gmail_fetch.py --week 2026-W15
 """
 
 from __future__ import annotations
@@ -488,7 +485,7 @@ def main() -> None:
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    parser.add_argument("--account", required=True, choices=["ai", "personal"])
+    parser.add_argument("--account", default="ai", choices=["ai"])
     parser.add_argument("--days", type=int, help="Fetch last N days (1 = today only)")
     parser.add_argument("--week", help="Fetch a specific ISO week, e.g. 2026-W15")
     parser.add_argument("--no-triage", action="store_true", help="Skip triage file generation")

@@ -7,13 +7,11 @@ Place your OAuth2 credentials here. Tokens are gitignored.
 | File | What it is | How to get it |
 |---|---|---|
 | `ai-client.json` | OAuth2 Desktop app credentials for the AI Gmail account | Google Cloud Console → APIs & Services → Credentials → Create → OAuth client ID → Desktop app |
-| `personal-client.json` | Same, for your personal Gmail account | Same as above, different account |
 | `ai-token.json` | Cached OAuth token (auto-generated on first run) | Created automatically |
-| `personal-token.json` | Cached OAuth token for personal account | Created automatically |
 
 ## Required Gmail API scope
 
-Both accounts use `gmail.modify`.
+Uses `gmail.modify`.
 
 **Why not a narrower scope?** Applying a label to a message and removing it from the inbox both require the `messages.modify` API method, which needs `gmail.modify`. There is no narrower Gmail API scope that covers this.
 
@@ -25,5 +23,5 @@ Both accounts use `gmail.modify`.
 2. Create a project (or use an existing one)
 3. Enable the **Gmail API**
 4. Create OAuth2 credentials → Desktop app type
-5. Download the JSON and rename to `ai-client.json` or `personal-client.json`
-6. Run `python scripts/gmail_fetch.py --account ai --days 1` — it will open a browser for consent on first run
+5. Copy `.env.example` to `.env` at the repo root and fill in `AI_GMAIL_CLIENT_ID` and `AI_GMAIL_CLIENT_SECRET`
+6. Run `python scripts/gmail_fetch.py --days 1` — it will open a browser for consent on first run

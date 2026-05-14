@@ -60,4 +60,4 @@ SWE-bench is the most widely cited benchmark for comparing coding model and codi
 - [Kimi K2.6 — Advancing Open-Source Coding](../sources/articles/kimi-k2-6-blog.md)
 - [Late-March small coding models](../sources/newsletters/late-march-small-coding-models.md)
 - [AINews — 2026-04-22 (GPT-Image-2, Hermes, Deep Research Max)](../sources/newsletters/ainews-2026-04-22.md)
-- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)

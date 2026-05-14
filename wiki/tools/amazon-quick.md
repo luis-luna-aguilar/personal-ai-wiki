@@ -2,8 +2,8 @@
 title: Amazon Quick
 type: tool
 domains: [computer-use, agents]
-subcategory: agentic-workspace
-tags: [amazon, beta]
+subcategory: computer-use
+tags: [closed-source, beta]
 as_of: 2026-04-29
 sources: [amazon-quick-work-context-assistant-2026-04-29]
 ---

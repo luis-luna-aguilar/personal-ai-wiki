@@ -16,7 +16,7 @@ Official launch announcement for GPT-5.5. The strongest signals are broad benchm
 ## Influenced pages
 
 - [GPT-5.5](../../models/gpt-5-5.md) — new current OpenAI frontier model page
-- [Models](../../history/state-of/models.md) — GPT-5.4 replaced by GPT-5.5 in current frontier state
+- [Models](../../state-of/models.md) — GPT-5.4 replaced by GPT-5.5 in current frontier state
 - [Claude Opus 4.7](../../models/claude-opus-4-7.md) — clearer competitive positioning versus GPT-5.5
 - [Codex](../../tools/codex.md) — GPT-5.5 now powers Codex; Fast mode and internal-usage details
 - [State of Cybersecurity](../../state-of/cybersecurity.md) — GPT-5.5 cyber capability and Trusted Access for Cyber

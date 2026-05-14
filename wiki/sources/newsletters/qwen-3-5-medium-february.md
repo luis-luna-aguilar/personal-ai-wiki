@@ -15,7 +15,7 @@ This source cluster makes an important practical claim: Qwen's medium MoE releas
 ## Influenced pages
 
 - [Qwen 3.6 35B-A3B](../../models/qwen-3-6-35b-a3b.md) — adds earlier context for the local-threshold framing
-- [Models](../../history/state-of/models.md) — sharpens the timing of the Qwen local-agent story
+- [Models](../../state-of/models.md) — sharpens the timing of the Qwen local-agent story
 
 ## Key claims extracted
 

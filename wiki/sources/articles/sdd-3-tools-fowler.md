@@ -19,7 +19,7 @@ Birgitta Böckeler's survey of three self-labeled SDD tools, published on martin
 - [Kiro](../../tools/kiro.md) — initial tool page
 - [spec-kit](../../tools/spec-kit.md) — initial tool page
 - [Tessl Framework](../../tools/tessl.md) — initial tool page
-- [Coding](../../history/state-of/coding.md) — first subcategory populated (`spec-driven-development`)
+- [Coding](../../state-of/coding.md) — first subcategory populated (`spec-driven-development`)
 
 ## Key claims extracted
 

@@ -15,8 +15,8 @@ Homepage / landing-page overview for Orca. Frames the product as a worktree-firs
 ## Influenced pages
 
 - [Orca](../../tools/orca.md) — new tool page
-- [Coding](../../history/state-of/coding.md) — added Orca under `Agentic coding workspace`
-- [Agents](../../history/state-of/agents.md) — added Orca under `Agent orchestration UIs`
+- [Coding](../../state-of/coding.md) — added Orca under `Agentic coding workspace`
+- [Agents](../../state-of/agents.md) — added Orca under `Agent orchestration UIs`
 
 ## Key claims extracted
 

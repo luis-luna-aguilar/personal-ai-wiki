@@ -1,8 +1,8 @@
 ---
 title: Company-wide AI enablement
 type: training
-as_of: 2026-05-05
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01]
+as_of: 2026-05-13
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13]
 ---
 
 # Company-wide AI enablement
@@ -20,6 +20,7 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 - Move from point solutions to end-to-end workflow re-imagination — the step change in value comes from rethinking an entire process (e.g., insurance underwriting, hire-to-onboard), not from speeding up individual tasks
 - Raise performance expectations only as the tooling becomes good enough to support them
 - For production infrastructure workflows, start even narrower than normal: read-only first, then propose-only, then mutate-with-approval after explicit evidence that the agent can operate safely
+- Teach employees to distinguish autonomous delegation from close collaboration. The operating model breaks when teams either delegate judgment-heavy work without review or micromanage tasks with clear success criteria.
 
 ## Proven patterns
 
@@ -147,5 +148,6 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - [AI for boring businesses](../sources/newsletters/ai-for-boring-businesses.md)
 - [Every — "You're the Bread in the AI Sandwich" (April 2026)](../sources/newsletters/every-ai-sandwich-april-2026.md)
 - [How We Run a 25-person Company on Four AI Agents](../sources/articles/every-four-agents.md)
-- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)
-- [Agentic infrastructure and operations](../sources/deep-research/2026-04-24-agentic-devops.md)
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)
+- [Agentic infrastructure and operations](../sources/deep-research/agentic-devops-deep-research.md)
+- [AI-native organizations as operating model](../sources/newsletters/ai-native-organizations-operating-model-2026-05-13.md)

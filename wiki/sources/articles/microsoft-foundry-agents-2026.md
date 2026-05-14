@@ -16,7 +16,7 @@ Microsoft's Foundry launch post for hosted agents in public preview. The key sig
 ## Influenced pages
 
 - [Microsoft Foundry Hosted Agents](../../tools/microsoft-foundry-agents.md) — new tool page for Microsoft's hosted enterprise agent runtime
-- [Agents](../../history/state-of/agents.md) — adds Microsoft to `Agent orchestration`
+- [Agents](../../state-of/agents.md) — adds Microsoft to `Agent orchestration`
 
 ## Key claims extracted
 

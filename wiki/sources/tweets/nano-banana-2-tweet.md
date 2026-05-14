@@ -16,7 +16,7 @@ Brief CEO announcement tweet for Google's Nano Banana 2 image model. Gemini worl
 ## Influenced pages
 
 - [Nano Banana 2](../../models/nano-banana-2.md) — new stub created
-- [Models](../../history/state-of/models.md) — added to Image generation subcategory
+- [Models](../../state-of/models.md) — added to Image generation subcategory
 
 ## Key claims extracted
 

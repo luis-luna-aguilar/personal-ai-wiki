@@ -14,8 +14,8 @@ This source summary captures the shift from single-agent coding tools toward sup
 ## Influenced pages
 
 - [Cursor](../../tools/cursor.md) — adds Cursor 3.1's tiled multi-agent supervision UI
-- [Coding](../../history/state-of/coding.md) — refreshes the current-state description of `agentic-coding-workspace`
-- [Agents](../../history/state-of/agents.md) — strengthens Cursor's placement under `Agent orchestration UIs`
+- [Coding](../../state-of/coding.md) — refreshes the current-state description of `agentic-coding-workspace`
+- [Agents](../../state-of/agents.md) — strengthens Cursor's placement under `Agent orchestration UIs`
 
 ## Key claims extracted
 

@@ -4,8 +4,8 @@ type: model
 domains: [models, coding]
 subcategory: coding-model
 tags: [open-weights, agentic]
-as_of: 2026-04-22
-sources: [vectorlab-qwen-3-6-local-threshold, qwen-3-5-medium-february, ainews-2026-04-22]
+as_of: 2026-05-13
+sources: [vectorlab-qwen-3-6-local-threshold, qwen-3-5-medium-february, ainews-2026-04-22, qwen-35b-community-benchmarks-2026-05-13]
 ---
 
 # Qwen 3.6 35B-A3B
@@ -19,6 +19,8 @@ Alibaba's open-weight MoE coding model. The practical local-agent framing has be
 - Community niche (April 2026 LocalLlama data): strong for coding, tool calling, and agentic tasks; Gemma 4 26B outperforms it for creative writing, translation, and conversation
 - Positioned as a practical local-agent baseline rather than a research novelty or general-purpose assistant
 - Broad framing: local agent workflows are getting good enough to handle easy and medium-difficulty tasks without relying on proprietary models
+- **Community benchmarks (May 2026, r/LocalLLaMA):** strongest overall in the ~20GB local tier on paper-to-code comprehension and long-context tasks; evaluated against Qwen 3.6 27B, Gemma 4 26B A4B, and Nvidia Nemotron 3 Nano — all four substantially outperform prior baselines like Devstral Small 2
+- **Practical setup:** ~20GB at q4 quantization; Gemma 4 26B is ~15GB and faster for chat tasks; users running both on a single machine simultaneously; performance is notably sensitive to temperature and quantization settings — small changes can shift results meaningfully
 
 ## Qwen 3.6 Max Preview (proprietary tier)
 
@@ -37,6 +39,7 @@ Qwen 3.6 Max Preview went live on Qwen Chat (chat.qwen.ai) in April 2026. Commun
 
 ## Recent changes
 
+- [2026-05-13] Community benchmarks (r/LocalLLaMA): judged strongest in ~20GB local tier on paper-to-code and long-context; all four tested models (35B A3B, 27B, Gemma 26B, Nemotron 3 Nano) beat Devstral Small 2; performance sensitive to temperature/quantization
 - [2026-04-23] [Qwen 3.6 27B](qwen-3-6-27b.md) released — 27B dense sibling outperforms this model and the prior 397B flagship on SWE-bench and all major coding evals; see that page for current benchmark leader
 - [2026-04-22] Added community reception niche data (coding/tools > creative/translation); added Qwen 3.6 Max Preview section (proprietary, 600-700B est., top Chinese AA-Intelligence Index)
 
@@ -45,3 +48,4 @@ Qwen 3.6 Max Preview went live on Qwen Chat (chat.qwen.ai) in April 2026. Commun
 - [Vector Lab — Qwen 3.6 as a local-agent threshold](../sources/newsletters/vectorlab-qwen-3-6-local-threshold.md)
 - [Qwen 3.5 medium models in late February](../sources/newsletters/qwen-3-5-medium-february.md)
 - [AINews — 2026-04-22 (GPT-Image-2, Hermes, Deep Research Max)](../sources/newsletters/ainews-2026-04-22.md)
+- [Qwen 3.6 35B A3B community benchmarks](../sources/newsletters/qwen-35b-community-benchmarks-2026-05-13.md)

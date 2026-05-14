@@ -16,7 +16,7 @@ Microsoft product post describing Copilot's shift from passive assistance to def
 ## Influenced pages
 
 - [Microsoft Copilot](../../tools/microsoft-copilot.md) — new page for the Office-app agentic surface
-- [Agents](../../history/state-of/agents.md) — Microsoft gains a second meaningful agents entry beyond Foundry
+- [Agents](../../state-of/agents.md) — Microsoft gains a second meaningful agents entry beyond Foundry
 
 ## Key claims extracted
 

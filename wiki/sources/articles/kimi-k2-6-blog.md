@@ -24,4 +24,4 @@ Moonshot AI's official launch post for Kimi K2.6. Covers the model architecture,
 ## Influenced pages
 
 - [Kimi K2.6](../../models/kimi-k2-6.md) — new model page
-- [Models](../../history/state-of/models.md) — added to Coding models subcategory
+- [Models](../../state-of/models.md) — added to Coding models subcategory

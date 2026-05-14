@@ -8,6 +8,15 @@ Chronological append-only record of wiki activity. Entries start with:
 
 Valid ops: `ingest`, `triage`, `reject`, `apply`, `lint`, `query-verify`, `schema`.
 
+- [2026-05-13] **apply** | Remaining pending proposals batch | 10 pages updated (state-of/science, state-of/voice, state-of/models, state-of/agents, state-of/cybersecurity, tools/hermes-agent, models/claude-mythos-preview, models/qwen-3-6-35b-a3b, wiki/index, wiki/log), 1 tool page created, 7 sources created; proposals archived
+- [2026-05-13] **apply** | Perplexity agent skill methodology | 1 page created (training/agent-skill-methodology), 1 source created, index updated
+- [2026-05-13] **apply** | Claude Code /goal, fast mode, and FleetView | 2 pages updated (tools/claude-code, state-of/coding), 1 source created, 1 history page created
+- [2026-05-13] **apply** | End of finetuning debate | 2 pages updated (state-of/models, state-of/coding), 1 source created
+- [2026-05-13] **apply** | Arena leaderboard May 2026 | 1 page updated (state-of/models — Opus 4.7, GPT-5.5, Gemini 3.1 Pro, Grok 4.20, Meta Spark, Veo 3.1 added/updated), 1 source created
+- [2026-05-13] **apply** | Anthropic SpaceX compute deal + Claude Managed Agents Dreams | 3 pages updated (tools/claude-managed-agents, state-of/models, tools/claude-code), 1 source created
+- [2026-05-13] **apply** | AI work delegation modes | 1 page created (training/ai-work-delegation-modes), 1 source created, index updated
+- [2026-05-13] **apply** | Google DeepMind AI Co-Mathematician | 1 page updated (state-of/science), 1 source created
+- [2026-05-13] **triage** | AI digest 2026-05-07 to 2026-05-13 | 14 proposals generated, 6 signals trimmed (signal-quality audit); triage moved to applied/
 - [2026-05-13] **apply** | Symphony and Devin terminal orchestration | 2 pages updated (tools/codex, state-of/coding), 1 created (sources/newsletters/symphony-devin-terminal-orchestration-2026-04-28)
 - [2026-05-13] **apply** | Stripe agent-native commerce and compute fraud | 2 pages updated (state-of/finance, trends/compute-infrastructure), 1 created (sources/newsletters/stripe-agent-native-commerce-fraud-2026-04-29)
 - [2026-05-13] **apply** | Production agent orchestration primitives (Mistral Workflows) | 2 pages updated (workflows/agentic-orchestration-patterns, state-of/agents), 1 created (sources/newsletters/production-agent-orchestration-2026-04-29)
@@ -241,3 +250,23 @@ grep "^- \[" wiki/log.md | tail -20
 - [2026-05-05] **triage** | AI Email Digest 2026-04-30 to 2026-05-01 | 11 proposals generated, 1 skipped
 - [2026-05-05] **triage** | AI Email Digest 2026-04-29 to 2026-05-01 | 7 proposals generated, 5 skipped
 - [2026-05-05] **triage** | AI Email Digest 2026-04-28 to 2026-05-01 | 12 proposals generated, 1 skipped
+- [2026-05-13] **triage** | Manual URL Batch 2026-05-13 | 8 proposals, 4 skipped
+- [2026-05-13] **triage** | AI Email Digest 2026-04-14 to 2026-05-13 | 12 proposals, 3 skipped
+- [2026-05-13] **ingest** | Claude Managed Agents same-day platform features | 1 page updated, 1 created
+- [2026-05-13] **ingest** | Agent-generated HTML artifacts | 2 pages updated, 2 created
+- [2026-05-13] **ingest** | Agentic security tooling category | 2 pages updated, 1 created
+- [2026-05-13] **ingest** | AI-native organizations as operating model | 2 pages updated, 1 created
+- [2026-05-13] **ingest** | Claude Code Agent View | 2 pages updated, 1 created
+- [2026-05-13] **ingest** | Agent-native product management workflows | 2 pages updated, 1 created
+- [2026-05-13] **ingest** | Purpose-built review artifacts for agent work | 2 pages updated, 1 created
+- [2026-05-13] **ingest** | Agent skills, progressive context, evals, and migration discipline | 1 page updated, 1 created
+- [2026-05-13] **ingest** | Codex and Claude Code as workflow operating systems | 3 pages updated, 0 created; unchecked source summary skipped
+- [2026-05-13] **ingest** | Peekaboo 3.0 macOS computer-use release | 2 pages updated, 2 created
+- [2026-05-13] **ingest** | Model-harness fit as product moat | 2 pages updated, 1 created
+- [2026-05-13] **ingest** | OpenAI Daybreak for cyber defenders | 2 pages updated, 1 created
+- [2026-05-13] **ingest** | Onboarding videos as an agent-skill use case | 2 pages updated, 2 created; unchecked training example skipped
+- [2026-05-13] **ingest** | Frontier labs as deployment-service firms | 2 pages updated, 1 created
+- [2026-05-13] **ingest** | GPT-5.5 Instant as ChatGPT default | 2 pages updated, 1 created
+- [2026-05-13] **ingest** | Finance as packaged agent-workflow vertical | 2 pages updated, 1 created
+- [2026-05-13] **ingest** | Cost discipline shifts to task routing | 1 page updated, 2 created
+- [2026-05-13] **ingest** | Physical AI and robotics deployment curve | 1 page updated, 2 created

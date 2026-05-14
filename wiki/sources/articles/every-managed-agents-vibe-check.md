@@ -15,7 +15,7 @@ Every frames Claude Managed Agents as a public-beta Anthropic service that reduc
 ## Influenced pages
 
 - [Claude Managed Agents](../../tools/claude-managed-agents.md) — adds public-beta, dashboard iteration, and practitioner adoption notes
-- [Agents](../../history/state-of/agents.md) — refreshes the Claude Managed Agents line with the infrastructure-offload signal
+- [Agents](../../state-of/agents.md) — refreshes the Claude Managed Agents line with the infrastructure-offload signal
 
 ## Key claims extracted
 

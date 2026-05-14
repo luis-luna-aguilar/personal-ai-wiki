@@ -4,8 +4,8 @@ type: tool
 domains: [agents]
 subcategory: agent-orchestration
 tags: [anthropic, closed-source, agentic]
-as_of: 2026-04-24
-sources: [managed-agents, every-managed-agents-vibe-check, anthropic-platform-expansion-april-2026, claude-managed-agents-memory]
+as_of: 2026-05-13
+sources: [managed-agents, every-managed-agents-vibe-check, anthropic-platform-expansion-april-2026, claude-managed-agents-memory, anthropic-spacex-dreams-2026-05-07, claude-managed-agents-feature-parity-2026-05-13]
 ---
 
 # Claude Managed Agents
@@ -20,7 +20,7 @@ Those three pieces are:
 
 Anthropic's core idea is that these pieces should be decoupled so the system can keep evolving as models improve, without forcing users to rebuild around each model generation's quirks.
 
-## Current status (as of 2026-04-24)
+## Current status (as of 2026-05-13)
 
 - Public beta service on the Claude Platform for long-running agents
 - Official launch framing: developers specify tasks and tools while Anthropic handles orchestration, permissions, and sandboxing
@@ -38,6 +38,8 @@ Anthropic's core idea is that these pieces should be decoupled so the system can
 - Memory stores can be shared across agents with scoped permissions (for example org-wide read-only plus per-user read/write)
 - Changes are tracked with audit logs and surfaced as session events in the Claude Console; developers can roll back or redact prior memory state
 - Anthropic is explicitly pitching memory as a way to replace custom retrieval / memory infrastructure for long-running agent deployments
+- **Dreams feature** (May 2026, research preview): agents periodically reflect on past sessions to identify long-term patterns that no single session can surface — recurring mistakes, shared user preferences, stale assumptions. The reflection produces a cleaned-up, consolidated memory store that improves future session performance. Available in research preview; request access via Claude's form.
+- Anthropic says new Claude API features such as advisor strategy, code execution, and web search ship same-day into Managed Agents, reinforcing the product as a hosted platform service rather than a static sample runtime.
 
 ## Why it matters
 
@@ -107,10 +109,12 @@ The simple reason is that sessions that do not need a sandbox immediately can st
 ## Related
 
 - [Advisor strategy](../workflows/advisor-strategy.md)
-- [Agents](../history/state-of/agents.md)
+- [Agents](../state-of/agents.md)
 
 ## Recent changes
 
+- [2026-05-13] Anthropic says Managed Agents receives new Claude API capabilities such as advisor strategy, code execution, and web search on the same day they ship.
+- [2026-05-07] Dreams feature added (research preview): periodic session reflection producing consolidated memory stores for long-term pattern recognition across sessions; available via research preview access request
 - [2026-04-24] Built-in memory launched in public beta: file-backed stores, scoped sharing, audit logs, rollback/redaction controls, and Claude Console event visibility
 - [2026-04-15] Official launch framing and adjacent custom-agent / long-running-workflow signals make Managed Agents look less like a one-off architecture post and more like Anthropic's core platform direction
 - [2026-04-15] Every reported Claude Managed Agents is in public beta and highlighted Spiral's use of it to create an agent in a few hours while offloading sessions, memory, tool use, and credential handling
@@ -122,3 +126,4 @@ The simple reason is that sessions that do not need a sandbox immediately can st
 - [Mini-Vibe Check: Claude Managed Agents Handle the Infrastructure Work](../sources/articles/every-managed-agents-vibe-check.md)
 - [Anthropic platform expansion — April 2026](../sources/newsletters/anthropic-platform-expansion-april-2026.md)
 - [Built-in memory for Claude Managed Agents](../sources/articles/claude-managed-agents-memory.md)
+- [Claude Managed Agents same-day Claude API feature parity](../sources/tweets/claude-managed-agents-feature-parity-2026-05-13.md)

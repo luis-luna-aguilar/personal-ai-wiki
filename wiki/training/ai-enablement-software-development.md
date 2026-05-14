@@ -1,8 +1,8 @@
 ---
 title: AI enablement — software development
 type: training
-as_of: 2026-04-24
-sources: [ramp-ai-adoption-playbook, shopify-latent-space-april-2026, lennysan-simonw-interview, agentic-cognitive-overhead, garrytan-gstack-repo, the-code-2026-04-23, qa-tooling-for-software-agents-deep-research]
+as_of: 2026-05-13
+sources: [ramp-ai-adoption-playbook, shopify-latent-space-april-2026, lennysan-simonw-interview, agentic-cognitive-overhead, garrytan-gstack-repo, the-code-2026-04-23, qa-tooling-for-software-agents-deep-research, agent-review-artifacts-2026-05-13]
 ---
 
 # AI enablement — software development
@@ -19,6 +19,7 @@ AI adoption inside engineering teams has moved fastest, but the bottlenecks and 
 - Allow non-engineers to attempt building: many can cross the threshold through iterative prompting without a formal coding background
 - Treat QA as part of the eval system: capture structured browser/session artifacts that can be converted into durable regression tests for coding agents
 - Design an explicit eval suite before granting a coding agent permission to open PRs autonomously — see [Evals for agentic software development](evals-for-agentic-software-development.md)
+- For complex PRs, ask the agent to generate an annotated HTML explainer with the actual diff, architecture diagram, risk areas, and reviewer questions. This can improve review quality when the default GitHub diff is too low-context.
 
 ## Proven patterns
 
@@ -66,7 +67,7 @@ Mid-career engineers may be the most vulnerable group — more so than juniors o
 ## See also
 
 - [Evals for agentic software development](evals-for-agentic-software-development.md) — eval stack for coding agents: sandboxed execution, QA artifact capture, browser self-verification, MVES, and trace mining
-- [Practical tooling layer for evals in agentic software development](../sources/deep-research/2026-04-24-qa-tooling-for-software-agents.md) — source summary for the tooling layer behind coding-agent verification
+- [Practical tooling layer for evals in agentic software development](../sources/deep-research/qa-tooling-for-software-agents-deep-research.md) — source summary for the tooling layer behind coding-agent verification
 
 ## Sources
 
@@ -76,3 +77,4 @@ Mid-career engineers may be the most vulnerable group — more so than juniors o
 - [Agentic cognitive overhead — personal ceiling for parallel agents](../sources/tweets/agentic-cognitive-overhead.md)
 - [gstack — Garry Tan's Claude Code virtual engineering team](../sources/repos/garrytan-gstack-repo.md)
 - [The Code — OpenAI drops a privacy focused model](../sources/newsletters/the-code-2026-04-23.md)
+- [Purpose-built review artifacts for agent work](../sources/tweets/agent-review-artifacts-2026-05-13.md)

@@ -14,7 +14,7 @@ This source summary captures an early-April shift in open-weight momentum. The s
 ## Influenced pages
 
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — tracks the broadening of the open-weight wave beyond coding
-- [Models](../../history/state-of/models.md) — adds Gemma 4 as an early-April open multimodal signal
+- [Models](../../state-of/models.md) — adds Gemma 4 as an early-April open multimodal signal
 - [State of Computer Use](../../state-of/computer-use.md) — adds Holo3 as an early open computer-use contender signal
 
 ## Key claims extracted

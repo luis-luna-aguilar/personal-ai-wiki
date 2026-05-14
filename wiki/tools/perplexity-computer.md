@@ -4,22 +4,24 @@ type: tool
 domains: [computer-use, finance]
 subcategory: computer-use
 tags: [perplexity, closed-source]
-as_of: 2026-04-10
+as_of: 2026-05-06
 sources:
   - perplexity-computer-plaid
   - perplexity-personal-computer
+  - finance-agent-workflows-2026-05-06
 ---
 
 # Perplexity Computer
 
 Autonomous AI agent launched 2026-02-25 that orchestrates 19 different AI models to complete complex, multi-step workflows in the background. Rather than relying on a single model, Computer is an orchestration layer that routes each part of a task to the model best suited for that type of work.
 
-## Current status (as of 2026-04-10)
+## Current status (as of 2026-05-06)
 
 - Exclusively available on Perplexity Max ($200/month); 10,000 credits/month, consumption varies by task complexity
 - Enterprise tier at $325/seat/month with security controls and audit logs
 - Connects to 400+ applications (Slack, Gmail, GitHub, Notion) and 12,000+ financial institutions via Plaid
 - Personal Computer, launched 2026-03-11, frames the product as a persistent digital proxy: an always-on Mac mini environment with ongoing access to files, apps, and sessions that can still be remotely controlled from any device
+- Secondary May 2026 coverage describes a Professional Finance variant that combines licensed finance data with packaged workflows; verify against Perplexity primary materials before treating this as a mature product surface.
 
 ## How it works
 
@@ -53,3 +55,4 @@ Autonomous AI agent launched 2026-02-25 that orchestrates 19 different AI models
 
 - [Perplexity Computer — Plaid financial integrations](../sources/articles/perplexity-computer-plaid.md)
 - [Perplexity Personal Computer](../sources/newsletters/perplexity-personal-computer.md)
+- [Finance agent workflow packaging - May 2026](../sources/newsletters/finance-agent-workflows-2026-05-06.md)

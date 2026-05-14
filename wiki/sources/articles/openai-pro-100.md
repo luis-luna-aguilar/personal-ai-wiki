@@ -15,7 +15,7 @@ OpenAI introduces a $100/month Pro tier for ChatGPT/Codex users who outgrow the 
 
 ## Influenced pages
 
-- [Coding](../../history/state-of/coding.md) — recent change entry about pricing tier
+- [Coding](../../state-of/coding.md) — recent change entry about pricing tier
 - [Codex](../../tools/codex.md) — new stub page with pricing
 
 ## Key claims extracted

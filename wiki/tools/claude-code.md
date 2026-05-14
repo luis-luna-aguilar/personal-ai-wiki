@@ -4,15 +4,15 @@ type: tool
 domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: [anthropic, cli, agentic]
-as_of: 2026-05-05
-sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01]
+as_of: 2026-05-13
+sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13]
 ---
 
 # Claude Code
 
 Anthropic's terminal-first AI coding agent. Runs in the shell, operates autonomously on files, shell commands, and tool calls, and is expanding toward supervised multi-session workflows.
 
-## Current status (as of 2026-04-21)
+## Current status (as of 2026-05-13)
 
 - Terminal CLI agent with persistent project context via `CLAUDE.md`
 - Late-February expanded Claude Code's persistence story further: auto-memory writes project-local `MEMORY.md` plus topic files, while Boris Cherny previewed `/batch` and `/simplify` as built-in commands for parallel migrations and post-change cleanup
@@ -31,9 +31,14 @@ Anthropic's terminal-first AI coding agent. Runs in the shell, operates autonomo
 - `/recap`: auto-generates a one-line summary of the last session after 3+ turns of inactivity — triggered only once per gap, never back-to-back, also available on demand via `/recap`
 - `/fewer-permission-prompts` skill (Boris Cherny): scans session history to identify safe bash and MCP commands that repeatedly trigger permission prompts, then produces an allowlist to approve them once permanently; best run after a few days of work so there's enough history to pull from
 
+- Paid plan limits doubled (May 2026) following SpaceX/Colossus 1 compute deal (220K+ NVIDIA GPUs)
 - Built-in `--worktree` flag: run `claude --worktree` to give each Claude Code session its own isolated git worktree, enabling multiple agents to work in parallel without interfering with each other's file changes; Boris Cherny (Claude Code creator) announced; Matt Pocock calls it "my new default"
 - `/autofix-pr` now triggerable from CLI: run `/autofix-pr` after finishing a PR, and it sends your session to the cloud so the PR autofixer has full context to address CI failures and reviewer comments
 - Remote Control: `claude remote-control` spawns a new local Claude Code session from the mobile app (available on Max, Team, and Enterprise plans at version ≥2.1.74); lets you kick off sessions from your phone
+- `/goal` command (May 2026, research preview): set a target (e.g. "pass all tests in this folder") and Claude loops autonomously until an evaluator model confirms it is met — analogous to the `/goals` command OpenAI added to Codex; the first native long-horizon success-criterion primitive in Claude Code
+- Opus 4.7 fast mode (May 2026, research preview via API and Claude Code): Cursor reports 2.5× faster output at approximately 6× the cost compared to standard Opus 4.7; adds a new latency/price tier above the standard frontier tier
+- Agent View (research preview, Claude Code v2.1.139+): `claude agents` opens one terminal screen for dispatching and supervising background Claude Code sessions. Sessions are grouped by state, can be peeked/replied to without opening the full transcript, attached/detached for full conversation, and launched from Agent View, `/bg`, or `claude --bg`; editable background sessions are isolated in git worktrees under `.claude/worktrees/` when possible.
+- Every's product-management guide adds command-pack examples such as strategy interviews and product-pulse reviews, reinforcing Claude Code as a product workflow surface, not only a code editor.
 
 ## Monitor tool
 
@@ -87,23 +92,17 @@ That matters because it shifts the product story away from "Anthropic has a stro
 
 - Requires comfort with CLI workflows
 - Product surface is broadening beyond a single terminal loop, so the clearest long-term interaction model is still evolving
+- As Claude Code broadens into goals, background sessions, remote control, worktrees, and product-management workflows, the product is increasingly a workflow container; the risk is surface sprawl unless teams standardize commands, skills, and review habits.
 
 ## Recent changes
 
+- [2026-05-13] /goal command added (research preview): autonomous loop until evaluator model confirms target met — first native long-horizon success-criterion primitive in Claude Code
+- [2026-05-13] Opus 4.7 fast mode added (research preview): 2.5× faster, ~6× cost per Cursor benchmarks; new latency/price tier
+- [2026-05-13] Agent View added (research preview, v2.1.139+): `claude agents` supervises background sessions with peek/reply, attach/detach, `/bg`, `--bg`, and worktree isolation.
 - [2026-05-01] Claude Code as a product-management environment: Every profiles PM workflows inside Claude Code — roadmaps, PRDs, tickets, strategy docs, GitHub Projects tracking, and Compound Engineering skills; extends the tool beyond engineering into product operations
 - [2026-04-24] Added one-time scheduling from CLI / Routines UI via `Schedule -> Once`, extending Claude Code's scheduled-workflow support beyond recurring runs
 - [2026-04-23] /ultrareview added (v2.1.86+, research preview): cloud multi-agent code review with independent finding verification; 5-10 min background; 3 free runs for Pro/Max through May 5, 2026; then $5-20 extra usage; requires Claude.ai login; not on Bedrock/Vertex AI/Foundry
 - [2026-04-22] Added --worktree flag (built-in parallel isolated git worktrees), /autofix-pr CLI trigger, and Remote Control mobile session spawning
-- [2026-04-22] Added /recap (session gap summaries after inactivity) and /fewer-permission-prompts skill (history-based allowlist generator)
-- [2026-02-27] Claude Code added auto-memory for project-local recall of commands, preferences, and architecture context
-- [2026-02-28] Boris previewed `/batch` and `/simplify` as built-in primitives for parallel migrations and automated cleanup
-- [2026-03-07] Claude Code added local scheduled tasks plus `/loop`, giving the terminal agent an explicit recurring-work primitive before the later hosted-routines layer
-- [2026-04-21] Added late-March Channels / recurring-tasks context: phone-triggered continuation and scheduled workflows strengthen the multi-session supervision direction
-- [2026-04-21] Added architecture note from the early-April leak cluster: layered memory, repo-state injection, explicit permissions, and cache-efficient subagent parallelism now read as core Claude Code design choices
-- [2026-04-21] Routines announced — scheduled / event-driven Claude Code workflows on Anthropic-hosted infrastructure
-- [2026-04-10] Monitor tool announced — event-driven background scripts for Claude Code
-- [2026-03-10] Code Review and `/btw` made verified PR review plus side-thread supervision first-class parts of the Claude Code workflow
-- [2026-03-27] Claude Code gained unattended cloud-following workflows from web/mobile sessions for PR fixes and comment resolution
 
 ## Sources
 
@@ -120,3 +119,6 @@ That matters because it shifts the product story away from "Anthropic has a stro
 - [Claude Code — worktrees, /autofix-pr CLI, Remote Control](../sources/tweets/claude-code-worktree-autofix.md)
 - [Claude Code one-time scheduling](../sources/tweets/claude-code-one-time-scheduling.md)
 - [Claude Code for product-management workflows](../sources/newsletters/claude-code-product-management-2026-05-01.md)
+- [Claude Code /goal, fast mode, and FleetView](../sources/newsletters/claude-code-goal-fastmode-fleetview-2026-05-13.md)
+- [Claude Code Agent View docs](../sources/articles/claude-code-agent-view-2026-05-13.md)
+- [Agent-native product management guide - Every](../sources/articles/agent-native-product-management-2026-05-13.md)

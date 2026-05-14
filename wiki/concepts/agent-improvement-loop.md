@@ -123,4 +123,4 @@ This applies in both directions: do not let holdout cases leak into training dat
 - ["Better Harness: A Recipe for Harness Hill-Climbing with Evals" — LangChain](../sources/articles/langchain-better-harness.md)
 - [Bugbot now self-improves with learned rules](../sources/articles/cursor-bugbot-learning.md)
 - [Self-improving agent skills — auto-improvement loops](../sources/tweets/self-improving-skills.md)
-- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)

@@ -54,5 +54,5 @@ Because the harness, tools, and environment are part of what you are evaluating:
 
 ## Sources
 
-- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)
 - [Cost-aware agent evaluation](../sources/newsletters/cost-aware-agent-evaluation-2026-04-28.md)

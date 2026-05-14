@@ -116,4 +116,4 @@ For the wiki's context:
 
 ## Sources
 
-- [LeWorldModel — Stable End-to-End JEPA from Pixels](../sources/papers/leworldmodel.md)
+- [LeWorldModel — Stable End-to-End JEPA from Pixels](../sources/papers/leworldmodel-paper.md)

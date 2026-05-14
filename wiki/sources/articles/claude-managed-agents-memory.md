@@ -16,7 +16,7 @@ Anthropic's memory launch for Managed Agents. The key signal is architectural an
 ## Influenced pages
 
 - [Claude Managed Agents](../../tools/claude-managed-agents.md) — durable memory becomes a first-class part of the product story
-- [Agents](../../history/state-of/agents.md) — strengthens Anthropic's hosted agent-platform position
+- [Agents](../../state-of/agents.md) — strengthens Anthropic's hosted agent-platform position
 
 ## Key claims extracted
 

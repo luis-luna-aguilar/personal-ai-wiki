@@ -2,8 +2,8 @@
 title: AI-native product building
 type: training
 domains: [coding]
-as_of: 2026-03-23
-sources: [ai-native-product-building-lessons-late-march, vibe-coding-reliability-and-distribution, post-vibe-coding-verification-february]
+as_of: 2026-05-13
+sources: [ai-native-product-building-lessons-late-march, vibe-coding-reliability-and-distribution, post-vibe-coding-verification-february, agent-native-product-management-2026-05-13]
 ---
 
 # AI-native product building
@@ -16,6 +16,7 @@ AI-native product building means using models and agents to collapse the cost of
 - Assume the first hard problem after launch will be debugging and reliability, not generation speed
 - Decide early what cannot fail, what can degrade gracefully, and where human diagnosis is still required
 - Treat distribution and customer access as more valuable once many more people can build quickly
+- Agent-native product management workflows increasingly look like commandable rituals: strategy interviews, product-pulse reviews, roadmap synthesis, issue generation, and memory updates that persist across planning cycles.
 
 ## Proven patterns
 
@@ -43,3 +44,4 @@ The old scarcity was implementation bandwidth. The new scarcity is knowing what 
 - [AI-native product-building lessons in late March](../sources/newsletters/ai-native-product-building-lessons-late-march.md)
 - [Vibe coding, reliability, and distribution](../sources/newsletters/vibe-coding-reliability-and-distribution.md)
 - [Post-vibe-coding verification and cognitive debt in late February](../sources/newsletters/post-vibe-coding-verification-february.md)
+- [Agent-native product management guide — Every](../sources/articles/agent-native-product-management-2026-05-13.md)

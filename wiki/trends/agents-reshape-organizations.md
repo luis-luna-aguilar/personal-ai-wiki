@@ -3,8 +3,8 @@ title: Agents reshape organizations (leverage moves from individual to org)
 type: trend
 domains: [agents, coding]
 tags: [agentic]
-as_of: 2026-05-05
-sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, openclaw-operating-pattern-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, cursor-third-era, knowledge-work-os-agent-apps-2026-04-28]
+as_of: 2026-05-13
+sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, openclaw-operating-pattern-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, cursor-third-era, knowledge-work-os-agent-apps-2026-04-28, frontier-labs-deployment-services-2026-05-13, ai-native-organizations-operating-model-2026-05-13]
 ---
 
 # Agents reshape organizations (leverage moves from individual to org)
@@ -38,6 +38,8 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - **McKinsey names the bottleneck: workflow redesign, not technology.** "AI is Everywhere. The Agentic Organization Isn't Yet" (McKinsey, 2026) reports that 80%+ of companies are not seeing bottom-line impact from AI investments despite large spending. The diagnosis: companies are running pilots inside unchanged processes rather than redesigning workflows end-to-end. The unlock is "end-to-end workflow reimagination" — rethinking the entire process (e.g., insurance underwriting, hire-to-onboard) rather than speeding up individual tasks. McKinsey introduces the distinction between humans "in the loop" (executing parts of a workflow) vs. "above the loop" (providing judgment over an agent-run process) as the structural end state for knowledge work.
 - **Cursor's internal development has already crossed the threshold.** Michael Truell's April 2026 essay reports 35% of Cursor's internal PRs are now created by autonomous cloud agents operating on their own VMs — not a research claim, an operational report from a company actively building this way. The third-era developer pattern he describes (agents write ~100% of code, human role shifts to problem definition and artifact review) is already the default for part of his own team.
 - **The org-chart argument is spreading.** A thin signal relayed from Postman's founder argues AI-era teams should run with wider spans of control and fewer layers between leaders and ICs. This fits the same direction of travel, but the current source quality here is weak.
+- **Frontier labs are moving downstream into deployment services.** Current coverage frames OpenAI and Anthropic as selling workflow design, context wiring, permissions, evals, and human handoff systems around models rather than only API access.
+- **AI-native organization framing is becoming more operational.** Agent-only startup rhetoric, agent architect roles, company expectations that employees use AI natively, and the delegation/collaboration split all point to humans allocating attention and review rather than personally executing every step.
 
 ## What to watch
 
@@ -57,6 +59,7 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 
 ## Recent changes
 
+- [2026-05-13] Added frontier-lab deployment-services framing and AI-native operating-model signal: the bottleneck is increasingly workflow design, context, permissions, evals, handoffs, and human attention allocation.
 - [2026-05-05] Workflow-container switching costs emerging: Every argues that left-sidebar desktop apps with agentic terminals (Codex, Claude, Cursor) are converging on a common interface shape; sticky workflow state across sessions creates platform-lock dynamics as organizations commit to one knowledge-work container
 - [2026-04-22] Added Cursor/Truell internal data: 35% of PRs from cloud agents; third-era dev pattern operational inside Cursor itself
 - [2026-04-22] Added trust-battery pattern (Claudie/Every) and AI sandwich org architecture; Dan Shipper prediction: two org models coexist, single-purpose fleet loses
@@ -77,3 +80,5 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - [Every — "You're the Bread in the AI Sandwich" (April 2026)](../sources/newsletters/every-ai-sandwich-april-2026.md)
 - [Michael Truell — "The third era of AI software development"](../sources/tweets/cursor-third-era.md)
 - [Agent desktop apps as the new OS for knowledge work](../sources/newsletters/knowledge-work-os-agent-apps-2026-04-28.md)
+- [Frontier labs as deployment-service firms](../sources/newsletters/frontier-labs-deployment-services-2026-05-13.md)
+- [AI-native organizations as operating model](../sources/newsletters/ai-native-organizations-operating-model-2026-05-13.md)

@@ -44,4 +44,4 @@ It is also relevant for coding-agent evaluation when the question is reliability
 
 ## Sources
 
-- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)

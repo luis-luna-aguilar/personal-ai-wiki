@@ -1,8 +1,8 @@
 ---
 title: Anti-autopilot review friction
 type: training
-as_of: 2026-04-24
-sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026, lennysan-simonw-interview, prof-devs-control, agents-evals-deep-research, agentic-devops-deep-research]
+as_of: 2026-05-13
+sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026, lennysan-simonw-interview, prof-devs-control, agents-evals-deep-research, agentic-devops-deep-research, agent-review-artifacts-2026-05-13]
 ---
 
 # Anti-autopilot review friction
@@ -15,6 +15,7 @@ As AI output gets more fluent and more often correct, people stop truly checking
 - Separate generation and review in time or surface so the review brain is different from the generation brain
 - Force yourself to explain why an accepted output is right for this reader, client, or task
 - Use confidence checks as a trigger for more review, not as a substitute for review
+- Ask agents to turn high-risk or judgment-heavy outputs into review artifacts before accepting them: comparison grids for options, annotated diffs for code, dashboards for data, and one-off editors for structured decisions. The point is to make review easier, not to make output look more polished.
 
 ## Proven patterns
 
@@ -67,5 +68,6 @@ From field research (N=99 surveys; suitable:unsuitable ratios):
 - [Every — Mini Vibe Check (Claude Design + AI security, April 21 2026)](../sources/newsletters/every-vibe-check-april-21-2026.md)
 - [Lenny Rachitsky — Simon Willison interview takeaways](../sources/tweets/lennysan-simonw-interview.md)
 - ["Professional Software Developers Don't Vibe, They Control" — research summary](../sources/tweets/prof-devs-control.md)
-- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)
-- [Agentic infrastructure and operations](../sources/deep-research/2026-04-24-agentic-devops.md)
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)
+- [Agentic infrastructure and operations](../sources/deep-research/agentic-devops-deep-research.md)
+- [Purpose-built review artifacts for agent work](../sources/tweets/agent-review-artifacts-2026-05-13.md)

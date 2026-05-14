@@ -15,7 +15,7 @@ This source cluster adds a useful refinement to the broader harness story. The f
 
 - [Harness (agent)](../../concepts/harness.md) — adds the packaging/distribution layer more explicitly
 - [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — clarifies that teams increasingly package reusable workflow judgment, not only tool access
-- [Coding](../../history/state-of/coding.md) — supports a current-state note that this abstraction layer is solidifying across ecosystems
+- [Coding](../../state-of/coding.md) — supports a current-state note that this abstraction layer is solidifying across ecosystems
 
 ## Key claims extracted
 

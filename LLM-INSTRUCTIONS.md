@@ -41,6 +41,7 @@ wiki/                      # You own this. Current state.
   concepts/                # Ideas (RAG, context engineering, etc.).
   trends/                  # Things being watched.
   training/                # Practical guidance for teaching teams and businesses to use AI well.
+  use-cases/               # Concrete applications and repeatable business/workflow use cases.
   sources/                 # One lightweight summary page per ingested source.
   history/                 # Archived old versions. Mirrors wiki/ structure.
   _schema/                 # Controlled vocabulary files. See below.
@@ -83,7 +84,7 @@ Every wiki page has YAML frontmatter:
 ```yaml
 ---
 title: Claude Opus 4.6
-type: model          # model | tool | benchmark | workflow | concept | trend | training | state-of | source
+type: model          # model | tool | benchmark | workflow | concept | trend | training | use-case | state-of | source
 domains: [coding, agents]
 subcategory: frontier-model    # required for type: tool | model | workflow; optional elsewhere
 tags: [anthropic, frontier]
@@ -447,7 +448,8 @@ Triggered **automatically** whenever `gmail_fetch.py` completes and produces a m
 - Use the controlled vocabulary for `[domain]` tags (check `wiki/_schema/tags.md`). Use `[?]` only if truly unclassifiable.
 - If a topic appears in 3+ sources, that's a strong signal — flag it as high-priority.
 - Video-only content: mark `**Recommended:** skip — video` and do not create a signal for ingestion.
-- Depth over breadth: 8 rich signals beat 20 shallow ones. Merge aggressively.
+- Depth over breadth: prefer rich signals over shallow ones. There is no target count — do not chase a number. A signal earns its place only if it has enough substance to justify a wiki page update on its own. Hard cap at 20, but reaching it is not a goal.
+- When reviewing your own signal list, ask: did I split one topic into two entries to inflate the count? Did I include funding news, rumors, anecdotes, or "verify-first" research mentions that can't be acted on yet? If yes, cut or merge them. The right count for a large digest is typically 12–16 strong signals, not 20 weak ones.
 - The user cannot approve what they cannot understand. Every signal must have enough detail to make the approve/skip decision without opening the source files.
 
 #### Step 3 — Process (same as standard triage)
@@ -456,20 +458,12 @@ When the user says "process the triage", follow standard Workflow 3 processing. 
 
 **Daily flow:**
 ```
-gmail_fetch.py --account ai --days 1
+gmail_fetch.py --days 1
 → raw/{newsletters,articles,tweets}/2026-04-21-*.md
 → proposals/triage/2026-04-21-ai-digest.md  (skeleton, status: pending-analysis)
 → "triage this digest" → Claude fetches URLs, reads newsletters, groups topics
 → user reviews and checks signals
 → "process the triage" → proposals generated
-```
-
-**Backlog flow (personal Gmail, week by week):**
-```
-gmail_fetch.py --account personal --week 2026-W01
-→ raw/**/2026-01-*.md files
-→ proposals/triage/2026-W01-personal-digest.md  (skeleton)
-→ same triage → process flow
 ```
 
 ### 5. Proposal format (dry-run diff)

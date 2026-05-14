@@ -55,7 +55,7 @@ The Haiku-as-executor result is the most interesting data point: it opens a high
 
 ## Related
 
-- [Agents](../history/state-of/agents.md)
+- [Agents](../state-of/agents.md)
 
 ## Recent changes
 

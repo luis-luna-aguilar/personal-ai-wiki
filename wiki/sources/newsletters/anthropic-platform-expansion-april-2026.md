@@ -14,7 +14,7 @@ This source summary groups the week in which Anthropic's Managed Agents launch, 
 ## Influenced pages
 
 - [Claude Managed Agents](../../tools/claude-managed-agents.md) — adds official launch framing and ties the hosted runtime to adjacent Anthropic agent surfaces
-- [Agents](../../history/state-of/agents.md) — strengthens Anthropic's position under `Agent orchestration`
+- [Agents](../../state-of/agents.md) — strengthens Anthropic's position under `Agent orchestration`
 
 ## Key claims extracted
 

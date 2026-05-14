@@ -4,8 +4,8 @@ type: workflow
 domains: [agents]
 subcategory: agentic-orchestration-patterns
 tags: [agentic]
-as_of: 2026-05-05
-sources: [notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, harness-engineering-early-april, open-agent-orchestration-late-march, skills-and-plugin-packaging-late-march, harness-engineering-march, deep-agents-overview, goose-platform, googlecloudtech-adk-2-orchestration-patterns, agent-infrastructure-harness-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, production-agent-orchestration-2026-04-29]
+as_of: 2026-05-13
+sources: [notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, harness-engineering-early-april, open-agent-orchestration-late-march, skills-and-plugin-packaging-late-march, harness-engineering-march, deep-agents-overview, goose-platform, googlecloudtech-adk-2-orchestration-patterns, agent-infrastructure-harness-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, production-agent-orchestration-2026-04-29, agent-html-artifacts-2026-05-13]
 ---
 
 # Agentic orchestration patterns
@@ -43,6 +43,7 @@ Reusable patterns for getting better behavior from one or more agents without de
 - **Model-pool routing by an AI-managed orchestrator.** Rather than hardcoding which model handles which task, a coordinator layer (e.g., Sakana Conductor) selects from a pool of available models based on the task type, cost, and current model availability. The coordinator decides routing; specialized models handle execution.
 - **Local-first browser agents.** For tasks that can be fully executed client-side, agents run entirely in the browser — no cloud handoff, no server-side compute. This reduces latency, cost, and privacy surface. The pattern is emerging as a complement to (not a replacement for) cloud-backed agents in orchestrated systems.
 - **Durable workflow execution.** Production agent workflows should survive process crashes and infrastructure interruptions. Checkpointing state (memory, partial outputs, tool results) after each major step and supporting resume-from-checkpoint prevents restarting an hours-long workflow from scratch. Mistral Workflows, OpenAI Agents SDK, and similar runtimes are standardizing this as expected infrastructure.
+- **Review artifacts over raw transcripts.** For complex agent work, ask for purpose-built review artifacts (HTML explainers, annotated diffs, comparison grids, one-off editors) when a human needs to inspect options, tune values, or export structured decisions back into the workflow.
 
 ## Where these patterns surfaced
 
@@ -86,3 +87,4 @@ Reusable patterns for getting better behavior from one or more agents without de
 - [Agent infrastructure, harness engineering, and collaborative agent systems](../sources/newsletters/agent-infrastructure-harness-2026-05-01.md)
 - [AI-managed orchestration and local browser agents](../sources/newsletters/ai-managed-orchestration-local-browser-agents-2026-04-28.md)
 - [Production agent orchestration primitives](../sources/newsletters/production-agent-orchestration-2026-04-29.md)
+- [Agent-generated HTML artifacts](../sources/tweets/agent-html-artifacts-2026-05-13.md)

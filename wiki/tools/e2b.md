@@ -32,4 +32,4 @@ E2B is an isolated sandbox runtime for AI agents. Its core pitch is simple: agen
 
 ## Sources
 
-- [Practical tooling layer for evals in agentic software development](../sources/deep-research/2026-04-24-qa-tooling-for-software-agents.md)
+- [Practical tooling layer for evals in agentic software development](../sources/deep-research/qa-tooling-for-software-agents-deep-research.md)

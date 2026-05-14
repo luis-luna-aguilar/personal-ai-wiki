@@ -1,8 +1,8 @@
 ---
 title: Evals for agentic software development
 type: training
-as_of: 2026-05-05
-sources: [agents-evals-deep-research, qa-tooling-for-software-agents-deep-research, cost-aware-agent-evaluation-2026-04-28, opus-4-7-tokenizer-economics-2026-04-30]
+as_of: 2026-05-13
+sources: [agents-evals-deep-research, qa-tooling-for-software-agents-deep-research, cost-aware-agent-evaluation-2026-04-28, opus-4-7-tokenizer-economics-2026-04-30, agentic-security-tooling-2026-05-13]
 ---
 
 # Evals for agentic software development
@@ -21,6 +21,7 @@ Coding agents produce output that looks correct before it compiles, runs, or lan
 - Convert real bugs, PR comments, and postmortems into test cases systematically, not ad hoc.
 - Use LLM-as-judge for qualitative code review (style, architecture, security anti-patterns) only after deterministic gates pass.
 - Set cost and latency thresholds as hard limits to catch runaway recursive loops before they damage production.
+- Security checks should be treated as agent eval gates where possible: dependency freshness, known vulnerability scans, secret scans, supply-chain policy checks, and post-fix validation should produce artifacts the agent and reviewer can inspect.
 
 ## Layered eval stack
 
@@ -170,9 +171,10 @@ Proof artifacts matter for two reasons:
 
 ## Sources
 
-- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/2026-04-23-agents-evals.md)
-- [Practical tooling layer for evals in agentic software development](../sources/deep-research/2026-04-24-qa-tooling-for-software-agents.md)
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)
+- [Practical tooling layer for evals in agentic software development](../sources/deep-research/qa-tooling-for-software-agents-deep-research.md)
 - [Ramp AI adoption playbook](../sources/articles/ramp-ai-adoption-playbook.md)
 - [Shopify AI phase transition — Latent Space podcast (April 2026)](../sources/newsletters/shopify-latent-space-april-2026.md)
 - [Cost-aware agent evaluation](../sources/newsletters/cost-aware-agent-evaluation-2026-04-28.md)
 - [Opus 4.7 tokenizer economics](../sources/newsletters/opus-4-7-tokenizer-economics-2026-04-30.md)
+- [Agentic security tooling category](../sources/newsletters/agentic-security-tooling-2026-05-13.md)

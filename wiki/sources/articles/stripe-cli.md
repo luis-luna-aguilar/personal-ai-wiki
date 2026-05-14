@@ -15,8 +15,8 @@ Landing page for the Stripe CLI `projects` developer preview, which turns multi-
 ## Influenced pages
 
 - [Stripe CLI](../../tools/stripe-cli.md) — new tool page, main subject of the ingest
-- [Coding](../../history/state-of/coding.md) — added `agentic-devops` subcategory and placed Stripe CLI under it
-- [Agents](../../history/state-of/agents.md) — added the same subcategory from an agent-execution angle
+- [Coding](../../state-of/coding.md) — added `agentic-devops` subcategory and placed Stripe CLI under it
+- [Agents](../../state-of/agents.md) — added the same subcategory from an agent-execution angle
 
 ## Key claims extracted
 

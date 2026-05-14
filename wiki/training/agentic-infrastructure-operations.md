@@ -78,4 +78,4 @@ Verification should continue after the action. A safe infra loop is:
 
 ## Sources
 
-- [Agentic infrastructure and operations](../sources/deep-research/2026-04-24-agentic-devops.md)
+- [Agentic infrastructure and operations](../sources/deep-research/agentic-devops-deep-research.md)

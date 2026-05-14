@@ -3,8 +3,8 @@ title: State of Finance
 type: state-of
 domains: [finance]
 tags: []
-as_of: 2026-05-05
-sources: [perplexity-computer-plaid, hebbia-homepage, legacy-ai-tools-roadmap-xlsx, stripe-agent-native-commerce-fraud-2026-04-29]
+as_of: 2026-05-06
+sources: [perplexity-computer-plaid, hebbia-homepage, legacy-ai-tools-roadmap-xlsx, stripe-agent-native-commerce-fraud-2026-04-29, finance-agent-workflows-2026-05-06]
 ---
 
 # State of Finance
@@ -18,6 +18,8 @@ Current state of AI applied to personal and institutional finance — budgeting,
 AI products specialized for financial analysis, modeling, and document-heavy finance workflows.
 
 - [Hebbia](../tools/hebbia.md) — document-heavy knowledge-work platform with especially strong practical relevance in finance analysis and modeling workflows *(as of 2026-04-22)*
+- **Anthropic finance agent templates** — secondary newsletter coverage describes templates for pitch generation, valuation review, KYC, and month-end close with market-data integrations; pending primary Anthropic verification *(as of 2026-05-06)*
+- [Perplexity Computer](../tools/perplexity-computer.md) — professional-finance positioning now reportedly combines licensed finance data with packaged workflows; current signal is newsletter coverage pending primary verification *(as of 2026-05-06)*
 
 ### Personal finance AI
 
@@ -35,6 +37,7 @@ AI is shifting the fraud attack surface and enabling agents as autonomous econom
 
 ## Recent changes
 
+- [2026-05-06] Added packaged finance-agent workflow signal: Anthropic finance templates and Perplexity Computer professional-finance positioning are secondary-source entries pending primary verification.
 - [2026-04-29] Added agent-native commerce and compute-fraud framing from Stripe's perspective (via Every newsletter); stolen compute, agent-as-purchaser, free-trial farming
 - [2026-04-22] Added `Finance AI` subcategory with [Hebbia](../tools/hebbia.md) as the first dedicated finance-workflow product in the wiki
 - [2026-04-10] Page seeded from Perplexity Computer's Plaid integration signal (Superhuman AI newsletter)
@@ -42,3 +45,4 @@ AI is shifting the fraud attack surface and enabling agents as autonomous econom
 ## Sources
 
 - [Stripe agent-native commerce and compute fraud](../sources/newsletters/stripe-agent-native-commerce-fraud-2026-04-29.md)
+- [Finance agent workflow packaging - May 2026](../sources/newsletters/finance-agent-workflows-2026-05-06.md)

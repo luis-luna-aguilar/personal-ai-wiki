@@ -3,8 +3,8 @@ title: State of Voice AI
 type: state-of
 domains: [voice]
 tags: []
-as_of: 2026-04-23
-sources: [eleven-v3, hume-evi-3, elevenlabs-scribe, voice-becomes-agent-interface, legacy-ai-tools-roadmap-xlsx]
+as_of: 2026-05-13
+sources: [eleven-v3, hume-evi-3, elevenlabs-scribe, voice-becomes-agent-interface, legacy-ai-tools-roadmap-xlsx, gpt-realtime-2-2026-05-08, thinking-machines-interaction-2026-05-12]
 ---
 
 # State of Voice AI
@@ -14,6 +14,16 @@ Current state of AI voice products — text-to-speech, speech-to-speech conversa
 Healthcare voice tools (Dragon Copilot, Zo, Kora) are tracked in [State of Healthcare](healthcare.md) because their primary value is clinical workflow integration rather than the voice model layer itself.
 
 ## Subcategories
+
+### Real-time voice / interaction
+
+Streaming AI systems that process live speech, audio, and sometimes screen/video context with sub-second response, native interruption handling, and multi-turn conversation management. This merges the "real-time voice" and "real-time interaction" categories rather than treating them as separate tracks.
+
+- [GPT-Realtime-2](../tools/gpt-realtime-2.md) — OpenAI; "GPT-5-class reasoning" in voice; 128K context (4× prior), 5 reasoning levels (minimal→xhigh), tool use, interruption recovery, graceful failure handling; API: $1.15/hr input, $4.61/hr output *(as of 2026-05-08)*
+- **GPT-Realtime-Translate** — OpenAI; live speech-to-speech translation; 70+ input languages → 13 output languages; available in Realtime API *(as of 2026-05-08)*
+- **GPT-Realtime-Whisper** — OpenAI; streaming transcription and captions; available in Realtime API *(as of 2026-05-08)*
+- **TML-Interaction-Small** — Thinking Machines Lab (Mira Murati); 276B-parameter interaction model; 200ms audio streams, 0.4s end-to-end response, mid-sentence interruption, and simultaneous live video/audio processing *(as of 2026-05-12)*
+- **Gemini Magic Pointer** (Googlebook) — Google; Gemini-powered OS-level pointer that activates on clicked screen context; points toward real-time interaction as an operating-system surface rather than only a chat window *(as of 2026-05-13)*
 
 ### Voice models
 
@@ -30,4 +40,5 @@ Products focused primarily on transcription, speech recognition, and converting 
 
 ## Recent changes
 
+- [2026-05-13] Added merged `Real-time voice / interaction` subcategory: GPT-Realtime-2, GPT-Realtime-Translate, GPT-Realtime-Whisper, TML-Interaction-Small, and Gemini Magic Pointer; treats real-time voice and interaction as one category
 - [2026-04-23] Created `state-of/voice` page; added voice models and speech-to-text subcategories from existing tool pages that lacked state-of coverage

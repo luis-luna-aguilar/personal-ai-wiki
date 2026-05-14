@@ -13,7 +13,7 @@ This source cluster covers the affordable-but-serious coding-model tier. The str
 
 ## Influenced pages
 
-- [Models](../../history/state-of/models.md) — strengthens the affordable coding-model tier and adds Composer 2
+- [Models](../../state-of/models.md) — strengthens the affordable coding-model tier and adds Composer 2
 - [MiniMax M2.7](../../models/minimax-m2-7.md) — adds benchmark and economics detail
 - [Composer 2](../../models/composer-2.md) — turns the page from stub into a real current-state summary
 - [Cursor](../../tools/cursor.md) — makes the Composer 2 relationship more concrete
