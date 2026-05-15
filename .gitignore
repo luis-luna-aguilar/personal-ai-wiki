@@ -12,6 +12,7 @@ __pycache__/
 *.pyo
 .pytest_cache/
 *.egg-info/
+.venv/
 
 # OS
 .DS_Store
@@ -27,6 +28,9 @@ personal/**
 !personal/**/
 !personal/**/.gitkeep
 
-# Personal Wiki Agent runtime artifacts
-personal-wiki-agent/logs/
-personal-wiki-agent/app/config.local.toml
+# Agents MCP runtime artifacts
+agents/logs/
+agents/mcp/config.local.toml
+
+# temp files
+tmp/

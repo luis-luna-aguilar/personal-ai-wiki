@@ -10,7 +10,7 @@ from .config import PersonalWikiConfig
 
 
 def configure_logging(config: PersonalWikiConfig) -> logging.Logger:
-    logger = logging.getLogger("personal_wiki_agent")
+    logger = logging.getLogger("agents")
     if logger.handlers:
         return logger
 

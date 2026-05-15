@@ -7,7 +7,7 @@ from mcp.server.fastmcp import FastMCP
 
 from .engine import PersonalWikiAgent
 
-mcp = FastMCP("personal-wiki-agent")
+mcp = FastMCP("agents")
 _agent = PersonalWikiAgent()
 
 
@@ -27,7 +27,7 @@ def use_personal_wiki(
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Run the Personal Wiki Agent MCP server.")
+    parser = argparse.ArgumentParser(description="Run the Agents MCP server.")
     parser.add_argument(
         "--transport",
         choices=["stdio", "sse", "streamable-http"],
@@ -62,7 +62,7 @@ def main() -> None:
 
     if args.transport == "stdio":
         print(
-            "Starting Personal Wiki Agent MCP server in stdio mode.",
+            "Starting Agents MCP server in stdio mode.",
             file=sys.stderr,
         )
         print(
@@ -70,7 +70,7 @@ def main() -> None:
             file=sys.stderr,
         )
         print(
-            "For a connectable local URL, rerun with: personal-wiki-agent-mcp --transport streamable-http",
+            "For a connectable local URL, rerun with: agents-mcp --transport streamable-http",
             file=sys.stderr,
         )
         mcp.run(transport="stdio")
@@ -78,14 +78,14 @@ def main() -> None:
 
     if args.transport == "sse":
         print(
-            f"Starting Personal Wiki Agent MCP server in SSE mode at http://{mcp.settings.host}:{mcp.settings.port}{mcp.settings.sse_path}",
+            f"Starting Agents MCP server in SSE mode at http://{mcp.settings.host}:{mcp.settings.port}{mcp.settings.sse_path}",
             file=sys.stderr,
         )
         mcp.run(transport="sse", mount_path=args.mount_path)
         return
 
     print(
-        f"Starting Personal Wiki Agent MCP server in streamable HTTP mode at http://{mcp.settings.host}:{mcp.settings.port}{mcp.settings.streamable_http_path}",
+        f"Starting Agents MCP server in streamable HTTP mode at http://{mcp.settings.host}:{mcp.settings.port}{mcp.settings.streamable_http_path}",
         file=sys.stderr,
     )
     mcp.run(transport="streamable-http")

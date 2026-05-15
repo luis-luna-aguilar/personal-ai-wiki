@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agents"
+version = "0.1.0"
+description = "Agents, MCP tools, and ontology services for Luis's AI Wiki."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "deepagents>=0.0.5",
+  "langchain-openrouter>=0.0.3",
+  "mcp>=1.10.0",
+  "neo4j>=5.28.0",
+]
+
+[project.scripts]
+agents = "agents_mcp.cli:main"
+agents-mcp = "agents_mcp.server:main"
+agents-ontology = "agents_mcp.ontology_cli:main"
+
+[tool.setuptools]
+packages = ["agents_mcp", "agents_mcp.ontology", "agents_mcp.tools"]
+
+[tool.setuptools.package-dir]
+agents_mcp = "mcp"
+
+[tool.setuptools.package-data]
+agents_mcp = [
+  "query_instructions.md",
+  "config.default.toml",
+  "config.local.example.toml",
+  "prompts/*.md",
+  "evals/*.yaml",
+]

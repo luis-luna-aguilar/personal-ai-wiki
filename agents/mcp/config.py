@@ -69,7 +69,7 @@ def load_config(base_dir: Path | None = None) -> PersonalWikiConfig:
     local_path = base_dir / "config.local.toml"
 
     raw = _deep_merge(_load_toml(default_path), _load_toml(local_path))
-    app = raw["personal_wiki_agent"]
+    app = raw["agents"]
     transport = app["transport"]
     paths = app["paths"]
 

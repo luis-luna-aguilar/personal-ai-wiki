@@ -1,8 +1,8 @@
-[personal_wiki_agent]
+[agents]
 model = "openrouter:anthropic/claude-sonnet-4-6"
 max_files = 10
 log_level = "DEBUG"
 log_model_io = true
 
-[personal_wiki_agent.transport]
+[agents.transport]
 enable_remote_mcp = false

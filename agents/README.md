@@ -1,6 +1,6 @@
-# Personal Wiki Agent
+# Agents MCP
 
-Personal Wiki Agent turns this repository into a queryable expert system using Deep Agents as the harness and OpenRouter as the default model gateway.
+Agents MCP turns this repository into a queryable expert system using Deep Agents as the harness and OpenRouter as the default model gateway.
 
 ## Capabilities
 
@@ -13,12 +13,12 @@ Personal Wiki Agent turns this repository into a queryable expert system using D
 
 ## Layout
 
-- `app/query_instructions.md` governs query behavior
-- `app/config.default.toml` holds safe defaults
-- `app/config.local.toml` overrides local behavior
-- `app/server.py` exposes the MCP tool
-- `app/cli.py` provides local testing
-- `app/engine.py` contains the runtime
+- `mcp/query_instructions.md` governs query behavior
+- `mcp/config.default.toml` holds safe defaults
+- `mcp/config.local.toml` overrides local behavior
+- `mcp/server.py` exposes the MCP tool
+- `mcp/cli.py` provides local testing
+- `mcp/engine.py` contains the runtime
 - `logs/` stores runtime logs and per-query artifacts
 
 ## Setup
@@ -26,29 +26,29 @@ Personal Wiki Agent turns this repository into a queryable expert system using D
 1. Install dependencies:
 
 ```bash
-pip install -e ./personal-wiki-agent
+pip install -e ./agents
 ```
 
 2. Provide an API key:
 
 ```bash
-export PERSONAL_WIKI_OPENROUTER_API_KEY="..."
+export AGENTS_OPENROUTER_API_KEY="..."
 ```
 
-The runtime maps `PERSONAL_WIKI_OPENROUTER_API_KEY` to `OPENROUTER_API_KEY` for the underlying provider libraries if needed.
+The runtime maps `AGENTS_OPENROUTER_API_KEY` to `OPENROUTER_API_KEY` for the underlying provider libraries if needed. The older `PERSONAL_WIKI_OPENROUTER_API_KEY` name still works as a fallback.
 
 3. Optionally copy and edit local config:
 
 ```bash
-cp personal-wiki-agent/app/config.local.example.toml \
-   personal-wiki-agent/app/config.local.toml
+cp agents/mcp/config.local.example.toml \
+   agents/mcp/config.local.toml
 ```
 
 ## CLI usage
 
 ```bash
-personal-wiki-agent "What is happening in coding agents?"
-personal-wiki-agent "Should I bet on MCP?" --context "I care about interoperability" --include-personal-views --json
+agents "What is happening in coding agents?"
+agents "Should I bet on MCP?" --context "I care about interoperability" --include-personal-views --json
 ```
 
 ## MCP usage
@@ -56,7 +56,7 @@ personal-wiki-agent "Should I bet on MCP?" --context "I care about interoperabil
 Run the local MCP server:
 
 ```bash
-personal-wiki-agent-mcp
+agents-mcp
 ```
 
 By default this starts in `stdio` mode for clients like Claude Desktop that launch the server as a subprocess.
@@ -68,7 +68,7 @@ The server exposes one tool named `use_personal_wiki`.
 If you want a local URL to connect to manually, run:
 
 ```bash
-personal-wiki-agent-mcp --transport streamable-http
+agents-mcp --transport streamable-http
 ```
 
 Default local endpoint:
@@ -78,29 +78,29 @@ Default local endpoint:
 You can also set a custom bind address:
 
 ```bash
-personal-wiki-agent-mcp --transport streamable-http --host 127.0.0.1 --port 8000
+agents-mcp --transport streamable-http --host 127.0.0.1 --port 8000
 ```
 
 For SSE transport:
 
 ```bash
-personal-wiki-agent-mcp --transport sse --host 127.0.0.1 --port 8000
+agents-mcp --transport sse --host 127.0.0.1 --port 8000
 ```
 
 ## Configuration
 
 Primary configuration lives in:
 
-- `personal-wiki-agent/app/config.default.toml`
-- `personal-wiki-agent/app/config.local.toml`
+- `agents/mcp/config.default.toml`
+- `agents/mcp/config.local.toml`
 
 Secret credentials come from environment variables:
 
-- `PERSONAL_WIKI_OPENROUTER_API_KEY`
+- `AGENTS_OPENROUTER_API_KEY`
 
 ### Parameters
 
-#### `[personal_wiki_agent]`
+#### `[agents]`
 
 - `provider`: model provider layer. Default: `openrouter`
 - `model`: model string passed to Deep Agents / LangChain. Default: `openrouter:anthropic/claude-sonnet-4-6`
@@ -120,14 +120,14 @@ Secret credentials come from environment variables:
 - `log_model_io`: whether request/response artifacts are written per query
 - `persist_query_history`: whether final structured responses are written per query
 
-#### `[personal_wiki_agent.transport]`
+#### `[agents.transport]`
 
 - `enable_local_mcp`: local MCP exposure toggle
 - `enable_remote_mcp`: remote MCP exposure toggle
 
-#### `[personal_wiki_agent.paths]`
+#### `[agents.paths]`
 
-- `repo_root`: repository root, resolved relative to `app/`
+- `repo_root`: repository root, resolved relative to `mcp/`
 - `index_path`: path to `wiki/index.md`
 - `personal_root`: path to `personal/`
 - `wiki_root`: path to `wiki/`
@@ -144,9 +144,9 @@ The agent now writes runtime logs and query artifacts for debugging and behavior
 ### Log locations
 
 - Main rotating runtime log:
-  `personal-wiki-agent/logs/personal-wiki-agent.log`
+  `agents/logs/agents.log`
 - Per-query request/response artifacts:
-  `personal-wiki-agent/logs/queries/`
+  `agents/logs/queries/`
 
 ### What gets logged
 
@@ -171,7 +171,7 @@ Current implementation note:
 - `max_files` applies to the custom repo read tool used by this project and excludes the automatic index preload.
 - If we later allow Deep Agents' built-in filesystem tools directly, we should also add permission or middleware-level controls so those paths cannot bypass the same cap.
 
-Longer-term caveats and follow-up engineering tasks live in [FUTURE_WORK.md](/Users/luis/Obsidian/AI%20Wiki/personal-wiki-agent/FUTURE_WORK.md:1).
+Longer-term caveats and follow-up engineering tasks live in [FUTURE_WORK.md](/Users/luis/Obsidian/AI%20Wiki/agents/FUTURE_WORK.md:1).
 
 ### Typical artifact files
 
@@ -181,5 +181,5 @@ Longer-term caveats and follow-up engineering tasks live in [FUTURE_WORK.md](/Us
 
 ## Notes
 
-- The package directory inside the subproject is intentionally `app/` to avoid a nested folder with the same name as the project root.
+- Source code lives in `agents/mcp/`, but the installed Python package is `agents_mcp` so it does not shadow the third-party `mcp` library used by the server.
 - The first live CLI run showed that models may wrap JSON in prose and code fences; the runtime now attempts to recover valid JSON from those responses automatically.

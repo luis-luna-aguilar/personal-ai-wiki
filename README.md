@@ -55,7 +55,7 @@ scripts/               # Python maintenance utilities
 
 manual/                # User-facing HTML documentation
 
-personal-wiki-agent/   # Python agent that provides CLI and MCP access
+agents/               # Python agents, MCP server, and ontology compiler
 
 podcast/               # AI-generated podcast scripts built from wiki content for NotebookLM
 

@@ -1,4 +1,4 @@
-[personal_wiki_agent]
+[agents]
 provider = "openrouter"
 model = "openrouter:qwen/qwen3.6-plus"
 # max_steps is kept for documentation purposes only.
@@ -19,11 +19,11 @@ log_tool_calls = true
 log_model_io = true
 persist_query_history = true
 
-[personal_wiki_agent.transport]
+[agents.transport]
 enable_local_mcp = true
 enable_remote_mcp = false
 
-[personal_wiki_agent.paths]
+[agents.paths]
 repo_root = "../.."
 index_path = "../../wiki/index.md"
 personal_root = "../../personal"
@@ -31,5 +31,5 @@ wiki_root = "../../wiki"
 log_path = "../../wiki/log.md"
 proposals_root = "../../proposals"
 runtime_logs_dir = "../logs"
-runtime_log_file = "../logs/personal-wiki-agent.log"
+runtime_log_file = "../logs/agents.log"
 query_history_dir = "../logs/queries"

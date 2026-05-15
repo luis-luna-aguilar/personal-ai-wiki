@@ -1,6 +1,6 @@
 # Future Work
 
-This document captures implementation caveats, known limitations, and likely next engineering tasks for the Personal Wiki Agent.
+This document captures implementation caveats, known limitations, and likely next engineering tasks for the Agents MCP.
 
 ## Guardrail Caveats
 

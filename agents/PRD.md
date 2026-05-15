@@ -1,11 +1,11 @@
 ---
-title: Personal Wiki Agent PRD
+title: Agents MCP PRD
 status: draft
 date: 2026-04-23
 owner: Luis
 ---
 
-# Personal Wiki Agent
+# Agents MCP
 
 ## Overview
 
@@ -34,7 +34,7 @@ Outside that environment, the wiki is just a folder. Other agents do not automat
 
 ## Goal
 
-Create a **Personal Wiki Agent** that behaves like a specialized analyst over this repository and can be invoked by external AI clients through one clear tool:
+Create a **Agents MCP** that behaves like a specialized analyst over this repository and can be invoked by external AI clients through one clear tool:
 
 - `use_personal_wiki`
 
@@ -76,7 +76,7 @@ The tool should feel like: “Use Luis's personal wiki.”
 
 ## Solution
 
-Build a dedicated subproject at `personal-wiki-agent/` containing:
+Build a dedicated subproject at `agents/` containing:
 
 - a query-only instruction file
 - Deep Agents runtime code
@@ -244,11 +244,11 @@ This is a better fit than a generic retrieval wrapper because the product is not
 ## Repository Layout
 
 ```text
-personal-wiki-agent/
+agents/
   PRD.md
   README.md
   pyproject.toml
-  personal_wiki_agent/
+  agents/
     __init__.py
     query_instructions.md
     config.default.toml
@@ -275,7 +275,7 @@ personal-wiki-agent/
 
 Create a dedicated lightweight file:
 
-- `personal-wiki-agent/personal_wiki_agent/query_instructions.md`
+- `agents/agents/query_instructions.md`
 
 This file should contain query behavior only, including:
 
@@ -294,19 +294,19 @@ Use a config file as the primary control surface.
 
 ### Primary config files
 
-- `personal-wiki-agent/personal_wiki_agent/config.default.toml`
-- `personal-wiki-agent/personal_wiki_agent/config.local.toml`
+- `agents/agents/config.default.toml`
+- `agents/agents/config.local.toml`
 
 ### Secrets
 
 Secrets may come from environment variables, but names must be product-specific:
 
-- `PERSONAL_WIKI_OPENROUTER_API_KEY`
+- `AGENTS_OPENROUTER_API_KEY`
 
 ### Safe defaults
 
 ```toml
-[personal_wiki_agent]
+[agents]
 provider = "openrouter"
 model = "anthropic/claude-sonnet-4.6"
 max_steps = 10
@@ -320,11 +320,11 @@ return_consulted_pages = true
 return_gaps = true
 answer_style = "concise_analyst"
 
-[personal_wiki_agent.transport]
+[agents.transport]
 enable_local_mcp = true
 enable_remote_mcp = false
 
-[personal_wiki_agent.paths]
+[agents.paths]
 repo_root = ".."
 index_path = "../wiki/index.md"
 personal_root = "../personal"
@@ -424,7 +424,7 @@ The agent will incur model costs, so model evaluation is required.
 
 ### Milestone 1: foundation
 
-- create `personal-wiki-agent/`
+- create `agents/`
 - add PRD
 - add query-only instructions
 - add default config
@@ -451,7 +451,7 @@ The agent will incur model costs, so model evaluation is required.
 
 ## Acceptance Criteria
 
-- [ ] A dedicated `personal-wiki-agent/` subproject exists
+- [ ] A dedicated `agents/` subproject exists
 - [ ] The product exposes one public tool: `use_personal_wiki`
 - [ ] Query behavior is governed by a lightweight query-only instruction file
 - [ ] The agent uses Deep Agents as the internal harness
@@ -461,4 +461,3 @@ The agent will incur model costs, so model evaluation is required.
 - [ ] Fact vs personal opinion is kept distinct
 - [ ] Local MCP deployment is a first-class target
 - [ ] The system is read-only during query execution
-
