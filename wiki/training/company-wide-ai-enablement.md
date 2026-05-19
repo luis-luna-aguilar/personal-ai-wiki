@@ -1,8 +1,8 @@
 ---
 title: Company-wide AI enablement
 type: training
-as_of: 2026-05-13
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13]
+as_of: 2026-05-15
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13, fde-race-may-2026]
 ---
 
 # Company-wide AI enablement
@@ -123,6 +123,18 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - **Early-career workers are worse positioned.** 60% of early-career respondents personally benefited from AI vs 80% of senior professionals. Early-career workers also expressed significantly higher job displacement concern, consistent with tentative signs of slowdowns in hiring of recent graduates.
 - **Wage-productivity relationship is U-shaped.** Highest-paid workers (software developers, management) report the largest gains. But some lowest-wage workers also report large gains — often for side projects or new capabilities. Mid-tier scientific and legal professionals are the least enthusiastic.
 
+## Forward-deployed engineer (FDE) model
+
+As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have simultaneous hiring or JV programs for embedding engineers directly inside customer organizations. The model was pioneered by Palantir ("Deltas"): FDEs work on-site for months, writing production code in the customer's environment — part engineer, part consultant, bridging the gap between AI provider capability and customer domain knowledge.
+
+**Why it matters for enablement:**
+- FDE integration transforms AI tools into critical infrastructure that is nearly impossible to remove, securing multi-year enterprise revenue
+- Deloitte State of AI 2026: the share of companies with 40%+ of AI projects in production is set to double in six months; the "AI skills gap" is the #1 reported barrier to integration
+- Salesforce: committed to 1,000 FDEs. Anthropic: $1.5B joint venture with Blackstone and Goldman Sachs for mid-sized firms. OpenAI: Deployment Company. Google: hiring hundreds of FDEs.
+- Software development job postings linked to AI were up 14% YoY in April 2026 (Indeed Hiring Lab)
+
+**Pattern implication:** deep AI deployment at enterprise scale still requires human embedding — AI tools alone don't self-integrate into customer workflows, data, and compliance constraints.
+
 ## See also
 
 - [AI enablement — software development](ai-enablement-software-development.md) — engineering-specific patterns: critique loops, CI/CD as bottleneck, Shopify evidence, junior talent pipeline
@@ -151,3 +163,4 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)
 - [Agentic infrastructure and operations](../sources/deep-research/agentic-devops-deep-research.md)
 - [AI-native organizations as operating model](../sources/newsletters/ai-native-organizations-operating-model-2026-05-13.md)
+- [FDE hiring race — Anthropic, OpenAI, Google (May 2026)](../sources/newsletters/fde-race-may-2026.md)

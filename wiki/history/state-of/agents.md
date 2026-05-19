@@ -1,5 +1,8 @@
 # State of Agents — History
 
+- [2026-05-05] Model-pool routing and local-first browser agents emerge as a two-tier orchestration pattern: AI-managed orchestrators route across model pools at the top; local browser agents handle tasks client-side without cloud handoff
+- [2026-05-01] Production harness engineering expanding into deployment manifests, auth, RBAC, credential management, and artifact-backed multi-agent collaboration — beyond loop logic and evals alone
+
 - [2026-04-21] Added [Claude Cowork](../../tools/claude-cowork.md) under `Agent orchestration UIs`; desktop-first knowledge-work agent with Live Artifacts
 - [2026-04-21] Added [Hermes Agent](../../tools/hermes-agent.md) under `Agent orchestration`; 100K stars, substantive orchestration patterns from AINews breakdown
 - [2026-04-15] Added [OpenAI Agents SDK](../../tools/openai-agents-sdk.md) under `agent-orchestration` after ingesting OpenAI's Agents SDK evolution post.
@@ -9,6 +12,17 @@
 - [2026-04-09] Added `model-orchestration` subcategory with [Advisor strategy](../../workflows/advisor-strategy.md) after ingesting Anthropic's advisor-strategy launch post.
 - [2026-04-02] First content for this page. Added `agent-orchestration-ui` subcategory with Cursor after ingesting the Cursor 3 launch post.
 - [2025-03-06] Added [Curiosity-driven imagination](../../concepts/curiosity-driven-imagination.md) — paper pattern for agents that recover from broken plans by exploring, learning new steps, and turning them into guided rewards
+## Archived from current page on 2026-05-19
+
+- [2026-05-13] Frontier labs increasingly show up as deployment-service firms: enterprise value is shifting toward workflow templates, context, permissions, evals, and handoffs around model access.
+- [2026-05-13] Added `Persistent coding agents` subcategory: always-on agents with long-term memory, self-initiated contact, and self-pruning skill libraries; Hermes Agent and OpenClaw (with security advisory) are the first entries
+- [2026-05-13] Native real-time voice / interaction models arrive: Thinking Machines Lab TML-Interaction-Small (276B, 200ms audio, 0.4s response, mid-sentence interrupts) and Google Magic Pointer (Gemini OS-level cursor for Googlebook) move AI from chat-in-a-window toward ambient real-time co-presence
+- [2026-05-12] METR long-horizon benchmark: Claude Mythos Preview 50% success at 16+ hours (breaks current scale); 80% reliability threshold ~3 human-hours (Gemini 3.1 Pro ~1.5 hours); METR cautions duration is a difficulty proxy, not wall-clock time
+- [2026-05-11] OpenClaw supply chain attack (341 malicious registry entries); Microsoft enterprise warning; reinforces the memory-ownership question for persistent-agent deployments
+- [2026-05-05] Mistral Workflows (public preview): production-agent orchestration primitives now a shipped product — durable execution, state persistence, streaming, subagent coordination, and session resumption; signals these are table-stakes for hosted agent runtimes
+- [2026-05-05] Manus Cloud Computer introduces persistent Ubuntu environments for agents — SSH/web-terminal access, pre-installed tools, state that survives across sessions; contrasts with per-task ephemeral container model
+- [2026-05-05] Inference inflection framing: agent infrastructure needs extend beyond GPU compute to CPU orchestration, sandbox, browser, and execution capacity — compound infrastructure requirements
+
 ## Archived from current page on 2026-05-13
 
 - [2026-05-01] Codex Workspace Agents positioning sharpened: secondary newsletter coverage now frames Codex as a horizontal computer-work agent (docs, sheets, slides, research, planning, connected apps), not only software engineering; added to State of Computer Use as a horizontal entrant

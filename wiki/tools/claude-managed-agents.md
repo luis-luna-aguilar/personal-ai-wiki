@@ -118,7 +118,6 @@ The simple reason is that sessions that do not need a sandbox immediately can st
 - [2026-04-24] Built-in memory launched in public beta: file-backed stores, scoped sharing, audit logs, rollback/redaction controls, and Claude Console event visibility
 - [2026-04-15] Official launch framing and adjacent custom-agent / long-running-workflow signals make Managed Agents look less like a one-off architecture post and more like Anthropic's core platform direction
 - [2026-04-15] Every reported Claude Managed Agents is in public beta and highlighted Spiral's use of it to create an agent in a few hours while offloading sessions, memory, tool use, and credential handling
-- [2026-04-09] Page created from Anthropic's "Scaling Managed Agents: Decoupling the brain from the hands" engineering post
 
 ## Sources
 

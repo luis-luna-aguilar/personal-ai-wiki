@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents]
 subcategory: agentic-coding-workspace
 tags: [closed-source, agentic]
-as_of: 2026-05-05
-sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models, cursor-cloud-agents-march, cursor-cloud-agents-february, cursor-third-era, ai-security-scanners-2026-05-01, cursor-sdk-agent-runtime-2026-04-30]
+as_of: 2026-05-18
+sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models, cursor-cloud-agents-march, cursor-cloud-agents-february, cursor-third-era, ai-security-scanners-2026-05-01, cursor-sdk-agent-runtime-2026-04-30, agent-first-ide-convergence-may-2026, cursor-composer-2-5-launch]
 ---
 
 # Cursor
@@ -25,9 +25,10 @@ The strongest interpretive signal from the early-April reaction cycle is that Cu
 - Branch selection for cloud agents and improved search/filter controls make the cloud-agent layer feel more like a supervision surface than a background feature
 - Cloud agents auto-attach demo videos and screenshots to PRs for visual review *(as of 2026-04-10)*
 - **Bugbot** now learns rules from production PR feedback; Cursor reports a 78.13% resolution rate across 50,310 public PRs and 44,000+ learned rules across 110,000+ repos *(as of 2026-04-10)*
-- Backed by [Composer 2](../models/composer-2.md), Cursor's own coding model for complex long-horizon tasks; late-March coverage adds reported 61.7 TerminalBench 2.0, 73.7 SWE-bench Multilingual, low input-token pricing, and the now-disclosed Kimi-k2.5 base-model lineage
+- Backed by **Composer 2.5**, Cursor's in-house coding model (upgraded from Composer 2, May 2026): same Kimi K2.5 base, trained with targeted RL + textual hint injection at trajectory problem points, 25× more synthetic tasks than Composer 2, new "feature deletion" task type; pricing: $0.50/M input · $2.50/M output standard, $3.00/M · $15.00/M fast variant; next model in training at SpaceX/Colossus 2 scale (million H100-equivalents)
 - Plugin marketplace ("Cursor Marketplace") supports MCPs, skills, and subagents, with one-click install and private team marketplaces
 - Legacy "Cursor IDE" mode still available — switch back at any time
+- **Cloud development environments** (May 2026): fully configured environments with cloned repos, dependencies, version history, rollback, Dockerfile-based configs, audit logs, and cached builds running 70% faster; agents can trace a Slack-reported issue across all affected repos and open PRs in each simultaneously; isolated secrets per environment
 
 ## What's new in Cursor 3
 
@@ -88,16 +89,11 @@ The SDK repositions Cursor from a per-seat IDE product toward programmable agent
 
 ## Recent changes
 
+- [2026-05-18] Composer 2.5: targeted RL with textual hints + KL distillation; 25× synthetic tasks; fast-tier pricing ($3/$15 per M); next model in training at SpaceX/Colossus 2 scale
+- [2026-05-14] Cloud development environments: multi-repo agent work with full env config, Dockerfile support, version history, rollback, isolated secrets, 70% faster cached builds; agents can cross-repo trace Slack issues → PRs
 - [2026-04-30] Cursor SDK released: TypeScript SDK exposes the Cursor agent runtime headlessly for CI, automations, cloud VMs, MCP servers, model swapping, and embedded product agents; marks transition from IDE seat product toward agent infrastructure platform
 - [2026-05-01] Cursor Security Review reported: always-on PR review and scheduled codebase scans; source is AINews secondary coverage, primary Cursor page not yet fetched
 - [2026-04-22] Added Truell's third-era data: 35% of Cursor internal PRs from cloud agents; 2:1 agent-to-Tab user ratio; 15× agent usage growth YoY
-- [2026-04-22] Added Shipper vibe check: promising direction, awkward transition, early-product caveats
-- [2026-02-25] Cursor cloud agents rolled out with isolated VMs, self-testing, and demo-video review before the later March walkthrough made the product thesis explicit
-- [2026-03-06] Cloud-agents walkthrough made Cursor's thesis explicit: remote agents should test their own changes, return demo videos, and hand humans a supervision surface instead of just a diff
-- [2026-04-14] Cursor 3.1 added a tiled Agents Window, saved layouts, branch selection for cloud agents, and stronger supervision controls for parallel agent work
-- [2026-04-10] Bugbot learned rules: production PR feedback now turns into active review rules; Cursor reports 78.13% resolution across 50,310 public PRs
-- [2026-04-10] Cloud agents now auto-attach demo videos and screenshots to GitHub PRs
-- [2026-04-02] Cursor 3 announced — rebuilt agent-first interface, multi-repo, local↔cloud handoff, Composer 2, plugin marketplace
 
 ## Sources
 
@@ -109,3 +105,5 @@ The SDK repositions Cursor from a per-seat IDE product toward programmable agent
 - [Cursor cloud agents in late February](../sources/newsletters/cursor-cloud-agents-february.md)
 - [Michael Truell — "The third era of AI software development"](../sources/tweets/cursor-third-era.md)
 - [Cursor SDK as programmable coding-agent runtime](../sources/newsletters/cursor-sdk-agent-runtime-2026-04-30.md)
+- [Agent-first IDE convergence — May 2026](../sources/newsletters/agent-first-ide-convergence-may-2026.md)
+- [Cursor Composer 2.5 — launch post](../sources/articles/cursor-composer-2-5-launch.md)

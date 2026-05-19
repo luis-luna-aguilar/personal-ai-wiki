@@ -73,7 +73,6 @@ Gemini now generates downloadable artifacts directly from chat: Google Docs, She
 - [2026-04-22] Added benchmark scores for Deep Research Max (93.3% DeepSearchQA, 85.9% BrowseComp, 54.6% HLE); added collaborative planning and code execution capabilities from AINews coverage
 - [2026-04-21] Added Deep Research and Deep Research Max: Gemini API public preview, MCP support, multimodal grounding, and native visual reports
 - [2026-04-21] Added Chrome Skills, Gemini 3.1 Flash TTS, and native Mac app
-- [2026-04-10] Custom visualizations and notebooks features announced; rolling out to paid accounts
 
 ## Sources
 

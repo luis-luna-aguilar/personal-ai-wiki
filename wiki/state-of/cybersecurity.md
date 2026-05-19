@@ -3,8 +3,8 @@ title: State of Cybersecurity
 type: state-of
 domains: [cybersecurity]
 tags: []
-as_of: 2026-05-13
-sources: [slopcop-repo, glasswing, openai-gpt-5-5-launch, ai-security-scanners-2026-05-01, supply-chain-attacks-2026-05-13, agentic-security-tooling-2026-05-13, openai-daybreak-2026-05-13]
+as_of: 2026-05-19
+sources: [slopcop-repo, glasswing, openai-gpt-5-5-launch, ai-security-scanners-2026-05-01, supply-chain-attacks-2026-05-13, agentic-security-tooling-2026-05-13, openai-daybreak-2026-05-13, cloudflare-glasswing-2026-05]
 ---
 
 # State of Cybersecurity
@@ -50,11 +50,28 @@ Coding agents extended into security review and vulnerability validation.
 
 The category is shifting from one-off scanners toward agent-compatible security loops: vulnerability monitoring, fix validation, supply-chain checks, and deployment-risk review inside coding-agent workflows.
 
+**Cloudflare Project Glasswing harness architecture (May 2026)**
+
+Eight-stage harness Cloudflare built around Mythos Preview for large-scale repo security research:
+
+| Stage | Role |
+|---|---|
+| Recon | Architecture document; trust boundaries; entry points; initial task queue |
+| Hunt | ~50 concurrent narrowly scoped agents; each fans out to exploration subagents with PoC scratch env |
+| Validate | Independent adversarial agent re-reads code to *disprove* findings; no ability to emit new findings |
+| Gapfill | Re-queues areas touched but not covered thoroughly |
+| Dedupe | Collapses findings sharing the same root cause |
+| Trace | Per-consumer-repo reachability: "there is a flaw" → "there is a reachable vulnerability" |
+| Feedback | Reachable traces become new hunt tasks in consumer repos |
+| Report | Structured report against predefined schema; submitted to ingest API |
+
+Key design lessons: narrow scope beats exhaustive single-agent; adversarial second agent reduces noise more than self-review; splitting "is this buggy?" from "can an attacker reach it?" produces better results than asking both together.
+
 ### Frontier model capabilities (offensive)
 
 Frontier models operating above public tiers, deployed selectively for cybersecurity research.
 
-- [Claude Mythos Preview](../models/claude-mythos-preview.md) — Anthropic; restricted preview; autonomously found thousands of zero-days across major OSes and browsers without human steering; partners: Cisco, AWS, Microsoft; substantially above Opus 4.6 on CyberGym *(as of 2026-04-22)*
+- [Claude Mythos Preview](../models/claude-mythos-preview.md) — Anthropic; restricted preview; autonomously found thousands of zero-days; chains low-severity bugs into working exploits (exploit chain construction); autonomous proof generation loop; partners: Cisco, AWS, Microsoft; Cloudflare used it across 50+ repos (Project Glasswing, May 2026) *(as of 2026-05-19)*
 - [GPT-5.5](../models/gpt-5-5.md) — OpenAI; CyberGym 81.8% in the launch comparison table, above GPT-5.4 and Claude Opus 4.7 among publicly available models; publicly deployed with tighter safeguards rather than restricted-access-only release *(as of 2026-04-23)*
 
 ### Trusted defensive access
@@ -66,11 +83,8 @@ Provider programs that expand access to higher-risk cyber capabilities for verif
 
 ## Recent changes
 
+- [2026-05-19] Cloudflare Project Glasswing: detailed harness architecture (8 stages, ~50 concurrent agents, adversarial validate agent); Mythos exploit chain construction and proof loop confirmed; organic refusals inconsistent as safety boundary; architectural resilience over patch speed as the defender takeaway
 - [2026-05-13] OpenAI announced Daybreak as a thin official cyber-defense signal combining frontier models, Codex, and security partners; implementation details remain pending.
 - [2026-05-13] Agentic security tooling is becoming a category signal: scanner, monitor, fix-validation, and deployment-risk workflows are being redesigned for software built and operated by agents.
 - [2026-05-13] Added `AI developer supply chain attacks`: Mini Shai-Hulud campaign (persistence via .claude/settings.json + .vscode/tasks.json hooks; Guardrails AI v0.10.1 confirmed compromised) and Hugging Face Transformers impersonator; mitigations: minimumReleaseAge, blockExoticSubdeps
 - [2026-05-01] Added Claude Security and Cursor Security Review to AI-assisted vulnerability detection; both are secondary-source entries pending primary verification
-- [2026-04-23] Added [GPT-5.5](../models/gpt-5-5.md) under `Frontier model capabilities (offensive)` and noted OpenAI's Trusted Access for Cyber program for verified defenders
-- [2026-03-09] Codex Security launched: Codex extended into vulnerability review and validation
-- [2026-04-22] Page created; added `AI-specific attack surfaces` section with slopsquatting (USENIX 2025 evidence, 19.7% hallucination rate, slopcop mitigation)
-- [2026-04-22] Added `Frontier model capabilities (offensive)` section; [Claude Mythos Preview](../models/claude-mythos-preview.md) / Project Glasswing disclosed

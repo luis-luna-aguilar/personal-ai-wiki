@@ -21,3 +21,13 @@
 - [2026-04-22] Kimi K2.6: community framing as practical Opus 4.7 replacement for ~85% of tasks
 - [2026-04-22] Added `Security / cyber-offense capability` subcategory; [Claude Mythos Preview](../../models/claude-mythos-preview.md) confirms restricted-frontier pattern with autonomous zero-day discovery across major OSes/browsers
 - [2026-04-22] Added [Nano Banana 2](../../models/nano-banana-2.md) to `Image generation` subcategory; Google enters the arena with Gemini+web-search-grounded image generation
+
+## Archived from current page on 2026-05-19
+
+- [2026-05-13] Arena leaderboard (May 2026): Claude Opus 4.7 "most consistently dominant" overall; Gemini 3.1 Pro close second/creative writing; Meta Spark leads coding; GPT-5.5 leads math; Grok 4.20 leads creative/hard prompts; GPT-Image-2 tops text-to-image; Veo 3.1 leads video
+- [2026-05-07] Anthropic signs compute deal with SpaceX Colossus 1: 220K+ NVIDIA GPUs; doubled Claude Code limits on paid plans immediately; notable context: Musk vs. Altman court battle ongoing
+- [2026-05-05] Open-weight economics fragmenting: no single model dominates across transparency, token efficiency, edge deployment, coding benchmarks, and inference cost; selection now driven by deployment constraint rather than a single ranking (editorial synthesis)
+- [2026-05-05] Open-weight pricing pressure on closed-frontier for coding assistants and RAG; closed frontier retains clearer advantages in long-context and complex agentic tasks (editorial synthesis, The Code)
+- [2026-05-01] Qwen 3.6 27B: Artificial Analysis (via AINews) confirms #1 ranking under 150B (Intelligence Index 46) but flags ~21× Gemma 4 31B output-token cost on the evaluation suite
+- [2026-04-25] DeepSeek V4 moved from preview to release framing: Pro/Flash specs, MIT license, API pricing, independent open-model placement, Ascend compatibility, and token-usage caveats
+- [2026-04-23] GPT-5.5 released; replaces GPT-5.4 as the current OpenAI frontier model in the wiki; OpenAI leads more public benchmark categories again, while Claude Opus 4.7 retains some important engineering/tool-use edges

@@ -26,6 +26,8 @@ Valid values for the `tags:` field in frontmatter. Tags are for cross-cutting at
 - **`minimax`** — vendor/org: MiniMax
 - **`nousresearch`** — vendor/org: NousResearch
 - **`huggingface`** — vendor/org: Hugging Face
+- **`xai`** — vendor/org: xAI (Elon Musk / Grok)
+- **`collaboration`** — flavor: designed for shared human/agent or multi-user workflows
 
 ## Conventions
 

@@ -4,8 +4,8 @@ type: workflow
 domains: [agents]
 subcategory: agentic-orchestration-patterns
 tags: [agentic]
-as_of: 2026-05-13
-sources: [notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, harness-engineering-early-april, open-agent-orchestration-late-march, skills-and-plugin-packaging-late-march, harness-engineering-march, deep-agents-overview, goose-platform, googlecloudtech-adk-2-orchestration-patterns, agent-infrastructure-harness-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, production-agent-orchestration-2026-04-29, agent-html-artifacts-2026-05-13]
+as_of: 2026-05-19
+sources: [notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, harness-engineering-early-april, open-agent-orchestration-late-march, skills-and-plugin-packaging-late-march, harness-engineering-march, deep-agents-overview, goose-platform, googlecloudtech-adk-2-orchestration-patterns, agent-infrastructure-harness-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, production-agent-orchestration-2026-04-29, agent-html-artifacts-2026-05-13, gas-city-software-factory-2026-05]
 ---
 
 # Agentic orchestration patterns
@@ -44,6 +44,8 @@ Reusable patterns for getting better behavior from one or more agents without de
 - **Local-first browser agents.** For tasks that can be fully executed client-side, agents run entirely in the browser — no cloud handoff, no server-side compute. This reduces latency, cost, and privacy surface. The pattern is emerging as a complement to (not a replacement for) cloud-backed agents in orchestrated systems.
 - **Durable workflow execution.** Production agent workflows should survive process crashes and infrastructure interruptions. Checkpointing state (memory, partial outputs, tool results) after each major step and supporting resume-from-checkpoint prevents restarting an hours-long workflow from scratch. Mistral Workflows, OpenAI Agents SDK, and similar runtimes are standardizing this as expected infrastructure.
 - **Review artifacts over raw transcripts.** For complex agent work, ask for purpose-built review artifacts (HTML explainers, annotated diffs, comparison grids, one-off editors) when a human needs to inspect options, tune values, or export structured decisions back into the workflow.
+- **Dark factory / light factory.** Split agentic workflows into a **light** layer (planning, review, and human-agent interaction stay visible) and a **dark** layer (clearly defined execution runs in the background without human monitoring). As trust builds in the dark layer's output, more work moves out of the visible layer. Distinct from simple background execution: the light/dark split is a deliberate architectural boundary, not just async scheduling. *Source: Gas City workshop, Every (2026-05-19)*
+- **Mayor + polecats (one pet + many cattle).** One persistent, named supervisor agent (the "mayor") that a human interacts with directly. The mayor routes work to many anonymous, disposable worker agents ("polecats") that each handle one scoped task and shut down. The human manages one conversation; the mayor manages coordination and worker lifecycle. Workers don't accumulate context or interfere with each other — fresh start per task. *Source: Gas City workshop, Every (2026-05-19)*
 
 ## Where these patterns surfaced
 
@@ -88,3 +90,4 @@ Reusable patterns for getting better behavior from one or more agents without de
 - [AI-managed orchestration and local browser agents](../sources/newsletters/ai-managed-orchestration-local-browser-agents-2026-04-28.md)
 - [Production agent orchestration primitives](../sources/newsletters/production-agent-orchestration-2026-04-29.md)
 - [Agent-generated HTML artifacts](../sources/tweets/agent-html-artifacts-2026-05-13.md)
+- [Inside the 100-agent Software Factory — Gas City](../sources/newsletters/gas-city-software-factory-2026-05.md)

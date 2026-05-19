@@ -36,11 +36,6 @@ Computer use is also broadening into thinner action layers: desktop Electron app
 - [2026-05-05] Gemini now generates downloadable files from chat: Google Docs/Sheets/Slides, Microsoft Office formats, PDF, CSV, LaTeX, TXT, RTF, Markdown — artifact-producing assistant behavior
 - [2026-05-05] Amazon Quick (caveated): desktop work-context assistant building personal knowledge graph from files/calendar/Slack, integrating with Kiro CLI and Claude Code; secondary coverage only — pending primary Amazon verification
 - [2026-05-01] Added [Codex](../tools/codex.md) under `Computer use` as a horizontal computer-work contender; secondary newsletter coverage frames it as targeting docs, sheets, slides, browser flows, and connected workplace apps
-- [2026-04-22] Added [Pig](../tools/pig.md) under `Computer use`; Windows-specific computer-use infrastructure broadens the category beyond remote desktop proxies
-- [2026-03-02] Late-February source cluster broadened the category: Vercel exposed Electron desktop apps to agents, while Google pushed Gemini toward multi-step actions inside third-party Android apps
-- [2026-04-23] Removed [Claude Cowork](../tools/claude-cowork.md) — Cowork is a knowledge-work agent, not a computer-use tool; see [Agents](../state-of/agents.md)
-- [2026-03-31] Backfilled March Anthropic computer-use signal: remote macOS control, phone-triggered delegation, and cloud-following Claude Code sessions
-- [2026-03-12] Perplexity Personal Computer sharpened the category signal toward persistent digital proxies on dedicated machines, not only ephemeral task automation
 
 ## Sources
 

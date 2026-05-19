@@ -16,3 +16,14 @@
 - [2026-04-10] Added `agent-toolkits` subcategory with [Shopify AI Toolkit](../../tools/shopify-ai-toolkit.md)
 - [2026-04-22] Cursor 3 confirmed as cloud-agent orchestration bet: 35% internal PRs from cloud agents, 2:1 agent-to-Tab user ratio per Truell essay
 - [2026-04-22] Moved Codex Security (vulnerability review/validation) to [State of Cybersecurity](../../state-of/cybersecurity.md); slopsquatting documented there
+- [2026-03-07] Claude Code added local scheduled tasks and `/loop`, making recurring background coding work a first-class terminal-agent primitive
+
+## Archived from current page on 2026-05-19
+
+- [2026-05-13] Cognition $25B valuation round publicly confirmed; among top-tier coding shops increasing open-model RLFT investment (not decreasing) alongside OpenAI finetuning API deprecation
+- [2026-05-05] OpenAI Symphony: open-source Codex orchestration spec for defining, invoking, and coordinating Codex subagents; issue-queue integration as the input surface (secondary coverage; verify against primary OpenAI documentation)
+- [2026-05-05] Devin for Terminal: Cognition AI's shell-native agent with local codebase/tool access and cloud handoff for longer tasks; reinforces terminal as a first-class coding orchestration surface
+- [2026-04-30] Cursor SDK released: TypeScript SDK exposes the Cursor agent runtime headlessly for CI pipelines, server automations, cloud VMs, MCP servers, and embedded product agents; Cursor expanding from IDE seat product toward programmable agent infrastructure
+- [2026-04-24] Broadened `agentic-devops` from provisioning-only CLI workflows toward a fuller infrastructure-operations stack: diagnosis, approval-gated mutation, and post-deploy verification
+- [2026-04-24] Codex's April direction now reads less like "coding with extras" and more like a broader computer-work agent that still happens to be anchored in software workflows
+- [2026-03-06] Cursor's cloud-agents walkthrough made the workspace thesis explicit: remote agents test their own work, return demo videos, and give humans a supervision surface rather than just an AI-enhanced editor

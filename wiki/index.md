@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 type: index
-as_of: 2026-05-13
+as_of: 2026-05-19
 ---
 
 # Wiki Index
@@ -46,6 +46,7 @@ Foundation models. One page per model family or generation.
 - [models/openai-privacy-filter](models/openai-privacy-filter.md) — OpenAI open-weight MoE for on-device PII detection and redaction; 1.5B-total / 50M-active; Apache 2.0 *(as_of: 2026-04-23)*
 - [models/qwen-3-6-27b](models/qwen-3-6-27b.md) — Alibaba dense 27B open-weight; beats prior 397B MoE on all coding benchmarks; runs under 20 GB RAM *(as_of: 2026-05-01)*
 - [models/qwen-3-6-35b-a3b](models/qwen-3-6-35b-a3b.md) — Alibaba open-weight MoE coding/agent model; community benchmarks now place it strongest in the ~20GB local tier for long-context paper-to-code tasks *(as_of: 2026-05-13)*
+- [models/qwen-3-7](models/qwen-3-7.md) — Alibaba Qwen 3.7 preview; #13 Arena text overall, #7 Math; first Alibaba model in top-15 overall *(as_of: 2026-05-19)*
 
 ## Tools
 
@@ -61,6 +62,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/checkly](tools/checkly.md) — synthetic verification and Monitoring as Code built around Playwright and API checks *(as_of: 2026-04-24)*
 - [tools/codex](tools/codex.md) — OpenAI's cloud-based agent surface; still coding-first, but increasingly framed as a broader computer-work and cyber-defense workflow system *(as_of: 2026-05-13)*
 - [tools/cursor](tools/cursor.md) — Cursor 3.1 agentic coding workspace with tiled supervision, local↔cloud handoff, and Bugbot learned rules *(as_of: 2026-05-05)*
+- [tools/devin](tools/devin.md) — Cognition's coding agent; Auto-Triage: always-on Slack monitoring with parent/child dispatch and long-term dedup memory *(as_of: 2026-05-19)*
 - [tools/openai-deep-research](tools/openai-deep-research.md) — OpenAI's deep research agent; multi-step web research; available via ChatGPT and API *(as_of: 2026-04-22)*
 - [tools/gemini-deep-research](tools/gemini-deep-research.md) — Gemini Deep Research and Deep Research Max; most benchmarked public implementation; MCP support for internal data *(as_of: 2026-04-22)*
 - [tools/dragon-copilot](tools/dragon-copilot.md) — Microsoft's clinician-facing voice assistant for healthcare documentation and workflow automation *(as_of: 2026-04-22)*
@@ -73,6 +75,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/genspark-slides](tools/genspark-slides.md) — AI slides workflow inside Genspark's broader agent/content product surface *(as_of: 2026-04-22)*
 - [tools/google-adk](tools/google-adk.md) — Google's open-source agent framework; ADK 2.0 now clearly centers graph workflows, coordinator-specialist routing, A2A handoffs, and sandboxed execution *(as_of: 2026-04-24)*
 - [tools/gpt-realtime-2](tools/gpt-realtime-2.md) — OpenAI streaming speech-to-speech model with 128K context, GPT-5-class reasoning, tool use, and interruption handling *(as_of: 2026-05-08)*
+- [tools/grok-build](tools/grok-build.md) — xAI early beta CLI coding agent with plan mode and parallel worktree subagents; SuperGrok Heavy only *(as_of: 2026-05-15)*
 - [tools/harvey](tools/harvey.md) — legal AI platform; thin stub from a single editorial source *(as_of: 2026-04-02)*
 - [tools/hebbia](tools/hebbia.md) — finance-oriented AI knowledge-work platform for document-heavy analysis *(as_of: 2026-04-22)*
 - [tools/hermes-agent](tools/hermes-agent.md) — NousResearch open-source persistent agent framework with brain+muscle layers, Kanban supervision, and local-first memory *(as_of: 2026-05-13)*
@@ -85,11 +88,14 @@ Tools and products built on top of models. One page per tool.
 - [tools/k8sgpt](tools/k8sgpt.md) — Kubernetes diagnostics and triage tool usable by humans and agents *(as_of: 2026-04-24)*
 - [tools/kagent](tools/kagent.md) — Kubernetes-native runtime and governance layer for production AI agents *(as_of: 2026-04-24)*
 - [tools/kora](tools/kora.md) — healthcare operations assistant for scheduling and patient-service workflows *(as_of: 2026-04-22)*
+- [tools/langchain-langsmith](tools/langchain-langsmith.md) — LangChain open-source agent framework + LangSmith observability; LangSmith Engine closes the trace→improvement loop automatically; SmithDB is a purpose-built agent-trace database *(as_of: 2026-05-15)*
 - [tools/langfuse](tools/langfuse.md) — open-source LLM observability and eval tracing platform *(as_of: 2026-04-23)*
 - [tools/landingai-agentic-document-extraction](tools/landingai-agentic-document-extraction.md) — agentic document-intelligence system for forms, tables, and visually complex PDFs *(as_of: 2026-04-22)*
 - [tools/microsoft-copilot](tools/microsoft-copilot.md) — Microsoft's assistant surface across Microsoft 365; now agentic by default in Word, Excel, and PowerPoint *(as_of: 2026-05-01)*
 - [tools/microsoft-foundry-agents](tools/microsoft-foundry-agents.md) — Microsoft's hosted enterprise agent runtime with per-session VM isolation, persistent resume, and governance controls *(as_of: 2026-04-23)*
 - [tools/mistral-document-ai](tools/mistral-document-ai.md) — document-intelligence product for extracting and structuring enterprise documents *(as_of: 2026-04-22)*
+- [tools/multica](tools/multica.md) — open-source managed agents platform; treats coding agents (Claude Code, Codex, and 9 others) as project-board teammates with Squads routing and reusable skill compounding *(as_of: 2026-05-18)*
+- [tools/notion](tools/notion.md) — Notion's External Agents API lets Claude Code, Cursor, Codex, Devin, Warp, Decagon act inside Notion workspaces as a shared agent-native document surface *(as_of: 2026-05-14)*
 - [tools/open-evidence](tools/open-evidence.md) — physician-oriented medical evidence and clinical-question tool *(as_of: 2026-04-22)*
 - [tools/openai-agents-sdk](tools/openai-agents-sdk.md) — OpenAI's updated agent SDK with native sandbox, checkpoints, and provider-neutral manifests *(as_of: 2026-04-15)*
 - [tools/orca](tools/orca.md) — open-source worktree IDE for supervising multiple coding agents across isolated branches *(as_of: 2026-04-21)*
@@ -202,8 +208,8 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 ## Page count
 
 - state-of: 11
-- models: 14
-- tools: 61
+- models: 15
+- tools: 62
 - benchmarks: 8
 - workflows: 5
 - concepts: 15
@@ -211,4 +217,4 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 - training: 12
 - use-cases: 1
 
-**Total content pages: 135.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 137.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.

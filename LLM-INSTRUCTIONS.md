@@ -617,63 +617,18 @@ When spilling: open the history file (or create it), append the spilled entry wi
 
 ## Maintenance
 
-### Scripts (on-demand, free to run)
+All maintenance operations are defined in [`MAINTENANCE.md`](./MAINTENANCE.md). Read that file for the full specification of scripts, podcast workflow, semantic lint, and the full maintenance pass procedure.
 
-| Script | Purpose | Trigger phrase |
-|---|---|---|
-| `stale.py` | Report pages whose `as_of` exceeds threshold | "show stale pages", "what's stale" |
-| `orphans.py` | Report pages with no inbound internal links | "find orphan pages" |
-| `link_check.py` | Report broken Markdown links and editor-specific link syntax in wiki page bodies | "check links" |
-| `tag_compliance.py` | Report tags/domains/subcategories not in `_schema/` | "check tag compliance" |
-| `lint_all.py` | Chain all four | "run lint", "lint the wiki" |
-| `build_podcast.sh <1\|2\|3\|all>` | Generate podcast markdown files from wiki content | "build podcast files", "generate podcasts", "rebuild podcast" |
-
-Run via `python scripts/<name>.py` or `bash scripts/<name>.sh`. These are cheap — run them whenever asked.
-
-## Podcast workflow
-
-The wiki is periodically exported as three ~40-minute podcast source files. The full spec lives in `podcast/directions.md`.
-
-### Generate podcast files
-
-Triggered by **"build podcast files"**, **"generate podcasts"**, **"rebuild podcast"**, or similar.
-
-```bash
-bash scripts/build_podcast.sh all
-```
-
-Output lands in `podcast/out/` (gitignored). Three files:
-- `block-1-state-of-play.md` — state-of pages + model pages + benchmarks
-- `block-2-tools-workflows.md` — tool pages + workflow pages
-- `block-3-concepts-trends-training.md` — concept pages + trend pages + training pages
-
-Each file begins with a framing intro from `podcast/block-N-*.md` so the podcast tool knows the episode objective.
-
-### Analyze whether the split needs updating
-
-Triggered by **"check podcast split"**, **"should I resplit the podcast"**, or similar.
-
-Run this analysis **without modifying any files** — report only:
-
-1. Word count per current block: `wc -w wiki/<dir>/*.md` for each dir in each block.
-2. Flag any block that has grown past **15,000 words** — that block likely needs to be split.
-3. Flag any wiki directory not currently assigned to a block (new folders are easy to miss).
-4. Suggest a revised split if needed, showing which dirs move where and the estimated new word counts.
-5. If the user approves a new split, update:
-   - The relevant `podcast/block-N-*.md` intro file (title, objective, sources listed)
-   - The `case` branch in `scripts/build_podcast.sh`
-   - The block table in `podcast/directions.md`
-   - This section in `LLM-INSTRUCTIONS.md`
-
-### Semantic lint (LLM, costly, explicit only)
-
-Run these **only when the user explicitly asks with one of these phrases**:
-
-- **"find contradictions"** / **"scan for contradictions"** → read `wiki/index.md` + all state-of pages + referenced pages, look for claims that contradict each other, report findings
-- **"missing page suggestions"** / **"what concepts need pages"** → find entities/concepts/training topics mentioned across multiple pages but lacking their own page, suggest which deserve promotion
-- **"domain completeness"** / **"what's missing from state-of/X"** → given a domain, report subcategories that look thin or missing compared to mentions elsewhere
-
-**Never run these automatically.** They consume serious tokens. Only on explicit request.
+**Quick reference — trigger phrases:**
+- `"run lint"` / `"lint the wiki"` → `python scripts/lint_all.py`
+- `"find orphan pages"` → `python scripts/orphans.py`
+- `"check links"` → `python scripts/link_check.py`
+- `"check tag compliance"` → `python scripts/tag_compliance.py`
+- `"check index"` / `"index check"` → `python scripts/index_check.py`
+- `"check source orphans"` → `python scripts/source_orphans.py`
+- `"check cap"` / `"recent changes cap"` → `python scripts/recent_changes_cap.py`
+- `"build podcast files"` / `"rebuild podcast"` → `bash scripts/build_podcast.sh all`
+- `"run maintenance"` / `"do a maintenance pass"` → follow the full pass procedure in `MAINTENANCE.md`
 
 ## Personal space rules
 

@@ -64,10 +64,6 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - [2026-04-22] Added Cursor/Truell internal data: 35% of PRs from cloud agents; third-era dev pattern operational inside Cursor itself
 - [2026-04-22] Added trust-battery pattern (Claudie/Every) and AI sandwich org architecture; Dan Shipper prediction: two org models coexist, single-purpose fleet loses
 - [2026-03-04] OpenClaw cluster provided an early concrete signal of AI-native organizational behavior: named personal agents in shared channels, agent-to-agent coordination, and humans supervising many agents as if they were teammates
-- [2026-04-21] Added McKinsey (2026) as the strongest third-party signal yet: 80%+ no bottom-line ROI, workflow redesign named as the blocker, "above the loop" distinction introduced
-- [2026-04-10] Added weak supporting signal from Postman founder's AI-era org-chart thesis (wider spans, fewer layers)
-- [2026-04-10] Ramp adds a concrete company-reported example of org-wide AI building and non-engineer PR creation
-- [2026-04-02] Trend opened from Harvey's "Legal is Next" post
 
 ## Sources
 

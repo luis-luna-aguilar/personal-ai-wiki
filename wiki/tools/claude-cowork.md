@@ -4,7 +4,7 @@ type: tool
 domains: [agents]
 subcategory: agent-orchestration
 tags: [anthropic, agentic]
-as_of: 2026-04-23
+as_of: 2026-05-14
 sources: [claude-cowork-launch, aakash-gupta-cowork, claude-design-launch, claude-productivity-surfaces, anthropic-desktop-agent-expansion-late-march, anthropic-persistent-workflow-surfaces-february, awsai-cowork-bedrock-2026-04-23]
 ---
 
@@ -27,6 +27,15 @@ Anthropic's desktop agent for knowledge work. It works across local files, folde
 - Reported connectors include Slack, Salesforce, Google Drive, Asana, and Jira
 - Released in the same product moment as [Claude Design](claude-design.md), Anthropic's research-preview surface for prototypes, slides, and one-pagers
 
+## Vertical workflow bundles (as of 2026-05-14)
+
+Anthropic launched two prebuilt Cowork-based workflow bundles targeting end-users rather than developers:
+
+- **Claude for Small Business** — 15 ready-to-run agentic workflows + 15 skills; integrations with QuickBooks, PayPal, DocuSign; automates payroll planning, invoice chasing, campaign launch, and similar repeatable tasks
+- **Claude for Legal Professionals** — 12 one-click workflows for legal document and workflow automation
+
+Both bundles are the clearest signal yet of Anthropic shifting from developer API tools toward direct end-user vertical automation products.
+
 ## AWS Bedrock deployment (as of 2026-04-23)
 
 Claude Cowork is now available via Amazon Bedrock in public research preview. The main enterprise implication is deployment shape rather than new end-user behavior: organizations can run Cowork through their own AWS environment, with prompts, files, and model responses kept within the customer's AWS account.
@@ -41,11 +50,11 @@ Cowork also did not appear from nowhere. The earlier Claude for Word beta sugges
 
 ## Recent changes
 
+- [2026-05-14] Claude for Small Business and Claude for Legal launched: 27 combined one-click agentic workflows on Cowork, with QuickBooks/PayPal/DocuSign integrations; first direct vertical automation product push
 - [2026-04-23] AWS Bedrock public research preview: Cowork now available via Bedrock, keeping prompts, files, and model responses within the customer's AWS account
 - [2026-02-25] Cowork added scheduled tasks, making recurring delegated work first-class before the later Dispatch / Channels / Live Artifacts expansion
 - [2026-04-21] Added late-March framing: Cowork is positioned as a VM-backed, local-first delegated desktop workflow, not only an April artifact surface
 - [2026-04-21] Added earlier April precursor: Claude for Word beta signaled Anthropic's move into in-app document workflows before Cowork / Live Artifacts
-- [2026-04-21] Live Artifacts shipped for connected dashboards, trackers, and reports
 
 ## Sources
 

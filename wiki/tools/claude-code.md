@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: [anthropic, cli, agentic]
-as_of: 2026-05-13
-sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13]
+as_of: 2026-05-19
+sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, anthropic-claude-code-best-practices-2026-05, claude-code-fast-mode-default-2026-05]
 ---
 
 # Claude Code
@@ -36,7 +36,8 @@ Anthropic's terminal-first AI coding agent. Runs in the shell, operates autonomo
 - `/autofix-pr` now triggerable from CLI: run `/autofix-pr` after finishing a PR, and it sends your session to the cloud so the PR autofixer has full context to address CI failures and reviewer comments
 - Remote Control: `claude remote-control` spawns a new local Claude Code session from the mobile app (available on Max, Team, and Enterprise plans at version ≥2.1.74); lets you kick off sessions from your phone
 - `/goal` command (May 2026, research preview): set a target (e.g. "pass all tests in this folder") and Claude loops autonomously until an evaluator model confirms it is met — analogous to the `/goals` command OpenAI added to Codex; the first native long-horizon success-criterion primitive in Claude Code
-- Opus 4.7 fast mode (May 2026, research preview via API and Claude Code): Cursor reports 2.5× faster output at approximately 6× the cost compared to standard Opus 4.7; adds a new latency/price tier above the standard frontier tier
+- Opus 4.7 fast mode (now default, as of 2026-05-19): was research preview; now the default mode for Claude Code; Cursor reports 2.5× faster output at approximately 6× the cost compared to standard Opus 4.7
+- Claude Console prompt cache diagnostics (May 2026): developers can now see cache hit/miss rates for their Claude Code sessions in Claude Console; useful for debugging context reuse and cost efficiency in multi-agent setups
 - Agent View (research preview, Claude Code v2.1.139+): `claude agents` opens one terminal screen for dispatching and supervising background Claude Code sessions. Sessions are grouped by state, can be peeked/replied to without opening the full transcript, attached/detached for full conversation, and launched from Agent View, `/bg`, or `claude --bg`; editable background sessions are isolated in git worktrees under `.claude/worktrees/` when possible.
 - Every's product-management guide adds command-pack examples such as strategy interviews and product-pulse reviews, reinforcing Claude Code as a product workflow surface, not only a code editor.
 
@@ -52,6 +53,26 @@ The Monitor tool (announced 2026-04-10) lets Claude Code create background scrip
 ## Routines
 
 Routines extend Claude Code from local terminal sessions into repeatable hosted workflows. A routine packages a prompt, repo, and connectors into a workflow that can run on a schedule, from an API call, or in response to an event on Anthropic's infrastructure.
+
+## Best practices (Anthropic engineering, May 2026)
+
+**Context window management**
+- Context window is the #1 resource; performance degrades as it fills; the custom status line tracks context usage for exactly this reason
+- Start a new session when context is full rather than continuing in a degraded state
+
+**Verification criteria**
+- Always give Claude a way to verify its own work before reporting done: run the tests, take a screenshot, execute a command and check the output
+- Without a verification criterion, Claude marks tasks complete based on code inspection alone — missing runtime failures
+
+**Explore-plan-code workflow**
+- Step 1 (Explore): Claude reads relevant files in plan mode — no edits permitted
+- Step 2 (Plan): Claude writes a plan doc; press Ctrl+G to open it in a text editor for review and editing before any code is written
+- Step 3 (Code): Claude implements against the approved plan; commits after each logical unit
+- Skip plan mode for small or clearly-scoped tasks — overhead is only worth it for multi-file or uncertain-approach work
+
+**UI verification**
+- The Claude Chrome extension lets Claude take screenshots of the running app to verify visual output
+- Closes the loop between a code change and the rendered result without requiring a human to look
 
 ## /ultrareview
 
@@ -96,13 +117,11 @@ That matters because it shifts the product story away from "Anthropic has a stro
 
 ## Recent changes
 
+- [2026-05-19] Fast mode promoted from research preview to default for Claude Code; Claude Console gains prompt cache diagnostics
+- [2026-05-18] Anthropic engineering best practices: context window as #1 constraint; verification-criteria pattern; explore-plan-code workflow (plan mode + Ctrl+G); Chrome extension for UI screenshot verification
 - [2026-05-13] /goal command added (research preview): autonomous loop until evaluator model confirms target met — first native long-horizon success-criterion primitive in Claude Code
 - [2026-05-13] Opus 4.7 fast mode added (research preview): 2.5× faster, ~6× cost per Cursor benchmarks; new latency/price tier
 - [2026-05-13] Agent View added (research preview, v2.1.139+): `claude agents` supervises background sessions with peek/reply, attach/detach, `/bg`, `--bg`, and worktree isolation.
-- [2026-05-01] Claude Code as a product-management environment: Every profiles PM workflows inside Claude Code — roadmaps, PRDs, tickets, strategy docs, GitHub Projects tracking, and Compound Engineering skills; extends the tool beyond engineering into product operations
-- [2026-04-24] Added one-time scheduling from CLI / Routines UI via `Schedule -> Once`, extending Claude Code's scheduled-workflow support beyond recurring runs
-- [2026-04-23] /ultrareview added (v2.1.86+, research preview): cloud multi-agent code review with independent finding verification; 5-10 min background; 3 free runs for Pro/Max through May 5, 2026; then $5-20 extra usage; requires Claude.ai login; not on Bedrock/Vertex AI/Foundry
-- [2026-04-22] Added --worktree flag (built-in parallel isolated git worktrees), /autofix-pr CLI trigger, and Remote Control mobile session spawning
 
 ## Sources
 
@@ -122,3 +141,4 @@ That matters because it shifts the product story away from "Anthropic has a stro
 - [Claude Code /goal, fast mode, and FleetView](../sources/newsletters/claude-code-goal-fastmode-fleetview-2026-05-13.md)
 - [Claude Code Agent View docs](../sources/articles/claude-code-agent-view-2026-05-13.md)
 - [Agent-native product management guide - Every](../sources/articles/agent-native-product-management-2026-05-13.md)
+- [Claude Code Fast mode becomes default + spec-drift logging](../sources/newsletters/claude-code-fast-mode-default-2026-05.md)

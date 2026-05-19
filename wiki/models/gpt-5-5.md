@@ -4,8 +4,8 @@ type: model
 domains: [models, coding, agents, science, cybersecurity]
 subcategory: frontier-multimodal-model
 tags: [openai, closed-source]
-as_of: 2026-05-06
-sources: [openai-gpt-5-5-launch, danshipper-gpt-5-5-vibe-check, gpt-5-5-instant-default-2026-05-06]
+as_of: 2026-05-18
+sources: [openai-gpt-5-5-launch, danshipper-gpt-5-5-vibe-check, gpt-5-5-instant-default-2026-05-06, chatgpt-personal-finance-2026-05]
 ---
 
 # GPT-5.5
@@ -29,6 +29,14 @@ OpenAI's April 2026 frontier model, positioned as "our smartest and most intuiti
 - Scientific-use framing is no longer speculative: launch materials cite benchmark gains plus concrete research-use anecdotes
 - Writing and coding vibe check from Every suggests this is the first OpenAI release in about a year that materially pulls some users back from Claude for daily use
 
+## @Finances personal finance agent (May 2026)
+
+- Activated with `@Finances` inside any ChatGPT conversation (US Pro only, preview)
+- Connects to 12,000+ financial providers; grounds answers in the user's actual income and spending data
+- Finance benchmark scores: GPT-5.5 Thinking 79/100 on complex personal-finance tasks; GPT-5.5 Pro 82.5/100
+- Launch video: 14M+ views in 48 hours
+- Analyst framing: potential displacement of dedicated fintech assistant apps
+
 ## Weaknesses / caveats
 
 - Claude Opus 4.7 remains stronger on some higher-fidelity engineering and tool-use evaluations
@@ -38,6 +46,7 @@ OpenAI's April 2026 frontier model, positioned as "our smartest and most intuiti
 
 ## Recent changes
 
+- [2026-05-18] @Finances agent launched: 12,000+ financial providers; personalized money advice grounded in real spending data; GPT-5.5 Thinking 79/100, Pro 82.5/100; US Pro preview; 14M views in 48h
 - [2026-05-06] Secondary coverage says GPT-5.5 Instant became ChatGPT's default model, replacing GPT-5.3 Instant; official verification still needed for exact rollout and hallucination claims.
 - [2026-04-23] Released; GPT-5.5 supersedes GPT-5.4 as OpenAI's current frontier model and leads on Terminal-Bench 2.0, GDPval, ARC-AGI-2, CyberGym, and BixBench
 

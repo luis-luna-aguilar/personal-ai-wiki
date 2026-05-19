@@ -3,8 +3,8 @@ title: Agent improvement loop
 type: concept
 domains: [agents]
 tags: [agentic]
-as_of: 2026-04-24
-sources: [trace-agent-improvement-loop, langchain-better-harness, cursor-bugbot-learning, self-improving-skills, agents-evals-deep-research]
+as_of: 2026-05-15
+sources: [trace-agent-improvement-loop, langchain-better-harness, cursor-bugbot-learning, self-improving-skills, agents-evals-deep-research, langchain-interrupt-may-2026]
 ---
 
 # Agent improvement loop
@@ -61,6 +61,19 @@ Tested with Claude Sonnet 4.6 and GLM-5. Results showed near-full generalization
 
 Cursor's Bugbot shows what the improvement loop looks like when shipped inside a user-facing product. Instead of relying only on offline experiments, Bugbot turns feedback from merged PRs into candidate rules, evaluates those rules on later PRs, activates rules that keep earning good signal, and disables rules that perform poorly. That is the same core loop in more operational form: production traces plus human feedback become structured changes to the harness.
 
+## LangSmith Engine: observability as improvement loop
+
+LangChain's LangSmith Engine (launched May 2026 at Interrupt) shows the improvement loop productized at the observability layer. Unlike passive trace logging, Engine actively:
+
+1. Consumes traces from production and staging
+2. Clusters failures by pattern
+3. Identifies likely code issues behind each cluster
+4. Proposes fixes and evals for those specific failure modes
+
+The loop closes without requiring a human to manually review traces and hypothesize causes — the system surfaces the hypotheses automatically for human confirmation.
+
+SmithDB underpins this: a database built specifically for nested, long-running agent traces with large payloads. Built on Apache DataFusion and Vortex, it claims 12–15× faster access on key agent-trace workloads compared to general-purpose databases. The architectural bet is that agent traces are a different workload shape from application logs — nested structure, large payloads, and queries that follow the parent→child trace hierarchy rather than time-range scans.
+
 ## Self-improving skills
 
 A variation of the improvement loop applied at the *skill/prompt* level rather than the full agent harness. The problem: skills in a Claude Code skills folder are static, but the environment around them isn't. A skill that worked last month may quietly start failing when the codebase changes, the model updates, or user request patterns shift. The failures are often invisible until someone notices degraded output.
@@ -104,11 +117,11 @@ This applies in both directions: do not let holdout cases leak into training dat
 
 ## Recent changes
 
+- [2026-05-15] LangSmith Engine added: actively clusters trace failures and proposes fixes/evals — observability as improvement loop, not passive logging. SmithDB: purpose-built agent-trace database, 12-15× faster, Apache DataFusion + Vortex
 - [2026-04-24] Added eval suite hygiene section: holdout sets, trace mining, periodic refresh, and retiring stale tests
 - [2026-04-22] Added self-improving skills pattern: closed feedback loop for skill drift; meta-skill 5-step prompt optimization loop
 - [2026-04-10] Added Cursor Bugbot as a production example of live feedback turning into agent rules
 - [2026-04-10] Added Better-Harness section — LangChain's autonomous harness hill-climbing system
-- [2026-04-09] Page created from LangChain's conceptual guide "The Agent Improvement Loop Starts with a Trace"
 
 ## Related
 
@@ -124,3 +137,4 @@ This applies in both directions: do not let holdout cases leak into training dat
 - [Bugbot now self-improves with learned rules](../sources/articles/cursor-bugbot-learning.md)
 - [Self-improving agent skills — auto-improvement loops](../sources/tweets/self-improving-skills.md)
 - [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)
+- [LangChain Interrupt conference — May 2026](../sources/newsletters/langchain-interrupt-may-2026.md)
