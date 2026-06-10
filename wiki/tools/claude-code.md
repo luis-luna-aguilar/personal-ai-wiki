@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: [anthropic, cli, agentic]
-as_of: 2026-05-19
-sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, anthropic-claude-code-best-practices-2026-05, claude-code-fast-mode-default-2026-05]
+as_of: 2026-05-28
+sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, anthropic-claude-code-best-practices-2026-05, claude-code-fast-mode-default-2026-05, dynamic-workflows-claude-code]
 ---
 
 # Claude Code
@@ -53,6 +53,19 @@ The Monitor tool (announced 2026-04-10) lets Claude Code create background scrip
 ## Routines
 
 Routines extend Claude Code from local terminal sessions into repeatable hosted workflows. A routine packages a prompt, repo, and connectors into a workflow that can run on a schedule, from an API call, or in response to an event on Anthropic's infrastructure.
+
+## Dynamic workflows
+
+Dynamic workflows (research preview, announced 2026-05-28) let Claude **dynamically write orchestration scripts** that run tens to hundreds of parallel subagents in a single session. Claude plans the task, breaks it into subtasks, fans them out, and verifies each result before folding it back in — agents attack the problem from independent angles while other agents try to refute their findings, and the run iterates until the answers converge, reaching results a single pass cannot.
+
+- **Built for long-running, parallel work** — runs extend into hours or days, doing complex engineering work that previously took weeks.
+- **Durable by default** — progress is checkpointed as the run proceeds, so an interrupted job resumes where it left off; coordination lives outside the conversation, so the plan stays on track as the task grows.
+- **Typical use cases** — codebase-wide bug hunts, profiler-guided optimization audits, security/hardening passes, large migrations and language ports across thousands of files, and high-stakes work you want independently double-checked.
+- **How to run** — turn on auto mode, then either ask Claude to "create a workflow" or enable the `ultracode` setting from the effort menu (sets effort to xhigh and lets Claude decide when a workflow is warranted).
+- **Higher cost** — consumes substantially more tokens than a typical session; the first time a workflow triggers, Claude Code shows what is about to run and asks for confirmation. Org admins can disable workflows via managed settings.
+- **Availability** — research preview in the Claude Code CLI, Desktop, and VS Code extension, and on the Claude API, Amazon Bedrock, Vertex AI, and Microsoft Foundry. On by default for Max and Team (and the API); off by default for Enterprise at launch (admin can enable in settings).
+
+**Flagship example — Bun rewrite:** Jarred Sumner used dynamic workflows to port Bun from Zig to Rust — ~750,000 lines of Rust, 99.8% of the existing test suite passing, eleven days from first commit to merge. One workflow mapped the correct Rust lifetime for every struct field; the next wrote each `.rs` file as a behavior-identical port of its `.zig` counterpart (hundreds of agents in parallel, two reviewers per file); a fix loop drove the build and test suite until clean; an overnight workflow removed unnecessary data copies and opened a PR per fix for review. (Not yet in production.)
 
 ## Best practices (Anthropic engineering, May 2026)
 
@@ -117,6 +130,7 @@ That matters because it shifts the product story away from "Anthropic has a stro
 
 ## Recent changes
 
+- [2026-05-28] Dynamic workflows added (research preview): the `ultracode` effort setting (xhigh) lets Claude write orchestration scripts running tens-to-hundreds of parallel subagents that plan, verify (with adversarial agents), and iterate to convergence on hours-to-days work; runs checkpoint and resume. On by default for Max/Team/API, admin-enabled for Enterprise; uses substantially more tokens.
 - [2026-05-19] Fast mode promoted from research preview to default for Claude Code; Claude Console gains prompt cache diagnostics
 - [2026-05-18] Anthropic engineering best practices: context window as #1 constraint; verification-criteria pattern; explore-plan-code workflow (plan mode + Ctrl+G); Chrome extension for UI screenshot verification
 - [2026-05-13] /goal command added (research preview): autonomous loop until evaluator model confirms target met — first native long-horizon success-criterion primitive in Claude Code
@@ -142,3 +156,4 @@ That matters because it shifts the product story away from "Anthropic has a stro
 - [Claude Code Agent View docs](../sources/articles/claude-code-agent-view-2026-05-13.md)
 - [Agent-native product management guide - Every](../sources/articles/agent-native-product-management-2026-05-13.md)
 - [Claude Code Fast mode becomes default + spec-drift logging](../sources/newsletters/claude-code-fast-mode-default-2026-05.md)
+- [Introducing dynamic workflows in Claude Code](../sources/articles/dynamic-workflows-claude-code.md)

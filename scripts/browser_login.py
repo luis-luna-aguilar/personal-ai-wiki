@@ -30,7 +30,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from _lib import load_config  # type: ignore
+from _lib import load_config, require_config  # type: ignore
 
 
 DEFAULT_LOGIN_URL = "https://x.com/login"
@@ -51,12 +51,7 @@ def main() -> int:
     args = parser.parse_args()
 
     cfg = load_config()
-    fetch_cfg = cfg.get("fetch_url") or {}
-    raw_profile = (
-        args.profile_dir
-        or fetch_cfg.get("profile_dir")
-        or "~/.cache/ai-wiki-playwright"
-    )
+    raw_profile = args.profile_dir or require_config(cfg, "fetch_url.profile_dir")
     profile_dir = Path(str(raw_profile)).expanduser()
     profile_dir.mkdir(parents=True, exist_ok=True)
 

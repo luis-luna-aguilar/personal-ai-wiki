@@ -16,7 +16,7 @@ When adding a new wiki page, add its index entry under the correct section. One 
 
 Read-me-first dashboards per domain.
 
-- [state-of/coding](state-of/coding.md) — current state of AI coding tools and workflows *(as_of: 2026-05-13)*
+- [state-of/coding](state-of/coding.md) — current state of AI coding tools and workflows *(as_of: 2026-05-28)*
 - [state-of/models](state-of/models.md) — current state of foundation models *(as_of: 2026-05-13)*
 - [state-of/agents](state-of/agents.md) — current state of agentic systems and tool use *(as_of: 2026-05-13)*
 - [state-of/legal](state-of/legal.md) — current state of AI in legal practice *(as_of: 2026-05-01)*
@@ -52,7 +52,7 @@ Foundation models. One page per model family or generation.
 
 Tools and products built on top of models. One page per tool.
 
-- [tools/claude-code](tools/claude-code.md) — Anthropic's terminal-first AI coding agent; /goal, Opus 4.7 fast mode, and Agent View push it toward long-horizon multi-session supervision *(as_of: 2026-05-13)*
+- [tools/claude-code](tools/claude-code.md) — Anthropic's terminal-first AI coding agent; /goal, Agent View, and now dynamic workflows (`ultracode`) push it toward long-horizon multi-session and massively-parallel supervision *(as_of: 2026-05-28)*
 - [tools/claude-cowork](tools/claude-cowork.md) — Anthropic's desktop knowledge-work agent; now also available in public research preview via Amazon Bedrock *(as_of: 2026-04-23)*
 - [tools/claude-design](tools/claude-design.md) — Anthropic's research-preview artifact-generation surface for prototypes, slides, and one-pagers *(as_of: 2026-05-05)*
 - [tools/claude-managed-agents](tools/claude-managed-agents.md) — Anthropic's hosted long-horizon agent runtime; file-backed memory, Dreams, and same-day API feature parity reinforce the platform-service direction *(as_of: 2026-05-13)*
@@ -137,7 +137,7 @@ Benchmark pages. Current leaderboards and methodology.
 Reusable patterns and recipes.
 
 - [workflows/advisor-strategy](workflows/advisor-strategy.md) — Anthropic's small-executor + Opus-advisor escalation pattern *(as_of: 2026-04-09)*
-- [workflows/agentic-orchestration-patterns](workflows/agentic-orchestration-patterns.md) — reusable patterns for multi-agent systems: ambiguity gates, scoped context, hybrid graphs, coordinator-specialist routing, and failure-aware replanning *(as_of: 2026-05-13)*
+- [workflows/agentic-orchestration-patterns](workflows/agentic-orchestration-patterns.md) — reusable patterns for multi-agent systems: ambiguity gates, scoped context, hybrid graphs, coordinator-specialist routing, and failure-aware replanning *(as_of: 2026-05-28)*
 - [workflows/flex-processing](workflows/flex-processing.md) — lower-cost asynchronous processing pattern for non-urgent OpenAI workloads *(as_of: 2026-04-22)*
 - [workflows/agent-generated-html-artifacts](workflows/agent-generated-html-artifacts.md) — when agents should produce reviewable, visual, or interactive HTML artifacts instead of plain Markdown *(as_of: 2026-05-13)*
 - [workflows/skillify-agent-reliability](workflows/skillify-agent-reliability.md) — Garry Tan's pattern for turning agent failures into permanent tested skills; 10-step checklist and "thin harness / fat skills" architecture *(as_of: 2026-04-23)*

@@ -43,7 +43,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from _lib import VAULT_ROOT, load_config  # type: ignore
+from _lib import VAULT_ROOT, load_config, require_config  # type: ignore
 
 try:
     from dotenv import load_dotenv
@@ -225,12 +225,11 @@ def get_email_body(msg) -> str:
 
 
 def load_email_me_config() -> dict:
-    cfg = load_config().get("gmail", {}).get("email_me", {})
-    return {"senders": cfg.get("senders", [])}
+    return {"senders": require_config(load_config(), "gmail.email_me.senders")}
 
 
 def load_whitelist() -> list[str]:
-    senders = load_config().get("gmail", {}).get("whitelist", {}).get("senders", [])
+    senders = require_config(load_config(), "gmail.whitelist.senders")
     return [s.lower() for s in senders]
 
 

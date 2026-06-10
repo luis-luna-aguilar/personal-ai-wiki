@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 recent_changes_cap.py — find wiki pages whose `## Recent changes` section
-                         exceeds the configured cap (default: 5 entries).
+                         exceeds the cap configured in config.yml
+                         (history.recent_changes_cap).
 
 Reports each violating page, the current count, and the entries that need to
 be spilled to wiki/history/.
@@ -13,8 +14,9 @@ import re
 import sys
 from pathlib import Path
 
+from _lib import load_config, require_config  # type: ignore
+
 WIKI_ROOT = Path(__file__).parent.parent / "wiki"
-CAP = 5  # matches config.yml → history.recent_changes_cap
 
 IGNORED_DIRS = {"history", "_schema", "sources"}
 IGNORED_FILES = {"index.md", "log.md"}
@@ -26,7 +28,7 @@ RECENT_CHANGES_RE = re.compile(
 ENTRY_RE = re.compile(r"^\s*- \[", re.MULTILINE)
 
 
-def check_page(path: Path):
+def check_page(path: Path, cap: int):
     text = path.read_text(encoding="utf-8")
     match = RECENT_CHANGES_RE.search(text)
     if not match:
@@ -34,7 +36,7 @@ def check_page(path: Path):
     section = match.group(1)
     entries = ENTRY_RE.findall(section)
     count = len(entries)
-    if count > CAP:
+    if count > cap:
         # Extract the actual entry lines for reporting
         entry_lines = [
             line.strip()
@@ -46,6 +48,7 @@ def check_page(path: Path):
 
 
 def main():
+    cap = int(require_config(load_config(), "history.recent_changes_cap"))
     violations = []
 
     for path in sorted(WIKI_ROOT.rglob("*.md")):
@@ -56,21 +59,21 @@ def main():
         if len(parts) == 1 and parts[0] in IGNORED_FILES:
             continue
 
-        result = check_page(path)
+        result = check_page(path, cap)
         if result:
             count, entry_lines = result
             violations.append((rel, count, entry_lines))
 
     if not violations:
-        print(f"[OK] No pages exceed the {CAP}-entry recent-changes cap.")
+        print(f"[OK] No pages exceed the {cap}-entry recent-changes cap.")
         return
 
-    print(f"\n[CAP EXCEEDED] {len(violations)} page(s) have more than {CAP} recent-changes entries:\n")
+    print(f"\n[CAP EXCEEDED] {len(violations)} page(s) have more than {cap} recent-changes entries:\n")
     for rel, count, entries in violations:
-        excess = count - CAP
+        excess = count - cap
         print(f"  {rel}  ({count} entries, {excess} to spill)")
         for i, entry in enumerate(entries):
-            marker = "  SPILL →" if i >= CAP else "         "
+            marker = "  SPILL →" if i >= cap else "         "
             # Truncate long lines for readability
             display = entry[:100] + "…" if len(entry) > 100 else entry
             print(f"    {marker} {display}")

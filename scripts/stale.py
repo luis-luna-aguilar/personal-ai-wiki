@@ -22,6 +22,7 @@ from _lib import (  # type: ignore
     iter_pages,
     load_config,
     relativize,
+    require_config,
     resolve_path,
 )
 
@@ -32,11 +33,10 @@ def main() -> int:
     args = parser.parse_args()
 
     cfg = load_config()
-    thresholds: dict = cfg.get("stale_thresholds_days") or {}
-    default_days = int(thresholds.get("default", 30))
-    stale_cfg: dict = cfg.get("stale") or {}
-    include = [resolve_path(p) for p in (stale_cfg.get("include_paths") or ["wiki"])]
-    exclude = [resolve_path(p) for p in (stale_cfg.get("exclude_paths") or [])]
+    thresholds: dict = require_config(cfg, "stale_thresholds_days")
+    default_days = int(require_config(cfg, "stale_thresholds_days.default"))
+    include = [resolve_path(p) for p in require_config(cfg, "stale.include_paths")]
+    exclude = [resolve_path(p) for p in require_config(cfg, "stale.exclude_paths")]
 
     today = date.today()
     pages = iter_pages(include, exclude=exclude)

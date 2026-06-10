@@ -269,6 +269,27 @@ def load_config() -> dict:
     return parse_yaml(CONFIG_PATH.read_text(encoding="utf-8"))
 
 
+def require_config(cfg: dict, dotted_path: str):
+    """Fetch a nested config.yml value by dotted path (e.g. "fetch_url.timeout").
+
+    config.yml is the single source of truth for settings. Rather than baking a
+    shadow default into the code (which silently diverges from config.yml), this
+    reads the value and exits with a clear, actionable error if any segment of
+    the path is missing.
+    """
+    node = cfg
+    for key in dotted_path.split("."):
+        if not isinstance(node, dict) or key not in node:
+            sys.stderr.write(
+                f"error: required setting '{dotted_path}' is missing from "
+                f"config.yml (looked up '{key}'). Add it under the "
+                f"appropriate section.\n"
+            )
+            raise SystemExit(2)
+        node = node[key]
+    return node
+
+
 # ---------------------------------------------------------------------------
 # Link extraction
 # ---------------------------------------------------------------------------

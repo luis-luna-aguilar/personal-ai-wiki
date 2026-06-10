@@ -4,8 +4,8 @@ type: workflow
 domains: [agents]
 subcategory: agentic-orchestration-patterns
 tags: [agentic]
-as_of: 2026-05-19
-sources: [notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, harness-engineering-early-april, open-agent-orchestration-late-march, skills-and-plugin-packaging-late-march, harness-engineering-march, deep-agents-overview, goose-platform, googlecloudtech-adk-2-orchestration-patterns, agent-infrastructure-harness-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, production-agent-orchestration-2026-04-29, agent-html-artifacts-2026-05-13, gas-city-software-factory-2026-05]
+as_of: 2026-05-28
+sources: [notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, harness-engineering-early-april, open-agent-orchestration-late-march, skills-and-plugin-packaging-late-march, harness-engineering-march, deep-agents-overview, goose-platform, googlecloudtech-adk-2-orchestration-patterns, agent-infrastructure-harness-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, production-agent-orchestration-2026-04-29, agent-html-artifacts-2026-05-13, gas-city-software-factory-2026-05, dynamic-workflows-claude-code]
 ---
 
 # Agentic orchestration patterns
@@ -60,6 +60,7 @@ Reusable patterns for getting better behavior from one or more agents without de
 - Practitioner commentary also suggests "skill" does not mean the same thing everywhere: some ecosystems package reference-heavy technical instructions, while others package more open-ended problem-solving approaches.
 - Current framework docs make a layer split more explicit than earlier commentary did: Deep Agents is an agent harness, while Goose is a local agent product with desktop, CLI, API, provider, and MCP surfaces.
 - Google's ADK 2.0 thread makes an enterprise version of the same thesis concrete: reliable orchestration comes from structural control over sequence, handoff, and execution boundaries, not just more detailed prompts.
+- Anthropic's dynamic workflows (Claude Code, research preview) productize the plan→fan-out→verify→converge loop: Claude writes orchestration scripts running tens-to-hundreds of parallel subagents, with adversarial agents trying to break each finding before it surfaces, durable checkpoint/resume, and coordination held outside the conversation so the plan survives as the task grows. The Bun Zig→Rust rewrite is the cited large-scale example.
 
 ## Failure modes
 
@@ -91,3 +92,4 @@ Reusable patterns for getting better behavior from one or more agents without de
 - [Production agent orchestration primitives](../sources/newsletters/production-agent-orchestration-2026-04-29.md)
 - [Agent-generated HTML artifacts](../sources/tweets/agent-html-artifacts-2026-05-13.md)
 - [Inside the 100-agent Software Factory — Gas City](../sources/newsletters/gas-city-software-factory-2026-05.md)
+- [Introducing dynamic workflows in Claude Code](../sources/articles/dynamic-workflows-claude-code.md)

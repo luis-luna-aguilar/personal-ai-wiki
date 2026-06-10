@@ -26,6 +26,7 @@ from _lib import (  # type: ignore
     extract_markdown_links,
     iter_pages,
     load_config,
+    require_config,
     resolve_path,
 )
 
@@ -54,9 +55,8 @@ def main() -> int:
     args = parser.parse_args()
 
     cfg = load_config()
-    orphan_cfg: dict = cfg.get("orphans") or {}
-    scan_roots = [resolve_path(p) for p in (orphan_cfg.get("scan_paths") or ["wiki"])]
-    exempt = [resolve_path(p).resolve() for p in (orphan_cfg.get("exempt_paths") or [])]
+    scan_roots = [resolve_path(p) for p in require_config(cfg, "orphans.scan_paths")]
+    exempt = [resolve_path(p).resolve() for p in require_config(cfg, "orphans.exempt_paths")]
 
     all_pages = iter_pages(scan_roots)
 

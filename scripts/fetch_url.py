@@ -30,7 +30,7 @@ from datetime import date
 from pathlib import Path
 from urllib.parse import urlparse
 
-from _lib import VAULT_ROOT, load_config, relativize, resolve_path  # type: ignore
+from _lib import VAULT_ROOT, load_config, relativize, require_config, resolve_path  # type: ignore
 
 
 SOURCE_TYPE_FOLDERS = {
@@ -87,15 +87,21 @@ def build_filename(source_type: str, slug: str) -> str:
 # ---------------------------------------------------------------------------
 
 
-# Length-based fallback thresholds. If readability returns markdown shorter
-# than READABILITY_MIN_CHARS while body.innerText is at least
-# INNERTEXT_MIN_CHARS *and* substantially longer than the readability output,
-# we assume readability mis-identified the main article container and fall
-# back to body.innerText. This trades formatting (headings, links) for
-# accuracy on JS-rendered SPAs that confuse readability-lxml.
-READABILITY_MIN_CHARS = 500
+# Fallback threshold for detecting bad readability extraction.
+#
+# We compare what readability extracted against the full rendered text
+# (document.body.innerText). If body.innerText is at least
+# INNERTEXT_MIN_CHARS (so the page genuinely has substantial content) and
+# readability's output covers less than the caller-supplied coverage ratio of
+# it, we assume readability mis-identified or truncated the main article
+# container and fall back to body.innerText. This trades formatting (headings,
+# links) and some nav/footer noise for not silently losing content.
+#
+# The coverage ratio catches *partial* truncation — e.g. readability dropping
+# the intro/hero above the first heading — which a near-empty rule would miss
+# because the truncated output is still long enough to look valid. The ratio
+# itself lives in config.yml (fetch_url.coverage_min_ratio), read in main().
 INNERTEXT_MIN_CHARS = 2000
-INNERTEXT_RATIO = 4
 
 
 def html_to_markdown(
@@ -103,11 +109,12 @@ def html_to_markdown(
     body_text: str,
     url: str,
     source_type: str,
+    coverage_min_ratio: float,
 ) -> tuple[str, str]:
     """Return (title, markdown_body). Falls back gracefully if libs are missing.
 
     `body_text` is the rendered `document.body.innerText` from Playwright; it
-    is used as a last-resort fallback when readability mis-extracts the page.
+    is used as a fallback when readability mis-extracts or truncates the page.
     """
     title = ""
     body_html = html
@@ -134,20 +141,22 @@ def html_to_markdown(
     # Tidy: collapse triple blank lines.
     markdown = re.sub(r"\n{3,}", "\n\n", markdown).strip()
 
-    # Length-based fallback: readability sometimes returns only the footer or
-    # a sidebar on JS-rendered SPAs (observed on harvey.ai). When that
-    # happens, prefer body.innerText. We lose heading/link structure but get
-    # the actual article body.
-    if (
-        len(markdown) < READABILITY_MIN_CHARS
-        and len(body_text) >= INNERTEXT_MIN_CHARS
-        and len(body_text) >= len(markdown) * INNERTEXT_RATIO
-    ):
+    # Coverage-based fallback: compare the extracted markdown against the full
+    # rendered text. Readability sometimes returns only a footer/sidebar
+    # (observed on harvey.ai) or silently drops the intro/hero above the first
+    # heading (observed on claude.com/blog). Both cases show up as low coverage
+    # relative to body.innerText. When the page has substantial content but
+    # readability captured less than coverage_min_ratio of it, prefer
+    # innerText. We lose heading/link structure (and gain some nav/footer
+    # noise) but keep the actual article body.
+    coverage = len(markdown) / len(body_text) if body_text else 1.0
+    if len(body_text) >= INNERTEXT_MIN_CHARS and coverage < coverage_min_ratio:
         print(
-            f"warn: readability returned only {len(markdown)} chars but "
-            f"body.innerText has {len(body_text)} chars — falling back to "
-            "innerText. Heading and link structure will be lost; consider "
-            "manually cleaning the raw file.",
+            f"warn: readability output ({len(markdown)} chars) covers only "
+            f"{coverage:.0%} of the rendered page ({len(body_text)} chars) — "
+            "falling back to body.innerText. Heading/link structure will be "
+            "lost and some nav/footer text may be included; consider cleaning "
+            "the raw file.",
             file=sys.stderr,
         )
         markdown = body_text.strip()
@@ -279,8 +288,8 @@ def main() -> int:
     args = parser.parse_args()
 
     cfg = load_config()
-    fetch_cfg = cfg.get("fetch_url") or {}
-    timeout = int(fetch_cfg.get("timeout", 30))
+    timeout = int(require_config(cfg, "fetch_url.timeout"))
+    coverage_min_ratio = float(require_config(cfg, "fetch_url.coverage_min_ratio"))
     # Per-type wait strategy: tweets need domcontentloaded because x.com
     # holds long-poll connections open and never reaches networkidle.
     if args.wait_until:
@@ -288,12 +297,12 @@ def main() -> int:
     elif args.type == "tweet":
         wait_for = "domcontentloaded"
     else:
-        wait_for = str(fetch_cfg.get("wait_for", "networkidle"))
+        wait_for = str(require_config(cfg, "fetch_url.wait_for"))
 
     if args.no_profile:
         profile_dir: Path | None = None
     else:
-        raw_profile = args.profile_dir or fetch_cfg.get("profile_dir") or "~/.cache/ai-wiki-playwright"
+        raw_profile = args.profile_dir or require_config(cfg, "fetch_url.profile_dir")
         profile_dir = Path(str(raw_profile)).expanduser()
 
     target_dir = VAULT_ROOT / SOURCE_TYPE_FOLDERS[args.type]
@@ -302,7 +311,9 @@ def main() -> int:
     print(f"Fetching {args.url} ...", file=sys.stderr)
     page_title, html, body_text = fetch_with_playwright(args.url, profile_dir, timeout, wait_for)
 
-    title, body_md = html_to_markdown(html, body_text, args.url, args.type)
+    title, body_md = html_to_markdown(
+        html, body_text, args.url, args.type, coverage_min_ratio=coverage_min_ratio
+    )
     if not title:
         title = page_title or "Untitled"
 

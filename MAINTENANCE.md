@@ -1,6 +1,6 @@
 # Wiki Maintenance
 
-This file defines all maintenance operations for the AI Wiki. The LLM reads this file when running maintenance. **Do not put operating rules here** — those live in `LLM-INSTRUCTIONS.md`. This file is focused on periodic upkeep tasks.
+This file defines all maintenance operations for the AI Wiki. The LLM reads this file when running maintenance. **Do not put operating rules here** — those live in `AGENTS.md`. This file is focused on periodic upkeep tasks.
 
 ---
 

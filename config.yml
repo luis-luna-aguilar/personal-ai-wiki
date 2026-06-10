@@ -129,6 +129,11 @@ fetch_url:
   timeout: 30
   # Wait for network idle before extraction.
   wait_for: networkidle
+  # Truncation guard: if readability's extracted text covers less than this
+  # fraction of the full rendered page (document.body.innerText), fall back to
+  # innerText instead of silently saving a partial article. Lower = more
+  # tolerant of partial extraction; higher = more aggressive fallback.
+  coverage_min_ratio: 0.5
   # Download and rewrite images to local paths.
   download_images: true
   images_dir: raw/assets

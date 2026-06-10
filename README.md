@@ -68,12 +68,38 @@ skills/                # Skill definitions for wiki workflows
 
 | File | Purpose |
 |------|---------|
-| `LLM-INSTRUCTIONS.md` | Operating rules for the LLM agent — single source of truth |
-| `CLAUDE.md` | Points the Claude Code CLI to `LLM-INSTRUCTIONS.md` |
-| `AGENTS.md` | Instructions for other AI agents (OpenAI Codex, etc.) |
+| `AGENTS.md` | Operating rules for the LLM agent — single source of truth (read natively by Codex and other agents) |
+| `CLAUDE.md` | Symlink to `AGENTS.md` so Claude Code loads the same rules |
 | `wiki/index.md` | Catalog of every wiki page — read this before querying |
 | `wiki/log.md` | Chronological record of all changes |
 | `config.yml` | Wiki-wide configuration |
+
+## Settings
+
+All tunable behavior lives in [`config.yml`](./config.yml). Edit values there — nothing is hard-coded outside these keys. The main sections:
+
+| Section | Purpose |
+|---------|---------|
+| `stale_thresholds_days` | Per-type age (in days) after which a page is considered stale; also drives query-time confidence bands. |
+| `query.confidence_bands` | Ratios that map page age to `high` / `medium` / `stale` confidence in answers. |
+| `history.recent_changes_cap` | Max "Recent changes" bullets a page keeps before the oldest spills to `wiki/history/`. |
+| `stale` | Which directories the staleness scan includes/excludes. |
+| `orphans` | Which paths the orphan check scans, and which are exempt. |
+| `source_types` | Per-source-type ingest playbooks (raw dir, ingest style, notes). |
+| `fetch_url` | URL fetching via `scripts/fetch_url.py` — see below. |
+| `log_file` | Location of the append-only change log. |
+| `gmail` | Account list, scopes, sender whitelist, and Email Me forward detection for `scripts/gmail_fetch.py`. |
+
+### `fetch_url`
+
+| Key | Default | Purpose |
+|-----|---------|---------|
+| `profile_dir` | `~/.cache/ai-wiki-playwright` | Persistent Chromium profile so logged-in/paywalled sites keep working across runs. |
+| `timeout` | `30` | Page-load timeout in seconds. |
+| `wait_for` | `networkidle` | Playwright wait strategy before extraction. |
+| `coverage_min_ratio` | `0.5` | Truncation guard: if readability's extracted text covers less than this fraction of the full rendered page (`document.body.innerText`), fall back to innerText instead of saving a partial article. Lower = more tolerant of partial extraction; higher = more aggressive fallback. |
+| `download_images` | `true` | Download and rewrite images to local paths under `images_dir`. |
+| `images_dir` | `raw/assets` | Where fetched images are stored. |
 
 ## Personal folder
 
@@ -87,4 +113,4 @@ The `personal/` directory is tracked in git so contributors can keep the same st
 - **Reuse over fragmentation.** Most sources update existing pages; new pages are rare.
 - **Current state first.** History is kept but not loaded unless explicitly requested.
 
-Full rules in [`LLM-INSTRUCTIONS.md`](./LLM-INSTRUCTIONS.md).
+Full rules in [`AGENTS.md`](./AGENTS.md).

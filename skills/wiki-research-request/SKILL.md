@@ -10,7 +10,7 @@ Use this skill to turn "the wiki is missing or weak on X" into a precise researc
 
 ## Workflow
 
-1. Read `LLM-INSTRUCTIONS.md` first and follow the wiki rules.
+1. Read `AGENTS.md` first and follow the wiki rules.
 2. Read `wiki/index.md` before any broader search.
 3. Identify candidate pages from the index, then inspect only the relevant pages. Do not read `wiki/history/` unless the user explicitly asks.
 4. Search the relevant wiki sections with `rg` for the user's topic and adjacent terms.
