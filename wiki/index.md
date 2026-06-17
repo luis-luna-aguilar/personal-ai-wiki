@@ -95,6 +95,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/microsoft-foundry-agents](tools/microsoft-foundry-agents.md) — Microsoft's hosted enterprise agent runtime with per-session VM isolation, persistent resume, and governance controls *(as_of: 2026-04-23)*
 - [tools/mistral-document-ai](tools/mistral-document-ai.md) — document-intelligence product for extracting and structuring enterprise documents *(as_of: 2026-04-22)*
 - [tools/multica](tools/multica.md) — open-source managed agents platform; treats coding agents (Claude Code, Codex, and 9 others) as project-board teammates with Squads routing and reusable skill compounding *(as_of: 2026-05-18)*
+- [tools/paperclip](tools/paperclip.md) — open-source MIT agent management platform; org-chart metaphor with heartbeats, per-agent budgets, board-of-directors governance, and Kubernetes hosting; 69.9k stars *(as_of: 2026-06-10)*
 - [tools/notion](tools/notion.md) — Notion's External Agents API lets Claude Code, Cursor, Codex, Devin, Warp, Decagon act inside Notion workspaces as a shared agent-native document surface *(as_of: 2026-05-14)*
 - [tools/open-evidence](tools/open-evidence.md) — physician-oriented medical evidence and clinical-question tool *(as_of: 2026-04-22)*
 - [tools/openai-agents-sdk](tools/openai-agents-sdk.md) — OpenAI's updated agent SDK with native sandbox, checkpoints, and provider-neutral manifests *(as_of: 2026-04-15)*
@@ -209,7 +210,7 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 
 - state-of: 11
 - models: 15
-- tools: 62
+- tools: 63
 - benchmarks: 8
 - workflows: 5
 - concepts: 15
@@ -217,4 +218,4 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 - training: 12
 - use-cases: 1
 
-**Total content pages: 137.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 138.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
