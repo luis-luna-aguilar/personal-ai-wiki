@@ -13,10 +13,10 @@ Harvey (legal AI) published benchmark results showing a hybrid routing strategy 
 
 ## Intended changes
 
-- [ ] **Update** `wiki/tools/harvey.md` — major content update; add hybrid routing benchmark results, model strategy, SFT data point
+- [x] **Update** `wiki/tools/harvey.md` — major content update; add hybrid routing benchmark results, model strategy, SFT data point
     > See draft below
 
-- [ ] **Update** `wiki/workflows/advisor-strategy.md` — add Harvey as third-party proof point for the advisor pattern; update Recent changes
+- [x] **Update** `wiki/workflows/advisor-strategy.md` — add Harvey as third-party proof point for the advisor pattern; update Recent changes
     > **Add to Reported results section:**
     >
     > ### External replication: Harvey (legal domain, June 2026)
@@ -116,3 +116,6 @@ AINews newsletter covering: Ideogram 4.0 Arena placement (#8 overall, #1 open im
 - Gemma 4 12B: Apache 2.0, encoder-free multimodal
 - MAI-Thinking-1 Frontier Tuning: RL environments for workflow-specific adaptation; internal Excel-tuned models reach GPT-5.4-level at 10× efficiency
 ````
+
+## Feedback
+- Double check this source has not been ingested before, seems like a compendium source.

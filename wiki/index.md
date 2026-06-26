@@ -185,6 +185,7 @@ Things being watched that haven't solidified yet.
 - [trends/voice-becomes-agent-interface](trends/voice-becomes-agent-interface.md) — voice, texting, and real-time audio are becoming agent surfaces rather than side features *(as_of: 2026-03-30)*
 - [trends/ai-music-commercialization](trends/ai-music-commercialization.md) — AI music moving from novelty to commercial category; ElevenMusic, Suno, Udio as early anchors; rightsholder economics emerging *(as_of: 2026-05-01)*
 - [trends/llm-as-discovery-channel](trends/llm-as-discovery-channel.md) — LLM-referred shoppers convert 54% more and spend 53% more time on site vs non-AI-referred traffic (Adobe Analytics, June 2026) *(as_of: 2026-06-15)*
+- [trends/video-agents-next-frontier](trends/video-agents-next-frontier.md) — video quality driven by LLM prompt rewriters, not diffusion models; Grok Imagine Agent beta as first public video agent *(as_of: 2026-06-01)*
 
 ## Training
 

@@ -3,8 +3,8 @@ title: State of Creative
 type: state-of
 domains: [creative]
 tags: []
-as_of: 2026-05-05
-sources: [legacy-ai-tools-roadmap-xlsx, seedance-2, luma-dream-machine, heygen-homepage, genspark-slides, stitch-google, claude-design-anthropic-labs, ai-music-commercialization-2026-05-01, claude-creative-tool-connectors-2026-04-29]
+as_of: 2026-06-01
+sources: [legacy-ai-tools-roadmap-xlsx, seedance-2, luma-dream-machine, heygen-homepage, genspark-slides, stitch-google, claude-design-anthropic-labs, ai-music-commercialization-2026-05-01, claude-creative-tool-connectors-2026-04-29, video-agents-ethan-he-june-2026]
 ---
 
 # State of Creative
@@ -17,6 +17,7 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 
 - [Seedance 2.0](../tools/seedance-2.md) — ByteDance Seed's multimodal audio-video generation product; strongest distinction is synchronized audio-video creative output *(as of 2026-04-22)*
 - [Dream Machine](../tools/dream-machine.md) — Luma's broader generative-video and editing surface *(as of 2026-04-22)*
+- **Grok Imagine Agent** — xAI; early beta; first public video agent implementation: LLM plans and iterates using video generation as a tool, calling FFmpeg and editing tools for post-processing; long-form video as a sequence of planned, generated, and edited clips *(as of 2026-06-01)*
 
 ### AI avatar video
 
@@ -39,6 +40,7 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 
 ## Recent changes
 
+- [2026-06-01] Video agents thesis: Ethan He (ex-NVIDIA Cosmos, ex-xAI) argues video model intelligence comes from LLMs not video training; Grok Imagine Agent beta is first public video agent; evolution mirrors coding → coding agents
 - [2026-05-05] Claude creative tool connectors: Anthropic reported connectors for Adobe, Blender, Fusion, Ableton, Splice, SketchUp, Affinity, Resolume — Claude moving from artifact generation into creative-production tool integration (secondary coverage)
 - [2026-05-01] Added `AI music generation` subcategory; ElevenMusic, Suno, and Udio are the named entrants per Superhuman newsletter; AI-created artists reportedly reaching Billboard charts; rightsholder economics flagged as emerging pressure
 - [2026-04-22] Created the `creative` domain and added initial pages for video generation, avatar video, UI generation, and slides workflows from the legacy workbook exception

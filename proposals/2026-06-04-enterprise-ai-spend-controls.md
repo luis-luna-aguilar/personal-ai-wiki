@@ -16,7 +16,7 @@ Three separate enterprise spend-control events in the same week (June 2-6, 2026)
 
 ## Intended changes
 
-- [ ] **Update** `wiki/training/company-wide-ai-enablement.md` — add enterprise spend controls to Failure modes section; add to Evidence from practice; update as_of and sources
+- [x] **Update** `wiki/training/company-wide-ai-enablement.md` — add enterprise spend controls to Failure modes section; add to Evidence from practice; update as_of and sources
     > **Add to Failure modes section:**
     >
     > - **AI spend shock on per-token billing.** GitHub Copilot's move from flat $39/month to per-token billing caught teams unprepared — some individual bills hit $3,000+/month. Uber's response: hard cap at $1,500/month per engineer. Cloudflare AI Gateway added model-level and user-level budget enforcement with automatic fallbacks to cheaper models. The pattern: enterprises need spend controls as a first-class operational concern, not an afterthought. (June 2026)
@@ -30,7 +30,7 @@ Three separate enterprise spend-control events in the same week (June 2-6, 2026)
     >
     > **Update sources frontmatter:** add `enterprise-spend-metered-june-2026`
 
-- [ ] **Create** `wiki/sources/newsletters/enterprise-spend-metered-june-2026.md` — source summary
+- [x] **Create** `wiki/sources/newsletters/enterprise-spend-metered-june-2026.md` — source summary
     > See draft below
 
 ## Page drafts
