@@ -1,8 +1,8 @@
 ---
 title: AI enablement — software development
 type: training
-as_of: 2026-05-19
-sources: [ramp-ai-adoption-playbook, shopify-latent-space-april-2026, lennysan-simonw-interview, agentic-cognitive-overhead, garrytan-gstack-repo, the-code-2026-04-23, qa-tooling-for-software-agents-deep-research, agent-review-artifacts-2026-05-13, agentic-coding-trap-may-2026, ai-stack-fungibility-hashimoto-2026-05, shopify-claude-code-bessemer-2026-05]
+as_of: 2026-06-16
+sources: [ramp-ai-adoption-playbook, shopify-latent-space-april-2026, lennysan-simonw-interview, agentic-cognitive-overhead, garrytan-gstack-repo, the-code-2026-04-23, qa-tooling-for-software-agents-deep-research, agent-review-artifacts-2026-05-13, agentic-coding-trap-may-2026, ai-stack-fungibility-hashimoto-2026-05, shopify-claude-code-bessemer-2026-05, stanford-labor-june-2026]
 ---
 
 # AI enablement — software development
@@ -59,6 +59,7 @@ AI adoption inside engineering teams has moved fastest, but the bottlenecks and 
 - "Hoarding things you know how to do": Simon maintains 193 small HTML/JS tools and a separate research repo of coding-agent experiments. When a new problem arrives, he points Claude Code at past projects and says "combine these two approaches." The knowledge base compounds.
 - Lars Faye (May 2026, viral essay): "Agentic Coding is a Trap" — 47% debugging ability drop (Anthropic internal study); Willison's "no mental map" confirmation; Faye's prescription: keep implementation, use AI for specs and ad-hoc tasks
 - Airbnb counter-pattern (May 2026): 64% of production PRs shipped with agents using a 15-minute playbook — high AI adoption without the orchestration-only model Faye critiques
+- Stanford Digital Economy Lab (June 2026): 25,000-firm study; AI-exposed early-career (22-25) jobs declining 3.8%/yr since 2022; least-exposed jobs growing 2.0%; junior software devs and customer service hardest hit
 - Shopify (May 2026, Bessemer conference, @darkzodchi synthesis): LLM proxy, CLAUDE.md discipline, critique loop, permission config deployed fleet-wide across 23,000 engineers. Reported 20% productivity gain. Strategy-to-execution ratio flipped from 30%/70% (2024) to 70%/30% (2026). Q3 2026 target: 90% autonomous coding.
 
 ## Hiring AI-native engineers
@@ -76,6 +77,16 @@ Practical implication: interview loops now need to test whether a candidate can 
 Agentic AI is removing the "grunt work" through which junior engineers historically built pattern recognition. If entry-level coding work disappears entirely, there's a pipeline problem: senior talent runs out within a decade. McKinsey's framing: learning and development should move from a periodic sidecar to the center of the employee journey. Junior engineers who start with AI tools from day one don't face the hurdle of disrupting an established workflow — but they also don't accumulate 20 years of pattern recognition through practice.
 
 Mid-career engineers may be the most vulnerable group — more so than juniors or seniors. AI amplifies decades of pattern recognition (seniors benefit most), and dramatically accelerates juniors (Cloudflare/Shopify: ramp-up from a month to a week). Mid-career engineers without deep accumulated expertise, who have already captured the beginner boost, are in the most precarious position.
+
+**Stanford AI Economic Indicators (June 2026):** The most rigorous data to date on junior displacement comes from Stanford's Digital Economy Lab, which analyzed 25,000 firms. Findings:
+- Overall hiring has not surged or collapsed since ChatGPT's launch — the macro picture is stable
+- But early-career workers aged 22-25 in AI-exposed occupations are declining at **3.8% per year**
+- Least-exposed roles are growing at 2.0%
+- Most affected: junior software developers, customer service workers
+- Least affected: home health aides and other roles with low AI exposure
+- Stanford explicitly labels these "early signals from a fixed sample" rather than a definitive global picture
+
+The hollow pipeline concern is now data-backed: if the entry-level disappears, the senior pipeline weakens roughly 5-10 years later.
 
 ## Recent changes
 
@@ -101,3 +112,4 @@ Mid-career engineers may be the most vulnerable group — more so than juniors o
 - [Agentic Coding is a Trap — Lars Faye essay (May 2026)](../sources/newsletters/agentic-coding-trap-may-2026.md)
 - [AI stack fungibility and AI psychosis — Hashimoto (newsletter)](../sources/newsletters/ai-stack-fungibility-hashimoto-2026-05.md)
 - [Shopify Claude Code fleet patterns — Bessemer conference synthesis](../sources/articles/shopify-claude-code-bessemer-2026-05.md)
+- [Stanford AI labor market data — June 2026](../sources/newsletters/stanford-labor-june-2026.md)

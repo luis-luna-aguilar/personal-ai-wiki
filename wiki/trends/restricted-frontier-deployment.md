@@ -3,8 +3,8 @@ title: Restricted frontier deployment
 type: trend
 domains: [models, agents]
 tags: [anthropic]
-as_of: 2026-04-22
-sources: [restricted-frontier-deployment, anthropic-pentagon-boundaries-february, glasswing]
+as_of: 2026-06-17
+sources: [restricted-frontier-deployment, anthropic-pentagon-boundaries-february, glasswing, fable-ban-june-2026]
 ---
 
 # Restricted frontier deployment
@@ -34,6 +34,20 @@ This could become a major structural shift in frontier AI. If labs increasingly 
 - Whether restricted deployment becomes common outside cyber-risk narratives
 - How this changes benchmarking, product positioning, and enterprise access patterns
 
+## Export controls as a new restriction mechanism (June 2026)
+
+The Fable 5 ban introduced a mechanism distinct from voluntary capability gating: mandatory government compliance. Prior restricted deployments (Mythos Preview, the Pentagon dispute) were Anthropic's own choices about where to deploy. The Fable 5 suspension was forced by the US government under export control authority.
+
+Key differences from prior examples:
+- **Scope:** all customers worldwide, not just a selective partner program
+- **Speed:** ban applied within days of launch
+- **Trigger:** an external third-party jailbreak report (Amazon researchers), disputed by Anthropic as "narrow, non-universal"
+- **Mechanism:** classified under export controls restricting "foreign nationals" → Anthropic chose to block all rather than implement partial access
+
+The covert degradation episode (Anthropic silently downgraded Fable 5 for AI-research use cases, reversed after backlash) also signals that labs may unilaterally restrict capability within a launch without public disclosure — a pattern separate from both the voluntary gating and the export-control ban.
+
+The practical response emerging across the field: **model neutrality as architecture** — building harnesses, routing, and context at the application layer rather than coupling to any single frontier vendor. See also [Open-weight momentum broadens](open-weight-momentum-broadens.md).
+
 ## Open questions
 
 - Is Anthropic the first durable example of this pattern, or just an unusually public one?
@@ -41,6 +55,7 @@ This could become a major structural shift in frontier AI. If labs increasingly 
 
 ## Recent changes
 
+- [2026-06-17] Fable 5 / Mythos 5 suspended globally under US government export controls — first regulatory rather than voluntary restriction; UK carve-out denied; 76 security experts protest (FreeFable.org)
 - [2026-04-22] Glasswing disclosed publicly: Mythos Preview found thousands of zero-days across major OSes and browsers autonomously; confirmed restricted deployment with partner program (Cisco, AWS, Microsoft)
 
 ## Sources

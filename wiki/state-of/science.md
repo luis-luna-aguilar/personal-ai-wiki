@@ -3,8 +3,8 @@ title: State of Science
 type: state-of
 domains: [science]
 tags: []
-as_of: 2026-05-13
-sources: [curiosity-driven-imagination, noetik-cancer-trials, gpt-rosalind-launch, futurehouse-homepage, legacy-ai-tools-roadmap-xlsx, openai-gpt-5-5-launch, ai-co-mathematician-2026-05-13, genesis-ai-gene-26-5-2026-05-09]
+as_of: 2026-06-17
+sources: [curiosity-driven-imagination, noetik-cancer-trials, gpt-rosalind-launch, futurehouse-homepage, legacy-ai-tools-roadmap-xlsx, openai-gpt-5-5-launch, ai-co-mathematician-2026-05-13, genesis-ai-gene-26-5-2026-05-09, self-driving-lab-radical-ai]
 ---
 
 # State of Science
@@ -25,6 +25,12 @@ AI models and hardware designed for physical manipulation — robots that can ha
 
 - **Genesis AI GENE-26.5** — French startup; full-stack model that can pilot robots from multiple manufacturers; paired with a 5-finger human-like robotic hand; closes the "embodiment gap" by enabling collection of higher-fidelity physical training data; demo: cracking eggs, Rubik's Cube, piano *(as of 2026-05-09)*
 
+### Self-driving labs
+
+Closed-loop systems where an AI scientist generates hypotheses and automated robotic labs execute and characterize experiments — removing the human from the serial experimental loop.
+
+- **Radical AI** — materials science; AI scientist + robotic synthesis + active learning loop; 1,200 alloys characterized in 6 months (~10× DARPA/GE MACH pace); 300 novel materials tested, 10 with SOTA properties; TorchSim and MATRIX open-sourced *(as of 2026-06-17)*
+
 ### Frontier models used in science
 
 General-purpose frontier models whose published evaluation or reported use now makes them relevant to practical scientific-research work, even if they are not science-only products.
@@ -34,6 +40,7 @@ General-purpose frontier models whose published evaluation or reported use now m
 
 ## Recent changes
 
+- [2026-06-17] Added `Self-driving labs` subcategory; Radical AI: ~10× DARPA/GE MACH pace; AI scientist proposed 300 new materials, 10 with novel state-of-the-art properties; TorchSim and MATRIX open-sourced
 - [2026-05-09] Added `Robotics` subcategory; Genesis AI GENE-26.5 (full-stack multi-manufacturer robot model + 5-finger hand) goes viral; "embodiment gap" framing introduced
 - [2026-05-13] Added AI Co-Mathematician (Google DeepMind): 48% FrontierMath Tier 4; asynchronous stateful workbench for mathematicians; physics-intern (related) boosted Gemini 3.1 Pro from 17.7% → 31.4% on CritPt via specialized subagent decomposition
 - [2026-04-23] Added `Frontier models used in science` with [GPT-5.5](../models/gpt-5-5.md); OpenAI is now making explicit science-performance claims rather than only general-reasoning claims

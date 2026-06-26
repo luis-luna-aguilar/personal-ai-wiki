@@ -1,8 +1,8 @@
 ---
 title: Company-wide AI enablement
 type: training
-as_of: 2026-05-15
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13, fde-race-may-2026]
+as_of: 2026-06-17
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13, fde-race-may-2026, every-ai-adoption-levels]
 ---
 
 # Company-wide AI enablement
@@ -21,6 +21,35 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 - Raise performance expectations only as the tooling becomes good enough to support them
 - For production infrastructure workflows, start even narrower than normal: read-only first, then propose-only, then mutate-with-approval after explicit evidence that the agent can operate safely
 - Teach employees to distinguish autonomous delegation from close collaboration. The operating model breaks when teams either delegate judgment-heavy work without review or micromanage tasks with clear success criteria.
+
+## AI adoption maturity model
+
+Every (Mike Taylor / Laura Entis, June 2026) published an 8-level framework for AI adoption maturity. Central insight: **higher level is not automatically better.** The right level depends on how much you trust the AI and how costly a mistake is.
+
+| Level | Name | What the AI does |
+|---|---|---|
+| 1 | Chatbot | You ask, it answers. Single turn. No memory. |
+| 2 | Conversational assistant | Multi-turn, context-aware. Still human-initiated every turn. |
+| 3 | Tool user | AI calls external tools (search, calculator, APIs) inside a conversation. |
+| 4 | Autonomous task executor | Completes multi-step tasks with minimal steering. Human reviews output. |
+| 5 | Background agent | Runs unsupervised; triggers on schedule or event; reports results. |
+| 6 | Goal-directed agent | Given an objective and constraints; plans and executes independently. |
+| 7 | Multi-tool orchestrator | Combines tools, agents, and APIs across a pipeline to complete complex work. |
+| 8 | Sub-agent orchestrator | Runs a team of specialized sub-agents under a master orchestrator. |
+
+**Practical rules from the framework:**
+- Match level to task risk and trust. High-stakes tasks with hard-to-verify outputs belong at lower levels with more human review.
+- The signal to move up: consistent performance at the current level with no meaningful error rate — not just enthusiasm or capability.
+- Levels 5-8 require investing in evals, verification, and guardrails before promotion.
+
+**5-step executive implementation (Natalia Quintero, Every Consulting):**
+1. Identify a high-ROI anchor workflow (narrow scope, measurable output, high volume)
+2. Pick a tool and stand it up with SSO, pre-connected data, and a preconfigured agent surface
+3. Run a 30-day internal pilot with a small self-selected group; surface wins publicly
+4. Roll out with a visible social loop (demos, leaderboards, shared channels)
+5. Expand to second and third workflows only after the first is stable and the social loop is active
+
+Source: "AI Is Ready. Organizations Aren't." (Every, June 2026) — based on interviews with 100+ leadership teams.
 
 ## Proven patterns
 

@@ -3,8 +3,8 @@ title: AI in Science
 type: trend
 domains: [science]
 tags: []
-as_of: 2026-04-21
-sources: [noetik-cancer-trials, gpt-rosalind-launch]
+as_of: 2026-06-17
+sources: [noetik-cancer-trials, gpt-rosalind-launch, self-driving-lab-radical-ai]
 ---
 
 # AI in Science
@@ -19,12 +19,37 @@ AI is increasingly moving from generic scientific assistance toward domain-speci
 - Translational medicine here means moving from lab and data insight toward practical clinical use, such as deciding which therapies, biomarkers, or trial designs are most likely to work in patients
 - The pattern is shifting from "AI helps researchers" to "specialized models target a scientific bottleneck directly"
 
+## Self-driving labs
+
+The self-driving lab (SDL) is an architecture that closes the loop between AI hypothesis generation and physical experimentation — removing the human from the serial bottleneck of: hypothesize → lab → wait → analyze → repeat.
+
+**How it works (Radical AI):**
+1. An "AI scientist" (combining scientific knowledge, computational techniques, and human intuition encoded at setup) generates and prioritizes hypotheses
+2. Automated robotics synthesize and characterize materials from those hypotheses in parallel
+3. Results feed back into the AI scientist, which updates its priors and generates the next round
+4. Research campaigns run simultaneously rather than serially
+
+**Key results (Radical AI, as of 2026-06-17):**
+- 1,200 alloys synthesized and characterized in 6 months — ~10× the pace of DARPA/GE MACH (which targeted 500 alloys/year with human researchers)
+- 300 novel materials proposed by the AI scientist; 10 found to have novel state-of-the-art properties now in further development
+- AI scientist expanded into elemental families no previous published research had explored
+- Scales toward ~100 new alloys tested and characterized per day
+
+**Infrastructure as bottleneck (Anthropic science blog, June 9 2026):**
+Anthropic argues AI has advanced faster in coding than biology not because of intelligence limits, but because biological databases and scientific tooling were not built for agent use. The bottleneck is infrastructure and interface design, not raw model capability — an argument that parallels why self-driving labs invest heavily in robotic integration and data pipelines, not just model selection.
+
+**Open-source tooling:**
+- TorchSim — PyTorch-based molecular dynamics simulation framework (spun out to a non-profit)
+- MATRIX / MATRIX-PT — open benchmark for autonomous SDL evaluation + model trained on that benchmark; improving reasoning for materials also improved biological systems reasoning (unexpected transfer result)
+
 ## Recent changes
 
+- [2026-06-17] Added self-driving labs section: Radical AI achieving ~10× DARPA/GE MACH pace in alloys; infrastructure-as-bottleneck framing from Anthropic science blog
 - [2026-04-21] Added biology and drug-discovery productization signals: Noetik and GPT-Rosalind
 - [2026-04-10] Page seeded from Superhuman AI newsletter overview of AI-driven scientific breakthroughs
 
 ## Sources
 
+- [The Self-Driving Lab — Joseph Krause, Radical AI](../sources/newsletters/self-driving-lab-radical-ai.md)
 - [Latent Space — Noetik and cancer-trial failure](../sources/newsletters/noetik-cancer-trials.md)
 - [GPT-Rosalind launch](../sources/tweets/gpt-rosalind-launch.md)

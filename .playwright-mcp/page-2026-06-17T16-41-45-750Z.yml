@@ -1,0 +1,857 @@
+- generic [ref=e2]:
+  - iframe
+  - generic [ref=e3]:
+    - generic [ref=e7]:
+      - link "Amy’s Meta Learning Experiment" [ref=e9] [cursor=pointer]:
+        - /url: /
+        - img "Amy’s Meta Learning Experiment" [ref=e13]
+      - heading "Amy’s Meta Learning Experiment" [level=1] [ref=e15]:
+        - link "Amy’s Meta Learning Experiment" [ref=e16] [cursor=pointer]:
+          - /url: /
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - button "Search" [ref=e22] [cursor=pointer]:
+            - img [ref=e23]
+          - button "Share Publication" [ref=e26] [cursor=pointer]:
+            - img [ref=e27]
+        - button "Subscribe" [ref=e30] [cursor=pointer]
+        - button "Sign in" [ref=e31] [cursor=pointer]
+    - main "Post" [ref=e34]:
+      - article [ref=e38]:
+        - dialog "Subscribe modal" [ref=e40]:
+          - generic [ref=e41]:
+            - button "close" [ref=e42] [cursor=pointer]:
+              - img [ref=e43]
+            - generic "User" [ref=e48]:
+              - img "User's avatar" [ref=e50]
+            - generic [ref=e51]:
+              - generic [ref=e52]: Discover more from Amy’s Meta Learning Experiment
+              - generic [ref=e53]: A gap semester of learning in public
+            - generic [ref=e55]:
+              - textbox "Enter your email..." [ref=e57]
+              - button "Subscribe" [ref=e58] [cursor=pointer]
+              - generic [ref=e61]:
+                - text: By subscribing, you agree Substack's
+                - link "Terms of Use" [ref=e62] [cursor=pointer]:
+                  - /url: https://substack.com/tos
+                - text: ", and acknowledge its"
+                - link "Information Collection Notice" [ref=e63] [cursor=pointer]:
+                  - /url: https://substack.com/ccpa#personal-data-collected
+                - text: and
+                - link "Privacy Policy" [ref=e64] [cursor=pointer]:
+                  - /url: https://substack.com/privacy
+                - text: .
+          - generic [ref=e66]: Already have an account? Sign in
+        - region "Post header" [ref=e67]:
+          - heading "I Solved My Mystery Fatigue with AI" [level=1] [ref=e68]
+          - heading "Here’s how you can do the same" [level=3] [ref=e69]
+          - region "Post UFI" [ref=e70]:
+            - generic [ref=e72]:
+              - link "View Amy Deng's profile" [ref=e77] [cursor=pointer]:
+                - /url: https://substack.com/@metalearn
+                - generic "Amy Deng" [ref=e79]:
+                  - img "Amy Deng's avatar" [ref=e81]
+              - generic [ref=e82]:
+                - link "Amy Deng" [ref=e85] [cursor=pointer]:
+                  - /url: https://substack.com/@metalearn
+                - generic [ref=e87]: Jun 16, 2026
+            - generic [ref=e88]:
+              - generic [ref=e89]:
+                - button "Like (58)" [ref=e91] [cursor=pointer]:
+                  - img [ref=e92]:
+                    - img [ref=e94]
+                  - generic [ref=e96]: "58"
+                - button "View comments (3)" [ref=e97] [cursor=pointer]:
+                  - img [ref=e98]:
+                    - img [ref=e100]
+                  - generic [ref=e102]: "3"
+                - button "9" [ref=e103] [cursor=pointer]:
+                  - img [ref=e104]
+                  - generic [ref=e107]: "9"
+              - button "Share" [ref=e109] [cursor=pointer]:
+                - generic [ref=e110]: Share
+        - generic [ref=e111]:
+          - button "Table of Contents" [ref=e112] [cursor=pointer]
+          - generic [ref=e136]:
+            - 'heading "The diagnostics game: I am not dying, but also not better Link" [level=2] [ref=e137]':
+              - text: "The diagnostics game: I am not dying, but also not better"
+              - button "Link" [ref=e140] [cursor=pointer]:
+                - img [ref=e141]
+            - paragraph [ref=e144]: Imagine that every hour, I spin a wheel, and there’s a 20% chance that I’ll be hit with crushing fatigue, brain fog, lightheadedness, or nausea. When it hits, I couldn’t trust myself to drive. Walking to a grocery store two minutes away feels impossible. Stringing a sentence together takes effort. I can’t plan anything. I was homebound for hours, so I texted a friend at 4 p.m. to cancel dinner, but then at 5 p.m. I felt completely fine. So I lie on the couch watching people my age hustling across the street, building one of the fastest-growing products in AI.
+            - paragraph [ref=e145]:
+              - text: Welcome to the diagnostic game I’ve been playing. Last year, I was
+              - link "diagnosed with" [ref=e146] [cursor=pointer]:
+                - /url: https://metalearn.substack.com/p/what-i-learnt-from-having-a-brain
+              - text: a prolactinoma—a tumor on the pituitary gland in the center of my head.
+              - link "Two brain surgeries" [ref=e147] [cursor=pointer]:
+                - /url: https://metalearn.substack.com/p/a-sequel-nobody-asked-for
+              - text: last August and November couldn’t fully remove it (you can find my partner Andrew’s public research on my care
+              - link "here" [ref=e148] [cursor=pointer]:
+                - /url: https://substack.com/@andrewjrod/p-186112551
+              - text: ). When a drug successfully controlled the tumor’s growth, I couldn’t be more excited. And then these episodes started. I had no idea how to make them stop until I cracked the mystery by running a process with AI. Now, I’ve been feeling consistently good for a month :)
+            - generic [ref=e150]:
+              - paragraph [ref=e152]: Thanks for reading Amy’s Meta Learning Experiment! Subscribe for free to receive new posts and support my work.
+              - generic [ref=e157]:
+                - textbox "Type your email..." [ref=e160]
+                - button "Subscribe" [disabled] [ref=e161]
+            - figure [ref=e163]:
+              - link [ref=e164]:
+                - /url: https://substackcdn.com/image/fetch/$s_!ptbn!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9cd6e0ef-2f41-4156-b590-b2e043116c1d_4130x4256.jpeg
+                - generic [ref=e168]:
+                  - button [ref=e169] [cursor=pointer]:
+                    - img [ref=e170]
+                  - button [ref=e172] [cursor=pointer]:
+                    - img [ref=e173]
+            - paragraph [ref=e174]:
+              - emphasis [ref=e175]: End of April 2026, at a friend’s wedding, when my fatigue started getting worse. I ended up leaving the wedding early.
+            - heading "AI + a good process + an educated user can beat PCPs Link" [level=2] [ref=e176]:
+              - text: AI + a good process + an educated user can beat PCPs
+              - button "Link" [ref=e179] [cursor=pointer]:
+                - img [ref=e180]
+            - paragraph [ref=e183]:
+              - strong [ref=e184]: "Here’s the bold version of my claim: an AI-literate patient running a good process with a frontier model can outperform most PCP visits for ambiguous, multi-system symptoms."
+            - paragraph [ref=e185]:
+              - text: Cardiologist Eric Topol writes in
+              - emphasis [ref=e186]: Deep Medicine
+              - text: ":"
+            - blockquote [ref=e187]:
+              - paragraph [ref=e188]: Patients exist in a world of insufficient data, insufficient time, insufficient context, and insufficient presence.
+            - paragraph [ref=e189]: A good process with AI solves all four. You can collect detailed, longitudinal data and feed it to models that are always available and endlessly patient. The models aren’t smarter than your doctor, but a thoughtful process built around them gives you something the medical system structurally can’t.
+            - paragraph [ref=e190]:
+              - text: To be clear, no model outperformed my neuroendocrinologist, the country’s top expert in my condition. The models didn’t anticipate his hypothesis, and I gained more clarity in 20 minutes with him than in the dozens of hours I spent eliciting them. But they did raise nearly every hypothesis
+              - link "1" [ref=e192] [cursor=pointer]:
+                - /url: "#footnote-1"
+              - text: his NP offered on a phone visit, and even flagged a specialized test the NP independently ordered for me. Unsurprisingly, they also easily beat every PCP I’ve seen.
+            - paragraph [ref=e193]: Many people put off dealing with non-debilitating symptoms that impair them. A friend’s girlfriend has been fatigued for months. An acquaintance regularly wakes up with a swollen neck and face, and no specialist has explained why. They procrastinate not out of laziness but because the last time they tried figuring it out, they walked away with a fat bill and nothing that worked. Who could blame them?
+            - paragraph [ref=e194]:
+              - strong [ref=e195]: The models’ current health capabilities can already give patients far more agency over their care.
+              - text: Most people don’t realize it because they don’t know how to use the models, and nobody is teaching them. Every emerging AI use case has a big elicitation gap; I saw this firsthand
+              - link "evaluating agents on software engineering tasks" [ref=e196] [cursor=pointer]:
+                - /url: https://metr.org/time-horizons/
+              - text: at
+              - link "METR" [ref=e197] [cursor=pointer]:
+                - /url: https://metr.org/
+              - text: .
+            - paragraph [ref=e198]: I am not a medical professional, but I’ve been a prosumer of health AI. I want to help people use it to improve their wellness, so I turned what worked for me into a repeatable four-step process.
+            - figure [ref=e200]:
+              - link [ref=e201]:
+                - /url: https://substackcdn.com/image/fetch/$s_!pWve!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd034c828-9712-445b-97d9-322505532898_1672x941.png
+                - generic [ref=e205]:
+                  - button [ref=e206] [cursor=pointer]:
+                    - img [ref=e207]
+                  - button [ref=e209] [cursor=pointer]:
+                    - img [ref=e210]
+            - paragraph [ref=e211]: "Here are the four steps at a glance:"
+            - list [ref=e212]:
+              - listitem [ref=e213]:
+                - paragraph [ref=e214]:
+                  - strong [ref=e215]: "Tracking:"
+                  - text: log your symptoms and their possible causes
+              - listitem [ref=e216]:
+                - paragraph [ref=e217]:
+                  - strong [ref=e218]: "Testing:"
+                  - text: get blood work or other specialized tests
+              - listitem [ref=e219]:
+                - paragraph [ref=e220]:
+                  - strong [ref=e221]: "Analyzing:"
+                  - text: examine your tracked data and test results together
+              - listitem [ref=e222]:
+                - paragraph [ref=e223]:
+                  - strong [ref=e224]: "Experimenting:"
+                  - text: make lifestyle changes, try supplements or medications with your physician’s guidance
+            - paragraph [ref=e225]:
+              - text: This process turns your mystery symptoms into trackable, verifiable tasks—the kind of work AI does best. If you’d rather skip ahead,
+              - strong [ref=e226]:
+                - text: the
+                - link "appendix" [ref=e227] [cursor=pointer]:
+                  - /url: https://metalearn.substack.com/i/201330336/appendix-i-plug-and-play-artifacts
+                - text: has a plug-and-play system prompt and a coding-agent skill
+              - text: ", both built around this method. But the step-by-step sections below cover details the artifacts leave out."
+            - paragraph [ref=e228]: Before diving into the four steps, let’s cover a few health-specific prompting tips.
+            - 'heading "Step 0: Health Prompting Tips Link" [level=2] [ref=e229]':
+              - text: "Step 0: Health Prompting Tips"
+              - button "Link" [ref=e232] [cursor=pointer]:
+                - img [ref=e233]
+            - heading "The Basics Link" [level=4] [ref=e236]:
+              - text: The Basics
+              - button "Link" [ref=e239] [cursor=pointer]:
+                - img [ref=e240]
+            - list [ref=e243]:
+              - listitem [ref=e244]:
+                - paragraph [ref=e245]: Always use reasoning models with high thinking effort, such as Claude Opus 4.8 or GPT 5.5. You’ll need a paid subscription to access these models, but it is the most worthwhile $20 I’ve spent in my health journey.
+              - listitem [ref=e246]:
+                - paragraph [ref=e247]: Create a project to organize your health records. With a project, you upload your clinical records only once, and the model builds memory around your specific health concerns over time.
+            - figure [ref=e249]:
+              - link [ref=e250]:
+                - /url: https://substackcdn.com/image/fetch/$s_!8oud!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feb2f5fe3-1daa-46a5-918a-a4aad446d292_2458x1060.png
+                - generic [ref=e254]:
+                  - button [ref=e255] [cursor=pointer]:
+                    - img [ref=e256]
+                  - button [ref=e258] [cursor=pointer]:
+                    - img [ref=e259]
+            - list [ref=e260]:
+              - listitem [ref=e261]:
+                - paragraph [ref=e262]: "For advanced users: try a coding agent (like Codex or Claude Code). The advantages are:"
+                - list [ref=e263]:
+                  - listitem [ref=e264]:
+                    - paragraph [ref=e265]: They handle complex file formats (e.g., CT / MRI images) and large data dumps (e.g., months of Garmin data) better.
+                  - listitem [ref=e266]:
+                    - paragraph [ref=e267]: Their planning mode can surface unknown-unknowns, which is critical in diagnosis.
+                  - listitem [ref=e268]:
+                    - paragraph [ref=e269]: Instead of re-uploading a file every time it changes, you can keep all your data in a local folder and edit it in place.
+                  - listitem [ref=e270]:
+                    - paragraph [ref=e271]: You can build custom tools and reminders for your symptom tracker
+            - heading "Provide ALL the context Link" [level=4] [ref=e272]:
+              - text: Provide ALL the context
+              - button "Link" [ref=e275] [cursor=pointer]:
+                - img [ref=e276]
+            - paragraph [ref=e279]:
+              - text: No amount of context is too much. This is true whether you’re seeing a PCP and talking to a model. However,
+              - link "an average doctor only lets their patient talk for ~11s before interrupting" [ref=e280] [cursor=pointer]:
+                - /url: https://link.springer.com/article/10.1007/s11606-018-4540-5
+              - text: . Models have infinite time and patience. So, be liberal and give it everything!
+            - list [ref=e281]:
+              - listitem [ref=e282]:
+                - paragraph [ref=e283]: Write up your medical history, including gender, age, weight, height, family history, and other information that you think matters. Share this as a text snippet to the model.
+              - listitem [ref=e284]:
+                - paragraph [ref=e285]: "Attach all potentially relevant records: blood work results, specialty tests, past clinical notes, etc. ChatGPT Health allows you to connect certain EHR systems directly; otherwise, these records can usually be exported from your electronic healthcare system. You can simply ask an LLM how to do so!"
+              - listitem [ref=e286]:
+                - paragraph [ref=e287]: Keep adding context as you go. New data surfaces throughout the four-step process, so pause periodically and ask what else might be relevant. It’s more likely you’ve missed something than not. The model and your doctor should ask the questions that surface your unknown-unknowns, but with such a narrow view into your life, they’ll often miss things you’d catch.
+              - listitem [ref=e288]:
+                - paragraph [ref=e289]:
+                  - text: Have data privacy concerns? Both ChatGPT and Claude let you opt out of having your data used for training; however, they are
+                  - link "not by default HIPAA-compliant" [ref=e290] [cursor=pointer]:
+                    - /url: https://www.hipaajournal.com/is-chatgpt-hipaa-compliant/
+                  - text: right now. I am happy to share my data because the upside of improving my day-to-day is high enough to outweigh the concern. This is a view that other
+                  - link "patients" [ref=e291] [cursor=pointer]:
+                    - /url: https://osteosarc.com/
+                  - text: and
+                  - link "advocates" [ref=e292] [cursor=pointer]:
+                    - /url: https://www.statnews.com/2026/01/29/chatgpt-health-review-privacy-trust/
+                  - text: share, but it’s ultimately a personal decision.
+            - heading "Be Specific Link" [level=4] [ref=e293]:
+              - text: Be Specific
+              - button "Link" [ref=e296] [cursor=pointer]:
+                - img [ref=e297]
+            - list [ref=e300]:
+              - listitem [ref=e301]:
+                - paragraph [ref=e302]: "Describe symptoms in detail: severity, duration, what you did beforehand, and what caused it to stop."
+              - listitem [ref=e303]:
+                - paragraph [ref=e304]: For any result you haven’t uploaded as a file, give the test’s full name, your exact value (not just “in range”), and the reference range from your chart.
+                - list [ref=e305]:
+                  - listitem [ref=e306]:
+                    - paragraph [ref=e307]: T4 is not free T4; estrogen is not ultrasensitive estradiol. Without specifics, the model may steer you wrong.
+                  - listitem [ref=e308]:
+                    - paragraph [ref=e309]: Different labs use different equipment, which means different reference ranges for the same test.
+                  - listitem [ref=e310]:
+                    - paragraph [ref=e311]: Being “in range” doesn’t tell the whole story. A borderline-high result is nothing like one that’s 10x over the limit.
+            - heading "Be Critical Link" [level=4] [ref=e312]:
+              - text: Be Critical
+              - button "Link" [ref=e315] [cursor=pointer]:
+                - img [ref=e316]
+            - list [ref=e319]:
+              - listitem [ref=e320]:
+                - paragraph [ref=e321]: Models can confidently say wrong things. The best defense is to understand the underlying science yourself. This can be time-intensive, but you ask the models to teach it to you :)
+              - listitem [ref=e322]:
+                - paragraph [ref=e323]: When you suspect an answer is off, regenerate it a few times and compare across different models. When they independently agree, the answer is more likely to be right.
+              - listitem [ref=e324]:
+                - paragraph [ref=e325]: Don’t take any risky medical action (e.g., adjusting medication) until your care team signs off.
+            - 'heading "Step 1: Tracking Link" [level=2] [ref=e326]':
+              - text: "Step 1: Tracking"
+              - button "Link" [ref=e329] [cursor=pointer]:
+                - img [ref=e330]
+            - heading "Why tracking? Link" [level=4] [ref=e333]:
+              - text: Why tracking?
+              - button "Link" [ref=e336] [cursor=pointer]:
+                - img [ref=e337]
+            - paragraph [ref=e340]:
+              - text: "A week into my on-and-off fatigue, I kept catching myself thinking: “Maybe I feel bad because of X, since last time I felt bad, X happened too.” But two minutes of reflection would turn up just as many cases where the symptoms showed up without X, or X showed up without the symptoms. There are simply"
+              - emphasis [ref=e341]: too many
+              - text: factors that might cause fatigue, headaches, and whatever else you’re dealing with. You cannot recall everything perfectly from memory, which is why tracking matters.
+            - paragraph [ref=e342]: Longitudinal data on yourself also sets a baseline for any intervention you want to try. While some changes are dramatic enough to notice immediately, most changes such as diet, sleep, supplements, and even some medications, work slowly. Having the numbers lets you identify which interventions actually help based on more than vibes alone.
+            - paragraph [ref=e343]: Tracking also forces you to question your assumptions about your body and look systematically at every variable that might be feeding your illness. My prolactinoma was diagnosed about 2.5 years late because I never took my irregular periods seriously.
+            - paragraph [ref=e344]: "Finally, tracking helps you see progress and hold onto hope. For weeks, I was frustrated and desperate for any improvement. The data let me point to something concrete: I’ve tried these interventions, and now I at least know they don’t work. That’s progress! The zig-zag in the numbers reminds me that healing isn’t linear."
+            - figure [ref=e346]:
+              - link [ref=e347]:
+                - /url: https://substackcdn.com/image/fetch/$s_!WVt8!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd772713c-4b1d-412f-a83f-6c7f8215ac38_1672x941.png
+                - generic [ref=e351]:
+                  - button [ref=e352] [cursor=pointer]:
+                    - img [ref=e353]
+                  - button [ref=e355] [cursor=pointer]:
+                    - img [ref=e356]
+            - paragraph [ref=e357]:
+              - emphasis [ref=e358]: My actual tracked data while I was figuring out my fatigue
+            - heading "What to track? Link" [level=4] [ref=e359]:
+              - text: What to track?
+              - button "Link" [ref=e362] [cursor=pointer]:
+                - img [ref=e363]
+            - paragraph [ref=e366]: Ask an LLM to help you find a small set of high-signal metrics. Start by describing your symptoms and your working hypothesis, then ask what factors you should track. Follow up by asking what hidden assumptions you might be making and what you might have missed.
+            - paragraph [ref=e367]: Figuring out what to track is an iterative process. At first, I logged only daily calories. But when I noticed that a small amount of carbs sometimes helped me recover faster mid-episode, I tracked carbs on the same spreadsheet. Later, I cut the friction by logging macros in an app instead of reconstructing my daily intake from memory each night.
+            - paragraph [ref=e368]: Tracking is useless if you don’t stick with it, so commit only to what you can sustain, then expand slowly.
+            - heading "How to track? Link" [level=4] [ref=e369]:
+              - text: How to track?
+              - button "Link" [ref=e372] [cursor=pointer]:
+                - img [ref=e373]
+            - paragraph [ref=e376]: "There are only two rules: make it as easy as possible for yourself, and keep it in a format that’s easy to export and parse."
+            - paragraph [ref=e377]: "Because my symptoms are episodic with unknown triggers, I erred toward comprehensiveness. Here’s my setup, which takes about 20 minutes a day:"
+            - list [ref=e378]:
+              - listitem [ref=e379]:
+                - paragraph [ref=e380]: "Specialized apps:"
+                - list [ref=e381]:
+                  - listitem [ref=e382]:
+                    - paragraph [ref=e383]: The Garmin watch I already wear tracks sleep score and steps.
+                  - listitem [ref=e384]:
+                    - paragraph [ref=e385]: Cronometer for food and liquid intake, which I also share with my dietitian.
+                  - listitem [ref=e386]:
+                    - paragraph [ref=e387]: Briefly, an over-the-counter continuous glucose monitor.
+              - listitem [ref=e388]:
+                - paragraph [ref=e389]: "Core spreadsheets in Notion, which contain a daily log and an hourly log:"
+                - list [ref=e390]:
+                  - listitem [ref=e391]:
+                    - paragraph [ref=e392]: The hourly log runs from 9 am - 10 pm. For each hour, I record energy level (1–5), any symptoms, and notes on what I felt might be relevant.
+                  - listitem [ref=e393]:
+                    - paragraph [ref=e394]: The daily log tracks menstrual cycle day, days since my last tumor-medication dose, the previous night’s sleep score, calories and carbs, that day’s exercise, any stressors, and the average of the day’s hourly energy scores. Plus a notes column for anything else.
+                  - listitem [ref=e395]:
+                    - paragraph [ref=e396]: I had an AI agent build the spreadsheets for me and auto populate fields such as menstrual cycle date.
+            - paragraph [ref=e397]: Depending on your situation, you may not need a central spreadsheet at all. If you only want to track food, exercise, and daily energy, a diet app, an exercise app, and one number a day in Apple Notes will do. You can stitch them together with AI later.
+            - paragraph [ref=e398]:
+              - text: "The point is to make your stack as frictionless as possible. For me, everything has to work on my phone so I can log on the fly. Customize it for yourself: if logging every meal is exhausting, just photograph your food and hand it to ChatGPT for a rough macro estimate."
+              - link "2" [ref=e400] [cursor=pointer]:
+                - /url: "#footnote-2"
+            - 'heading "Step 2: Testing Link" [level=2] [ref=e401]':
+              - text: "Step 2: Testing"
+              - button "Link" [ref=e404] [cursor=pointer]:
+                - img [ref=e405]
+            - paragraph [ref=e408]: Tracking captures how you feel, but it’s often too subjective to be diagnostic on its own. That’s why you run tests in parallel to find the root cause of an ambiguous symptom.
+            - paragraph [ref=e409]: "For my fatigue, lightheadedness, and brain fog, here’s what I tested:"
+            - list [ref=e410]:
+              - listitem [ref=e411]:
+                - paragraph [ref=e412]:
+                  - strong [ref=e413]: General blood work.
+                  - text: I used
+                  - link "Function Health" [ref=e414] [cursor=pointer]:
+                    - /url: https://www.functionhealth.com/
+                  - text: for a panel covering 100+ biomarkers at $365 a year. It’s pricier than asking a PCP for individual tests, but it was the most efficient way—in cost and time—to get broad coverage at once.
+              - listitem [ref=e415]:
+                - paragraph [ref=e416]:
+                  - strong [ref=e417]: Specialized testing.
+                  - text: Given my pituitary history, I asked my endocrinologist for a full pituitary hormone panel. Research with the models led me to suspect an HPA-axis issue, which calls for an ACTH stimulation test—the same one my NP later suggested independently
+                  - link "3" [ref=e419] [cursor=pointer]:
+                    - /url: "#footnote-3"
+                  - text: .
+              - listitem [ref=e420]:
+                - paragraph [ref=e421]:
+                  - strong [ref=e422]: At home blood pressure measurements.
+                  - text: To screen for orthostatic intolerance patterns.
+              - listitem [ref=e423]:
+                - paragraph [ref=e424]:
+                  - strong [ref=e425]: Gut health testing.
+                  - text: I deal with frequent bloating, so I wanted to rule it in or out, even though I’m unsure it contributes to the fatigue.
+            - paragraph [ref=e426]: There’s an overwhelming number of direct-to-consumer tests out there, from DEXA scans to full genome sequencing. I’d caution against over-testing; it’s both costly and emotionally exhausting. In the same project where you’ve stored your health data, ask the model what additional tests might be worthwhile. I’ve found them just conservative enough in what they recommend.
+            - 'heading "Step 3: Analyzing Link" [level=2] [ref=e427]':
+              - text: "Step 3: Analyzing"
+              - button "Link" [ref=e430] [cursor=pointer]:
+                - img [ref=e431]
+            - paragraph [ref=e434]: Now that you have longitudinal symptom and lifestyle data alongside your test results, you can put the LLMs to their fullest use. No PCP can sift through a month of scattered notes on how you felt, when, and against which environmental and behavioral factors—but that data-wrangling is exactly what these models are trained to do.
+            - figure [ref=e436]:
+              - link [ref=e437]:
+                - /url: https://substackcdn.com/image/fetch/$s_!SoF1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7fe67c71-59a0-411d-9106-0ce5326d2e15_676x576.png
+                - generic [ref=e441]:
+                  - button [ref=e442] [cursor=pointer]:
+                    - img [ref=e443]
+                  - button [ref=e445] [cursor=pointer]:
+                    - img [ref=e446]
+            - paragraph [ref=e447]: Here’s everything I handed the model
+            - list [ref=e448]:
+              - listitem [ref=e449]:
+                - paragraph [ref=e450]:
+                  - strong [ref=e451]: "All my tracked data:"
+                  - text: my central spreadsheet, plus exports from Cronometer and the continuous glucose monitor.
+                - list [ref=e452]:
+                  - listitem [ref=e453]:
+                    - paragraph [ref=e454]: With coding agents (Codex, Claude Code), I threw in my entire Garmin history too.
+              - listitem [ref=e455]:
+                - paragraph [ref=e456]:
+                  - strong [ref=e457]: "All my test results:"
+                  - text: Function Health
+                  - link "4" [ref=e459] [cursor=pointer]:
+                    - /url: "#footnote-4"
+                  - text: ", the specialized pituitary labs"
+                  - link "5" [ref=e461] [cursor=pointer]:
+                    - /url: "#footnote-5"
+                  - text: ", gut health results, and at-home blood pressure readings."
+            - paragraph [ref=e462]:
+              - strong [ref=e463]: "Specific questions I asked the models:"
+            - list [ref=e464]:
+              - listitem [ref=e465]:
+                - paragraph [ref=e466]: Looking through all the data in this project, can you find any patterns in what triggers my fatigue and what resolves it?
+              - listitem [ref=e467]:
+                - paragraph [ref=e468]: What hypotheses might explain my symptoms?
+              - listitem [ref=e469]:
+                - paragraph [ref=e470]: Why do my symptoms tend to hit in the mid-afternoon, and why does social interaction temporarily relieve them? Where does each root-cause hypothesis fit those patterns, and where does it fail?
+              - listitem [ref=e471]:
+                - paragraph [ref=e472]: Given those hypotheses, what interventions might reduce the frequency and severity of the symptoms? Would any additional testing help?
+            - paragraph [ref=e473]: By the time I talked through my symptoms with my PCP, my endocrinologist, and his NP, every question they asked was something I’d already investigated through this cycle of tracking, testing, and analyzing.
+            - 'heading "Step 3.5: Building a supporting cast Link" [level=2] [ref=e474]':
+              - text: "Step 3.5: Building a supporting cast"
+              - button "Link" [ref=e477] [cursor=pointer]:
+                - img [ref=e478]
+            - paragraph [ref=e481]: Assembling a team of experts is something I underinvested in at first. But analyzing my own logs, I noticed that roughly half the time, eating a snack improved my symptoms—and though nausea made me averse to food, eating had always resolved the nausea. Those patterns pushed me to consult a dietitian to double-check my nutrition.
+            - figure [ref=e483]:
+              - link [ref=e484]:
+                - /url: https://substackcdn.com/image/fetch/$s_!zTGy!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1353de80-6275-46b7-bff8-b9d989e7f180_2027x776.png
+                - generic [ref=e488]:
+                  - button [ref=e489] [cursor=pointer]:
+                    - img [ref=e490]
+                  - button [ref=e492] [cursor=pointer]:
+                    - img [ref=e493]
+            - paragraph [ref=e494]: I didn’t expect to learn much and was pleasantly surprised. She pointed out that even though my meals were balanced, I’d been under-fueling by ~300 calories a day for a long time—possibly tipping my body into “energy-saving mode” and leaving me more prone to fatigue. Eating a snack proactively in the mid-afternoon seemed to help me get ahead of the crashes.
+            - paragraph [ref=e495]:
+              - text: "Your supporting cast might look different: a physical therapist, a sleep coach, a psychologist. Some services even offer essentially free"
+              - link "6" [ref=e497] [cursor=pointer]:
+                - /url: "#footnote-6"
+              - text: initial visits. Never underestimate what one of these conversations can surface. Worst case, you rule out one more possible cause, which is still useful progress.
+            - 'heading "Step 4: Experimenting Link" [level=2] [ref=e498]':
+              - text: "Step 4: Experimenting"
+              - button "Link" [ref=e501] [cursor=pointer]:
+                - img [ref=e502]
+            - paragraph [ref=e505]: When done well, the analysis surfaces a set of behavioral, dietary, supplement, or medication changes worth trying. Never adjust medication without consulting your doctor, but plenty of lifestyle changes are easy to test while you wait for an appointment. And because you collected baseline data with no interventions in place, you already have a way to measure whether each change works!
+            - paragraph [ref=e506]: "From my own tracking, testing, and analysis, here are the leading conclusions and the experiments I ran:"
+            - list [ref=e507]:
+              - listitem [ref=e508]:
+                - paragraph [ref=e509]: My blood work showed low ferritin even though my iron and iron saturation are normal, so I started iron supplements.
+              - listitem [ref=e510]:
+                - paragraph [ref=e511]: I raised my intake by roughly 300 calories a day, making sure I hit the recommended amount of carbs specifically, not just the total.
+              - listitem [ref=e512]:
+                - paragraph [ref=e513]: My blood pressure runs low-normal, so I tracked my fluid intake for a few days to rule out dehydration as a cause of the lightheadedness.
+              - listitem [ref=e514]:
+                - paragraph [ref=e515]: I took a little creatine after workouts.
+              - listitem [ref=e516]:
+                - paragraph [ref=e517]: I paused all exercise for a week, then resumed for a week. Seeing no post-exertion fatigue, I went back to my usual strength training.
+              - listitem [ref=e518]:
+                - paragraph [ref=e519]: My endocrinology team had me stop my tumor medication for four weeks, test my prolactin (the hormone my tumor secretes), and restart at half the dose, since my prolactin level was too low.
+              - listitem [ref=e520]:
+                - paragraph [ref=e521]: My endocrinologist also suspects low estrogen may be contributing, so we’re testing it on days 1, 14, and 21 of my next cycle to see whether I need supplementation.
+            - paragraph [ref=e522]:
+              - strong [ref=e523]: "These experiments fall into roughly three categories, each worth treating differently:"
+            - list [ref=e524]:
+              - listitem [ref=e525]:
+                - paragraph [ref=e526]:
+                  - strong [ref=e527]: Definitely worth doing.
+                  - text: Taking iron when ferritin is below range is recommended
+                  - link "7" [ref=e529] [cursor=pointer]:
+                    - /url: "#footnote-7"
+                  - text: whether or not it’s the cause of my fatigue. Staying hydrated is likewise a no-brainer. Start these right away since there’s usually no need to worry about them overlapping with other experiments.
+              - listitem [ref=e530]:
+                - paragraph [ref=e531]:
+                  - strong [ref=e532]: Harmless but maybe useless.
+                  - text: Creatine is in this category. It may do little, but it could confound experiments running at the same time and make my real symptoms harder to read. It’s often worth spacing experiments like this out so you can isolate their effects.
+              - listitem [ref=e533]:
+                - paragraph [ref=e534]:
+                  - strong [ref=e535]: Potentially risky or costly.
+                  - text: "Changing a medication dose or stopping exercise both belong here. For these, consult your physician and keep the change time-bounded: when I stopped my medication and my exercise, I had a plan to resume and a clear sense of what I was testing. Run these one at a time."
+            - heading "And the loop continues Link" [level=2] [ref=e536]:
+              - text: And the loop continues
+              - button "Link" [ref=e539] [cursor=pointer]:
+                - img [ref=e540]
+            - paragraph [ref=e543]: Even though I’ve been feeling great for many weeks in a row, I still need to return to the testing phase to confirm that my prolactin, estrogen, and ferritin have normalized, but the rest of the cycle is mostly closed.
+            - paragraph [ref=e544]:
+              - text: Though the four-step loop will keep running on other parts of my health. Now that my energy is stabilizing, my next quest is body recomposition given my hormonal complications
+              - link "8" [ref=e546] [cursor=pointer]:
+                - /url: "#footnote-8"
+              - text: . I expect the same process will help me find my own fitness recipe better than any single trainer or dietitian could—who, like the PCPs, will struggle to hold all my medical context at once.
+            - heading "Nobody is coming to save you Link" [level=2] [ref=e547]:
+              - text: Nobody is coming to save you
+              - button "Link" [ref=e550] [cursor=pointer]:
+                - img [ref=e551]
+            - paragraph [ref=e554]: If you have any ambiguous symptoms you’ve been waiting to resolve, I hope this essay gives you a concrete way to begin. We don’t need to wait until AI can cure cancer to use it to improve our health.
+            - paragraph [ref=e555]:
+              - strong [ref=e556]: You don’t need to understand medicine. You don’t need to be technical. You don’t need anyone’s permission. Because by default, nobody is coming to save you. So go and take charge of your own health!
+            - heading "If you’re a scientist, physician, patient, researcher, or building in Health AI, reach out! Link" [level=2] [ref=e557]:
+              - text: If you’re a scientist, physician, patient, researcher, or building in Health AI, reach out!
+              - button "Link" [ref=e560] [cursor=pointer]:
+                - img [ref=e561]
+            - paragraph [ref=e564]:
+              - strong [ref=e565]:
+                - text: Here’s my
+                - link "calendar" [ref=e566] [cursor=pointer]:
+                  - /url: https://calendar.app.google/Psc3DGJ8iiZqL5pu5
+                - text: ; I’d love to help you make better use of AI.
+              - text: Grab time before ideas and thoughts escape you :)
+            - paragraph [ref=e567]: "I have an unusual perspective as an AI-researcher-turned-patient. I don’t yet know how I want to carry this forward, or whether I want to work on AI x health at all, but I’d love to help where I can. A few sketches of what I can offer and what I want to learn:"
+            - list [ref=e568]:
+              - listitem [ref=e569]:
+                - paragraph [ref=e570]:
+                  - strong [ref=e571]: If you’re a scientist or physician,
+                  - text: I am happy to help improve how you’re using AI or build out a custom harness / workflow for your specialized use case.
+              - listitem [ref=e572]:
+                - paragraph [ref=e573]:
+                  - strong [ref=e574]: If you’re an AI researcher
+                  - text: ", I’ve informally given health model behavior feedback to researchers at a lab, and have more thoughts on consumer health evals that go beyond the accuracy of answers."
+              - listitem [ref=e575]:
+                - paragraph [ref=e576]:
+                  - strong [ref=e577]: If you’re a patient
+                  - text: ", I’m happy to offer thoughts on how to elicit the models for your research—but only after you’ve tried the basics in the prompting section and the prompts or skills I linked in the"
+                  - link "appendix" [ref=e578] [cursor=pointer]:
+                    - /url: https://metalearn.substack.com/i/201330336/appendix-i-plug-and-play-artifacts
+                  - text: :)
+              - listitem [ref=e579]:
+                - paragraph [ref=e580]:
+                  - strong [ref=e581]: If you’re working on applied health AI
+                  - text: ", I’d love to understand what you think will remain a bottleneck given advanced intelligence. I wonder whether the path to health AGI being useful will look very different from software AGI, given that humans are the problem and must stay in the loop."
+              - listitem [ref=e582]:
+                - paragraph [ref=e583]:
+                  - strong [ref=e584]: I’m generally curious about
+                  - text: reusable tooling and consumer-side harnesses for personal medicine investigations.
+            - generic [ref=e585]:
+              - paragraph [ref=e587]: I’d love for this post to reach as many people as possible, so that what I’ve learned can help others :)
+              - paragraph [ref=e588] [cursor=pointer]:
+                - link "Share" [ref=e589]:
+                  - /url: https://metalearn.substack.com/p/i-solved-my-mystery-fatigue-with-ai?utm_source=substack&utm_medium=email&utm_content=share&action=share
+            - 'heading "Appendix I: Plug-and-Play Artifacts Link" [level=2] [ref=e590]':
+              - text: "Appendix I: Plug-and-Play Artifacts"
+              - button "Link" [ref=e593] [cursor=pointer]:
+                - img [ref=e594]
+            - paragraph [ref=e597]:
+              - link "System prompt" [ref=e598] [cursor=pointer]:
+                - /url: https://github.com/amydeng2000/health-self-investigation-skill/blob/main/skills/health-self-investigation/references/portable-core.md
+              - text: ","
+              - link "Skill for Codex and Claude Code" [ref=e599] [cursor=pointer]:
+                - /url: https://github.com/amydeng2000/health-self-investigation-skill
+            - paragraph [ref=e600]: This article is detailed, so I’ve made it easy to apply without memorizing all of it. Below is a system prompt you can drop into a project instruction if you use ChatGPT or Claude on web or mobile.
+            - figure [ref=e602]:
+              - link [ref=e603]:
+                - /url: https://substackcdn.com/image/fetch/$s_!yYMk!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fffe6f495-87b4-428e-9bc2-259c16505729_2516x1258.png
+                - generic [ref=e607]:
+                  - button [ref=e608] [cursor=pointer]:
+                    - img [ref=e609]
+                  - button [ref=e611] [cursor=pointer]:
+                    - img [ref=e612]
+            - paragraph [ref=e613]:
+              - text: And if you’re comfortable with coding agents like Codex or Claude Code, here’s a
+              - link "skill" [ref=e614] [cursor=pointer]:
+                - /url: https://github.com/amydeng2000/health-self-investigation-skill
+              - text: I built that starts with a short symptom intake and routes you to the right phase of the four-step process. It takes a little more setup but is more comprehensive than the system prompt alone.
+            - 'heading "Appendix II: Bulid Your Personal Health Stack Link" [level=2] [ref=e615]':
+              - text: "Appendix II: Bulid Your Personal Health Stack"
+              - button "Link" [ref=e618] [cursor=pointer]:
+                - img [ref=e619]
+            - paragraph [ref=e622]: "AI’s coding and research capabilities are now good enough for each of us to build personalized health tools for our own needs. Just bring your problem, and you can get the models to scaffold themselves to solve it. A few examples that come to mind:"
+            - paragraph [ref=e623]: Can’t remember to track things hourly? Set up a ChatGPT scheduled task that pings you every hour, or a long-running Claude app that texts you and logs your responses in a spreadsheet.
+            - paragraph [ref=e624]: Don’t want to log what you ate, let alone upload the photos manually? Run a scheduled job that pulls food photos from your iCloud daily.
+            - paragraph [ref=e625]:
+              - text: Have too much data across hospitals, labs, and devices, and need to catch a new doctor up on your past treatments? Build a website to visualize things, as GitLab co-founder Sid did with his own cancer data
+              - link "here" [ref=e626] [cursor=pointer]:
+                - /url: https://osteosarc.com/
+              - text: .
+            - paragraph [ref=e627]: Every small, personalized improvement in how you collect, organize, and analyze data is now within reach, and anyone can build something custom. The biggest unlock still ahead, I think, is continuous monitoring beyond blood glucose—hormone monitoring, for instance—which could give us a far more granular view of how the body’s systems interact.
+            - paragraph
+            - generic [ref=e629]:
+              - paragraph [ref=e631]: Thanks for reading Amy’s Meta Learning Experiment! Subscribe for free to receive new posts and support my work.
+              - generic [ref=e636]:
+                - textbox "Type your email..." [ref=e639]
+                - button "Subscribe" [disabled] [ref=e640]
+            - paragraph [ref=e641]:
+              - text: Thank you
+              - link "Jane" [ref=e642] [cursor=pointer]:
+                - /url: https://thoughtsbyjane.substack.com/
+              - text: ", Rahul, Eli, Luke, and"
+              - link "Andrew" [ref=e643] [cursor=pointer]:
+                - /url: https://substack.com/@andrewjrod
+              - text: for thoughts and feedback on this piece <3
+            - generic [ref=e644]:
+              - link "1" [ref=e645] [cursor=pointer]:
+                - /url: "#footnote-anchor-1"
+              - paragraph [ref=e647]: The 1 out of 5-6 hypotheses the model didn’t bring up was one that was the least relevant.
+            - generic [ref=e648]:
+              - link "2" [ref=e649] [cursor=pointer]:
+                - /url: "#footnote-anchor-2"
+              - paragraph [ref=e651]: The models aren’t good at estimating quantity from a photo alone—in my experience, the error can be up to 2x off in both directions.
+            - generic [ref=e652]:
+              - link "3" [ref=e653] [cursor=pointer]:
+                - /url: "#footnote-anchor-3"
+              - paragraph [ref=e655]: It’s very cool that the models landed on the same niche test a trained specialist did.
+            - generic [ref=e656]:
+              - link "4" [ref=e657] [cursor=pointer]:
+                - /url: "#footnote-anchor-4"
+              - paragraph [ref=e659]: Function Health doesn’t let you bulk-export results until a clinician writes a summary, which takes weeks. So I had Codex use browser automation to read the results straight off my screen once I’d logged in, and pull every abnormal test’s name, value, and reference range, plus brief summaries of the in-range results.
+            - generic [ref=e660]:
+              - link "5" [ref=e661] [cursor=pointer]:
+                - /url: "#footnote-anchor-5"
+              - paragraph [ref=e663]: MyChart doesn’t let you bulk export test results either, so I asked an LLM how to circumvent this. I ended up connecting MyChart to Apple Health, which automatically compiles your lab results in PDFs
+            - generic [ref=e664]:
+              - link "6" [ref=e665] [cursor=pointer]:
+                - /url: "#footnote-anchor-6"
+              - paragraph [ref=e667]: Fay, where I found my dietitian, gives you an upfront cost estimate; if a dietitian is in-network, that estimate is often $0, and even if you’re later charged a co-pay, Fay refunds you to match the original estimate.
+            - generic [ref=e668]:
+              - link "7" [ref=e669] [cursor=pointer]:
+                - /url: "#footnote-anchor-7"
+              - paragraph [ref=e671]: Barring a conflicting condition, which I don’t have
+            - generic [ref=e672]:
+              - link "8" [ref=e673] [cursor=pointer]:
+                - /url: "#footnote-anchor-8"
+              - paragraph [ref=e675]: For a long time, my estrogen sat at postmenopausal levels, which put me in the bottom 5% of bone density for my age and likely pushed visceral fat toward my abdomen.
+          - separator [ref=e676]
+          - generic [ref=e677]:
+            - generic [ref=e678]:
+              - heading "Subscribe to Amy’s Meta Learning Experiment" [level=4] [ref=e679]
+              - generic [ref=e680]: By Amy Deng · Launched 4 years ago
+              - generic [ref=e681]: A gap semester of learning in public
+            - generic [ref=e682]:
+              - generic [ref=e687]:
+                - textbox "Type your email..." [ref=e690]
+                - button "Subscribe" [disabled] [ref=e691]
+              - generic [ref=e694]:
+                - text: By subscribing, you agree Substack's
+                - link "Terms of Use" [ref=e695] [cursor=pointer]:
+                  - /url: https://substack.com/tos
+                - text: ", and acknowledge its"
+                - link "Information Collection Notice" [ref=e696] [cursor=pointer]:
+                  - /url: https://substack.com/ccpa#personal-data-collected
+                - text: and
+                - link "Privacy Policy" [ref=e697] [cursor=pointer]:
+                  - /url: https://substack.com/privacy
+                - text: .
+          - generic [ref=e699]:
+            - generic [ref=e701]:
+              - link "View Nav's profile" [ref=e703] [cursor=pointer]:
+                - /url: https://substack.com/profile/3365049-nav
+                - generic "Nav" [ref=e705]:
+                  - img "Nav's avatar" [ref=e707]
+              - link "View Eli's profile" [ref=e709] [cursor=pointer]:
+                - /url: https://substack.com/profile/107027304-eli
+                - generic "Eli" [ref=e711]:
+                  - img "Eli's avatar" [ref=e713]
+              - link "View Chris Wright's profile" [ref=e715] [cursor=pointer]:
+                - /url: https://substack.com/profile/3964151-chris-wright
+                - generic "Chris Wright" [ref=e717]:
+                  - img "Chris Wright's avatar" [ref=e719]
+              - link "View Alex Krentsel's profile" [ref=e721] [cursor=pointer]:
+                - /url: https://substack.com/profile/313134867-alex-krentsel
+                - generic "Alex Krentsel" [ref=e723]:
+                  - img "Alex Krentsel's avatar" [ref=e725]
+              - link "View Andrew Rodriguez's profile" [ref=e727] [cursor=pointer]:
+                - /url: https://substack.com/profile/127997498-andrew-rodriguez
+                - generic "Andrew Rodriguez" [ref=e729]:
+                  - img "Andrew Rodriguez's avatar" [ref=e731]
+            - generic [ref=e733]:
+              - generic [ref=e734] [cursor=pointer]: 58 Likes
+              - text: ∙
+              - link "9 Restacks" [ref=e736] [cursor=pointer]:
+                - /url: https://substack.com/note/p-201330336/restacks?utm_source=substack&utm_content=facepile-restacks
+          - generic [ref=e738]:
+            - generic [ref=e739]:
+              - button "Like (58)" [ref=e741] [cursor=pointer]:
+                - img [ref=e742]:
+                  - img [ref=e744]
+                - generic [ref=e746]: "58"
+              - button "View comments (3)" [ref=e747] [cursor=pointer]:
+                - img [ref=e748]:
+                  - img [ref=e750]
+                - generic [ref=e752]: "3"
+              - button "9" [ref=e753] [cursor=pointer]:
+                - img [ref=e754]
+                - generic [ref=e757]: "9"
+            - button "Share" [ref=e759] [cursor=pointer]:
+              - generic [ref=e760]: Share
+      - generic [ref=e761]:
+        - generic [ref=e762]:
+          - generic [ref=e763]:
+            - heading "Discussion about this post" [level=4] [ref=e764]
+            - tablist "Select discussion type" [ref=e768]:
+              - tab "Comments" [selected] [ref=e769] [cursor=pointer]
+              - tab "Restacks" [ref=e770] [cursor=pointer]
+          - generic [ref=e773]:
+            - generic [ref=e775]:
+              - generic "User" [ref=e777]:
+                - img "User's avatar" [ref=e779]
+              - textbox "Write a comment..." [ref=e782]
+            - generic [ref=e784]:
+              - article "Comment by Chris Wright" [ref=e788]:
+                - link "View Chris Wright's profile" [ref=e791] [cursor=pointer]:
+                  - /url: https://substack.com/profile/3964151-chris-wright?utm_source=comment
+                  - generic "Chris Wright" [ref=e793]:
+                    - img "Chris Wright's avatar" [ref=e795]
+                - generic [ref=e796]:
+                  - generic [ref=e797]:
+                    - generic [ref=e800]:
+                      - generic [ref=e802]:
+                        - link "Chris Wright" [ref=e805] [cursor=pointer]:
+                          - /url: https://substack.com/profile/3964151-chris-wright?utm_source=substack-feed-item
+                        - img [ref=e808] [cursor=pointer]
+                      - link "1d" [ref=e811] [cursor=pointer]:
+                        - /url: https://metalearn.substack.com/p/i-solved-my-mystery-fatigue-with-ai/comment/277436264
+                    - button "Ellipsis" [ref=e814] [cursor=pointer]:
+                      - img [ref=e815]
+                  - generic [ref=e819]:
+                    - paragraph [ref=e820]: Very interesting approach! I think this type of AI-enhanced data analysis is precisely the future of medicine, particularly in information-dense cognitive specialties like mine (rheumatology).
+                    - paragraph [ref=e821]: The volume of research data published in the medical literature has moved far beyond what an individual provider can possibly learn or know. In tandem, the amount of diagnostic and subjective data generated by and about an individual patient far outstrips what a single provider can integrate or interpret. So even before the advent of LLMs and AI models, medicine was exhibiting the need for assistive technologies to integrate and make use of all this data.
+                    - paragraph [ref=e822]:
+                      - generic [ref=e823]:
+                        - text: "I’ve been doing some thinking along similar lines although from the physician’s perspective:"
+                        - link "https://beingintheclinic.substack.com/p/the-diagnostic-question" [ref=e824] [cursor=pointer]:
+                          - /url: https://beingintheclinic.substack.com/p/the-diagnostic-question
+                        - text: .
+                  - generic [ref=e825]:
+                    - link "Like (3)" [ref=e827] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                      - generic [ref=e828]:
+                        - img [ref=e830]:
+                          - img [ref=e832]
+                        - generic [ref=e834]: Like (3)
+                    - generic [ref=e837] [cursor=pointer]:
+                      - img [ref=e838]
+                      - generic [ref=e840]: Reply
+                    - generic [ref=e843] [cursor=pointer]:
+                      - img [ref=e844]
+                      - generic [ref=e847]: Share
+              - article "Comment by Dave deBronkart" [ref=e851]:
+                - link "View Dave deBronkart's profile" [ref=e854] [cursor=pointer]:
+                  - /url: https://substack.com/profile/38620429-dave-debronkart?utm_source=comment
+                  - generic "Dave deBronkart" [ref=e856]:
+                    - img "Dave deBronkart's avatar" [ref=e858]
+                - generic [ref=e859]:
+                  - generic [ref=e860]:
+                    - generic [ref=e863]:
+                      - generic [ref=e865]:
+                        - link "Dave deBronkart" [ref=e868] [cursor=pointer]:
+                          - /url: https://substack.com/profile/38620429-dave-debronkart?utm_source=substack-feed-item
+                        - img [ref=e871] [cursor=pointer]
+                      - link "14h" [ref=e874] [cursor=pointer]:
+                        - /url: https://metalearn.substack.com/p/i-solved-my-mystery-fatigue-with-ai/comment/277681076
+                    - button "Ellipsis" [ref=e877] [cursor=pointer]:
+                      - img [ref=e878]
+                  - generic [ref=e882]:
+                    - paragraph [ref=e883]: Extraordinary! I'm already sharing this like crazy.
+                    - paragraph [ref=e884]: Did I miss the punchline? How long did it take you to solve the fatigue from the start of this, and I'm curious what you did to end it! Great work
+                  - generic [ref=e885]:
+                    - link "Like" [ref=e887] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                      - generic [ref=e888]:
+                        - img [ref=e890]:
+                          - img [ref=e892]
+                        - generic [ref=e894]: Like
+                    - generic [ref=e897] [cursor=pointer]:
+                      - img [ref=e898]
+                      - generic [ref=e900]: Reply
+                    - generic [ref=e903] [cursor=pointer]:
+                      - img [ref=e904]
+                      - generic [ref=e907]: Share
+            - link "1 more comment..." [ref=e908] [cursor=pointer]:
+              - /url: https://metalearn.substack.com/p/i-solved-my-mystery-fatigue-with-ai/comments
+        - region "Top Posts Footer" [ref=e911]:
+          - generic [ref=e912]:
+            - navigation "Archive sort tabs" [ref=e913]:
+              - tablist "Tabs" [ref=e916]:
+                - tab "Top" [selected] [ref=e917] [cursor=pointer]
+                - tab "Latest" [ref=e918] [cursor=pointer]
+                - tab "Discussions" [ref=e919] [cursor=pointer]
+              - button "Search" [ref=e921] [cursor=pointer]:
+                - img [ref=e922]
+            - generic [ref=e925]:
+              - generic [ref=e927]:
+                - article "Post preview for What I learnt from having a brain tumor" [ref=e928] [cursor=pointer]:
+                  - generic [ref=e930]:
+                    - link "What I learnt from having a brain tumor" [ref=e932]:
+                      - /url: https://metalearn.substack.com/p/what-i-learnt-from-having-a-brain
+                    - link "commemorating the last day living with this naughty little thing" [ref=e934]:
+                      - /url: https://metalearn.substack.com/p/what-i-learnt-from-having-a-brain
+                    - generic [ref=e935]:
+                      - time [ref=e936]: Aug 10, 2025
+                      - text: •
+                      - link "Amy Deng" [ref=e939]:
+                        - /url: https://substack.com/@metalearn
+                    - generic [ref=e941]:
+                      - button "Like (42)" [ref=e943]:
+                        - img [ref=e944]:
+                          - img [ref=e946]
+                        - generic [ref=e948]: "42"
+                      - button "View comments (4)" [ref=e949]:
+                        - img [ref=e950]:
+                          - img [ref=e952]
+                        - generic [ref=e954]: "4"
+                      - button "1" [ref=e955]:
+                        - img [ref=e956]
+                        - generic [ref=e959]: "1"
+                      - button [ref=e960]:
+                        - img [ref=e961]
+                - article "Post preview for A Sequel Nobody Asked For" [ref=e967] [cursor=pointer]:
+                  - generic [ref=e969]:
+                    - link "A Sequel Nobody Asked For" [ref=e971]:
+                      - /url: https://metalearn.substack.com/p/a-sequel-nobody-asked-for
+                    - link "thoughts before my 2nd brain surgery" [ref=e973]:
+                      - /url: https://metalearn.substack.com/p/a-sequel-nobody-asked-for
+                    - generic [ref=e974]:
+                      - time [ref=e975]: Nov 6, 2025
+                      - text: •
+                      - link "Amy Deng" [ref=e978]:
+                        - /url: https://substack.com/@metalearn
+                    - generic [ref=e980]:
+                      - button "Like (21)" [ref=e982]:
+                        - img [ref=e983]:
+                          - img [ref=e985]
+                        - generic [ref=e987]: "21"
+                      - button "View comments (0)" [ref=e988]:
+                        - img [ref=e989]:
+                          - img [ref=e991]
+                      - button [ref=e993]:
+                        - img [ref=e994]
+                      - button [ref=e997]:
+                        - img [ref=e998]
+                - article "Post preview for Why I Gave Up Google APM to Join A Startup" [ref=e1004] [cursor=pointer]:
+                  - generic [ref=e1006]:
+                    - link "Why I Gave Up Google APM to Join A Startup" [ref=e1008]:
+                      - /url: https://metalearn.substack.com/p/why-i-gave-up-google-apm-to-join
+                    - link "my story of uncertainty, agency, and intuition" [ref=e1010]:
+                      - /url: https://metalearn.substack.com/p/why-i-gave-up-google-apm-to-join
+                    - generic [ref=e1011]:
+                      - time [ref=e1012]: Aug 27, 2023
+                      - text: •
+                      - link "Amy Deng" [ref=e1015]:
+                        - /url: https://substack.com/@metalearn
+                    - generic [ref=e1017]:
+                      - button "Like (9)" [ref=e1019]:
+                        - img [ref=e1020]:
+                          - img [ref=e1022]
+                        - generic [ref=e1024]: "9"
+                      - button "View comments (1)" [ref=e1025]:
+                        - img [ref=e1026]:
+                          - img [ref=e1028]
+                        - generic [ref=e1030]: "1"
+                      - button [ref=e1031]:
+                        - img [ref=e1032]
+                      - button [ref=e1035]:
+                        - img [ref=e1036]
+              - button "See all" [ref=e1042] [cursor=pointer]:
+                - text: See all
+                - img [ref=e1043]
+        - generic [ref=e1047]:
+          - heading "Ready for more?" [level=3] [ref=e1048]
+          - generic [ref=e1051]:
+            - textbox "Type your email..." [ref=e1054]
+            - button "Subscribe" [disabled] [ref=e1055]
+    - generic [ref=e1058]:
+      - generic [ref=e1059]:
+        - generic [ref=e1060]: © 2026 Amy Deng
+        - text: ·
+        - link "Privacy" [ref=e1061] [cursor=pointer]:
+          - /url: https://substack.com/privacy
+        - text: ∙
+        - link "Terms" [ref=e1062] [cursor=pointer]:
+          - /url: https://substack.com/tos
+        - text: ∙
+        - link "Collection notice" [ref=e1063] [cursor=pointer]:
+          - /url: https://substack.com/ccpa#personal-data-collected
+      - generic [ref=e1064]:
+        - link "Start your Substack" [ref=e1065] [cursor=pointer]:
+          - /url: https://substack.com/signup?utm_source=substack&utm_medium=web&utm_content=footer
+          - img [ref=e1066]
+          - text: Start your Substack
+        - link "Get the app" [ref=e1071] [cursor=pointer]:
+          - /url: https://substack.com/app/app-store-redirect?utm_campaign=app-marketing&utm_content=web-footer-button
+      - generic [ref=e1072]:
+        - link "Substack" [ref=e1073] [cursor=pointer]:
+          - /url: https://substack.com
+        - text: is the home for great culture
+  - region "Notifications (F8)":
+    - list

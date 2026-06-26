@@ -3,8 +3,8 @@ title: State of Voice AI
 type: state-of
 domains: [voice]
 tags: []
-as_of: 2026-05-13
-sources: [eleven-v3, hume-evi-3, elevenlabs-scribe, voice-becomes-agent-interface, legacy-ai-tools-roadmap-xlsx, gpt-realtime-2-2026-05-08, thinking-machines-interaction-2026-05-12]
+as_of: 2026-06-16
+sources: [eleven-v3, hume-evi-3, elevenlabs-scribe, voice-becomes-agent-interface, legacy-ai-tools-roadmap-xlsx, gpt-realtime-2-2026-05-08, thinking-machines-interaction-2026-05-12, cartesia-voice-june-2026]
 ---
 
 # State of Voice AI
@@ -31,6 +31,7 @@ AI products centered on expressive text-to-speech, speech-to-speech conversation
 
 - [Eleven v3](../tools/eleven-v3.md) — ElevenLabs; high-control expressive text-to-speech; stronger for polished generated voice output than conversational turn-taking *(as of 2026-04-22)*
 - [Hume EVI 3](../tools/hume-evi-3.md) — Hume; speech-to-speech voice model with strong emotional and empathic conversation framing; fits the "voice as agent interface" direction *(as of 2026-04-22)*
+- [Cartesia](../tools/cartesia.md) — Cartesia; Sonic-3.5 (streaming TTS) + Ink-2 (streaming STT); claims #1 for both via Together AI; sub-90ms latency; 42 languages; strong structured-utterance handling *(as of 2026-06-16)*
 
 ### Speech to text
 
@@ -40,5 +41,6 @@ Products focused primarily on transcription, speech recognition, and converting 
 
 ## Recent changes
 
+- [2026-06-16] Cartesia launches Sonic-3.5 (streaming TTS) and Ink-2 (streaming STT); claims #1 via Together AI benchmark; sub-90ms, 42 languages
 - [2026-05-13] Added merged `Real-time voice / interaction` subcategory: GPT-Realtime-2, GPT-Realtime-Translate, GPT-Realtime-Whisper, TML-Interaction-Small, and Gemini Magic Pointer; treats real-time voice and interaction as one category
 - [2026-04-23] Created `state-of/voice` page; added voice models and speech-to-text subcategories from existing tool pages that lacked state-of coverage
