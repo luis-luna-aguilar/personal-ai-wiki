@@ -82,3 +82,6 @@ Guest post from a member of the Google Gemini RL team, published through a pract
 - Eight failure modes: stale cache, reward hacking, false resolution, silent timeout defaults, non-deterministic resets, reward rounding/clipping, mock data mismatch, action space drift
 - Treat training harness like production code: tests, versioning, monitoring
 ````
+## Feedback
+
+- Harness usage in model training is a new concept to me. Before we ingest this, please explain it in simpler terms and include examples, I need to understand it better to decide if it's relevant to the wiki.

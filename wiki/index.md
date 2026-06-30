@@ -225,8 +225,8 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 - benchmarks: 10
 - workflows: 5
 - concepts: 16
-- trends: 10
+- trends: 11
 - training: 12
 - use-cases: 2
 
-**Total content pages: 148.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 149.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.

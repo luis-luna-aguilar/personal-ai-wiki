@@ -15,7 +15,7 @@ Anthropic's RSI (Responsible Scaling Intelligence) disclosure: Claude now writes
 
 ## Intended changes
 
-- [ ] **Update** `wiki/state-of/models.md` — add RSI productivity data to AI economics snapshot; add Arena Agent Arena results to relevant entries; add Recent changes entry
+- [x] **Update** `wiki/state-of/models.md` — add RSI productivity data to AI economics snapshot; add Arena Agent Arena results to relevant entries; add Recent changes entry
     > **Add to `## AI economics snapshot` section (new bullet):**
     > `- **Anthropic RSI (June 2026):** Claude writes 80%+ of Anthropic's merged code; engineers ship 8× more code/quarter; internal task success 26%→76% in 6 months; Mythos Preview: 52× speedup on training script optimization vs Claude Opus 4 baseline (~3×); Mythos gave better "next step" suggestions than humans 64% of time`
     >
@@ -26,7 +26,7 @@ Anthropic's RSI (Responsible Scaling Intelligence) disclosure: Claude now writes
     > Currently: `- [Claude Opus 4.7](../models/claude-opus-4-7.md) — Anthropic flagship; Arena (May 2026): "most consistently dominant model," leads nearly every category *(as of 2026-05-13)*`
     > Add note: `*(as of 2026-05-13); Arena Agent Arena debut (June 2026): #2 behind GPT-5.5*`
 
-- [ ] **Update** `wiki/training/ai-enablement-software-development.md` — add Anthropic internal RSI data as evidence
+- [x] **Update** `wiki/training/ai-enablement-software-development.md` — add Anthropic internal RSI data as evidence
     > **Add to `## Evidence from practice` section (or create if not present):**
     >
     > - **Anthropic internal RSI data (June 2026):** The strongest first-party self-reported numbers from a frontier lab. Claude writes 80%+ of Anthropic's merged code commits. Engineers report shipping 8× more code per quarter than pre-Claude. Internal automated task success rate improved from 26% → 76% over 6 months of harness iteration. Mythos Preview (the restricted Anthropic model) achieved a 52× speedup on a training script optimization task vs. 3× for Claude Opus 4 on the same task. Mythos gave better "next step" suggestions than humans 64% of the time. Caveat: self-reported, no independent verification.
@@ -71,3 +71,6 @@ AINews covering Anthropic's RSI disclosure; Arena Agent Arena debut leaderboard;
 - Cloudflare AI Gateway: spend limits by model/user, fallbacks
 - Anthropic doubled Claude Cowork usage limits
 ````
+
+## Feedback
+- Lets skip the agent arena stuff. Not relevant anymore.

@@ -15,7 +15,7 @@ Three new evaluation frameworks launched or clarified in W23: SWE-Marathon (1B-t
 
 ## Intended changes
 
-- [ ] **Update** `wiki/benchmarks/agents-last-exam.md` — add W23 source; add US occupational taxonomy detail and June 6 context
+- [x] **Update** `wiki/benchmarks/agents-last-exam.md` — add W23 source; add US occupational taxonomy detail and June 6 context
     > **Add to frontmatter sources:** `ainews-june-06-2026`
     >
     > **Update What it measures section** to add:
@@ -24,14 +24,14 @@ Three new evaluation frameworks launched or clarified in W23: SWE-Marathon (1B-t
     > **Add to Recent changes:**
     > `- [2026-06-06] US occupational taxonomy mapping detail confirmed from June 6 AINews; design goal: ALE scores predict labor displacement risk, not just coding ability`
 
-- [ ] **Create** `wiki/benchmarks/swe-marathon.md` — new benchmark page for long-horizon SWE
+- [x] **Create** `wiki/benchmarks/swe-marathon.md` — new benchmark page for long-horizon SWE
     > See draft below
 
-- [ ] **Update** `wiki/state-of/agents.md` — add benchmark mentions in a new or existing section; add Recent changes entry
+- [x] **Update** `wiki/state-of/agents.md` — add benchmark mentions in a new or existing section; add Recent changes entry
     > **Add to Recent changes:**
     > `- [2026-06-06] New benchmarks: SWE-Marathon (1B-token budget, long-horizon software projects); Meta-Agent Challenge (anti-reward-hacking); Princeton ICML 2026: top models still unreliable on repeated identical tasks`
 
-- [ ] **Create** `wiki/sources/newsletters/ainews-june-06-2026.md` — source summary for June 6 AINews newsletter
+- [x] **Create** `wiki/sources/newsletters/ainews-june-06-2026.md` — source summary for June 6 AINews newsletter
     > See draft below
 
 ## Page drafts

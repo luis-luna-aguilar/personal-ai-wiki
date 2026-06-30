@@ -8,6 +8,7 @@ Chronological append-only record of wiki activity. Entries start with:
 
 Valid ops: `ingest`, `triage`, `reject`, `apply`, `lint`, `query-verify`, `schema`.
 
+- [2026-06-24] **apply** | Video agents as next frontier — Ethan He on Grok Imagine Agent | 1 page updated (state-of/creative — Grok Imagine Agent entry + recent change), 2 created (trends/video-agents-next-frontier, sources/newsletters/video-agents-ethan-he-june-2026); proposal archived
 - [2026-05-19] **apply** | Codex Zoom + mobile updates | 1 page updated (tools/codex — Zoom plugin, keep-awake, recent changes), 1 source created; proposal archived
 - [2026-05-19] **apply** | Cloudflare Project Glasswing | 3 pages updated (models/claude-mythos-preview — Glasswing section, state-of/cybersecurity — Mythos line + harness table, concepts/harness — narrow-scope agents pattern), 1 source created; proposal archived
 - [2026-05-19] **apply** | Claude Code Fast mode default + spec-drift logging | 2 pages updated (tools/claude-code — fast mode default + Console diagnostics, training/anti-autopilot-review-friction — spec-drift pattern), 1 source created; proposal archived
