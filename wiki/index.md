@@ -40,9 +40,11 @@ Foundation models. One page per model family or generation.
 - [models/gpt-5-5](models/gpt-5-5.md) — OpenAI frontier model for coding, knowledge work, science, and cyber tasks; secondary May coverage says GPT-5.5 Instant became ChatGPT's default *(as_of: 2026-05-06)*
 - [models/glm-5-2](models/glm-5-2.md) — Z.ai MIT open-weight; 744B/40B MoE, 1M context; IndexShare; #1 open Agent Arena, #2 Code Arena frontend *(as_of: 2026-06-17)*
 - [models/gpt-image-2](models/gpt-image-2.md) — OpenAI image generation model; #1 across image-arena categories by a wide Elo margin *(as_of: 2026-04-22)*
+- [models/cosmos-3](models/cosmos-3.md) — NVIDIA; Mixture-of-Transformers (autoregressive reasoner + diffusion generator); Nano 16B / Super 64B; #1 open-weight Text-to-Image and Image-to-Video *(as_of: 2026-06-02)*
 - [models/diffusiongemma](models/diffusiongemma.md) — Google experimental 26B MoE; block denoising text generation (non-autoregressive); first diffusion LLM natively in vLLM; Apache 2.0; research artifact *(as_of: 2026-06-11)*
 - [models/kimi-k2-7-code](models/kimi-k2-7-code.md) — Moonshot AI open-source 1T/32B MoE; +21.8% Kimi Code Bench v2; 30% fewer reasoning tokens vs K2.6 *(as_of: 2026-06-13)*
 - [models/nano-banana-2](models/nano-banana-2.md) — Google image generation model; Gemini world understanding + real-time web search grounding *(as_of: 2026-04-22)*
+- [models/ideogram-4](models/ideogram-4.md) — Ideogram 9.3B DiT; #8 Image Arena, #1 open image model; strong text rendering and branding *(as_of: 2026-06-04)*
 - [models/minimax-m2-7](models/minimax-m2-7.md) — open-weight coding and agent model with unusually strong late-March cost/performance claims *(as_of: 2026-03-22)*
 - [models/muse-spark](models/muse-spark.md) — Meta's new multimodal model; source emphasizes compute-efficient scaling *(as_of: 2026-04-10)*
 - [models/openai-privacy-filter](models/openai-privacy-filter.md) — OpenAI open-weight MoE for on-device PII detection and redaction; 1.5B-total / 50M-active; Apache 2.0 *(as_of: 2026-04-23)*

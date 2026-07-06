@@ -8,6 +8,7 @@ Chronological append-only record of wiki activity. Entries start with:
 
 Valid ops: `ingest`, `triage`, `reject`, `apply`, `lint`, `query-verify`, `schema`.
 
+- [2026-06-24] **apply** | NVIDIA Cosmos 3 + Ideogram 4.0 | 4 pages updated (state-of/models — Image generation section + recent changes, state-of/creative — AI image generation subcategory + recent changes), 4 created (models/cosmos-3, models/ideogram-4, sources/newsletters/ainews-cosmos-nemotron-june-2026, sources/newsletters/ainews-ideogram-june-2026); index updated; proposal archived
 - [2026-06-24] **apply** | Video agents as next frontier — Ethan He on Grok Imagine Agent | 1 page updated (state-of/creative — Grok Imagine Agent entry + recent change), 2 created (trends/video-agents-next-frontier, sources/newsletters/video-agents-ethan-he-june-2026); proposal archived
 - [2026-05-19] **apply** | Codex Zoom + mobile updates | 1 page updated (tools/codex — Zoom plugin, keep-awake, recent changes), 1 source created; proposal archived
 - [2026-05-19] **apply** | Cloudflare Project Glasswing | 3 pages updated (models/claude-mythos-preview — Glasswing section, state-of/cybersecurity — Mythos line + harness table, concepts/harness — narrow-scope agents pattern), 1 source created; proposal archived
