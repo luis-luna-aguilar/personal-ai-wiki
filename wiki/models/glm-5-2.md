@@ -4,8 +4,8 @@ type: model
 domains: [models, coding]
 subcategory: coding-model
 tags: [open-weights, agentic]
-as_of: 2026-06-17
-sources: [ainews-glm-52-june-2026]
+as_of: 2026-07-02
+sources: [ainews-glm-52-june-2026, ainews-not-much-happened-2026-07-02, the-code-devin-security-2026-07-02]
 ---
 
 # GLM-5.2
@@ -20,6 +20,9 @@ Z.ai's June 2026 open-weight frontier model. MIT-licensed, 744B total / 40B acti
 - **IndexShare:** reuses one sparse-attention indexer across four layers → 2.9× lower FLOPs at 1M context vs naive sparse attention
 - **MTP (Multi-Token Prediction):** speculative decoding acceptance +20% over prior version
 - **Anti-reward-hacking during RL training:** LLM judge blocked suspicious tool calls, returned dummy info, let trajectories continue — an unusually transparent description of RL reward gaming mitigation
+- Z.ai launched [ZCode](../tools/zcode.md), an official coding environment for GLM-5.2 with BYOK support, cross-platform desktop availability, and long-running coding sessions.
+- Mercor reported GLM-5.2 as the first open model to lead an APEX-SWE category, with 55.3% Pass@1 on Integration, while still not clearly surpassing the strongest closed frontier models overall.
+- The ecosystem story now includes inference work: DSpark speculative decoding previews for GLM-5.2 and native vLLM DSpark support for DeepSeek-style models show speed/serving work becoming part of open-model competitiveness.
 
 ## Benchmarks (independent, June 2026)
 
@@ -45,8 +48,11 @@ Practitioners described it as the first open-weight model they could comfortably
 
 ## Recent changes
 
+- [2026-07-02] ZCode launched as GLM-5.2's official coding environment; APEX-SWE reported GLM-5.2 leading Integration at 55.3% Pass@1; DSpark/vLLM work reinforced inference optimization as part of the open-model stack.
 - [2026-06-17] Released; MIT license; #1 open-weight Agent Arena; #1 Design Arena; #2 Code Frontend; Terminal-Bench 2.1: 81.0; supersedes GLM-5.1
 
 ## Sources
 
 - [GLM-5.2 release coverage](../sources/newsletters/ainews-glm-52-june-2026.md)
+- [AINews - not much happened today](../sources/newsletters/ainews-not-much-happened-2026-07-02.md)
+- [The Code - Cognition ships Devin for Security](../sources/newsletters/the-code-devin-security-2026-07-02.md)

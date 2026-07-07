@@ -4,7 +4,7 @@ type: trend
 domains: [models, computer-use]
 tags: [open-weights, google]
 as_of: 2026-06-17
-sources: [open-weight-momentum-early-april, deepseek-v4-preview, ainews-2026-04-25, china-open-agent-models-2026-04-28, local-offline-agents-2026-04-29, nvidia-nemotron-3-nano-omni-2026-04-29, open-weight-economics-fragmenting-2026-04-30, open-weight-pricing-pressure-2026-04-29, fable-ban-june-2026, ainews-glm-52-june-2026, ainews-open-models-june-2026]
+sources: [open-weight-momentum-early-april, deepseek-v4-preview, ainews-2026-04-25, china-open-agent-models-2026-04-28, local-offline-agents-2026-04-29, nvidia-nemotron-3-nano-omni-2026-04-29, open-weight-economics-fragmenting-2026-04-30, open-weight-pricing-pressure-2026-04-29, fable-ban-june-2026, ainews-glm-52-june-2026, ainews-open-models-june-2026, ainews-cosmos-nemotron-june-2026]
 ---
 
 # Open-weight momentum broadens
@@ -14,6 +14,7 @@ The trend: by early April 2026, open-weight momentum was no longer only a coding
 ## Current signal
 
 - **Sarah Guo / Conviction framing (June 2026):** The structural split is Agent Labs vs Model Labs. Model Labs compete on raw capability (trainable, will commoditize). Agent Labs build moats around workflow integration and harness quality (untrainable — depends on private company context). Open-weight models sharpen this: as raw capability commoditizes faster, the durable value is the integration layer, not the weights. Open-weight models also lag frontier closed models by roughly 4 months on average, giving frontier labs a limited but real lead window.
+- **Nemotron 3 Ultra** is the clearest US-origin open-weight signal in the June 2026 period: hybrid Mamba/attention + LatentMoE architecture, OpenMDW 1.1, 300-400+ tok/s serving, NVFP4 pretraining, and 47.7 Intelligence Index claims confirm NVIDIA as a first-party open-weight competitor alongside Meta, Alibaba, DeepSeek, and Z.ai.
 - **DeepSeek V4** is the clearest late-April signal that open-weight competition is not only broadening, but maturing into serious long-context agent infrastructure. The released Pro/Flash lineup combines 1M-token context, MIT licensing, first-party API pricing, rapid serving support, and a concrete KV-cache/inference story; the caveat is that the best closed frontier systems still lead in aggregate capability.
 - **Gemma 4** is the clearest open multimodal signal in this batch: repeated coverage plus a 2M-download milestone made it feel like more than a one-day launch blip.
 - **Holo3** is the clearest open computer-use signal in this batch: an OSWorld-Verified claim, weights on Hugging Face, and a direct cost/performance comparison against frontier proprietary systems.
@@ -42,6 +43,7 @@ The Fable ban was the event that moved model neutrality from an architectural pr
 
 ## Recent changes
 
+- [2026-06-02] Nemotron 3 Ultra (NVIDIA): 550B/55B hybrid Mamba/attention MoE; OpenMDW 1.1; 47.7 Intelligence Index; first significant NVIDIA open-weight model competing in the agentic frontier-model conversation
 - [2026-06-11] Sarah Guo Agent Labs vs Model Labs framing: moat is "untrainable" integration work, not model capability; open-weight lag ~4 months; "intent is scarcer than compute"
 - [2026-06-17] Fable 5 export-control ban accelerated model sovereignty framing: @hwchase17 argues model neutrality matters more than cloud neutrality; GLM-5.2 (MIT) adopted as the concrete alternative for teams losing closed frontier access
 - [2026-05-05] Open-weight economics are fragmenting by deployment constraint: no single model dominates across transparency, token efficiency, edge deployment, coding benchmarks, and inference cost; Granite, Ant OSS Ling, and Hunyuan illustrate the divergence (secondary coverage; verify specifics)
@@ -53,6 +55,7 @@ The Fable ban was the event that moved model neutrality from an architectural pr
 ## Sources
 
 - [AINews — Open Models, Model Labs vs Agent Labs (June 11)](../sources/newsletters/ainews-open-models-june-2026.md)
+- [AINews — NVIDIA Cosmos 3, Nemotron 3 Ultra (June)](../sources/newsletters/ainews-cosmos-nemotron-june-2026.md)
 - [Open-weight momentum in early April](../sources/newsletters/open-weight-momentum-early-april.md)
 - [DeepSeek V4 Preview](../sources/articles/deepseek-v4-preview.md)
 - [AINews - DeepSeek V4 Pro and Flash](../sources/newsletters/ainews-2026-04-25.md)

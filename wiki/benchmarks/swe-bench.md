@@ -34,8 +34,8 @@ Scores are % of issues resolved. Higher is better.
 | [Qwen 3.6 27B](../models/qwen-3-6-27b.md) | SWE-bench Verified | 77.2% | 2026-04-23 |
 | [Qwen 3.6 27B](../models/qwen-3-6-27b.md) | SWE-bench Pro | 53.5% | 2026-04-23 |
 | [Composer 2](../models/composer-2.md) | SWE-bench Multilingual | 73.7% | 2026-03-23 |
-| [MiniMax M2.7](../models/minimax-m2-7.md) | SWE-Pro | 56.22% | 2026-03-22 |
-| [Kimi K2.6](../models/kimi-k2-6.md) | SWE-bench (various) | SOTA claims | 2026-04-22 |
+| [MiniMax M2.7](../history/models/minimax-m2-7.md) | SWE-Pro | 56.22% | 2026-03-22 |
+| [Kimi K2.6](../history/models/kimi-k2-6.md) | SWE-bench (various) | SOTA claims | 2026-04-22 |
 
 *Note: claims are vendor-reported unless otherwise noted. Independent replication is not always available.*
 

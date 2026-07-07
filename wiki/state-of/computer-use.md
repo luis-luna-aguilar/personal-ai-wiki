@@ -3,8 +3,8 @@ title: State of Computer Use
 type: state-of
 domains: [computer-use]
 tags: []
-as_of: 2026-05-11
-sources: [perplexity-computer-plaid, open-weight-momentum-early-april, claude-computer-use-late-march, perplexity-personal-computer, desktop-mobile-computer-use-february, pig-homepage, legacy-ai-tools-roadmap-xlsx, codex-for-work-2026-05-01, amazon-quick-work-context-assistant-2026-04-29, gemini-downloadable-files-2026-04-30, knowledge-work-os-agent-apps-2026-04-28, peekaboo-repo-2026-05-13]
+as_of: 2026-07-03
+sources: [perplexity-computer-plaid, open-weight-momentum-early-april, claude-computer-use-late-march, perplexity-personal-computer, desktop-mobile-computer-use-february, pig-homepage, legacy-ai-tools-roadmap-xlsx, codex-for-work-2026-05-01, amazon-quick-work-context-assistant-2026-04-29, gemini-downloadable-files-2026-04-30, knowledge-work-os-agent-apps-2026-04-28, peekaboo-repo-2026-05-13, website-future-agent-readable-2026-07-02, vercel-agents-new-software-2026-07-03]
 ---
 
 # State of Computer Use
@@ -29,8 +29,15 @@ Computer use is also broadening into thinner action layers: desktop Electron app
 
 **Knowledge-work OS pattern:** Every argues that left-sidebar desktop apps combined with agentic terminals/chat are converging on a common interface shape (Codex, Claude, Cursor). Sticky workflow state across sessions is the emerging switching cost and platform-lock mechanism.
 
+### Agent-readable web infrastructure
+
+Web surfaces optimized for agents rather than only for humans.
+
+- [Agent-readable web](../concepts/agent-readable-web.md) — sites increasingly serve Markdown or structured machine-readable representations to agents while keeping visual pages for humans; Vercel reports doing this in production *(as of 2026-07-03)*
+
 ## Recent changes
 
+- [2026-07-03] Added agent-readable web concept: Vercel reports serving Markdown directly to detected agent requests, signaling a split between human and machine website experiences.
 - [2026-05-11] Added [Peekaboo](../tools/peekaboo.md) as a local macOS computer-use action layer for agents: CLI + MCP screen capture, UI detection, and GUI automation.
 - [2026-05-05] Added knowledge-work OS framing: left-sidebar desktop app + agentic terminal is emerging as a universal knowledge-work interface pattern; sticky workflow state creates switching costs
 - [2026-05-05] Gemini now generates downloadable files from chat: Google Docs/Sheets/Slides, Microsoft Office formats, PDF, CSV, LaTeX, TXT, RTF, Markdown — artifact-producing assistant behavior
@@ -44,3 +51,5 @@ Computer use is also broadening into thinner action layers: desktop Electron app
 - [Desktop and mobile computer-use surfaces in late February](../sources/newsletters/desktop-mobile-computer-use-february.md)
 - [Pig official product page](../sources/articles/pig-homepage.md)
 - [Peekaboo GitHub repo](../sources/repos/peekaboo-repo-2026-05-13.md)
+- [The website of the future may assemble itself for you](../sources/newsletters/website-future-agent-readable-2026-07-02.md)
+- [Vercel's Andrew Qu on why agents are a new kind of software](../sources/newsletters/vercel-agents-new-software-2026-07-03.md)

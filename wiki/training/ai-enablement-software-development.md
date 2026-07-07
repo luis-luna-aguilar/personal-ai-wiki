@@ -2,7 +2,7 @@
 title: AI enablement — software development
 type: training
 as_of: 2026-06-16
-sources: [ramp-ai-adoption-playbook, shopify-latent-space-april-2026, lennysan-simonw-interview, agentic-cognitive-overhead, garrytan-gstack-repo, the-code-2026-04-23, qa-tooling-for-software-agents-deep-research, agent-review-artifacts-2026-05-13, agentic-coding-trap-may-2026, ai-stack-fungibility-hashimoto-2026-05, shopify-claude-code-bessemer-2026-05, stanford-labor-june-2026]
+sources: [ramp-ai-adoption-playbook, shopify-latent-space-april-2026, lennysan-simonw-interview, agentic-cognitive-overhead, garrytan-gstack-repo, the-code-2026-04-23, qa-tooling-for-software-agents-deep-research, agent-review-artifacts-2026-05-13, agentic-coding-trap-may-2026, ai-stack-fungibility-hashimoto-2026-05, shopify-claude-code-bessemer-2026-05, stanford-labor-june-2026, github-kyle-daigle-june-2026, ainews-june-05-2026]
 ---
 
 # AI enablement — software development
@@ -33,6 +33,7 @@ AI adoption inside engineering teams has moved fastest, but the bottlenecks and 
 - **LLM proxy as fleet infrastructure.** Shopify routes all AI coding tools (Claude Code, Copilot, Cursor) through a centralized LLM proxy gateway. Benefits: cost control from one layer, model swapping without reconfiguring every developer's tool, and tool-agnostic contracts. Prevents fragmented per-tool billing and enables org-wide model policy enforcement.
 - **CLAUDE.md discipline: committed, shared, bounded.** Shopify commits CLAUDE.md to git and shares it across all 23,000 engineers. Hard length cap: ~60 lines. Key insight: "stuffing it makes performance worse." The quality of durable context decays with length — fewer, higher-quality instructions outperform comprehensive-but-diluted ones.
 - **Explicit permission config as fleet policy.** Shopify deploys a standardized allow/deny list across all Claude Code instances: allow `read`, `write`, `test`, `lint`, `commit`; deny `push`, `deploy`, `drop`, `secrets`. This separates safe local work from risky external actions at the configuration layer, not per-session.
+- **Micro-skills over mega-skills.** GitHub's internal rollout (Kyle Daigle, Build 2026): atomic single-purpose tools beat monolithic "do everything" agents for non-technical employee adoption. Distributed via CLI to 200M+ users spanning engineering and non-engineering roles. The pattern generalizes: narrow tools with clear purpose get adopted faster than broad agents that require workflow understanding.
 
 ## Failure modes
 
@@ -61,6 +62,8 @@ AI adoption inside engineering teams has moved fastest, but the bottlenecks and 
 - Airbnb counter-pattern (May 2026): 64% of production PRs shipped with agents using a 15-minute playbook — high AI adoption without the orchestration-only model Faye critiques
 - Stanford Digital Economy Lab (June 2026): 25,000-firm study; AI-exposed early-career (22-25) jobs declining 3.8%/yr since 2022; least-exposed jobs growing 2.0%; junior software devs and customer service hardest hit
 - Shopify (May 2026, Bessemer conference, @darkzodchi synthesis): LLM proxy, CLAUDE.md discipline, critique loop, permission config deployed fleet-wide across 23,000 engineers. Reported 20% productivity gain. Strategy-to-execution ratio flipped from 30%/70% (2024) to 70%/30% (2026). Q3 2026 target: 90% autonomous coding.
+- GitHub commit volume (June 2026): 275M AI-generated commits per week in April 2026, on pace for 14B in 2026 vs 1B in 2025. At this scale, CI/CD (GitHub Actions, specifically CPU capacity) is the bottleneck — not model capability or developer willingness.
+- Anthropic internal RSI data (June 2026): The strongest first-party self-reported numbers from a frontier lab. Claude writes 80%+ of Anthropic's merged code commits. Engineers report shipping 8x more code per quarter than pre-Claude. Internal automated task success rate improved from 26% -> 76% over 6 months of harness iteration. Mythos Preview achieved a 52x speedup on a training script optimization task vs. 3x for Claude Opus 4 on the same task. Mythos gave better "next step" suggestions than humans 64% of the time. Caveat: self-reported, no independent verification.
 
 ## Hiring AI-native engineers
 
@@ -90,6 +93,8 @@ The hollow pipeline concern is now data-backed: if the entry-level disappears, t
 
 ## Recent changes
 
+- [2026-06-05] Anthropic internal RSI evidence added: 80%+ merged code by Claude, 8x code/quarter, task success 26% -> 76%, Mythos 52x speedup on a training-script optimization task
+- [2026-06-02] GitHub 14x agent commit growth added: 275M AI-generated commits/week in April 2026; CI/CD CPU capacity becomes bottleneck; micro-skills pattern added
 - [2026-05-19] Shopify fleet patterns (Bessemer): LLM proxy, CLAUDE.md ~60-line cap, explicit allow/deny permission config; 20% productivity gain; strategy-to-execution ratio 70%/30% (was 30%/70%); Q3 target 90% autonomous coding
 - [2026-05-18] Stack fungibility pattern: tech stack choice is now a quarterly project (Bun Zig→Rust in days); "AI psychosis" failure mode: MTTR-only mindset erodes system comprehensibility (Hashimoto)
 - [2026-05-18] Karpathy failure modes: assumption runaway, over-engineering drift, orthogonal side-effects; success-criteria pattern: give agents verifiable done-conditions rather than step-by-step instructions
@@ -113,3 +118,5 @@ The hollow pipeline concern is now data-backed: if the entry-level disappears, t
 - [AI stack fungibility and AI psychosis — Hashimoto (newsletter)](../sources/newsletters/ai-stack-fungibility-hashimoto-2026-05.md)
 - [Shopify Claude Code fleet patterns — Bessemer conference synthesis](../sources/articles/shopify-claude-code-bessemer-2026-05.md)
 - [Stanford AI labor market data — June 2026](../sources/newsletters/stanford-labor-june-2026.md)
+- ["GitHub's Plan for Agents" — Kyle Daigle on Latent Space (June 2)](../sources/newsletters/github-kyle-daigle-june-2026.md)
+- [AINews — Anthropic RSI and Nemotron follow-up (June 5)](../sources/newsletters/ainews-june-05-2026.md)

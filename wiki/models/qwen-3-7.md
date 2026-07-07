@@ -2,7 +2,7 @@
 title: Qwen 3.7
 type: model
 domains: [models, coding]
-subcategory: frontier-multimodal-model
+subcategory: frontier-model
 tags: [alibaba, open-weights]
 as_of: 2026-05-19
 sources: [qwen-3-7-arena-2026-05]

@@ -6,7 +6,7 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
-Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-multimodal-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`
 
 ### spec-driven-development
 - **Parent domain(s):** coding
@@ -32,11 +32,17 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Definition:** A foundation model trained or specialized for code generation, completion, or agentic coding tasks.
 - **Examples:** [Composer 2](../models/composer-2.md)
 
-### frontier-multimodal-model
+### frontier-model
 - **Parent domain(s):** models
 - **Applies to types:** model
-- **Definition:** General-purpose frontier models competing on broad multimodal capability rather than narrow specialization.
-- **Examples:** [Muse Spark](../models/muse-spark.md)
+- **Definition:** General-purpose frontier models competing on broad capability rather than narrow specialization.
+- **Examples:** [Muse Spark](../models/muse-spark.md), [Claude Fable 5](../models/claude-fable-5.md), [GPT-5.5](../models/gpt-5-5.md)
+
+### open-weight-model
+- **Parent domain(s):** models
+- **Applies to types:** model
+- **Definition:** General-purpose or broadly capable foundation models released with open or open-ish weights, where the key state-of question is availability and deployment control rather than a narrow task specialization.
+- **Examples:** [Nemotron 3 Ultra](../models/nemotron-3-ultra.md), [DeepSeek V4](../models/deepseek-v4.md)
 
 ### legal-ai
 - **Parent domain(s):** legal
@@ -115,6 +121,12 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Applies to types:** tool
 - **Definition:** Platforms built to run or supervise agentic research workflows across literature review, experimentation, hypothesis generation, or scientific knowledge work.
 - **Examples:** [FutureHouse](../tools/futurehouse.md)
+
+### formal-verification
+- **Parent domain(s):** science
+- **Applies to types:** tool
+- **Definition:** AI systems or toolkits centered on generating, checking, or operating over formal proofs and machine-verifiable mathematical specifications.
+- **Examples:** [Axiom Math](../tools/axiom-math.md)
 
 ### speech-to-text
 - **Parent domain(s):** agents, healthcare, voice

@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: [anthropic, cli, agentic]
-as_of: 2026-05-28
-sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, anthropic-claude-code-best-practices-2026-05, claude-code-fast-mode-default-2026-05, dynamic-workflows-claude-code]
+as_of: 2026-06-30
+sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, anthropic-claude-code-best-practices-2026-05, claude-code-fast-mode-default-2026-05, dynamic-workflows-claude-code, claude-code-getting-started-with-loops-2026-06-30]
 ---
 
 # Claude Code
@@ -66,6 +66,21 @@ Dynamic workflows (research preview, announced 2026-05-28) let Claude **dynamica
 - **Availability** — research preview in the Claude Code CLI, Desktop, and VS Code extension, and on the Claude API, Amazon Bedrock, Vertex AI, and Microsoft Foundry. On by default for Max and Team (and the API); off by default for Enterprise at launch (admin can enable in settings).
 
 **Flagship example — Bun rewrite:** Jarred Sumner used dynamic workflows to port Bun from Zig to Rust — ~750,000 lines of Rust, 99.8% of the existing test suite passing, eleven days from first commit to merge. One workflow mapped the correct Rust lifetime for every struct field; the next wrote each `.rs` file as a behavior-identical port of its `.zig` counterpart (hundreds of agents in parallel, two reviewers per file); a fix loop drove the build and test suite until clean; an overnight workflow removed unnecessary data copies and opened a PR per fix for review. (Not yet in production.)
+
+## Loop taxonomy
+
+Anthropic's June 30, 2026 "Getting started with loops" post defines a loop as an agent repeating cycles of work until a stop condition is met. The Claude Code team frames four levels:
+
+| Loop type | Trigger | Stop condition | Claude Code primitive | Best fit |
+| --- | --- | --- | --- | --- |
+| Turn-based | User prompt | Claude judges the task done or asks for context | Normal prompt + verification skills | Short exploratory tasks |
+| Goal-based | Manual prompt in real time | Goal achieved or turn cap hit | `/goal` | Tasks with deterministic exit criteria |
+| Time-based | Interval or schedule | Cancelled, or external work completes | `/loop`, `/schedule` | Recurring checks, PR/CI monitoring, scheduled summaries |
+| Proactive | Event or schedule, no human present | Each task exits when its goal is met; routine keeps running | `/schedule`, `/goal`, skills, dynamic workflows, auto mode | Recurring streams of well-defined work such as bug reports, triage, migrations, dependency upgrades |
+
+The practical guidance is conservative: start with the simplest loop, define explicit success and stop criteria, pilot before large dynamic-workflow runs, use scripts for deterministic work, and review `/usage`, `/goal`, and `/workflows` token breakdowns to manage cost.
+
+For code quality, Anthropic recommends encoding verification steps as skills, keeping project conventions clean, making docs easy to reach, and using a second agent or `/code-review` skill for review rather than letting the generator fully evaluate its own work.
 
 ## Best practices (Anthropic engineering, May 2026)
 
@@ -130,6 +145,7 @@ That matters because it shifts the product story away from "Anthropic has a stro
 
 ## Recent changes
 
+- [2026-06-30] Anthropic published the official Claude Code loop taxonomy: turn-based, goal-based, time-based, and proactive loops, with guidance on matching loop primitive to task type and controlling token usage.
 - [2026-05-28] Dynamic workflows added (research preview): the `ultracode` effort setting (xhigh) lets Claude write orchestration scripts running tens-to-hundreds of parallel subagents that plan, verify (with adversarial agents), and iterate to convergence on hours-to-days work; runs checkpoint and resume. On by default for Max/Team/API, admin-enabled for Enterprise; uses substantially more tokens.
 - [2026-05-19] Fast mode promoted from research preview to default for Claude Code; Claude Console gains prompt cache diagnostics
 - [2026-05-18] Anthropic engineering best practices: context window as #1 constraint; verification-criteria pattern; explore-plan-code workflow (plan mode + Ctrl+G); Chrome extension for UI screenshot verification
@@ -157,3 +173,4 @@ That matters because it shifts the product story away from "Anthropic has a stro
 - [Agent-native product management guide - Every](../sources/articles/agent-native-product-management-2026-05-13.md)
 - [Claude Code Fast mode becomes default + spec-drift logging](../sources/newsletters/claude-code-fast-mode-default-2026-05.md)
 - [Introducing dynamic workflows in Claude Code](../sources/articles/dynamic-workflows-claude-code.md)
+- [Getting started with loops](../sources/articles/claude-code-getting-started-with-loops-2026-06-30.md)

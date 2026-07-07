@@ -3,8 +3,8 @@ title: Harness (agent)
 type: concept
 domains: [agents]
 tags: [agentic]
-as_of: 2026-06-17
-sources: [agentic-thinking-lin, langchain-better-harness, openai-agents-sdk-evolution, notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, claude-code-leak-architecture, harness-engineering-early-april, skills-and-plugin-packaging-late-march, harness-engineering-march, harness-debate-march, shopify-latent-space-april-2026, ainews-2026-04-22, thecode-april-22-2026, agent-infrastructure-harness-2026-05-01, mattpocock-dictionary-of-ai-coding, model-harness-fit-2026-05-13, shopify-claude-code-bessemer-2026-05, gas-city-software-factory-2026-05, cloudflare-glasswing-2026-05, loopcraft-june-2026]
+as_of: 2026-07-03
+sources: [agentic-thinking-lin, langchain-better-harness, openai-agents-sdk-evolution, notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, claude-code-leak-architecture, harness-engineering-early-april, skills-and-plugin-packaging-late-march, harness-engineering-march, harness-debate-march, shopify-latent-space-april-2026, ainews-2026-04-22, thecode-april-22-2026, agent-infrastructure-harness-2026-05-01, mattpocock-dictionary-of-ai-coding, model-harness-fit-2026-05-13, shopify-claude-code-bessemer-2026-05, gas-city-software-factory-2026-05, cloudflare-glasswing-2026-05, loopcraft-june-2026, rl-harness-quality-june-2026, aiewf-loops-debate-2026-07-03]
 ---
 
 # Harness (agent)
@@ -24,6 +24,8 @@ The analogy to model training is explicit in the field: just as training data sh
 - **Context-shaping layer** — practical systems increasingly treat repo state, recent edits, local instructions, and memory retrieval policy as part of the harness boundary, not as incidental prompt stuffing
 - **Reusable operating modules** — skills, hook scripts, slash commands, and plugin bundles increasingly act as composable pieces of the harness, not just ad hoc project artifacts
 - **Deployment manifest and access controls** — production harnesses increasingly package sandboxing, auth, RBAC (Role-Based Access Control — the rules that define which users and agents have permission to perform which operations), credential management, and frontend configuration into deployable artifacts. LangChain's DeepAgents expresses this as a `deepagents.toml` manifest; Agent Collabs uses Hugging Face dataset buckets (shared cloud storage) and Spaces (hosted isolated execution environments) to let heterogeneous agents collaborate through a common storage layer without sharing one mutable runtime.
+- **Control layer** — permissions, approvals, cost ceilings, stop conditions, recovery, and review routing around an agent loop. The 2026 AI Engineer Survey reported high agent adoption but primitive safeguards, making the control layer part of harness design rather than a product afterthought.
+- **Live-run recovery** — checkpointing, rollback, and forking of agent state so a failed trajectory can be repaired without discarding all context.
 
 ## Why it matters
 
@@ -77,11 +79,35 @@ Practitioners are increasingly using a consistent vocabulary for these parts: **
 
 The two are related but not identical. Many real-world "agent" improvements actually come from better context packaging rather than fancier orchestration.
 
+## RL harness quality
+
+When a harness is used as an RL training environment, it is not only helping the model act — it is teaching the model what behavior gets rewarded. The model tries tasks inside the harness, receives success/failure signals, and updates based on those signals. If the environment is wrong, stale, or easy to game, the model learns the wrong lesson.
+
+Auriel W (Google Gemini RL team) published a practical taxonomy (June 2026). The guiding rule: **if your environment failure rate is above 5%, you have a harness problem, not a model problem.** Bad harnesses compound in the wrong direction — every polluted episode corrupts what the model learns next.
+
+Eight common failure modes, with examples:
+
+- **Stale cache.** The environment serves cached state from a different run, so the model acts on data that doesn't reflect its previous actions (example: BDR agent reads cached CRM data from prior customer session, never seeing the state it just updated).
+- **Reward hacking.** Sparse positive reward creates a gradient toward edge-case exploitation rather than real task completion (example: coding agent hardcodes expected test outputs rather than implementing actual logic).
+- **False resolution.** The task appears completed when it isn't (example: support agent closes a ticket after sending a message, before checking whether the customer's problem was solved).
+- **Silent timeout defaults.** The agent hangs indefinitely with no timeout, no signal, and no negative reward for stalling.
+- **Non-deterministic state resets.** Each episode starts from a slightly different state, making it impossible to compare episode quality or diagnose behavior changes.
+- **Reward rounding / clipping.** Small but real improvements become invisible because the reward function truncates at the wrong precision.
+- **Mock data mismatch.** The training environment's mock data diverges from production data distributions, so the model learns patterns that don't transfer.
+- **Action space drift.** Valid actions change between training and evaluation (new API fields, renamed endpoints, updated schemas) without the harness being updated to match.
+
+Treating the training harness like production code — with tests, versioning, and monitoring for failure rate — is the main mitigation. See [Agent improvement loop](agent-improvement-loop.md) for the broader iterate-on-harness pattern.
+
 ## Caveats
 
 - The term has no single agreed definition across the field. Some sources use it narrowly (just the prompt + tool config); others include the full execution environment and orchestration layer.
 - This page reflects the broader definition, consistent with [Lin's essay](../sources/articles/agentic-thinking-lin.md) and [LangChain's Better-Harness](../sources/articles/langchain-better-harness.md) framing.
 - Some practitioners now implicitly split "harness" from "folder-level context." The distinction is useful operationally even if the vocabulary is not yet standardized.
+
+## Recent changes
+
+- [2026-07-03] Added control-layer framing from AI Engineer World Fair: permissions, cost ceilings, recovery, and review routing are part of the harness boundary.
+- [2026-06-05] Added RL harness quality section: 8 failure modes taxonomy from Auriel W (Google Gemini RL team); "5% failure rate = harness problem, not model problem"
 
 ## Related
 
@@ -113,3 +139,5 @@ The two are related but not identical. Many real-world "agent" improvements actu
 - [Shopify Claude Code fleet patterns — Bessemer conference synthesis](../sources/articles/shopify-claude-code-bessemer-2026-05.md)
 - [Inside the 100-agent Software Factory — Gas City](../sources/newsletters/gas-city-software-factory-2026-05.md)
 - [Project Glasswing: what Mythos showed us — Cloudflare](../sources/articles/cloudflare-glasswing-2026-05.md)
+- [RL harness quality — Auriel W (Google Gemini team)](../sources/newsletters/rl-harness-quality-june-2026.md)
+- [AIEWF Daily Dispatch - loops debate](../sources/newsletters/aiewf-loops-debate-2026-07-03.md)

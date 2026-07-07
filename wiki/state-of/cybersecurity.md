@@ -3,8 +3,8 @@ title: State of Cybersecurity
 type: state-of
 domains: [cybersecurity]
 tags: []
-as_of: 2026-05-19
-sources: [slopcop-repo, glasswing, openai-gpt-5-5-launch, ai-security-scanners-2026-05-01, supply-chain-attacks-2026-05-13, agentic-security-tooling-2026-05-13, openai-daybreak-2026-05-13, cloudflare-glasswing-2026-05]
+as_of: 2026-07-02
+sources: [slopcop-repo, glasswing, openai-gpt-5-5-launch, ai-security-scanners-2026-05-01, supply-chain-attacks-2026-05-13, agentic-security-tooling-2026-05-13, openai-daybreak-2026-05-13, cloudflare-glasswing-2026-05, the-code-devin-security-2026-07-02, ainews-not-much-happened-2026-07-02]
 ---
 
 # State of Cybersecurity
@@ -47,6 +47,7 @@ Coding agents extended into security review and vulnerability validation.
 - **Claude Security** — Anthropic; reported repo vulnerability scanner that validates findings and suggests fixes using Opus 4.7; source is AINews secondary coverage *(as of 2026-05-01)*
 - **Cursor Security Review** — Cursor; reported always-on PR review plus scheduled codebase scans; source is AINews secondary coverage *(as of 2026-05-01)*
 - **Vercel DeepSec** — secondary May 2026 coverage describes security scanning/review for agent-built applications; pending primary verification *(as of 2026-05-04)*
+- [Devin](../tools/devin.md) — Cognition; Devin Security Swarm uses parallel bounded agents, sandbox reproduction, exploitability validation, and patch PRs for vulnerability work; vendor claims include 30% lower cost than rivals and Fortune 500 pilot results, pending independent verification *(as of 2026-07-02)*
 
 The category is shifting from one-off scanners toward agent-compatible security loops: vulnerability monitoring, fix validation, supply-chain checks, and deployment-risk review inside coding-agent workflows.
 
@@ -83,6 +84,7 @@ Provider programs that expand access to higher-risk cyber capabilities for verif
 
 ## Recent changes
 
+- [2026-07-02] Cognition launched Devin Security Swarm, pushing AI-assisted vulnerability detection toward parallel agent workflows that validate exploitability and generate fix PRs.
 - [2026-05-19] Cloudflare Project Glasswing: detailed harness architecture (8 stages, ~50 concurrent agents, adversarial validate agent); Mythos exploit chain construction and proof loop confirmed; organic refusals inconsistent as safety boundary; architectural resilience over patch speed as the defender takeaway
 - [2026-05-13] OpenAI announced Daybreak as a thin official cyber-defense signal combining frontier models, Codex, and security partners; implementation details remain pending.
 - [2026-05-13] Agentic security tooling is becoming a category signal: scanner, monitor, fix-validation, and deployment-risk workflows are being redesigned for software built and operated by agents.

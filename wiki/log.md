@@ -8,6 +8,9 @@ Chronological append-only record of wiki activity. Entries start with:
 
 Valid ops: `ingest`, `triage`, `reject`, `apply`, `lint`, `query-verify`, `schema`.
 
+- [2026-07-06] **apply** | LLM Wikis / PaperWiki | 1 page updated (concepts/knowledge-layer — LLM Wiki implementation pattern), 1 source created; proposal archived
+- [2026-07-06] **apply** | RL harness quality | 1 page updated (concepts/harness — RL training-environment harness failure taxonomy), 1 source created; proposal archived
+- [2026-07-06] **apply** | W23 approved proposals batch | Applied 11 approved proposals: new/updated model pages (Claude Opus 4.8, MiniMax M3, Nemotron 3 Ultra, MAI-Thinking-1), Axiom Math, SWE-Marathon, Harvey routing, Vending Bench evals, enterprise spend controls, GitHub scaling signal, Anthropic RSI; archived superseded Claude Opus 4.7 and MiniMax M2.7; left RL harness quality proposal pending for user feedback.
 - [2026-06-24] **apply** | NVIDIA Cosmos 3 + Ideogram 4.0 | 4 pages updated (state-of/models — Image generation section + recent changes, state-of/creative — AI image generation subcategory + recent changes), 4 created (models/cosmos-3, models/ideogram-4, sources/newsletters/ainews-cosmos-nemotron-june-2026, sources/newsletters/ainews-ideogram-june-2026); index updated; proposal archived
 - [2026-06-24] **apply** | Video agents as next frontier — Ethan He on Grok Imagine Agent | 1 page updated (state-of/creative — Grok Imagine Agent entry + recent change), 2 created (trends/video-agents-next-frontier, sources/newsletters/video-agents-ethan-he-june-2026); proposal archived
 - [2026-05-19] **apply** | Codex Zoom + mobile updates | 1 page updated (tools/codex — Zoom plugin, keep-awake, recent changes), 1 source created; proposal archived
@@ -327,3 +330,13 @@ grep "^- \[" wiki/log.md | tail -20
 - [2026-05-19] **lint** | maintenance pass | cap: 15 pages spilled to history (8 new history files created); schema: 2 tags added (xai, collaboration), 1 domain added (training); index: grok-build.md added; links: 1 broken link fixed (claude-cowork, multica source renamed); tag: qwen-3-7 open-weight→open-weights; 2 source orphans remain (ii-medical, meta-ads-mcp-cli) — require manual triage
 - [2026-06-03] **ingest** | Introducing dynamic workflows in Claude Code | 3 pages updated (tools/claude-code, state-of/coding, workflows/agentic-orchestration-patterns), 1 created (sources/articles/dynamic-workflows-claude-code); wiki/index as_of bumps; no spill (recent-changes cap is 10, pages now at 6)
 - [2026-06-24] **triage** | 2026-W23 AI Digest (Jun 1–7) | 14 proposals, 0 skipped (signal 13 "AI adoption levels" already handled in 2026-06-17 batch)
+- [2026-07-06] **triage** | AI Email Digest 2026-07-02 to 2026-07-06 | 8 proposals, 7 skipped
+- [2026-07-06] **apply** | Agent-readable web | 2 pages updated (state-of/computer-use, wiki/index), 1 created (concepts/agent-readable-web), 2 sources created
+- [2026-07-06] **apply** | Anthropic model routing and Sonnet 5 | 3 pages updated (models/claude-fable-5, state-of/models, state-of/coding), 1 created (models/claude-sonnet-5), 2 sources created; subcategory renamed frontier-multimodal-model → frontier-model
+- [2026-07-06] **apply** | Devin Security Swarm | 3 pages updated (tools/devin, state-of/cybersecurity, state-of/agents), 1 source created
+- [2026-07-06] **apply** | Bridgewater / Thinking Machines domain finetuning | 2 pages updated (training/cost-aware-ai-task-routing, state-of/finance), 2 sources created; primary Thinking Machines source verified
+- [2026-07-06] **apply** | Agent control layer and evals | 4 pages updated (workflows/agentic-orchestration-patterns, concepts/agent-evals, concepts/harness, state-of/agents), 1 created (tools/shepherd), 2 sources created
+- [2026-07-06] **apply** | Open coding models, ZCode, and inference | 3 pages updated (models/glm-5-2, state-of/coding, trends/compute-infrastructure), 1 created (tools/zcode), 2 sources created
+- [2026-07-06] **apply** | Claude Science dogfooding | 2 pages updated (state-of/science, trends/ai-in-science), 1 created (tools/claude-science), 2 sources created; primary Claude Science page fetched
+- [2026-07-06] **apply** | Agent memory, skills, and Eve | 5 pages updated (concepts/knowledge-layer, training/agent-skill-methodology, state-of/agents, workflows/agentic-orchestration-patterns, wiki/index), 3 created (tools/openwiki, tools/impeccable, tools/eve), 3 sources created
+- [2026-07-06] **apply** | Claude Code loops taxonomy | 2 pages updated (tools/claude-code, workflows/agentic-orchestration-patterns), 1 source created

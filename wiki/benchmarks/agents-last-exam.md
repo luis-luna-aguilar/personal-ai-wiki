@@ -4,7 +4,7 @@ type: benchmark
 domains: [agents]
 tags: [benchmark, labor-market]
 as_of: 2026-06-10
-sources: [ainews-fable5-june-2026]
+sources: [ainews-fable5-june-2026, ainews-june-06-2026]
 ---
 
 # Agents' Last Exam (ALE)
@@ -18,6 +18,7 @@ Unlike SWE-bench (software engineering tasks) or FrontierCode (code mergeability
 - **Scale:** 1,500+ tasks
 - **Occupational scope:** 55 distinct occupations
 - **Contributor pool:** 300+ domain experts across 100+ institutions
+- **US occupational taxonomy mapping:** tasks are drawn from and mapped to actual US occupational classifications to enable direct labor displacement analysis
 - **Design goal:** performance on ALE should predict labor displacement risk, not just coding ability
 
 ## Tiers
@@ -38,8 +39,10 @@ This does not mean agents are not impactful — it means the impact is concentra
 
 ## Recent changes
 
+- [2026-06-06] US occupational taxonomy mapping detail confirmed from June 6 AINews; design goal: ALE scores predict labor displacement risk, not just coding ability
 - [2026-06-10] Launched; top agent score: 2.6% on hardest tier; 1,500+ tasks, 55 occupations
 
 ## Sources
 
 - [AINews — Fable 5 launch issue (June 10)](../sources/newsletters/ainews-fable5-june-2026.md)
+- [AINews — SWE-Marathon, Meta-Agent Challenge, Sakana RSI Lab (June 6)](../sources/newsletters/ainews-june-06-2026.md)

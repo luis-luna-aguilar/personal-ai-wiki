@@ -3,8 +3,8 @@ title: State of Finance
 type: state-of
 domains: [finance]
 tags: []
-as_of: 2026-05-18
-sources: [perplexity-computer-plaid, hebbia-homepage, legacy-ai-tools-roadmap-xlsx, stripe-agent-native-commerce-fraud-2026-04-29, finance-agent-workflows-2026-05-06, chatgpt-personal-finance-2026-05]
+as_of: 2026-07-02
+sources: [perplexity-computer-plaid, hebbia-homepage, legacy-ai-tools-roadmap-xlsx, stripe-agent-native-commerce-fraud-2026-04-29, finance-agent-workflows-2026-05-06, chatgpt-personal-finance-2026-05, thinking-machines-financial-expert-judgment-2026-07-02, superhuman-bridgewater-thinking-machines-2026-07-02]
 ---
 
 # State of Finance
@@ -20,6 +20,7 @@ AI products specialized for financial analysis, modeling, and document-heavy fin
 - [Hebbia](../tools/hebbia.md) — document-heavy knowledge-work platform with especially strong practical relevance in finance analysis and modeling workflows *(as of 2026-04-22)*
 - **Anthropic finance agent templates** — secondary newsletter coverage describes templates for pitch generation, valuation review, KYC, and month-end close with market-data integrations; pending primary Anthropic verification *(as of 2026-05-06)*
 - [Perplexity Computer](../tools/perplexity-computer.md) — professional-finance positioning now reportedly combines licensed finance data with packaged workflows; current signal is newsletter coverage pending primary verification *(as of 2026-05-06)*
+- **Bridgewater / Thinking Machines expert-judgment model** — expert-labeled financial information-filtering tasks fine-tuned on Qwen3-235B; trained model reached 84.7% average accuracy and 13.8x lower inference cost per task than frontier baselines in the public Thinking Machines report *(as of 2026-07-02)*
 
 ### Personal finance AI
 
@@ -38,6 +39,7 @@ AI is shifting the fraud attack surface and enabling agents as autonomous econom
 
 ## Recent changes
 
+- [2026-07-02] Bridgewater/Thinking Machines case study: expert prompts plus domain fine-tuning beat larger frontier models on subjective finance information-filtering tasks at lower cost.
 - [2026-05-18] ChatGPT @Finances launched: 12,000+ financial providers; personalized money advice grounded in real spending data; GPT-5.5 Thinking 79/100, Pro 82.5/100; US Pro preview; added to Personal finance AI
 - [2026-05-06] Added packaged finance-agent workflow signal: Anthropic finance templates and Perplexity Computer professional-finance positioning are secondary-source entries pending primary verification.
 - [2026-04-29] Added agent-native commerce and compute-fraud framing from Stripe's perspective (via Every newsletter); stolen compute, agent-as-purchaser, free-trial farming
@@ -48,3 +50,4 @@ AI is shifting the fraud attack surface and enabling agents as autonomous econom
 
 - [Stripe agent-native commerce and compute fraud](../sources/newsletters/stripe-agent-native-commerce-fraud-2026-04-29.md)
 - [Finance agent workflow packaging - May 2026](../sources/newsletters/finance-agent-workflows-2026-05-06.md)
+- [Thinking Machines - Learning to Replicate Expert Judgment in Financial Tasks](../sources/articles/thinking-machines-financial-expert-judgment-2026-07-02.md)

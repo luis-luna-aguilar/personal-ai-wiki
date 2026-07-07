@@ -3,8 +3,8 @@ title: Agent skill methodology
 type: training
 domains: [agents]
 tags: [perplexity, agentic]
-as_of: 2026-05-13
-sources: [perplexity-agent-skill-methodology-2026-05-12, agent-html-artifacts-2026-05-13, agent-skills-context-evals-2026-05-13]
+as_of: 2026-07-03
+sources: [perplexity-agent-skill-methodology-2026-05-12, agent-html-artifacts-2026-05-13, agent-skills-context-evals-2026-05-13, skill-engineering-impeccable-2026-07-02, vercel-agents-new-software-2026-07-03]
 ---
 
 # Agent skill methodology
@@ -14,6 +14,10 @@ How to build agent skills that work reliably in production and stay maintainable
 ## Current guidance
 
 The core problem: skills written as long procedures become stale, redundant, or broken as the model improves or the task changes. Perplexity's answer is an evals-first, principles-based approach: first define what good and bad behavior looks like, then write the smallest skill that reliably nudges the agent toward the right behavior.
+
+- Treat skills as portable operating knowledge, not only prompt snippets. Vercel uses skills to forward-correct stale model knowledge about deprecated products, while Impeccable-style design skills encode domain vocabulary and levels of control.
+- Good skills name the decision language the agent should use: quality adjectives, acceptable ranges, examples, anti-examples, and what "do not auto-fix" means in that domain.
+- Cross-harness skills should avoid tool-specific assumptions unless the skill is explicitly packaged for one runtime.
 
 ## Proven patterns
 
@@ -60,6 +64,12 @@ When a team switches default models, run the skill's positive and negative cases
 
 - Perplexity reports this methodology was developed from internal production failures and adopted as a company-wide skill-writing standard.
 - The 5-step cycle (test cases, triggers, principles, failure codification, pruning) is documented in a public Perplexity research post and summarized in Every's May 12 newsletter.
+- Vercel's eve interview frames skills as a way to keep agents current when model training data contains stale product knowledge.
+- Impeccable coverage shows the same pattern applied to design agents: encode design vocabulary and constraints as reusable skills rather than relying on one-shot taste prompts.
+
+## Recent changes
+
+- [2026-07-03] Vercel eve interview and Impeccable coverage reinforced skills as a current-knowledge and domain-judgment layer across agent harnesses.
 
 ## Open questions
 
@@ -72,3 +82,5 @@ When a team switches default models, run the skill's positive and negative cases
 - [Perplexity agent skill methodology](../sources/newsletters/perplexity-agent-skill-methodology-2026-05-12.md)
 - [Agent-generated HTML artifacts](../sources/tweets/agent-html-artifacts-2026-05-13.md)
 - [Agent skills, context loading, evals, and migration discipline](../sources/newsletters/agent-skills-context-evals-2026-05-13.md)
+- [The Code - Skill engineering and the case against one-shot AI](../sources/newsletters/skill-engineering-impeccable-2026-07-02.md)
+- [Vercel's Andrew Qu on why agents are a new kind of software](../sources/newsletters/vercel-agents-new-software-2026-07-03.md)

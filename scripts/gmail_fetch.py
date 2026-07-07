@@ -26,6 +26,7 @@ Setup:
 Usage:
     python scripts/gmail_fetch.py --days 1
     python scripts/gmail_fetch.py --week 2026-W15
+    python scripts/gmail_fetch.py --start 2026-06-28 --end 2026-07-02
 """
 
 from __future__ import annotations
@@ -487,15 +488,24 @@ def main() -> None:
     parser.add_argument("--account", default="ai", choices=["ai"])
     parser.add_argument("--days", type=int, help="Fetch last N days (1 = today only)")
     parser.add_argument("--week", help="Fetch a specific ISO week, e.g. 2026-W15")
+    parser.add_argument("--start", type=date.fromisoformat, help="Fetch from this date, inclusive (YYYY-MM-DD)")
+    parser.add_argument("--end", type=date.fromisoformat, help="Fetch through this date, inclusive (YYYY-MM-DD)")
     parser.add_argument("--no-triage", action="store_true", help="Skip triage file generation")
     args = parser.parse_args()
 
-    if not args.days and not args.week:
-        parser.error("Provide --days N or --week YYYY-WNN")
+    range_args = [bool(args.days), bool(args.week), bool(args.start or args.end)]
+    if sum(range_args) != 1:
+        parser.error("Provide exactly one of --days N, --week YYYY-WNN, or --start YYYY-MM-DD --end YYYY-MM-DD")
+    if bool(args.start) != bool(args.end):
+        parser.error("--start and --end must be provided together")
 
     today = date.today()
     if args.week:
         start, end = parse_week(args.week)
+    elif args.start and args.end:
+        start, end = args.start, args.end
+        if end < start:
+            parser.error("--end must be on or after --start")
     else:
         end = today
         start = today - timedelta(days=args.days - 1)

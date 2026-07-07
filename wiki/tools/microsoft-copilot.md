@@ -5,7 +5,7 @@ domains: [agents]
 subcategory: ai-assistant
 tags: [microsoft, closed-source]
 as_of: 2026-06-17
-sources: [microsoft-copilot-agent-mode-office, microsoft-word-legal-agent, copilot-cowork-ga-june-2026]
+sources: [microsoft-copilot-agent-mode-office, microsoft-word-legal-agent, copilot-cowork-ga-june-2026, ainews-mai-build-june-2026, satya-nadella-no-priors-june-2026]
 ---
 
 # Microsoft Copilot
@@ -24,6 +24,8 @@ Microsoft's cross-application assistant surface inside Microsoft 365. The April 
 - **Copilot Cowork GA (June 2026):** generally available to any Microsoft 365 user globally; model choice, usage-based billing, cost management controls
 - Microsoft claims Copilot Cowork runs 30-40% cheaper per prompt than Anthropic's Claude Cowork — primarily a pricing rather than capability differentiation
 - Follow-up: Microsoft may explore Microsoft-hosted DeepSeek variants as cheaper optional backends; framed as sustainable pricing alternative to unlimited-use tiers
+- **MAI-Code-1-Flash** powers GitHub Copilot and VS Code at Build launch — Microsoft's first-party 5B active / 137B MoE coding model replaces external model dependency for Copilot's core coding feature (as of 2026-06-03)
+- **Microsoft Autopilot:** hosted long-running agent runtime launched at Build; OpenClaw and Hermes Agent as early examples; Scout is the first consumer-facing always-on agent; long-running agent substrate positioning
 
 ## Strengths
 
@@ -38,6 +40,7 @@ Microsoft's cross-application assistant surface inside Microsoft 365. The April 
 
 ## Recent changes
 
+- [2026-06-03] Build 2026: MAI-Code-1-Flash in Copilot/VS Code; Microsoft Autopilot hosted agent runtime; Scout (always-on personal agent across M365)
 - [2026-06-17] Copilot Cowork GA: available to all Microsoft 365 users; model choice, usage-based billing; Microsoft claims 30-40% cheaper per prompt than Claude Cowork; DeepSeek backend option reportedly under consideration
 - [2026-05-01] Microsoft Word Legal Agent added in Frontier: domain-specific contract-review and redlining agent inside Word with deterministic document-edit resolution
 - [2026-04-22] Agentic mode in Word, Excel, and PowerPoint becomes generally available and the default experience
@@ -47,3 +50,5 @@ Microsoft's cross-application assistant surface inside Microsoft 365. The April 
 - [Copilot's agentic capabilities in Word, Excel, and PowerPoint are generally available](../sources/articles/microsoft-copilot-agent-mode-office.md)
 - [Word: Legal Agent in Frontier](../sources/articles/microsoft-word-legal-agent.md)
 - [Microsoft Copilot Cowork generally available (June 2026)](../sources/newsletters/copilot-cowork-ga-june-2026.md)
+- [AINews — Microsoft Build 2026, MAI-Thinking-1 and MAI family (June 3)](../sources/newsletters/ainews-mai-build-june-2026.md)
+- [Satya Nadella on No Priors x Latent Space (June 3)](../sources/newsletters/satya-nadella-no-priors-june-2026.md)

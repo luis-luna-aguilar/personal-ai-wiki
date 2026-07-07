@@ -3,8 +3,8 @@ title: AI in Science
 type: trend
 domains: [science]
 tags: []
-as_of: 2026-06-17
-sources: [noetik-cancer-trials, gpt-rosalind-launch, self-driving-lab-radical-ai]
+as_of: 2026-07-06
+sources: [noetik-cancer-trials, gpt-rosalind-launch, self-driving-lab-radical-ai, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05]
 ---
 
 # AI in Science
@@ -18,6 +18,8 @@ AI is increasingly moving from generic scientific assistance toward domain-speci
 - OpenAI launched GPT-Rosalind as a frontier reasoning model for biology, drug discovery, and translational medicine
 - Translational medicine here means moving from lab and data insight toward practical clinical use, such as deciding which therapies, biomarkers, or trial designs are most likely to work in patients
 - The pattern is shifting from "AI helps researchers" to "specialized models target a scientific bottleneck directly"
+- Anthropic's Claude Science signal reinforces a platform-first strategy in science AI: build tools for analysis, visualization, traceability, and verification, then dogfood them on real preclinical programs.
+- The hard part is not only hypothesis generation. Biological feedback is slow and expensive, so evaluation and verification workflows become the bottleneck the platform must solve.
 
 ## Self-driving labs
 
@@ -44,6 +46,8 @@ Anthropic argues AI has advanced faster in coding than biology not because of in
 
 ## Recent changes
 
+- [2026-07-06] Claude Science public beta confirms a science-workflow platform layer: reproducible artifacts, persistent kernels, 60+ scientific databases, scientific connectors, and local/HPC compute integration.
+- [2026-07-05] Claude Science and Anthropic's internal drug programs reframed science agents as dogfooded workflow platforms, not only model demos.
 - [2026-06-17] Added self-driving labs section: Radical AI achieving ~10× DARPA/GE MACH pace in alloys; infrastructure-as-bottleneck framing from Anthropic science blog
 - [2026-04-21] Added biology and drug-discovery productization signals: Noetik and GPT-Rosalind
 - [2026-04-10] Page seeded from Superhuman AI newsletter overview of AI-driven scientific breakthroughs
@@ -53,3 +57,5 @@ Anthropic argues AI has advanced faster in coding than biology not because of in
 - [The Self-Driving Lab — Joseph Krause, Radical AI](../sources/newsletters/self-driving-lab-radical-ai.md)
 - [Latent Space — Noetik and cancer-trial failure](../sources/newsletters/noetik-cancer-trials.md)
 - [GPT-Rosalind launch](../sources/tweets/gpt-rosalind-launch.md)
+- [Claude Science beta](../sources/articles/claude-science-beta-2026-07-06.md)
+- [Every - A Tale of Two Models](../sources/newsletters/every-tale-of-two-models-2026-07-05.md)

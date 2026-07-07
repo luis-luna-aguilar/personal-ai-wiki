@@ -4,7 +4,7 @@ type: trend
 domains: [agents, coding]
 tags: [agentic]
 as_of: 2026-06-17
-sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, openclaw-operating-pattern-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, cursor-third-era, knowledge-work-os-agent-apps-2026-04-28, frontier-labs-deployment-services-2026-05-13, ai-native-organizations-operating-model-2026-05-13, stanford-labor-june-2026, ainews-fable5-june-2026]
+sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, openclaw-operating-pattern-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, cursor-third-era, knowledge-work-os-agent-apps-2026-04-28, frontier-labs-deployment-services-2026-05-13, ai-native-organizations-operating-model-2026-05-13, stanford-labor-june-2026, ainews-fable5-june-2026, github-kyle-daigle-june-2026]
 ---
 
 # Agents reshape organizations (leverage moves from individual to org)
@@ -22,6 +22,7 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 
 ## Concrete signals
 
+- **GitHub commit growth data (June 2026).** Kyle Daigle (GitHub COO) at Microsoft Build 2026: GitHub processed 275M commits/week from AI agents in April 2026 — on pace for 14B commits in 2026, vs 1B for all of 2025. The infrastructure consequence: systems built for human-pace development are breaking. GitHub Actions CPU capacity is the new bottleneck; a 15-year-old MySQL One permissioning database is hitting scale limits; monorepo systems need redesign; Microsoft is adding Azure Dev Compute to absorb the agent workload. The user base consequence: GitHub now has 200M+ "developers" — a category being redefined to include non-engineers using code generation tools.
 - **Background agents inside companies.** Cited examples now include Ramp's background agent / coding-agent stack, Stripe's end-to-end coding agents, and Harvey's internal Spectre system.
 - **Product categories are being rebuilt around agents as first-class users.** Linear's early-April framing argues the winning SaaS products are not "AI features on top" but products redesigned so agents can operate as real users inside the system.
 - **Triggers move beyond explicit prompts.** Some of these systems are triggered by monitoring incidents, bug reports, customer feedback, and Slack messages — not by a human typing a request.
@@ -62,6 +63,7 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 
 ## Recent changes
 
+- [2026-06-02] GitHub 14x commit growth: 275M AI agent commits/week (April 2026), pace for 14B in 2026 vs 1B in 2025; infrastructure breaking: MySQL One permissioning, Actions CPU, monorepo systems; 200M+ users with "developer" being redefined
 - [2026-06-10] Added ALE benchmark: 1,500+ tasks, 55 occupations, 300+ domain experts; top agents 2.6% on hardest tier — measurement of the gap between benchmark coding performance and real occupational task performance
 - [2026-06-16] Stanford 25,000-firm study: AI-exposed early-career workers (22-25) declining 3.8%/yr since 2022; junior software devs and customer service hardest hit; hollow pipeline concern is now data-backed
 - [2026-05-13] Added frontier-lab deployment-services framing and AI-native operating-model signal: the bottleneck is increasingly workflow design, context, permissions, evals, handoffs, and human attention allocation.
@@ -85,3 +87,4 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - [AI-native organizations as operating model](../sources/newsletters/ai-native-organizations-operating-model-2026-05-13.md)
 - [Stanford AI labor market data — June 2026](../sources/newsletters/stanford-labor-june-2026.md)
 - [AINews — Fable 5 / Mythos 5 launch (June 10)](../sources/newsletters/ainews-fable5-june-2026.md)
+- ["GitHub's Plan for Agents" — Kyle Daigle on Latent Space (June 2)](../sources/newsletters/github-kyle-daigle-june-2026.md)

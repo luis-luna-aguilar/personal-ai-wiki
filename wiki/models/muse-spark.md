@@ -2,7 +2,7 @@
 title: Muse Spark
 type: model
 domains: [models]
-subcategory: frontier-multimodal-model
+subcategory: frontier-model
 tags: [closed-source, agentic]
 as_of: 2026-04-10
 sources: [muse-spark]

@@ -2,7 +2,7 @@
 title: GPT-5.5
 type: model
 domains: [models, coding, agents, science, cybersecurity]
-subcategory: frontier-multimodal-model
+subcategory: frontier-model
 tags: [openai, closed-source]
 as_of: 2026-05-18
 sources: [openai-gpt-5-5-launch, danshipper-gpt-5-5-vibe-check, gpt-5-5-instant-default-2026-05-06, chatgpt-personal-finance-2026-05]
@@ -10,7 +10,7 @@ sources: [openai-gpt-5-5-launch, danshipper-gpt-5-5-vibe-check, gpt-5-5-instant-
 
 # GPT-5.5
 
-OpenAI's April 2026 frontier model, positioned as "our smartest and most intuitive to use model yet." The launch framing is strongest on terminal/command-line coding, broad knowledge work, math, abstract reasoning, cybersecurity, and early scientific-research use cases. Claude Opus 4.7 still holds some important edges, especially on SWE-Bench Pro, MCP Atlas, FinanceAgent, and practitioner-reported plan quality.
+OpenAI's April 2026 frontier model, positioned as "our smartest and most intuitive to use model yet." The launch framing is strongest on terminal/command-line coding, broad knowledge work, math, abstract reasoning, cybersecurity, and early scientific-research use cases. At launch, Claude Opus 4.7 still held some important edges, especially on SWE-Bench Pro, MCP Atlas, FinanceAgent, and practitioner-reported plan quality.
 
 ## Current status (as of 2026-05-06)
 
@@ -39,7 +39,7 @@ OpenAI's April 2026 frontier model, positioned as "our smartest and most intuiti
 
 ## Weaknesses / caveats
 
-- Claude Opus 4.7 remains stronger on some higher-fidelity engineering and tool-use evaluations
+- At launch, Claude Opus 4.7 remained stronger on some higher-fidelity engineering and tool-use evaluations
 - Long-context graph-style tasks still show a meaningful Claude lead in OpenAI's own comparison tables
 - Practitioner feedback is not all one-way: Every still gives Opus the edge on plan quality, front-end/full-stack product work, and underspecified vibe-coding tasks
 - Bio/chem and cybersecurity capability are high enough that OpenAI is pairing broad deployment with tighter safety controls and a gated cyber-access program

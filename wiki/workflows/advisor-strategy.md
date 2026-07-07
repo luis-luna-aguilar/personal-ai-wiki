@@ -5,7 +5,7 @@ domains: [agents]
 subcategory: agent-orchestration
 tags: [anthropic, agentic]
 as_of: 2026-04-09
-sources: [advisor-strategy]
+sources: [advisor-strategy, ainews-ideogram-june-2026]
 ---
 
 # Advisor strategy
@@ -28,6 +28,14 @@ Vendor numbers, no independent replication yet.
 - Gains also reported on BrowseComp and Terminal-Bench 2.0 for Sonnet+Opus-advisor, specific numbers not quoted.
 
 The Haiku-as-executor result is the most interesting data point: it opens a high-volume / bounded-intelligence niche that previously required a custom orchestrator.
+
+### External replication: Harvey (legal domain, June 2026)
+
+Harvey benchmarked the hybrid pattern on legal task completion. Results are Harvey's own evals, not independent:
+
+- **GLM 5.1 + Claude Opus 4.7 advisor** vs Opus 4.7 alone: **18% all-pass** vs **14%**, at **$368 vs $954** per 100 tasks
+- SFT-tuned Kimi K2.6 achieved 15% accuracy at roughly 11x lower cost than Opus 4.7 alone
+- This mirrors the Anthropic pattern: executor + frontier-advisor outperforms either alone; task accuracy and cost move in opposite directions
 
 ## How it works
 
@@ -59,8 +67,10 @@ The Haiku-as-executor result is the most interesting data point: it opens a high
 
 ## Recent changes
 
+- [2026-06-04] Harvey external validation: GLM 5.1 + Opus 4.7 advisor achieves 18% vs 14% all-pass on legal tasks at $368 vs $954/100 tasks; SFT Kimi K2.6 reaches 15% at 11x lower cost
 - [2026-04-09] First content for this page, from Anthropic's "The advisor strategy" launch post and the concurrent release of the `advisor_20260301` server-side tool.
 
 ## Sources
 
 - [The advisor strategy — Claude blog](../sources/articles/advisor-strategy.md)
+- [AINews — Ideogram 4, Reve 2 (June)](../sources/newsletters/ainews-ideogram-june-2026.md)

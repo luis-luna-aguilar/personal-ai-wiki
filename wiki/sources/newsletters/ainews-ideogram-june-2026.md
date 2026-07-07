@@ -6,7 +6,7 @@ source_file: raw/newsletters/2026-06-04-ainews-reve-2-and-ideogram-4-layouts-in-
 url: https://www.latent.space/p/ainews-reve-2-and-ideogram-4-layouts
 published: 2026-06-04
 ingested: 2026-06-24
-domains: [models, creative]
+domains: [models, creative, legal]
 ---
 
 # AINews — Ideogram 4, Reve 2 (June)
@@ -15,6 +15,8 @@ AINews roundup focused on the layout breakthrough in image generation. Ideogram 
 
 ## Influenced pages
 - [Ideogram 4.0](../../models/ideogram-4.md) — new model page
+- [Harvey](../../tools/harvey.md) — hybrid routing benchmark added
+- [Advisor strategy](../../workflows/advisor-strategy.md) — Harvey external proof point
 - [State of Models](../../state-of/models.md) — Image generation section update
 - [State of Creative](../../state-of/creative.md) — Recent changes update
 
@@ -23,3 +25,5 @@ AINews roundup focused on the layout breakthrough in image generation. Ideogram 
 - 9.3B DiT; fp8/nf4 checkpoints on fal and Hugging Face immediately available
 - Special strong gains in text rendering and branding/commercial design
 - Layout advances driven by labeling + code; flip from closed to open weights draws outsized attention
+- Harvey: GLM 5.1 + Opus 4.7 advisor -> 18% legal all-pass vs 14% pure Opus; $368 vs $954/100 tasks
+- SFT Kimi K2.6: 15% accuracy at roughly 11x lower cost than Opus 4.7

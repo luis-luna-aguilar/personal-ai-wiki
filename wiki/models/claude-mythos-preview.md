@@ -2,7 +2,7 @@
 title: Claude Mythos Preview
 type: model
 domains: [models, cybersecurity, agents]
-subcategory: frontier-multimodal-model
+subcategory: frontier-model
 tags: [anthropic, closed-source, beta]
 as_of: 2026-05-19
 sources: [glasswing, metr-long-horizon-2026-05-12, claude-mythos-m5-bypass-2026-05, cloudflare-glasswing-2026-05]

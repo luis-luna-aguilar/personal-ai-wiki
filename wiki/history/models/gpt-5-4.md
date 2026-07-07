@@ -2,7 +2,7 @@
 title: GPT-5.4
 type: model
 domains: [models, coding]
-subcategory: frontier-multimodal-model
+subcategory: frontier-model
 tags: [openai]
 as_of: 2026-03-08
 sources: [gpt-5-4-march]

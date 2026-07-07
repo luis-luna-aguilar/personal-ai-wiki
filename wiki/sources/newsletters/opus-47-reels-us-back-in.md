@@ -14,7 +14,7 @@ Every's Context Window newsletter reports that several team members who migrated
 
 ## Influenced pages
 
-- [Claude Opus 4.7](../../models/claude-opus-4-7.md) — fast mode added; quality vibe signal
+- [Claude Opus 4.7](../../history/models/claude-opus-4-7.md) — fast mode added; quality vibe signal
 
 ## Key claims extracted
 

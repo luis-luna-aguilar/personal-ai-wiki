@@ -13,8 +13,8 @@ This source summary groups the earlier-April open-model cluster around GLM-5.1 a
 
 ## Influenced pages
 
-- [GLM-5.1](../../models/glm-5-1.md)
-- [MiniMax M2.7](../../models/minimax-m2-7.md)
+- [GLM-5.1](../../history/models/glm-5-1.md)
+- [MiniMax M2.7](../../history/models/minimax-m2-7.md)
 - [Models](../../state-of/models.md)
 
 ## Key claims extracted

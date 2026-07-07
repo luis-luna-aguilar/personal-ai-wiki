@@ -27,5 +27,5 @@ The Code summarizes analysis from OpenRouter and Simon Willison claiming that Cl
 
 ## Influenced pages
 
-- `wiki/models/claude-opus-4-7.md` — tokenizer cost caveat
+- `wiki/history/models/claude-opus-4-7.md` — tokenizer cost caveat
 - `wiki/training/evals-for-agentic-software-development.md` — tokenizer and cache as cost variables

@@ -13,7 +13,7 @@ Auriel W from the Google Gemini RL team published a guest post categorizing eigh
 
 ## Intended changes
 
-- [ ] **Update** `wiki/concepts/harness.md` — add RL harness quality section with failure taxonomy; add source reference
+- [x] **Update** `wiki/concepts/harness.md` — add RL harness quality section with failure taxonomy; add source reference
     > **Add new section before `## Caveats` (or after `## What good harness engineering looks like`):**
     >
     > ## RL harness quality
@@ -28,7 +28,7 @@ Auriel W from the Google Gemini RL team published a guest post categorizing eigh
     > **Add to Recent changes:**
     > `- [2026-06-05] Added RL harness quality section: 8 failure modes taxonomy from Auriel W (Google Gemini RL team); "5% failure rate = harness problem, not model problem"`
 
-- [ ] **Create** `wiki/sources/newsletters/rl-harness-quality-june-2026.md` — source summary
+- [x] **Create** `wiki/sources/newsletters/rl-harness-quality-june-2026.md` — source summary
     > See draft below
 
 ## Page drafts
@@ -82,6 +82,3 @@ Guest post from a member of the Google Gemini RL team, published through a pract
 - Eight failure modes: stale cache, reward hacking, false resolution, silent timeout defaults, non-deterministic resets, reward rounding/clipping, mock data mismatch, action space drift
 - Treat training harness like production code: tests, versioning, monitoring
 ````
-## Feedback
-
-- Harness usage in model training is a new concept to me. Before we ingest this, please explain it in simpler terms and include examples, I need to understand it better to decide if it's relevant to the wiki.

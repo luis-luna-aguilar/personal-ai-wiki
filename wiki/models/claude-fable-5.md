@@ -2,23 +2,23 @@
 title: Claude Fable 5
 type: model
 domains: [models, coding, cybersecurity]
-subcategory: frontier-multimodal-model
+subcategory: frontier-model
 tags: [anthropic, frontier]
-as_of: 2026-06-17
-sources: [fable-ban-june-2026, ainews-fable5-june-2026, every-fable5-vibe-check]
+as_of: 2026-07-02
+sources: [fable-ban-june-2026, ainews-fable5-june-2026, every-fable5-vibe-check, ainews-not-much-happened-2026-07-02, every-tale-of-two-models-2026-07-05]
 ---
 
 # Claude Fable 5
 
-Anthropic's frontier model, launched June 9 2026 as the first generally available Mythos-class model. Described by Anthropic as "at least 2× the size of Opus." Reached #1 across nearly all major benchmarks at launch — then suspended worldwide under US government export controls (see [ban coverage](../sources/newsletters/fable-ban-june-2026.md)).
+Anthropic's frontier model, launched June 9 2026 as the first generally available Mythos-class model. Described by Anthropic as "at least 2× the size of Opus." Reached #1 across nearly all major benchmarks at launch, was briefly suspended worldwide under US government export controls, and returned online July 2 with safety fallback routing.
 
-## Current status (as of 2026-06-17)
+## Current status (as of 2026-07-02)
 
-- **Access suspended globally.** US government classified Fable 5 and Mythos 5 under export controls restricting them to US nationals; Anthropic chose to block all customers rather than implement a partial restriction.
-- The trigger was a jailbreak reported by Amazon researchers; Anthropic disputes it as "narrow, non-universal."
-- UK government denied carve-out requests; ban ongoing as of 2026-06-17.
-- Anthropic briefly and covertly degraded Fable 5 for AI-research use cases before the export-control ban — reversed within a day after practitioner backlash.
-- 76 cybersecurity experts signed the FreeFable.org open letter.
+- Re-enabled after the June 2026 suspension, with demand immediately returning across coding-tool vendors.
+- Anthropic is applying updated safety fallback routing: some cyber, biology, and chemistry requests may route to Opus 4.8 instead of Fable 5.
+- Cursor reports Fable 5 still leads its internal coding evals but is the most expensive per completed task.
+- Devin, Perplexity, Cursor, and other tooling surfaces restored Fable 5 shortly after relaunch.
+- The operational lesson is model-routing resilience: teams should not build critical coding workflows around one frontier model with no fallback.
 
 ## Benchmark record (pre-ban)
 
@@ -68,6 +68,7 @@ Practitioners described it as the first model they trusted for long, complex, mi
 
 ## Recent changes
 
+- [2026-07-02] Fable 5 returned online; Anthropic added visible safety fallback routing to Opus 4.8 for some sensitive domains; major coding tools restored access.
 - [2026-06-17] Access suspended globally under US export controls; ban ongoing; Anthropic disputes scope of trigger jailbreak
 - [2026-06-09] Launched; pricing $10/$50/M; reached #1 on SWE-Bench Pro (80.3%), FrontierCode Diamond (29.3%), HLE (53%), Intelligence Index; Every Senior Engineer benchmark 91/100
 
@@ -76,3 +77,5 @@ Practitioners described it as the first model they trusted for long, complex, mi
 - [AINews — Claude Fable 5 / Mythos 5 launch (June 10)](../sources/newsletters/ainews-fable5-june-2026.md)
 - [Every vibe check: Fable 5 (June 8)](../sources/articles/every-fable5-vibe-check.md)
 - [Claude Fable 5 / Mythos ban coverage](../sources/newsletters/fable-ban-june-2026.md)
+- [AINews - not much happened today](../sources/newsletters/ainews-not-much-happened-2026-07-02.md)
+- [Every - A Tale of Two Models](../sources/newsletters/every-tale-of-two-models-2026-07-05.md)

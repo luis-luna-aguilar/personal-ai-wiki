@@ -2,7 +2,7 @@
 title: Company-wide AI enablement
 type: training
 as_of: 2026-06-17
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13, fde-race-may-2026, every-ai-adoption-levels]
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13, fde-race-may-2026, every-ai-adoption-levels, enterprise-spend-metered-june-2026]
 ---
 
 # Company-wide AI enablement
@@ -92,6 +92,7 @@ Source: "AI Is Ready. Organizations Aren't." (Every, June 2026) — based on int
 - **Compulsive "one more prompt" loops.** Teams can become more productive in bursts while also degrading attention, recovery time, and judgment unless managers design explicit stopping points and protected focus windows
 - **False-completion behavior.** Always-on agents often sound confident before any real action has started; teams need explicit instructions that status updates require proof
 - **Tokenmaxxing — measuring token spend as a productivity proxy.** Meta's internal "Claudeonomics" leaderboard ranked 85,000 employees by AI token usage; within weeks employees were leaving agents idle to climb the rankings. One OpenAI engineer processed 210 billion tokens in a single week (enough to fill Wikipedia 33 times). Dubbed "tokenmaxxing," this mirrors the early 2000s lines-of-code mistake exactly. Reasoning models compound the problem by generating inner-monologue tokens as a function of architecture, not work done. Jensen Huang publicly said he'd be "deeply alarmed" if engineers weren't burning tokens worth half their annual salary — amplifying the leaderboard pressure. Reward outcomes and quality; token spend is a cost center, not a productivity signal. (See also: "Tasteful tokenmaxxing" in Proven patterns for the emerging middle-ground guidance.)
+- **AI spend shock on per-token billing.** GitHub Copilot's move from flat $39/month to per-token billing caught teams unprepared — some individual bills hit $3,000+/month. Uber's response: hard cap at $1,500/month per engineer. Cloudflare AI Gateway added model-level and user-level budget enforcement with automatic fallbacks to cheaper models. The pattern: enterprises need spend controls as a first-class operational concern, not an afterthought. (June 2026)
 
 ## Autonomy ladder
 
@@ -138,6 +139,7 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - Ramp attributes adoption to a preconfigured internal agent (`Glass`), a shared skills marketplace (`Dojo`), and visible social reinforcement
 - McKinsey (2026): 80%+ of companies say they're not yet seeing bottom-line impact from AI investments despite massive investment
 - McKinsey: 75% of roles need fundamental reshaping right now; nearly half of leaders report skill gaps in their organization
+- **Consumption pricing shift (Satya Nadella, Build 2026):** Per-seat licensing is giving way to per-token/consumption models as the dominant enterprise AI pricing structure. Anthropic doubled Claude Cowork usage limits in the same week Copilot token billing caused bill shock — opposite directions from the two leading providers.
 - Every (April 2026, Source Code event): 25-person media/product company running four custom Notion AI agents for cross-database coordination. Anton (prioritization agent): COO messages it in Slack to get a prioritized task list cross-referencing launch calendar, strategy docs, and task lists. Three other agents automate scheduling and project coordination. Key insight: agents become powerful when they query *interconnected* Notion databases — strategy, calendar, tasks, people, and meeting notes all referencing each other. Core operating principles from this deployment: describe outcomes not steps; don't write agent instructions yourself (let AI generate them); the richness of the underlying database is the agent's brain.
 - Boulton and Watt argues operationally complex "boring businesses" such as funeral homes and aesthetic-clinic platforms may be stronger AI targets than software-native demos because software is becoming easier to build while real-world workflow complexity stays scarce
 - Their examples suggest AI compresses market research and iteration cycles materially, but reliability and integration into live systems remain the hard part
@@ -163,6 +165,10 @@ As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have
 - Software development job postings linked to AI were up 14% YoY in April 2026 (Indeed Hiring Lab)
 
 **Pattern implication:** deep AI deployment at enterprise scale still requires human embedding — AI tools alone don't self-integrate into customer workflows, data, and compliance constraints.
+
+## Recent changes
+
+- [2026-06-05] Enterprise spend controls: Uber $1,500/mo cap; GitHub Copilot token billing shock ($39 -> $3,000+); Cloudflare AI Gateway budget enforcement; Satya Nadella: consumption pricing is the new model
 
 ## See also
 
@@ -193,3 +199,4 @@ As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have
 - [Agentic infrastructure and operations](../sources/deep-research/agentic-devops-deep-research.md)
 - [AI-native organizations as operating model](../sources/newsletters/ai-native-organizations-operating-model-2026-05-13.md)
 - [FDE hiring race — Anthropic, OpenAI, Google (May 2026)](../sources/newsletters/fde-race-may-2026.md)
+- [How Microsoft is building for a world of metered intelligence — Every (June 5)](../sources/newsletters/enterprise-spend-metered-june-2026.md)
