@@ -3,8 +3,8 @@ title: Agents reshape organizations (leverage moves from individual to org)
 type: trend
 domains: [agents, coding]
 tags: [agentic]
-as_of: 2026-06-17
-sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, openclaw-operating-pattern-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, cursor-third-era, knowledge-work-os-agent-apps-2026-04-28, frontier-labs-deployment-services-2026-05-13, ai-native-organizations-operating-model-2026-05-13, stanford-labor-june-2026, ainews-fable5-june-2026, github-kyle-daigle-june-2026]
+as_of: 2026-07-01
+sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, openclaw-operating-pattern-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, cursor-third-era, knowledge-work-os-agent-apps-2026-04-28, frontier-labs-deployment-services-2026-05-13, ai-native-organizations-operating-model-2026-05-13, stanford-labor-june-2026, ainews-fable5-june-2026, github-kyle-daigle-june-2026, software-factories-fde-2026-07]
 ---
 
 # Agents reshape organizations (leverage moves from individual to org)
@@ -40,7 +40,7 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - **First rigorous labor-market data on junior displacement.** Stanford's Digital Economy Lab (25,000 firms, June 2026): early-career workers aged 22-25 in AI-exposed occupations are declining at 3.8%/yr since 2022; least-exposed roles are growing at 2.0%. Junior software developers and customer service workers are the hardest-hit groups. Stanford labels these "early signals from a fixed sample," but the concern is not mass unemployment — it's a "hollow pipeline": if entry-level AI-exposed work disappears, the senior talent pipeline weakens roughly 5-10 years later.
 - **Cursor's internal development has already crossed the threshold.** Michael Truell's April 2026 essay reports 35% of Cursor's internal PRs are now created by autonomous cloud agents operating on their own VMs — not a research claim, an operational report from a company actively building this way. The third-era developer pattern he describes (agents write ~100% of code, human role shifts to problem definition and artifact review) is already the default for part of his own team.
 - **The org-chart argument is spreading.** A thin signal relayed from Postman's founder argues AI-era teams should run with wider spans of control and fewer layers between leaders and ICs. This fits the same direction of travel, but the current source quality here is weak.
-- **Frontier labs are moving downstream into deployment services.** Current coverage frames OpenAI and Anthropic as selling workflow design, context wiring, permissions, evals, and human handoff systems around models rather than only API access.
+- **Frontier labs and agent-tool vendors are moving downstream into deployment services.** Current coverage frames OpenAI, Anthropic, Cursor, Warp, and Sierra-style teams as selling workflow design, context wiring, permissions, evals, human handoff systems, and forward-deployed implementation around agents rather than only model or tool access.
 - **AI-native organization framing is becoming more operational.** Agent-only startup rhetoric, agent architect roles, company expectations that employees use AI natively, and the delegation/collaboration split all point to humans allocating attention and review rather than personally executing every step.
 
 - **Agents' Last Exam (ALE, 2026):** Labor-market-aligned benchmark across 1,500+ tasks and 55 occupations. Top agents score 2.6% on the hardest tier. Provides a grounded counterpoint to displacement narratives: agents can do some professional tasks autonomously, but the hardest tier of real occupation-scoped work remains largely out of reach.
@@ -63,6 +63,7 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 
 ## Recent changes
 
+- [2026-07-01] AIEWF/Latent Space coverage connects software factories to FDE and agent-engineer teams that bind agents into customer systems, SOPs, release paths, and change management.
 - [2026-06-02] GitHub 14x commit growth: 275M AI agent commits/week (April 2026), pace for 14B in 2026 vs 1B in 2025; infrastructure breaking: MySQL One permissioning, Actions CPU, monorepo systems; 200M+ users with "developer" being redefined
 - [2026-06-10] Added ALE benchmark: 1,500+ tasks, 55 occupations, 300+ domain experts; top agents 2.6% on hardest tier — measurement of the gap between benchmark coding performance and real occupational task performance
 - [2026-06-16] Stanford 25,000-firm study: AI-exposed early-career workers (22-25) declining 3.8%/yr since 2022; junior software devs and customer service hardest hit; hollow pipeline concern is now data-backed
@@ -88,3 +89,4 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - [Stanford AI labor market data — June 2026](../sources/newsletters/stanford-labor-june-2026.md)
 - [AINews — Fable 5 / Mythos 5 launch (June 10)](../sources/newsletters/ainews-fable5-june-2026.md)
 - ["GitHub's Plan for Agents" — Kyle Daigle on Latent Space (June 2)](../sources/newsletters/github-kyle-daigle-june-2026.md)
+- [Software factories and forward-deployed agent engineering](../sources/newsletters/software-factories-fde-2026-07.md)

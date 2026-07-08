@@ -1,11 +1,11 @@
 ---
 title: Muse Spark
 type: model
-domains: [models]
+domains: [models, creative]
 subcategory: frontier-model
-tags: [closed-source, agentic]
-as_of: 2026-04-10
-sources: [muse-spark]
+tags: [closed-source, agentic, meta]
+as_of: 2026-07-08
+sources: [muse-spark, open-creative-workflows-2026-06, meta-muse-image-video-2026-07]
 ---
 
 # Muse Spark
@@ -30,10 +30,20 @@ The strongest signal in this source is not a benchmark table. It is Meta claimin
 - No public pricing, API details, weights, model sizes, or broader benchmark sweep are captured here
 - The efficiency claim is Meta-reported and presented relative to its prior model
 
+## Muse Image / Muse Video (as of 2026-07-08)
+
+Meta Superintelligence Labs launched Muse Image inside Meta AI, Instagram Stories, and WhatsApp, with Facebook planned, and previewed Muse Video. Superhuman reports Muse Image reached #2 on Arena's text-to-image leaderboard behind GPT-Image-2.
+
+The more important architecture signal is agentic generation: AINews describes Muse Image/Video as using planning, web search, tool use, code execution, and self-refinement before rendering, with Meta saying quality improves with scaled test-time compute.
+
 ## Recent changes
 
+- [2026-07-08] Muse Image launches in Meta AI, Instagram Stories, and WhatsApp; Muse Video previewed; AINews describes an agentic planning/tool-use/self-refinement generation loop.
+- [2026-06-24] Superhuman reports Meta Glasses launched with Muse Spark built in; secondary coverage only.
 - [2026-04-10] Page created from Meta's Muse Spark introduction post
 
 ## Sources
 
 - [Introducing Muse Spark: Scaling Towards Personal Superintelligence](../sources/articles/muse-spark.md)
+- [Open creative workflows and vibe directing](../sources/newsletters/open-creative-workflows-2026-06.md)
+- [Meta Muse Image and Muse Video](../sources/newsletters/meta-muse-image-video-2026-07.md)

@@ -31,3 +31,17 @@
 - [2026-05-01] Qwen 3.6 27B: Artificial Analysis (via AINews) confirms #1 ranking under 150B (Intelligence Index 46) but flags ~21× Gemma 4 31B output-token cost on the evaluation suite
 - [2026-04-25] DeepSeek V4 moved from preview to release framing: Pro/Flash specs, MIT license, API pricing, independent open-model placement, Ascend compatibility, and token-usage caveats
 - [2026-04-23] GPT-5.5 released; replaces GPT-5.4 as the current OpenAI frontier model in the wiki; OpenAI leads more public benchmark categories again, while Claude Opus 4.7 retains some important engineering/tool-use edges
+
+## Archived from current page on 2026-07-08
+
+- [2026-06-04] Ideogram 4.0: 9.3B DiT, #1 open image model (Arena #8 overall); fp8/nf4 checkpoints, ComfyUI; strong text rendering and branding capabilities
+- [2026-06-03] Microsoft Build: MAI model family launched from scratch; MAI-Thinking-1 (35B/1T MoE, 97% AIME 2025, 53% SWE-Pro, blind human preference over Sonnet 4.6), MAI-Code-1-Flash (5B/137B, 51% SWE-Pro, in GitHub Copilot/VS Code)
+- [2026-06-03] Claude Opus 4.8 released with Dynamic Workflows and Figma MCP bidirectional code-to-design/design-to-code workflows; Opus 4.7 archived
+- [2026-06-02] MiniMax M3 launched: 59.0% SWE-Bench Pro, 66.0% Terminal Bench 2.1, 74.2% MCP Atlas; PostTrainBench #3; 1M context; "open-weight" claim contested because weights and parameter count were not disclosed at launch; supersedes M2.7
+- [2026-06-02] Nemotron 3 Ultra released (NVIDIA): 550B/55B hybrid Mamba/attention MoE; OpenMDW 1.1; 47.7 Intelligence Index; high-throughput open-weight model signal
+- [2026-06-02] NVIDIA Cosmos 3: Mixture-of-Transformers architecture (autoregressive reasoner + diffusion generator); Nano 16B / Super 64B; #1 open-weight Text2Image and Image2Video; full open release with Runway Cosmos Coalition
+- [2026-05-19] Qwen 3.7 Arena preview: Qwen3.7 Max Preview #13 overall text (#7 Math, #9 Expert, #10 Coding); Qwen3.7 Plus Preview #16 vision; Alibaba reaches top-15 overall in text for the first time
+- [2026-05-18] Claude Mythos Preview: Calif team defeated Apple M5 Memory Integrity Enforcement in <5 days — first public kernel memory corruption on M5; small team + frontier AI matches org-scale security research throughput
+- [2026-05-13] Added merged `Real-time voice / interaction models` subcategory; TML-Interaction-Small (Thinking Machines Lab, 276B, 200ms audio, 0.4s response), GPT-Realtime-2, and Google Magic Pointer are first entries
+- [2026-05-13] "End of finetuning" debate: OpenAI deprecating finetuning APIs; consensus forming that long-context prompts suffice for ~80% of use cases; counterpoint from top tier (Cursor, Cognition $25B) is increased open-model RLFT, not decreased — weight specialization remains central to their custom-ASIC strategy
+- [2026-05-06] Secondary coverage says GPT-5.5 Instant became ChatGPT's new default model, replacing GPT-5.3 Instant; official verification still needed for exact rollout and hallucination claims.

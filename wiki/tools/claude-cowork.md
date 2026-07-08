@@ -4,28 +4,22 @@ type: tool
 domains: [agents]
 subcategory: agent-orchestration
 tags: [anthropic, agentic]
-as_of: 2026-05-14
-sources: [claude-cowork-launch, aakash-gupta-cowork, claude-design-launch, claude-productivity-surfaces, anthropic-desktop-agent-expansion-late-march, anthropic-persistent-workflow-surfaces-february, awsai-cowork-bedrock-2026-04-23]
+as_of: 2026-07-08
+sources: [claude-cowork-launch, aakash-gupta-cowork, claude-design-launch, claude-productivity-surfaces, anthropic-desktop-agent-expansion-late-march, anthropic-persistent-workflow-surfaces-february, awsai-cowork-bedrock-2026-04-23, claude-cowork-mobile-2026-07]
 ---
 
 # Claude Cowork
 
 Anthropic's desktop agent for knowledge work. It works across local files, folders, and workplace applications to complete high-effort, repeatable tasks without the user coordinating each step. Included in Claude Pro ($20/month).
 
-## Current status (as of 2026-04-21)
+## Current status (as of 2026-07-08)
 
-- Desktop-first agent that works where most knowledge work happens: local files, folders, and everyday applications
-- Scheduled tasks arrived in late February, letting Cowork run recurring briefs, spreadsheet updates, and similar automations on a cadence while the desktop app stayed open
-- Late-March source material frames Cowork as a more user-friendly, VM-backed superset of Claude Code for non-terminal-native users rather than as a separate narrow productivity toy
-- Anthropic explicitly tied Cowork to local-first agent workflows: the VM acts as both safety boundary and capability unlock, letting Claude install tools, run scripts, and operate more independently without the dead-end UX of approving every command
-- Dispatch, introduced in March, made Cowork persistent: users could assign work from their phone and return later to a still-running desktop conversation
-- Anthropic also tuned Cowork differently from Claude Code: longer planning horizons, heavier use of planning / clarification tools, and evaluation against messy knowledge-work tasks rather than only SWE tasks
-- Positioned for high-effort, repeatable knowledge-work tasks rather than one-off prompt-response use
-- No technical background required, according to Anthropic's product positioning
-- Anthropic had already been pushing Claude into document-native productivity surfaces earlier in April via Claude for Word beta, which drafts, edits, and revises documents with tracked changes from a sidebar
-- Live Artifacts shipped in April 2026: dashboards, trackers, and reports wired to connectors that auto-refresh on open
-- Reported connectors include Slack, Salesforce, Google Drive, Asana, and Jira
-- Released in the same product moment as [Claude Design](claude-design.md), Anthropic's research-preview surface for prototypes, slides, and one-pagers
+- Desktop-first agent that works across local files, folders, and everyday applications; now expanded into a cross-device Cowork beta on web and mobile for Max subscribers.
+- Users can start delegated work at a desk, monitor it from a phone, and retrieve the final output from any device.
+- Scheduled tasks can now run even when the user's computer is closed, strengthening Cowork's position as a background-agent surface rather than only a local desktop app.
+- Anthropic extended Fable 5 access on paid plans through 2026-07-12 before moving it to usage credits, making Cowork's economics more usage-sensitive for frontier-model-backed work.
+- Positioned for high-effort, repeatable knowledge-work tasks rather than one-off prompt-response use.
+- Live Artifacts shipped in April 2026: dashboards, trackers, and reports wired to connectors that auto-refresh on open.
 
 ## Vertical workflow bundles (as of 2026-05-14)
 
@@ -50,11 +44,11 @@ Cowork also did not appear from nowhere. The earlier Claude for Word beta sugges
 
 ## Recent changes
 
+- [2026-07-08] Cowork beta expands to web/mobile for Max subscribers; scheduled tasks can run while the user's computer is closed; Fable 5 access extended through 2026-07-12.
 - [2026-05-14] Claude for Small Business and Claude for Legal launched: 27 combined one-click agentic workflows on Cowork, with QuickBooks/PayPal/DocuSign integrations; first direct vertical automation product push
 - [2026-04-23] AWS Bedrock public research preview: Cowork now available via Bedrock, keeping prompts, files, and model responses within the customer's AWS account
 - [2026-02-25] Cowork added scheduled tasks, making recurring delegated work first-class before the later Dispatch / Channels / Live Artifacts expansion
 - [2026-04-21] Added late-March framing: Cowork is positioned as a VM-backed, local-first delegated desktop workflow, not only an April artifact surface
-- [2026-04-21] Added earlier April precursor: Claude for Word beta signaled Anthropic's move into in-app document workflows before Cowork / Live Artifacts
 
 ## Sources
 
@@ -65,3 +59,4 @@ Cowork also did not appear from nowhere. The earlier Claude for Word beta sugges
 - [Anthropic desktop-agent expansion in late March](../sources/newsletters/anthropic-desktop-agent-expansion-late-march.md)
 - [Anthropic persistent workflow surfaces in late February](../sources/newsletters/anthropic-persistent-workflow-surfaces-february.md)
 - [AWS AI — Claude Cowork now available via Amazon Bedrock](../sources/tweets/awsai-cowork-bedrock-2026-04-23.md)
+- [Claude Cowork web/mobile beta](../sources/newsletters/claude-cowork-mobile-2026-07.md)

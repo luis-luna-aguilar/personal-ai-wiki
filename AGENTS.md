@@ -500,7 +500,7 @@ Two-sentence TL;DR of the source.
 ### wiki/tools/cursor.md (updated)
 
 ```
-<full proposed markdown content of the updated page>
+<full proposed markdown snippet(s) for every changed section, including frontmatter fields if changed>
 ```
 
 ### wiki/benchmarks/swe-bench.md (new)
@@ -525,9 +525,11 @@ Two-sentence TL;DR of the source.
 
 **Rules for proposals:**
 - Every intended change is a checkbox. Unchecked = skip.
-- Every draft appears **in full** inside the proposal, in a fenced code block. The user may edit drafts directly in the file before applying.
+- Every draft appears **in full** inside the proposal's `## Page drafts` section, in a fenced code block. The user may edit drafts directly in the file before applying.
 - If a draft contains fenced code examples, wrap the full draft in a longer fence such as ````md ... ```` so inner ```text blocks do not break proposal formatting.
-- For **updated** pages, show only the relevant diff snippet in the proposal unless the user explicitly asks for the full file. Do not paste the entire unchanged page just to show a small edit.
+- For **updated** pages, show only the relevant diff snippet in the proposal unless the user explicitly asks for the full file. Do not paste the entire unchanged page just to show a small edit. The snippet must still be a complete, reviewable draft of the changed section(s), not a prose description.
+- **Mandatory update-draft rule:** every checked `Update` or `Spill` item in `## Intended changes` must have a matching `### wiki/... (updated...)` or `### wiki/history/... (updated...)` entry under `## Page drafts`. Do not rely on `> Before/After`, prose notes, or "See draft below" text in `## Intended changes` as the only draft. Source-summary drafts alone are not sufficient when the proposal updates existing wiki pages.
+- Before finishing a proposal or processing a triage into proposals, self-check: count checked `Update`/`Spill` items and confirm each target path appears as a heading under `## Page drafts`.
 - Include "Open questions" when you're uncertain — the user can answer inline.
 - Include a "Schema / vocabulary additions" section whenever you want to introduce a new tag, domain, or subcategory. This requires explicit approval via checkbox.
 

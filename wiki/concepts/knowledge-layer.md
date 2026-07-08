@@ -4,7 +4,7 @@ type: concept
 domains: [agents]
 tags: [agentic]
 as_of: 2026-07-06
-sources: [knowledge-layer-architecture, llm-wikis-paperwiki-2026-07-06, ainews-not-much-happened-2026-07-02]
+sources: [knowledge-layer-architecture, llm-wikis-paperwiki-2026-07-06, ainews-not-much-happened-2026-07-02, agent-memory-systems-layer-2026-06]
 ---
 
 # Knowledge layer
@@ -19,7 +19,7 @@ A knowledge layer is a compiled, maintained context surface that sits between ra
 - Becomes more useful as outputs, queries, and new sources compound back into the same system
 - Practitioner examples now frame this as "LLM Wikis": maintained markdown knowledge layers for agents, often implemented as Obsidian vaults with rich metadata, full-text + semantic search, and generated HTML artifacts that research agents can navigate directly
 - Wiki-style memory is moving from personal agent folders into explicit tooling: LangChain's [OpenWiki](../tools/openwiki.md) generates and maintains codebase docs meant for agents to consume.
-- Maintained memory is distinct from retrieval-only memory. Weaviate's Engram framing points toward extracting candidate memories, reconciling them against existing memory, and committing a cleaned version so contradictions are resolved before query time.
+- Maintained memory is distinct from retrieval-only memory. Engram/Context Hub-style systems point toward extracting candidate memories, reconciling them against existing knowledge, and committing cleaned facts before query time rather than retrieving every plausible old fragment.
 - The common design direction is inspectable, editable, permission-aware knowledge that agents can share across sessions instead of hidden vector recall or one giant transcript.
 
 ## Why it matters
@@ -41,6 +41,7 @@ For research workflows, this suggests a practical pattern: use agents to maintai
 ## Recent changes
 
 - [2026-07-02] OpenWiki and Engram-style memory reconciliation reinforced the shift from raw logs/retrieval toward maintained, agent-readable knowledge layers.
+- [2026-07-07] Agent-memory systems coverage reinforces that knowledge layers should reconcile and maintain facts rather than retrieve every plausible old fragment.
 
 ## Caveats
 
@@ -52,3 +53,4 @@ For research workflows, this suggests a practical pattern: use agents to maintai
 - [AI Knowledge Layer](../sources/articles/knowledge-layer-architecture.md)
 - [LLM Wikis / PaperWiki — Omar Sar](../sources/tweets/llm-wikis-paperwiki-2026-07-06.md)
 - [AINews - not much happened today](../sources/newsletters/ainews-not-much-happened-2026-07-02.md)
+- [Agent memory becomes a systems layer](../sources/newsletters/agent-memory-systems-layer-2026-06.md)

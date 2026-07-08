@@ -5,7 +5,7 @@ domains: [science, agents]
 subcategory: science-agent-platform
 tags: [anthropic, agentic]
 as_of: 2026-07-06
-sources: [claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05]
+sources: [claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07]
 ---
 
 # Claude Science
@@ -14,10 +14,10 @@ Claude Science is Anthropic's public beta app for scientific workflows. It is no
 
 ## Current status (as of 2026-07-06)
 
-- Available for macOS and Linux in public beta.
+- Available in beta for Claude Pro, Max, Team, and Enterprise, with local macOS/Linux execution or remote access through SSH/HPC login nodes.
 - Runs analyses, searches scientific databases, and traces steps from data wrangling to publication.
 - Figures, tables, and notebooks preserve the code, environment, and conversation that produced them.
-- Supports persistent Python and R kernels and can manage environments on laptops, Linux machines, or HPC login nodes.
+- Supports persistent Python and R kernels, scientific artifact rendering, exact code/environment capture, message history, and reviewer agents that check citations, calculations, and code/figure consistency.
 - Preconfigured for genomics, single-cell, proteomics, structural biology, cheminformatics, and related domains; Anthropic says it can query 60+ scientific databases.
 - Every reports that Anthropic is also running internal preclinical drug programs to dogfood and improve its science tooling.
 
@@ -35,9 +35,11 @@ Claude Science is Anthropic's public beta app for scientific workflows. It is no
 ## Recent changes
 
 - [2026-07-06] Anthropic product page confirms Claude Science public beta, reproducible artifacts, persistent kernels, 60+ scientific databases, and scientific-tool/compute integrations.
+- [2026-07-01] Official announcement adds beta plan availability, reviewer agents, scientific artifact rendering, BioNeMo/Boltz/OpenFold integrations, and case studies.
 - [2026-07-05] Every reports Claude Science launch and Anthropic internal preclinical drug-program dogfooding.
 
 ## Sources
 
 - [Claude Science beta](../sources/articles/claude-science-beta-2026-07-06.md)
+- [Claude Science AI workbench announcement](../sources/articles/claude-science-workbench-2026-07.md)
 - [Every - A Tale of Two Models](../sources/newsletters/every-tale-of-two-models-2026-07-05.md)

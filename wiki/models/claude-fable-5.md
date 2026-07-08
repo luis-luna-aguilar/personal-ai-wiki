@@ -4,8 +4,8 @@ type: model
 domains: [models, coding, cybersecurity]
 subcategory: frontier-model
 tags: [anthropic, frontier]
-as_of: 2026-07-02
-sources: [fable-ban-june-2026, ainews-fable5-june-2026, every-fable5-vibe-check, ainews-not-much-happened-2026-07-02, every-tale-of-two-models-2026-07-05]
+as_of: 2026-07-07
+sources: [fable-ban-june-2026, ainews-fable5-june-2026, every-fable5-vibe-check, ainews-not-much-happened-2026-07-02, every-tale-of-two-models-2026-07-05, claude-sonnet-5-official-2026-06-30, fable-unknowns-routing-2026-07]
 ---
 
 # Claude Fable 5
@@ -60,17 +60,27 @@ Practitioners described it as the first model they trusted for long, complex, mi
 - Usage profile: 500k–1M tokens per long-running task; Simon Willison described it as "slow, expensive and capable"
 - Anthropic advised: default to `xhigh/high` effort; rewrite old CLAUDE.md instructions; give objectives/responsibilities rather than tasks; use Fable as an orchestrator delegating to smaller models via Claude Managed Agents
 
+## What Fable 5 is best used for
+
+Every's July 2026 guidance sharpens Fable's practical niche: do not reserve it only for the biggest tasks by size. Reserve it for tasks where the assignment may be incomplete, the standard is unstated, or the target itself may be wrong.
+
+- Use Fable to surface "unknown knowns": criteria obvious to the user but not written in the prompt.
+- Use Fable to surface "unknown unknowns": questions or invalid premises the user has not considered.
+- Use cheaper models when the goal, constraints, and definition of good are already settled.
+- Use Fable to turn a hard recurring job into scripts, skills, examples, and quality checks that cheaper models can execute later.
+
 ## Weaknesses / caveats
 
-- All benchmark positions are pre-ban; no ongoing public evaluation is possible while access is suspended.
+- Benchmark positions mostly come from launch/pre-ban coverage, but Fable 5 access has returned. Anthropic now applies safety fallback routing, so some sensitive or routine tasks may route to Opus 4.8 instead of Fable 5.
 - The ban reveals a new structural risk: regulatory action can remove access to a frontier model faster than any vendor deprecation.
 - Classifier over-sensitivity at launch: users reported "cancer" and "What does the heart do?" triggering biosecurity fallback; Anthropic reset rate limits after heavy demand.
 
 ## Recent changes
 
+- [2026-07-07] Every frames Fable's premium use case as finding unknowns and invalid premises before execution, then converting recurring work into cheaper-model instructions and scripts.
 - [2026-07-02] Fable 5 returned online; Anthropic added visible safety fallback routing to Opus 4.8 for some sensitive domains; major coding tools restored access.
+- [2026-06-30] Sonnet 5 launch cluster also confirmed Fable 5 access had returned with fallback routing still relevant.
 - [2026-06-17] Access suspended globally under US export controls; ban ongoing; Anthropic disputes scope of trigger jailbreak
-- [2026-06-09] Launched; pricing $10/$50/M; reached #1 on SWE-Bench Pro (80.3%), FrontierCode Diamond (29.3%), HLE (53%), Intelligence Index; Every Senior Engineer benchmark 91/100
 
 ## Sources
 
@@ -79,3 +89,5 @@ Practitioners described it as the first model they trusted for long, complex, mi
 - [Claude Fable 5 / Mythos ban coverage](../sources/newsletters/fable-ban-june-2026.md)
 - [AINews - not much happened today](../sources/newsletters/ainews-not-much-happened-2026-07-02.md)
 - [Every - A Tale of Two Models](../sources/newsletters/every-tale-of-two-models-2026-07-05.md)
+- [Claude Sonnet 5 official launch](../sources/articles/claude-sonnet-5-official-2026-06-30.md)
+- [Fable for unknowns and cheaper specialists for settled work](../sources/newsletters/fable-unknowns-routing-2026-07.md)

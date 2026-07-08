@@ -1,11 +1,11 @@
 ---
 title: Gemini
 type: tool
-domains: [models]
+domains: [models, computer-use, agents]
 subcategory: ai-assistant
 tags: [google, closed-source]
-as_of: 2026-05-05
-sources: [gemini-browser-utility-updates, gemini-deep-research-max, ainews-2026-04-22, google-cloud-next-2026, gemini-downloadable-files-2026-04-30]
+as_of: 2026-07-08
+sources: [gemini-browser-utility-updates, gemini-deep-research-max, ainews-2026-04-22, google-cloud-next-2026, gemini-downloadable-files-2026-04-30, gemini-computer-use-aside-2026-06, gemini-managed-agents-2026-07]
 ---
 
 # Gemini
@@ -49,6 +49,15 @@ Google is now using Gemini as the umbrella brand over both assistant and enterpr
 **Downloadable file generation (as of 2026-04-30):**
 Gemini now generates downloadable artifacts directly from chat: Google Docs, Sheets, Slides; Microsoft Word, Excel, PowerPoint; PDF, CSV, LaTeX, TXT, RTF, and Markdown. File generation requires no external integration — output downloads inline from the conversation.
 
+**Computer use (as of 2026-06-25):**
+Gemini 3.5 Flash now has computer use as a built-in developer capability across browser, desktop, and mobile workflows. Newsletter coverage describes it as a standardized action interface exposed through the Gemini API, with human confirmation for sensitive actions and automatic shutdown when prompt-injection behavior is detected.
+
+The significance is productization: Google is putting computer-use primitives into a mainstream Gemini model/API path rather than leaving them as a separate demo or bespoke agent environment.
+
+**Managed agents in Gemini API (as of 2026-07-08):**
+
+Google added hosted-agent primitives to the Gemini API: MCP support for direct access to internal tools and databases, background execution for long-running tasks, custom function calling, and credential refresh across interactions. AINews also describes the Gemini Interactions API as GA and the new default interface for Gemini models and agents, combining models, agents, async execution, tool support, multimodal generation, and managed execution surfaces.
+
 **Other Gemini surfaces already tracked here:**
 - Deep Research and Deep Research Max available via the Gemini API — see [Gemini Deep Research](gemini-deep-research.md) for capabilities and benchmarks; see [Deep Research (concept)](../concepts/deep-research.md) for the category
 - Chrome Skills: reusable Gemini prompts that run as one-click browser workflows
@@ -68,6 +77,8 @@ Gemini now generates downloadable artifacts directly from chat: Google Docs, She
 
 ## Recent changes
 
+- [2026-07-08] Gemini API managed agents add MCP support, background execution, custom function calling, and credential refresh; AINews frames Interactions API as Google's default stateful interface for models and agents.
+- [2026-06-25] Gemini 3.5 Flash adds built-in computer use for browser, desktop, and mobile with sensitive-action confirmations and prompt-injection shutdown behavior.
 - [2026-04-30] Downloadable file generation from chat: Google/Microsoft Office formats, PDF, CSV, LaTeX, TXT, RTF, Markdown — positions Gemini as an artifact-producing workplace assistant, not only conversational AI
 - [2026-04-23] Cloud Next '26: Gemini Enterprise Agent Platform replaces Vertex AI; Agent Studio, 200+ models, Workspace Intelligence GA, Knowledge Catalog, Gemini Embedding 2 GA, and broader agent governance stack
 - [2026-04-22] Added benchmark scores for Deep Research Max (93.3% DeepSearchQA, 85.9% BrowseComp, 54.6% HLE); added collaborative planning and code execution capabilities from AINews coverage
@@ -80,3 +91,5 @@ Gemini now generates downloadable artifacts directly from chat: Google Docs, She
 - [Gemini Deep Research and Deep Research Max launch](../sources/articles/gemini-deep-research-max.md)
 - [Google Cloud Next 2026 — TPU v8 and Gemini Enterprise Agent Platform](../sources/articles/google-cloud-next-2026.md)
 - [Gemini downloadable file generation](../sources/newsletters/gemini-downloadable-files-2026-04-30.md)
+- [Gemini computer use and Aside agentic browser](../sources/newsletters/gemini-computer-use-aside-2026-06.md)
+- [Gemini managed agents in the API](../sources/newsletters/gemini-managed-agents-2026-07.md)

@@ -3,13 +3,13 @@ title: Agent improvement loop
 type: concept
 domains: [agents]
 tags: [agentic]
-as_of: 2026-05-15
-sources: [trace-agent-improvement-loop, langchain-better-harness, cursor-bugbot-learning, self-improving-skills, agents-evals-deep-research, langchain-interrupt-may-2026]
+as_of: 2026-07-07
+sources: [trace-agent-improvement-loop, langchain-better-harness, cursor-bugbot-learning, self-improving-skills, agents-evals-deep-research, langchain-interrupt-may-2026, autoresearch-agent-recipes-2026-07, agent-memory-systems-layer-2026-06]
 ---
 
 # Agent improvement loop
 
-A workflow for improving AI agents by studying **execution traces**: records of what the agent actually did during a run, including model calls, tool calls, intermediate steps, and outputs. The loop is: collect traces, score or review them, identify recurring failure patterns, make targeted changes, validate those changes offline, then redeploy and repeat.
+A workflow for improving AI agents by studying **execution traces** and feedback signals: records of what the agent actually did during a run, eval results, human review, cost data, and recurring failure patterns. Autoresearch extends this into an outer loop where agents study and maintain the primary agent system itself. The loop is: collect traces, score or review them, identify recurring failure patterns, make targeted changes, validate those changes offline, then redeploy and repeat.
 
 ## Current status (as of 2026-04-24)
 
@@ -19,6 +19,7 @@ A workflow for improving AI agents by studying **execution traces**: records of 
 - The concept is broader than any one vendor, even though the source article is product-adjacent
 - LangChain's Better-Harness (open-sourced 2026-04-10) automates the loop: sources evals, splits optimization/holdout sets, iteratively diagnoses failures from traces, and proposes targeted harness changes with overfitting guards
 - Cursor's Bugbot provides a product example of the same pattern: reactions, replies, and reviewer comments become candidate rules that are promoted or disabled based on later production signal
+- Autoresearch treats the agent system itself as the research subject: agents inspect traces, failures, eval results, human feedback, and cost signals to propose improvements under governance controls
 
 ## The loop
 
@@ -74,6 +75,12 @@ The loop closes without requiring a human to manually review traces and hypothes
 
 SmithDB underpins this: a database built specifically for nested, long-running agent traces with large payloads. Built on Apache DataFusion and Vortex, it claims 12–15× faster access on key agent-trace workloads compared to general-purpose databases. The architectural bet is that agent traces are a different workload shape from application logs — nested structure, large payloads, and queries that follow the parent→child trace hierarchy rather than time-range scans.
 
+## Trace-to-memory feedback
+
+Production traces can improve an agent by changing its memory, not only its prompts, tools, or evals. The loop is: collect traces, extract candidate memories, deduplicate and reconcile them, scope them to the right actor/workflow, write them back with provenance, then monitor whether retrieval improves or creates stale-fact failures.
+
+The risk is memory pollution. A trace-derived memory should not become durable just because it appeared in a run; it needs evidence, conflict checks, and a clear owner/scope.
+
 ## Self-improving skills
 
 A variation of the improvement loop applied at the *skill/prompt* level rather than the full agent harness. The problem: skills in a Claude Code skills folder are static, but the environment around them isn't. A skill that worked last month may quietly start failing when the codebase changes, the model updates, or user request patterns shift. The failures are often invisible until someone notices degraded output.
@@ -117,6 +124,8 @@ This applies in both directions: do not let holdout cases leak into training dat
 
 ## Recent changes
 
+- [2026-07-07] Added trace-to-memory feedback: offline trace analysis can write back maintained memories, but needs dedupe, scope, and conflict checks.
+- [2026-07-01] Added autoresearch as an outer-loop pattern: agents study and improve the primary agent system using traces, evals, human signals, and cost data.
 - [2026-05-15] LangSmith Engine added: actively clusters trace failures and proposes fixes/evals — observability as improvement loop, not passive logging. SmithDB: purpose-built agent-trace database, 12-15× faster, Apache DataFusion + Vortex
 - [2026-04-24] Added eval suite hygiene section: holdout sets, trace mining, periodic refresh, and retiring stale tests
 - [2026-04-22] Added self-improving skills pattern: closed feedback loop for skill drift; meta-skill 5-step prompt optimization loop
@@ -138,3 +147,5 @@ This applies in both directions: do not let holdout cases leak into training dat
 - [Self-improving agent skills — auto-improvement loops](../sources/tweets/self-improving-skills.md)
 - [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)
 - [LangChain Interrupt conference — May 2026](../sources/newsletters/langchain-interrupt-may-2026.md)
+- [Autoresearch and agent recipes](../sources/newsletters/autoresearch-agent-recipes-2026-07.md)
+- [Agent memory becomes a systems layer](../sources/newsletters/agent-memory-systems-layer-2026-06.md)

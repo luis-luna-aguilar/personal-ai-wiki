@@ -2,9 +2,9 @@
 title: Restricted frontier deployment
 type: trend
 domains: [models, agents]
-tags: [anthropic]
-as_of: 2026-06-17
-sources: [restricted-frontier-deployment, anthropic-pentagon-boundaries-february, glasswing, fable-ban-june-2026]
+tags: [anthropic, openai]
+as_of: 2026-06-30
+sources: [restricted-frontier-deployment, anthropic-pentagon-boundaries-february, glasswing, fable-ban-june-2026, gpt-56-sol-restricted-preview-2026-06, ai-strategy-explicit-bets-2026-06, metr-gpt-5-6-sol-eval-2026-06]
 ---
 
 # Restricted frontier deployment
@@ -26,7 +26,7 @@ Restricted deployment may also show up as customer-boundary enforcement, not onl
 
 ## Why it matters
 
-This could become a major structural shift in frontier AI. If labs increasingly maintain a split between public-facing models and restricted internal or selective-access systems, state-of pages cannot assume that the most capable system is always the most publicly available one.
+This could become a major structural shift in frontier AI. If labs increasingly maintain a split between public-facing models and restricted internal or selective-access systems, state-of pages cannot assume that the most capable system is always the most publicly available one. AI strategies should treat regulatory and access shocks as explicit assumptions rather than background risk.
 
 ## What to watch
 
@@ -48,6 +48,12 @@ The covert degradation episode (Anthropic silently downgraded Fable 5 for AI-res
 
 The practical response emerging across the field: **model neutrality as architecture** — building harnesses, routing, and context at the application layer rather than coupling to any single frontier vendor. See also [Open-weight momentum broadens](open-weight-momentum-broadens.md).
 
+## Restricted previews as access control (June 2026)
+
+Newsletter coverage of OpenAI's GPT-5.6/Sol restricted preview suggests the same access-control pattern may now extend beyond Anthropic: frontier model availability can be shaped by government requests, vetted partner lists, and staged API/Codex access rather than normal public launch. Because the official OpenAI page fetch was blocked by JavaScript verification, keep this as a caveated signal until a clean primary capture exists.
+
+METR's fetched evaluation confirms the predeployment-assessment side of the pattern: METR received API access to Sol, a railfree version, raw chain of thought, and a Codex harness setup guide under NDA. The product-availability claims remain newsletter-based, but the evaluation workflow itself is a concrete restricted-access frontier example.
+
 ## Open questions
 
 - Is Anthropic the first durable example of this pattern, or just an unusually public one?
@@ -55,6 +61,9 @@ The practical response emerging across the field: **model neutrality as architec
 
 ## Recent changes
 
+- [2026-06-30] Every strategy framing added: teams should model regulatory and access shocks as explicit AI strategy assumptions.
+- [2026-06-26] METR's GPT-5.6 Sol evaluation reinforces restricted frontier deployment as a safety/evaluation workflow, not only a product availability decision.
+- [2026-06-29] Newsletter coverage reports OpenAI GPT-5.6/Sol restricted preview for coding/cybersecurity via vetted API and Codex access; official source capture still needed.
 - [2026-06-17] Fable 5 / Mythos 5 suspended globally under US government export controls — first regulatory rather than voluntary restriction; UK carve-out denied; 76 security experts protest (FreeFable.org)
 - [2026-04-22] Glasswing disclosed publicly: Mythos Preview found thousands of zero-days across major OSes and browsers autonomously; confirmed restricted deployment with partner program (Cisco, AWS, Microsoft)
 
@@ -63,3 +72,6 @@ The practical response emerging across the field: **model neutrality as architec
 - [Restricted frontier deployment](../sources/newsletters/restricted-frontier-deployment.md)
 - [Anthropic Pentagon deployment boundaries in late February](../sources/newsletters/anthropic-pentagon-boundaries-february.md)
 - [Project Glasswing](../sources/articles/glasswing.md)
+- [GPT-5.6 Sol restricted preview](../sources/newsletters/gpt-56-sol-restricted-preview-2026-06.md)
+- [AI strategy as explicit bets](../sources/newsletters/ai-strategy-explicit-bets-2026-06.md)
+- [METR predeployment evaluation of GPT-5.6 Sol](../sources/articles/metr-gpt-5-6-sol-eval-2026-06.md)

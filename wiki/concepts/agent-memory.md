@@ -3,8 +3,8 @@ title: Agent memory
 type: concept
 domains: [agents]
 tags: [agentic]
-as_of: 2026-03-23
-sources: [agent-memory-without-vector-db, memory-vs-context-rot-february]
+as_of: 2026-07-07
+sources: [agent-memory-without-vector-db, memory-vs-context-rot-february, agent-memory-systems-layer-2026-06]
 ---
 
 # Agent memory
@@ -13,10 +13,11 @@ Agent memory is the problem of helping an AI system recover the right facts from
 
 ## Current status
 
-- A late-March source argues that long-term memory is becoming an active retrieval-and-reasoning problem, not just a vector-database problem
-- Supermemory's ASMR system is described as using specialized agents to read conversation history, analyze it, and extract facts instead of embedding everything and querying by similarity
-- The reported benchmark jump is large: LongMemEval from roughly 85% to 98.6%
-- If this framing holds up, memory quality depends more on how history is interpreted than on which embedding store sits underneath it
+- Memory is moving from "retrieve old facts" toward a lifecycle system: extract candidate memories, deduplicate them, reconcile conflicts, scope them to the right user/team/task, retrieve evidence, and expire or update stale facts.
+- Supermemory's ASMR system is described as using specialized agents to read conversation history, analyze it, and extract facts instead of embedding everything and querying by similarity.
+- Engram-style systems frame memory as asynchronous infrastructure that turns traces and activity into cleaned, scoped memories rather than stuffing every event back into the prompt.
+- A-TMA-style "ghost memory" work highlights a concrete failure mode: stale and current facts can be retrieved together, causing long-running assistants to act on outdated state.
+- ReContext and BlockSearch-style work suggests some memory failures are inference-time evidence-use problems, not only storage problems.
 
 ## Why it matters
 
@@ -26,9 +27,15 @@ Many agent systems fail not because they lack storage, but because they surface 
 
 - Separate "store everything" from "understand what matters"
 - Treat memory retrieval as a mini-analysis task, not only a nearest-neighbor lookup
-- Keep the extracted facts legible so humans can inspect what the agent thinks it remembers
-- Treat persistent memory as a tradeoff, not a free upgrade: better recall can be offset by stale instructions, contradictory preferences, and "context rot"
+- Treat memory writes as a governed operation, not automatic accumulation.
+- Store evidence and provenance with important memories so humans can debug why the agent believes something.
+- Add conflict detection and stale-fact handling before committing durable memories.
+- Separate private user memory, team memory, workflow memory, and source-of-truth knowledge layers.
 - Prefer memory structures humans can inspect and prune instead of silent accumulation
+
+## Recent changes
+
+- [2026-07-07] AINews memory cluster updates agent memory from retrieval problem to systems layer: extraction, dedupe, reconciliation, scoping, lifecycle, and offline trace writeback.
 
 ## Related
 
@@ -43,3 +50,4 @@ Many agent systems fail not because they lack storage, but because they surface 
 
 - [Agent memory without vector databases](../sources/newsletters/agent-memory-without-vector-db.md)
 - [Memory versus context rot in late February](../sources/newsletters/memory-vs-context-rot-february.md)
+- [Agent memory becomes a systems layer](../sources/newsletters/agent-memory-systems-layer-2026-06.md)

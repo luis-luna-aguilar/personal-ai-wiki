@@ -1,16 +1,16 @@
 ---
 title: Codex
 type: tool
-domains: [coding, cybersecurity]
+domains: [coding, cybersecurity, computer-use]
 subcategory: terminal-coding-agent
 tags: [openai, closed-source, agentic]
-as_of: 2026-05-19
-sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026, openai-gpt-5-5-launch, superhuman-2026-04-23, codex-broader-computer-work-2026-04-24, codex-for-work-2026-05-01, symphony-devin-terminal-orchestration-2026-04-28, openai-daybreak-2026-05-13, codex-mobile-may-2026, codex-adoption-ecosystem-2026-05, codex-maxxing-jxnl-2026-05, codex-zoom-mobile-2026-05]
+as_of: 2026-07-01
+sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026, openai-gpt-5-5-launch, superhuman-2026-04-23, codex-broader-computer-work-2026-04-24, codex-for-work-2026-05-01, symphony-devin-terminal-orchestration-2026-04-28, openai-daybreak-2026-05-13, codex-mobile-may-2026, codex-adoption-ecosystem-2026-05, codex-maxxing-jxnl-2026-05, codex-zoom-mobile-2026-05, codex-general-work-agents-2026-07]
 ---
 
 # Codex
 
-OpenAI's cloud-based agent surface, accessed via CLI and ChatGPT. It started as a coding agent, but current product direction is expanding into a broader computer-work system that can operate across code, browser flows, documents, spreadsheets, and repeatable knowledge-work tasks.
+OpenAI's cloud-based agent surface, accessed via CLI, ChatGPT, and mobile. It started as a coding agent, but current product direction is expanding into a broader computer-work system that can operate across code, browser flows, documents, spreadsheets, inboxes, CRM cleanup, healthcare coordination, meeting notes, and repeatable knowledge-work tasks.
 
 ## Current status (as of 2026-05-18)
 
@@ -43,6 +43,7 @@ OpenAI's cloud-based agent surface, accessed via CLI and ChatGPT. It started as 
 - CI/CD hooks and scoped programmatic access tokens added for Business/Enterprise automation
 - Enterprise switch promo: 2 months free Codex for teams switching from competitors within 30 days (launched May 14)
 - nanoGPT speedrun (Prime Intellect, ~10K runs, ~14K H200 hours): both Opus 4.7 (2,930 steps) and GPT-5.5 (2,950) beat the human baseline (2,990); agents relied on existing human research and did not produce original ideas
+- Every's July 2026 coverage adds nontechnical examples: inbox zero, CRM enrichment from emails/transcripts, family healthcare coordination, writing/workspace setups, and personal folders synced from meetings and voice notes.
 
 ## Workspace Agents (as of 2026-04-23)
 
@@ -95,6 +96,7 @@ Research preview. Background agents monitor recent screen activity, build memori
 
 ## Recent changes
 
+- [2026-07-01] Every frames Codex as a general-purpose workspace agent for inbox, CRM, healthcare coordination, writing, meeting-note, and personal knowledge workflows.
 - [2026-05-19] Zoom plugin (meeting-to-task context handoffs), keep-Mac-awake for long-running remote sessions, additional mobile remote-execution improvements
 - [2026-05-10] Codex-maxxing usage patterns (jxnl): durable threads, Heartbeats (thread-local scheduling), Goals with verification criteria, memory as files (vault + AGENTS.md), $browser/@chrome/@computer, side panel as live work surface
 - [2026-05-16] 4M+ WAU, 5× messages/user, 1M+ app downloads; Ollama Codex support; MagicPath canvas; /goal as portable MCP; Zed subscription parity; VS Code/Copilot team confirms harness-over-model thesis
@@ -118,3 +120,4 @@ Research preview. Background agents monitor recent screen activity, build memori
 - [Codex adoption + ecosystem expansion — AINews coverage](../sources/newsletters/codex-adoption-ecosystem-2026-05.md)
 - [Codex-maxxing — Jason Liu](../sources/articles/codex-maxxing-jxnl-2026-05.md)
 - [Codex Zoom plugin + keep-Mac-awake — AINews (May 2026)](../sources/newsletters/codex-zoom-mobile-2026-05.md)
+- [Codex and Claude Code as general-purpose work agents](../sources/newsletters/codex-general-work-agents-2026-07.md)

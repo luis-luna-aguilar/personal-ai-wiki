@@ -3,8 +3,8 @@ title: Model Context Protocol
 type: concept
 domains: [agents]
 tags: [anthropic]
-as_of: 2026-04-23
-sources: [anthropic-mcp, legacy-ai-tools-roadmap-xlsx, anthropic-mcp-deployment-surfaces, openai-chatgpt-mcp-surfaces, anthropic-mcp-production-systems]
+as_of: 2026-06-29
+sources: [anthropic-mcp, legacy-ai-tools-roadmap-xlsx, anthropic-mcp-deployment-surfaces, openai-chatgpt-mcp-surfaces, anthropic-mcp-production-systems, agent-ready-saas-mcp-2026-06]
 ---
 
 # Model Context Protocol
@@ -24,6 +24,7 @@ Model Context Protocol, usually shortened to MCP, is an open protocol for exposi
 ## Why it matters
 
 - Replaces one-off tool glue with a protocol-level integration surface
+- Lets SaaS vendors expose a compressed, agent-facing product surface: one well-designed MCP server can be easier for agents to use than hundreds of raw API endpoints.
 - Makes it easier for ecosystems to share integrations across hosts
 - Helps separate the agent harness problem from the underlying model problem
 - It is increasingly not just a transport layer but a design surface: Anthropic now explicitly recommends remote servers, intent-grouped tools, richer semantics like inline UI and elicitation, and skills layered on top of MCP rather than treated as a separate concern
@@ -36,3 +37,4 @@ Model Context Protocol, usually shortened to MCP, is an open protocol for exposi
 - [Anthropic MCP deployment surfaces](../sources/articles/anthropic-mcp-deployment-surfaces.md)
 - [OpenAI and ChatGPT MCP surfaces](../sources/articles/openai-chatgpt-mcp-surfaces.md)
 - [Building agents that reach production systems with MCP](../sources/articles/anthropic-mcp-production-systems.md)
+- [Agent-ready SaaS and MCP surfaces](../sources/newsletters/agent-ready-saas-mcp-2026-06.md)

@@ -4,7 +4,7 @@ type: state-of
 domains: [cybersecurity]
 tags: []
 as_of: 2026-07-02
-sources: [slopcop-repo, glasswing, openai-gpt-5-5-launch, ai-security-scanners-2026-05-01, supply-chain-attacks-2026-05-13, agentic-security-tooling-2026-05-13, openai-daybreak-2026-05-13, cloudflare-glasswing-2026-05, the-code-devin-security-2026-07-02, ainews-not-much-happened-2026-07-02]
+sources: [slopcop-repo, glasswing, openai-gpt-5-5-launch, ai-security-scanners-2026-05-01, supply-chain-attacks-2026-05-13, agentic-security-tooling-2026-05-13, openai-daybreak-2026-05-13, cloudflare-glasswing-2026-05, the-code-devin-security-2026-07-02, ainews-not-much-happened-2026-07-02, gray-swan-ai-security-2026-06]
 ---
 
 # State of Cybersecurity
@@ -17,6 +17,7 @@ Current state of AI applied to cybersecurity: AI-specific attack surfaces, vulne
 
 Attack vectors unique to or amplified by AI systems in development workflows.
 
+- **Indirect prompt injection** — tool-using agents fetch untrusted content while holding private context and action authority. Gray Swan frames this as a new exploit class for systems like Codex, Claude Code, OpenClaw, and computer-use agents because malicious instructions can enter through files, webpages, tickets, emails, or browser state rather than through the user's direct prompt. See [Prompt injection](../concepts/prompt-injection.md). *(as of 2026-06-22)*
 - **Slopsquatting** — LLMs hallucinate ~20% of package names (USENIX Security 2025, 576k samples); attackers pre-register those names on PyPI/npm with malicious `postinstall` payloads. Mitigation: `slopcop` CLI checks registry age, download count, postinstall scripts, and Levenshtein distance before install. See [Slopsquatting](../concepts/slopsquatting.md). *(as of 2026-04-22)*
 
 ### AI developer supply chain attacks
@@ -51,6 +52,10 @@ Coding agents extended into security review and vulnerability validation.
 
 The category is shifting from one-off scanners toward agent-compatible security loops: vulnerability monitoring, fix validation, supply-chain checks, and deployment-risk review inside coding-agent workflows.
 
+### AI security tooling
+
+- **Gray Swan** — AI-native security company focused on adversarial testing and guardrails for models and agents. Its Shade automated red-teaming system is described as finding more breaks than human red teamers in fixed windows; Cygnal is positioned as a guardrail model for policy enforcement. Current source is Latent Space interview coverage. *(as of 2026-06-22)*
+
 **Cloudflare Project Glasswing harness architecture (May 2026)**
 
 Eight-stage harness Cloudflare built around Mythos Preview for large-scale repo security research:
@@ -84,9 +89,14 @@ Provider programs that expand access to higher-risk cyber capabilities for verif
 
 ## Recent changes
 
+- [2026-06-22] Gray Swan interview adds AI-native security framing: agents should be treated as untrusted systems; indirect prompt injection, identity, permissions, guardrails, and automated red teaming are core deployment concerns.
 - [2026-07-02] Cognition launched Devin Security Swarm, pushing AI-assisted vulnerability detection toward parallel agent workflows that validate exploitability and generate fix PRs.
 - [2026-05-19] Cloudflare Project Glasswing: detailed harness architecture (8 stages, ~50 concurrent agents, adversarial validate agent); Mythos exploit chain construction and proof loop confirmed; organic refusals inconsistent as safety boundary; architectural resilience over patch speed as the defender takeaway
 - [2026-05-13] OpenAI announced Daybreak as a thin official cyber-defense signal combining frontier models, Codex, and security partners; implementation details remain pending.
 - [2026-05-13] Agentic security tooling is becoming a category signal: scanner, monitor, fix-validation, and deployment-risk workflows are being redesigned for software built and operated by agents.
 - [2026-05-13] Added `AI developer supply chain attacks`: Mini Shai-Hulud campaign (persistence via .claude/settings.json + .vscode/tasks.json hooks; Guardrails AI v0.10.1 confirmed compromised) and Hugging Face Transformers impersonator; mitigations: minimumReleaseAge, blockExoticSubdeps
 - [2026-05-01] Added Claude Security and Cursor Security Review to AI-assisted vulnerability detection; both are secondary-source entries pending primary verification
+
+## Sources
+
+- [Gray Swan on AI-native security and prompt injection](../sources/newsletters/gray-swan-ai-security-2026-06.md)

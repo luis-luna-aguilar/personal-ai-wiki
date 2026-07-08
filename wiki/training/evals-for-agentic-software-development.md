@@ -1,8 +1,8 @@
 ---
 title: Evals for agentic software development
 type: training
-as_of: 2026-05-13
-sources: [agents-evals-deep-research, qa-tooling-for-software-agents-deep-research, cost-aware-agent-evaluation-2026-04-28, opus-4-7-tokenizer-economics-2026-04-30, agentic-security-tooling-2026-05-13]
+as_of: 2026-07-08
+sources: [agents-evals-deep-research, qa-tooling-for-software-agents-deep-research, cost-aware-agent-evaluation-2026-04-28, opus-4-7-tokenizer-economics-2026-04-30, agentic-security-tooling-2026-05-13, ai-code-review-eval-integrity-2026-06, dashbench-code-review-understanding-2026-07]
 ---
 
 # Evals for agentic software development
@@ -20,6 +20,8 @@ Coding agents produce output that looks correct before it compiles, runs, or lan
 - Use shadow mode to evaluate agents safely against live production data before enabling real commits.
 - Convert real bugs, PR comments, and postmortems into test cases systematically, not ad hoc.
 - Use LLM-as-judge for qualitative code review (style, architecture, security anti-patterns) only after deterministic gates pass.
+- Use historical PR replay for code-review evals when possible: test whether the reviewer catches real past defects, not whether it writes plausible comments.
+- For detailed AI PR-review execution patterns, use [AI PR and code review](../workflows/ai-pr-code-review.md); this page keeps the broader eval-stack framing.
 - Set cost and latency thresholds as hard limits to catch runaway recursive loops before they damage production.
 - Security checks should be treated as agent eval gates where possible: dependency freshness, known vulnerability scans, secret scans, supply-chain policy checks, and post-fix validation should produce artifacts the agent and reviewer can inspect.
 
@@ -71,7 +73,7 @@ A single evaluation strategy does not work across all coding tasks. Each task ty
 | Feature implementation | Scope check: did the agent touch only in-scope files? (Spec-Driven Development validation) | Silent scope creep |
 | Refactoring | Structural integrity: does compilation succeed across all affected repos after mass changes? | Dependency breakage at scale |
 | Test generation | Coverage metrics + edge-case coverage: are both standard paths and edge cases included? | Tests that pass trivially but miss real edge cases |
-| Code review | Stacked tool evaluation: surface logic → deep static analysis → LLM architectural review | Shallow review missing deep bugs |
+| Code review | Historical PR replay + stacked tool evaluation: deterministic gates, scope checks, LLM architectural review, and human-audited accepted/rejected comments | Plausible review comments that miss real defects or local standards |
 | Security review | Adversarial injection: does the agent detect prompt injection attempts? Does it integrate with vulnerability scanners? | Passing obviously insecure code |
 | Dependency updates | File system impact check: did the agent only touch what it was supposed to? | Accidental modification of unrelated configs |
 | Migration tasks | Multi-repo context check: did the agent maintain execution context across shared libraries without breaking changes? | Partial migration leaving inconsistent state |
@@ -90,7 +92,7 @@ The shadow mode pattern is most useful when:
 
 ## Converting real artifacts into eval cases
 
-Production artifacts (bug reports, PR review comments, postmortems) are the highest-quality source of eval cases because they reflect real failures, not synthetic ones. A systematic pipeline:
+Production artifacts (bug reports, PR review comments, postmortems, and historical PRs) are the highest-quality source of eval cases because they reflect real failures, not synthetic prompts. For code review specifically, historical PR replay should preserve both the original diff and the known review outcome so the AI reviewer can be scored against defects humans actually cared about. See [AI PR and code review](../workflows/ai-pr-code-review.md) for the dedicated workflow.
 
 1. **Ingest** the artifact (bug ticket, PR comment) and extract the core failure intent
 2. **Define the golden state** — the exact patch or trajectory a human expert used to resolve it
@@ -127,6 +129,14 @@ For qualitative review signals (readability, architectural coherence, security a
 
 Observability platforms (Braintrust, Promptfoo, Langfuse) support trace ingestion and assertion-based grading. A concrete example: a `skill-used` assertion in Promptfoo can verify that the agent routed a query to the SQL tool rather than hallucinating data from its weights — grading internal reasoning, not just the final output.
 
+## AI code review
+
+AI code review is now large enough to warrant its own page. See [AI PR and code review](../workflows/ai-pr-code-review.md) for review execution, historical PR replay, model-combo benchmarking, review artifacts, and understanding-preserving review.
+
+## Benchmark integrity
+
+Coding-agent evals need leakage controls. Public benchmarks can be gamed when models retrieve known solutions from the internet or git history. No-internet harnesses, fresh tasks, hidden tests, and explicit environment constraints are part of the eval, not incidental implementation detail.
+
 ## Browser self-verification and proof artifacts
 
 For frontend-changing work, "tests passed" is not enough. A stronger pattern is:
@@ -157,17 +167,24 @@ Proof artifacts matter for two reasons:
 - Treating a high pass rate on a static test suite as proof of production readiness — the suite may have overfit to cases developers have already seen
 - Running AI-specific evals before deterministic gates — wastes compute and produces noisy signal
 - Shadow mode without a feedback loop — shadow proposals that don't convert into training data or eval cases add cost without compounding value
+- Running AI review on large PRs with generic standards — creates noisy comments that humans learn to ignore
 
 ## Evidence from practice
 
 - Ramp: Inspect coding agent initiates >50% of merged PRs; runs in isolated Modal VMs with full-stack environment; shadow mode + sandbox validation is the core safety mechanism
 - Shopify (April 2026): built an internal PR review tool specifically because external tools do not spend enough compute on expensive models during review — review quality, not code generation, is the current frontier bottleneck
+- DoorDash's DashBench evaluates AI reviewers by replaying historical PRs, a stronger signal than synthetic review prompts because it anchors review quality to real team-specific defects.
 - See [AI enablement — software development](ai-enablement-software-development.md) for broader Shopify and Ramp adoption patterns
 
 ## Open questions
 
 - What is the right threshold for promoting a coding agent from shadow mode to autonomous mode? The research report suggests pass^k thresholds (e.g., 95% over 100 consecutive traces) but these specific numbers are report-normalized and should be calibrated per organization.
 - How do you maintain eval suite coverage when the agent's task distribution shifts over time?
+
+## Recent changes
+
+- [2026-07-08] Moved detailed AI PR/code-review execution guidance into a dedicated workflow and added DashBench historical PR replay as the review-eval pattern.
+- [2026-06-26] Added AI review workflow guidance and public-benchmark leakage caveat from The Code / AINews coverage.
 
 ## Sources
 
@@ -178,3 +195,5 @@ Proof artifacts matter for two reasons:
 - [Cost-aware agent evaluation](../sources/newsletters/cost-aware-agent-evaluation-2026-04-28.md)
 - [Opus 4.7 tokenizer economics](../sources/newsletters/opus-4-7-tokenizer-economics-2026-04-30.md)
 - [Agentic security tooling category](../sources/newsletters/agentic-security-tooling-2026-05-13.md)
+- [AI code review and benchmark integrity](../sources/newsletters/ai-code-review-eval-integrity-2026-06.md)
+- [DashBench and understanding-preserving AI code review](../sources/newsletters/dashbench-code-review-understanding-2026-07.md)

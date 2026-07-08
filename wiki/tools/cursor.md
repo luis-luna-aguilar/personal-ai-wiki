@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents]
 subcategory: agentic-coding-workspace
 tags: [closed-source, agentic]
-as_of: 2026-06-17
-sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models, cursor-cloud-agents-march, cursor-cloud-agents-february, cursor-third-era, ai-security-scanners-2026-05-01, cursor-sdk-agent-runtime-2026-04-30, agent-first-ide-convergence-may-2026, cursor-composer-2-5-launch, spacex-cursor-june-2026]
+as_of: 2026-06-30
+sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models, cursor-cloud-agents-march, cursor-cloud-agents-february, cursor-third-era, ai-security-scanners-2026-05-01, cursor-sdk-agent-runtime-2026-04-30, agent-first-ide-convergence-may-2026, cursor-composer-2-5-launch, spacex-cursor-june-2026, cursor-ios-mobile-app-2026-06]
 ---
 
 # Cursor
@@ -17,6 +17,7 @@ The strongest interpretive signal from the early-April reaction cycle is that Cu
 ## Current status (as of 2026-06-17)
 
 - **Cursor 3** is the current shipped version, announced in the "Meet the new Cursor" post on cursor.com/blog
+- Cursor for iOS is in public beta for paid users, letting users launch always-on cloud agents, control desktop agents remotely, use voice and slash commands, receive push notifications/Live Activities, inspect diffs, follow up, and merge PRs from mobile.
 - Late-February launch coverage already described the practical surface that the March 6 walkthrough later explained more cleanly: isolated cloud computers, self-testing agents, and video demos as review artifacts
 - The March 6 cloud-agents walkthrough made the intended interaction model unusually explicit: remote agents boot their own environment, run the code, test changes, produce demo videos, and expose live remote control over the VM for human verification
 - **Cursor 3.1** extends Cursor 3 with a tiled Agents Window for managing multiple agents side by side
@@ -99,6 +100,7 @@ SpaceX exercised a previously announced option to acquire Cursor in an all-stock
 
 ## Recent changes
 
+- [2026-06-30] Cursor for iOS public beta: launch always-on cloud agents, control desktop agents remotely, voice/slash commands, push notifications, Live Activities, diff review, follow-up, and PR merge from mobile.
 - [2026-06-17] SpaceX acquires Cursor in $60B all-stock deal; Cursor Origin launched (agent-native git/code hosting); jointly trained model with xAI coming to Cursor and Grok Build
 - [2026-05-18] Composer 2.5: targeted RL with textual hints + KL distillation; 25× synthetic tasks; fast-tier pricing ($3/$15 per M); next model in training at SpaceX/Colossus 2 scale
 - [2026-05-14] Cloud development environments: multi-repo agent work with full env config, Dockerfile support, version history, rollback, isolated secrets, 70% faster cached builds; agents can cross-repo trace Slack issues → PRs
@@ -119,3 +121,4 @@ SpaceX exercised a previously announced option to acquire Cursor in an all-stock
 - [Agent-first IDE convergence — May 2026](../sources/newsletters/agent-first-ide-convergence-may-2026.md)
 - [Cursor Composer 2.5 — launch post](../sources/articles/cursor-composer-2-5-launch.md)
 - [SpaceX acquires Cursor + Cursor Origin launch (June 2026)](../sources/newsletters/spacex-cursor-june-2026.md)
+- [Cursor iOS mobile app public beta](../sources/articles/cursor-ios-mobile-app-2026-06.md)

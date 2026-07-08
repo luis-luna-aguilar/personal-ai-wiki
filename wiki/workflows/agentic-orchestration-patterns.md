@@ -1,11 +1,11 @@
 ---
 title: Agentic orchestration patterns
 type: workflow
-domains: [agents]
+domains: [agents, coding]
 subcategory: agentic-orchestration-patterns
 tags: [agentic]
-as_of: 2026-07-06
-sources: [notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, harness-engineering-early-april, open-agent-orchestration-late-march, skills-and-plugin-packaging-late-march, harness-engineering-march, deep-agents-overview, goose-platform, googlecloudtech-adk-2-orchestration-patterns, agent-infrastructure-harness-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, production-agent-orchestration-2026-04-29, agent-html-artifacts-2026-05-13, gas-city-software-factory-2026-05, dynamic-workflows-claude-code, loopcraft-june-2026, aiewf-loops-debate-2026-07-03, shepherd-live-agent-rollback-2026-07-06, claude-code-getting-started-with-loops-2026-06-30]
+as_of: 2026-07-08
+sources: [notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, harness-engineering-early-april, open-agent-orchestration-late-march, skills-and-plugin-packaging-late-march, harness-engineering-march, deep-agents-overview, goose-platform, googlecloudtech-adk-2-orchestration-patterns, agent-infrastructure-harness-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, production-agent-orchestration-2026-04-29, agent-html-artifacts-2026-05-13, gas-city-software-factory-2026-05, dynamic-workflows-claude-code, loopcraft-june-2026, aiewf-loops-debate-2026-07-03, shepherd-live-agent-rollback-2026-07-06, claude-code-getting-started-with-loops-2026-06-30, software-factories-fde-2026-07, ai-code-review-eval-integrity-2026-06, token-tightening-ai-finops-2026-06, what-the-hell-is-a-loop-anyway, dashbench-code-review-understanding-2026-07, andy-matuschak-agent-loop-tempo-2026-07]
 ---
 
 # Agentic orchestration patterns
@@ -43,15 +43,22 @@ Reusable patterns for getting better behavior from one or more agents without de
 - **Model-pool routing by an AI-managed orchestrator.** Rather than hardcoding which model handles which task, a coordinator layer (e.g., Sakana Conductor) selects from a pool of available models based on the task type, cost, and current model availability. The coordinator decides routing; specialized models handle execution.
 - **Local-first browser agents.** For tasks that can be fully executed client-side, agents run entirely in the browser — no cloud handoff, no server-side compute. This reduces latency, cost, and privacy surface. The pattern is emerging as a complement to (not a replacement for) cloud-backed agents in orchestrated systems.
 - **Durable workflow execution.** Production agent workflows should survive process crashes and infrastructure interruptions. Checkpointing state (memory, partial outputs, tool results) after each major step and supporting resume-from-checkpoint prevents restarting an hours-long workflow from scratch. Mistral Workflows, OpenAI Agents SDK, and similar runtimes are standardizing this as expected infrastructure.
-- **Review artifacts over raw transcripts.** For complex agent work, ask for purpose-built review artifacts (HTML explainers, annotated diffs, comparison grids, one-off editors) when a human needs to inspect options, tune values, or export structured decisions back into the workflow.
+- **Review artifacts over raw transcripts.** For complex agent work, ask for purpose-built review artifacts (HTML explainers, annotated diffs, comparison grids, one-off editors) when a human needs to inspect options, tune values, or export structured decisions back into the workflow. For pull requests, see [AI PR and code review](ai-pr-code-review.md).
 - **Dark factory / light factory.** Split agentic workflows into a **light** layer (planning, review, and human-agent interaction stay visible) and a **dark** layer (clearly defined execution runs in the background without human monitoring). As trust builds in the dark layer's output, more work moves out of the visible layer. Distinct from simple background execution: the light/dark split is a deliberate architectural boundary, not just async scheduling. *Source: Gas City workshop, Every (2026-05-19)*
 - **Mayor + polecats (one pet + many cattle).** One persistent, named supervisor agent (the "mayor") that a human interacts with directly. The mayor routes work to many anonymous, disposable worker agents ("polecats") that each handle one scoped task and shut down. The human manages one conversation; the mayor manages coordination and worker lifecycle. Workers don't accumulate context or interfere with each other — fresh start per task. *Source: Gas City workshop, Every (2026-05-19)*
 - **Loop-first design.** Before writing a single prompt, define what a successful loop looks like: trigger → goal condition → tool set → escalation. The loop is the unit of work, not the prompt. A well-designed loop handles variance you never predicted; a prompt just handles the case you imagined. *Source: Steipete/AINews, Satya Nadella essay, Hoop case study (June 2026)*
 - **Loop taxonomy before loop complexity.** Anthropic's Claude Code team defines loops as agents repeating cycles of work until a stop condition is met, then separates four levels: turn-based loops hand off the check, goal-based loops hand off the stop condition, time-based loops hand off the trigger, and proactive loops hand off the prompt for recurring well-defined work. Use the lightest loop that fits the task.
+- **Loop tempo selection.** Choose between close fast loops and slow delegated loops deliberately. Fast 1-2 minute loops preserve human control and comprehension; slow delegated loops work when the agent can proceed in the background with sparse checkpoints. The middle ground can be costly: 10-30 minute cycles often force parallelism, context switching, and weak comprehension.
+- **Four-layer loop stack.** "Loop" now refers to at least four different architectures: execution loops iterate the agent's act-observe cycle inside one task; task loops restart one agent against one spec until an artifact satisfies tests; product loops run the software lifecycle around a codebase and backlog; system loops improve the prompts, harnesses, models, and evals behind the primary system.
+- **Fresh-context task loops.** Ralph loops deliberately spend extra tokens by restarting a coding agent against the same specification in a fresh context window on each iteration. The goal is to avoid context rot and compaction drift; the loop should close on spec compliance and passing tests, not on the agent's self-assessment.
+- **Oversight loop as the human layer.** Autonomy is not one global switch. Execution, task, product, and system loops can each have different human checkpoints, but the top-level loop that sets goals, allocates budgets, and culls work should remain explicit rather than disappearing into "full auto" rhetoric.
+- **Pipeline versus loop.** Fan-out patterns such as Agentic MapReduce are useful topologies inside loops, but dispatch -> gather -> validate is only a pipeline unless the result feeds back into another cycle with a named signal.
 - **Explicit stop criteria.** Goal-based and proactive loops work best when "done" is deterministic: tests pass, Lighthouse score clears a threshold, queue is empty, PR merges, or a turn cap is reached. Vague "make it better" loops increase both cost and drift.
 - **Cost-aware loop primitives.** Use scripts for deterministic work, run small pilots before dynamic workflows that may spawn many agents, choose cheaper/faster models for routine parts, and monitor `/usage`, `/goal`, and `/workflows` breakdowns.
 - **Control layer before software factory.** The AI Engineer World Fair loops debate sharpened the current constraint: loops are already useful, but the field has not settled the control layer for permissions, cost ceilings, review bottlenecks, and recovery. Treat "software factory" as a destination, not a starting architecture.
-- **Economic loop discipline.** Token usage is now a monitored production metric. Long-running loops should have task budgets, effort settings, stop conditions, and retry limits; teams cannot buy their way out of weak task decomposition with more tokens.
+- **Software factory loop.** Long-running agents can cover planning, design, coding, testing, review, deployment, maintenance, and feedback, while humans supervise interfaces, policies, escalation, and customer-specific workflow fit rather than editing every artifact.
+- **Economic loop discipline.** Token usage is now a monitored production metric. Long-running loops should have task budgets, effort settings, stop conditions, retry limits, checkpoints, definitions of done, opt-in heavy reasoning, and cache-hit monitoring. Teams should review shipped output and human review cost, not just whether the loop burned tokens.
+- **Review standards as repo context.** Put team-specific AI review criteria in Markdown near the code so code-review agents can apply local rules rather than generic style advice. This becomes more important as PR review becomes a distinct agent workflow with its own evals and replay datasets.
 - **Live-state rollback and forking.** Tools such as [Shepherd](../tools/shepherd.md) suggest a new primitive for agent work: checkpoint a run, rewind to a known-good state, fork an alternate trajectory, and keep the useful branch instead of restarting the whole session.
 - **Tool set clarity over prompt complexity.** Give the model a small set of clear, powerful tools and let it reason about which to use. Don't hardcode which tool gets called at each step. "If you give a reasoning model simple, powerful tools, it can handle situations you never thought to code for." More sophisticated prompt sequencing cannot substitute for a clean tool set. *Source: Stella Garber/Hoop, Every (June 2026)*
 - **Deploy where the user already works.** The fastest path to agent adoption is integrating into the existing workflow surface (Slack, email, existing dashboards) rather than requiring users to learn a new app. The agent becomes a service within the existing context, not a parallel system to context-switch into. *Source: Hoop/Stella Garber case study, Every (June 2026)*
@@ -74,6 +81,7 @@ Reusable patterns for getting better behavior from one or more agents without de
 - Every's Hoop case study (June 2026): Stella Garber built an agent-native product in under 10 hours using simple Claude API + Slack integration; the key insight was tool clarity over prompt complexity — the agent found solutions the team hadn't thought to code for.
 - Satya Nadella's June 2026 X essay (60M views) frames the loop as the primary product: build a learning loop where human capital and token capital compound, not just pick the best model.
 - AINews coined "Loopcraft" (June 2026) to name the paradigm: designing loops that prompt agents rather than prompting agents directly.
+- Dhinakaran and Seldo's loop map separates execution, task/Ralph, product/software-factory, system/autoresearch, and oversight loops, giving each a different iterated object, exit signal, and human role.
 
 ## Failure modes
 
@@ -86,10 +94,20 @@ Reusable patterns for getting better behavior from one or more agents without de
 - Building cool tools with no concrete user journey or evaluation target
 - Encoding mandatory workflow order only in natural-language instructions and expecting the model not to compress or reorder the procedure over time
 - Building one giant "do everything" agent instead of separating specialists with narrower permissions and clearer handoff boundaries
+- Generic AI review on large PRs creates noise unless review standards, diff scope, trigger points, and reviewer-comprehension artifacts are controlled.
+- **Partial-control loop churn.** The human tries to delegate more than a fast pair-programming loop but still remains responsible for planning, technical guidance, and review. The result can be multiple half-understood agent threads rather than real leverage.
+- Calling a one-shot fan-out pipeline a loop when no feedback signal drives a next cycle
+- Running loops without naming the signal that closes them, which turns "autonomy" into unbounded execution
 
 ## Recent changes
 
+- [2026-07-08] Added loop-tempo selection from Andy Matuschak: fast controlled loops and slow delegated loops are easier to sustain than mid-speed partial-control loops.
+- [2026-07-08] Linked PR review artifacts and repo-local review standards to the dedicated AI PR/code-review workflow.
 - [2026-07-06] Shepherd proposal adds Git-like rollback/forking as a live-agent recovery primitive.
+- [2026-07-04] Dhinakaran and Seldo map loop discourse into execution, task/Ralph, product/software-factory, system/autoresearch, and oversight loops; they emphasize exit signals and per-loop autonomy dials.
+- [2026-06-26] Added AI review standards and review-noise failure mode from code-review workflow coverage.
+- [2026-06-24] Token-tightening coverage adds AI FinOps controls: budgets, model routing, prompt caching, cheaper defaults, checkpoints, and outcome-based spend review.
+- [2026-07-01] AIEWF / Latent Space software-factory coverage adds lifecycle-level factory loop and FDE/agent-engineer rollout pattern.
 - [2026-07-03] AI Engineer World Fair loop debate: agents are moving from hype to control-layer problems; surveys report widespread agent use but primitive controls and review bottlenecks.
 - [2026-06-30] Anthropic published the Claude Code loop taxonomy: turn-based, goal-based, time-based, and proactive loops.
 
@@ -116,3 +134,9 @@ Reusable patterns for getting better behavior from one or more agents without de
 - [AIEWF Daily Dispatch - loops debate](../sources/newsletters/aiewf-loops-debate-2026-07-03.md)
 - [Shepherd live agent rollback tweet](../sources/tweets/shepherd-live-agent-rollback-2026-07-06.md)
 - [Getting started with loops](../sources/articles/claude-code-getting-started-with-loops-2026-06-30.md)
+- [Software factories and forward-deployed agent engineering](../sources/newsletters/software-factories-fde-2026-07.md)
+- [AI code review and benchmark integrity](../sources/newsletters/ai-code-review-eval-integrity-2026-06.md)
+- [Token tightening and AI FinOps](../sources/newsletters/token-tightening-ai-finops-2026-06.md)
+- [What the hell is a loop, anyway?](../sources/articles/what-the-hell-is-a-loop-anyway.md)
+- [DashBench and understanding-preserving AI code review](../sources/newsletters/dashbench-code-review-understanding-2026-07.md)
+- [Andy Matuschak on coding-agent loop tempo](../sources/tweets/andy-matuschak-agent-loop-tempo-2026-07.md)

@@ -3,8 +3,8 @@ title: Proprietary data becomes model moat
 type: trend
 domains: [models]
 tags: []
-as_of: 2026-04-21
-sources: [market-for-making-ai-better, ainews-2026-04-21]
+as_of: 2026-06-30
+sources: [market-for-making-ai-better, ainews-2026-04-21, ai-strategy-explicit-bets-2026-06]
 ---
 
 # Proprietary data becomes model moat
@@ -23,7 +23,7 @@ This is not only about selling data to labs. The same company can license its da
 
 ## Why it matters
 
-If this trend holds, "best model" stops being a single global ranking and becomes more local to a workflow or industry. A company with years of support tickets, decision logs, matter histories, analyst notes, or other expert traces may have a stronger path to useful AI than a company that only consumes generic frontier APIs.
+If this trend holds, "best model" stops being a single global ranking and becomes more local to a workflow or industry. But vertical durability is a strategic bet, not a guarantee: teams should be explicit about whether their moat comes from proprietary data, workflow integration, distribution, regulation, or model-provider dependence. A company with years of support tickets, decision logs, matter histories, analyst notes, or other expert traces may have a stronger path to useful AI than a company that only consumes generic frontier APIs.
 
 The bottleneck also shifts upstream from model access to **measurement**. Teams that define credible evals for real work first get to decide what "good" means in that domain, which shapes training demand and product direction.
 
@@ -51,6 +51,7 @@ The bottleneck also shifts upstream from model access to **measurement**. Teams 
 
 ## Recent changes
 
+- [2026-06-30] Added explicit-bets caveat: vertical data/workflow moats should be treated as strategic assumptions, not guarantees.
 - [2026-04-21] Added ambient memory capture vector — Codex Chronicle as personal-context lock-in
 - [2026-04-10] Trend opened from Every's "The Market for Making AI Better" essay
 
@@ -58,3 +59,4 @@ The bottleneck also shifts upstream from model access to **measurement**. Teams 
 
 - [The Market for Making AI Better](../sources/articles/market-for-making-ai-better.md)
 - [AINews — Moonshot Kimi K2.6, Hermes Agent, Codex Chronicle (2026-04-21)](../sources/newsletters/ainews-2026-04-21.md)
+- [AI strategy as explicit bets](../sources/newsletters/ai-strategy-explicit-bets-2026-06.md)

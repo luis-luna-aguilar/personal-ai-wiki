@@ -3,9 +3,9 @@ title: Kimi Code
 type: tool
 domains: [coding, agents]
 subcategory: terminal-coding-agent
-tags: [moonshot, open-source, open-weights]
-as_of: 2026-06-09
-sources: [ainews-frontiercode-june-2026]
+tags: [moonshot-ai, open-source, open-weights]
+as_of: 2026-06-19
+sources: [ainews-frontiercode-june-2026, kimi-goal-mode-creative-agents-2026-06]
 ---
 
 # Kimi Code
@@ -28,6 +28,7 @@ Kimi Work is Moonshot's desktop agent product, launched the same week:
 - Browser-use via extension (no separate computer-use model required)
 - Finance-focused tool access
 - Persistent memory across sessions
+- **Goal Mode:** keeps the desktop agent working until it reaches a user-defined objective; the user tracks progress, reviews deliverables, and redirects as needed. The feature is positioned for long-horizon, multi-step work.
 
 ## Strengths
 
@@ -45,9 +46,11 @@ Kimi Work is Moonshot's desktop agent product, launched the same week:
 
 ## Recent changes
 
+- [2026-06-19] Kimi Work adds Goal Mode for long-running desktop-agent tasks that continue until the objective is reached.
 - [2026-06-09] Major update: 1-line CLI, video-as-context, ACP, plugins, IDE integration
 - [2026-06-09] Kimi Work desktop agent launched alongside: 300 local sub-agents, browser-use, finance tools, persistent memory
 
 ## Sources
 
 - [AINews — FrontierCode launch (June 9)](../sources/newsletters/ainews-frontiercode-june-2026.md)
+- [Kimi Work Goal Mode and creative desktop agents](../sources/newsletters/kimi-goal-mode-creative-agents-2026-06.md)

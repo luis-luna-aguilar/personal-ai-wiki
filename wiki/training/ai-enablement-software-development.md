@@ -1,8 +1,8 @@
 ---
 title: AI enablement — software development
 type: training
-as_of: 2026-06-16
-sources: [ramp-ai-adoption-playbook, shopify-latent-space-april-2026, lennysan-simonw-interview, agentic-cognitive-overhead, garrytan-gstack-repo, the-code-2026-04-23, qa-tooling-for-software-agents-deep-research, agent-review-artifacts-2026-05-13, agentic-coding-trap-may-2026, ai-stack-fungibility-hashimoto-2026-05, shopify-claude-code-bessemer-2026-05, stanford-labor-june-2026, github-kyle-daigle-june-2026, ainews-june-05-2026]
+as_of: 2026-07-08
+sources: [ramp-ai-adoption-playbook, shopify-latent-space-april-2026, lennysan-simonw-interview, agentic-cognitive-overhead, garrytan-gstack-repo, the-code-2026-04-23, qa-tooling-for-software-agents-deep-research, agent-review-artifacts-2026-05-13, agentic-coding-trap-may-2026, ai-stack-fungibility-hashimoto-2026-05, shopify-claude-code-bessemer-2026-05, stanford-labor-june-2026, github-kyle-daigle-june-2026, ainews-june-05-2026, software-factories-fde-2026-07, dashbench-code-review-understanding-2026-07]
 ---
 
 # AI enablement — software development
@@ -13,13 +13,14 @@ AI adoption inside engineering teams has moved fastest, but the bottlenecks and 
 
 - Find your personal ceiling for parallel agent sessions and treat it like a deep-focus work budget. Time-box agentic sessions rather than running open-ended parallel threads. Tighter scope per agent reduces the per-thread cognitive overhead dramatically (Addy Osmani).
 - Expect CLI-first agentic tools (Claude Code, Codex) to outpace IDE plugins once the organization crosses a model-quality threshold
-- Invest in CI/CD capacity, test infrastructure, and deployment rollback as part of the AI adoption budget — not only developer tooling
+- Invest in CI/CD capacity, test infrastructure, deployment rollback, and workflow-integration capacity as part of the AI adoption budget — not only developer tooling. Enterprise software factories need people who map systems, permissions, SOPs, and release gates into the agent loop.
 - Build or adopt code review tooling that spends real compute on expensive models; external tools are optimized for speed, not review quality
 - Apply critique loops (generator + critic + redo) to PR review, research synthesis, and any task with a clear correctness signal
 - Allow non-engineers to attempt building: many can cross the threshold through iterative prompting without a formal coding background
 - Treat QA as part of the eval system: capture structured browser/session artifacts that can be converted into durable regression tests for coding agents
 - Design an explicit eval suite before granting a coding agent permission to open PRs autonomously — see [Evals for agentic software development](evals-for-agentic-software-development.md)
-- For complex PRs, ask the agent to generate an annotated HTML explainer with the actual diff, architecture diagram, risk areas, and reviewer questions. This can improve review quality when the default GitHub diff is too low-context.
+- Treat pull-request review as its own AI workflow: deterministic gates first, local standards in repo context, historical PR replay for evals, and human-facing review artifacts for comprehension. See [AI PR and code review](../workflows/ai-pr-code-review.md).
+- For complex PRs, ask the agent to generate an annotated explainer with the actual diff, architecture diagram, risk areas, and reviewer questions. The purpose is not only verification; it is preserving the reviewer's mental model for the next agent loop.
 - Give agents success criteria and let them loop, not step-by-step instructions. Transform "fix the bug" into "write a test that reproduces it, then make it pass." Karpathy: "LLMs are exceptionally good at looping until they meet specific goals. Don't tell it what to do, give it success criteria and watch it go." This shifts the human role from directing steps to defining done.
 
 ## Proven patterns
@@ -34,6 +35,7 @@ AI adoption inside engineering teams has moved fastest, but the bottlenecks and 
 - **CLAUDE.md discipline: committed, shared, bounded.** Shopify commits CLAUDE.md to git and shares it across all 23,000 engineers. Hard length cap: ~60 lines. Key insight: "stuffing it makes performance worse." The quality of durable context decays with length — fewer, higher-quality instructions outperform comprehensive-but-diluted ones.
 - **Explicit permission config as fleet policy.** Shopify deploys a standardized allow/deny list across all Claude Code instances: allow `read`, `write`, `test`, `lint`, `commit`; deny `push`, `deploy`, `drop`, `secrets`. This separates safe local work from risky external actions at the configuration layer, not per-session.
 - **Micro-skills over mega-skills.** GitHub's internal rollout (Kyle Daigle, Build 2026): atomic single-purpose tools beat monolithic "do everything" agents for non-technical employee adoption. Distributed via CLI to 200M+ users spanning engineering and non-engineering roles. The pattern generalizes: narrow tools with clear purpose get adopted faster than broad agents that require workflow understanding.
+- **Forward-deployed workflow engineering.** Agent deployment is workflow engineering, not only tool rollout. The hard work is mapping enterprise systems, permissions, SOPs, tone, release gates, incident paths, and customer-specific context into the agent loop.
 
 ## Failure modes
 
@@ -46,6 +48,7 @@ AI adoption inside engineering teams has moved fastest, but the bottlenecks and 
 - **Over-engineering drift.** Models overcomplicate code and APIs, bloat abstractions, don't clean up dead code — implementing a bloated construction over 1000 lines when 100 would do (Karpathy). Remedy: simplicity first — no features beyond what was asked, no abstractions for single-use code; test: would a senior engineer say this is overcomplicated?
 - **Orthogonal side-effects.** Models sometimes change or remove comments and code they don't sufficiently understand as side effects of unrelated tasks (Karpathy). Remedy: surgical changes — don't improve adjacent code, match existing style, mention unrelated dead code rather than deleting it; every changed line must trace to the request.
 - **Skill atrophy through orchestration delegation.** Handing the implementation entirely to agents erodes the coding skills needed to supervise AI effectively — a "supervision paradox." Anthropic's own internal study found a 47% drop in debugging ability among engineers using AI heavily. Simon Willison (Django co-creator): no longer has a clear mental map of apps he builds with agents. Lars Faye's "Agentic Coding is a Trap" (Hacker News #1, May 2026): the orchestration model works until it collapses because the human has lost enough fluency to catch agent errors early. The fix is not abandoning AI, but being selective: LLMs for specs, drafts, and ad-hoc tasks; human-written implementation for core complexity. Faye uses LLMs himself — he opposes full implementation hand-off specifically.
+- **Cognitive debt from agent-written code.** If engineers stop reading and understanding code because agents can self-check syntax and tests, they lose the system model needed to steer future work. Review should shift from "can I find every bug manually?" toward "do I understand the change well enough to direct the next loop?"
 
 ## Evidence from practice
 
@@ -93,6 +96,8 @@ The hollow pipeline concern is now data-backed: if the entry-level disappears, t
 
 ## Recent changes
 
+- [2026-07-08] Added AI PR/code-review workflow as a first-class enablement concern: historical PR replay, local review standards, and understanding-preserving review artifacts.
+- [2026-07-01] Added software-factory/FDE rollout pattern: enterprise agent adoption needs workflow integration capacity, not only developer tooling.
 - [2026-06-05] Anthropic internal RSI evidence added: 80%+ merged code by Claude, 8x code/quarter, task success 26% -> 76%, Mythos 52x speedup on a training-script optimization task
 - [2026-06-02] GitHub 14x agent commit growth added: 275M AI-generated commits/week in April 2026; CI/CD CPU capacity becomes bottleneck; micro-skills pattern added
 - [2026-05-19] Shopify fleet patterns (Bessemer): LLM proxy, CLAUDE.md ~60-line cap, explicit allow/deny permission config; 20% productivity gain; strategy-to-execution ratio 70%/30% (was 30%/70%); Q3 target 90% autonomous coding
@@ -103,6 +108,7 @@ The hollow pipeline concern is now data-backed: if the entry-level disappears, t
 ## See also
 
 - [Evals for agentic software development](evals-for-agentic-software-development.md) — eval stack for coding agents: sandboxed execution, QA artifact capture, browser self-verification, MVES, and trace mining
+- [AI PR and code review](../workflows/ai-pr-code-review.md) — dedicated workflow for AI-assisted pull request analysis, review execution, historical PR replay, and comprehension-preserving review artifacts
 - [Practical tooling layer for evals in agentic software development](../sources/deep-research/qa-tooling-for-software-agents-deep-research.md) — source summary for the tooling layer behind coding-agent verification
 
 ## Sources
@@ -120,3 +126,5 @@ The hollow pipeline concern is now data-backed: if the entry-level disappears, t
 - [Stanford AI labor market data — June 2026](../sources/newsletters/stanford-labor-june-2026.md)
 - ["GitHub's Plan for Agents" — Kyle Daigle on Latent Space (June 2)](../sources/newsletters/github-kyle-daigle-june-2026.md)
 - [AINews — Anthropic RSI and Nemotron follow-up (June 5)](../sources/newsletters/ainews-june-05-2026.md)
+- [Software factories and forward-deployed agent engineering](../sources/newsletters/software-factories-fde-2026-07.md)
+- [DashBench and understanding-preserving AI code review](../sources/newsletters/dashbench-code-review-understanding-2026-07.md)

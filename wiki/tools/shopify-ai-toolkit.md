@@ -4,13 +4,13 @@ type: tool
 domains: [coding, agents]
 subcategory: agent-toolkits
 tags: [agentic]
-as_of: 2026-04-10
-sources: [shopify-ai-toolkit]
+as_of: 2026-06-29
+sources: [shopify-ai-toolkit, agent-ready-saas-mcp-2026-06]
 ---
 
 # Shopify AI Toolkit
 
-Shopify AI Toolkit is Shopify's integration layer for connecting general-purpose AI coding tools to the Shopify platform. Rather than shipping its own coding agent, Shopify packages platform knowledge and actions into formats existing tools already understand: a plugin where supported, installable agent skills, or a local Dev MCP server.
+Shopify AI Toolkit is Shopify's integration layer for connecting general-purpose AI coding tools to the Shopify platform. It is also an example of agent-ready SaaS: Shopify packages docs, schemas, validation, skills, and MCP access so external agents can operate inside the product ecosystem. Rather than shipping its own coding agent, Shopify packages platform knowledge and actions into formats existing tools already understand: a plugin where supported, installable agent skills, or a local Dev MCP server.
 
 ## Current status (as of 2026-04-10)
 
@@ -37,8 +37,10 @@ Shopify AI Toolkit is Shopify's integration layer for connecting general-purpose
 
 ## Recent changes
 
+- [2026-06-29] Reframed as an example of agent-ready SaaS: product context and actions packaged for user-chosen external agents.
 - [2026-04-10] Page created from Shopify's AI Toolkit docs page
 
 ## Sources
 
 - [Shopify AI Toolkit](../sources/articles/shopify-ai-toolkit.md)
+- [Agent-ready SaaS and MCP surfaces](../sources/newsletters/agent-ready-saas-mcp-2026-06.md)

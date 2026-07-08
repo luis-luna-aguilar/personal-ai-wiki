@@ -27,6 +27,7 @@ Usage:
     python scripts/gmail_fetch.py --days 1
     python scripts/gmail_fetch.py --week 2026-W15
     python scripts/gmail_fetch.py --start 2026-06-28 --end 2026-07-02
+    python scripts/gmail_fetch.py --latest 20
 """
 
 from __future__ import annotations
@@ -181,6 +182,10 @@ def gmail_date_query(start: date, end: date) -> str:
     after = start.strftime("%Y/%m/%d")
     before = (end + timedelta(days=1)).strftime("%Y/%m/%d")
     return f"in:inbox after:{after} before:{before}"
+
+
+def gmail_latest_query() -> str:
+    return f"in:inbox -label:{PROCESSED_LABEL_NAME}"
 
 
 # ---------------------------------------------------------------------------
@@ -351,6 +356,7 @@ def generate_digest_manifest(
     end: date,
     account: str,
     args_week: str | None = None,
+    latest_count: int | None = None,
 ) -> Path:
     """Write a skeleton manifest listing all saved sources.
 
@@ -360,7 +366,10 @@ def generate_digest_manifest(
     """
     TRIAGE_DIR.mkdir(parents=True, exist_ok=True)
 
-    if start == end:
+    if latest_count:
+        label = f"latest {latest_count} unprocessed as of {date.today().isoformat()}"
+        slug = f"{date.today().isoformat()}-{account}-latest-{latest_count}-digest"
+    elif start == end:
         label = start.isoformat()
         slug = f"{start.isoformat()}-{account}-digest"
     elif args_week:
@@ -490,17 +499,22 @@ def main() -> None:
     parser.add_argument("--week", help="Fetch a specific ISO week, e.g. 2026-W15")
     parser.add_argument("--start", type=date.fromisoformat, help="Fetch from this date, inclusive (YYYY-MM-DD)")
     parser.add_argument("--end", type=date.fromisoformat, help="Fetch through this date, inclusive (YYYY-MM-DD)")
+    parser.add_argument("--latest", type=int, help="Fetch latest N unprocessed inbox messages")
     parser.add_argument("--no-triage", action="store_true", help="Skip triage file generation")
     args = parser.parse_args()
 
-    range_args = [bool(args.days), bool(args.week), bool(args.start or args.end)]
+    range_args = [bool(args.days), bool(args.week), bool(args.start or args.end), bool(args.latest)]
     if sum(range_args) != 1:
-        parser.error("Provide exactly one of --days N, --week YYYY-WNN, or --start YYYY-MM-DD --end YYYY-MM-DD")
+        parser.error("Provide exactly one of --days N, --week YYYY-WNN, --start YYYY-MM-DD --end YYYY-MM-DD, or --latest N")
     if bool(args.start) != bool(args.end):
         parser.error("--start and --end must be provided together")
+    if args.latest is not None and args.latest <= 0:
+        parser.error("--latest must be positive")
 
     today = date.today()
-    if args.week:
+    if args.latest:
+        start = end = today
+    elif args.week:
         start, end = parse_week(args.week)
     elif args.start and args.end:
         start, end = args.start, args.end
@@ -524,10 +538,12 @@ def main() -> None:
     processed_label_id = get_or_create_label(service, PROCESSED_LABEL_NAME)
     print(f"Label '{PROCESSED_LABEL_NAME}' ready (id: {processed_label_id})", file=sys.stderr)
 
-    query = gmail_date_query(start, end)
+    query = gmail_latest_query() if args.latest else gmail_date_query(start, end)
     print(f"Querying {args.account} Gmail: {query}", file=sys.stderr)
 
     message_ids = fetch_all_message_ids(service, query)
+    if args.latest:
+        message_ids = message_ids[:args.latest]
     print(f"Found {len(message_ids)} messages", file=sys.stderr)
 
     saved: list[tuple[Path, str, str]] = []   # (path, type, subject)
@@ -545,6 +561,7 @@ def main() -> None:
 
         if not is_whitelisted(sender, whitelist):
             print(f"  [ignored] {sender[:50]} — {subject[:50]}", file=sys.stderr)
+            process_message(service, msg_id, processed_label_id)
             continue
 
         body = get_email_body(msg)
@@ -573,7 +590,15 @@ def main() -> None:
     print(f"\nSaved {len(saved)} files, skipped {len(skipped_videos)} videos.", file=sys.stderr)
 
     if not args.no_triage and (saved or skipped_videos):
-        manifest_path = generate_digest_manifest(saved, skipped_videos, start, end, args.account, args_week=args.week)
+        manifest_path = generate_digest_manifest(
+            saved,
+            skipped_videos,
+            start,
+            end,
+            args.account,
+            args_week=args.week,
+            latest_count=args.latest,
+        )
         print(manifest_path.relative_to(VAULT_ROOT))
     elif not saved and not skipped_videos:
         print("No emails matched — nothing to triage.")

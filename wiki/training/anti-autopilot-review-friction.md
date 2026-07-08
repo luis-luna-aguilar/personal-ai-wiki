@@ -1,8 +1,8 @@
 ---
 title: Anti-autopilot review friction
 type: training
-as_of: 2026-05-19
-sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026, lennysan-simonw-interview, prof-devs-control, agents-evals-deep-research, agentic-devops-deep-research, agent-review-artifacts-2026-05-13, osmani-cognitive-debt-ai-learning-2026-05, claude-code-fast-mode-default-2026-05]
+as_of: 2026-06-29
+sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026, lennysan-simonw-interview, prof-devs-control, agents-evals-deep-research, agentic-devops-deep-research, agent-review-artifacts-2026-05-13, osmani-cognitive-debt-ai-learning-2026-05, claude-code-fast-mode-default-2026-05, powerpoint-agent-skill-failure-mode-2026-06]
 ---
 
 # Anti-autopilot review friction
@@ -82,6 +82,7 @@ Cognitive debt (Addy Osmani, May 2026): the accumulated deficit in comprehension
 ## Failure modes
 
 - Mistaking "I saw it" for "I reviewed it"
+- Accepting near-correct polished artifacts too quickly. An 80% correct presentation can be worse than no automation when the defects are subtle, brand-sensitive, or expensive to catch late.
 - Letting fluency stand in for correctness
 - Reviewing too many AI outputs in a row without reset
 - Using AI to replace the judgment layer rather than the execution layer
@@ -91,6 +92,7 @@ Cognitive debt (Addy Osmani, May 2026): the accumulated deficit in comprehension
 
 ## Recent changes
 
+- [2026-06-29] Added near-correct presentation decks as a review-friction failure mode: polished artifacts can hide subtle but costly defects.
 - [2026-05-19] Spec-drift logging pattern: append implementation-notes.html prompt to expose Claude's design decisions, deviations, and tradeoffs as a reviewable artifact (Anthropic engineer, @trq212)
 - [2026-05-18] Cognitive debt (Osmani): three empirical studies confirm AI-without-learning-intent erodes comprehension (Anthropic: 50% vs 67% quiz; MIT EEG: 83% couldn't quote own AI-written text; anchoring: AI at task start produces worse decisions); learning-posture remedies added
 
@@ -108,3 +110,4 @@ Cognitive debt (Addy Osmani, May 2026): the accumulated deficit in comprehension
 - [Purpose-built review artifacts for agent work](../sources/tweets/agent-review-artifacts-2026-05-13.md)
 - ["Don't Outsource the Learning" — Addy Osmani](../sources/tweets/osmani-cognitive-debt-ai-learning-2026-05.md)
 - [Claude Code Fast mode becomes default + spec-drift logging](../sources/newsletters/claude-code-fast-mode-default-2026-05.md)
+- [PowerPoint remains hard for agents](../sources/newsletters/powerpoint-agent-skill-failure-mode-2026-06.md)
