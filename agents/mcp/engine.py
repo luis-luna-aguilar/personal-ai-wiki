@@ -21,7 +21,6 @@ from .tools.read_file import read_text_excerpt
 from .tools.read_personal_context import search_personal_context
 from .tools.recent_changes import collect_recent_changes
 from .tools.search_repo import search_markdown_paths
-from .tools.ontology import ontology_actions, ontology_expand, ontology_search
 
 
 def _parse_frontmatter(text: str) -> dict[str, str]:
@@ -249,60 +248,9 @@ class QuerySession:
             limit,
         )
 
-    def ontology_search(self, query: str, limit: int = 10) -> list[dict[str, Any]]:
-        """Search the compiled Neo4j ontology graph for entities, properties, and relationships."""
-        try:
-            results = ontology_search(query, limit=limit)
-        except Exception as exc:
-            return [
-                {
-                    "error": "ontology_unavailable",
-                    "message": str(exc),
-                    "fallback": "Use get_index, search_repo, and read_file instead.",
-                }
-            ]
-        if self.config.log_tool_calls:
-            self.logger.info("tool=ontology_search limit=%s query=%s results=%s", limit, query, len(results))
-        return results
-
-    def ontology_expand(self, entity: str, depth: int = 2, limit: int = 30) -> list[dict[str, Any]]:
-        """Traverse relationships around an ontology entity."""
-        try:
-            results = ontology_expand(entity, depth=depth, limit=limit)
-        except Exception as exc:
-            return [
-                {
-                    "error": "ontology_unavailable",
-                    "message": str(exc),
-                    "fallback": "Use get_index, search_repo, and read_file instead.",
-                }
-            ]
-        if self.config.log_tool_calls:
-            self.logger.info("tool=ontology_expand entity=%s depth=%s results=%s", entity, depth, len(results))
-        return results
-
-    def ontology_actions(self, goal: str, limit: int = 10) -> list[dict[str, Any]]:
-        """Find graph-derived actions and workflows relevant to a goal."""
-        try:
-            results = ontology_actions(goal, limit=limit)
-        except Exception as exc:
-            return [
-                {
-                    "error": "ontology_unavailable",
-                    "message": str(exc),
-                    "fallback": "Use get_index, search_repo, and read_file instead.",
-                }
-            ]
-        if self.config.log_tool_calls:
-            self.logger.info("tool=ontology_actions goal=%s results=%s", goal, len(results))
-        return results
-
     def tools(self) -> list[Any]:
         return [
             self.get_index,
-            self.ontology_search,
-            self.ontology_expand,
-            self.ontology_actions,
             self.search_repo,
             self.read_file,
             self.read_personal_context,

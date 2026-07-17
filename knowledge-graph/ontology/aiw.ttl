@@ -1,0 +1,111 @@
+@prefix aiw:    <https://ai-wiki.luisluna.dev/ontology/#> .
+@prefix swe:    <https://musclepoints.com/ontology/swe#> .
+@prefix schema: <https://schema.org/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+#####################################################################
+# aiw.ttl — the AI Wiki's native vocabulary module (VCR-0003).
+#
+# Holds ONLY: AI-domain terms with no upstream or inherited (swe:/biz:)
+# equivalent, plus this wiki's instance data namespace. Grows only via
+# approved VCRs. The as_of/temporal pattern here is load-bearing for the
+# full-sync policy: volatile datatype facts (scores, prices, leader
+# claims) must be reified with their date — a bare number is
+# non-conformant (see aiw-shapes.ttl BenchmarkResultShape).
+#####################################################################
+
+<https://ai-wiki.luisluna.dev/ontology/> a owl:Ontology ;
+    rdfs:label "AI Wiki native vocabulary"@en ;
+    rdfs:comment "Native AI-domain terms for the AI Wiki knowledge graph. Inherited swe:/biz: modules and upstream vocabularies cover everything else; this module admits only what they cannot express. Terms enter via VCR only."@en .
+
+#####################################################################
+# Foundation models
+#####################################################################
+
+aiw:FoundationModel a owl:Class ;
+    rdfs:subClassOf swe:AiModel ;
+    rdfs:label "Foundation Model"@en ;
+    rdfs:comment "A large pretrained AI model (language, image, voice, multimodal) released as a product or as open weights; the subject of a wiki/models/ page."@en .
+
+#####################################################################
+# Benchmarks and dated results (the reified volatile-value pattern)
+#####################################################################
+
+aiw:Benchmark a owl:Class ;
+    rdfs:label "Benchmark"@en ;
+    rdfs:comment "A standardized evaluation suite measuring an AI system's capability (e.g. SWE-bench); the subject of a wiki/benchmarks/ page."@en .
+
+aiw:BenchmarkResult a owl:Class ;
+    rdfs:label "Benchmark Result"@en ;
+    rdfs:comment "A reified measurement: one AI system's score on one benchmark as of one date. Never assert a bare score on a model/tool — mint a BenchmarkResult."@en .
+
+aiw:onBenchmark a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "on benchmark"@en ;
+    rdfs:domain aiw:BenchmarkResult ;
+    rdfs:range aiw:Benchmark ;
+    rdfs:comment "The benchmark a result was measured on. Exactly one per result."@en .
+
+aiw:achievedBy a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "achieved by"@en ;
+    rdfs:domain aiw:BenchmarkResult ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( schema:SoftwareApplication aiw:FoundationModel ) ] ;
+    rdfs:comment "The AI system (model or tool) that achieved this result. Exactly one per result."@en ;
+    owl:inverseOf aiw:hasBenchmarkResult .
+
+aiw:hasBenchmarkResult a owl:ObjectProperty ;
+    rdfs:label "has benchmark result"@en ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( schema:SoftwareApplication aiw:FoundationModel ) ] ;
+    rdfs:range aiw:BenchmarkResult ;
+    rdfs:comment "Links an AI system to a dated, reified benchmark result."@en .
+
+aiw:scoreValue a owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "score value"@en ;
+    rdfs:domain aiw:BenchmarkResult ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "The measured score's magnitude. Its unit lives in aiw:scoreUnit — never in a property name."@en .
+
+aiw:scoreUnit a owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "score unit"@en ;
+    rdfs:domain aiw:BenchmarkResult ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The score's unit/dimension. Must be one of: percentage, points, elo, rank (see aiw-shapes.ttl)."@en .
+
+aiw:asOf a owl:DatatypeProperty ;
+    rdfs:label "as of"@en ;
+    rdfs:range xsd:date ;
+    rdfs:comment "The date a volatile claim was true per its source — mirrors the wiki frontmatter as_of discipline. Required on every BenchmarkResult; usable on any dated assertion node."@en .
+
+#####################################################################
+# License model (closed enum — mirrors the wiki's existing license/
+# openness tags in wiki/_schema/tags.md, which are the controlled
+# vocabulary of record for this distinction)
+#####################################################################
+
+aiw:LicenseModel a owl:Class ;
+    rdfs:label "License Model"@en ;
+    rdfs:comment "How an AI system's source/weights are made available. Closed enumeration."@en ;
+    owl:oneOf ( aiw:open-source aiw:open-weights aiw:closed-source ) .
+
+aiw:open-source a aiw:LicenseModel , skos:Concept ;
+    skos:prefLabel "open source"@en ;
+    skos:definition "Publicly available source code under an OSS license."@en ;
+    skos:exactMatch aiw:tag-open-source .
+
+aiw:open-weights a aiw:LicenseModel , skos:Concept ;
+    skos:prefLabel "open weights"@en ;
+    skos:definition "Model weights are publicly released without necessarily being under a standard OSS license."@en ;
+    skos:exactMatch aiw:tag-open-weights .
+
+aiw:closed-source a aiw:LicenseModel , skos:Concept ;
+    skos:prefLabel "closed source"@en ;
+    skos:definition "Proprietary; no public source or weights."@en ;
+    skos:exactMatch aiw:tag-closed-source .
+
+aiw:hasLicenseModel a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "has license model"@en ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( schema:SoftwareApplication aiw:FoundationModel ) ] ;
+    rdfs:range aiw:LicenseModel ;
+    rdfs:comment "An AI system's source/weights availability. At most one. The enum member IRIs are skos:exactMatch-linked to their wiki/_schema tag-scheme counterparts (VCR-0002) — one real-world concept, two representations (an informal browsing tag vs. a machine-checked closed-enum value), per vocabulary-policy.md §3."@en .

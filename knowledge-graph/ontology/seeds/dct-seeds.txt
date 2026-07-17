@@ -1,0 +1,2 @@
+http://purl.org/dc/terms/date
+http://purl.org/dc/terms/hasPart

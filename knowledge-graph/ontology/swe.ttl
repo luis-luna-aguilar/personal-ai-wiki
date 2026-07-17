@@ -1,0 +1,618 @@
+@prefix swe:    <https://musclepoints.com/ontology/swe#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix fibo-fnd-utl-alx: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> .
+@prefix biz:    <https://musclepoints.com/ontology/biz#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+
+<https://musclepoints.com/ontology/swe> a owl:Ontology ;
+    rdfs:label "Software Engineering Vocabulary"@en ;
+    rdfs:comment "A domain-named, reusable vocabulary for software systems, their architecture, integration, and deployment. Authored by MUSCLE but free of MUSCLE-specific business logic. Scope per knowledge-graph/governance/vocabulary-policy.md §7: architecture/integration now; engineering-process terms added by demand via future VCRs. Software packaging (SPDX-style) is out of scope."@en ;
+    owl:versionInfo "0.2.0" .
+
+#####################################################################
+# External class stubs — full definitions live in upstream extracts.
+# Declared so this module validates standalone under OWL 2 RL.
+#####################################################################
+
+schema:SoftwareApplication a owl:Class .
+org:Organization           a owl:Class .
+biz:TravelVertical         a owl:Class .
+fibo-fnd-utl-alx:KeyPerformanceIndicator a owl:Class .
+
+#####################################################################
+# Classes — infrastructure concepts schema.org lacks.
+# The software *system* type is schema:SoftwareApplication (upstream);
+# we do not mint a native SoftwareSystem.
+#####################################################################
+
+swe:API a owl:Class ;
+    rdfs:label "API"@en ;
+    rdfs:comment "A programmatic interface published by a provider and consumed by a software application. Reified as a node so individual integrations (e.g. flights, hotels, email) can be named and attributed to their provider."@en .
+
+swe:DeploymentEnvironment a owl:Class ;
+    rdfs:label "Deployment Environment"@en ;
+    rdfs:comment "A distinct runtime tier a software system is deployed to (e.g. development, QA, staging, production)."@en .
+
+swe:Datastore a owl:Class ;
+    rdfs:label "Datastore"@en ;
+    rdfs:comment "A persistence backend used by a software system."@en .
+
+swe:Database a owl:Class ;
+    rdfs:subClassOf swe:Datastore ;
+    rdfs:label "Database"@en ;
+    rdfs:comment "A structured database used by a software system."@en .
+
+swe:Datalake a owl:Class ;
+    rdfs:subClassOf swe:Datastore ;
+    rdfs:label "Datalake"@en ;
+    rdfs:comment "A centralized raw/analytical data repository used by a software system."@en .
+
+swe:HostingPlatform a owl:Class ;
+    rdfs:label "Hosting Platform"@en ;
+    rdfs:comment "The infrastructure platform a software system runs on."@en .
+
+swe:MonitoringTool a owl:Class ;
+    rdfs:label "Monitoring Tool"@en ;
+    rdfs:comment "A tool that observes another system's usage or health (e.g. Mixpanel, Uptrends). Dropped rdfs:subClassOf schema:SoftwareApplication under VCR 0016 for consistency with its sibling third-party-tool classes (AlertsTool, RecordingTool, SupportTool, etc.), none of which carry that subclass relationship — it was forcing SoftwareApplicationShape's mandatory schema:provider onto referenced tools we don't fully model."@en .
+
+#####################################################################
+# Architecture relations
+#####################################################################
+
+swe:embeds a owl:ObjectProperty ;
+    rdfs:label "embeds"@en ;
+    rdfs:comment "The subject software system embeds the object as a component running inside it. X embeds Y means Y is the embedded part living within host X."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range schema:SoftwareApplication ;
+    owl:inverseOf swe:embeddedIn .
+
+swe:embeddedIn a owl:ObjectProperty ;
+    rdfs:label "embedded in"@en ;
+    rdfs:comment "The subject software system runs as an embedded component inside the object host system."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range schema:SoftwareApplication ;
+    owl:inverseOf swe:embeds .
+
+swe:integratesWith a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:label "integrates with"@en ;
+    rdfs:comment "Two systems have a direct integration as peers — either a technical integration between two software applications, or a business/retail-ecosystem integration between two organizations. Symmetric: if A integrates with B, then B integrates with A. Domain/range widened under VCR 0013 after Interbank/Shopstar's org-to-org usage surfaced a HermiT disjointness violation against the original SoftwareApplication-only domain."@en ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( schema:SoftwareApplication org:Organization ) ] ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( schema:SoftwareApplication org:Organization ) ] .
+
+swe:manages a owl:ObjectProperty ;
+    rdfs:label "manages"@en ;
+    rdfs:comment "The subject provides the administrative/management interface for the object system — another software system, or the organization that owns/operates it. Domain widened under VCR 0016 (same union pattern as swe:integratesWith/syncsWith/hasDeploymentModel) after 'MUSCLE manages Muscle-Control-Tower' surfaced a HermiT disjointness violation against the original SoftwareApplication-only domain."@en ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( schema:SoftwareApplication org:Organization ) ] ;
+    rdfs:range schema:SoftwareApplication ;
+    owl:inverseOf swe:managedBy .
+
+swe:managedBy a owl:ObjectProperty ;
+    rdfs:label "managed by"@en ;
+    rdfs:comment "The subject software system is managed through the object system's interface — another software system, or the organization that owns/operates it. Domain widening mirrored from swe:manages, VCR 0016."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( schema:SoftwareApplication org:Organization ) ] ;
+    owl:inverseOf swe:manages .
+
+#####################################################################
+# Infrastructure relations
+#####################################################################
+
+swe:deployedTo a owl:ObjectProperty ;
+    rdfs:label "deployed to"@en ;
+    rdfs:comment "The software system runs in this deployment environment."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range swe:DeploymentEnvironment .
+
+swe:usesDatastore a owl:ObjectProperty ;
+    rdfs:label "uses datastore"@en ;
+    rdfs:comment "The software system persists data to this datastore."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range swe:Datastore .
+
+swe:exposesAPI a owl:ObjectProperty ;
+    rdfs:label "exposes API"@en ;
+    rdfs:comment "The provider (an organization or a software system) publishes this API. Domain intentionally left open to admit both org:Organization and schema:SoftwareApplication providers."@en ;
+    rdfs:range swe:API .
+
+swe:consumesAPI a owl:ObjectProperty ;
+    rdfs:label "consumes API"@en ;
+    rdfs:comment "The software system calls this API."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range swe:API .
+
+swe:hostedOn a owl:ObjectProperty ;
+    rdfs:label "hosted on"@en ;
+    rdfs:comment "The software system runs on this hosting platform."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range swe:HostingPlatform .
+
+swe:monitoredBy a owl:ObjectProperty ;
+    rdfs:label "monitored by"@en ;
+    rdfs:comment "The software system is observed by this monitoring tool."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range swe:MonitoringTool .
+
+swe:hasUserRole a owl:ObjectProperty ;
+    rdfs:label "has user role"@en ;
+    rdfs:comment "The software application defines this named access-level role for its users."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range org:Role .
+
+#####################################################################
+# Deployment and Integration Modalities (as Concepts)
+#####################################################################
+
+swe:DeploymentModel a owl:Class ;
+    rdfs:label "Deployment Model"@en ;
+    rdfs:comment "How a software application is delivered to end users: embedded in a host app, or as its own standalone site. Closed enumeration — see VCR 0011."@en ;
+    owl:oneOf ( swe:mobile-embedded swe:standalone-website ) .
+
+swe:standalone-website a owl:NamedIndividual, skos:Concept, swe:DeploymentModel ;
+    rdfs:label "Standalone Website"@en ;
+    skos:prefLabel "Standalone Website"@en ;
+    skos:altLabel "Open Website Experience"@en ;
+    skos:definition "A product deployment model where a software application operates as an independent, open or semi-open web portal, ideal for customer acquisition and portfolio growth."@en .
+
+swe:mobile-embedded a owl:NamedIndividual, skos:Concept, swe:DeploymentModel ;
+    rdfs:label "Mobile Embedded"@en ;
+    skos:prefLabel "Mobile Embedded"@en ;
+    skos:definition "A product deployment model where a software application is natively integrated directly into a parent mobile application to maximize user retention and engagement."@en .
+
+#####################################################################
+# VCR 0011 — classes admitted from the full-wiki ACE harvest
+#####################################################################
+
+swe:ABTest a owl:Class ;
+    rdfs:label "A/B Test"@en ;
+    rdfs:comment "An experiment comparing a control pricing-strategy against a trial pricing-strategy over a traffic split, to measure relative performance before a full rollout. Moved here from biz: — A/B testing is a software-engineering/experimentation concept, not a generic business relation. See VCR 0011."@en .
+
+swe:abTestStatus a owl:DatatypeProperty ;
+    rdfs:label "A/B test status"@en ;
+    rdfs:comment "The current lifecycle state of an A/B test experiment. Controlled enumeration: 'Running', 'Finished', 'Scheduled'. Originally biz:abTestStatus (VCR 0009, before swe:ABTest existed); consolidated here under swe: to match its domain class. See VCR 0014."@en ;
+    rdfs:domain swe:ABTest ;
+    rdfs:range xsd:string .
+
+swe:UIComponent a owl:Class ;
+    rdfs:label "UI Component"@en ;
+    rdfs:comment "A configurable front-end element on a MUSCLE product surface (banner, badge, pricing view, message). Named instances are declared per-page in the relevant wiki sidecar. See VCR 0011."@en .
+
+swe:BlockSchema a owl:Class ;
+    rdfs:label "Block Schema"@en ;
+    rdfs:comment "A structural content-block schema a file manager uses to lay out a page's content. See VCR 0011."@en .
+
+swe:BlogManager a owl:Class ;
+    rdfs:subClassOf schema:SoftwareApplication ;
+    rdfs:label "Blog Manager"@en ;
+    rdfs:comment "A CMS/blogging software application a campaign manager uses to publish content. Researched: schema:WebContent describes published content itself, not the authoring application — not a fit. See VCR 0011."@en .
+
+swe:CsvUpload a owl:Class ;
+    rdfs:label "CSV Upload"@en ;
+    rdfs:comment "A bulk-upload mechanism used to define or import a segment; validated by the system before taking effect. See VCR 0011."@en .
+
+swe:IntegrationModel a owl:Class ;
+    rdfs:label "Integration Model"@en ;
+    rdfs:comment "How a booking capability integrates with a client: a bare API (MaaS) vs. a full end-to-end platform. Closed enumeration — see VCR 0011."@en ;
+    owl:oneOf ( swe:maas swe:end-to-end-platform ) .
+
+swe:maas a owl:NamedIndividual, swe:IntegrationModel ;
+    rdfs:label "MaaS"@en ;
+    rdfs:comment "Mobility-as-a-Service: API-first integration with no bundled front-end."@en .
+
+swe:end-to-end-platform a owl:NamedIndividual, swe:IntegrationModel ;
+    rdfs:label "End-to-End Platform"@en ;
+    rdfs:comment "A full booking platform, front-end included."@en .
+
+swe:PrivilegedAction a owl:Class ;
+    rdfs:label "Privileged Action"@en ;
+    rdfs:comment "An administrative action whose criticality (see swe:isCritical) gates whether 2FA is required to perform it. Moved here from biz: — access-control gating is a software-engineering concept. See VCR 0011."@en .
+
+swe:isCritical a owl:DatatypeProperty ;
+    rdfs:label "is critical"@en ;
+    rdfs:comment "Marks a PrivilegedAction as high-risk enough to require 2FA before a user may perform it."@en ;
+    rdfs:domain swe:PrivilegedAction ;
+    rdfs:range xsd:boolean .
+
+swe:ReportingModule a owl:Class ;
+    rdfs:label "Reporting Module"@en ;
+    rdfs:comment "An analytics dashboard presenting historical data. Distinct from swe:SimulationTool, which projects hypothetical scenarios rather than reporting on the past."@en .
+
+swe:SimulationTool a owl:Class ;
+    rdfs:label "Simulation Tool"@en ;
+    rdfs:comment "A scenario-projection tool that models a hypothetical configuration and projects a KPI under it. Distinct from swe:ReportingModule, which reports on history rather than projecting scenarios. Inherited from the source project (VCR-0001); that project's own worked example (evaluating a pricing-strategy against past redemptions) used a domain-specific property this deployment did not carry over — no equivalent projection property is defined here yet."@en .
+
+swe:projects a owl:ObjectProperty ;
+    rdfs:label "projects"@en ;
+    rdfs:comment "A simulation tool projects a KPI's value under a hypothetical scenario."@en ;
+    rdfs:domain swe:SimulationTool ;
+    rdfs:range fibo-fnd-utl-alx:KeyPerformanceIndicator .
+
+swe:hasExperimentDuration a owl:DatatypeProperty ;
+    rdfs:label "has experiment duration"@en ;
+    rdfs:comment "How long an A/B test runs, in days."@en ;
+    rdfs:domain swe:ABTest ;
+    rdfs:range xsd:integer .
+
+swe:hasTrafficSplitPercentage a owl:DatatypeProperty ;
+    rdfs:label "has traffic split percentage"@en ;
+    rdfs:comment "The percentage of traffic an A/B test allocates to one arm (e.g. 70% control / 30% trial). Named to carry \"split\" per the source (\"define the traffic percentage split\") — a bare \"traffic percentage\" lost that distinction. See VCR 0011."@en ;
+    rdfs:domain swe:ABTest ;
+    rdfs:range xsd:decimal .
+
+swe:SingleSignOn a owl:Class ;
+    rdfs:label "Single Sign-On"@en ;
+    rdfs:comment "Centralized authentication letting a user access multiple systems with one login. Researched: no clean upstream auth-method class found. See VCR 0011."@en .
+
+swe:Technology a owl:Class ;
+    rdfs:label "Technology"@en ;
+    rdfs:comment "A technology MUSCLE owns; the source does not scope which one further. See VCR 0011."@en .
+
+swe:TwoFactorAuthentication a owl:Class ;
+    rdfs:label "Two-Factor Authentication"@en ;
+    rdfs:comment "A second authentication factor required of a user performing a critical PrivilegedAction. See VCR 0011."@en .
+
+swe:Uptime a owl:Class ;
+    rdfs:label "Uptime"@en ;
+    rdfs:comment "System availability/monitoring concept. Proactively admitted (not tied to a specific wiki citation) as general SWE vocabulary. See VCR 0011."@en .
+
+swe:controls a owl:ObjectProperty ;
+    rdfs:label "controls"@en ;
+    rdfs:comment "The subject software/role directly manages or operates the object (e.g. a campaign manager controls a UI component)."@en .
+
+swe:imports a owl:ObjectProperty ;
+    rdfs:label "imports"@en ;
+    rdfs:comment "The subject brings the object into the system from an external source (e.g. a csv-upload imports a segment)."@en .
+
+swe:validates a owl:ObjectProperty ;
+    rdfs:label "validates"@en ;
+    rdfs:comment "The subject system checks the object for correctness before it takes effect."@en .
+
+#####################################################################
+# VCR 0011 — connecting relations for the new enums, written while
+# authoring SHACL shapes (promoted 2 pre-existing VCR-00NN backlog
+# stubs; minted 2 with no prior stub).
+#####################################################################
+
+swe:hasDeploymentModel a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:label "has deployment model"@en ;
+    rdfs:comment "How a software application is delivered to end users, for a given deployer. Functional: exactly one per subject. Domain widened under VCR 0016 to admit org:Organization — a client bank's own deployment of a white-label product has its own single deployment model, distinct from the product class itself offering multiple models as configuration options."@en ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( schema:SoftwareApplication org:Organization ) ] ;
+    rdfs:range swe:DeploymentModel .
+
+swe:hasIntegrationModel a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:label "has integration model"@en ;
+    rdfs:comment "How a booking capability integrates with a client. Functional: exactly one per application."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range swe:IntegrationModel .
+
+swe:routesTo a owl:ObjectProperty ;
+    rdfs:label "routes to"@en ;
+    rdfs:comment "A UI component routes the user to a travel vertical or to another UI component (screen-flow navigation). Range deliberately left open (owl:Thing) — inherited from the source project (VCR-0001), where a prior narrowing to biz:TravelVertical was found premature since routes-to also legitimately describes screen-to-screen flows unrelated to travel verticals. That project enforced a narrower routing rule via a shape not carried over to this deployment."@en ;
+    rdfs:domain swe:UIComponent ;
+    rdfs:range owl:Thing .
+
+#####################################################################
+# VCR 0012 — classes admitted from the pre-VCR-0011 backlog review
+#####################################################################
+
+# Infrastructure / DevOps — `swe:` (20)
+
+swe:Password a owl:Class ;
+    rdfs:label "Password"@en ;
+    rdfs:comment "An initial credential issued to a Super Admin."@en .
+
+swe:AlertsTool a owl:Class ;
+    rdfs:label "Alerts Tool"@en ;
+    rdfs:comment "A tool that routes system alerts (e.g. Slack)."@en .
+
+swe:DataPipeline a owl:Class ;
+    rdfs:label "Data Pipeline"@en ;
+    rdfs:comment "A pipeline that ingests data (used here for analytics/reporting, but generalized rather than scoped to that one use)."@en .
+
+swe:ApiFirstFramework a owl:Class ;
+    rdfs:label "API First Framework"@en ;
+    rdfs:comment "An architectural framework designed API-first."@en .
+
+swe:ApiResponse a owl:Class ;
+    rdfs:label "API Response"@en ;
+    rdfs:comment "A persisted response returned by an API call."@en .
+
+swe:ApiSpecification a owl:Class ;
+    rdfs:label "API Specification"@en ;
+    rdfs:comment "A formal specification document for an API."@en .
+
+swe:AuthenticationService a owl:Class ;
+    rdfs:label "Authentication Service"@en ;
+    rdfs:comment "The service handling user authentication and access control (e.g. Cognito)."@en .
+
+swe:ContainerOrchestrator a owl:Class ;
+    rdfs:label "Container Orchestrator"@en ;
+    rdfs:comment "The system orchestrating containers (e.g. EKS)."@en .
+
+swe:ContainerRegistry a owl:Class ;
+    rdfs:label "Container Registry"@en ;
+    rdfs:comment "A registry storing container images (e.g. ECR)."@en .
+
+swe:DockerImage a owl:Class ;
+    rdfs:label "Docker Image"@en ;
+    rdfs:comment "A built container image."@en .
+
+swe:EmailService a owl:Class ;
+    rdfs:label "Email Service"@en ;
+    rdfs:comment "The service sending transactional/system email (e.g. Mailgun)."@en .
+
+swe:BranchingStrategy a owl:Class ;
+    rdfs:label "Branching Strategy"@en ;
+    rdfs:comment "A named branching strategy (Git Flow)."@en .
+
+swe:InfrastructureAsCode a owl:Class ;
+    rdfs:label "Infrastructure As Code"@en ;
+    rdfs:comment "Infrastructure defined and provisioned as code."@en .
+
+swe:Integration a owl:Class ;
+    rdfs:label "Integration"@en ;
+    rdfs:comment "The general activity of integrating two systems."@en .
+
+swe:LoadBalancing a owl:Class ;
+    rdfs:label "Load Balancing"@en ;
+    rdfs:comment "The practice/mechanism of balancing load across instances."@en .
+
+swe:OnlinePaymentInfrastructure a owl:Class ;
+    rdfs:label "Online Payment Infrastructure"@en ;
+    rdfs:comment "The infrastructure supporting online payment processing."@en .
+
+swe:PaymentGateway a owl:Class ;
+    rdfs:label "Payment Gateway"@en ;
+    rdfs:comment "A specific payment-processing gateway (e.g. DLocal, Izipay)."@en .
+
+swe:RecordingTool a owl:Class ;
+    rdfs:label "Recording Tool"@en ;
+    rdfs:comment "A session-recording tool (e.g. Hotjar)."@en .
+
+swe:SecretsManager a owl:Class ;
+    rdfs:label "Secrets Manager"@en ;
+    rdfs:comment "A specific secrets-management tool (e.g. AWS Secrets Manager, Vault)."@en .
+
+swe:StorageTechnology a owl:Class ;
+    rdfs:label "Storage Technology"@en ;
+    rdfs:comment "The storage technology choice for the datalake."@en .
+
+# Reporting / support / ops — `swe:`/`biz:` (10)
+
+swe:Report a owl:Class ;
+    rdfs:label "Report"@en ;
+    rdfs:comment "A dashboard/ops report."@en .
+
+swe:SupportTool a owl:Class ;
+    rdfs:label "Support Tool"@en ;
+    rdfs:comment "A ticketing/CRM support tool (e.g. HubSpot)."@en .
+
+swe:TechnicalComponent a owl:Class ;
+    rdfs:label "Technical Component"@en ;
+    rdfs:comment "One of the required technical components of an integration."@en .
+
+swe:TechnicalDocumentation a owl:Class ;
+    rdfs:label "Technical Documentation"@en ;
+    rdfs:comment "Guides and API specifications provided during onboarding."@en .
+
+swe:Troubleshooting a owl:Class ;
+    rdfs:label "Troubleshooting"@en ;
+    rdfs:comment "The activity of diagnosing and resolving product issues."@en .
+
+swe:Module a owl:Class ;
+    rdfs:label "Module"@en ;
+    rdfs:comment "An optional product module or feature."@en .
+
+swe:DataColumn a owl:Class ;
+    rdfs:label "Data Column"@en ;
+    rdfs:comment "A single column within an uploaded data file."@en .
+
+# Process / activity — `rdfs:subClassOf prov:Activity` (8)
+
+swe:DeploymentProcess a owl:Class ;
+    rdfs:subClassOf prov:Activity ;
+    rdfs:label "Deployment Process"@en ;
+    rdfs:comment "The process of deploying the platform to an environment."@en .
+
+swe:IncidentResponse a owl:Class ;
+    rdfs:subClassOf prov:Activity ;
+    rdfs:label "Incident Response"@en ;
+    rdfs:comment "The process of responding to a support/ops incident."@en .
+
+swe:OperatorAccountCreation a owl:Class ;
+    rdfs:subClassOf prov:Activity ;
+    rdfs:label "Operator Account Creation"@en ;
+    rdfs:comment "The activity of creating a new platform-operator (dashboard staff user) account. Renamed and reclassified per direct instruction — 'operator' was unclear (a dashboard/platform staff user account, same family as `admin`/`analyst`/`super-admin` `org:Role` individuals, not a business 'operator' in some other sense); 'Account' makes that explicit. Moved here from Miscellaneous — it's an activity, same shape as the rest of this group, not a bare noun."@en .
+
+# AI / product platform — `swe:` (12)
+
+swe:AiWorkflow a owl:Class ;
+    rdfs:label "AI Workflow"@en ;
+    rdfs:comment "The core AI decisioning logic, as a set of actions in the AI process."@en .
+
+swe:AiModel a owl:Class ;
+    rdfs:label "AI Model"@en ;
+    rdfs:comment "A proprietary AI model housed by the platform."@en .
+
+swe:ConversationalInterface a owl:Class ;
+    rdfs:label "Conversational Interface"@en ;
+    rdfs:comment "A frictionless, conversational UI layer."@en .
+
+swe:DynamicPricingLogic a owl:Class ;
+    rdfs:label "Dynamic Pricing Logic"@en ;
+    rdfs:comment "The technical logic implementing dynamic pricing."@en .
+
+swe:LoyaltyStack a owl:Class ;
+    rdfs:label "Loyalty Stack"@en ;
+    rdfs:comment "A bank's existing loyalty technology stack."@en .
+
+swe:RewardsPlatform a owl:Class ;
+    rdfs:label "Rewards Platform"@en ;
+    rdfs:comment "A bank's existing rewards platform."@en .
+
+swe:TravelAssistant a owl:Class ;
+    rdfs:label "Travel Assistant"@en ;
+    rdfs:comment "A conversational AI travel assistant (NAVI)."@en .
+
+swe:TravelPlatform a owl:Class ;
+    rdfs:label "Travel Platform"@en ;
+    rdfs:comment "The travel platform MUSCLE's pricing layer overlays."@en .
+
+swe:TravelRedemptionEngine a owl:Class ;
+    rdfs:label "Travel Redemption Engine"@en ;
+    rdfs:comment "An end-to-end travel redemption engine."@en .
+
+swe:IntelligenceLayer a owl:Class ;
+    rdfs:label "Intelligence Layer"@en ;
+    rdfs:comment "The AI/data layer MUSCLE positions itself as."@en .
+
+# Miscellaneous native nouns (10)
+
+swe:WebPortal a owl:Class ;
+    rdfs:label "Web Portal"@en ;
+    rdfs:comment "An independent, open or semi-open web portal."@en .
+
+swe:UserInterface a owl:Class ;
+    rdfs:label "User Interface"@en ;
+    rdfs:comment "The platform's user interface, structured around flows."@en .
+
+#####################################################################
+# VCR 0012 — object properties admitted from the pre-VCR-0011 backlog
+#####################################################################
+
+swe:accesses a owl:ObjectProperty ;
+    rdfs:label "accesses"@en ;
+    rdfs:comment "A role accesses (or has that access revoked to) some resource. Retyped from a class per direct instruction — 'access is more like a verb.' Parallels the other role-capability verbs already in this table (`download`, `select`, `view`), all domain `org:Role`."@en ;
+    rdfs:domain org:Role ;
+    rdfs:range owl:Thing .
+
+swe:blocks a owl:ObjectProperty ;
+    rdfs:label "blocks"@en ;
+    rdfs:comment "Blocks creation for invalid formats or missing columns. Domain corrected at implementation — same `swe:System` anti-pattern fix as `apply`."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range owl:Thing .
+
+swe:deploys a owl:ObjectProperty ;
+    rdfs:label "deploys"@en ;
+    rdfs:comment "Deploys pricing strategies / frontend changes in real time."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range owl:Thing .
+
+swe:deploysTo a owl:ObjectProperty ;
+    rdfs:label "deploys to"@en ;
+    rdfs:comment "Deploys to a named environment (e.g. production); absorbs `deploy-in` (Bucket A)."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range swe:DeploymentEnvironment .
+
+swe:downloads a owl:ObjectProperty ;
+    rdfs:label "downloads"@en ;
+    rdfs:comment "Downloads reports."@en ;
+    rdfs:domain org:Role ;
+    rdfs:range owl:Thing .
+
+swe:exports a owl:ObjectProperty ;
+    rdfs:label "exports"@en ;
+    rdfs:comment "Exports raw transactional data."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range owl:Thing .
+
+swe:feeds a owl:ObjectProperty ;
+    rdfs:label "feeds"@en ;
+    rdfs:comment "Feeds a datastore into a data pipeline."@en ;
+    rdfs:domain swe:Datastore ;
+    rdfs:range swe:DataPipeline .
+
+swe:monitors a owl:ObjectProperty ;
+    rdfs:label "monitors"@en ;
+    rdfs:comment "Provides a monitoring interface for another application."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range schema:SoftwareApplication .
+
+swe:rejects a owl:ObjectProperty ;
+    rdfs:label "rejects"@en ;
+    rdfs:comment "Rejects uploads with invalid data columns. Domain corrected at implementation — same `swe:System` anti-pattern fix as `apply`."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range swe:CsvUpload .
+
+swe:sends a owl:ObjectProperty ;
+    rdfs:label "sends"@en ;
+    rdfs:comment "Sends welcome/transactional email."@en ;
+    rdfs:domain swe:EmailService ;
+    rdfs:range owl:Thing .
+
+swe:stores a owl:ObjectProperty ;
+    rdfs:label "stores"@en ;
+    rdfs:comment "Stores data (explicitly *not* PII)."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range owl:Thing .
+
+swe:structures a owl:ObjectProperty ;
+    rdfs:label "structures"@en ;
+    rdfs:comment "Dictates how content is structured on the frontend hub."@en ;
+    rdfs:domain swe:BlockSchema ;
+    rdfs:range skos:Concept .
+
+swe:supports a owl:ObjectProperty ;
+    rdfs:label "supports"@en ;
+    rdfs:comment "Supports enterprise SSO."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range owl:Thing .
+
+swe:includesModule a owl:ObjectProperty ;
+    rdfs:label "includes module"@en ;
+    rdfs:comment "A software application includes a functional module (reporting module, simulation tool, manager sub-application). Range deliberately open (owl:Thing): module classes such as swe:ReportingModule are NOT subclasses of schema:SoftwareApplication, by the same rationale as VCR-0016 (avoid forcing the mandatory schema:provider shape onto internal components). See VCR-0018."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range owl:Thing .
+
+swe:Permission a owl:Class ;
+    rdfs:label "Permission"@en ;
+    rdfs:comment "An access permission configured within a deployment environment. See VCR-0018."@en .
+
+swe:SegmentMapping a owl:Class ;
+    rdfs:label "Segment Mapping"@en ;
+    rdfs:comment "The mapping of a bank's customer segments as configured in a deployment environment. See VCR-0018."@en .
+
+swe:syncsWith a owl:ObjectProperty ;
+    rdfs:label "syncs with"@en ;
+    rdfs:comment "Versioning synced with a design tool (e.g. Figma) or a partner organization. Domain/range widened to a union with org:Organization under VCR 0016, matching swe:integratesWith's precedent (VCR 0013) — avoids forcing strict schema:SoftwareApplication typing (and its mandatory schema:provider requirement) onto a referenced third-party tool we don't fully model."@en ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( schema:SoftwareApplication org:Organization ) ] ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( schema:SoftwareApplication org:Organization ) ] .
+
+#####################################################################
+# VCR 0012 — qualifiers admitted from the pre-VCR-0011 backlog
+#####################################################################
+
+swe:isConversational a owl:DatatypeProperty ;
+    rdfs:label "is conversational"@en ;
+    rdfs:comment "NAVI is a conversational AI travel assistant."@en ;
+    rdfs:domain swe:ConversationalInterface ;
+    rdfs:range xsd:boolean .
+
+swe:isIndependentlyDeployable a owl:DatatypeProperty ;
+    rdfs:label "is independently deployable"@en ;
+    rdfs:comment "Independently deployable environments."@en ;
+    rdfs:domain swe:DeploymentEnvironment ;
+    rdfs:range xsd:boolean .
+
+swe:isInvalid a owl:DatatypeProperty ;
+    rdfs:label "is invalid"@en ;
+    rdfs:comment "Blocks creation for invalid formats."@en ;
+    rdfs:domain swe:CsvUpload ;
+    rdfs:range xsd:boolean .
+
+swe:isOptional a owl:DatatypeProperty ;
+    rdfs:label "is optional"@en ;
+    rdfs:comment "Certain modules/features are entirely optional."@en ;
+    rdfs:domain swe:Module ;
+    rdfs:range xsd:boolean .
+
+swe:isPending a owl:DatatypeProperty ;
+    rdfs:label "is pending"@en ;
+    rdfs:comment "Repeated '(Pending)' status markers across the infrastructure summary — covers `access-policy`, `backup-policy`, `secrets-management`, `ci-cd-integration`, `deployment-process`, `incident-response`, and others whose *definition* is pending, not their existence as a category. New in this pass."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:boolean .

@@ -1,0 +1,239 @@
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix aiw:    <https://ai-wiki.luisluna.dev/ontology/#> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+@prefix swe:    <https://musclepoints.com/ontology/swe#> .
+
+#####################################################################
+# aiw-shapes.ttl — the AI Wiki's SHACL shape library.
+#
+# Bootstrapped in VCR-0001/0003 from the generic core of the inherited
+# layer's shape library (WikiEntity, SoftwareApplication, Record,
+# Concept, symmetry, foundingDate, HowToStep, ABTest shapes) plus the
+# native aiw: shapes (BenchmarkResult, LicenseModel). Source-domain
+# shapes (banking, pricing, corporate-legal) were NOT carried. Grows
+# via VCRs as backfill harvests constraints.
+#####################################################################
+
+#####################################################################
+# Universal shape: every wiki entity must have label + comment
+#####################################################################
+
+aiw:WikiEntityShape a sh:NodeShape ;
+    sh:targetClass org:Organization, schema:SoftwareApplication, schema:Country,
+                   aiw:FoundationModel, aiw:Benchmark ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:languageIn ( "en" ) ;
+        sh:message "Every wiki entity must have at least one English rdfs:label."@en ;
+    ] ;
+    sh:property [
+        sh:path rdfs:comment ;
+        sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:languageIn ( "en" ) ;
+        sh:message "Every wiki entity must have an English rdfs:comment."@en ;
+    ] .
+
+#####################################################################
+# Software applications (AI tools) must declare a provider
+#####################################################################
+
+aiw:SoftwareApplicationShape a sh:NodeShape ;
+    sh:targetClass schema:SoftwareApplication ;
+    sh:property [
+        sh:path schema:provider ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class org:Organization ;
+        sh:message "Every SoftwareApplication must have exactly one provider Organization."@en ;
+    ] .
+
+#####################################################################
+# PROV Entities (source records) must have a date
+#####################################################################
+
+aiw:RecordShape a sh:NodeShape ;
+    sh:targetClass prov:Entity ;
+    sh:property [
+        sh:path <http://purl.org/dc/terms/date> ;
+        sh:minCount 1 ;
+        sh:datatype xsd:date ;
+        sh:message "Every wiki record (prov:Entity) must have a dct:date."@en ;
+    ] .
+
+#####################################################################
+# SKOS concepts: required label and definition
+#####################################################################
+
+aiw:ConceptShape a sh:NodeShape ;
+    sh:targetClass skos:Concept ;
+    sh:property [
+        sh:path skos:prefLabel ;
+        sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:languageIn ( "en" ) ;
+        sh:message "Every SKOS Concept must have at least one English skos:prefLabel."@en ;
+    ] ;
+    sh:property [
+        sh:path skos:definition ;
+        sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:languageIn ( "en" ) ;
+        sh:message "Every SKOS Concept must have an English skos:definition."@en ;
+    ] .
+
+#####################################################################
+# skos:related must be symmetric in the ABox
+#####################################################################
+
+aiw:SkosRelatedSymmetryShape a sh:NodeShape ;
+    sh:targetSubjectsOf skos:related ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "skos:related must be symmetric: {$this} skos:related {?other} exists but the reverse does not. Add the reverse triple to {?other}'s sidecar."@en ;
+        sh:select """
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+            SELECT $this ?other WHERE {
+                $this skos:related ?other .
+                FILTER NOT EXISTS { ?other skos:related $this }
+            }
+        """ ;
+    ] .
+
+#####################################################################
+# org:linkedTo must be symmetric in the ABox
+#####################################################################
+
+aiw:OrgLinkedToSymmetryShape a sh:NodeShape ;
+    sh:targetSubjectsOf org:linkedTo ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "org:linkedTo must be symmetric: {$this} org:linkedTo {?other} exists but the reverse does not. Add the reverse triple to {?other}'s sidecar."@en ;
+        sh:select """
+            PREFIX org: <http://www.w3.org/ns/org#>
+            SELECT $this ?other WHERE {
+                $this org:linkedTo ?other .
+                FILTER NOT EXISTS { ?other org:linkedTo $this }
+            }
+        """ ;
+    ] .
+
+#####################################################################
+# schema:foundingDate must be typed xsd:gYear (not a plain string)
+#####################################################################
+
+aiw:FoundingDateDatatypeShape a sh:NodeShape ;
+    sh:targetSubjectsOf schema:foundingDate ;
+    sh:property [
+        sh:path schema:foundingDate ;
+        sh:datatype xsd:gYear ;
+        sh:message "schema:foundingDate must use datatype xsd:gYear (e.g. \"2015\"^^xsd:gYear), not a plain string."@en ;
+    ] .
+
+#####################################################################
+# Ordered process steps: every schema:HowToStep needs exactly one
+# positive-integer schema:position
+#####################################################################
+
+aiw:HowToStepShape a sh:NodeShape ;
+    sh:targetClass schema:HowToStep ;
+    sh:property [
+        sh:path schema:position ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ;
+        sh:message "Every HowToStep must have exactly one schema:position (positive integer)."@en ;
+    ] .
+
+#####################################################################
+# A/B test status enumeration (inherited swe: vocabulary)
+#####################################################################
+
+aiw:ABTestStatusShape a sh:NodeShape ;
+    sh:targetClass swe:ABTest ;
+    sh:property [
+        sh:path swe:abTestStatus ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in ( "Running" "Finished" "Scheduled" ) ;
+        sh:message "A/B test status must be one of: Running, Finished, Scheduled."@en ;
+    ] .
+
+#####################################################################
+# VCR-0003 — dated benchmark results (the volatile-value pattern).
+# A bare score with no date or unit is non-conformant by design.
+#####################################################################
+
+aiw:BenchmarkResultShape a sh:NodeShape ;
+    sh:targetClass aiw:BenchmarkResult ;
+    sh:property [
+        sh:path aiw:onBenchmark ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:class aiw:Benchmark ;
+        sh:message "Every BenchmarkResult must reference exactly one aiw:onBenchmark."@en ;
+    ] ;
+    sh:property [
+        sh:path aiw:achievedBy ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "Every BenchmarkResult must declare exactly one aiw:achievedBy (the measured system)."@en ;
+    ] ;
+    sh:property [
+        sh:path aiw:scoreValue ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:message "Every BenchmarkResult must declare exactly one aiw:scoreValue (xsd:decimal)."@en ;
+    ] ;
+    sh:property [
+        sh:path aiw:scoreUnit ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in ( "percentage" "points" "elo" "rank" ) ;
+        sh:message "Every BenchmarkResult must declare exactly one aiw:scoreUnit: percentage, points, elo, or rank."@en ;
+    ] ;
+    sh:property [
+        sh:path aiw:asOf ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:date ;
+        sh:message "Every BenchmarkResult must carry exactly one aiw:asOf date — undated volatile claims are non-conformant."@en ;
+    ] .
+
+#####################################################################
+# VCR-0003 — percentage-unit results must be 0–100
+#####################################################################
+
+aiw:BenchmarkPercentageRangeShape a sh:NodeShape ;
+    sh:targetClass aiw:BenchmarkResult ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "When aiw:scoreUnit is 'percentage', aiw:scoreValue must be between 0 and 100 inclusive."@en ;
+        sh:select """
+            PREFIX aiw: <https://ai-wiki.luisluna.dev/ontology/#>
+            SELECT $this WHERE {
+                $this aiw:scoreUnit "percentage" ;
+                      aiw:scoreValue ?val .
+                FILTER(?val < 0 || ?val > 100)
+            }
+        """ ;
+    ] .
+
+#####################################################################
+# VCR-0003 — license model, where stated, comes from the closed enum
+#####################################################################
+
+aiw:LicenseModelShape a sh:NodeShape ;
+    sh:targetSubjectsOf aiw:hasLicenseModel ;
+    sh:property [
+        sh:path aiw:hasLicenseModel ;
+        sh:maxCount 1 ;
+        sh:in ( aiw:open-source aiw:open-weights aiw:closed-source ) ;
+        sh:message "aiw:hasLicenseModel must be one of: open-source, open-weights, closed-source."@en ;
+    ] .

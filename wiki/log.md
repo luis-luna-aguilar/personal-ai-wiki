@@ -347,3 +347,4 @@ grep "^- \[" wiki/log.md | tail -20
 - [2026-07-07] **triage** | AI Email Digest latest 20 unprocessed | 10 proposals, 6 skipped
 - [2026-07-08] **apply** | Approved July 7 proposal batch | 19 pages updated, 3 content pages created (models/gpt-5-6-sol, tools/claude-tag, concepts/model-internal-workspace), 9 sources created; loop source moved from tmp/ to raw/articles/
 - [2026-07-08] **triage** | AI Email Digest latest 25 unprocessed | 7 proposals, 8 skipped
+- [2026-07-16] **apply** | Knowledge-graph layer AGENTS.md amendment | AGENTS.md: new "Knowledge graph sidecars" section + one new "Graph impact" bullet in Workflow 5's proposal-format rules; applied unattended per overnight authorization (checker-reviewed, see knowledge-graph/governance/change-requests/0001-0003 and tmp/overnight-report.md for the full audit trail); proposal moved to proposals/applied/

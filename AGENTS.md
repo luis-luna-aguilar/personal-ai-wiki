@@ -532,6 +532,7 @@ Two-sentence TL;DR of the source.
 - Before finishing a proposal or processing a triage into proposals, self-check: count checked `Update`/`Spill` items and confirm each target path appears as a heading under `## Page drafts`.
 - Include "Open questions" when you're uncertain — the user can answer inline.
 - Include a "Schema / vocabulary additions" section whenever you want to introduce a new tag, domain, or subcategory. This requires explicit approval via checkbox.
+- If the proposal touches a sidecarred wiki page (`wiki/{concepts,models,benchmarks,tools,workflows,trends,use-cases,training,state-of}/`), add a short "Graph impact" note: touched vocabulary terms, any new-term VCR reference, and whether `gen-schema-concepts.py` needs re-running for a schema addition — or simply "No durable-fact changes." See `AGENTS.md`'s "Knowledge graph sidecars" section for what this covers.
 
 **Paper proposal exception:** papers are usually harder to understand than articles, tweets, or product pages, so paper proposals should be more explanatory and simpler by default.
 
@@ -614,6 +615,32 @@ Triggered by **"ask-verify:"**, **"check the web"**, **"verify against web"**.
 - A proposal requires spilling an entry from a main page into history (you open the history file to append, that's all)
 
 When spilling: open the history file (or create it), append the spilled entry with its original date, save. Do not reformat or restructure history files.
+
+## Knowledge graph sidecars
+
+The wiki carries a machine-readable knowledge-graph layer alongside the Markdown. Selected wiki pages have two sibling sidecar files:
+
+- **`<page>.ace`** — the page's assertable facts in Attempto Controlled English (one sentence per line). Generated from the `.md` by the `ace-extractor` subagent; must pass `knowledge-graph/scripts/validate-ace.sh` (APE parser). Never hand-edit to change facts — edit the `.md` and regenerate.
+- **`<page>.ttl`** — RDF triples compiled FROM the `.ace` by `knowledge-graph/scripts/drs2ttl.py`. A pure build artifact; never hand-authored (exception: a small labeled enrichment block for reified structured values ACE cannot express — `schema:MonetaryAmount` and similar).
+
+**Pipeline: MD → ACE → TTL.** The Markdown is the system of record. When an applied proposal changes a sidecarred page's content, regenerate its `.ace` (ace-extractor) and recompile its `.ttl` in the same apply, then run:
+1. `knowledge-graph/scripts/validate-ace.sh <page>.ace`
+2. `python3 knowledge-graph/scripts/drs2ttl.py <page>.ace` (candidate) → promote
+3. `knowledge-graph/scripts/validate-page.sh <page>.ttl` (reasoner + SHACL)
+4. `knowledge-graph/scripts/validate-ingestion.sh <page>.ttl` (whole-graph contradiction gate)
+5. `knowledge-graph/scripts/rebuild.sh` (refresh the SPARQL store)
+
+`knowledge-graph/scripts/validate-sync.sh` is the drift guard — it recompiles every `.ace` and fails on divergence from the committed `.ttl`. **This deployment runs full sync deliberately** (a stress test of the pipeline at this wiki's real update volume, not a lighter-touch "durable facts only" policy a lower-churn wiki might choose) — every sidecarred page's `.ace`/`.ttl` regenerates when its `.md` changes, volatile facts (benchmark scores, leader claims) included. Volatile datatype facts are reified with their `as_of` date (`aiw:BenchmarkResult` pattern) — a bare number with no date is non-conformant.
+
+**IRI rule:** every sidecarred page is one graph node: `aiw:<filename-slug>` (e.g. `wiki/tools/claude-code.md` → `aiw:claude-code`). IRIs are permanent — never rename them; renames get `skos:altLabel`/`owl:sameAs` instead.
+
+**Vocabulary is controlled — same spirit as `wiki/_schema/`, same gate.** Facts are expressed only in terms from `knowledge-graph/ontology/lexicon-map.yaml` (word ↔ IRI catalog). A genuinely new term (class/property) is admitted only via a Vocabulary Change Request in `knowledge-graph/governance/change-requests/`, exactly like a new tag/domain/subcategory needs schema approval. **The `wiki/_schema` controlled vocabularies are mirrored in the graph as SKOS concept schemes (VCR-0002)** — adding an approved subcategory/domain/tag updates BOTH `wiki/_schema/*.md` and the graph concept scheme (`knowledge-graph/scripts/gen-schema-concepts.py`) in the same apply.
+
+**Querying.** `/query "<question>"` (or the `query-orchestrator` agent) answers questions with a mandatory "What the graph guarantees" section — per load-bearing fact, the SHACL shape / OWL axiom that certifies it. Requires Fuseki up (`docker compose up -d` in `knowledge-graph/docker`, port 3031) and a fresh store (`knowledge-graph/scripts/rebuild.sh`).
+
+**Scope.** Sidecars cover `wiki/{concepts,models,benchmarks,tools,workflows,trends,use-cases,training,state-of}/`. NOT sidecarred: `wiki/sources/`, `wiki/history/`, `wiki/_schema/` (lives in the graph as concept schemes instead), `personal/`, `index.md`, `log.md`.
+
+**Governance.** The knowledge-graph layer's own operating rules (module boundaries, term-minting discipline, sync model) live in `knowledge-graph/governance/` and `system/authoring-guides/` — read `system/authoring-guides/term-minting.md` before proposing any new vocabulary term, exactly as this file's own controlled-vocabulary rule above requires for tags/domains/subcategories.
 
 ## Maintenance
 

@@ -1,0 +1,66 @@
+# ============================================================================
+# kg.config.yaml — project identity for the AI Wiki's knowledge-graph layer.
+#
+# Every project-specific name (prefix, namespaces, artifact filenames, Fuseki
+# coordinates) lives HERE. Pipeline scripts read this file — via kgconfig.py
+# (Python) or kg-env.sh (bash) — and must not hard-code any of these values.
+#
+# IRIs and the prefix are PERMANENT once instance sidecars exist.
+#
+# NOTE on inherited namespaces: swe: and biz: keep their original
+# musclepoints.com IRIs deliberately — they are REUSED upstream vocabulary
+# (admission-ladder rung 2; see VCR-0001), and IRI permanence forbids forking
+# them under a new namespace. aiw: is this wiki's own namespace for instance
+# data and native AI-domain terms.
+# ============================================================================
+
+project:
+  name: AI Wiki
+  prefix: aiw
+
+namespaces:
+  # Instance-data namespace (ABox individuals; aiw:<page-slug>) + native terms.
+  data: "https://ai-wiki.luisluna.dev/ontology/#"
+  # Vocabulary modules used by the compiler's prefix table.
+  modules:
+    biz: "https://musclepoints.com/ontology/biz#"
+    swe: "https://musclepoints.com/ontology/swe#"
+
+paths:
+  wiki_root: wiki
+
+ontology:
+  # TBox module files merged by merge-tbox.sh, in order; relative to ontology/.
+  tbox_modules:
+    - aiw.ttl
+    - swe.ttl
+    - biz.ttl
+    - alignments.ttl
+    - disjointness.ttl
+  shapes_file: aiw-shapes.ttl
+  lexicon_ulex: aiw-lexicon.ulex
+  merged_tbox: aiw-tbox.merged.ttl     # build artifact (merge-tbox.sh)
+  # Centralized ABox seeds concatenated into every whole-graph build:
+  #   countries.ttl        — shared country individuals (inherited, VCR-0001)
+  #   schema-concepts.ttl  — wiki/_schema domains/subcategories/tags as SKOS
+  #                          concept schemes (VCR-0002; regenerate with
+  #                          scripts/gen-schema-concepts.py after schema changes)
+  abox_seeds:
+    - seeds/countries.ttl
+    - seeds/schema-concepts.ttl
+
+compiler:
+  named_aliases: {}
+  # Unmapped class lemmas are minted as <this-prefix>:PascalCase and reported.
+  fallback_class_prefix: aiw
+
+build:
+  dir: /tmp/aiw-kg-build
+
+fuseki:
+  port: 3031
+  dataset: aiwiki
+  admin_password: aiw-dev-admin
+  container_name: aiw-fuseki
+  # MUST differ from the MUSCLE deployment (muscle-kg) — same-machine isolation.
+  compose_project: aiw-kg

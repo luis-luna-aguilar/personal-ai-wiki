@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# robot.jar needs Java 11+; the system-default java may be older. java-env.sh
+# resolves a suitable JDK and exports JAVA.
+source "$(dirname "$0")/java-env.sh"
+exec "$JAVA" -jar "$(dirname "$0")/../tools/robot.jar" "$@"

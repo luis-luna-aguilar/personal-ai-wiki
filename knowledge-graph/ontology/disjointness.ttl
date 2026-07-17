@@ -1,0 +1,91 @@
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix swe:    <https://musclepoints.com/ontology/swe#> .
+@prefix biz:    <https://musclepoints.com/ontology/biz#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix aiw:    <https://ai-wiki.luisluna.dev/ontology/#> .
+
+#####################################################################
+# Disjointness axioms — make type contradictions detectable
+#
+# Without these, an open-world reasoner cannot flag a node that is
+# mistyped as two incompatible things. This conservative partition
+# declares the top-level structural categories mutually disjoint, so
+# the reasoner reports an inconsistency if any node is asserted (or
+# inferred) to be more than one of them.
+#
+# Subclasses inherit the disjointness:
+#   - swe:Database, swe:Datalake  ⊑ swe:Datastore
+#   - swe:MonitoringTool          ⊑ schema:SoftwareApplication
+#   - fibo:Bank, org:FormalOrganization ⊑ org:Organization
+#
+# Conservative on purpose: classes that may legitimately overlap or
+# whose boundaries are still fuzzy (PricingStrategy, KPI, Concept,
+# Activity, Entity, MemberProgram, Certification, Role) are NOT
+# included yet. Widen via a VCR once a real need is observed.
+#####################################################################
+
+[] a owl:AllDisjointClasses ;
+   owl:members (
+     org:Organization
+     schema:SoftwareApplication
+     schema:Country
+     swe:API
+     swe:Datastore
+     swe:DeploymentEnvironment
+     swe:HostingPlatform
+   ) .
+
+#####################################################################
+# VCR 0012 — targeted pairs flagged during the pre-VCR-0011 backlog
+# review. Kept separate from the conservative list above rather than
+# folded in — each pair addresses a specific confusion found in this
+# VCR's research, not a claim that e.g. Activity is disjoint from
+# every member of the list above.
+#####################################################################
+
+[] a owl:AllDisjointClasses ;
+   owl:members ( swe:AiModel swe:Datastore ) .
+# An AI model is a computational artifact, not a data-holding store.
+
+[] a owl:AllDisjointClasses ;
+   owl:members ( prov:Activity schema:SoftwareApplication ) .
+# A process/activity is not a software artifact; covers biz:Process,
+# biz:ProcessStage, biz:VirtualSession, biz:ProtocolStep,
+# biz:DisputeProcess, swe:DeploymentProcess, swe:IncidentResponse,
+# and swe:OperatorAccountCreation (all rdfs:subClassOf prov:Activity)
+# by inheritance — none of them can also be typed SoftwareApplication.
+
+[] a owl:AllDisjointClasses ;
+   owl:members ( biz:Transaction biz:Configuration ) .
+# Both are "records of an event/state" in loose prose but never the
+# same instance — a redemption transaction is not a bank's applied
+# configuration.
+
+#####################################################################
+# VCR-0003 — native aiw: top-level classes are structurally distinct
+# entity types, admitted to the conservative partition above (an
+# omission the checker-review pass on the AI Wiki deployment flagged:
+# §1a of vocabulary-policy.md requires new top-level classes to
+# consider disjointness at admission time, not leave it undecided).
+# aiw:FoundationModel is intentionally NOT added here — it is
+# rdfs:subClassOf swe:AiModel and already inherits that class's
+# disjointness from swe:Datastore; whether a model can ever also be
+# dual-typed schema:SoftwareApplication is a genuine judgment call left
+# open rather than conservatively foreclosed.
+#####################################################################
+
+[] a owl:AllDisjointClasses ;
+   owl:members (
+     aiw:Benchmark
+     aiw:BenchmarkResult
+     aiw:LicenseModel
+     org:Organization
+     schema:SoftwareApplication
+     schema:Country
+   ) .
+# A benchmark, a dated benchmark result, and a license-model enum value
+# are each their own kind of thing — none is an organization, a piece
+# of software, or a country.

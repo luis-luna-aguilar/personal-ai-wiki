@@ -1,0 +1,117 @@
+@prefix : <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> rdf:type owl:Ontology ;
+                                                                                               owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/latest/FBC/FunctionalEntities/FinancialServicesEntities/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+rdfs:isDefinedBy rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#seeAlso
+rdfs:seeAlso rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/FunctionalBusinessEntity
+<https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/FunctionalBusinessEntity> rdf:type owl:Class ;
+                                                                                                              rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/FunctionalEntity> .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/FunctionalEntity
+<https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/FunctionalEntity> rdf:type owl:Class ;
+                                                                                                      rdfs:subClassOf <https://www.omg.org/spec/Commons/RolesAndCompositions/FunctionalRole> .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/Bank
+:Bank rdf:type owl:Class ;
+      rdfs:subClassOf :DepositoryInstitution ;
+      rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> ;
+      rdfs:label "bank" ;
+      rdfs:seeAlso <https://www.sec.gov/about/laws/ica40.pdf> ;
+      <http://www.w3.org/2004/02/skos/core#definition> "depository institution, usually a corporation, that accepts deposits, makes loans, pays checks, and performs related services, for individual members of the public, businesses or other organizations" ;
+      <https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom> "Barron's Dictionary of Banking Terms, Sixth Edition, 2012" .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/DepositoryInstitution
+:DepositoryInstitution rdf:type owl:Class ;
+                       rdfs:subClassOf :FinancialInstitution ;
+                       rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> ;
+                       rdfs:label "depository institution" ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "any financial institution engaged in the business of receiving demand deposits from the public or other institutions" ;
+                       <https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom> "12 U.S. Code Section 1813 - Definitions, see, for example, http://www.law.cornell.edu/uscode/text/12/1813" ,
+                                                                                           "https://www.fdic.gov/regulations/laws/rules/1000-400.html#fdic1000sec.3a"^^xsd:anyURI .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/FinancialInstitution
+:FinancialInstitution rdf:type owl:Class ;
+                      rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/FinancialServiceProvider> ;
+                      rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> ;
+                      rdfs:label "financial institution" ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "financial service provider identified as either a government agency or privately owned entity that collects funds from the public and from other institutions, and invests those funds in financial assets, such as loans, securities, bank deposits, and income-generating property" ;
+                      <https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom> "Barron's Dictionary of Banking Terms, Sixth Edition, 2012" ;
+                      <https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote> "Financial institutions are differentiated by the way they obtain and invest funds. Depository institutions accept public deposits, which are insured by the government against loss, and channel those deposits into lending activities. Non-depository institutions, such as brokerage firms, life insurance companies, pension funds, and investment companies, fund their investment activities directly from financial markets by selling securities to the public or by selling insurance policies, in the case of insurance companies." ;
+                      <https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym> "financial intermediary" .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/FinancialServiceProvider
+<https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/FinancialServiceProvider> rdf:type owl:Class ;
+                                                                                                                          rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/FunctionalBusinessEntity> ,
+                                                                                                                                          <https://www.omg.org/spec/Commons/Organizations/ServiceProvider> .
+
+
+###  https://www.omg.org/spec/Commons/Organizations/ServiceProvider
+<https://www.omg.org/spec/Commons/Organizations/ServiceProvider> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/FunctionalEntity> ,
+                                                                                 <https://www.omg.org/spec/Commons/PartiesAndSituations/AgentRole> ,
+                                                                                 <https://www.omg.org/spec/Commons/RolesAndCompositions/FunctionalRole> .
+
+
+###  https://www.omg.org/spec/Commons/PartiesAndSituations/AgentRole
+<https://www.omg.org/spec/Commons/PartiesAndSituations/AgentRole> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <https://www.omg.org/spec/Commons/RolesAndCompositions/Role> .
+
+
+###  https://www.omg.org/spec/Commons/RolesAndCompositions/FunctionalRole
+<https://www.omg.org/spec/Commons/RolesAndCompositions/FunctionalRole> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <https://www.omg.org/spec/Commons/RolesAndCompositions/Role> .
+
+
+###  https://www.omg.org/spec/Commons/RolesAndCompositions/Role
+<https://www.omg.org/spec/Commons/RolesAndCompositions/Role> rdf:type owl:Class ;
+                                                             rdfs:subClassOf owl:Thing .
+
+
+###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi

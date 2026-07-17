@@ -1,0 +1,14 @@
+https://schema.org/Country
+https://schema.org/DigitalDocument
+https://schema.org/HowToStep
+https://schema.org/MonetaryAmount
+https://schema.org/Person
+https://schema.org/PostalAddress
+https://schema.org/Product
+https://schema.org/PropertyValue
+https://schema.org/SoftwareApplication
+https://schema.org/State
+https://schema.org/foundingDate
+https://schema.org/location
+https://schema.org/position
+https://schema.org/provider

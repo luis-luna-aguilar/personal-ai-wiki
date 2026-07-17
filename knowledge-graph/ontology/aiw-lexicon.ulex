@@ -1,0 +1,448 @@
+% GENERATED from lexicon-map.yaml by gen-ulex.py — do not edit by hand.
+% 446 terms.
+noun_sg('api', 'api', neutr).
+noun_sg('bank', 'bank', neutr).
+noun_sg('bank-administrator', 'bank-administrator', human).
+noun_sg('banking-division', 'banking-division', neutr).
+noun_sg('campaign-manager', 'campaign-manager', neutr).
+noun_sg('certification', 'certification', neutr).
+tv_finsg('champions', 'champion'). tv_infpl('champion', 'champion').
+tv_finsg('has-authorized-activity', 'have-authorized-activity'). tv_infpl('have-authorized-activity', 'have-authorized-activity').
+noun_sg('notation', 'notation', neutr).
+noun_sg('client', 'client', neutr).
+noun_mass('commercial-banking', 'commercial-banking', neutr).
+noun_sg('company', 'company', neutr).
+noun_sg('concept', 'concept', neutr).
+noun_sg('conglomerate', 'conglomerate', neutr).
+noun_mass('corporate-finance', 'corporate-finance', neutr).
+noun_sg('dashboard', 'dashboard', neutr).
+noun_sg('database', 'database', neutr).
+noun_sg('datalake', 'datalake', neutr).
+noun_sg('datastore', 'datastore', neutr).
+tv_finsg('defines-user-role', 'define-user-role'). tv_infpl('define-user-role', 'define-user-role').
+noun_sg('deployment-environment', 'deployment-environment', neutr).
+noun_sg('digital-payment-solution', 'digital-payment-solution', neutr).
+noun_sg('digital-wallet', 'digital-wallet', neutr).
+noun_sg('file-manager', 'file-manager', neutr).
+noun_sg('financial-institution', 'financial-institution', neutr).
+tv_finsg('has-division', 'have-division'). tv_infpl('have-division', 'have-division').
+noun_sg('head-of-cards', 'head-of-cards', neutr).
+noun_sg('head-of-credit-card-loyalty-programs', 'head-of-credit-card-loyalty-programs', neutr).
+noun_sg('hosting-platform', 'hosting-platform', neutr).
+noun_sg('how-to', 'how-to', neutr).
+noun_sg('how-to-step', 'how-to-step', neutr).
+tv_finsg('includes', 'include'). tv_infpl('include', 'include').
+tv_finsg('includes', 'include'). tv_infpl('include', 'include').
+noun_mass('insurance', 'insurance', neutr).
+tv_finsg('integrates-with', 'integrate-with'). tv_infpl('integrate-with', 'integrate-with').
+tv_finsg('manages', 'manage'). tv_infpl('manage', 'manage').
+noun_sg('monitoring-tool', 'monitoring-tool', neutr).
+noun_sg('peer-to-peer-payment-platform', 'peer-to-peer-payment-platform', neutr).
+noun_sg('position', 'position', neutr).
+noun_sg('product', 'product', neutr).
+noun_sg('record', 'record', neutr).
+noun_mass('retail-banking', 'retail-banking', neutr).
+noun_sg('role', 'role', neutr).
+tv_finsg('sequences', 'sequence'). tv_infpl('sequence', 'sequence').
+noun_sg('software-application', 'software-application', neutr).
+tv_finsg('uses-datastore', 'use-datastore'). tv_infpl('use-datastore', 'use-datastore').
+noun_sg('user', 'user', human).
+noun_mass('wealth-management', 'wealth-management', neutr).
+noun_sg('ab-test', 'ab-test', neutr).
+noun_sg('ab-test-status', 'ab-test-status', neutr).
+noun_sg('access', 'access', neutr).
+noun_sg('access-control-service', 'access-control-service', neutr).
+noun_sg('access-password', 'access-password', neutr).
+tv_finsg('achieves', 'achieve'). tv_infpl('achieve', 'achieve').
+tv_finsg('activates', 'activate'). tv_infpl('activate', 'activate').
+tv_finsg('adjusts', 'adjust'). tv_infpl('adjust', 'adjust').
+tv_finsg('aggregates', 'aggregate'). tv_infpl('aggregate', 'aggregate').
+noun_sg('ai-logic', 'ai-logic', neutr).
+noun_sg('ai-model', 'ai-model', neutr).
+noun_sg('airline', 'airline', neutr).
+noun_sg('alerting-tool', 'alerting-tool', neutr).
+tv_finsg('aligns', 'align'). tv_infpl('align', 'align').
+noun_sg('alternative-payment-method', 'alternative-payment-method', neutr).
+noun_sg('analytics-pipeline', 'analytics-pipeline', neutr).
+tv_finsg('analyzes', 'analyze'). tv_infpl('analyze', 'analyze').
+noun_sg('api-first-framework', 'api-first-framework', neutr).
+noun_sg('api-response', 'api-response', neutr).
+noun_sg('api-specification', 'api-specification', neutr).
+tv_finsg('assigns', 'assign'). tv_infpl('assign', 'assign').
+tv_finsg('assists', 'assist'). tv_infpl('assist', 'assist').
+tv_finsg('is-associated-with', 'be-associated-with'). tv_infpl('be-associated-with', 'be-associated-with').
+noun_sg('atm', 'atm', neutr).
+tv_finsg('attracts', 'attract'). tv_infpl('attract', 'attract').
+noun_sg('auditing', 'auditing', neutr).
+noun_sg('authentication-service', 'authentication-service', neutr).
+noun_sg('bank-owned', 'bank-owned', neutr).
+noun_sg('bank-uniq-id', 'bank-uniq-id', neutr).
+noun_sg('banking-industry', 'banking-industry', neutr).
+noun_sg('industry', 'industry', neutr).
+noun_sg('base-configuration', 'base-configuration', neutr).
+noun_sg('behavioral-science', 'behavioral-science', neutr).
+tv_finsg('belongs-to', 'belong-to'). tv_infpl('belong-to', 'belong-to').
+tv_finsg('blocks', 'block'). tv_infpl('block', 'block').
+noun_sg('block-schema', 'block-schema', neutr).
+noun_sg('blog-manager', 'blog-manager', neutr).
+noun_sg('booking', 'booking', neutr).
+noun_sg('branch', 'branch', neutr).
+noun_sg('brand-book', 'brand-book', neutr).
+noun_sg('business-configuration', 'business-configuration', neutr).
+tv_finsg('buys', 'buy'). tv_infpl('buy', 'buy').
+noun_sg('cardholder', 'cardholder', human).
+noun_sg('cars', 'cars', neutr).
+noun_mass('cash', 'cash', neutr).
+noun_sg('cash-only', 'cash-only', neutr).
+noun_sg('category', 'category', neutr).
+noun_sg('change', 'change', neutr).
+noun_sg('channel', 'channel', neutr).
+noun_sg('channel-condition', 'channel-condition', neutr).
+noun_sg('chargeback', 'chargeback', neutr).
+noun_sg('co-branded', 'co-branded', neutr).
+noun_sg('column', 'column', neutr).
+tv_finsg('combines', 'combine'). tv_infpl('combine', 'combine').
+noun_mass('commercial-lending', 'commercial-lending', neutr).
+tv_finsg('compares', 'compare'). tv_infpl('compare', 'compare').
+tv_finsg('completes', 'complete'). tv_infpl('complete', 'complete').
+tv_finsg('conducts', 'conduct'). tv_infpl('conduct', 'conduct').
+noun_sg('configuration', 'configuration', neutr).
+noun_sg('configuration-form', 'configuration-form', neutr).
+tv_finsg('configures', 'configure'). tv_infpl('configure', 'configure').
+tv_finsg('confirms', 'confirm'). tv_infpl('confirm', 'confirm').
+tv_finsg('consumes-api', 'consume-api'). tv_infpl('consume-api', 'consume-api').
+tv_finsg('contains', 'contain'). tv_infpl('contain', 'contain').
+noun_sg('container-orchestrator', 'container-orchestrator', neutr).
+noun_sg('container-registry', 'container-registry', neutr).
+tv_finsg('controls', 'control'). tv_infpl('control', 'control').
+adj_itr('conversational', 'conversational').
+noun_sg('conversational-interface', 'conversational-interface', neutr).
+noun_sg('cost-efficiency', 'cost-efficiency', neutr).
+noun_sg('country-coverage', 'country-coverage', neutr).
+tv_finsg('creates', 'create'). tv_infpl('create', 'create').
+adj_itr('critical', 'critical').
+noun_sg('cruise-product', 'cruise-product', neutr).
+noun_sg('csv-upload', 'csv-upload', neutr).
+noun_sg('customer', 'customer', human).
+noun_sg('customer-value', 'customer-value', neutr).
+tv_finsg('customizes', 'customize'). tv_infpl('customize', 'customize').
+noun_mass('data', 'data', neutr).
+noun_sg('datalake-integration', 'datalake-integration', neutr).
+noun_sg('date-range', 'date-range', neutr).
+noun_sg('default-parameter', 'default-parameter', neutr).
+tv_finsg('defines', 'define'). tv_infpl('define', 'define').
+tv_finsg('delivers', 'deliver'). tv_infpl('deliver', 'deliver').
+noun_sg('demonstration', 'demonstration', neutr).
+noun_sg('department-store', 'department-store', neutr).
+tv_finsg('deploys', 'deploy'). tv_infpl('deploy', 'deploy').
+tv_finsg('deploys-in', 'deploy-in'). tv_infpl('deploy-in', 'deploy-in').
+tv_finsg('deploys-to', 'deploy-to'). tv_infpl('deploy-to', 'deploy-to').
+noun_sg('deployment-model', 'deployment-model', neutr).
+noun_sg('deployment-process', 'deployment-process', neutr).
+tv_finsg('describes', 'describe'). tv_infpl('describe', 'describe').
+noun_sg('destination', 'destination', neutr).
+tv_finsg('develops', 'develop'). tv_infpl('develop', 'develop').
+noun_sg('development-environment', 'development-environment', neutr).
+noun_sg('digital-asset', 'digital-asset', neutr).
+noun_sg('digital-innovation', 'digital-innovation', neutr).
+noun_sg('directory', 'directory', neutr).
+noun_sg('discount', 'discount', neutr).
+noun_sg('dispute-process', 'dispute-process', neutr).
+noun_sg('docker-image', 'docker-image', neutr).
+tv_finsg('downloads', 'download'). tv_infpl('download', 'download').
+noun_sg('dynamic-pricing', 'dynamic-pricing', neutr).
+noun_sg('dynamic-pricing-logic', 'dynamic-pricing-logic', neutr).
+noun_mass('e-commerce', 'e-commerce', neutr).
+noun_mass('education', 'education', neutr).
+noun_sg('email-confirmation', 'email-confirmation', neutr).
+noun_sg('email-service', 'email-service', neutr).
+tv_finsg('embeds', 'embed'). tv_infpl('embed', 'embed').
+tv_finsg('embeds-in', 'embed-in'). tv_infpl('embed-in', 'embed-in').
+tv_finsg('employs', 'employ'). tv_infpl('employ', 'employ').
+noun_sg('emerging-market', 'emerging-market', neutr).
+noun_sg('end-to-end-platform', 'end-to-end-platform', neutr).
+noun_sg('engagement', 'engagement', neutr).
+tv_finsg('establishes', 'establish'). tv_infpl('establish', 'establish').
+noun_sg('exclusive-discount', 'exclusive-discount', neutr).
+noun_sg('experiment-duration', 'experiment-duration', neutr).
+tv_finsg('exports', 'export'). tv_infpl('export', 'export').
+tv_finsg('exposes-api', 'expose-api'). tv_infpl('expose-api', 'expose-api').
+tv_finsg('facilitates', 'facilitate'). tv_infpl('facilitate', 'facilitate').
+tv_finsg('feeds', 'feed'). tv_infpl('feed', 'feed').
+adj_itr('fictional', 'fictional').
+tv_finsg('filters-by', 'filter-by'). tv_infpl('filter-by', 'filter-by').
+noun_mass('financial-services', 'financial-services', neutr).
+noun_sg('fintech-industry', 'fintech-industry', neutr).
+noun_sg('flights', 'flights', neutr).
+noun_sg('founding-year', 'founding-year', neutr).
+noun_mass('gaming', 'gaming', neutr).
+tv_finsg('generates', 'generate'). tv_infpl('generate', 'generate').
+noun_sg('git-flow', 'git-flow', neutr).
+noun_sg('governance-role', 'governance-role', neutr).
+tv_finsg('groups', 'group'). tv_infpl('group', 'group').
+noun_sg('guide', 'guide', neutr).
+noun_sg('habit', 'habit', neutr).
+tv_finsg('has-deployment-model', 'have-deployment-model'). tv_infpl('have-deployment-model', 'have-deployment-model').
+tv_finsg('has-integration-model', 'have-integration-model'). tv_infpl('have-integration-model', 'have-integration-model').
+noun_mass('healthcare', 'healthcare', neutr).
+tv_finsg('holds', 'hold'). tv_infpl('hold', 'hold').
+noun_mass('hospitality', 'hospitality', neutr).
+tv_finsg('is-hosted-on', 'be-hosted-on'). tv_infpl('be-hosted-on', 'be-hosted-on').
+noun_sg('hotels', 'hotels', neutr).
+tv_finsg('illustrates', 'illustrate'). tv_infpl('illustrate', 'illustrate').
+tv_finsg('imports', 'import'). tv_infpl('import', 'import').
+tv_finsg('improves', 'improve'). tv_infpl('improve', 'improve').
+noun_sg('incident-response', 'incident-response', neutr).
+tv_finsg('includes-module', 'include-module'). tv_infpl('include-module', 'include-module').
+tv_finsg('includes-stage', 'include-stage'). tv_infpl('include-stage', 'include-stage').
+tv_finsg('includes-step', 'include-step'). tv_infpl('include-step', 'include-step').
+adj_itr('independently-deployable', 'independently-deployable').
+noun_sg('infrastructure-as-code', 'infrastructure-as-code', neutr).
+noun_sg('integration', 'integration', neutr).
+noun_sg('integration-model', 'integration-model', neutr).
+noun_sg('intelligence-layer', 'intelligence-layer', neutr).
+adj_itr('invalid', 'invalid').
+tv_finsg('is-about', 'be-about'). tv_infpl('be-about', 'be-about').
+tv_finsg('is-derived-from', 'be-derived-from'). tv_infpl('be-derived-from', 'be-derived-from').
+tv_finsg('is-founded-by', 'be-founded-by'). tv_infpl('be-founded-by', 'be-founded-by').
+tv_finsg('is-used-in', 'be-used-in'). tv_infpl('be-used-in', 'be-used-in').
+tv_finsg('issues', 'issue'). tv_infpl('issue', 'issue').
+noun_sg('journey-mapping', 'journey-mapping', neutr).
+noun_sg('load-balancing', 'load-balancing', neutr).
+noun_sg('location-boundary', 'location-boundary', neutr).
+noun_sg('loyalty-program', 'loyalty-program', neutr).
+tv_finsg('lowers', 'lower'). tv_infpl('lower', 'lower').
+noun_sg('loyalty-program', 'loyalty-program', neutr).
+noun_sg('loyalty-stack', 'loyalty-stack', neutr).
+noun_sg('maas', 'maas', neutr).
+tv_finsg('maps', 'map'). tv_infpl('map', 'map').
+noun_sg('margin-control', 'margin-control', neutr).
+noun_sg('marketplace', 'marketplace', neutr).
+tv_finsg('maximizes', 'maximize'). tv_infpl('maximize', 'maximize').
+noun_sg('measurement-year', 'measurement-year', neutr).
+tv_finsg('meets-with', 'meet-with'). tv_infpl('meet-with', 'meet-with').
+noun_sg('mixed-payment', 'mixed-payment', neutr).
+noun_sg('mobile-app', 'mobile-app', neutr).
+noun_sg('mobile-embedded', 'mobile-embedded', neutr).
+noun_sg('metric-unit', 'metric-unit', neutr).
+noun_sg('module', 'module', neutr).
+tv_finsg('monitors', 'monitor'). tv_infpl('monitor', 'monitor').
+noun_sg('new-customer', 'new-customer', neutr).
+tv_finsg('occurs-in', 'occur-in'). tv_infpl('occur-in', 'occur-in').
+tv_finsg('offers', 'offer'). tv_infpl('offer', 'offer').
+noun_sg('online-payment-infrastructure', 'online-payment-infrastructure', neutr).
+tv_finsg('operates', 'operate'). tv_infpl('operate', 'operate').
+tv_finsg('operates-in', 'operate-in'). tv_infpl('operate-in', 'operate-in').
+noun_sg('operator-creation', 'operator-creation', neutr).
+tv_finsg('optimizes', 'optimize'). tv_infpl('optimize', 'optimize').
+adj_itr('optional', 'optional').
+tv_finsg('owns', 'own'). tv_infpl('own', 'own').
+noun_sg('payment-gateway', 'payment-gateway', neutr).
+noun_sg('payment-type', 'payment-type', neutr).
+noun_sg('payments-industry', 'payments-industry', neutr).
+adj_itr('pending', 'pending').
+adj_itr('optional', 'optional').
+noun_sg('perceived-value', 'perceived-value', neutr).
+tv_finsg('performs', 'perform'). tv_infpl('perform', 'perform').
+noun_sg('permission', 'permission', neutr).
+noun_sg('key-performance-indicator', 'key-performance-indicator', neutr).
+noun_sg('permanent', 'permanent', neutr).
+noun_sg('personalization', 'personalization', neutr).
+noun_sg('pharmacy', 'pharmacy', neutr).
+noun_sg('pii', 'pii', neutr).
+noun_sg('point-balance', 'point-balance', neutr).
+noun_sg('point-liability', 'point-liability', neutr).
+noun_sg('point-redemption', 'point-redemption', neutr).
+noun_sg('points-only', 'points-only', neutr).
+tv_finsg('precedes', 'precede'). tv_infpl('precede', 'precede').
+noun_sg('preference', 'preference', neutr).
+tv_finsg('prices', 'price'). tv_infpl('price', 'price').
+noun_sg('primary-channel', 'primary-channel', neutr).
+noun_sg('process', 'process', neutr).
+noun_sg('process-stage', 'process-stage', neutr).
+noun_sg('production-environment', 'production-environment', neutr).
+noun_sg('profitability', 'profitability', neutr).
+noun_sg('program-type', 'program-type', neutr).
+tv_finsg('projects', 'project'). tv_infpl('project', 'project').
+noun_sg('protocol-step', 'protocol-step', neutr).
+tv_finsg('provides', 'provide'). tv_infpl('provide', 'provide').
+noun_sg('provider-transaction', 'provider-transaction', neutr).
+noun_sg('publication-date', 'publication-date', neutr).
+tv_finsg('purchases-on', 'purchase-on'). tv_infpl('purchase-on', 'purchase-on').
+noun_sg('qa-environment', 'qa-environment', neutr).
+adj_itr('real', 'real').
+tv_finsg('receives', 'receive'). tv_infpl('receive', 'receive').
+tv_finsg('recommends', 'recommend'). tv_infpl('recommend', 'recommend').
+noun_sg('recommendation-trigger', 'recommendation-trigger', neutr).
+noun_sg('recording-tool', 'recording-tool', neutr).
+noun_sg('redemption-channel', 'redemption-channel', neutr).
+noun_sg('redemption-journey', 'redemption-journey', neutr).
+tv_finsg('reduces', 'reduce'). tv_infpl('reduce', 'reduce').
+tv_finsg('rejects', 'reject'). tv_infpl('reject', 'reject').
+tv_finsg('relates-to', 'relate-to'). tv_infpl('relate-to', 'relate-to').
+noun_sg('report', 'report', neutr).
+noun_sg('reporting-module', 'reporting-module', neutr).
+tv_finsg('requires', 'require'). tv_infpl('require', 'require').
+tv_finsg('restricts-by', 'restrict-by'). tv_infpl('restrict-by', 'restrict-by').
+noun_mass('retail', 'retail', neutr).
+noun_sg('retail-category', 'retail-category', neutr).
+noun_sg('retail-channel', 'retail-channel', neutr).
+noun_sg('reward', 'reward', neutr).
+noun_sg('rewards-platform', 'rewards-platform', neutr).
+noun_sg('route-price', 'route-price', neutr).
+tv_finsg('routes-to', 'route-to'). tv_infpl('route-to', 'route-to').
+noun_sg('sales-channel', 'sales-channel', neutr).
+noun_sg('sandbox-environment', 'sandbox-environment', neutr).
+tv_finsg('scales', 'scale'). tv_infpl('scale', 'scale').
+noun_sg('secrets-manager', 'secrets-manager', neutr).
+noun_sg('segment', 'segment', neutr).
+noun_sg('segment-mapping', 'segment-mapping', neutr).
+tv_finsg('selects', 'select'). tv_infpl('select', 'select').
+tv_finsg('sends', 'send'). tv_infpl('send', 'send').
+tv_finsg('serves', 'serve'). tv_infpl('serve', 'serve').
+tv_finsg('serves-industry', 'serve-industry'). tv_infpl('serve-industry', 'serve-industry').
+tv_finsg('sets', 'set'). tv_infpl('set', 'set').
+noun_sg('shared-responsibility-model', 'shared-responsibility-model', neutr).
+noun_sg('simulation-tool', 'simulation-tool', neutr).
+noun_sg('single-sign-on', 'single-sign-on', neutr).
+noun_sg('sku', 'sku', neutr).
+noun_sg('staging-environment', 'staging-environment', neutr).
+noun_sg('standalone-website', 'standalone-website', neutr).
+noun_sg('storage-technology', 'storage-technology', neutr).
+tv_finsg('stores', 'store'). tv_infpl('store', 'store').
+noun_sg('strategy-alert', 'strategy-alert', neutr).
+tv_finsg('structures', 'structure'). tv_infpl('structure', 'structure').
+noun_sg('subsidiary', 'subsidiary', neutr).
+noun_sg('supermarket', 'supermarket', neutr).
+tv_finsg('supports', 'support'). tv_infpl('support', 'support').
+noun_sg('support-tool', 'support-tool', neutr).
+tv_finsg('syncs-with', 'sync-with'). tv_infpl('sync-with', 'sync-with').
+noun_sg('system', 'system', neutr).
+noun_sg('targeted-incentive', 'targeted-incentive', neutr).
+noun_sg('taste', 'taste', neutr).
+noun_sg('technical-component', 'technical-component', neutr).
+noun_sg('technical-documentation', 'technical-documentation', neutr).
+noun_sg('technology', 'technology', neutr).
+noun_sg('temporary', 'temporary', neutr).
+noun_sg('tool', 'tool', neutr).
+tv_finsg('tracks', 'track'). tv_infpl('track', 'track').
+noun_sg('trading-platform', 'trading-platform', neutr).
+noun_sg('traffic-percentage', 'traffic-percentage', neutr).
+noun_sg('transaction', 'transaction', neutr).
+noun_sg('transactional-email', 'transactional-email', neutr).
+tv_finsg('transforms', 'transform'). tv_infpl('transform', 'transform').
+noun_sg('travel-agency', 'travel-agency', neutr).
+noun_sg('travel-assistant', 'travel-assistant', neutr).
+noun_sg('travel-channel', 'travel-channel', neutr).
+noun_sg('travel-platform', 'travel-platform', neutr).
+noun_sg('travel-redemption-engine', 'travel-redemption-engine', neutr).
+noun_sg('travel-vertical', 'travel-vertical', neutr).
+tv_finsg('triggers', 'trigger'). tv_infpl('trigger', 'trigger').
+noun_sg('troubleshooting', 'troubleshooting', neutr).
+noun_sg('two-factor-authentication', 'two-factor-authentication', neutr).
+adj_itr('upcoming', 'upcoming').
+adj_itr('updated', 'updated').
+noun_sg('uptime', 'uptime', neutr).
+noun_sg('usage-monitoring-tool', 'usage-monitoring-tool', neutr).
+tv_finsg('uses-product', 'use-product'). tv_infpl('use-product', 'use-product').
+noun_sg('user-interface', 'user-interface', neutr).
+tv_finsg('validates', 'validate'). tv_infpl('validate', 'validate').
+noun_sg('validity-period', 'validity-period', neutr).
+noun_sg('value-optimization', 'value-optimization', neutr).
+tv_finsg('views', 'view'). tv_infpl('view', 'view').
+noun_sg('virtual-prepaid-card', 'virtual-prepaid-card', neutr).
+noun_sg('virtual-session', 'virtual-session', neutr).
+noun_sg('web-portal', 'web-portal', neutr).
+noun_sg('welcome-email', 'welcome-email', neutr).
+noun_sg('with-agency', 'with-agency', neutr).
+noun_sg('without-agency', 'without-agency', neutr).
+noun_sg('ownership-stake', 'ownership-stake', neutr).
+tv_finsg('has-ownership-stake', 'have-ownership-stake'). tv_infpl('have-ownership-stake', 'have-ownership-stake').
+noun_sg('advisory-engagement', 'advisory-engagement', neutr).
+tv_finsg('has-advisory-engagement', 'have-advisory-engagement'). tv_infpl('have-advisory-engagement', 'have-advisory-engagement').
+tv_finsg('has-advisory-role', 'have-advisory-role'). tv_infpl('have-advisory-role', 'have-advisory-role').
+noun_sg('compliance-obligation', 'compliance-obligation', neutr).
+tv_finsg('has-compliance-obligation', 'have-compliance-obligation'). tv_infpl('have-compliance-obligation', 'have-compliance-obligation').
+tv_finsg('has-compliance-obligation-frequency', 'have-compliance-obligation-frequency'). tv_infpl('have-compliance-obligation-frequency', 'have-compliance-obligation-frequency').
+noun_sg('bank-account', 'bank-account', neutr).
+tv_finsg('has-bank-account', 'have-bank-account'). tv_infpl('have-bank-account', 'have-bank-account').
+tv_finsg('has-account-status', 'have-account-status'). tv_infpl('have-account-status', 'have-account-status').
+noun_sg('financing-instrument', 'financing-instrument', neutr).
+tv_finsg('has-financing-instrument', 'have-financing-instrument'). tv_infpl('have-financing-instrument', 'have-financing-instrument').
+tv_finsg('has-instrument-type', 'have-instrument-type'). tv_infpl('have-instrument-type', 'have-instrument-type').
+tv_finsg('has-signing-scope', 'have-signing-scope'). tv_infpl('have-signing-scope', 'have-signing-scope').
+noun_sg('corporate-document', 'corporate-document', neutr).
+tv_finsg('has-corporate-document', 'have-corporate-document'). tv_infpl('have-corporate-document', 'have-corporate-document').
+tv_finsg('has-broker-intermediary', 'have-broker-intermediary'). tv_infpl('have-broker-intermediary', 'have-broker-intermediary').
+tv_finsg('has-primary-contact', 'have-primary-contact'). tv_infpl('have-primary-contact', 'have-primary-contact').
+tv_finsg('has-authorized-signatory', 'have-authorized-signatory'). tv_infpl('have-authorized-signatory', 'have-authorized-signatory').
+tv_finsg('has-guarantor', 'have-guarantor'). tv_infpl('have-guarantor', 'have-guarantor').
+tv_finsg('has-beneficiary', 'have-beneficiary'). tv_infpl('have-beneficiary', 'have-beneficiary').
+tv_finsg('has-legal-form', 'have-legal-form'). tv_infpl('have-legal-form', 'have-legal-form').
+tv_finsg('has-account-holder-bank', 'have-account-holder-bank'). tv_infpl('have-account-holder-bank', 'have-account-holder-bank').
+noun_sg('patent', 'patent', neutr).
+noun_sg('person', 'person', neutr).
+noun_sg('membership', 'membership', neutr).
+tv_finsg('has-role', 'have-role'). tv_infpl('have-role', 'have-role').
+tv_finsg('has-organization', 'have-organization'). tv_infpl('have-organization', 'have-organization').
+tv_finsg('has-member', 'have-member'). tv_infpl('have-member', 'have-member').
+noun_sg('incorporation-date', 'incorporation-date', neutr).
+noun_sg('fiscal-year-end', 'fiscal-year-end', neutr).
+noun_sg('deadline-description', 'deadline-description', neutr).
+noun_sg('account-number', 'account-number', neutr).
+noun_sg('iban', 'iban', neutr).
+noun_sg('swift-code', 'swift-code', neutr).
+noun_sg('account-currency', 'account-currency', neutr).
+noun_sg('interest-rate-description', 'interest-rate-description', neutr).
+noun_sg('card-last-four-digits', 'card-last-four-digits', neutr).
+noun_sg('patent-number', 'patent-number', neutr).
+noun_sg('patent-issue-date', 'patent-issue-date', neutr).
+noun_sg('aba-routing-number', 'aba-routing-number', neutr).
+noun_sg('beneficiary-reference', 'beneficiary-reference', neutr).
+noun_sg('dtcc-clearing-number', 'dtcc-clearing-number', neutr).
+noun_sg('cci', 'cci', neutr).
+noun_sg('email', 'email', neutr).
+noun_sg('telephone', 'telephone', neutr).
+noun_sg('date-created', 'date-created', neutr).
+noun_sg('url', 'url', neutr).
+noun_sg('ownership-percentage', 'ownership-percentage', neutr).
+tv_finsg('holds', 'hold'). tv_infpl('hold', 'hold').
+tv_finsg('is-assigned-by', 'be-assigned-by'). tv_infpl('be-assigned-by', 'be-assigned-by').
+tv_finsg('is-held-by', 'be-held-by'). tv_infpl('be-held-by', 'be-held-by').
+tv_finsg('is-provided-by', 'be-provided-by'). tv_infpl('be-provided-by', 'be-provided-by').
+tv_finsg('is-regulated-by', 'be-regulated-by'). tv_infpl('be-regulated-by', 'be-regulated-by').
+noun_sg('director', 'director', neutr).
+noun_sg('president', 'president', neutr).
+noun_sg('secretary', 'secretary', neutr).
+noun_sg('treasurer', 'treasurer', neutr).
+noun_sg('administrator', 'administrator', neutr).
+noun_sg('manager', 'manager', neutr).
+noun_sg('managing-member', 'managing-member', neutr).
+noun_sg('gerente-general', 'gerente-general', neutr).
+noun_sg('ceo', 'ceo', neutr).
+noun_sg('cto', 'cto', neutr).
+noun_sg('apoderado-especial', 'apoderado-especial', neutr).
+noun_sg('legal-counsel', 'legal-counsel', neutr).
+noun_sg('tax-advisor', 'tax-advisor', neutr).
+noun_sg('accounting-advisor', 'accounting-advisor', neutr).
+noun_sg('registered-agent', 'registered-agent', neutr).
+noun_sg('transfer-pricing-advisor', 'transfer-pricing-advisor', neutr).
+noun_sg('corporate-secretarial', 'corporate-secretarial', neutr).
+noun_sg('investment-manager', 'investment-manager', neutr).
+noun_sg('annual', 'annual', neutr).
+noun_sg('monthly', 'monthly', neutr).
+noun_sg('semi-annual', 'semi-annual', neutr).
+noun_sg('ongoing', 'ongoing', neutr).
+noun_sg('once', 'once', neutr).
+noun_sg('per-movement', 'per-movement', neutr).
+noun_sg('active', 'active', neutr).
+noun_sg('dormant', 'dormant', neutr).
+noun_sg('closed-pending', 'closed-pending', neutr).
+noun_sg('revolving-credit-line', 'revolving-credit-line', neutr).
+noun_sg('overdraft-facility', 'overdraft-facility', neutr).
+noun_sg('standby-letter-of-credit', 'standby-letter-of-credit', neutr).
+noun_sg('working-capital-facility', 'working-capital-facility', neutr).
+noun_sg('intercompany-loan', 'intercompany-loan', neutr).
+noun_sg('credit-card', 'credit-card', neutr).
+noun_sg('joint', 'joint', neutr).
+noun_sg('joint-and-several', 'joint-and-several', neutr).

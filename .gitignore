@@ -34,3 +34,13 @@ agents/mcp/config.local.toml
 
 # temp files
 tmp/
+
+# Knowledge Graph build artifacts (merged from knowledge-graph/kg-layer.gitignore.snippet
+# at deploy, names aligned to knowledge-graph/kg.config.yaml → ontology.*)
+knowledge-graph/tools/robot.jar
+knowledge-graph/tools/apache-jena-*/
+knowledge-graph/ontology/aiw-tbox.merged.ttl
+knowledge-graph/ontology/extracts/*-module.ttl
+knowledge-graph/scripts/__pycache__/
+knowledge-graph/scripts/lexicon.gen.ulex
+knowledge-graph/docker/.env

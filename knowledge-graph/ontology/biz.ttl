@@ -1,0 +1,1363 @@
+@prefix biz:    <https://musclepoints.com/ontology/biz#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix fibo-fnd-utl-alx: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> .
+@prefix swe:    <https://musclepoints.com/ontology/swe#> .
+@prefix travel: <https://musclepoints.com/ontology/travel#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix fibo-fbc-fct-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+
+<https://musclepoints.com/ontology/biz> a owl:Ontology ;
+    rdfs:label "Business Vocabulary"@en ;
+    rdfs:comment "A domain-named, reusable vocabulary for general commercial relations that have no upstream home (client-of, uses-product, priority rank). Authored by MUSCLE but free of MUSCLE-specific business logic — it would apply to any company. See knowledge-graph/governance/change-requests/0002-business-vocab.md."@en ;
+    owl:versionInfo "0.2.0" .
+
+#####################################################################
+# External class stubs — full definitions live in upstream extracts.
+#####################################################################
+
+org:Organization           a owl:Class .
+org:Role                   a owl:Class .
+schema:SoftwareApplication a owl:Class .
+schema:Product             a owl:Class .
+fibo-fnd-utl-alx:KeyPerformanceIndicator a owl:Class .
+swe:ReportingModule        a owl:Class .
+fibo-fbc-fct-fse:Bank      a owl:Class .
+
+#####################################################################
+# Commercial relations
+#####################################################################
+
+biz:clientOf a owl:ObjectProperty ;
+    rdfs:label "client of"@en ;
+    rdfs:comment "The subject organization is an ongoing commercial client of the object organization. Researched: FIBO has Customer/Client classes but no inverse property; schema:customer is transactional (domain Order); GoodRelations models offering eligibility, not ongoing client-of-provider relationships."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range org:Organization ;
+    owl:inverseOf biz:hasClient .
+
+biz:hasClient a owl:ObjectProperty ;
+    rdfs:label "has client"@en ;
+    rdfs:comment "The subject organization has the object organization as an ongoing commercial client."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range org:Organization ;
+    owl:inverseOf biz:clientOf .
+
+biz:usesProduct a owl:ObjectProperty ;
+    rdfs:label "uses product"@en ;
+    rdfs:comment "The organization uses or has deployed a software application as a product. Researched: schema.org has no direct 'uses'/'deploys' property on Organization; schema:UseAction is an Action-pattern workaround; DOAP has no adopter property."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range schema:SoftwareApplication .
+
+biz:hasPriorityRank a owl:DatatypeProperty ;
+    rdfs:label "has priority rank"@en ;
+    rdfs:comment "A numeric precedence weight determining which item applies when several qualify simultaneously (lower-or-higher precedence per the using context's fallback logic). Domain intentionally left open so the term stays general; any MUSCLE-specific constraint (e.g. that a PricingStrategy must carry one) is expressed by a SHACL shape in the MUSCLE layer, not here."@en ;
+    rdfs:range xsd:integer .
+
+#####################################################################
+# Business and Industry Modalities (as Concepts)
+#####################################################################
+
+biz:retail-banking a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Retail Banking"@en ;
+    skos:prefLabel "Retail Banking"@en ;
+    skos:definition "Banking services oriented towards individual consumers rather than large corporations, including checking and savings accounts, mortgages, credit cards, and personal loans."@en .
+
+biz:corporate-finance a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Corporate Finance"@en ;
+    skos:prefLabel "Corporate Finance"@en ;
+    skos:definition "The area of finance dealing with the sources of funding and the capital structure of corporations, the actions that managers take to increase the value of the company to the shareholders, and the tools and analysis used to allocate financial resources."@en .
+
+biz:wealth-management a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Wealth Management"@en ;
+    skos:prefLabel "Wealth Management"@en ;
+    skos:definition "An investment-advisory discipline which incorporates financial planning, investment portfolio management, and a number of aggregated financial services."@en .
+
+biz:commercial-banking a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Commercial Banking"@en ;
+    skos:prefLabel "Commercial Banking"@en ;
+    skos:definition "Banking services oriented towards businesses and corporate entities, including lending, treasury management, and commercial credit."@en .
+
+biz:insurance a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Insurance"@en ;
+    skos:prefLabel "Insurance"@en ;
+    skos:definition "The business of providing contracts of insurance, offering financial protection or reimbursement against losses."@en .
+
+#####################################################################
+# KPI & Metric Decoupling Framework
+#####################################################################
+
+biz:MetricDirection a owl:Class ;
+    rdfs:label "Metric Direction"@en ;
+    rdfs:comment "A class representing the direction of movement of a measured metric (Increase or Decrease)."@en .
+
+biz:Increase a biz:MetricDirection ;
+    rdfs:label "Increase"@en .
+
+biz:Decrease a biz:MetricDirection ;
+    rdfs:label "Decrease"@en .
+
+biz:associatedMetric a owl:ObjectProperty ;
+    rdfs:label "associated metric"@en ;
+    rdfs:comment "Links a KPI measurement to the abstract SKOS Concept representing the metric itself."@en ;
+    rdfs:range skos:Concept .
+
+biz:changeDirection a owl:ObjectProperty ;
+    rdfs:label "change direction"@en ;
+    rdfs:comment "Links a KPI measurement to its MetricDirection (Increase or Decrease)."@en ;
+    rdfs:range biz:MetricDirection .
+
+biz:measuredInYear a owl:DatatypeProperty ;
+    rdfs:label "measured in year"@en ;
+    rdfs:comment "The specific calendar year in which the KPI metric was measured."@en ;
+    rdfs:range xsd:integer .
+
+biz:metricValue a owl:DatatypeProperty ;
+    rdfs:label "metric value"@en ;
+    rdfs:comment "The quantitative value of the metric change (e.g., 0.14 for 14%, 1.3 for 1.3x). Always paired with biz:metricUnit."@en ;
+    rdfs:range xsd:decimal .
+
+biz:metricUnit a owl:DatatypeProperty ;
+    rdfs:label "metric unit"@en ;
+    rdfs:comment "The unit or scale of the biz:metricValue. Controlled enumeration: 'percentage' (0–1 scale), 'multiplier' (ratio relative to baseline), 'currency-USD', 'currency-local'."@en ;
+    rdfs:range xsd:string .
+
+#####################################################################
+# VCR 0011 — classes and properties admitted from the full-wiki ACE harvest
+#####################################################################
+
+biz:AgencyModality a owl:Class ;
+    rdfs:label "Agency Modality"@en ;
+    rdfs:comment "Whether a white-label travel platform's integration runs through a travel agency or direct. A commercial distribution-relationship choice, not a technical one — stays biz: even though DeploymentModel/IntegrationModel (the same 'MUSCLE product config' shape) moved to swe:. Closed enumeration — see VCR 0011."@en ;
+    owl:oneOf ( biz:with-agency biz:without-agency ) .
+
+biz:with-agency a owl:NamedIndividual, biz:AgencyModality ;
+    rdfs:label "With Agency"@en .
+
+biz:without-agency a owl:NamedIndividual, biz:AgencyModality ;
+    rdfs:label "Without Agency"@en .
+
+biz:BaseConfiguration a owl:Class ;
+    rdfs:subClassOf biz:Configuration ;
+    rdfs:label "Base Configuration"@en ;
+    rdfs:comment "The fallback pricing configuration assigned to a user who belongs to no segment, or whose segment has no active strategy. A generic default/fallback-configuration pattern, not MUSCLE-specific. See VCR 0011. Subclassed under biz:Configuration (VCR 0012) — the general class any applied config belongs to."@en .
+
+biz:Cardholder a owl:Class ;
+    rdfs:label "Cardholder"@en ;
+    rdfs:comment "A bank's end-user who holds and uses loyalty points and receives discounts. See VCR 0011."@en .
+
+biz:SalesChannel a owl:Class ;
+    rdfs:label "Sales Channel"@en ;
+    rdfs:comment "How a company reaches its customers commercially (e.g. AstroPay operates in a sales channel). Distinct from biz:RedemptionChannel, which is how a cardholder redeems loyalty points — a different concept despite the name similarity. See VCR 0011."@en .
+
+biz:Customer a owl:Class ;
+    rdfs:label "Customer"@en ;
+    rdfs:comment "A bank's end-user in an acquisition context. Distinct from biz:Cardholder (a loyalty-specific role), though likely the same underlying person. See VCR 0011."@en .
+
+biz:Discount a owl:Class ;
+    rdfs:label "Discount"@en ;
+    rdfs:comment "A cash/points discount a partner merchant offers a cardholder, which can trigger a swe:UIComponent notification. See VCR 0011."@en .
+
+biz:LoyaltyProgramType a owl:Class ;
+    rdfs:label "Loyalty Program Type"@en ;
+    rdfs:comment "Loyalty-card program ownership structure. Renamed from the too-generic 'ProgramType' — see VCR 0011. Closed enumeration."@en ;
+    owl:oneOf ( biz:bank-owned biz:co-branded ) .
+
+biz:bank-owned a owl:NamedIndividual, skos:Concept, biz:LoyaltyProgramType ;
+    rdfs:label "Bank-Owned"@en ;
+    rdfs:comment "A loyalty program owned directly by the bank."@en ;
+    skos:prefLabel "Bank-Owned"@en ;
+    skos:definition "A loyalty program owned and operated directly by the bank, as opposed to jointly with a partner."@en .
+
+biz:co-branded a owl:NamedIndividual, skos:Concept, biz:LoyaltyProgramType ;
+    rdfs:label "Co-Branded"@en ;
+    rdfs:comment "A loyalty program co-branded with a partner."@en ;
+    skos:prefLabel "Co-Branded"@en ;
+    skos:definition "A loyalty program jointly branded and operated with a partner organization, as opposed to owned solely by the bank."@en .
+
+biz:PaymentType a owl:Class ;
+    rdfs:label "Payment Type"@en ;
+    rdfs:comment "How a redemption/transaction is funded. Closed enumeration — see VCR 0011."@en ;
+    owl:oneOf ( biz:points-only biz:mixed-payment biz:cash-only ) .
+
+biz:points-only a owl:NamedIndividual, biz:PaymentType ;
+    rdfs:label "Points Only"@en ;
+    rdfs:comment "A redemption funded entirely by loyalty points."@en .
+
+biz:mixed-payment a owl:NamedIndividual, skos:Concept, biz:PaymentType ;
+    rdfs:label "Mixed Payment"@en ;
+    rdfs:comment "A redemption funded by a mix of points and cash."@en ;
+    skos:prefLabel "Mixed Payment"@en ;
+    skos:altLabel "Points + Cash"@en ;
+    skos:definition "A redemption transaction where the customer uses a combination of loyalty points and cash to complete the purchase."@en .
+
+biz:cash-only a owl:NamedIndividual, biz:PaymentType ;
+    rdfs:label "Cash Only"@en ;
+    rdfs:comment "A redemption funded entirely in cash."@en .
+
+biz:RedemptionChannel a owl:Class ;
+    rdfs:label "Redemption Channel"@en ;
+    rdfs:comment "Which channel a cardholder redeems loyalty points through: travel or retail. See VCR 0011."@en ;
+    owl:oneOf ( biz:travel-channel biz:retail-channel ) .
+
+biz:travel-channel a owl:NamedIndividual, biz:RedemptionChannel ;
+    rdfs:label "Travel Channel"@en .
+
+biz:retail-channel a owl:NamedIndividual, biz:RedemptionChannel ;
+    rdfs:label "Retail Channel"@en .
+
+biz:Segment a owl:Class ;
+    rdfs:label "Segment"@en ;
+    rdfs:comment "A named group of users, defined via CSV upload, that a pricing-strategy targets exactly one of. See VCR 0011."@en .
+
+biz:Transaction a owl:Class ;
+    rdfs:label "Transaction"@en ;
+    rdfs:comment "A point-redemption/purchase event during which segment and pricing-strategy rules apply. See VCR 0011."@en .
+
+biz:TravelVertical a owl:Class ;
+    rdfs:label "Travel Vertical"@en ;
+    rdfs:comment "Which travel product line a booking flow routes to. See VCR 0011. Amended by VCR 0012 to add biz:cruises — cruise-product was found to be a missing member of this closed enumeration, not a new class."@en ;
+    owl:oneOf ( biz:flights biz:hotels biz:cars biz:cruises ) .
+
+biz:flights a owl:NamedIndividual, biz:TravelVertical ;
+    rdfs:label "Flights"@en .
+
+biz:hotels a owl:NamedIndividual, biz:TravelVertical ;
+    rdfs:label "Hotels"@en .
+
+biz:cars a owl:NamedIndividual, biz:TravelVertical ;
+    rdfs:label "Cars"@en .
+
+biz:cruises a owl:NamedIndividual, biz:TravelVertical ;
+    rdfs:label "Cruises"@en ;
+    skos:prefLabel "Cruises"@en ;
+    skos:definition "The cruise-booking travel vertical: sea-voyage travel products offered alongside flights, hotels, and cars."@en .
+
+biz:sku a skos:Concept ;
+    rdfs:label "SKU"@en ;
+    skos:prefLabel "SKU"@en ;
+    skos:altLabel "Stock Keeping Unit"@en ;
+    skos:definition "A retail stock-identifier concept, inherited verbatim from the source project's biz: module (VCR-0001) — not tied to that project's pricing-strategy vocabulary, which was not carried over. Possible future reuse of schema:gtin, unresolved."@en .
+
+biz:assigns a owl:ObjectProperty ;
+    rdfs:label "assigns"@en ;
+    rdfs:comment "The subject assigns the object to something else (e.g. a bank-administrator assigns a segment to a user; the system assigns a base-configuration as fallback)."@en .
+
+biz:belongsToSegment a owl:ObjectProperty ;
+    rdfs:label "belongs to segment"@en ;
+    rdfs:comment "A user belongs to a segment, or to none (triggering base-configuration fallback)."@en ;
+    rdfs:domain org:Role ;
+    rdfs:range biz:Segment .
+
+biz:buys a owl:ObjectProperty ;
+    rdfs:label "buys"@en ;
+    rdfs:comment "The subject purchases the object (retail context)."@en .
+
+biz:creates a owl:ObjectProperty ;
+    rdfs:label "creates"@en ;
+    rdfs:comment "The subject brings the object into existence (e.g. a bank-administrator creates a pricing-strategy or a user)."@en .
+
+biz:defines a owl:ObjectProperty ;
+    rdfs:label "defines"@en ;
+    rdfs:comment "The subject specifies the object's configuration (e.g. a csv-upload defines a segment)."@en .
+
+biz:groups a owl:ObjectProperty ;
+    rdfs:label "groups"@en ;
+    rdfs:comment "The subject collects multiple objects together (e.g. a segment groups users; a loyalty-hub groups rewards)."@en .
+
+biz:offers a owl:ObjectProperty ;
+    rdfs:label "offers"@en ;
+    rdfs:comment "The subject makes the object available (a business line, a product, a discount) — an organization to its market, or a software application to its users. Domain widened under VCR 0015 after White-Label-Travel-Platform's own product-catalog facts (inventory, cruises, packages) surfaced a HermiT disjointness violation against the original Organization-only domain."@en ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( org:Organization schema:SoftwareApplication ) ] ;
+    rdfs:range skos:Concept .
+
+biz:operatesIn a owl:ObjectProperty ;
+    rdfs:label "operates in"@en ;
+    rdfs:comment "The subject organization operates in the object geography, industry, or channel."@en ;
+    rdfs:domain org:Organization .
+
+biz:owns a owl:ObjectProperty ;
+    rdfs:label "owns"@en ;
+    rdfs:comment "The subject organization owns the object asset or system."@en ;
+    rdfs:domain org:Organization .
+
+biz:performs a owl:ObjectProperty ;
+    rdfs:label "performs"@en ;
+    rdfs:comment "The subject carries out the object action (e.g. a user performs two-factor-authentication; MUSCLE performs troubleshooting)."@en .
+
+biz:configures a owl:ObjectProperty ;
+    rdfs:label "configures"@en ;
+    rdfs:comment "The subject sets a configuration value on the object (e.g. a bank-administrator configures a pricing-strategy's name/modality/fiat-value-reference)."@en .
+
+biz:tracks a owl:ObjectProperty ;
+    rdfs:label "tracks"@en ;
+    rdfs:comment "The subject reporting surface tracks the object KPI."@en ;
+    rdfs:range fibo-fnd-utl-alx:KeyPerformanceIndicator .
+
+biz:subsidiaryOf a owl:ObjectProperty ;
+    rdfs:label "subsidiary of"@en ;
+    rdfs:comment "The subject organization is a corporate subsidiary of the object organization."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range org:Organization .
+
+biz:bankUniqId a owl:DatatypeProperty ;
+    rdfs:label "bank unique ID"@en ;
+    rdfs:comment "A user's unique bank-assigned identifier; every csv-upload must contain exactly one such column."@en ;
+    rdfs:domain org:Role ;
+    rdfs:range xsd:string .
+
+biz:filtersBy a owl:ObjectProperty ;
+    rdfs:label "filters by"@en ;
+    rdfs:comment "A reporting module's data can be filtered by this dimension (e.g. category, date range). Range intentionally left open (owl:Thing) — it spans multiple unrelated enum/class types. The source project this property was inherited from (VCR-0001) validated a closed filter set via a shape not carried over here; no equivalent shape has been written in this deployment yet."@en ;
+    rdfs:domain swe:ReportingModule .
+
+#####################################################################
+# VCR 0012 — classes admitted from the pre-VCR-0011 backlog review
+#####################################################################
+
+#####################################################################
+# VCR 0012 — industry/business-line tags (skos:Concept), same shape
+# as the VCR-0002 block above (biz:retail-banking etc.)
+#####################################################################
+
+biz:cash a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Cash"@en ;
+    skos:prefLabel "Cash"@en ;
+    skos:definition "A payment component consisting of real-world currency, as opposed to loyalty points, used in a mixed-payment redemption."@en .
+
+biz:commercial-lending a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Commercial Lending"@en ;
+    skos:prefLabel "Commercial Lending"@en ;
+    skos:definition "The business of extending credit and loans to businesses and corporate entities, as opposed to individual consumers."@en .
+
+biz:department-store a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Department Store"@en ;
+    skos:prefLabel "Department Store"@en ;
+    skos:definition "A large retail establishment offering a wide variety of merchandise organized into separate departments."@en .
+
+biz:digital-innovation a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Digital Innovation"@en ;
+    skos:prefLabel "Digital Innovation"@en ;
+    skos:definition "The application of new digital technologies and approaches to improve or transform a bank's products and customer experience."@en .
+
+biz:e-commerce a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "E-Commerce"@en ;
+    skos:prefLabel "E-Commerce"@en ;
+    skos:definition "The buying and selling of goods or services, and the transfer of money, over the internet."@en .
+
+biz:education a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Education"@en ;
+    skos:prefLabel "Education"@en ;
+    skos:definition "The industry sector encompassing schools, universities, and other institutions providing instruction or training."@en .
+
+biz:financial-services a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Financial Services"@en ;
+    skos:prefLabel "Financial Services"@en ;
+    skos:definition "The industry sector encompassing economic services provided by the finance industry, including retail banking, insurance, and wealth management."@en .
+
+biz:fintech-industry a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Fintech Industry"@en ;
+    skos:prefLabel "Fintech Industry"@en ;
+    skos:definition "The industry sector applying technology to improve and automate the delivery and use of financial services."@en .
+
+biz:gaming a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Gaming"@en ;
+    skos:prefLabel "Gaming"@en ;
+    skos:definition "The industry sector encompassing video games, online gaming, and gambling entertainment."@en .
+
+biz:trading-platform a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Trading Platform"@en ;
+    skos:prefLabel "Trading Platform"@en ;
+    skos:definition "The industry sector encompassing venues and platforms for trading financial instruments such as stocks, currencies, or commodities."@en .
+
+biz:healthcare a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Healthcare"@en ;
+    skos:prefLabel "Healthcare"@en ;
+    skos:definition "The industry sector encompassing the maintenance or improvement of health via the prevention, diagnosis, and treatment of illness."@en .
+
+biz:hospitality a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Hospitality"@en ;
+    skos:prefLabel "Hospitality"@en ;
+    skos:definition "The industry sector encompassing lodging, food and beverage service, event planning, and tourism."@en .
+
+biz:payments-industry a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Payments Industry"@en ;
+    skos:prefLabel "Payments Industry"@en ;
+    skos:definition "The industry sector encompassing the processing and settlement of financial transactions between parties."@en .
+
+biz:pharmacy a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Pharmacy"@en ;
+    skos:prefLabel "Pharmacy"@en ;
+    skos:definition "A retail-vertical sub-tag for stores primarily dispensing prescription medication and related health products."@en .
+
+biz:retail a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Retail"@en ;
+    skos:prefLabel "Retail"@en ;
+    skos:definition "The industry sector encompassing the sale of goods directly to consumers."@en .
+
+biz:supermarket a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Supermarket"@en ;
+    skos:prefLabel "Supermarket"@en ;
+    skos:definition "A large self-service retail store selling a wide range of food and household products."@en .
+
+biz:banking-industry a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Banking Industry"@en ;
+    skos:prefLabel "Banking Industry"@en ;
+    skos:definition "The industry sector encompassing deposit-taking, lending, and related financial intermediation services provided by banks."@en .
+
+biz:behavioral-science a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "Behavioral Science"@en ;
+    skos:prefLabel "Behavioral Science"@en ;
+    skos:definition "The academic field studying human decision-making, habits, and behavior; not MUSCLE-specific."@en .
+
+
+# Banking / retail / commercial — `biz:` (12)
+
+biz:AlternativePaymentMethod a owl:Class ;
+    rdfs:label "Alternative Payment Method"@en ;
+    rdfs:comment "A local, non-card payment method."@en .
+
+biz:Branch a owl:Class ;
+    rdfs:label "Branch"@en ;
+    rdfs:comment "A physical bank branch location."@en .
+
+biz:Chargeback a owl:Class ;
+    rdfs:label "Chargeback"@en ;
+    rdfs:comment "A reversal of a card transaction disputed by the cardholder or issuer."@en .
+
+biz:ChannelRestriction a owl:Class ;
+    rdfs:label "Channel Restriction"@en ;
+    rdfs:comment "A restriction that gates a redemption channel."@en .
+
+biz:LocationBoundary a owl:Class ;
+    rdfs:label "Location Boundary"@en ;
+    rdfs:comment "A geographic boundary restricting where a hotel strategy applies."@en .
+
+biz:RetailCategory a owl:Class ;
+    rdfs:label "Retail Category"@en ;
+    rdfs:comment "A product category used to scope a retail restriction."@en .
+
+biz:VirtualPrepaidCard a owl:Class ;
+    rdfs:label "Virtual Prepaid Card"@en ;
+    rdfs:comment "A virtual prepaid card product."@en .
+
+biz:DefaultParameter a owl:Class ;
+    rdfs:label "Default Parameter"@en ;
+    rdfs:comment "A default setting established via a configuration form."@en .
+
+biz:Configuration a owl:Class ;
+    rdfs:label "Configuration"@en ;
+    rdfs:comment "An applied set of settings for a bank's deployment."@en .
+
+biz:ConfigurationForm a owl:Class ;
+    rdfs:label "Configuration Form"@en ;
+    rdfs:comment "The intake form a bank completes to supply its configuration."@en .
+
+biz:EmergingMarket a owl:Class ;
+    rdfs:label "Emerging Market"@en ;
+    rdfs:comment "A market MUSCLE's product targets as an emerging economy."@en .
+
+# Pricing / business metrics — `biz:` (13)
+
+biz:CostEfficiency a owl:Class ;
+    rdfs:label "Cost Efficiency"@en ;
+    rdfs:comment "A measure of cost efficiency aligned against customer value."@en .
+
+biz:CustomerValue a owl:Class ;
+    rdfs:label "Customer Value"@en ;
+    rdfs:comment "The value delivered to a customer, aligned against cost efficiency."@en .
+
+biz:Engagement a owl:Class ;
+    rdfs:label "Engagement"@en ;
+    rdfs:comment "Customer engagement across channels, personalized and optimized. Moved here from Bucket A — it's a distinct metric, same shape as `cost-efficiency`/`customer-value`/`perceived-value`, not a duplicate of either."@en .
+
+biz:MarginControl a owl:Class ;
+    rdfs:label "Margin Control"@en ;
+    rdfs:comment "The practice of managing program profitability margins."@en .
+
+biz:PerceivedValue a owl:Class ;
+    rdfs:label "Perceived Value"@en ;
+    rdfs:comment "The perceived value of a loyalty program to its members."@en .
+
+biz:PointBalance a owl:Class ;
+    rdfs:label "Point Balance"@en ;
+    rdfs:comment "A user's current loyalty-point balance."@en .
+
+biz:PointLiability a owl:Class ;
+    rdfs:label "Point Liability"@en ;
+    rdfs:comment "The bank's outstanding financial liability from issued points."@en .
+
+biz:PointRedemption a owl:Class ;
+    rdfs:label "Point Redemption"@en ;
+    rdfs:comment "A redemption of loyalty points."@en .
+
+biz:Profitability a owl:Class ;
+    rdfs:label "Profitability"@en ;
+    rdfs:comment "The program's overall profitability."@en .
+
+biz:RedemptionJourney a owl:Class ;
+    rdfs:label "Redemption Journey"@en ;
+    rdfs:comment "The end-to-end user journey through a redemption."@en .
+
+biz:RoutePrice a owl:Class ;
+    rdfs:label "Route Price"@en ;
+    rdfs:comment "A fixed price, in points, defined per `travel:Route` (domain resolved — see the Travel industry group; was an Open Item, now fixed)."@en .
+
+biz:TargetedIncentive a owl:Class ;
+    rdfs:label "Targeted Incentive"@en ;
+    rdfs:comment "An incentive targeted at a specific segment."@en .
+
+biz:ValueOptimization a owl:Class ;
+    rdfs:label "Value Optimization"@en ;
+    rdfs:comment "The practice of suggesting optimal points/cash combinations."@en .
+
+# Reporting / support / ops — `swe:`/`biz:` (10)
+
+biz:PricingStrategyAlert a owl:Class ;
+    rdfs:label "Pricing Strategy Alert"@en ;
+    rdfs:comment "An alert raised about a pricing strategy."@en .
+
+biz:SharedResponsibilityModel a owl:Class ;
+    rdfs:label "Shared Responsibility Model"@en ;
+    rdfs:comment "The model describing which party is responsible for what."@en .
+
+biz:Auditing a owl:Class ;
+    rdfs:label "Auditing"@en ;
+    rdfs:comment "The activity of auditing platform actions."@en .
+
+# Process / activity — `rdfs:subClassOf prov:Activity` (8)
+
+biz:Process a owl:Class ;
+    rdfs:subClassOf prov:Activity ;
+    rdfs:label "Process"@en ;
+    rdfs:comment "A named, multi-stage business process (e.g. onboarding). `prov:Activity` is the upstream term being reused — `biz:Process` is a *subclass* of it, not a parallel term. The reuse isn't 'use `prov:Activity` bare instead': `Activity` alone can't say 'this thing has stages' (that needs `process-stage`/`protocol-step` as parts, via `includesStage`/`includesStep`, C3). The subclass is what makes that structure expressible — dropping it back to bare `prov:Activity` would lose the one thing `process` actually adds."@en .
+
+biz:ProcessStage a owl:Class ;
+    rdfs:subClassOf prov:Activity ;
+    rdfs:label "Process Stage"@en ;
+    rdfs:comment "One stage within a `biz:Process`."@en .
+
+biz:VirtualSession a owl:Class ;
+    rdfs:subClassOf prov:Activity ;
+    rdfs:label "Virtual Session"@en ;
+    rdfs:comment "A remote meeting held as part of a process (e.g. onboarding)."@en .
+
+biz:ProtocolStep a owl:Class ;
+    rdfs:subClassOf prov:Activity ;
+    rdfs:label "Protocol Step"@en ;
+    rdfs:comment "One numbered step of a fixed protocol."@en .
+
+biz:DisputeProcess a owl:Class ;
+    rdfs:subClassOf prov:Activity ;
+    rdfs:label "Dispute Process"@en ;
+    rdfs:comment "The process of handling a payment dispute. No FIBO fit exists — same finding as `chargeback`; a clean PROV-O fit once treated as an activity rather than a payments concept."@en .
+
+# Onboarding documents — `biz:` (5)
+
+biz:BrandBook a owl:Class ;
+    rdfs:label "Brand Book"@en ;
+    rdfs:comment "A bank-provided brand-guidelines document."@en .
+
+biz:EmailConfirmation a owl:Class ;
+    rdfs:label "Email Confirmation"@en ;
+    rdfs:comment "The formal email confirming applied configuration."@en .
+
+biz:JourneyMapping a owl:Class ;
+    rdfs:label "Journey Mapping"@en ;
+    rdfs:comment "The document mapping every step of the redemption journey."@en .
+
+biz:TransactionalEmail a owl:Class ;
+    rdfs:label "Transactional Email"@en ;
+    rdfs:comment "A transactional email (booking confirmation, cancellation)."@en .
+
+biz:WelcomeEmail a owl:Class ;
+    rdfs:label "Welcome Email"@en ;
+    rdfs:comment "A welcome email sent to a new user."@en .
+
+# AI / product platform — `swe:` (12)
+
+biz:DynamicPricing a owl:Class ;
+    rdfs:label "Dynamic Pricing"@en ;
+    rdfs:comment "The commercial practice of adjusting route/booking cost dynamically."@en .
+
+biz:LoyaltyProgram a owl:Class ;
+    rdfs:subClassOf schema:Product ;
+    rdfs:label "Loyalty Program"@en ;
+    rdfs:comment "A general loyalty program. Subclassed under schema:Product so biz:provides (domain org:Organization, range schema:Product) applies directly — see bank-loyalty-program, Bucket A."@en .
+
+# Miscellaneous native nouns (10)
+
+biz:Demonstration a owl:Class ;
+    rdfs:label "Demonstration"@en ;
+    rdfs:comment "A platform demonstration used for sales/onboarding."@en .
+
+biz:BehavioralHabit a owl:Class ;
+    rdfs:label "Behavioral Habit"@en ;
+    rdfs:comment "A user behavioral habit analyzed by the engine. Renamed per direct instruction."@en .
+
+biz:UserPreference a owl:Class ;
+    rdfs:label "User Preference"@en ;
+    rdfs:comment "A user preference analyzed by the engine. Renamed per direct instruction."@en .
+
+biz:UserTaste a owl:Class ;
+    rdfs:label "User Taste"@en ;
+    rdfs:comment "A user taste analyzed by the engine. Renamed per direct instruction."@en .
+
+biz:PersonallyIdentifiableInformation a owl:Class ;
+    rdfs:label "Personally Identifiable Information"@en ;
+    rdfs:comment "Personally identifiable cardholder information. schema.org has no PII/data-privacy class."@en .
+
+biz:RecommendationTrigger a owl:Class ;
+    rdfs:label "Recommendation Trigger"@en ;
+    rdfs:comment "A trigger condition for a smart recommendation."@en .
+
+biz:Reward a owl:Class ;
+    rdfs:label "Reward"@en ;
+    rdfs:comment "A reward priced dynamically by route or segment."@en .
+
+#####################################################################
+# VCR 0012 — object properties admitted from the pre-VCR-0011 backlog
+#####################################################################
+
+biz:achieves a owl:ObjectProperty ;
+    rdfs:label "achieves"@en ;
+    rdfs:comment "Achieves a stated outcome (case-study framing)."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range owl:Thing .
+
+biz:activates a owl:ObjectProperty ;
+    rdfs:label "activates"@en ;
+    rdfs:comment "Activates a deployment environment."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range swe:DeploymentEnvironment .
+
+biz:adjusts a owl:ObjectProperty ;
+    rdfs:label "adjusts"@en ;
+    rdfs:comment "Adjusts a conversion rate."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range owl:Thing .
+
+biz:aggregates a owl:ObjectProperty ;
+    rdfs:label "aggregates"@en ;
+    rdfs:comment "Aggregates multiple redemption channels under one front-end."@en ;
+    rdfs:domain skos:Concept ;
+    rdfs:range biz:RedemptionChannel .
+
+biz:alignsWith a owl:ObjectProperty ;
+    rdfs:label "aligns with"@en ;
+    rdfs:comment "Aligns cost efficiency with customer value."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing .
+
+biz:analyzes a owl:ObjectProperty ;
+    rdfs:label "analyzes"@en ;
+    rdfs:comment "Analyzes a user's balances, habits, tastes, preferences."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range owl:Thing .
+
+biz:assists a owl:ObjectProperty ;
+    rdfs:label "assists"@en ;
+    rdfs:comment "Assists with operator creation."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range owl:Thing .
+
+biz:attracts a owl:ObjectProperty ;
+    rdfs:label "attracts"@en ;
+    rdfs:comment "Attracts new customers."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing .
+
+biz:combines a owl:ObjectProperty ;
+    rdfs:label "combines"@en ;
+    rdfs:comment "Combines points and cash in a mixed-payment transaction."@en ;
+    rdfs:domain biz:Transaction ;
+    rdfs:range owl:Thing .
+
+biz:compares a owl:ObjectProperty ;
+    rdfs:label "compares"@en ;
+    rdfs:comment "Compares two date ranges or two pricing modalities."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range owl:Thing .
+
+biz:completes a owl:ObjectProperty ;
+    rdfs:label "completes"@en ;
+    rdfs:comment "A bank completes its configuration form."@en ;
+    rdfs:domain fibo-fbc-fct-fse:Bank ;
+    rdfs:range biz:ConfigurationForm .
+
+biz:conducts a owl:ObjectProperty ;
+    rdfs:label "conducts"@en ;
+    rdfs:comment "Conducts a technical implementation stage."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range biz:ProcessStage .
+
+biz:confirms a owl:ObjectProperty ;
+    rdfs:label "confirms"@en ;
+    rdfs:comment "Confirms provided data."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range owl:Thing .
+
+biz:contains a owl:ObjectProperty ;
+    rdfs:label "contains"@en ;
+    rdfs:comment "An email confirmation contains the applied configuration list."@en ;
+    rdfs:domain biz:EmailConfirmation ;
+    rdfs:range biz:Configuration .
+
+biz:customizes a owl:ObjectProperty ;
+    rdfs:label "customizes"@en ;
+    rdfs:comment "Customizes strategies and triggers per segment."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range owl:Thing .
+
+biz:delivers a owl:ObjectProperty ;
+    rdfs:label "delivers"@en ;
+    rdfs:comment "Delivers onboarding artifacts (docs, journey mapping, sandbox) or an experience — an organization to a client, or a software application to its users. Domain widened under VCR-0019 after White-Label-Travel-Platform's 'delivers a cardholder-experience' fact (newly compiled from ACE in the migration) surfaced a HermiT disjointness violation against the original Organization-only domain — same pattern as VCR-0015 (biz:offers/biz:provides)."@en ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( org:Organization schema:SoftwareApplication ) ] ;
+    rdfs:range owl:Thing .
+
+biz:develops a owl:ObjectProperty ;
+    rdfs:label "develops"@en ;
+    rdfs:comment "Develops a software product (e.g. NAVI)."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range schema:SoftwareApplication .
+
+biz:establishes a owl:ObjectProperty ;
+    rdfs:label "establishes"@en ;
+    rdfs:comment "Establishes default parameters via the configuration form."@en ;
+    rdfs:domain biz:ConfigurationForm ;
+    rdfs:range biz:DefaultParameter .
+
+biz:facilitates a owl:ObjectProperty ;
+    rdfs:label "facilitates"@en ;
+    rdfs:comment "Facilitates partial (points + cash) redemptions."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing .
+
+biz:generates a owl:ObjectProperty ;
+    rdfs:label "generates"@en ;
+    rdfs:comment "Generates additional cash revenue."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing .
+
+biz:illustrates a owl:ObjectProperty ;
+    rdfs:label "illustrates"@en ;
+    rdfs:comment "Illustrates how the platform embeds into a bank's app."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing .
+
+biz:improves a owl:ObjectProperty ;
+    rdfs:label "improves"@en ;
+    rdfs:comment "Improves the cardholder experience."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing .
+
+biz:includesStage a owl:ObjectProperty ;
+    rdfs:label "includes stage"@en ;
+    rdfs:subPropertyOf dct:hasPart ;
+    rdfs:comment "A process includes a stage as part of it. `rdfs:subPropertyOf dcterms:hasPart`, narrowed."@en ;
+    rdfs:domain biz:Process ;
+    rdfs:range biz:ProcessStage .
+
+biz:includesStep a owl:ObjectProperty ;
+    rdfs:label "includes step"@en ;
+    rdfs:subPropertyOf dct:hasPart ;
+    rdfs:comment "A process includes a step as part of it. `rdfs:subPropertyOf dcterms:hasPart`, narrowed."@en ;
+    rdfs:domain biz:Process ;
+    rdfs:range biz:ProtocolStep .
+
+biz:isUsedIn a owl:ObjectProperty ;
+    rdfs:label "is used in"@en ;
+    rdfs:comment "Used in a platform demonstration."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range biz:Demonstration .
+
+biz:issues a owl:ObjectProperty ;
+    rdfs:label "issues"@en ;
+    rdfs:comment "Issues an initial access password."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range swe:Password .
+
+biz:lowers a owl:ObjectProperty ;
+    rdfs:label "lowers"@en ;
+    rdfs:comment "Lowers the financial cost per point redeemed."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing .
+
+biz:maps a owl:ObjectProperty ;
+    rdfs:label "maps"@en ;
+    rdfs:comment "Maps every step of the redemption journey."@en ;
+    rdfs:domain biz:JourneyMapping ;
+    rdfs:range biz:RedemptionJourney .
+
+biz:maximizes a owl:ObjectProperty ;
+    rdfs:label "maximizes"@en ;
+    rdfs:comment "Maximizes perceived program value."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing .
+
+biz:meetsWith a owl:ObjectProperty ;
+    rdfs:label "meets with"@en ;
+    rdfs:comment "MUSCLE meets with the bank during a virtual session."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range org:Organization .
+
+biz:occursIn a owl:ObjectProperty ;
+    rdfs:label "occurs in"@en ;
+    rdfs:comment "A process occurs within a named product (e.g. Control Tower)."@en ;
+    rdfs:domain prov:Activity ;
+    rdfs:range schema:SoftwareApplication .
+
+biz:operates a owl:ObjectProperty ;
+    rdfs:label "operates"@en ;
+    rdfs:comment "Operates a network of branches and ATMs."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range owl:Thing .
+
+biz:optimizes a owl:ObjectProperty ;
+    rdfs:label "optimizes"@en ;
+    rdfs:comment "Optimizes bank loyalty programs."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range owl:Thing .
+
+biz:precedes a owl:ObjectProperty ;
+    rdfs:label "precedes"@en ;
+    rdfs:subPropertyOf time:before ;
+    rdfs:comment "Plain sequential ordering of the 4-step protocol ('Form before Virtual-Session before Confirmation before Activation') — not an entity hand-off between activities, so `prov:wasInformedBy` would misuse its narrower communication semantics. `rdfs:subPropertyOf time:before` (W3C OWL-Time), narrowed."@en ;
+    rdfs:domain biz:ProtocolStep ;
+    rdfs:range biz:ProtocolStep .
+
+biz:prices a owl:ObjectProperty ;
+    rdfs:label "prices"@en ;
+    rdfs:comment "Dynamically prices rewards by route or segment."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range owl:Thing .
+
+biz:provides a owl:ObjectProperty ;
+    rdfs:label "provides"@en ;
+    rdfs:comment "Provides core infrastructure / AI models — an organization, or a software application providing one of its own capabilities. Domain widened under VCR 0015, same disjointness fix as biz:offers."@en ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( org:Organization schema:SoftwareApplication ) ] ;
+    rdfs:range schema:Product .
+
+biz:purchasesOn a owl:ObjectProperty ;
+    rdfs:label "purchases on"@en ;
+    rdfs:comment "Makes purchases natively on a partner marketplace (e.g. Shopstar)."@en ;
+    rdfs:domain biz:Cardholder ;
+    rdfs:range schema:SoftwareApplication .
+
+biz:receives a owl:ObjectProperty ;
+    rdfs:label "receives"@en ;
+    rdfs:comment "Receives a configuration form / email confirmation."@en ;
+    rdfs:domain fibo-fbc-fct-fse:Bank ;
+    rdfs:range owl:Thing .
+
+biz:recommends a owl:ObjectProperty ;
+    rdfs:label "recommends"@en ;
+    rdfs:comment "Recommends tailored destinations and dates."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range owl:Thing .
+
+biz:reduces a owl:ObjectProperty ;
+    rdfs:label "reduces"@en ;
+    rdfs:comment "Reduces point liabilities."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing .
+
+biz:requires a owl:ObjectProperty ;
+    rdfs:label "requires"@en ;
+    rdfs:comment "A conditional requirement between two facts. Domain deliberately open (was skos:Concept, widened by VCR-0018): software and organizations legitimately require things too."@en ;
+    rdfs:range owl:Thing .
+
+biz:servesIndustry a owl:ObjectProperty ;
+    rdfs:label "serves industry"@en ;
+    rdfs:comment "A product/platform serves customers in an industry vertical (a skos:Concept tag). Distinct from biz:serves, whose range is org:Organization (serving a specific organization). See VCR-0018."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range skos:Concept .
+
+biz:LoyaltyProgram a owl:Class ;
+    rdfs:label "Loyalty Program"@en ;
+    rdfs:comment "A points/miles loyalty program operated by an organization (in MUSCLE's domain, a bank's cardholder program). See VCR-0018."@en .
+
+biz:restrictsBy a owl:ObjectProperty ;
+    rdfs:label "restricts by"@en ;
+    rdfs:comment "Restricts a channel condition by a vertical-specific value (route scope, retail category, location boundary). Domain now resolvable — see C1's `biz:ChannelRestriction`."@en ;
+    rdfs:domain biz:ChannelRestriction ;
+    rdfs:range owl:Thing .
+
+biz:scales a owl:ObjectProperty ;
+    rdfs:label "scales"@en ;
+    rdfs:comment "Scales a loyalty program. New in this pass."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range owl:Thing .
+
+biz:selects a owl:ObjectProperty ;
+    rdfs:label "selects"@en ;
+    rdfs:comment "Selects the primary channel during configuration."@en ;
+    rdfs:domain org:Role ;
+    rdfs:range owl:Thing .
+
+biz:serves a owl:ObjectProperty ;
+    rdfs:label "serves"@en ;
+    rdfs:comment "Designed specifically to serve banks."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range org:Organization .
+
+biz:transforms a owl:ObjectProperty ;
+    rdfs:label "transforms"@en ;
+    rdfs:comment "Transforms points into personalized travel experiences."@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range owl:Thing .
+
+biz:triggers a owl:ObjectProperty ;
+    rdfs:label "triggers"@en ;
+    rdfs:comment "A discount's activation triggers a UI message."@en ;
+    rdfs:domain biz:Discount ;
+    rdfs:range swe:UIComponent .
+
+biz:views a owl:ObjectProperty ;
+    rdfs:label "views"@en ;
+    rdfs:comment "Views (but does not download) reports."@en ;
+    rdfs:domain org:Role ;
+    rdfs:range owl:Thing .
+
+#####################################################################
+# VCR 0012 — datatype properties admitted from the pre-VCR-0011 backlog
+#####################################################################
+
+biz:hasCountryCoverage a owl:DatatypeProperty ;
+    rdfs:label "has country coverage"@en ;
+    rdfs:comment "The number of countries a software application operates in. \"Coverage in more than 180 countries.\""@en ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range xsd:integer .
+
+biz:hasDailyFlightCount a owl:DatatypeProperty ;
+    rdfs:label "has daily flight count"@en ;
+    rdfs:comment "The number of daily flights in a flight inventory. \"125,000 daily flights.\""@en ;
+    rdfs:domain travel:FlightInventory ;
+    rdfs:range xsd:integer .
+
+biz:hasPropertyCount a owl:DatatypeProperty ;
+    rdfs:label "has property count"@en ;
+    rdfs:comment "The number of bookable lodging properties in a lodging inventory. \"Over 900,000 properties globally.\""@en ;
+    rdfs:domain travel:LodgingInventory ;
+    rdfs:range xsd:integer .
+
+#####################################################################
+# VCR 0012 — qualifiers admitted from the pre-VCR-0011 backlog
+#####################################################################
+
+biz:isFictional a owl:DatatypeProperty ;
+    rdfs:label "is fictional"@en ;
+    rdfs:comment "Funbank is a fictional bank (documentation entity, not real)."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range xsd:boolean .
+
+biz:isUpcoming a owl:DatatypeProperty ;
+    rdfs:label "is upcoming"@en ;
+    rdfs:comment "Status 'Concept/Upcoming.'"@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:boolean .
+
+biz:isUpdated a owl:DatatypeProperty ;
+    rdfs:label "is updated"@en ;
+    rdfs:comment "A segment has been updated via a new CSV upload."@en ;
+    rdfs:domain biz:Segment ;
+    rdfs:range xsd:boolean .
+
+#####################################################################
+# VCR 0020 — Corporate legal-entity vocabulary (ownership, advisors,
+# compliance, bank accounts, financing, IP). All classes pass the
+# portability test (§6b) — generic corporate/legal vocabulary any
+# company could use, none of it MUSCLE-product-specific.
+#####################################################################
+
+# External class stubs used as domain/range below (full definitions live
+# in upstream extracts once merge-tbox.sh runs).
+org:Membership              a owl:Class .
+prov:Agent                  a owl:Class .
+schema:Person                a owl:Class .
+schema:DigitalDocument       a owl:Class .
+schema:MonetaryAmount        a owl:Class .
+schema:PropertyValue         a owl:Class .
+schema:PostalAddress         a owl:Class .
+schema:State                 a owl:Class .
+
+biz:OwnershipStake a owl:Class ;
+    rdfs:label "Ownership Stake"@en ;
+    rdfs:comment "A reified holding of a percentage stake in an organization by an agent (org or person). Reified — not a flat percentage on the owned org — because several MUSCLE entities have multi-party cap tables. Aligned to FIBO's BE/OwnershipAndControl/OwnershipParties#EntityOwnership (see alignments.ttl)."@en .
+
+biz:hasOwnershipStake a owl:ObjectProperty ;
+    rdfs:label "has ownership stake"@en ;
+    rdfs:comment "The owned organization has a stake held in it."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range biz:OwnershipStake .
+
+biz:heldBy a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "held by"@en ;
+    rdfs:comment "The agent (organization or natural person) who holds an ownership stake."@en ;
+    rdfs:domain biz:OwnershipStake ;
+    rdfs:range prov:Agent .
+
+biz:ownershipPercentage a owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "ownership percentage"@en ;
+    rdfs:comment "The percentage of the owned organization this stake represents. \"99.999%\"."@en ;
+    rdfs:domain biz:OwnershipStake ;
+    rdfs:range xsd:decimal .
+
+biz:AdvisoryEngagement a owl:Class ;
+    rdfs:label "Advisory Engagement"@en ;
+    rdfs:comment "A reified engagement of a legal/accounting/registered-agent/investment-manager firm by an entity, carrying which role the firm serves and its contact."@en .
+
+biz:hasAdvisoryEngagement a owl:ObjectProperty ;
+    rdfs:label "has advisory engagement"@en ;
+    rdfs:comment "The organization engages an advisor."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range biz:AdvisoryEngagement .
+
+biz:AdvisoryRole a owl:Class ;
+    rdfs:label "Advisory Role"@en ;
+    rdfs:comment "Enumeration of the kind of professional service an AdvisoryEngagement covers."@en ;
+    owl:oneOf ( biz:legal-counsel biz:tax-advisor biz:accounting-advisor biz:registered-agent
+                biz:transfer-pricing-advisor biz:corporate-secretarial biz:investment-manager ) .
+
+biz:advisoryRole a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "advisory role"@en ;
+    rdfs:comment "Which role the engagement covers."@en ;
+    rdfs:domain biz:AdvisoryEngagement ;
+    rdfs:range biz:AdvisoryRole .
+
+biz:legal-counsel a biz:AdvisoryRole ; rdfs:label "Legal Counsel"@en .
+biz:tax-advisor a biz:AdvisoryRole ; rdfs:label "Tax Advisor"@en .
+biz:accounting-advisor a biz:AdvisoryRole ; rdfs:label "Accounting Advisor"@en .
+biz:registered-agent a biz:AdvisoryRole ; rdfs:label "Registered Agent"@en .
+biz:transfer-pricing-advisor a biz:AdvisoryRole ; rdfs:label "Transfer Pricing Advisor"@en .
+biz:corporate-secretarial a biz:AdvisoryRole ; rdfs:label "Corporate Secretarial"@en .
+biz:investment-manager a biz:AdvisoryRole ; rdfs:label "Investment Manager"@en .
+
+biz:providedBy a owl:ObjectProperty ;
+    rdfs:label "provided by"@en ;
+    rdfs:comment "The firm/bank/lender providing an advisory engagement, financing instrument, or (on a compliance obligation) executing a filing on the entity's behalf."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range org:FormalOrganization .
+
+biz:primaryContact a owl:ObjectProperty ;
+    rdfs:label "primary contact"@en ;
+    rdfs:comment "The named contact(s) for an advisory engagement or bank account. Not functional — a source often lists both a primary and secondary contact."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range schema:Person .
+
+biz:ComplianceObligation a owl:Class ;
+    rdfs:label "Compliance Obligation"@en ;
+    rdfs:comment "A reified recurring or one-off regulatory filing/payment obligation an entity owes a regulator."@en .
+
+biz:hasComplianceObligation a owl:ObjectProperty ;
+    rdfs:label "has compliance obligation"@en ;
+    rdfs:comment "The organization owes a compliance obligation."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range biz:ComplianceObligation .
+
+biz:regulatedBy a owl:ObjectProperty ;
+    rdfs:label "regulated by"@en ;
+    rdfs:comment "The regulator/authority a compliance obligation is owed to."@en ;
+    rdfs:domain biz:ComplianceObligation ;
+    rdfs:range org:FormalOrganization .
+
+biz:hasObligationCost a owl:ObjectProperty ;
+    rdfs:label "has obligation cost"@en ;
+    rdfs:comment "The obligation's fee/assessment, reified as a schema:MonetaryAmount (Rule 10) rather than a bare decimal."@en ;
+    rdfs:domain biz:ComplianceObligation ;
+    rdfs:range schema:MonetaryAmount .
+
+biz:hasDeadlineDescription a owl:DatatypeProperty ;
+    rdfs:label "has deadline description"@en ;
+    rdfs:comment "Free-text recurring/relative deadline (\"Before 31 March each year\") — no closed-form recurrence vocabulary imported yet, so this stays a string rather than a modeled recurrence rule."@en ;
+    rdfs:domain biz:ComplianceObligation ;
+    rdfs:range xsd:string .
+
+biz:ComplianceObligationFrequency a owl:Class ;
+    rdfs:label "Compliance Obligation Frequency"@en ;
+    rdfs:comment "Enumeration of how often a ComplianceObligation recurs."@en ;
+    owl:oneOf ( biz:annual biz:monthly biz:semi-annual biz:ongoing biz:once biz:per-movement ) .
+
+biz:hasComplianceObligationFrequency a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "has compliance obligation frequency"@en ;
+    rdfs:comment "How often the obligation recurs."@en ;
+    rdfs:domain biz:ComplianceObligation ;
+    rdfs:range biz:ComplianceObligationFrequency .
+
+biz:annual a biz:ComplianceObligationFrequency ; rdfs:label "Annual"@en .
+biz:monthly a biz:ComplianceObligationFrequency ; rdfs:label "Monthly"@en .
+biz:semi-annual a biz:ComplianceObligationFrequency ; rdfs:label "Semi-Annual"@en .
+biz:ongoing a biz:ComplianceObligationFrequency ; rdfs:label "Ongoing"@en .
+biz:once a biz:ComplianceObligationFrequency ; rdfs:label "Once"@en .
+biz:per-movement a biz:ComplianceObligationFrequency ; rdfs:label "Per Movement"@en .
+
+biz:BankAccount a owl:Class ;
+    rdfs:label "Bank Account"@en ;
+    rdfs:comment "A reified operating/brokerage bank account held by an organization."@en .
+
+biz:hasBankAccount a owl:ObjectProperty ;
+    rdfs:label "has bank account"@en ;
+    rdfs:comment "The organization holds a bank account."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range biz:BankAccount .
+
+biz:accountHolderBank a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "account holder bank"@en ;
+    rdfs:comment "Which bank the account is held at."@en ;
+    rdfs:domain biz:BankAccount ;
+    rdfs:range fibo-fbc-fct-fse:Bank .
+
+biz:brokerIntermediary a owl:ObjectProperty ;
+    rdfs:label "broker intermediary"@en ;
+    rdfs:comment "A brokerage account's broker/intermediary, distinct from the custodian bank in accountHolderBank."@en ;
+    rdfs:domain biz:BankAccount ;
+    rdfs:range org:FormalOrganization .
+
+biz:accountNumber a owl:DatatypeProperty ;
+    rdfs:label "account number"@en ;
+    rdfs:comment "An opaque account-number identifier — no enumerable domain to validate beyond presence."@en ;
+    rdfs:domain biz:BankAccount ;
+    rdfs:range xsd:string .
+
+biz:iban a owl:DatatypeProperty ;
+    rdfs:label "IBAN"@en ;
+    rdfs:comment "International Bank Account Number."@en ;
+    rdfs:domain biz:BankAccount ;
+    rdfs:range xsd:string .
+
+biz:swiftCode a owl:DatatypeProperty ;
+    rdfs:label "SWIFT code"@en ;
+    rdfs:comment "ISO 9362 SWIFT/BIC code."@en ;
+    rdfs:domain biz:BankAccount ;
+    rdfs:range xsd:string .
+
+biz:accountCurrency a owl:DatatypeProperty ;
+    rdfs:label "account currency"@en ;
+    rdfs:comment "ISO 4217 currency code."@en ;
+    rdfs:domain biz:BankAccount ;
+    rdfs:range xsd:string .
+
+biz:abaRoutingNumber a owl:DatatypeProperty ;
+    rdfs:label "ABA routing number"@en ;
+    rdfs:comment "US ABA bank routing number — always exactly 9 digits."@en ;
+    rdfs:domain biz:BankAccount ;
+    rdfs:range xsd:string .
+
+biz:dtccClearingNumber a owl:DatatypeProperty ;
+    rdfs:label "DTCC clearing number"@en ;
+    rdfs:comment "DTCC clearing broker number — always exactly 4 digits."@en ;
+    rdfs:domain biz:BankAccount ;
+    rdfs:range xsd:string .
+
+biz:cci a owl:DatatypeProperty ;
+    rdfs:label "CCI"@en ;
+    rdfs:comment "Peru's Código de Cuenta Interbancario — a 20-digit interbank routing code, distinct from IBAN/SWIFT/ABA."@en ;
+    rdfs:domain biz:BankAccount ;
+    rdfs:range xsd:string .
+
+biz:beneficiaryReference a owl:DatatypeProperty ;
+    rdfs:label "beneficiary reference"@en ;
+    rdfs:comment "An opaque \"for further credit to\" sub-account/beneficiary reference string."@en ;
+    rdfs:domain biz:BankAccount ;
+    rdfs:range xsd:string .
+
+biz:authorizedSignatory a owl:ObjectProperty ;
+    rdfs:label "authorized signatory"@en ;
+    rdfs:comment "A person authorized to operate the account."@en ;
+    rdfs:domain biz:BankAccount ;
+    rdfs:range schema:Person .
+
+biz:BankAccountStatus a owl:Class ;
+    rdfs:label "Bank Account Status"@en ;
+    rdfs:comment "Enumeration of a BankAccount's operating status."@en ;
+    owl:oneOf ( biz:active biz:dormant biz:closed-pending ) .
+
+biz:accountStatus a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "account status"@en ;
+    rdfs:comment "The account's current operating status."@en ;
+    rdfs:domain biz:BankAccount ;
+    rdfs:range biz:BankAccountStatus .
+
+biz:active a biz:BankAccountStatus ; rdfs:label "Active"@en .
+biz:dormant a biz:BankAccountStatus ; rdfs:label "Dormant"@en .
+biz:closed-pending a biz:BankAccountStatus ; rdfs:label "Closed/Pending"@en .
+
+biz:FinancingInstrument a owl:Class ;
+    rdfs:label "Financing Instrument"@en ;
+    rdfs:comment "A reified credit facility, credit card, or intercompany loan extended to an entity."@en .
+
+biz:hasFinancingInstrument a owl:ObjectProperty ;
+    rdfs:label "has financing instrument"@en ;
+    rdfs:comment "The organization holds a financing instrument."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range biz:FinancingInstrument .
+
+biz:FinancingInstrumentType a owl:Class ;
+    rdfs:label "Financing Instrument Type"@en ;
+    rdfs:comment "Enumeration of FinancingInstrument kinds."@en ;
+    owl:oneOf ( biz:revolving-credit-line biz:overdraft-facility biz:standby-letter-of-credit
+                biz:working-capital-facility biz:intercompany-loan biz:credit-card ) .
+
+biz:instrumentType a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "instrument type"@en ;
+    rdfs:comment "Which kind of financing instrument."@en ;
+    rdfs:domain biz:FinancingInstrument ;
+    rdfs:range biz:FinancingInstrumentType .
+
+biz:revolving-credit-line a biz:FinancingInstrumentType ; rdfs:label "Revolving Credit Line"@en .
+biz:overdraft-facility a biz:FinancingInstrumentType ; rdfs:label "Overdraft Facility"@en .
+biz:standby-letter-of-credit a biz:FinancingInstrumentType ; rdfs:label "Standby Letter of Credit"@en .
+biz:working-capital-facility a biz:FinancingInstrumentType ; rdfs:label "Working Capital Facility"@en .
+biz:intercompany-loan a biz:FinancingInstrumentType ; rdfs:label "Intercompany Loan"@en .
+biz:credit-card a biz:FinancingInstrumentType ; rdfs:label "Credit Card"@en .
+
+biz:facilityLimit a owl:ObjectProperty ;
+    rdfs:label "facility limit"@en ;
+    rdfs:comment "The instrument's credit limit, reified as a schema:MonetaryAmount (Rule 10)."@en ;
+    rdfs:domain biz:FinancingInstrument ;
+    rdfs:range schema:MonetaryAmount .
+
+biz:facilityFee a owl:ObjectProperty ;
+    rdfs:label "facility fee"@en ;
+    rdfs:comment "A one-time facility/arrangement fee, distinct from the ongoing facilityLimit ceiling."@en ;
+    rdfs:domain biz:FinancingInstrument ;
+    rdfs:range schema:MonetaryAmount .
+
+biz:engagementFee a owl:ObjectProperty ;
+    rdfs:label "engagement fee"@en ;
+    rdfs:comment "A recurring or one-time advisor fee."@en ;
+    rdfs:domain biz:AdvisoryEngagement ;
+    rdfs:range schema:MonetaryAmount .
+
+biz:interestRateDescription a owl:DatatypeProperty ;
+    rdfs:label "interest rate description"@en ;
+    rdfs:comment "Free-text compound/variable interest-rate formula — no rate-index ontology imported yet, so this stays a string."@en ;
+    rdfs:domain biz:FinancingInstrument ;
+    rdfs:range xsd:string .
+
+biz:cardLastFourDigits a owl:DatatypeProperty ;
+    rdfs:label "card last four digits"@en ;
+    rdfs:comment "The last 4 digits of a credit card — always exactly 4 digits."@en ;
+    rdfs:domain biz:FinancingInstrument ;
+    rdfs:range xsd:string .
+
+biz:guarantor a owl:ObjectProperty ;
+    rdfs:label "guarantor"@en ;
+    rdfs:comment "A joint guarantor (\"Fiador Solidario\") on a financing instrument. Non-functional — an instrument can have several."@en ;
+    rdfs:domain biz:FinancingInstrument ;
+    rdfs:range schema:Person .
+
+biz:beneficiary a owl:ObjectProperty ;
+    rdfs:label "beneficiary"@en ;
+    rdfs:comment "The beneficiary of a standby letter of credit, distinct from the issuing bank in providedBy."@en ;
+    rdfs:domain biz:FinancingInstrument ;
+    rdfs:range org:FormalOrganization .
+
+biz:SigningScope a owl:Class ;
+    rdfs:label "Signing Scope"@en ;
+    rdfs:comment "Whether an org:Membership's signing authority may be exercised alone or requires co-signers."@en ;
+    owl:oneOf ( biz:individual biz:joint biz:joint-and-several ) .
+
+biz:signingScope a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "signing scope"@en ;
+    rdfs:comment "Whether the membership's signing authority is individual or requires co-signers."@en ;
+    rdfs:domain org:Membership ;
+    rdfs:range biz:SigningScope .
+
+biz:individual a biz:SigningScope ; rdfs:label "Individual"@en .
+biz:joint a biz:SigningScope ; rdfs:label "Joint"@en .
+biz:joint-and-several a biz:SigningScope ; rdfs:label "Joint and Several"@en .
+
+biz:Patent a owl:Class ;
+    rdfs:label "Patent"@en ;
+    rdfs:comment "An issued patent held by an organization."@en .
+
+biz:holdsPatent a owl:ObjectProperty ;
+    rdfs:label "holds patent"@en ;
+    rdfs:comment "An organization owns a patent."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range biz:Patent .
+
+biz:patentNumber a owl:DatatypeProperty ;
+    rdfs:label "patent number"@en ;
+    rdfs:comment "An opaque patent-number identifier."@en ;
+    rdfs:domain biz:Patent ;
+    rdfs:range xsd:string .
+
+biz:patentIssueDate a owl:DatatypeProperty ;
+    rdfs:label "patent issue date"@en ;
+    rdfs:comment "The date a patent was issued."@en ;
+    rdfs:domain biz:Patent ;
+    rdfs:range xsd:date .
+
+biz:assignedBy a owl:ObjectProperty ;
+    rdfs:label "assigned by"@en ;
+    rdfs:comment "A natural-person assignor named in a patent's assignment record. Non-functional — a patent can have several assignors. Distinct from holdsPatent, which records the current owning organization."@en ;
+    rdfs:domain biz:Patent ;
+    rdfs:range schema:Person .
+
+biz:authorizedActivity a owl:ObjectProperty ;
+    rdfs:label "authorized activity"@en ;
+    rdfs:comment "An activity-classification code (e.g. Costa Rica's CAE-CR, Peru's CIIU) an organization is authorized to conduct under a regulatory grant (e.g. a Zona Franca concession). Non-functional. Distinct from schema:knowsAbout (a loose topic association): this states the entity's permitted commercial scope under a specific legal instrument, implying activities outside the set are not authorized under that grant."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range skos:Concept .
+
+biz:hasIncorporationDate a owl:DatatypeProperty ;
+    rdfs:label "has incorporation date"@en ;
+    rdfs:comment "The entity's exact incorporation/formation date — distinct from schema:foundingDate, which is xsd:gYear-only and cannot carry day/month precision."@en ;
+    rdfs:domain org:FormalOrganization ;
+    rdfs:range xsd:date .
+
+biz:hasFiscalYearEnd a owl:DatatypeProperty ;
+    rdfs:label "has fiscal year end"@en ;
+    rdfs:comment "The entity's fiscal year end, e.g. \"--12-31\" for 31 December."@en ;
+    rdfs:domain org:FormalOrganization ;
+    rdfs:range xsd:gMonthDay .
+
+biz:hasCorporateDocument a owl:ObjectProperty ;
+    rdfs:label "has corporate document"@en ;
+    rdfs:comment "The organization has a named corporate document on file."@en ;
+    rdfs:domain org:Organization ;
+    rdfs:range schema:DigitalDocument .
+
+# The 12 org:Role individuals below are generic corporate-governance roles (director,
+# president, ...) — deliberately in biz:, not a product's own native module, per
+# vocabulary-policy.md §6a's distinction from product-configuration/permission roles
+# (the source project this layer was ported from kept those in its own `muscle:`
+# module, e.g. muscle:admin/muscle:analyst; this deployment's org-role.md guide notes
+# the pattern is currently dormant here — no ingested source describes a tool's
+# per-role permission boundary in that much detail yet).
+# W3C ORG's org:Role is itself a subclass of skos:Concept (upstream, not a native
+# choice) — every org:Role individual falls under aiw:ConceptShape after reasoning,
+# so each needs skos:prefLabel/skos:definition, same as any other dual-typed
+# skos:Concept in this deployment (system/authoring-guides/org-role.md). Inherited
+# from the source project, where this was found by validate-shacl.sh failing on
+# these 11 during a rebuild — rdfs:label alone was not sufficient.
+biz:director a org:Role ; rdfs:label "Director"@en ;
+    skos:prefLabel "Director"@en ; skos:definition "A member of an organization's board of directors, collectively responsible for managing the business."@en .
+biz:president a org:Role ; rdfs:label "President"@en ;
+    skos:prefLabel "President"@en ; skos:definition "The chief executive officer role under civil-law corporate governance (\"Presidente\"), typically holding broad binding authority."@en .
+biz:secretary a org:Role ; rdfs:label "Secretary"@en ;
+    skos:prefLabel "Secretary"@en ; skos:definition "A corporate officer (\"Secretario\") responsible for corporate records and, in many jurisdictions, sharing binding signature authority with the President."@en .
+biz:treasurer a org:Role ; rdfs:label "Treasurer"@en ;
+    skos:prefLabel "Treasurer"@en ; skos:definition "A corporate officer (\"Tesorero\") responsible for the organization's financial affairs."@en .
+biz:administrator a org:Role ; rdfs:label "Administrator"@en ;
+    skos:prefLabel "Administrator"@en ; skos:definition "An officer (\"Administrador\") with full management and binding authority over the organization, as used in Sociedad de Responsabilidad Limitada structures."@en .
+biz:manager a org:Role ; rdfs:label "Manager"@en ;
+    skos:prefLabel "Manager"@en ; skos:definition "The manager of a member-managed limited liability company, responsible for day-to-day operations."@en .
+biz:managing-member a org:Role ; rdfs:label "Managing Member"@en ;
+    skos:prefLabel "Managing Member"@en ; skos:definition "The member of a limited liability company designated to manage it, per its operating agreement."@en .
+biz:gerente-general a org:Role ; rdfs:label "Gerente General"@en ;
+    skos:prefLabel "Gerente General"@en ; skos:definition "A general-manager role, sometimes held by a corporate entity (persona jurídica) acting through a named representative, with administrative and labor authority short of contracting or banking powers."@en .
+biz:ceo a org:Role ; rdfs:label "CEO"@en ;
+    skos:prefLabel "CEO"@en ; skos:definition "Chief Executive Officer — the senior executive responsible for overall management of the organization."@en .
+biz:cto a org:Role ; rdfs:label "CTO"@en ;
+    skos:prefLabel "CTO"@en ; skos:definition "Chief Technology Officer — the senior executive responsible for the organization's technology strategy."@en .
+biz:apoderado-especial a org:Role ; rdfs:label "Apoderado Especial"@en ;
+    skos:prefLabel "Apoderado Especial"@en ; skos:definition "A formal power-of-attorney holder under a defined Régimen de Poderes, with full authority and no monetary cap, distinct from a general legal representative."@en .

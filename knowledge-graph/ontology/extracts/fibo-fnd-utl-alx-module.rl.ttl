@@ -1,0 +1,85 @@
+@prefix : <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> rdf:type owl:Ontology ;
+                                                                      owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Utilities/Analytics/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+rdfs:isDefinedBy rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/abbreviation
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/abbreviation> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/KeyPerformanceIndicator
+:KeyPerformanceIndicator rdf:type owl:Class ;
+                         rdfs:subClassOf :QualifiedMeasure ;
+                         rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> ;
+                         rdfs:label "key performance indicator" ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "measurable target that indicates how an individual or business is performing in terms of meeting its goals" ;
+                         <http://www.w3.org/2004/02/skos/core#example> "Examples include profits, sales numbers, employee turnover and average annual expenses." ;
+                         <https://www.omg.org/spec/Commons/AnnotationVocabulary/abbreviation> "KPI" ;
+                         <https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom> "https://www.forbes.com/advisor/business/what-is-a-kpi-definition-examples/"^^xsd:anyURI ,
+                                                                                             "https://www.kpi.org/KPI-Basics/"^^xsd:anyURI ;
+                         <https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote> "Although they are both designed to measure performance, KPIs and metrics have different characteristics and are used by businesses in different ways. Metrics are measures used to track progress and evaluate success, while KPIs are metrics tied to specific goals during a certain period of time. KPIs are designed to align with business goals and targets, while metrics evaluate the performance of particular processes." ,
+                                                                                                 "Key Performance Indicators (KPIs) are the critical (key) quantifiable indicators of progress toward an intended result. KPIs provide a focus for strategic and operational improvement, create an analytical basis for decision making and help focus attention on what matters most. Managing with the use of KPIs includes setting targets (the desired level of performance) and tracking progress against those targets." .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/QualifiedMeasure
+:QualifiedMeasure rdf:type owl:Class ;
+                  rdfs:subClassOf :StatisticalMeasure ;
+                  rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> ;
+                  rdfs:label "qualified measure" ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "statistical measure that is constrained by features, quantity kinds or units that refine how it is calculated" .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/StatisticalMeasure
+:StatisticalMeasure rdf:type owl:Class ;
+                    rdfs:subClassOf <https://www.omg.org/spec/Commons/QuantitiesAndUnits/Measure> ;
+                    rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> ;
+                    rdfs:label "statistical measure" ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "summary (means, mode, total, index, etc.) of the individual quantitative variable values for the statistical units in a specific group (study domain)" ;
+                    <https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom> "http://stats.oecd.org/glossary/detail.asp?ID=5068"^^xsd:anyURI ;
+                    <https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote> "Statistical measures may consist of several orthogonal characteristics, including (a) whether they reflect an estimate or variable, (b) the datatype, or from a FIBO perspective, nature of the measure (e.g., index, total, ratio, percent, percent change, mean, others), (c) the population (or the universe that applies to the highest level if defined in general) to which the measure applies, and (d) any relevant aspects used to subset or stratify a measure, (i.e., make them apply to a smaller universe)." .
+
+
+###  https://www.omg.org/spec/Commons/QuantitiesAndUnits/Measure
+<https://www.omg.org/spec/Commons/QuantitiesAndUnits/Measure> rdf:type owl:Class ;
+                                                              rdfs:subClassOf owl:Thing .
+
+
+###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi

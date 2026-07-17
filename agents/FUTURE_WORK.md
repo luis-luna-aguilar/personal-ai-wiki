@@ -2,6 +2,10 @@
 
 This document captures implementation caveats, known limitations, and likely next engineering tasks for the Agents MCP.
 
+## Retired: Neo4j ontology prototype (2026-07-16)
+
+`agents/ontology/` and `agents/mcp/ontology/` (the Neo4j-backed open-ontology compiler, manual Codex extraction via JSON work packets) have been archived to `agents/attic/ontology/` and `agents/attic/mcp-ontology/` — not deleted, full git history preserved. Rationale: stalled since 2026-05-14 (~17 of ~200 wiki pages processed), and its design philosophy ("no fixed closed ontology... traversal over strict ontology purity," explicitly no validation/evidence layer) is the opposite of the SHACL/OWL-validated Fuseki knowledge-graph layer deployed the same day (`knowledge-graph/`, see its `README.md`) — running both risks silent drift between two graphs describing the same wiki. The `use_personal_wiki` MCP tool's `ontology_search`/`ontology_expand`/`ontology_actions` methods were removed from `agents/mcp/engine.py`'s tool list (dead code otherwise — their import target no longer exists); the `agents-ontology` console script and `neo4j` dependency were removed from `agents/pyproject.toml`. `agents/mcp/tools/ontology.py` (the thin engine-facing wrapper) archived alongside as `agents/attic/mcp-tools-ontology.py`. If a graph-backed ontology is wanted again, prefer extending the `knowledge-graph/` layer (SPARQL/SHACL, already live at `:3031/aiwiki`) over reviving this prototype.
+
 ## Guardrail Caveats
 
 - `max_files` is enforced only on this project's custom `read_file` tool.

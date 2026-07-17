@@ -1,0 +1,48 @@
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix schema: <https://schema.org/> .
+@prefix biz:    <https://musclepoints.com/ontology/biz#> .
+@prefix fibo-fbc-fct-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-be-oc-op: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/> .
+@prefix fibo-be-le-lei: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+#####################################################################
+# Cross-ontology alignment axioms
+#
+# Bridges between upstream modules that MIREOT extraction does not
+# carry across ontology boundaries. Not MUSCLE-specific business logic
+# and not a MUSCLE-authored vocabulary — purely curation that ties the
+# reused upstream terms into one coherent class hierarchy.
+#####################################################################
+
+# A FIBO Bank is an organization (FIBO and W3C ORG are separate ontologies,
+# so the subclass link must be asserted here).
+fibo-fbc-fct-fse:Bank rdfs:subClassOf org:Organization .
+
+# Standard SKOS semantics, absent from the RL-filtered extract (VCR-0019): lets ACE state
+# hierarchy in the canonical narrower direction while broader stays derivable.
+skos:broader owl:inverseOf skos:narrower .
+
+#####################################################################
+# VCR-0020 (2026-07-07)
+#####################################################################
+
+# biz:heldBy's range is prov:Agent so a single property covers both organization and
+# natural-person stakeholders (e.g. Muscle Group S.R.L.'s 0.001% held directly by
+# José Ignacio Cordero Lang). Neither W3C ORG nor schema.org declares this link to PROV.
+org:Organization rdfs:subClassOf prov:Agent .
+schema:Person rdfs:subClassOf prov:Agent .
+
+# Ownership alignment: rather than replace biz:OwnershipStake/biz:heldBy with FIBO's
+# own classes (which would require reworking every already-drafted .ace/.ttl and whose
+# percentage property lives on a different, LEI-specific class — see VCR-0020's Rung 1/2
+# research), align our native terms to FIBO's real Business Entities ownership vocabulary.
+biz:OwnershipStake rdfs:subClassOf fibo-be-oc-op:EntityOwnership .
+biz:heldBy rdfs:subPropertyOf fibo-be-oc-op:hasOwningEntity .
+
+# Legal form: adopted directly (not just aligned) — see biz:legal-form's use of
+# fibo-be-le-lei:hasLegalForm in lexicon-map.yaml. No axiom needed here since nothing
+# native shadows it; recorded for discoverability alongside the ownership alignment above.

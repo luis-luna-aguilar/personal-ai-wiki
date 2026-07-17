@@ -1,0 +1,36 @@
+# Values come from ./.env, which docker/gen-config.sh renders from
+# ../kg.config.yaml. Defaults below keep `docker compose up` working for the
+# MUSCLE deployment even without a generated .env.
+#
+# The explicit project `name` matters: without it, compose derives the project
+# from the directory name ("docker"), which is identical in every deployment
+# of this layer — two wikis on one machine would silently adopt/replace each
+# other's stack. A per-project name isolates them.
+name: ${KG_COMPOSE_PROJECT:-muscle-kg}
+
+services:
+  fuseki:
+    image: stain/jena-fuseki:5.0.0
+    container_name: ${KG_CONTAINER_NAME:-muscle-fuseki}
+    # The image's default non-root "fuseki" user can't write to
+    # /fuseki/configuration: bind-mounting the single assembler config file
+    # (see below) makes Docker auto-create that parent directory as root
+    # before the mount lands, and the entrypoint never chowns it back. Run as
+    # root to avoid that — safe for this local single-purpose dev container.
+    user: root
+    ports:
+      - "${KG_FUSEKI_PORT:-3030}:3030"
+    environment:
+      ADMIN_PASSWORD: ${KG_FUSEKI_PASS:-muscle-dev-admin}
+      JVM_ARGS: -Xmx2g
+      # No FUSEKI_DATASET_1: the dataset is defined by the assembler config
+      # below, which attaches an OWLMicro reasoner. Mounting the single config
+      # FILE (not the whole directory) keeps /fuseki/configuration writable,
+      # avoiding the prior "Not writable" startup error.
+    volumes:
+      - fuseki-data:/fuseki
+      - ./config-${KG_FUSEKI_DATASET:-muscle}.ttl:/fuseki/configuration/${KG_FUSEKI_DATASET:-muscle}.ttl:ro
+    restart: unless-stopped
+
+volumes:
+  fuseki-data:

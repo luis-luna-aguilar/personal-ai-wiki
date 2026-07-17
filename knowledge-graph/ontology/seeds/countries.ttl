@@ -1,0 +1,35 @@
+@prefix dbp:    <http://dbpedia.org/resource/> .
+@prefix schema: <https://schema.org/> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Canonical country seed — single authoritative declaration for each country used
+# across MUSCLE Wiki entity sidecars. Entity sidecars reference dbp: IRIs directly
+# and rely on this file for the schema:Country typing and labels.
+
+dbp:Cayman_Islands a schema:Country ;
+    rdfs:label "Cayman Islands"@en ;
+    rdfs:comment "British Overseas Territory in the Caribbean; used here as a jurisdiction."@en .
+
+dbp:Costa_Rica a schema:Country ;
+    rdfs:label "Costa Rica"@en ;
+    rdfs:comment "Sovereign country in Central America."@en .
+
+dbp:Mexico a schema:Country ;
+    rdfs:label "Mexico"@en ;
+    rdfs:comment "Sovereign country in North America."@en .
+
+dbp:Panama a schema:Country ;
+    rdfs:label "Panama"@en ;
+    rdfs:comment "Sovereign country in Central America."@en .
+
+dbp:Peru a schema:Country ;
+    rdfs:label "Peru"@en ;
+    rdfs:comment "Sovereign country in South America."@en .
+
+dbp:United_Kingdom a schema:Country ;
+    rdfs:label "United Kingdom"@en ;
+    rdfs:comment "Sovereign country in northwestern Europe."@en .
+
+dbp:United_States a schema:Country ;
+    rdfs:label "United States"@en ;
+    rdfs:comment "Sovereign country in North America."@en .

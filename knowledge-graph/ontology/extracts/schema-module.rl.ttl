@@ -1,0 +1,283 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/contributor
+<https://schema.org/contributor> rdf:type owl:AnnotationProperty ;
+                                 rdfs:comment "A secondary contributor to the CreativeWork or Event." ;
+                                 rdfs:label "contributor" ;
+                                 <https://schema.org/domainIncludes> <https://schema.org/CreativeWork> ,
+                                                                     <https://schema.org/Event> ;
+                                 <https://schema.org/rangeIncludes> <https://schema.org/Organization> ,
+                                                                    <https://schema.org/Person> .
+
+
+###  https://schema.org/domainIncludes
+<https://schema.org/domainIncludes> rdf:type owl:AnnotationProperty ;
+                                    rdfs:comment "Relates a property to a class that is (one of) the type(s) the property is expected to be used on." ;
+                                    rdfs:label "domainIncludes" ;
+                                    <https://schema.org/domainIncludes> <https://schema.org/Property> ;
+                                    <https://schema.org/isPartOf> <https://meta.schema.org> ;
+                                    <https://schema.org/rangeIncludes> <https://schema.org/Class> .
+
+
+###  https://schema.org/inverseOf
+<https://schema.org/inverseOf> rdf:type owl:AnnotationProperty ;
+                               rdfs:comment "Relates a property to a property that is its inverse. Inverse properties relate the same pairs of items to each other, but in reversed direction. For example, the 'alumni' and 'alumniOf' properties are inverseOf each other. Some properties don't have explicit inverses; in these situations RDFa and JSON-LD syntax for reverse properties can be used." ;
+                               rdfs:label "inverseOf" ;
+                               <https://schema.org/domainIncludes> <https://schema.org/Property> ;
+                               <https://schema.org/isPartOf> <https://meta.schema.org> ;
+                               <https://schema.org/rangeIncludes> <https://schema.org/Property> .
+
+
+###  https://schema.org/isPartOf
+<https://schema.org/isPartOf> rdf:type owl:AnnotationProperty ;
+                              rdfs:comment "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of." ;
+                              rdfs:label "isPartOf" ;
+                              <https://schema.org/domainIncludes> <https://schema.org/CreativeWork> ;
+                              <https://schema.org/inverseOf> <https://schema.org/hasPart> ;
+                              <https://schema.org/rangeIncludes> <https://schema.org/CreativeWork> ,
+                                                                 <https://schema.org/URL> .
+
+
+###  https://schema.org/location
+<https://schema.org/location> rdf:type owl:AnnotationProperty ;
+                              rdfs:comment "The location of, for example, where an event is happening, where an organization is located, or where an action takes place." ;
+                              rdfs:label "location" ;
+                              <https://schema.org/domainIncludes> <https://schema.org/Action> ,
+                                                                  <https://schema.org/Event> ,
+                                                                  <https://schema.org/InteractionCounter> ,
+                                                                  <https://schema.org/Organization> ;
+                              <https://schema.org/rangeIncludes> <https://schema.org/Place> ,
+                                                                 <https://schema.org/PostalAddress> ,
+                                                                 <https://schema.org/Text> ,
+                                                                 <https://schema.org/VirtualLocation> .
+
+
+###  https://schema.org/position
+<https://schema.org/position> rdf:type owl:AnnotationProperty ;
+                              rdfs:comment "The position of an item in a series or sequence of items." ;
+                              rdfs:label "position" ;
+                              <https://schema.org/domainIncludes> <https://schema.org/CreativeWork> ,
+                                                                  <https://schema.org/ListItem> ;
+                              <https://schema.org/rangeIncludes> <https://schema.org/Integer> ,
+                                                                 <https://schema.org/Text> .
+
+
+###  https://schema.org/rangeIncludes
+<https://schema.org/rangeIncludes> rdf:type owl:AnnotationProperty ;
+                                   rdfs:comment "Relates a property to a class that constitutes (one of) the expected type(s) for values of the property." ;
+                                   rdfs:label "rangeIncludes" ;
+                                   <https://schema.org/domainIncludes> <https://schema.org/Property> ;
+                                   <https://schema.org/isPartOf> <https://meta.schema.org> ;
+                                   <https://schema.org/rangeIncludes> <https://schema.org/Class> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2006/vcard/ns#VCard
+<http://www.w3.org/2006/vcard/ns#VCard> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://schema.org/StructuredValue> .
+
+
+###  https://ref.gs1.org/voc/ContactPoint
+<https://ref.gs1.org/voc/ContactPoint> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://schema.org/StructuredValue> .
+
+
+###  https://schema.org/AdministrativeArea
+<https://schema.org/AdministrativeArea> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://schema.org/Place> ,
+                                                        <https://www.omg.org/spec/Commons/Locations/Location> ;
+                                        rdfs:comment "A geographical region, typically under the jurisdiction of a particular government." ;
+                                        rdfs:label "AdministrativeArea" .
+
+
+###  https://schema.org/ContactPoint
+<https://schema.org/ContactPoint> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://schema.org/StructuredValue> ;
+                                  rdfs:comment "A contact point&#x2014;for example, a Customer Complaints department." ;
+                                  rdfs:label "ContactPoint" .
+
+
+###  https://schema.org/Country
+<https://schema.org/Country> rdf:type owl:Class ;
+                             rdfs:subClassOf <https://schema.org/AdministrativeArea> ,
+                                             <https://www.omg.org/spec/Commons/GeopoliticalEntities/GeopoliticalEntity> ,
+                                             <https://www.omg.org/spec/Commons/GeopoliticalEntities/Subdivision> ;
+                             rdfs:comment "A country." ;
+                             rdfs:label "Country" .
+
+
+###  https://schema.org/CreativeWork
+<https://schema.org/CreativeWork> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://schema.org/Thing> ;
+                                  rdfs:comment "The most generic kind of creative work, including books, movies, photographs, software programs, etc." ;
+                                  rdfs:label "CreativeWork" ;
+                                  <https://schema.org/contributor> <https://schema.org/docs/collab/rNews> .
+
+
+###  https://schema.org/DigitalDocument
+<https://schema.org/DigitalDocument> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://schema.org/CreativeWork> ,
+                                                     <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/Document> ;
+                                     rdfs:comment "An electronic file or document." ;
+                                     rdfs:label "DigitalDocument" .
+
+
+###  https://schema.org/HowToStep
+<https://schema.org/HowToStep> rdf:type owl:Class ;
+                               rdfs:subClassOf <https://schema.org/CreativeWork> ,
+                                               <https://schema.org/ItemList> ,
+                                               <https://schema.org/ListItem> ;
+                               rdfs:comment "A step in the instructions for how to achieve a result. It is an ordered list with HowToDirection and/or HowToTip items." ;
+                               rdfs:label "HowToStep" .
+
+
+###  https://schema.org/Intangible
+<https://schema.org/Intangible> rdf:type owl:Class ;
+                                rdfs:subClassOf <https://schema.org/Thing> ;
+                                rdfs:comment "A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc." ;
+                                rdfs:label "Intangible" .
+
+
+###  https://schema.org/ItemList
+<https://schema.org/ItemList> rdf:type owl:Class ;
+                              rdfs:subClassOf <https://schema.org/Intangible> ;
+                              rdfs:comment "A list of items of any sort&#x2014;for example, Top 10 Movies About Weathermen, or Top 100 Party Songs. Not to be confused with HTML lists, which are often used only for formatting." ;
+                              rdfs:label "ItemList" .
+
+
+###  https://schema.org/ListItem
+<https://schema.org/ListItem> rdf:type owl:Class ;
+                              rdfs:subClassOf <https://schema.org/Intangible> ;
+                              rdfs:comment "An list item, e.g. a step in a checklist or how-to description." ;
+                              rdfs:label "ListItem" .
+
+
+###  https://schema.org/MonetaryAmount
+<https://schema.org/MonetaryAmount> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://schema.org/StructuredValue> ;
+                                    rdfs:comment "A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use [[PriceSpecification]] Types to describe the price of an Offer, Invoice, etc." ;
+                                    rdfs:label "MonetaryAmount" ;
+                                    <https://schema.org/contributor> <https://schema.org/docs/collab/FIBO> .
+
+
+###  https://schema.org/Person
+<https://schema.org/Person> rdf:type owl:Class ;
+                            rdfs:subClassOf <https://schema.org/Thing> ;
+                            rdfs:comment "A person (alive, dead, undead, or fictional)." ;
+                            rdfs:label "Person" ;
+                            <https://schema.org/contributor> <https://schema.org/docs/collab/rNews> .
+
+
+###  https://schema.org/Place
+<https://schema.org/Place> rdf:type owl:Class ;
+                           rdfs:subClassOf <https://schema.org/Thing> ;
+                           rdfs:comment "Entities that have a somewhat fixed, physical extension." ;
+                           rdfs:label "Place" .
+
+
+###  https://schema.org/PostalAddress
+<https://schema.org/PostalAddress> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.w3.org/2006/vcard/ns#VCard> ,
+                                                   <https://ref.gs1.org/voc/ContactPoint> ,
+                                                   <https://schema.org/ContactPoint> ,
+                                                   <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/ContactPoint> ;
+                                   rdfs:comment "The mailing address." ;
+                                   rdfs:label "PostalAddress" .
+
+
+###  https://schema.org/Product
+<https://schema.org/Product> rdf:type owl:Class ;
+                             rdfs:subClassOf <https://schema.org/Thing> ;
+                             rdfs:comment "Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online." ;
+                             rdfs:label "Product" ;
+                             <https://schema.org/contributor> <https://schema.org/docs/collab/GoodRelationsTerms> .
+
+
+###  https://schema.org/PropertyValue
+<https://schema.org/PropertyValue> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://schema.org/StructuredValue> ;
+                                   rdfs:comment """A property-value pair, e.g. representing a feature of a product or place. Use the 'name' property for the name of the property. If there is an additional human-readable version of the value, put that into the 'description' property.\\n\\n Always use specific schema.org properties when a) they exist and b) you can populate them. Using PropertyValue as a substitute will typically not trigger the same effect as using the original, specific property.
+    """ ;
+                                   rdfs:label "PropertyValue" ;
+                                   <https://schema.org/contributor> <https://blog.schema.org/2012/11/08/good-relations-and-schema-org/> .
+
+
+###  https://schema.org/SoftwareApplication
+<https://schema.org/SoftwareApplication> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://schema.org/CreativeWork> ;
+                                         rdfs:comment "A software application." ;
+                                         rdfs:label "SoftwareApplication" .
+
+
+###  https://schema.org/State
+<https://schema.org/State> rdf:type owl:Class ;
+                           rdfs:subClassOf <https://schema.org/AdministrativeArea> ,
+                                           <https://www.omg.org/spec/Commons/GeopoliticalEntities/Subdivision> ;
+                           rdfs:comment "A state or province of a country." ;
+                           rdfs:label "State" .
+
+
+###  https://schema.org/StructuredValue
+<https://schema.org/StructuredValue> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://schema.org/Intangible> ;
+                                     rdfs:comment "Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing." ;
+                                     rdfs:label "StructuredValue" .
+
+
+###  https://schema.org/Thing
+<https://schema.org/Thing> rdf:type owl:Class ;
+                           rdfs:subClassOf owl:Thing ;
+                           rdfs:comment "The most generic type of item." ;
+                           rdfs:label "Thing" .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/Document
+<https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/Document> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf owl:Thing .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/ContactPoint
+<https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/ContactPoint> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <https://schema.org/StructuredValue> .
+
+
+###  https://www.omg.org/spec/Commons/GeopoliticalEntities/GeopoliticalEntity
+<https://www.omg.org/spec/Commons/GeopoliticalEntities/GeopoliticalEntity> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf owl:Thing .
+
+
+###  https://www.omg.org/spec/Commons/GeopoliticalEntities/Subdivision
+<https://www.omg.org/spec/Commons/GeopoliticalEntities/Subdivision> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <https://schema.org/Place> ,
+                                                                                    <https://www.omg.org/spec/Commons/Locations/Location> .
+
+
+###  https://www.omg.org/spec/Commons/Locations/Location
+<https://www.omg.org/spec/Commons/Locations/Location> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://schema.org/Thing> .
+
+
+###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi

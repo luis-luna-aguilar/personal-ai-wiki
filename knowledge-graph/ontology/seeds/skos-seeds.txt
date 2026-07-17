@@ -1,0 +1,8 @@
+http://www.w3.org/2004/02/skos/core#Concept
+http://www.w3.org/2004/02/skos/core#altLabel
+http://www.w3.org/2004/02/skos/core#broader
+http://www.w3.org/2004/02/skos/core#definition
+http://www.w3.org/2004/02/skos/core#exactMatch
+http://www.w3.org/2004/02/skos/core#narrower
+http://www.w3.org/2004/02/skos/core#prefLabel
+http://www.w3.org/2004/02/skos/core#related
