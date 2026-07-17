@@ -1,0 +1,6 @@
+page,tier,ace_sentences,new_terms,ape_retries,shacl_violations_fixed,wall_minutes,triples_added
+mcp,T1,43,53,0,pending-vocab-admission,n/a,0
+spec-driven-development,T1,41,18,0,pending-vocab-admission,n/a,0
+agent-evals,T1,104,159,0,pending-vocab-admission,n/a,0
+harness,T1,175,2,0,pending-vocab-admission,n/a,0
+quantization,T1,59,45,0,pending-vocab-admission,n/a,0

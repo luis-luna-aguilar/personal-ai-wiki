@@ -1,0 +1,203 @@
+# ACE sidecar for wiki/concepts/harness.md — subject: aiw:harness
+# Vocabulary used: concept (skos:Concept), includes (skos:narrower), relates-to (skos:related).
+# All Capitalized tokens are named individuals (aiw:<slug>); no lexicon entry needed (Rule 4).
+# Named parts / enumerations are modelled as skos:Concept stubs per the skos-concept authoring guide.
+
+# --- Type and classification (frontmatter) ---
+Harness is a concept.
+Harness has-domain Domain-Agents.
+Harness has-tag Tag-Agentic.
+
+# --- Field vocabulary: model, harness, agent, context, session, environment ---
+Model is a concept.
+Agent is a concept.
+Context is a concept.
+Session is a concept.
+Environment is a concept.
+Harness relates-to Model.
+Harness relates-to Agent.
+Harness relates-to Context.
+Harness relates-to Session.
+Harness relates-to Environment.
+Model relates-to Harness.
+Agent relates-to Harness.
+Context relates-to Harness.
+Session relates-to Harness.
+Environment relates-to Harness.
+
+# --- What a harness includes (components) ---
+System-Prompt is a concept.
+Tool-Suite is a concept.
+Orchestration-Logic is a concept.
+Execution-Environment is a concept.
+Storage-Compute-Boundary is a concept.
+Evaluation-Layer is a concept.
+Context-Shaping-Layer is a concept.
+Reusable-Operating-Module is a concept.
+Deployment-Manifest is a concept.
+Access-Control is a concept.
+Control-Layer is a concept.
+Live-Run-Recovery is a concept.
+Harness includes System-Prompt.
+Harness includes Tool-Suite.
+Harness includes Orchestration-Logic.
+Harness includes Execution-Environment.
+Harness includes Storage-Compute-Boundary.
+Harness includes Evaluation-Layer.
+Harness includes Context-Shaping-Layer.
+Harness includes Reusable-Operating-Module.
+Harness includes Deployment-Manifest.
+Harness includes Access-Control.
+Harness includes Control-Layer.
+Harness includes Live-Run-Recovery.
+
+# --- Reusable operating modules: skills, hook scripts, slash commands, plugin bundles, agent recipes ---
+Skill is a concept.
+Hook-Script is a concept.
+Slash-Command is a concept.
+Plugin-Bundle is a concept.
+Agent-Recipe is a concept.
+Reusable-Operating-Module includes Skill.
+Reusable-Operating-Module includes Hook-Script.
+Reusable-Operating-Module includes Slash-Command.
+Reusable-Operating-Module includes Plugin-Bundle.
+Reusable-Operating-Module includes Agent-Recipe.
+
+# --- An agent recipe packages: model choices, evals, judges, human expertise, failure history, signal-processing logic ---
+Model-Choice is a concept.
+Eval is a concept.
+Judge is a concept.
+Human-Expertise is a concept.
+Failure-History is a concept.
+Signal-Processing-Logic is a concept.
+Agent-Recipe includes Model-Choice.
+Agent-Recipe includes Eval.
+Agent-Recipe includes Judge.
+Agent-Recipe includes Human-Expertise.
+Agent-Recipe includes Failure-History.
+Agent-Recipe includes Signal-Processing-Logic.
+Agent-Recipe relates-to Harness.
+Harness relates-to Agent-Recipe.
+
+# --- Control layer: permissions, approvals, cost ceilings, stop conditions, recovery, review routing ---
+Permission-Control is a concept.
+Approval is a concept.
+Cost-Ceiling is a concept.
+Stop-Condition is a concept.
+Recovery is a concept.
+Review-Routing is a concept.
+Control-Layer includes Permission-Control.
+Control-Layer includes Approval.
+Control-Layer includes Cost-Ceiling.
+Control-Layer includes Stop-Condition.
+Control-Layer includes Recovery.
+Control-Layer includes Review-Routing.
+
+# --- Live-run recovery: checkpointing, rollback, forking ---
+Checkpointing is a concept.
+Rollback is a concept.
+Forking is a concept.
+Live-Run-Recovery includes Checkpointing.
+Live-Run-Recovery includes Rollback.
+Live-Run-Recovery includes Forking.
+
+# --- Harness engineering ---
+Harness-Engineering is a concept.
+Harness relates-to Harness-Engineering.
+Harness-Engineering relates-to Harness.
+
+# --- What good harness engineering looks like (named patterns) ---
+Good-Harness-Engineering is a concept.
+Harness relates-to Good-Harness-Engineering.
+Good-Harness-Engineering relates-to Harness.
+Ambiguity-Gate is a concept.
+Scoped-Context is a concept.
+Failure-Metadata-Replanning is a concept.
+Eval-Driven-Simplification is a concept.
+Layered-Memory is a concept.
+Repo-State-Awareness is a concept.
+Permission-Boundary is a concept.
+Cache-Efficient-Subagent-Parallelism is a concept.
+Skills-As-Abstraction is a concept.
+Hook-Based-Reliability-Plumbing is a concept.
+Externalized-Knowledge-Layer is a concept.
+Loop-Primitive is a concept.
+Decoupled-Shared-Context is a concept.
+Critique-Loop-Orchestration is a concept.
+Ci-Cd-Integration is a concept.
+Agent-Friendly-Cli-Design is a concept.
+Model-Harness-Fit is a concept.
+Llm-Proxy is a concept.
+Dark-Light-Factory-Split is a concept.
+Mayor-Polecat-Pattern is a concept.
+Multi-Model-Parallel-Code-Review is a concept.
+Narrow-Scope-Parallel-Agents is a concept.
+Model-Neutrality is a concept.
+Org-Embedded-Identity is a concept.
+Managed-Agent-Platform-Primitive is a concept.
+Security-Boundary is a concept.
+Good-Harness-Engineering includes Ambiguity-Gate.
+Good-Harness-Engineering includes Scoped-Context.
+Good-Harness-Engineering includes Failure-Metadata-Replanning.
+Good-Harness-Engineering includes Eval-Driven-Simplification.
+Good-Harness-Engineering includes Layered-Memory.
+Good-Harness-Engineering includes Repo-State-Awareness.
+Good-Harness-Engineering includes Permission-Boundary.
+Good-Harness-Engineering includes Cache-Efficient-Subagent-Parallelism.
+Good-Harness-Engineering includes Skills-As-Abstraction.
+Good-Harness-Engineering includes Hook-Based-Reliability-Plumbing.
+Good-Harness-Engineering includes Externalized-Knowledge-Layer.
+Good-Harness-Engineering includes Loop-Primitive.
+Good-Harness-Engineering includes Decoupled-Shared-Context.
+Good-Harness-Engineering includes Critique-Loop-Orchestration.
+Good-Harness-Engineering includes Ci-Cd-Integration.
+Good-Harness-Engineering includes Agent-Friendly-Cli-Design.
+Good-Harness-Engineering includes Model-Harness-Fit.
+Good-Harness-Engineering includes Llm-Proxy.
+Good-Harness-Engineering includes Dark-Light-Factory-Split.
+Good-Harness-Engineering includes Mayor-Polecat-Pattern.
+Good-Harness-Engineering includes Multi-Model-Parallel-Code-Review.
+Good-Harness-Engineering includes Narrow-Scope-Parallel-Agents.
+Good-Harness-Engineering includes Model-Neutrality.
+Good-Harness-Engineering includes Org-Embedded-Identity.
+Good-Harness-Engineering includes Managed-Agent-Platform-Primitive.
+Good-Harness-Engineering includes Security-Boundary.
+
+# --- RL harness quality and the eight failure modes ---
+Rl-Harness-Quality is a concept.
+Harness relates-to Rl-Harness-Quality.
+Rl-Harness-Quality relates-to Harness.
+Harness-Failure-Mode is a concept.
+Rl-Harness-Quality includes Harness-Failure-Mode.
+Stale-Cache is a concept.
+Reward-Hacking is a concept.
+False-Resolution is a concept.
+Silent-Timeout-Default is a concept.
+Non-Deterministic-State-Reset is a concept.
+Reward-Rounding is a concept.
+Mock-Data-Mismatch is a concept.
+Action-Space-Drift is a concept.
+Harness-Failure-Mode includes Stale-Cache.
+Harness-Failure-Mode includes Reward-Hacking.
+Harness-Failure-Mode includes False-Resolution.
+Harness-Failure-Mode includes Silent-Timeout-Default.
+Harness-Failure-Mode includes Non-Deterministic-State-Reset.
+Harness-Failure-Mode includes Reward-Rounding.
+Harness-Failure-Mode includes Mock-Data-Mismatch.
+Harness-Failure-Mode includes Action-Space-Drift.
+
+# --- Harness versus folder-level context ---
+Folder-Level-Context is a concept.
+Harness relates-to Folder-Level-Context.
+Folder-Level-Context relates-to Harness.
+
+# --- Related pages ---
+Agent-Evals is a concept.
+Agent-Improvement-Loop is a concept.
+Skillify is a concept.
+Harness relates-to Agent-Evals.
+Agent-Evals relates-to Harness.
+Harness relates-to Agent-Improvement-Loop.
+Agent-Improvement-Loop relates-to Harness.
+Harness relates-to Skillify.
+Skillify relates-to Harness.

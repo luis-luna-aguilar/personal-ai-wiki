@@ -1,0 +1,84 @@
+# ACE sidecar for wiki/concepts/quantization.md
+# Subject IRI: aiw:quantization (page-filename-slug rule).
+# Controlled English per system/authoring-guides/controlled-english.md.
+# NOTE: this deployment's lexicon-map.yaml has no ACE word-rows for the AI
+# domain yet (aiw.ttl defines the classes, but the word->grammar->IRI rows are
+# missing). Every AI content word below is therefore term-blocked in APE until
+# admitted via VCR — see quantization.new-terms.yaml. Grammar is clean.
+
+# --- Type and genus ---
+Quantization is a concept.
+Quantization is a compression-technique.
+
+# --- Mechanism (what it does) ---
+Quantization reduces a parameter-precision.
+Quantization reduces a model-size.
+Quantization increases an inference-speed.
+Quantization reduces an accuracy.
+A large-language-model stores a parameter.
+Quantization replaces a float with an integer.
+Quantization rounds a parameter.
+
+# --- Quantitative result (headline tradeoff, INT4 typical) ---
+Quantization has a size-reduction-factor that is 4.
+Quantization has an inference-speedup-factor that is 2.
+Quantization has a minimum-accuracy-loss that is 5.
+Quantization has a maximum-accuracy-loss that is 10.
+
+# --- Precision formats (bytes per parameter) ---
+Quantization includes Fp32.
+Fp32 is a precision-format.
+Fp32 has a byte-per-parameter that is 4.
+Quantization includes Fp16.
+Fp16 is a precision-format.
+Fp16 has a byte-per-parameter that is 2.
+Fp16 is training-standard.
+Quantization includes Bf16.
+Bf16 is a precision-format.
+Bf16 has a byte-per-parameter that is 2.
+Bf16 is training-standard.
+Quantization includes Int8.
+Int8 is a precision-format.
+Int8 has a byte-per-parameter that is 1.
+Quantization includes Int4.
+Int4 is a precision-format.
+Int4 has a byte-per-parameter that is 0.5.
+Int4 is-used-for a local-model-deployment.
+
+# --- Quantization formats ---
+Quantization includes Gguf.
+Gguf is a quantization-format.
+Quantization includes Gptq.
+Gptq is a quantization-format.
+Quantization includes Awq.
+Awq is a quantization-format.
+
+# --- Model examples ---
+Qwen3-Coder-Next is a foundation-model.
+Qwen3-Coder-Next has a parameter-count that is 80000000000.
+Qwen3-Coder-Next has an unquantized-size that is 159.4.
+Qwen3-Coder-Next runs-on a laptop.
+A frontier-model has a parameter-count that is 1000000000000.
+A frontier-model has a ram-requirement that is 2.
+
+# --- Why it matters (deployment and benefits) ---
+Quantization enables a consumer-hardware-deployment.
+Quantization enables a local-model-deployment.
+Quantization enables a workstation-deployment.
+Quantization enables a local-inference.
+Quantization reduces an api-cost.
+Quantization reduces a latency.
+Quantization enables an open-weight-model.
+Qwen3 is an open-weight-model.
+Llama is an open-weight-model.
+
+# --- Local and offline agent feasibility ---
+Quantization enables an offline-agent.
+Quantization enables a local-agent.
+Quantization enables a hardware-aware-model-selection.
+A gemma-model runs-on Apple-Silicon.
+A gemma-model runs-with Mlx.
+A browser-local-agent runs a quantized-model.
+
+# --- Classification ---
+Quantization has-domain Domain-Models.

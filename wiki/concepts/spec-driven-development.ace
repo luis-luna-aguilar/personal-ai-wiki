@@ -1,0 +1,59 @@
+# ACE sidecar — wiki/concepts/spec-driven-development.md
+# Subject IRI: aiw:spec-driven-development
+# Controlled English per system/authoring-guides/controlled-english.md.
+# Terms not yet in lexicon-map.yaml are flagged in
+# tmp/ace-extractor/spec-driven-development.new-terms.yaml (APE will reject
+# those sentences until the terms are admitted — the correct signal).
+
+# --- Typing and classification (frontmatter) ---
+Spec-Driven-Development is a concept.
+Spec-Driven-Development is a coding-approach.
+Spec-Driven-Development is-about Domain-Coding.
+Spec-Driven-Development is-about Domain-Agents.
+Spec-Driven-Development has-subcategory Subcategory-Spec-Driven-Development.
+Spec-Driven-Development has-tag Tag-Spec-Driven.
+
+# --- The nature of a spec ---
+A spec is an artifact.
+A spec is-written-in a natural-language.
+A spec describes a software-functionality.
+A spec guides an ai-coding-agent.
+A spec is-authored-before a code.
+
+# --- The three levels of SDD (Boeckeler taxonomy) ---
+Spec-First is a concept.
+Spec-Anchored is a concept.
+Spec-As-Source is a concept.
+Spec-Driven-Development includes Spec-First.
+Spec-Driven-Development includes Spec-Anchored.
+Spec-Driven-Development includes Spec-As-Source.
+Tessl explores Spec-As-Source.
+Spec-As-Source relates-to Model-Driven-Development.
+Model-Driven-Development is a concept.
+
+# --- SDD tools ---
+Spec-Kit is a tool.
+Spec-Kit is agent-agnostic.
+Spec-Kit integrates-with Claude-Code.
+Spec-Kit integrates-with Cursor.
+Spec-Kit has a star-count that is 77000.
+Kiro is a tool.
+Kiro has a spec-file-count that is 3.
+Tessl is a tool.
+OpenAI-Symphony is a tool.
+OpenAI-Symphony monitors an issue-tracker.
+OpenAI-Symphony requires a spec.
+OpenAI-Symphony creates an ai-coding-agent.
+
+# --- New patterns (2026) ---
+Ralph-Loop is a concept.
+Spec-Driven-Development relates-to Ralph-Loop.
+Ralph-Loop requires a prd.
+Plan-Mode is a concept.
+Spec-Driven-Development relates-to Plan-Mode.
+Claude-Code includes-module Plan-Mode.
+Cursor includes-module Plan-Mode.
+
+# --- Spec versus memory bank ---
+Memory-Bank is a concept.
+Spec-Driven-Development relates-to Memory-Bank.

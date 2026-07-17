@@ -1,0 +1,73 @@
+# ACE sidecar for wiki/concepts/mcp.md  (subject: aiw:mcp)
+# Controlled-English restatement of the page's assertable facts.
+# Proper names (Mcp, Anthropic, OpenAI, ChatGPT, Claude-Desktop, Remote-Mcp,
+# Domain-Agents, Tag-Anthropic) compile to aiw:<slug> — no lexicon entry needed.
+
+# --- Type and classification (frontmatter type: concept; body: open protocol) ---
+Mcp is a concept.
+Mcp is a protocol.
+Mcp is open.
+
+# --- Purpose: exposing tools, resources, and prompts to hosts and agents ---
+Mcp exposes a tool.
+Mcp exposes a resource.
+Mcp exposes a prompt.
+Mcp exposes-to a host.
+Mcp exposes-to an agent.
+Mcp has an interface.
+
+# --- Origin ---
+Anthropic introduces Mcp.
+
+# --- Architectural characterizations ---
+Mcp is a connector-layer.
+
+# --- Connecting assistants to external systems ---
+Mcp connects an assistant.
+Mcp connects a system.
+
+# --- Standardization of tool discovery and invocation ---
+Mcp standardizes a tool-discovery.
+Mcp standardizes a tool-invocation.
+
+# --- April 2026 guidance: fit of direct APIs, CLIs, and MCP ---
+Mcp suits a cross-client-integration.
+An api suits a bespoke-integration.
+A cli suits a shell-environment.
+
+# --- Cloud and remote MCP ---
+A production-agent runs-in a cloud.
+Remote-Mcp is an integration-layer.
+A stack ships an api-surface.
+A stack ships a cli-surface.
+A stack ships an mcp-surface.
+
+# --- Deployment surfaces ---
+Claude-Desktop supports a local-mcp-server.
+Anthropic provides a remote-custom-connector.
+OpenAI describes a remote-mcp-server.
+OpenAI describes a connector.
+A user-built-integration is an mcp-based-app.
+
+# --- Why it matters ---
+Mcp is an integration-surface.
+A saas-vendor exposes a product-surface.
+An ecosystem shares an integration.
+Mcp is a transport-layer.
+Mcp is a design-surface.
+
+# --- Anthropic's design recommendations ---
+Anthropic recommends a remote-server.
+Anthropic recommends an intent-grouped-tool.
+Anthropic recommends an inline-ui.
+Anthropic recommends an elicitation.
+Anthropic recommends a skill.
+
+# --- Local-first vs remote-first deployment ---
+Every mcp-deployment is a local-first-deployment or is a remote-first-deployment.
+Claude-Desktop supports a local-first-deployment.
+ChatGPT supports a remote-first-deployment.
+
+# --- Frontmatter classification (domains / tags) ---
+Mcp has-domain Domain-Agents.
+Mcp has-tag Tag-Anthropic.
