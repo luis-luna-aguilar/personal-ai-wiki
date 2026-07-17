@@ -4,3 +4,11 @@ spec-driven-development,T1,41,18,0,pending-vocab-admission,n/a,0
 agent-evals,T1,104,159,0,pending-vocab-admission,n/a,0
 harness,T1,175,2,0,pending-vocab-admission,n/a,0
 quantization,T1,59,45,0,pending-vocab-admission,n/a,0
+swe-bench,T2-demo,41,0,0,0,n/a,41
+frontiercode,T2-demo,28,0,0,0,n/a,28
+terminal-bench,T2-demo,40,0,0,0,n/a,46
+claude-fable-5,T2-demo,215,0,0,0,n/a,214
+gpt-5-5,T2-demo,134,0,0,0,n/a,113
+qwen-3-6-27b,T2-demo,90,0,0,0,n/a,72
+composer-2,T2-demo,34,0,0,0,n/a,27
+minimax-m3,T2-demo,49,0,0,0,n/a,47

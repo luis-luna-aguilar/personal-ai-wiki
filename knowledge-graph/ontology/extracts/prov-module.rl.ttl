@@ -120,17 +120,18 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
 owl:topObjectProperty rdf:type owl:ObjectProperty .
 
 
-###  http://www.w3.org/ns/prov#wasAssociatedWith
-<http://www.w3.org/ns/prov#wasAssociatedWith> rdf:type owl:ObjectProperty ;
-                                              rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasInfluencedBy> ;
-                                              rdfs:comment "An prov:Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity."@en ;
-                                              rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
-                                              rdfs:label "wasAssociatedWith" ;
-                                              <http://www.w3.org/ns/prov#category> "starting-point" ;
-                                              <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
-                                              <http://www.w3.org/ns/prov#inverse> "wasAssociateFor" ;
-                                              <http://www.w3.org/ns/prov#qualifiedForm> <http://www.w3.org/ns/prov#Association> ,
-                                                                                        <http://www.w3.org/ns/prov#qualifiedAssociation> .
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasInfluencedBy> ;
+                                           rdfs:comment "The more specific subproperties of prov:wasDerivedFrom (i.e., prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource) should be used when applicable."@en ;
+                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                           rdfs:label "wasDerivedFrom" ;
+                                           <http://www.w3.org/ns/prov#category> "starting-point" ;
+                                           <http://www.w3.org/ns/prov#component> "derivations" ;
+                                           <http://www.w3.org/ns/prov#definition> "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."@en ;
+                                           <http://www.w3.org/ns/prov#inverse> "hadDerivation" ;
+                                           <http://www.w3.org/ns/prov#qualifiedForm> <http://www.w3.org/ns/prov#Derivation> ,
+                                                                                     <http://www.w3.org/ns/prov#qualifiedDerivation> .
 
 
 ###  http://www.w3.org/ns/prov#wasInfluencedBy

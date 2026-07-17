@@ -1,0 +1,181 @@
+# ACE sidecar for wiki/models/gpt-5-5.md  (subject: aiw:gpt-5-5)
+# Controlled-English restatement of the page's assertable facts.
+# Proper names (Gpt-5-5, Gpt-5-5-Pro, Gpt-5-5-Thinking, Gpt-5-5-Instant, Gpt-5-4,
+# Gpt-5-3-Instant, Claude-Opus-4-7, Openai, Anthropic, Codex, Chatgpt, benchmark and
+# benchmark-result individuals, Domain-*/Tag-*/Subcategory-* concepts) compile to
+# aiw:<slug> — no lexicon entry needed.
+
+# --- Type and provider (frontmatter type: model; intro: OpenAI's frontier model) ---
+Gpt-5-5 is a model.
+Openai is a company.
+Anthropic is a company.
+Gpt-5-5 is-provided-by Openai.
+
+# --- Frontmatter classification: domains ---
+Gpt-5-5 has-domain Domain-Models.
+Gpt-5-5 has-domain Domain-Coding.
+Gpt-5-5 has-domain Domain-Agents.
+Gpt-5-5 has-domain Domain-Science.
+Gpt-5-5 has-domain Domain-Cybersecurity.
+
+# --- Frontmatter classification: subcategory, tags, license ---
+Gpt-5-5 has-subcategory Subcategory-Frontier-Model.
+Gpt-5-5 has-tag Tag-Openai.
+Gpt-5-5 has-tag Tag-Closed-Source.
+Gpt-5-5 has-license-model the closed-source-license.
+
+# --- Frontmatter: as-of date; body: release date ---
+Gpt-5-5 has an as-of-date that is "2026-05-18".
+Gpt-5-5 has a release-date that is "2026-04-23".
+
+# --- Frontmatter sources (provenance) ---
+Gpt-5-5 cites Openai-Gpt-5-5-Launch.
+Gpt-5-5 cites Danshipper-Gpt-5-5-Vibe-Check.
+Gpt-5-5 cites Gpt-5-5-Instant-Default-2026-05-06.
+Gpt-5-5 cites Chatgpt-Personal-Finance-2026-05.
+
+# --- Additional capability domains (launch framing + strengths) ---
+# Dropped: aiw:hasDomain must map 1:1 to the page's own frontmatter domains:
+# list (already captured above), not to prose topic mentions. "Terminal
+# coding", "math", "biochemistry" etc. are narrative capability claims, not
+# controlled wiki/_schema/domains.md values — none of these six exist as real
+# domain concepts. The underlying facts (strong on math, cybersecurity, early
+# science use) are already represented via the benchmark results below
+# (ARC-AGI-2, CyberGym, BixBench, the finance scores) — the correct carrier
+# for a capability claim, not a fabricated domain.
+
+# --- Variants ---
+Gpt-5-5-Pro is a model.
+Gpt-5-5-Thinking is a model.
+Gpt-5-5-Instant is a model.
+Gpt-5-5-Pro is-provided-by Openai.
+Gpt-5-5-Thinking is-provided-by Openai.
+Gpt-5-5-Instant is-provided-by Openai.
+Gpt-5-5 has-model-variant Gpt-5-5-Pro.
+Gpt-5-5 has-model-variant Gpt-5-5-Thinking.
+Gpt-5-5 has-model-variant Gpt-5-5-Instant.
+
+# --- Predecessors and supersession ---
+Gpt-5-4 is a model.
+Gpt-5-3-Instant is a model.
+Gpt-5-4 is-provided-by Openai.
+Gpt-5-3-Instant is-provided-by Openai.
+Gpt-5-5 supersedes Gpt-5-4.
+Gpt-5-5-Instant supersedes Gpt-5-3-Instant.
+# has-subcategory dropped for Gpt-5-5-Instant: "Subcategory-Default-Model" is
+# not a real wiki/_schema/subcategories.md entry, and Gpt-5-5-Instant is a
+# supporting/variant individual mentioned in this page's body, not itself a
+# wiki page subject with its own frontmatter subcategory: field.
+
+# --- Deployment: context windows and products ---
+Gpt-5-5 has a context-window that is "400000".
+Gpt-5-5 has a context-window that is "1000000".
+Gpt-5-5 powers Codex.
+Gpt-5-5 powers Chatgpt.
+
+# --- Comparison model ---
+Claude-Opus-4-7 is a model.
+Claude-Opus-4-7 is-provided-by Anthropic.
+
+# --- Benchmarks ---
+Terminal-Bench-2 is a benchmark.
+Gdpval is a benchmark.
+Arc-Agi-2 is a benchmark.
+Cybergym is a benchmark.
+Bixbench is a benchmark.
+Swe-Bench-Pro is a benchmark.
+Mcp-Atlas is a benchmark.
+Financeagent is a benchmark.
+Personal-Finance-Benchmark is a benchmark.
+
+# --- Public-lead benchmark results (GPT-5.5) ---
+Gpt-5-5-Terminal-Bench-Result is a benchmark-result.
+Gpt-5-5-Terminal-Bench-Result is-measured-on Terminal-Bench-2.
+Gpt-5-5-Terminal-Bench-Result is-achieved-by Gpt-5-5.
+Gpt-5-5-Terminal-Bench-Result has a score-value that is "82.7".
+Gpt-5-5-Terminal-Bench-Result has a score-unit that is "percentage".
+Gpt-5-5-Terminal-Bench-Result has an as-of-date that is "2026-05-18".
+
+Gpt-5-5-Gdpval-Result is a benchmark-result.
+Gpt-5-5-Gdpval-Result is-measured-on Gdpval.
+Gpt-5-5-Gdpval-Result is-achieved-by Gpt-5-5.
+Gpt-5-5-Gdpval-Result has a score-value that is "84.9".
+Gpt-5-5-Gdpval-Result has a score-unit that is "percentage".
+Gpt-5-5-Gdpval-Result has an as-of-date that is "2026-05-18".
+
+Gpt-5-5-Arc-Agi-2-Result is a benchmark-result.
+Gpt-5-5-Arc-Agi-2-Result is-measured-on Arc-Agi-2.
+Gpt-5-5-Arc-Agi-2-Result is-achieved-by Gpt-5-5.
+Gpt-5-5-Arc-Agi-2-Result has a score-value that is "85.0".
+Gpt-5-5-Arc-Agi-2-Result has a score-unit that is "percentage".
+Gpt-5-5-Arc-Agi-2-Result has an as-of-date that is "2026-05-18".
+
+Gpt-5-5-Cybergym-Result is a benchmark-result.
+Gpt-5-5-Cybergym-Result is-measured-on Cybergym.
+Gpt-5-5-Cybergym-Result is-achieved-by Gpt-5-5.
+Gpt-5-5-Cybergym-Result has a score-value that is "81.8".
+Gpt-5-5-Cybergym-Result has a score-unit that is "percentage".
+Gpt-5-5-Cybergym-Result has an as-of-date that is "2026-05-18".
+
+Gpt-5-5-Bixbench-Result is a benchmark-result.
+Gpt-5-5-Bixbench-Result is-measured-on Bixbench.
+Gpt-5-5-Bixbench-Result is-achieved-by Gpt-5-5.
+Gpt-5-5-Bixbench-Result has a score-value that is "80.5".
+Gpt-5-5-Bixbench-Result has a score-unit that is "percentage".
+Gpt-5-5-Bixbench-Result has an as-of-date that is "2026-05-18".
+
+# --- Head-to-head: SWE-Bench Pro (Opus 4.7 leads) ---
+Gpt-5-5-Swe-Bench-Pro-Result is a benchmark-result.
+Gpt-5-5-Swe-Bench-Pro-Result is-measured-on Swe-Bench-Pro.
+Gpt-5-5-Swe-Bench-Pro-Result is-achieved-by Gpt-5-5.
+Gpt-5-5-Swe-Bench-Pro-Result has a score-value that is "58.6".
+Gpt-5-5-Swe-Bench-Pro-Result has a score-unit that is "percentage".
+Gpt-5-5-Swe-Bench-Pro-Result has an as-of-date that is "2026-05-18".
+Opus-4-7-Swe-Bench-Pro-Result is a benchmark-result.
+Opus-4-7-Swe-Bench-Pro-Result is-measured-on Swe-Bench-Pro.
+Opus-4-7-Swe-Bench-Pro-Result is-achieved-by Claude-Opus-4-7.
+Opus-4-7-Swe-Bench-Pro-Result has a score-value that is "64.3".
+Opus-4-7-Swe-Bench-Pro-Result has a score-unit that is "percentage".
+Opus-4-7-Swe-Bench-Pro-Result has an as-of-date that is "2026-05-18".
+
+# --- Head-to-head: MCP Atlas (Opus 4.7 leads) ---
+Gpt-5-5-Mcp-Atlas-Result is a benchmark-result.
+Gpt-5-5-Mcp-Atlas-Result is-measured-on Mcp-Atlas.
+Gpt-5-5-Mcp-Atlas-Result is-achieved-by Gpt-5-5.
+Gpt-5-5-Mcp-Atlas-Result has a score-value that is "75.3".
+Gpt-5-5-Mcp-Atlas-Result has a score-unit that is "percentage".
+Gpt-5-5-Mcp-Atlas-Result has an as-of-date that is "2026-05-18".
+Opus-4-7-Mcp-Atlas-Result is a benchmark-result.
+Opus-4-7-Mcp-Atlas-Result is-measured-on Mcp-Atlas.
+Opus-4-7-Mcp-Atlas-Result is-achieved-by Claude-Opus-4-7.
+Opus-4-7-Mcp-Atlas-Result has a score-value that is "79.1".
+Opus-4-7-Mcp-Atlas-Result has a score-unit that is "percentage".
+Opus-4-7-Mcp-Atlas-Result has an as-of-date that is "2026-05-18".
+
+# --- Head-to-head: FinanceAgent (Opus 4.7 leads) ---
+Gpt-5-5-Finance-Agent-Result is a benchmark-result.
+Gpt-5-5-Finance-Agent-Result is-measured-on Financeagent.
+Gpt-5-5-Finance-Agent-Result is-achieved-by Gpt-5-5.
+Gpt-5-5-Finance-Agent-Result has a score-value that is "60.0".
+Gpt-5-5-Finance-Agent-Result has a score-unit that is "percentage".
+Gpt-5-5-Finance-Agent-Result has an as-of-date that is "2026-05-18".
+Opus-4-7-Finance-Agent-Result is a benchmark-result.
+Opus-4-7-Finance-Agent-Result is-measured-on Financeagent.
+Opus-4-7-Finance-Agent-Result is-achieved-by Claude-Opus-4-7.
+Opus-4-7-Finance-Agent-Result has a score-value that is "64.4".
+Opus-4-7-Finance-Agent-Result has a score-unit that is "percentage".
+Opus-4-7-Finance-Agent-Result has an as-of-date that is "2026-05-18".
+
+# --- @Finances personal-finance benchmark (points out of 100) ---
+Gpt-5-5-Thinking-Personal-Finance-Result is a benchmark-result.
+Gpt-5-5-Thinking-Personal-Finance-Result is-measured-on Personal-Finance-Benchmark.
+Gpt-5-5-Thinking-Personal-Finance-Result is-achieved-by Gpt-5-5-Thinking.
+Gpt-5-5-Thinking-Personal-Finance-Result has a score-value that is "79".
+Gpt-5-5-Thinking-Personal-Finance-Result has a score-unit that is "points".
+Gpt-5-5-Thinking-Personal-Finance-Result has an as-of-date that is "2026-05-18".
+Gpt-5-5-Pro-Personal-Finance-Result is a benchmark-result.
+Gpt-5-5-Pro-Personal-Finance-Result is-measured-on Personal-Finance-Benchmark.
+Gpt-5-5-Pro-Personal-Finance-Result is-achieved-by Gpt-5-5-Pro.
+Gpt-5-5-Pro-Personal-Finance-Result has a score-value that is "82.5".
+Gpt-5-5-Pro-Personal-Finance-Result has a score-unit that is "points".
+Gpt-5-5-Pro-Personal-Finance-Result has an as-of-date that is "2026-05-18".

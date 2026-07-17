@@ -1,0 +1,116 @@
+# ACE sidecar for wiki/models/qwen-3-6-27b.md
+# Subject: aiw:qwen-3-6-27b  (proper name Qwen-3-6-27B)
+# Vocabulary: aiw: (VCR-0004) + proposed new terms (see qwen-3-6-27b.new-terms.yaml)
+
+# ---- Identity, type, provider, license (frontmatter + intro) ----
+Qwen-3-6-27B is a foundation-model.
+Qwen-3-6-27B has a name that is "Qwen 3.6 27B".
+Qwen-3-6-27B is-provided-by Alibaba.
+Qwen-3-6-27B has-license-model the open-weights-license.
+Qwen-3-6-27B has a as-of-date that is "2026-05-01".
+
+# ---- Domains, subcategory, tags (frontmatter) ----
+Qwen-3-6-27B has-domain Domain-Models.
+Qwen-3-6-27B has-domain Domain-Coding.
+Qwen-3-6-27B has-subcategory Subcategory-Coding-Model.
+Qwen-3-6-27B has-tag Tag-Open-Weights.
+Qwen-3-6-27B has-tag Tag-Agentic.
+
+# ---- Architecture, size, capabilities (proposed new terms) ----
+Qwen-3-6-27B has a parameter-count that is "27".
+Qwen-3-6-27B has-architecture Dense-Architecture.
+Qwen-3-6-27B supports-mode Thinking-Mode.
+Qwen-3-6-27B supports-mode Non-Thinking-Mode.
+Qwen-3-6-27B supports-modality Image-Modality.
+Qwen-3-6-27B supports-modality Video-Modality.
+
+# ---- Ecosystem, quantization, resource requirement, index, release ----
+Qwen-3-6-27B runs-on Vllm.
+Qwen-3-6-27B runs-on Unsloth.
+Qwen-3-6-27B runs-on Llama-Cpp.
+Qwen-3-6-27B runs-on Ollama.
+Qwen-3-6-27B has-quantization Fp8-Quantization.
+Qwen-3-6-27B has a memory-requirement that is "20".
+Qwen-3-6-27B has a intelligence-index that is "46".
+Qwen-3-6-27B has a release-date that is "2026-04-23".
+
+# ---- Benchmarks (typed for reference; cross-page consistent slugs) ----
+Swe-Bench-Verified is a benchmark.
+Swe-Bench-Pro is a benchmark.
+Terminal-Bench-2 is a benchmark.
+Skillsbench is a benchmark.
+Polyglot is a benchmark.
+
+# ---- BenchmarkResults for Qwen-3-6-27B ----
+Qwen-Swebenchverified-Result is a benchmark-result.
+Qwen-Swebenchverified-Result is-measured-on Swe-Bench-Verified.
+Qwen-Swebenchverified-Result is-achieved-by Qwen-3-6-27B.
+Qwen-Swebenchverified-Result has a score-value that is "77.2".
+Qwen-Swebenchverified-Result has a score-unit that is "percentage".
+Qwen-Swebenchverified-Result has a as-of-date that is "2026-04-23".
+
+Qwen-Swebenchpro-Result is a benchmark-result.
+Qwen-Swebenchpro-Result is-measured-on Swe-Bench-Pro.
+Qwen-Swebenchpro-Result is-achieved-by Qwen-3-6-27B.
+Qwen-Swebenchpro-Result has a score-value that is "53.5".
+Qwen-Swebenchpro-Result has a score-unit that is "percentage".
+Qwen-Swebenchpro-Result has a as-of-date that is "2026-04-23".
+
+Qwen-Terminalbench2-Result is a benchmark-result.
+Qwen-Terminalbench2-Result is-measured-on Terminal-Bench-2.
+Qwen-Terminalbench2-Result is-achieved-by Qwen-3-6-27B.
+Qwen-Terminalbench2-Result has a score-value that is "59.3".
+Qwen-Terminalbench2-Result has a score-unit that is "percentage".
+Qwen-Terminalbench2-Result has a as-of-date that is "2026-04-23".
+
+Qwen-Skillsbench-Result is a benchmark-result.
+Qwen-Skillsbench-Result is-measured-on Skillsbench.
+Qwen-Skillsbench-Result is-achieved-by Qwen-3-6-27B.
+Qwen-Skillsbench-Result has a score-value that is "48.2".
+Qwen-Skillsbench-Result has a score-unit that is "percentage".
+Qwen-Skillsbench-Result has a as-of-date that is "2026-04-23".
+
+# ---- Prior-generation comparison model: Qwen 3.6 MoE 397B ----
+Qwen-3-6-Moe-397B is a foundation-model.
+Qwen-3-6-Moe-397B is-provided-by Alibaba.
+Qwen-3-6-Moe-397B has a parameter-count that is "397".
+Qwen-3-6-Moe-397B has-architecture Mixture-Of-Experts-Architecture.
+
+Qwenmoe-Swebenchverified-Result is a benchmark-result.
+Qwenmoe-Swebenchverified-Result is-measured-on Swe-Bench-Verified.
+Qwenmoe-Swebenchverified-Result is-achieved-by Qwen-3-6-Moe-397B.
+Qwenmoe-Swebenchverified-Result has a score-value that is "76.2".
+Qwenmoe-Swebenchverified-Result has a score-unit that is "percentage".
+Qwenmoe-Swebenchverified-Result has a as-of-date that is "2026-04-23".
+
+Qwenmoe-Swebenchpro-Result is a benchmark-result.
+Qwenmoe-Swebenchpro-Result is-measured-on Swe-Bench-Pro.
+Qwenmoe-Swebenchpro-Result is-achieved-by Qwen-3-6-Moe-397B.
+Qwenmoe-Swebenchpro-Result has a score-value that is "50.9".
+Qwenmoe-Swebenchpro-Result has a score-unit that is "percentage".
+Qwenmoe-Swebenchpro-Result has a as-of-date that is "2026-04-23".
+
+Qwenmoe-Terminalbench2-Result is a benchmark-result.
+Qwenmoe-Terminalbench2-Result is-measured-on Terminal-Bench-2.
+Qwenmoe-Terminalbench2-Result is-achieved-by Qwen-3-6-Moe-397B.
+Qwenmoe-Terminalbench2-Result has a score-value that is "52.5".
+Qwenmoe-Terminalbench2-Result has a score-unit that is "percentage".
+Qwenmoe-Terminalbench2-Result has a as-of-date that is "2026-04-23".
+
+Qwenmoe-Skillsbench-Result is a benchmark-result.
+Qwenmoe-Skillsbench-Result is-measured-on Skillsbench.
+Qwenmoe-Skillsbench-Result is-achieved-by Qwen-3-6-Moe-397B.
+Qwenmoe-Skillsbench-Result has a score-value that is "30.0".
+Qwenmoe-Skillsbench-Result has a score-unit that is "percentage".
+Qwenmoe-Skillsbench-Result has a as-of-date that is "2026-04-23".
+
+# ---- Scaffold caveat: Qwen 3.6 35B on Polyglot with a better harness ----
+Qwen-3-6-35B-A3B is a foundation-model.
+Qwen-3-6-35B-A3B is-provided-by Alibaba.
+Qwen-3-6-35B-A3B has a parameter-count that is "35".
+Qwen-Polyglot-Result is a benchmark-result.
+Qwen-Polyglot-Result is-measured-on Polyglot.
+Qwen-Polyglot-Result is-achieved-by Qwen-3-6-35B-A3B.
+Qwen-Polyglot-Result has a score-value that is "78.7".
+Qwen-Polyglot-Result has a score-unit that is "percentage".
+Qwen-Polyglot-Result has an as-of-date that is "2026-05-01".

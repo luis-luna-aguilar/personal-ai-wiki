@@ -1,0 +1,99 @@
+# ACE sidecar for wiki/models/minimax-m3.md  (subject: aiw:minimax-m3)
+# Controlled-English restatement of the page's assertable facts.
+# Proper names (Minimax-M3, Minimax, Domain-Models, Domain-Coding,
+# Subcategory-Coding-Model, Tag-Agentic, Swe-Bench, Swe-Bench-Pro, Terminal-Bench,
+# Terminal-Bench-2-1, Mcp-Atlas, Posttrainbench, Novita, Vercel-Ai-Gateway,
+# Cloudflare-Workers-Ai, and the Minimax-*-Result individuals) compile to aiw:<slug>
+# — no lexicon entry needed.
+#
+# CONTESTED-CLAIM NOTE: the page calls MiniMax M3 a "claimed open-weight frontier
+# model" but states weights and parameter count were NOT disclosed at launch, making
+# the "open-weight" label contested. We therefore do NOT assert
+# `Minimax-M3 has-license-model the open-weights-license.` as settled fact. Instead we
+# assert the settled negative facts (weights/parameter-count not disclosed). See the
+# extraction map for the full justification.
+
+# --- Type and frontmatter classification (type / domains / subcategory / tags / as_of) ---
+Minimax-M3 is a model.
+Minimax-M3 has-domain Domain-Models.
+Minimax-M3 has-domain Domain-Coding.
+Minimax-M3 has-subcategory Subcategory-Coding-Model.
+Minimax-M3 has-tag Tag-Agentic.
+Minimax-M3 has an as-of-date that is "2026-06-02".
+
+# --- Provider ---
+Minimax-M3 is-provided-by Minimax.
+
+# --- Capabilities: context window and multimodality ---
+Minimax-M3 has a context-window that is "1000000".
+Minimax-M3 has a guaranteed-context-window that is "512000".
+Minimax-M3 is multimodal.
+
+# --- Contested open-weight claim: the settled facts are the non-disclosures ---
+Minimax-M3 does not disclose a model-weight.
+Minimax-M3 does not disclose a parameter-count.
+
+# --- Benchmarks referenced (variants and standalone benchmarks) ---
+Swe-Bench has-variant Swe-Bench-Pro.
+Swe-Bench-Pro is a benchmark.
+Terminal-Bench has-variant Terminal-Bench-2-1.
+Terminal-Bench-2-1 is a benchmark.
+Mcp-Atlas is a benchmark.
+Posttrainbench is a benchmark.
+
+# --- Benchmark result: SWE-Bench Pro 59.0% ---
+Minimax-Swe-Bench-Pro-Result is a benchmark-result.
+Minimax-Swe-Bench-Pro-Result is-measured-on Swe-Bench-Pro.
+Minimax-Swe-Bench-Pro-Result is-achieved-by Minimax-M3.
+Minimax-Swe-Bench-Pro-Result has a score-value that is "59.0".
+Minimax-Swe-Bench-Pro-Result has a score-unit that is "percentage".
+Minimax-Swe-Bench-Pro-Result has an as-of-date that is "2026-06-02".
+
+# --- Benchmark result: Terminal Bench 2.1 66.0% ---
+Minimax-Terminal-Bench-2-1-Result is a benchmark-result.
+Minimax-Terminal-Bench-2-1-Result is-measured-on Terminal-Bench-2-1.
+Minimax-Terminal-Bench-2-1-Result is-achieved-by Minimax-M3.
+Minimax-Terminal-Bench-2-1-Result has a score-value that is "66.0".
+Minimax-Terminal-Bench-2-1-Result has a score-unit that is "percentage".
+Minimax-Terminal-Bench-2-1-Result has an as-of-date that is "2026-06-02".
+
+# --- Benchmark result: MCP Atlas 74.2% ---
+Minimax-Mcp-Atlas-Result is a benchmark-result.
+Minimax-Mcp-Atlas-Result is-measured-on Mcp-Atlas.
+Minimax-Mcp-Atlas-Result is-achieved-by Minimax-M3.
+Minimax-Mcp-Atlas-Result has a score-value that is "74.2".
+Minimax-Mcp-Atlas-Result has a score-unit that is "percentage".
+Minimax-Mcp-Atlas-Result has an as-of-date that is "2026-06-02".
+
+# --- Benchmark result: PostTrainBench #3 overall ---
+Minimax-Posttrainbench-Result is a benchmark-result.
+Minimax-Posttrainbench-Result is-measured-on Posttrainbench.
+Minimax-Posttrainbench-Result is-achieved-by Minimax-M3.
+Minimax-Posttrainbench-Result has a score-value that is "3".
+Minimax-Posttrainbench-Result has a score-unit that is "rank".
+Minimax-Posttrainbench-Result has an as-of-date that is "2026-06-02".
+
+# --- Model-to-result inverse links ---
+Minimax-M3 has-benchmark-result Minimax-Swe-Bench-Pro-Result.
+Minimax-M3 has-benchmark-result Minimax-Terminal-Bench-2-1-Result.
+Minimax-M3 has-benchmark-result Minimax-Mcp-Atlas-Result.
+Minimax-M3 has-benchmark-result Minimax-Posttrainbench-Result.
+
+# --- Day-0 support platforms ---
+# is-provided-by facts added: swe:supports (used above) has domain
+# schema:SoftwareApplication, so these three are entailed SoftwareApplication
+# instances — SoftwareApplicationShape then requires exactly one provider.
+Novita supports Minimax-M3.
+Novita is-provided-by Novita-Ai.
+Vercel-Ai-Gateway supports Minimax-M3.
+Vercel-Ai-Gateway is-provided-by Vercel.
+Cloudflare-Workers-Ai supports Minimax-M3.
+Cloudflare-Workers-Ai is-provided-by Cloudflare.
+
+# --- Weaknesses / observed behaviors ---
+Minimax-M3 exhibits a high-token-consumption.
+Minimax-M3 exhibits a verbose-self-check-loop.
+Minimax-M3 exhibits a requirement-drift.
+
+# --- Launch ---
+Minimax-M3 has a launch-date that is "2026-06-02".

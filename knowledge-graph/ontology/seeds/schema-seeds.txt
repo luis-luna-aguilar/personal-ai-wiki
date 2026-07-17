@@ -9,6 +9,5 @@ https://schema.org/PropertyValue
 https://schema.org/SoftwareApplication
 https://schema.org/State
 https://schema.org/foundingDate
-https://schema.org/location
 https://schema.org/position
 https://schema.org/provider

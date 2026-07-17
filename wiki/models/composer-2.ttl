@@ -1,0 +1,130 @@
+@prefix aiw: <https://ai-wiki.luisluna.dev/ontology/#> .
+@prefix biz: <https://musclepoints.com/ontology/biz#> .
+@prefix swe: <https://musclepoints.com/ontology/swe#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dbp: <http://dbpedia.org/resource/> .
+@prefix fibo-fbc-fct-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-fnd-utl-alx: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> .
+@prefix fibo-be-oc-op: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/> .
+@prefix fibo-be-le-lei: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# generated from composer-2.ace by drs2ttl_v3.py — build artifact, do not hand-edit
+# candidate for wiki/models/composer-2.ttl — promote only after review
+
+# ── annotations merged from the hand-authored sidecar (no ACE form) ──
+aiw:composer-2 rdfs:comment "Cursor's in-house coding model for complex long-horizon engineering work, built on Kimi-k2.5."@en .
+aiw:composer-2 rdfs:label "Composer 2"@en .
+aiw:swe-bench-multilingual rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:swe-bench-multilingual rdfs:label "Swe Bench Multilingual"@en .
+aiw:terminal-bench-2 rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:terminal-bench-2 rdfs:label "Terminal Bench 2"@en .
+
+# L11: Composer-2 is a model.
+aiw:composer-2 a aiw:FoundationModel .
+
+# L12: Composer-2 is-provided-by Cursor.
+aiw:composer-2 biz:providedBy aiw:cursor .
+
+# L13: Composer-2 has-license-model the closed-source-license.
+aiw:composer-2 aiw:hasLicenseModel aiw:closed-source .
+
+# L14: Composer-2 has-domain Domain-Coding.
+aiw:composer-2 aiw:hasDomain aiw:domain-coding .
+
+# L15: Composer-2 has-domain Domain-Models.
+aiw:composer-2 aiw:hasDomain aiw:domain-models .
+
+# L16: Composer-2 has-subcategory Subcategory-Coding-Model.
+aiw:composer-2 aiw:hasSubcategory aiw:subcategory-coding-model .
+
+# L17: Composer-2 has an as-of-date that is "2026-03-23".
+aiw:composer-2 aiw:asOf "2026-03-23"^^xsd:date .
+
+# L20: Terminal-Bench-2 is a benchmark.
+aiw:terminal-bench-2 a aiw:Benchmark .
+
+# L21: Swe-Bench-Multilingual is a benchmark.
+aiw:swe-bench-multilingual a aiw:Benchmark .
+
+# L22: Swe-Bench has-variant Swe-Bench-Multilingual.
+aiw:swe-bench aiw:hasVariant aiw:swe-bench-multilingual .
+
+# L25: Composer2-Terminalbench-Result is a benchmark-result.
+aiw:composer2-terminalbench-result a aiw:BenchmarkResult .
+
+# L26: Composer2-Terminalbench-Result is-measured-on Terminal-Bench-2.
+aiw:composer2-terminalbench-result aiw:onBenchmark aiw:terminal-bench-2 .
+
+# L27: Composer2-Terminalbench-Result is-achieved-by Composer-2.
+aiw:composer2-terminalbench-result aiw:achievedBy aiw:composer-2 .
+
+# L28: Composer2-Terminalbench-Result has a score-value that is "61.7".
+aiw:composer2-terminalbench-result aiw:scoreValue "61.7"^^xsd:decimal .
+
+# L29: Composer2-Terminalbench-Result has a score-unit that is "percentage".
+aiw:composer2-terminalbench-result aiw:scoreUnit "percentage" .
+
+# L30: Composer2-Terminalbench-Result has an as-of-date that is "2026-03-23".
+aiw:composer2-terminalbench-result aiw:asOf "2026-03-23"^^xsd:date .
+
+# L31: Composer-2 has-benchmark-result Composer2-Terminalbench-Result.
+aiw:composer-2 aiw:hasBenchmarkResult aiw:composer2-terminalbench-result .
+
+# L34: Composer2-Swebench-Result is a benchmark-result.
+aiw:composer2-swebench-result a aiw:BenchmarkResult .
+
+# L35: Composer2-Swebench-Result is-measured-on Swe-Bench-Multilingual.
+aiw:composer2-swebench-result aiw:onBenchmark aiw:swe-bench-multilingual .
+
+# L36: Composer2-Swebench-Result is-achieved-by Composer-2.
+aiw:composer2-swebench-result aiw:achievedBy aiw:composer-2 .
+
+# L37: Composer2-Swebench-Result has a score-value that is "73.7".
+aiw:composer2-swebench-result aiw:scoreValue "73.7"^^xsd:decimal .
+
+# L38: Composer2-Swebench-Result has a score-unit that is "percentage".
+aiw:composer2-swebench-result aiw:scoreUnit "percentage" .
+
+# L39: Composer2-Swebench-Result has an as-of-date that is "2026-03-23".
+aiw:composer2-swebench-result aiw:asOf "2026-03-23"^^xsd:date .
+
+# L40: Composer-2 has-benchmark-result Composer2-Swebench-Result.
+aiw:composer-2 aiw:hasBenchmarkResult aiw:composer2-swebench-result .
+
+# L43: Composer-2 is-derived-from Kimi-k2-5.
+aiw:composer-2 prov:wasDerivedFrom aiw:kimi-k2-5 .
+
+# L44: Kimi-k2-5 is-provided-by Moonshot.
+aiw:kimi-k2-5 biz:providedBy aiw:moonshot .
+
+# L45: Kimi-k2-5 has-license-model the open-weights-license.
+aiw:kimi-k2-5 aiw:hasLicenseModel aiw:open-weights .
+
+# ═══ compile report ═══
+# L48 [generic] Composer-2 does not provide an api.
+#      → negation without named subject
+# L52 [parse-fail] Composer-2 has an input-token-price that is "0.50".
+#      → run validate-ace.sh
+# L54 [parse-fail] Composer-2 is-available-in a cursor-product.
+#      → run validate-ace.sh
+# L56 [parse-fail] Composer-2 is-integrated-into an agent-workspace.
+#      → run validate-ace.sh
+# L58 [parse-fail] Composer-2 undergoes a continued-pretraining.
+#      → run validate-ace.sh
+# L59 [parse-fail] Composer-2 undergoes a reinforcement-learning.
+#      → run validate-ace.sh
+# L60 [parse-fail] Composer-2 undergoes a finetuning.
+#      → run validate-ace.sh
+
+# --- Organization rdfs:label / rdfs:comment enrichment (WikiEntityShape) ---
+aiw:cursor rdfs:label "Cursor"@en ; rdfs:comment "AI-powered code editor company; developer of the Composer model family."@en .
+aiw:moonshot rdfs:label "Moonshot AI"@en ; rdfs:comment "Chinese AI company; developer of the Kimi model family."@en .

@@ -1,0 +1,108 @@
+# ACE sidecar for wiki/benchmarks/swe-bench.md
+# Subject: Swe-Bench (aiw:swe-bench, an aiw:Benchmark).
+# Vocabulary: VCR-0004 benchmark terms (benchmark, benchmark-result, foundation-model,
+#   is-measured-on, is-achieved-by, has-variant, has-domain, has-tag, score-value,
+#   score-unit, as-of-date, is-provided-by). AI-domain content words beyond VCR-0004
+#   are flagged in tmp/ace-extractor/swe-bench.new-terms.yaml.
+# Leaderboard rows are reified as benchmark-result individuals (one per row).
+
+# --- Frontmatter / classification ---
+Swe-Bench is a benchmark.
+Swe-Bench has-domain Domain-Coding.
+Swe-Bench has-domain Domain-Models.
+Swe-Bench has an as-of-date that is "2026-04-23".
+
+# --- Sources (citations) ---
+Swe-Bench cites Amazon-Swe-Polybench.
+Swe-Bench cites Kimi-K2-6-Blog.
+Swe-Bench cites Ainews-2026-04-22.
+Swe-Bench cites Late-March-Small-Coding-Models.
+Swe-Bench cites Agents-Evals-Deep-Research.
+
+# --- Intro: what the benchmark measures and how ---
+Swe-Bench measures a software-engineering-capability.
+A model resolves a github-issue.
+A github-issue is-located-in a python-repository.
+A python-repository is open-source.
+A model generates a patch.
+A patch passes a test-suite.
+
+# --- Variants ---
+Swe-Bench has-variant Swe-Bench-Verified.
+Swe-Bench-Verified is a benchmark.
+Swe-Bench-Verified is human-curated.
+Swe-Bench-Verified is well-formed.
+Swe-Bench-Verified has a task-count that is "500".
+Swe-Bench has-variant Swe-Bench-Pro.
+Swe-Bench-Pro is a benchmark.
+Swe-Bench-Pro covers a multi-file-issue.
+Swe-Bench-Pro covers a cross-repo-issue.
+Swe-Bench has-variant Swe-Bench-Multilingual.
+Swe-Bench-Multilingual is a benchmark.
+Swe-Bench-Multilingual is multilingual.
+Swe-Bench-Multilingual extends Swe-Bench.
+
+# --- Data contamination and SWE-bench Pro ---
+OpenAI deprecates Swe-Bench-Verified.
+Swe-Bench-Verified exhibits a data-contamination.
+A model absorbs an evaluation-repository-code.
+A pre-training-data contains an evaluation-repository-code.
+A high-score reflects a memorization.
+A high-score does not reflect a problem-solving-ability.
+Swe-Bench-Pro succeeds Swe-Bench-Verified.
+Swe-Bench-Pro evaluates a proprietary-codebase.
+Swe-Bench-Pro evaluates a copyleft-licensed-repository.
+
+# --- Leaderboard (reified benchmark-result individuals, as of 2026-04-23) ---
+Qwen-Verified-Result is a benchmark-result.
+Qwen-Verified-Result is-measured-on Swe-Bench-Verified.
+Qwen-Verified-Result is-achieved-by Qwen-3-6-27B.
+Qwen-Verified-Result has a score-value that is "77.2".
+Qwen-Verified-Result has a score-unit that is "percentage".
+Qwen-Verified-Result has an as-of-date that is "2026-04-23".
+
+Qwen-Pro-Result is a benchmark-result.
+Qwen-Pro-Result is-measured-on Swe-Bench-Pro.
+Qwen-Pro-Result is-achieved-by Qwen-3-6-27B.
+Qwen-Pro-Result has a score-value that is "53.5".
+Qwen-Pro-Result has a score-unit that is "percentage".
+Qwen-Pro-Result has an as-of-date that is "2026-04-23".
+
+Composer-Multilingual-Result is a benchmark-result.
+Composer-Multilingual-Result is-measured-on Swe-Bench-Multilingual.
+Composer-Multilingual-Result is-achieved-by Composer-2.
+Composer-Multilingual-Result has a score-value that is "73.7".
+Composer-Multilingual-Result has a score-unit that is "percentage".
+Composer-Multilingual-Result has an as-of-date that is "2026-03-23".
+
+Minimax-Pro-Result is a benchmark-result.
+Minimax-Pro-Result is-measured-on Swe-Bench-Pro.
+Minimax-Pro-Result is-achieved-by Minimax-M2-7.
+Minimax-Pro-Result has a score-value that is "56.22".
+Minimax-Pro-Result has a score-unit that is "percentage".
+Minimax-Pro-Result has an as-of-date that is "2026-03-22".
+
+# Kimi K2.6's SWE-bench row intentionally asserts NO graph fact: the source
+# gives only "SOTA claims", no actual number, and aiw:onBenchmark's domain is
+# aiw:BenchmarkResult specifically (VCR-0003) — asserting it on the model
+# individual directly would wrongly entail Kimi-K2-6 itself is a
+# BenchmarkResult. The unverifiable claim stays prose-only in the .md, same
+# treatment as this page's other hedged/unverifiable claims.
+
+# --- Why it matters ---
+Swe-Bench compares a coding-model.
+Swe-Bench compares a coding-agent.
+
+# --- Caveats ---
+A scaffolding affects a benchmark-result.
+A scaffolding has-component a harness.
+A scaffolding has-component a tool.
+A scaffolding has-component a retry-budget.
+A model-score is a score.
+An agent-system-score is a score.
+A model-score is not an agent-system-score.
+A benchmark-result is vendor-reported.
+A vendor-reported-score is not reproducible.
+Swe-Bench skews-toward a python-repository.
+Swe-Bench skews-toward an open-source-repository.
+Swe-Bench relates-to Swe-Polybench.

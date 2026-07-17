@@ -78,6 +78,38 @@ aiw:asOf a owl:DatatypeProperty ;
     rdfs:range xsd:date ;
     rdfs:comment "The date a volatile claim was true per its source — mirrors the wiki frontmatter as_of discipline. Required on every BenchmarkResult; usable on any dated assertion node."@en .
 
+aiw:supersedes a owl:ObjectProperty ;
+    rdfs:label "supersedes"@en ;
+    rdfs:comment "The subject (a benchmark variant, or a model) succeeds/replaces the object as the more meaningful/current version of the same lineage — e.g. SWE-bench Pro supersedes SWE-bench Verified after a contamination finding. Domain/range deliberately left open (owl:Thing): both Benchmark-succeeds-Benchmark and FoundationModel-succeeds-FoundationModel are real uses, and forcing one would misuse the other. Admitted VCR-0004 (amendment): flagged independently by two separate page extractions before being minted once here, rather than per-page."@en .
+
+aiw:hasVariant a owl:ObjectProperty ;
+    rdfs:label "has variant"@en ;
+    rdfs:domain aiw:Benchmark ;
+    rdfs:range aiw:Benchmark ;
+    rdfs:comment "A benchmark family's named variant (e.g. SWE-bench → SWE-bench Verified / Pro / Multilingual). Each variant is its own aiw:Benchmark individual so results attach to the exact thing measured. Deliberately NOT skos:narrower — benchmarks are not skos:Concepts, and inferring them into ConceptShape's target class via skos property domains would impose prefLabel/definition obligations that belong to topic concepts, not measurement suites. VCR-0004."@en .
+
+#####################################################################
+# Frontmatter classification predicates (VCR-0004) — wire a page's
+# domains/subcategory/tags frontmatter to the VCR-0002 concept schemes.
+# Every pilot-batch extraction independently flagged the absence of
+# these three; admitted once, here.
+#####################################################################
+
+aiw:hasDomain a owl:ObjectProperty ;
+    rdfs:label "has domain"@en ;
+    rdfs:range skos:Concept ;
+    rdfs:comment "The page subject's frontmatter domains: value(s), as aiw:domain-<slug> concepts (VCR-0002 scheme). Zero or more."@en .
+
+aiw:hasSubcategory a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "has subcategory"@en ;
+    rdfs:range skos:Concept ;
+    rdfs:comment "The page subject's frontmatter subcategory: value, as an aiw:subcategory-<slug> concept (VCR-0002 scheme). At most one, mirroring the wiki's own 'a page has at most one subcategory' rule — enforced by aiw:SubcategoryShape."@en .
+
+aiw:hasTag a owl:ObjectProperty ;
+    rdfs:label "has tag"@en ;
+    rdfs:range skos:Concept ;
+    rdfs:comment "The page subject's frontmatter tags: value(s), as aiw:tag-<slug> concepts (VCR-0002 scheme). Zero or more."@en .
+
 #####################################################################
 # License model (closed enum — mirrors the wiki's existing license/
 # openness tags in wiki/_schema/tags.md, which are the controlled

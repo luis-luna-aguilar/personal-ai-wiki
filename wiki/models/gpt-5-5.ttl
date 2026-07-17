@@ -1,0 +1,428 @@
+@prefix aiw: <https://ai-wiki.luisluna.dev/ontology/#> .
+@prefix biz: <https://musclepoints.com/ontology/biz#> .
+@prefix swe: <https://musclepoints.com/ontology/swe#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dbp: <http://dbpedia.org/resource/> .
+@prefix fibo-fbc-fct-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-fnd-utl-alx: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> .
+@prefix fibo-be-oc-op: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/> .
+@prefix fibo-be-le-lei: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# generated from gpt-5-5.ace by drs2ttl_v3.py — build artifact, do not hand-edit
+# candidate for wiki/models/gpt-5-5.ttl — promote only after review
+
+# ── annotations merged from the hand-authored sidecar (no ACE form) ──
+aiw:arc-agi-2 rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:arc-agi-2 rdfs:label "Arc Agi 2"@en .
+aiw:bixbench rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:bixbench rdfs:label "Bixbench"@en .
+aiw:claude-opus-4-7 rdfs:comment "A foundation model referenced in this wiki's benchmark-comparison content."@en .
+aiw:claude-opus-4-7 rdfs:label "Claude Opus 4 7"@en .
+aiw:cybergym rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:cybergym rdfs:label "Cybergym"@en .
+aiw:financeagent rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:financeagent rdfs:label "Financeagent"@en .
+aiw:gdpval rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:gdpval rdfs:label "Gdpval"@en .
+aiw:gpt-5-3-instant rdfs:comment "A foundation model referenced in this wiki's benchmark-comparison content."@en .
+aiw:gpt-5-3-instant rdfs:label "Gpt 5 3 Instant"@en .
+aiw:gpt-5-4 rdfs:comment "A foundation model referenced in this wiki's benchmark-comparison content."@en .
+aiw:gpt-5-4 rdfs:label "Gpt 5 4"@en .
+aiw:gpt-5-5 rdfs:comment "OpenAI's April 2026 frontier model, positioned as its smartest and most intuitive model."@en .
+aiw:gpt-5-5 rdfs:label "GPT-5.5"@en .
+aiw:gpt-5-5-instant rdfs:comment "A foundation model referenced in this wiki's benchmark-comparison content."@en .
+aiw:gpt-5-5-instant rdfs:label "Gpt 5 5 Instant"@en .
+aiw:gpt-5-5-pro rdfs:comment "A foundation model referenced in this wiki's benchmark-comparison content."@en .
+aiw:gpt-5-5-pro rdfs:label "Gpt 5 5 Pro"@en .
+aiw:gpt-5-5-thinking rdfs:comment "A foundation model referenced in this wiki's benchmark-comparison content."@en .
+aiw:gpt-5-5-thinking rdfs:label "Gpt 5 5 Thinking"@en .
+aiw:mcp-atlas rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:mcp-atlas rdfs:label "Mcp Atlas"@en .
+aiw:personal-finance-benchmark rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:personal-finance-benchmark rdfs:label "Personal Finance Benchmark"@en .
+aiw:swe-bench-pro rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:swe-bench-pro rdfs:label "Swe Bench Pro"@en .
+aiw:terminal-bench-2 rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:terminal-bench-2 rdfs:label "Terminal Bench 2"@en .
+
+# L9: Gpt-5-5 is a model.
+aiw:gpt-5-5 a aiw:FoundationModel .
+
+# L10: Openai is a company.
+aiw:openai a org:FormalOrganization .
+
+# L11: Anthropic is a company.
+aiw:anthropic a org:FormalOrganization .
+
+# L12: Gpt-5-5 is-provided-by Openai.
+aiw:gpt-5-5 biz:providedBy aiw:openai .
+
+# L15: Gpt-5-5 has-domain Domain-Models.
+aiw:gpt-5-5 aiw:hasDomain aiw:domain-models .
+
+# L16: Gpt-5-5 has-domain Domain-Coding.
+aiw:gpt-5-5 aiw:hasDomain aiw:domain-coding .
+
+# L17: Gpt-5-5 has-domain Domain-Agents.
+aiw:gpt-5-5 aiw:hasDomain aiw:domain-agents .
+
+# L18: Gpt-5-5 has-domain Domain-Science.
+aiw:gpt-5-5 aiw:hasDomain aiw:domain-science .
+
+# L19: Gpt-5-5 has-domain Domain-Cybersecurity.
+aiw:gpt-5-5 aiw:hasDomain aiw:domain-cybersecurity .
+
+# L22: Gpt-5-5 has-subcategory Subcategory-Frontier-Model.
+aiw:gpt-5-5 aiw:hasSubcategory aiw:subcategory-frontier-model .
+
+# L23: Gpt-5-5 has-tag Tag-Openai.
+aiw:gpt-5-5 aiw:hasTag aiw:tag-openai .
+
+# L24: Gpt-5-5 has-tag Tag-Closed-Source.
+aiw:gpt-5-5 aiw:hasTag aiw:tag-closed-source .
+
+# L25: Gpt-5-5 has-license-model the closed-source-license.
+aiw:gpt-5-5 aiw:hasLicenseModel aiw:closed-source .
+
+# L28: Gpt-5-5 has an as-of-date that is "2026-05-18".
+aiw:gpt-5-5 aiw:asOf "2026-05-18"^^xsd:date .
+
+# L48: Gpt-5-5-Pro is a model.
+aiw:gpt-5-5-pro a aiw:FoundationModel .
+
+# L49: Gpt-5-5-Thinking is a model.
+aiw:gpt-5-5-thinking a aiw:FoundationModel .
+
+# L50: Gpt-5-5-Instant is a model.
+aiw:gpt-5-5-instant a aiw:FoundationModel .
+
+# L51: Gpt-5-5-Pro is-provided-by Openai.
+aiw:gpt-5-5-pro biz:providedBy aiw:openai .
+
+# L52: Gpt-5-5-Thinking is-provided-by Openai.
+aiw:gpt-5-5-thinking biz:providedBy aiw:openai .
+
+# L53: Gpt-5-5-Instant is-provided-by Openai.
+aiw:gpt-5-5-instant biz:providedBy aiw:openai .
+
+# L59: Gpt-5-4 is a model.
+aiw:gpt-5-4 a aiw:FoundationModel .
+
+# L60: Gpt-5-3-Instant is a model.
+aiw:gpt-5-3-instant a aiw:FoundationModel .
+
+# L61: Gpt-5-4 is-provided-by Openai.
+aiw:gpt-5-4 biz:providedBy aiw:openai .
+
+# L62: Gpt-5-3-Instant is-provided-by Openai.
+aiw:gpt-5-3-instant biz:providedBy aiw:openai .
+
+# L77: Claude-Opus-4-7 is a model.
+aiw:claude-opus-4-7 a aiw:FoundationModel .
+
+# L78: Claude-Opus-4-7 is-provided-by Anthropic.
+aiw:claude-opus-4-7 biz:providedBy aiw:anthropic .
+
+# L81: Terminal-Bench-2 is a benchmark.
+aiw:terminal-bench-2 a aiw:Benchmark .
+
+# L82: Gdpval is a benchmark.
+aiw:gdpval a aiw:Benchmark .
+
+# L83: Arc-Agi-2 is a benchmark.
+aiw:arc-agi-2 a aiw:Benchmark .
+
+# L84: Cybergym is a benchmark.
+aiw:cybergym a aiw:Benchmark .
+
+# L85: Bixbench is a benchmark.
+aiw:bixbench a aiw:Benchmark .
+
+# L86: Swe-Bench-Pro is a benchmark.
+aiw:swe-bench-pro a aiw:Benchmark .
+
+# L87: Mcp-Atlas is a benchmark.
+aiw:mcp-atlas a aiw:Benchmark .
+
+# L88: Financeagent is a benchmark.
+aiw:financeagent a aiw:Benchmark .
+
+# L89: Personal-Finance-Benchmark is a benchmark.
+aiw:personal-finance-benchmark a aiw:Benchmark .
+
+# L92: Gpt-5-5-Terminal-Bench-Result is a benchmark-result.
+aiw:gpt-5-5-terminal-bench-result a aiw:BenchmarkResult .
+
+# L93: Gpt-5-5-Terminal-Bench-Result is-measured-on Terminal-Bench-2.
+aiw:gpt-5-5-terminal-bench-result aiw:onBenchmark aiw:terminal-bench-2 .
+
+# L94: Gpt-5-5-Terminal-Bench-Result is-achieved-by Gpt-5-5.
+aiw:gpt-5-5-terminal-bench-result aiw:achievedBy aiw:gpt-5-5 .
+
+# L95: Gpt-5-5-Terminal-Bench-Result has a score-value that is "82.7".
+aiw:gpt-5-5-terminal-bench-result aiw:scoreValue "82.7"^^xsd:decimal .
+
+# L96: Gpt-5-5-Terminal-Bench-Result has a score-unit that is "percentage".
+aiw:gpt-5-5-terminal-bench-result aiw:scoreUnit "percentage" .
+
+# L97: Gpt-5-5-Terminal-Bench-Result has an as-of-date that is "2026-05-18".
+aiw:gpt-5-5-terminal-bench-result aiw:asOf "2026-05-18"^^xsd:date .
+
+# L99: Gpt-5-5-Gdpval-Result is a benchmark-result.
+aiw:gpt-5-5-gdpval-result a aiw:BenchmarkResult .
+
+# L100: Gpt-5-5-Gdpval-Result is-measured-on Gdpval.
+aiw:gpt-5-5-gdpval-result aiw:onBenchmark aiw:gdpval .
+
+# L101: Gpt-5-5-Gdpval-Result is-achieved-by Gpt-5-5.
+aiw:gpt-5-5-gdpval-result aiw:achievedBy aiw:gpt-5-5 .
+
+# L102: Gpt-5-5-Gdpval-Result has a score-value that is "84.9".
+aiw:gpt-5-5-gdpval-result aiw:scoreValue "84.9"^^xsd:decimal .
+
+# L103: Gpt-5-5-Gdpval-Result has a score-unit that is "percentage".
+aiw:gpt-5-5-gdpval-result aiw:scoreUnit "percentage" .
+
+# L104: Gpt-5-5-Gdpval-Result has an as-of-date that is "2026-05-18".
+aiw:gpt-5-5-gdpval-result aiw:asOf "2026-05-18"^^xsd:date .
+
+# L106: Gpt-5-5-Arc-Agi-2-Result is a benchmark-result.
+aiw:gpt-5-5-arc-agi-2-result a aiw:BenchmarkResult .
+
+# L107: Gpt-5-5-Arc-Agi-2-Result is-measured-on Arc-Agi-2.
+aiw:gpt-5-5-arc-agi-2-result aiw:onBenchmark aiw:arc-agi-2 .
+
+# L108: Gpt-5-5-Arc-Agi-2-Result is-achieved-by Gpt-5-5.
+aiw:gpt-5-5-arc-agi-2-result aiw:achievedBy aiw:gpt-5-5 .
+
+# L109: Gpt-5-5-Arc-Agi-2-Result has a score-value that is "85.0".
+aiw:gpt-5-5-arc-agi-2-result aiw:scoreValue "85.0"^^xsd:decimal .
+
+# L110: Gpt-5-5-Arc-Agi-2-Result has a score-unit that is "percentage".
+aiw:gpt-5-5-arc-agi-2-result aiw:scoreUnit "percentage" .
+
+# L111: Gpt-5-5-Arc-Agi-2-Result has an as-of-date that is "2026-05-18".
+aiw:gpt-5-5-arc-agi-2-result aiw:asOf "2026-05-18"^^xsd:date .
+
+# L113: Gpt-5-5-Cybergym-Result is a benchmark-result.
+aiw:gpt-5-5-cybergym-result a aiw:BenchmarkResult .
+
+# L114: Gpt-5-5-Cybergym-Result is-measured-on Cybergym.
+aiw:gpt-5-5-cybergym-result aiw:onBenchmark aiw:cybergym .
+
+# L115: Gpt-5-5-Cybergym-Result is-achieved-by Gpt-5-5.
+aiw:gpt-5-5-cybergym-result aiw:achievedBy aiw:gpt-5-5 .
+
+# L116: Gpt-5-5-Cybergym-Result has a score-value that is "81.8".
+aiw:gpt-5-5-cybergym-result aiw:scoreValue "81.8"^^xsd:decimal .
+
+# L117: Gpt-5-5-Cybergym-Result has a score-unit that is "percentage".
+aiw:gpt-5-5-cybergym-result aiw:scoreUnit "percentage" .
+
+# L118: Gpt-5-5-Cybergym-Result has an as-of-date that is "2026-05-18".
+aiw:gpt-5-5-cybergym-result aiw:asOf "2026-05-18"^^xsd:date .
+
+# L120: Gpt-5-5-Bixbench-Result is a benchmark-result.
+aiw:gpt-5-5-bixbench-result a aiw:BenchmarkResult .
+
+# L121: Gpt-5-5-Bixbench-Result is-measured-on Bixbench.
+aiw:gpt-5-5-bixbench-result aiw:onBenchmark aiw:bixbench .
+
+# L122: Gpt-5-5-Bixbench-Result is-achieved-by Gpt-5-5.
+aiw:gpt-5-5-bixbench-result aiw:achievedBy aiw:gpt-5-5 .
+
+# L123: Gpt-5-5-Bixbench-Result has a score-value that is "80.5".
+aiw:gpt-5-5-bixbench-result aiw:scoreValue "80.5"^^xsd:decimal .
+
+# L124: Gpt-5-5-Bixbench-Result has a score-unit that is "percentage".
+aiw:gpt-5-5-bixbench-result aiw:scoreUnit "percentage" .
+
+# L125: Gpt-5-5-Bixbench-Result has an as-of-date that is "2026-05-18".
+aiw:gpt-5-5-bixbench-result aiw:asOf "2026-05-18"^^xsd:date .
+
+# L128: Gpt-5-5-Swe-Bench-Pro-Result is a benchmark-result.
+aiw:gpt-5-5-swe-bench-pro-result a aiw:BenchmarkResult .
+
+# L129: Gpt-5-5-Swe-Bench-Pro-Result is-measured-on Swe-Bench-Pro.
+aiw:gpt-5-5-swe-bench-pro-result aiw:onBenchmark aiw:swe-bench-pro .
+
+# L130: Gpt-5-5-Swe-Bench-Pro-Result is-achieved-by Gpt-5-5.
+aiw:gpt-5-5-swe-bench-pro-result aiw:achievedBy aiw:gpt-5-5 .
+
+# L131: Gpt-5-5-Swe-Bench-Pro-Result has a score-value that is "58.6".
+aiw:gpt-5-5-swe-bench-pro-result aiw:scoreValue "58.6"^^xsd:decimal .
+
+# L132: Gpt-5-5-Swe-Bench-Pro-Result has a score-unit that is "percentage".
+aiw:gpt-5-5-swe-bench-pro-result aiw:scoreUnit "percentage" .
+
+# L133: Gpt-5-5-Swe-Bench-Pro-Result has an as-of-date that is "2026-05-18".
+aiw:gpt-5-5-swe-bench-pro-result aiw:asOf "2026-05-18"^^xsd:date .
+
+# L134: Opus-4-7-Swe-Bench-Pro-Result is a benchmark-result.
+aiw:opus-4-7-swe-bench-pro-result a aiw:BenchmarkResult .
+
+# L135: Opus-4-7-Swe-Bench-Pro-Result is-measured-on Swe-Bench-Pro.
+aiw:opus-4-7-swe-bench-pro-result aiw:onBenchmark aiw:swe-bench-pro .
+
+# L136: Opus-4-7-Swe-Bench-Pro-Result is-achieved-by Claude-Opus-4-7.
+aiw:opus-4-7-swe-bench-pro-result aiw:achievedBy aiw:claude-opus-4-7 .
+
+# L137: Opus-4-7-Swe-Bench-Pro-Result has a score-value that is "64.3".
+aiw:opus-4-7-swe-bench-pro-result aiw:scoreValue "64.3"^^xsd:decimal .
+
+# L138: Opus-4-7-Swe-Bench-Pro-Result has a score-unit that is "percentage".
+aiw:opus-4-7-swe-bench-pro-result aiw:scoreUnit "percentage" .
+
+# L139: Opus-4-7-Swe-Bench-Pro-Result has an as-of-date that is "2026-05-18".
+aiw:opus-4-7-swe-bench-pro-result aiw:asOf "2026-05-18"^^xsd:date .
+
+# L142: Gpt-5-5-Mcp-Atlas-Result is a benchmark-result.
+aiw:gpt-5-5-mcp-atlas-result a aiw:BenchmarkResult .
+
+# L143: Gpt-5-5-Mcp-Atlas-Result is-measured-on Mcp-Atlas.
+aiw:gpt-5-5-mcp-atlas-result aiw:onBenchmark aiw:mcp-atlas .
+
+# L144: Gpt-5-5-Mcp-Atlas-Result is-achieved-by Gpt-5-5.
+aiw:gpt-5-5-mcp-atlas-result aiw:achievedBy aiw:gpt-5-5 .
+
+# L145: Gpt-5-5-Mcp-Atlas-Result has a score-value that is "75.3".
+aiw:gpt-5-5-mcp-atlas-result aiw:scoreValue "75.3"^^xsd:decimal .
+
+# L146: Gpt-5-5-Mcp-Atlas-Result has a score-unit that is "percentage".
+aiw:gpt-5-5-mcp-atlas-result aiw:scoreUnit "percentage" .
+
+# L147: Gpt-5-5-Mcp-Atlas-Result has an as-of-date that is "2026-05-18".
+aiw:gpt-5-5-mcp-atlas-result aiw:asOf "2026-05-18"^^xsd:date .
+
+# L148: Opus-4-7-Mcp-Atlas-Result is a benchmark-result.
+aiw:opus-4-7-mcp-atlas-result a aiw:BenchmarkResult .
+
+# L149: Opus-4-7-Mcp-Atlas-Result is-measured-on Mcp-Atlas.
+aiw:opus-4-7-mcp-atlas-result aiw:onBenchmark aiw:mcp-atlas .
+
+# L150: Opus-4-7-Mcp-Atlas-Result is-achieved-by Claude-Opus-4-7.
+aiw:opus-4-7-mcp-atlas-result aiw:achievedBy aiw:claude-opus-4-7 .
+
+# L151: Opus-4-7-Mcp-Atlas-Result has a score-value that is "79.1".
+aiw:opus-4-7-mcp-atlas-result aiw:scoreValue "79.1"^^xsd:decimal .
+
+# L152: Opus-4-7-Mcp-Atlas-Result has a score-unit that is "percentage".
+aiw:opus-4-7-mcp-atlas-result aiw:scoreUnit "percentage" .
+
+# L153: Opus-4-7-Mcp-Atlas-Result has an as-of-date that is "2026-05-18".
+aiw:opus-4-7-mcp-atlas-result aiw:asOf "2026-05-18"^^xsd:date .
+
+# L156: Gpt-5-5-Finance-Agent-Result is a benchmark-result.
+aiw:gpt-5-5-finance-agent-result a aiw:BenchmarkResult .
+
+# L157: Gpt-5-5-Finance-Agent-Result is-measured-on Financeagent.
+aiw:gpt-5-5-finance-agent-result aiw:onBenchmark aiw:financeagent .
+
+# L158: Gpt-5-5-Finance-Agent-Result is-achieved-by Gpt-5-5.
+aiw:gpt-5-5-finance-agent-result aiw:achievedBy aiw:gpt-5-5 .
+
+# L159: Gpt-5-5-Finance-Agent-Result has a score-value that is "60.0".
+aiw:gpt-5-5-finance-agent-result aiw:scoreValue "60.0"^^xsd:decimal .
+
+# L160: Gpt-5-5-Finance-Agent-Result has a score-unit that is "percentage".
+aiw:gpt-5-5-finance-agent-result aiw:scoreUnit "percentage" .
+
+# L161: Gpt-5-5-Finance-Agent-Result has an as-of-date that is "2026-05-18".
+aiw:gpt-5-5-finance-agent-result aiw:asOf "2026-05-18"^^xsd:date .
+
+# L162: Opus-4-7-Finance-Agent-Result is a benchmark-result.
+aiw:opus-4-7-finance-agent-result a aiw:BenchmarkResult .
+
+# L163: Opus-4-7-Finance-Agent-Result is-measured-on Financeagent.
+aiw:opus-4-7-finance-agent-result aiw:onBenchmark aiw:financeagent .
+
+# L164: Opus-4-7-Finance-Agent-Result is-achieved-by Claude-Opus-4-7.
+aiw:opus-4-7-finance-agent-result aiw:achievedBy aiw:claude-opus-4-7 .
+
+# L165: Opus-4-7-Finance-Agent-Result has a score-value that is "64.4".
+aiw:opus-4-7-finance-agent-result aiw:scoreValue "64.4"^^xsd:decimal .
+
+# L166: Opus-4-7-Finance-Agent-Result has a score-unit that is "percentage".
+aiw:opus-4-7-finance-agent-result aiw:scoreUnit "percentage" .
+
+# L167: Opus-4-7-Finance-Agent-Result has an as-of-date that is "2026-05-18".
+aiw:opus-4-7-finance-agent-result aiw:asOf "2026-05-18"^^xsd:date .
+
+# L170: Gpt-5-5-Thinking-Personal-Finance-Result is a benchmark-result.
+aiw:gpt-5-5-thinking-personal-finance-result a aiw:BenchmarkResult .
+
+# L171: Gpt-5-5-Thinking-Personal-Finance-Result is-measured-on Personal-Finance-Benchmark.
+aiw:gpt-5-5-thinking-personal-finance-result aiw:onBenchmark aiw:personal-finance-benchmark .
+
+# L172: Gpt-5-5-Thinking-Personal-Finance-Result is-achieved-by Gpt-5-5-Thinking.
+aiw:gpt-5-5-thinking-personal-finance-result aiw:achievedBy aiw:gpt-5-5-thinking .
+
+# L173: Gpt-5-5-Thinking-Personal-Finance-Result has a score-value that is "79".
+aiw:gpt-5-5-thinking-personal-finance-result aiw:scoreValue "79.0"^^xsd:decimal .
+
+# L174: Gpt-5-5-Thinking-Personal-Finance-Result has a score-unit that is "points".
+aiw:gpt-5-5-thinking-personal-finance-result aiw:scoreUnit "points" .
+
+# L175: Gpt-5-5-Thinking-Personal-Finance-Result has an as-of-date that is "2026-05-18".
+aiw:gpt-5-5-thinking-personal-finance-result aiw:asOf "2026-05-18"^^xsd:date .
+
+# L176: Gpt-5-5-Pro-Personal-Finance-Result is a benchmark-result.
+aiw:gpt-5-5-pro-personal-finance-result a aiw:BenchmarkResult .
+
+# L177: Gpt-5-5-Pro-Personal-Finance-Result is-measured-on Personal-Finance-Benchmark.
+aiw:gpt-5-5-pro-personal-finance-result aiw:onBenchmark aiw:personal-finance-benchmark .
+
+# L178: Gpt-5-5-Pro-Personal-Finance-Result is-achieved-by Gpt-5-5-Pro.
+aiw:gpt-5-5-pro-personal-finance-result aiw:achievedBy aiw:gpt-5-5-pro .
+
+# L179: Gpt-5-5-Pro-Personal-Finance-Result has a score-value that is "82.5".
+aiw:gpt-5-5-pro-personal-finance-result aiw:scoreValue "82.5"^^xsd:decimal .
+
+# L180: Gpt-5-5-Pro-Personal-Finance-Result has a score-unit that is "points".
+aiw:gpt-5-5-pro-personal-finance-result aiw:scoreUnit "points" .
+
+# L181: Gpt-5-5-Pro-Personal-Finance-Result has an as-of-date that is "2026-05-18".
+aiw:gpt-5-5-pro-personal-finance-result aiw:asOf "2026-05-18"^^xsd:date .
+
+# ═══ compile report ═══
+# L29 [parse-fail] Gpt-5-5 has a release-date that is "2026-04-23".
+#      → run validate-ace.sh
+# L32 [parse-fail] Gpt-5-5 cites Openai-Gpt-5-5-Launch.
+#      → run validate-ace.sh
+# L33 [parse-fail] Gpt-5-5 cites Danshipper-Gpt-5-5-Vibe-Check.
+#      → run validate-ace.sh
+# L34 [parse-fail] Gpt-5-5 cites Gpt-5-5-Instant-Default-2026-05-06.
+#      → run validate-ace.sh
+# L35 [parse-fail] Gpt-5-5 cites Chatgpt-Personal-Finance-2026-05.
+#      → run validate-ace.sh
+# L54 [parse-fail] Gpt-5-5 has-model-variant Gpt-5-5-Pro.
+#      → run validate-ace.sh
+# L55 [parse-fail] Gpt-5-5 has-model-variant Gpt-5-5-Thinking.
+#      → run validate-ace.sh
+# L56 [parse-fail] Gpt-5-5 has-model-variant Gpt-5-5-Instant.
+#      → run validate-ace.sh
+# L63 [parse-fail] Gpt-5-5 supersedes Gpt-5-4.
+#      → run validate-ace.sh
+# L64 [parse-fail] Gpt-5-5-Instant supersedes Gpt-5-3-Instant.
+#      → run validate-ace.sh
+# L71 [parse-fail] Gpt-5-5 has a context-window that is "400000".
+#      → run validate-ace.sh
+# L72 [parse-fail] Gpt-5-5 has a context-window that is "1000000".
+#      → run validate-ace.sh
+# L73 [parse-fail] Gpt-5-5 powers Codex.
+#      → run validate-ace.sh
+# L74 [parse-fail] Gpt-5-5 powers Chatgpt.
+#      → run validate-ace.sh
+
+# --- Organization rdfs:label / rdfs:comment enrichment (WikiEntityShape) ---
+aiw:anthropic rdfs:label "Anthropic"@en ; rdfs:comment "AI safety company; developer of the Claude model family."@en .
+aiw:openai rdfs:label "OpenAI"@en ; rdfs:comment "AI research and deployment company; developer of the GPT model family."@en .

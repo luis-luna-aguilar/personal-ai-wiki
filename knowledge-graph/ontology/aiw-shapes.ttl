@@ -237,3 +237,31 @@ aiw:LicenseModelShape a sh:NodeShape ;
         sh:in ( aiw:open-source aiw:open-weights aiw:closed-source ) ;
         sh:message "aiw:hasLicenseModel must be one of: open-source, open-weights, closed-source."@en ;
     ] .
+
+#####################################################################
+# VCR-0004 — frontmatter classification: at most one subcategory,
+# and every classification value must be a real VCR-0002 concept
+# (a typo'd slug fails sh:class because the individual is untyped).
+#####################################################################
+
+aiw:SubcategoryShape a sh:NodeShape ;
+    sh:targetSubjectsOf aiw:hasSubcategory ;
+    sh:property [
+        sh:path aiw:hasSubcategory ;
+        sh:maxCount 1 ;
+        sh:class skos:Concept ;
+        sh:message "A page has at most one subcategory, and it must be a declared wiki/_schema concept (aiw:subcategory-<slug>)."@en ;
+    ] .
+
+aiw:DomainTagValueShape a sh:NodeShape ;
+    sh:targetSubjectsOf aiw:hasDomain, aiw:hasTag ;
+    sh:property [
+        sh:path aiw:hasDomain ;
+        sh:class skos:Concept ;
+        sh:message "aiw:hasDomain must point at a declared wiki/_schema domain concept."@en ;
+    ] ;
+    sh:property [
+        sh:path aiw:hasTag ;
+        sh:class skos:Concept ;
+        sh:message "aiw:hasTag must point at a declared wiki/_schema tag concept."@en ;
+    ] .

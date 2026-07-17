@@ -1,0 +1,140 @@
+@prefix aiw: <https://ai-wiki.luisluna.dev/ontology/#> .
+@prefix biz: <https://musclepoints.com/ontology/biz#> .
+@prefix swe: <https://musclepoints.com/ontology/swe#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dbp: <http://dbpedia.org/resource/> .
+@prefix fibo-fbc-fct-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-fnd-utl-alx: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> .
+@prefix fibo-be-oc-op: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/> .
+@prefix fibo-be-le-lei: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# generated from frontiercode.ace by drs2ttl_v3.py — build artifact, do not hand-edit
+# candidate for wiki/benchmarks/frontiercode.ttl — promote only after review
+
+# ── annotations merged from the hand-authored sidecar (no ACE form) ──
+aiw:claude-fable-5 rdfs:comment "Anthropic's frontier model, the first generally available Mythos-class model, launched June 2026."@en .
+aiw:claude-fable-5 rdfs:label "Claude Fable 5"@en .
+aiw:claude-mythos-5 rdfs:comment "A foundation model referenced in this wiki's benchmark-comparison content."@en .
+aiw:claude-mythos-5 rdfs:label "Claude Mythos 5"@en .
+aiw:claude-opus-4-8 rdfs:comment "A foundation model referenced in this wiki's benchmark-comparison content."@en .
+aiw:claude-opus-4-8 rdfs:label "Claude Opus 4 8"@en .
+aiw:frontiercode rdfs:comment "A coding benchmark measuring whether AI-generated code is actually mergeable into a real production codebase, not just test-passing."@en .
+aiw:frontiercode rdfs:label "FrontierCode"@en .
+aiw:frontiercode-diamond-tier rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:frontiercode-diamond-tier rdfs:label "Frontiercode Diamond Tier"@en .
+
+# L5: Frontiercode is a benchmark.
+aiw:frontiercode a aiw:Benchmark .
+
+# L6: Frontiercode is-provided-by Cognition.
+aiw:frontiercode biz:providedBy aiw:cognition .
+
+# L7: Devin is-provided-by Cognition.
+aiw:devin biz:providedBy aiw:cognition .
+
+# L8: Frontiercode has-domain Domain-Coding.
+aiw:frontiercode aiw:hasDomain aiw:domain-coding .
+
+# L14: Frontiercode has a as-of-date that is "2026-06-09".
+aiw:frontiercode aiw:asOf "2026-06-09"^^xsd:date .
+
+# L25: Frontiercode has-variant Frontiercode-Diamond-Tier.
+aiw:frontiercode aiw:hasVariant aiw:frontiercode-diamond-tier .
+
+# L26: Frontiercode-Diamond-Tier is a benchmark.
+aiw:frontiercode-diamond-tier a aiw:Benchmark .
+
+# L32: Claude-Mythos-5 is a model.
+aiw:claude-mythos-5 a aiw:FoundationModel .
+
+# L33: Claude-Fable-5 is a model.
+aiw:claude-fable-5 a aiw:FoundationModel .
+
+# L34: Claude-Opus-4-8 is a model.
+aiw:claude-opus-4-8 a aiw:FoundationModel .
+
+# L37: Frontiercode-Mythos5-Result is a benchmark-result.
+aiw:frontiercode-mythos5-result a aiw:BenchmarkResult .
+
+# L38: Frontiercode-Mythos5-Result is-measured-on Frontiercode-Diamond-Tier.
+aiw:frontiercode-mythos5-result aiw:onBenchmark aiw:frontiercode-diamond-tier .
+
+# L39: Frontiercode-Mythos5-Result is-achieved-by Claude-Mythos-5.
+aiw:frontiercode-mythos5-result aiw:achievedBy aiw:claude-mythos-5 .
+
+# L40: Frontiercode-Mythos5-Result has a score-value that is "30.9".
+aiw:frontiercode-mythos5-result aiw:scoreValue "30.9"^^xsd:decimal .
+
+# L41: Frontiercode-Mythos5-Result has a score-unit that is "percentage".
+aiw:frontiercode-mythos5-result aiw:scoreUnit "percentage" .
+
+# L42: Frontiercode-Mythos5-Result has a as-of-date that is "2026-06-09".
+aiw:frontiercode-mythos5-result aiw:asOf "2026-06-09"^^xsd:date .
+
+# L44: Frontiercode-Fable5-Result is a benchmark-result.
+aiw:frontiercode-fable5-result a aiw:BenchmarkResult .
+
+# L45: Frontiercode-Fable5-Result is-measured-on Frontiercode-Diamond-Tier.
+aiw:frontiercode-fable5-result aiw:onBenchmark aiw:frontiercode-diamond-tier .
+
+# L46: Frontiercode-Fable5-Result is-achieved-by Claude-Fable-5.
+aiw:frontiercode-fable5-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L47: Frontiercode-Fable5-Result has a score-value that is "29.3".
+aiw:frontiercode-fable5-result aiw:scoreValue "29.3"^^xsd:decimal .
+
+# L48: Frontiercode-Fable5-Result has a score-unit that is "percentage".
+aiw:frontiercode-fable5-result aiw:scoreUnit "percentage" .
+
+# L49: Frontiercode-Fable5-Result has a as-of-date that is "2026-06-09".
+aiw:frontiercode-fable5-result aiw:asOf "2026-06-09"^^xsd:date .
+
+# L51: Frontiercode-Opus48-Result is a benchmark-result.
+aiw:frontiercode-opus48-result a aiw:BenchmarkResult .
+
+# L52: Frontiercode-Opus48-Result is-measured-on Frontiercode-Diamond-Tier.
+aiw:frontiercode-opus48-result aiw:onBenchmark aiw:frontiercode-diamond-tier .
+
+# L53: Frontiercode-Opus48-Result is-achieved-by Claude-Opus-4-8.
+aiw:frontiercode-opus48-result aiw:achievedBy aiw:claude-opus-4-8 .
+
+# L54: Frontiercode-Opus48-Result has a score-value that is "13.4".
+aiw:frontiercode-opus48-result aiw:scoreValue "13.4"^^xsd:decimal .
+
+# L55: Frontiercode-Opus48-Result has a score-unit that is "percentage".
+aiw:frontiercode-opus48-result aiw:scoreUnit "percentage" .
+
+# L56: Frontiercode-Opus48-Result has a as-of-date that is "2026-06-09".
+aiw:frontiercode-opus48-result aiw:asOf "2026-06-09"^^xsd:date .
+
+# ═══ compile report ═══
+# L15 [parse-fail] Frontiercode is-modeled-on FrontierMath.
+#      → run validate-ace.sh
+# L18 [parse-fail] Frontiercode has-evaluation-dimension the regression-safety.
+#      → run validate-ace.sh
+# L19 [parse-fail] Frontiercode has-evaluation-dimension the code-cleanliness.
+#      → run validate-ace.sh
+# L20 [parse-fail] Frontiercode has-evaluation-dimension the scope-adherence.
+#      → run validate-ace.sh
+# L21 [parse-fail] Frontiercode has-evaluation-dimension the test-correctness.
+#      → run validate-ace.sh
+# L22 [parse-fail] Frontiercode has-evaluation-dimension the maintainability.
+#      → run validate-ace.sh
+# L29 [parse-fail] Frontiercode is-adopted-by Anthropic.
+#      → run validate-ace.sh
+# L59 [parse-fail] Frontiercode cites Ainews-Frontiercode-June-2026.
+#      → run validate-ace.sh
+# L60 [parse-fail] Frontiercode cites Ainews-Fable5-June-2026.
+#      → run validate-ace.sh
+
+# --- Organization rdfs:label / rdfs:comment enrichment (WikiEntityShape) ---
+aiw:cognition rdfs:label "Cognition"@en ; rdfs:comment "AI company that makes the Devin coding agent and the FrontierCode benchmark."@en .

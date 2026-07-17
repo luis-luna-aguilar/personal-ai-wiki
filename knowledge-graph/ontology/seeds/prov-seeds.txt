@@ -1,4 +1,4 @@
 http://www.w3.org/ns/prov#Activity
 http://www.w3.org/ns/prov#Agent
 http://www.w3.org/ns/prov#Entity
-http://www.w3.org/ns/prov#wasAssociatedWith
+http://www.w3.org/ns/prov#wasDerivedFrom

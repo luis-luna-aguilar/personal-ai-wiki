@@ -1,0 +1,297 @@
+@prefix aiw: <https://ai-wiki.luisluna.dev/ontology/#> .
+@prefix biz: <https://musclepoints.com/ontology/biz#> .
+@prefix swe: <https://musclepoints.com/ontology/swe#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dbp: <http://dbpedia.org/resource/> .
+@prefix fibo-fbc-fct-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-fnd-utl-alx: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> .
+@prefix fibo-be-oc-op: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/> .
+@prefix fibo-be-le-lei: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# generated from qwen-3-6-27b.ace by drs2ttl_v3.py — build artifact, do not hand-edit
+# candidate for wiki/models/qwen-3-6-27b.ttl — promote only after review
+
+# ── annotations merged from the hand-authored sidecar (no ACE form) ──
+aiw:polyglot rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:polyglot rdfs:label "Polyglot"@en .
+aiw:qwen-3-6-27b rdfs:comment "Alibaba's dense 27B open-weight coding model that outperforms its 397B-parameter predecessor."@en .
+aiw:qwen-3-6-27b rdfs:label "Qwen 3.6 27B"@en .
+aiw:qwen-3-6-35b-a3b rdfs:comment "A foundation model referenced in this wiki's benchmark-comparison content."@en .
+aiw:qwen-3-6-35b-a3b rdfs:label "Qwen 3 6 35B A3b"@en .
+aiw:qwen-3-6-moe-397b rdfs:comment "A foundation model referenced in this wiki's benchmark-comparison content."@en .
+aiw:qwen-3-6-moe-397b rdfs:label "Qwen 3 6 Moe 397B"@en .
+aiw:skillsbench rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:skillsbench rdfs:label "Skillsbench"@en .
+aiw:swe-bench-pro rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:swe-bench-pro rdfs:label "Swe Bench Pro"@en .
+aiw:swe-bench-verified rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:swe-bench-verified rdfs:label "Swe Bench Verified"@en .
+aiw:terminal-bench-2 rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:terminal-bench-2 rdfs:label "Terminal Bench 2"@en .
+
+# L6: Qwen-3-6-27B is a foundation-model.
+aiw:qwen-3-6-27b a aiw:FoundationModel .
+
+# L8: Qwen-3-6-27B is-provided-by Alibaba.
+aiw:qwen-3-6-27b biz:providedBy aiw:alibaba .
+
+# L9: Qwen-3-6-27B has-license-model the open-weights-license.
+aiw:qwen-3-6-27b aiw:hasLicenseModel aiw:open-weights .
+
+# L10: Qwen-3-6-27B has a as-of-date that is "2026-05-01".
+aiw:qwen-3-6-27b aiw:asOf "2026-05-01"^^xsd:date .
+
+# L13: Qwen-3-6-27B has-domain Domain-Models.
+aiw:qwen-3-6-27b aiw:hasDomain aiw:domain-models .
+
+# L14: Qwen-3-6-27B has-domain Domain-Coding.
+aiw:qwen-3-6-27b aiw:hasDomain aiw:domain-coding .
+
+# L15: Qwen-3-6-27B has-subcategory Subcategory-Coding-Model.
+aiw:qwen-3-6-27b aiw:hasSubcategory aiw:subcategory-coding-model .
+
+# L16: Qwen-3-6-27B has-tag Tag-Open-Weights.
+aiw:qwen-3-6-27b aiw:hasTag aiw:tag-open-weights .
+
+# L17: Qwen-3-6-27B has-tag Tag-Agentic.
+aiw:qwen-3-6-27b aiw:hasTag aiw:tag-agentic .
+
+# L38: Swe-Bench-Verified is a benchmark.
+aiw:swe-bench-verified a aiw:Benchmark .
+
+# L39: Swe-Bench-Pro is a benchmark.
+aiw:swe-bench-pro a aiw:Benchmark .
+
+# L40: Terminal-Bench-2 is a benchmark.
+aiw:terminal-bench-2 a aiw:Benchmark .
+
+# L41: Skillsbench is a benchmark.
+aiw:skillsbench a aiw:Benchmark .
+
+# L42: Polyglot is a benchmark.
+aiw:polyglot a aiw:Benchmark .
+
+# L45: Qwen-Swebenchverified-Result is a benchmark-result.
+aiw:qwen-swebenchverified-result a aiw:BenchmarkResult .
+
+# L46: Qwen-Swebenchverified-Result is-measured-on Swe-Bench-Verified.
+aiw:qwen-swebenchverified-result aiw:onBenchmark aiw:swe-bench-verified .
+
+# L47: Qwen-Swebenchverified-Result is-achieved-by Qwen-3-6-27B.
+aiw:qwen-swebenchverified-result aiw:achievedBy aiw:qwen-3-6-27b .
+
+# L48: Qwen-Swebenchverified-Result has a score-value that is "77.2".
+aiw:qwen-swebenchverified-result aiw:scoreValue "77.2"^^xsd:decimal .
+
+# L49: Qwen-Swebenchverified-Result has a score-unit that is "percentage".
+aiw:qwen-swebenchverified-result aiw:scoreUnit "percentage" .
+
+# L50: Qwen-Swebenchverified-Result has a as-of-date that is "2026-04-23".
+aiw:qwen-swebenchverified-result aiw:asOf "2026-04-23"^^xsd:date .
+
+# L52: Qwen-Swebenchpro-Result is a benchmark-result.
+aiw:qwen-swebenchpro-result a aiw:BenchmarkResult .
+
+# L53: Qwen-Swebenchpro-Result is-measured-on Swe-Bench-Pro.
+aiw:qwen-swebenchpro-result aiw:onBenchmark aiw:swe-bench-pro .
+
+# L54: Qwen-Swebenchpro-Result is-achieved-by Qwen-3-6-27B.
+aiw:qwen-swebenchpro-result aiw:achievedBy aiw:qwen-3-6-27b .
+
+# L55: Qwen-Swebenchpro-Result has a score-value that is "53.5".
+aiw:qwen-swebenchpro-result aiw:scoreValue "53.5"^^xsd:decimal .
+
+# L56: Qwen-Swebenchpro-Result has a score-unit that is "percentage".
+aiw:qwen-swebenchpro-result aiw:scoreUnit "percentage" .
+
+# L57: Qwen-Swebenchpro-Result has a as-of-date that is "2026-04-23".
+aiw:qwen-swebenchpro-result aiw:asOf "2026-04-23"^^xsd:date .
+
+# L59: Qwen-Terminalbench2-Result is a benchmark-result.
+aiw:qwen-terminalbench2-result a aiw:BenchmarkResult .
+
+# L60: Qwen-Terminalbench2-Result is-measured-on Terminal-Bench-2.
+aiw:qwen-terminalbench2-result aiw:onBenchmark aiw:terminal-bench-2 .
+
+# L61: Qwen-Terminalbench2-Result is-achieved-by Qwen-3-6-27B.
+aiw:qwen-terminalbench2-result aiw:achievedBy aiw:qwen-3-6-27b .
+
+# L62: Qwen-Terminalbench2-Result has a score-value that is "59.3".
+aiw:qwen-terminalbench2-result aiw:scoreValue "59.3"^^xsd:decimal .
+
+# L63: Qwen-Terminalbench2-Result has a score-unit that is "percentage".
+aiw:qwen-terminalbench2-result aiw:scoreUnit "percentage" .
+
+# L64: Qwen-Terminalbench2-Result has a as-of-date that is "2026-04-23".
+aiw:qwen-terminalbench2-result aiw:asOf "2026-04-23"^^xsd:date .
+
+# L66: Qwen-Skillsbench-Result is a benchmark-result.
+aiw:qwen-skillsbench-result a aiw:BenchmarkResult .
+
+# L67: Qwen-Skillsbench-Result is-measured-on Skillsbench.
+aiw:qwen-skillsbench-result aiw:onBenchmark aiw:skillsbench .
+
+# L68: Qwen-Skillsbench-Result is-achieved-by Qwen-3-6-27B.
+aiw:qwen-skillsbench-result aiw:achievedBy aiw:qwen-3-6-27b .
+
+# L69: Qwen-Skillsbench-Result has a score-value that is "48.2".
+aiw:qwen-skillsbench-result aiw:scoreValue "48.2"^^xsd:decimal .
+
+# L70: Qwen-Skillsbench-Result has a score-unit that is "percentage".
+aiw:qwen-skillsbench-result aiw:scoreUnit "percentage" .
+
+# L71: Qwen-Skillsbench-Result has a as-of-date that is "2026-04-23".
+aiw:qwen-skillsbench-result aiw:asOf "2026-04-23"^^xsd:date .
+
+# L74: Qwen-3-6-Moe-397B is a foundation-model.
+aiw:qwen-3-6-moe-397b a aiw:FoundationModel .
+
+# L75: Qwen-3-6-Moe-397B is-provided-by Alibaba.
+aiw:qwen-3-6-moe-397b biz:providedBy aiw:alibaba .
+
+# L79: Qwenmoe-Swebenchverified-Result is a benchmark-result.
+aiw:qwenmoe-swebenchverified-result a aiw:BenchmarkResult .
+
+# L80: Qwenmoe-Swebenchverified-Result is-measured-on Swe-Bench-Verified.
+aiw:qwenmoe-swebenchverified-result aiw:onBenchmark aiw:swe-bench-verified .
+
+# L81: Qwenmoe-Swebenchverified-Result is-achieved-by Qwen-3-6-Moe-397B.
+aiw:qwenmoe-swebenchverified-result aiw:achievedBy aiw:qwen-3-6-moe-397b .
+
+# L82: Qwenmoe-Swebenchverified-Result has a score-value that is "76.2".
+aiw:qwenmoe-swebenchverified-result aiw:scoreValue "76.2"^^xsd:decimal .
+
+# L83: Qwenmoe-Swebenchverified-Result has a score-unit that is "percentage".
+aiw:qwenmoe-swebenchverified-result aiw:scoreUnit "percentage" .
+
+# L84: Qwenmoe-Swebenchverified-Result has a as-of-date that is "2026-04-23".
+aiw:qwenmoe-swebenchverified-result aiw:asOf "2026-04-23"^^xsd:date .
+
+# L86: Qwenmoe-Swebenchpro-Result is a benchmark-result.
+aiw:qwenmoe-swebenchpro-result a aiw:BenchmarkResult .
+
+# L87: Qwenmoe-Swebenchpro-Result is-measured-on Swe-Bench-Pro.
+aiw:qwenmoe-swebenchpro-result aiw:onBenchmark aiw:swe-bench-pro .
+
+# L88: Qwenmoe-Swebenchpro-Result is-achieved-by Qwen-3-6-Moe-397B.
+aiw:qwenmoe-swebenchpro-result aiw:achievedBy aiw:qwen-3-6-moe-397b .
+
+# L89: Qwenmoe-Swebenchpro-Result has a score-value that is "50.9".
+aiw:qwenmoe-swebenchpro-result aiw:scoreValue "50.9"^^xsd:decimal .
+
+# L90: Qwenmoe-Swebenchpro-Result has a score-unit that is "percentage".
+aiw:qwenmoe-swebenchpro-result aiw:scoreUnit "percentage" .
+
+# L91: Qwenmoe-Swebenchpro-Result has a as-of-date that is "2026-04-23".
+aiw:qwenmoe-swebenchpro-result aiw:asOf "2026-04-23"^^xsd:date .
+
+# L93: Qwenmoe-Terminalbench2-Result is a benchmark-result.
+aiw:qwenmoe-terminalbench2-result a aiw:BenchmarkResult .
+
+# L94: Qwenmoe-Terminalbench2-Result is-measured-on Terminal-Bench-2.
+aiw:qwenmoe-terminalbench2-result aiw:onBenchmark aiw:terminal-bench-2 .
+
+# L95: Qwenmoe-Terminalbench2-Result is-achieved-by Qwen-3-6-Moe-397B.
+aiw:qwenmoe-terminalbench2-result aiw:achievedBy aiw:qwen-3-6-moe-397b .
+
+# L96: Qwenmoe-Terminalbench2-Result has a score-value that is "52.5".
+aiw:qwenmoe-terminalbench2-result aiw:scoreValue "52.5"^^xsd:decimal .
+
+# L97: Qwenmoe-Terminalbench2-Result has a score-unit that is "percentage".
+aiw:qwenmoe-terminalbench2-result aiw:scoreUnit "percentage" .
+
+# L98: Qwenmoe-Terminalbench2-Result has a as-of-date that is "2026-04-23".
+aiw:qwenmoe-terminalbench2-result aiw:asOf "2026-04-23"^^xsd:date .
+
+# L100: Qwenmoe-Skillsbench-Result is a benchmark-result.
+aiw:qwenmoe-skillsbench-result a aiw:BenchmarkResult .
+
+# L101: Qwenmoe-Skillsbench-Result is-measured-on Skillsbench.
+aiw:qwenmoe-skillsbench-result aiw:onBenchmark aiw:skillsbench .
+
+# L102: Qwenmoe-Skillsbench-Result is-achieved-by Qwen-3-6-Moe-397B.
+aiw:qwenmoe-skillsbench-result aiw:achievedBy aiw:qwen-3-6-moe-397b .
+
+# L103: Qwenmoe-Skillsbench-Result has a score-value that is "30.0".
+aiw:qwenmoe-skillsbench-result aiw:scoreValue "30.0"^^xsd:decimal .
+
+# L104: Qwenmoe-Skillsbench-Result has a score-unit that is "percentage".
+aiw:qwenmoe-skillsbench-result aiw:scoreUnit "percentage" .
+
+# L105: Qwenmoe-Skillsbench-Result has a as-of-date that is "2026-04-23".
+aiw:qwenmoe-skillsbench-result aiw:asOf "2026-04-23"^^xsd:date .
+
+# L108: Qwen-3-6-35B-A3B is a foundation-model.
+aiw:qwen-3-6-35b-a3b a aiw:FoundationModel .
+
+# L109: Qwen-3-6-35B-A3B is-provided-by Alibaba.
+aiw:qwen-3-6-35b-a3b biz:providedBy aiw:alibaba .
+
+# L111: Qwen-Polyglot-Result is a benchmark-result.
+aiw:qwen-polyglot-result a aiw:BenchmarkResult .
+
+# L112: Qwen-Polyglot-Result is-measured-on Polyglot.
+aiw:qwen-polyglot-result aiw:onBenchmark aiw:polyglot .
+
+# L113: Qwen-Polyglot-Result is-achieved-by Qwen-3-6-35B-A3B.
+aiw:qwen-polyglot-result aiw:achievedBy aiw:qwen-3-6-35b-a3b .
+
+# L114: Qwen-Polyglot-Result has a score-value that is "78.7".
+aiw:qwen-polyglot-result aiw:scoreValue "78.7"^^xsd:decimal .
+
+# L115: Qwen-Polyglot-Result has a score-unit that is "percentage".
+aiw:qwen-polyglot-result aiw:scoreUnit "percentage" .
+
+# L116: Qwen-Polyglot-Result has an as-of-date that is "2026-05-01".
+aiw:qwen-polyglot-result aiw:asOf "2026-05-01"^^xsd:date .
+
+# ── auxiliary nodes carried from the hand-authored sidecar ──
+aiw:alibaba rdfs:comment "Chinese technology company; developer of the Qwen model family."@en .
+aiw:alibaba rdfs:label "Alibaba"@en .
+
+# ═══ compile report ═══
+# L7 [bare-have] Qwen-3-6-27B has a name that is "Qwen 3.6 27B".
+#      → has a 'name' — no canonical object property for generic 'have'; use a specific verb or open a VCR
+# L20 [parse-fail] Qwen-3-6-27B has a parameter-count that is "27".
+#      → run validate-ace.sh
+# L21 [parse-fail] Qwen-3-6-27B has-architecture Dense-Architecture.
+#      → run validate-ace.sh
+# L22 [parse-fail] Qwen-3-6-27B supports-mode Thinking-Mode.
+#      → run validate-ace.sh
+# L23 [parse-fail] Qwen-3-6-27B supports-mode Non-Thinking-Mode.
+#      → run validate-ace.sh
+# L24 [parse-fail] Qwen-3-6-27B supports-modality Image-Modality.
+#      → run validate-ace.sh
+# L25 [parse-fail] Qwen-3-6-27B supports-modality Video-Modality.
+#      → run validate-ace.sh
+# L28 [parse-fail] Qwen-3-6-27B runs-on Vllm.
+#      → run validate-ace.sh
+# L29 [parse-fail] Qwen-3-6-27B runs-on Unsloth.
+#      → run validate-ace.sh
+# L30 [parse-fail] Qwen-3-6-27B runs-on Llama-Cpp.
+#      → run validate-ace.sh
+# L31 [parse-fail] Qwen-3-6-27B runs-on Ollama.
+#      → run validate-ace.sh
+# L32 [parse-fail] Qwen-3-6-27B has-quantization Fp8-Quantization.
+#      → run validate-ace.sh
+# L33 [parse-fail] Qwen-3-6-27B has a memory-requirement that is "20".
+#      → run validate-ace.sh
+# L34 [parse-fail] Qwen-3-6-27B has a intelligence-index that is "46".
+#      → run validate-ace.sh
+# L35 [parse-fail] Qwen-3-6-27B has a release-date that is "2026-04-23".
+#      → run validate-ace.sh
+# L76 [parse-fail] Qwen-3-6-Moe-397B has a parameter-count that is "397".
+#      → run validate-ace.sh
+# L77 [parse-fail] Qwen-3-6-Moe-397B has-architecture Mixture-Of-Experts-Architecture.
+#      → run validate-ace.sh
+# L110 [parse-fail] Qwen-3-6-35B-A3B has a parameter-count that is "35".
+#      → run validate-ace.sh

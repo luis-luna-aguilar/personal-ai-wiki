@@ -1,5 +1,5 @@
 % GENERATED from lexicon-map.yaml by gen-ulex.py — do not edit by hand.
-% 446 terms.
+% 465 terms.
 noun_sg('api', 'api', neutr).
 noun_sg('bank', 'bank', neutr).
 noun_sg('bank-administrator', 'bank-administrator', human).
@@ -446,3 +446,22 @@ noun_sg('intercompany-loan', 'intercompany-loan', neutr).
 noun_sg('credit-card', 'credit-card', neutr).
 noun_sg('joint', 'joint', neutr).
 noun_sg('joint-and-several', 'joint-and-several', neutr).
+noun_sg('benchmark', 'benchmark', neutr).
+noun_sg('benchmark-result', 'benchmark-result', neutr).
+noun_sg('foundation-model', 'foundation-model', neutr).
+noun_sg('model', 'model', neutr).
+tv_finsg('is-measured-on', 'be-measured-on'). tv_infpl('be-measured-on', 'be-measured-on').
+tv_finsg('is-achieved-by', 'be-achieved-by'). tv_infpl('be-achieved-by', 'be-achieved-by').
+tv_finsg('has-benchmark-result', 'have-benchmark-result'). tv_infpl('have-benchmark-result', 'have-benchmark-result').
+noun_sg('score-value', 'score-value', neutr).
+noun_sg('score-unit', 'score-unit', neutr).
+noun_sg('as-of-date', 'as-of-date', neutr).
+tv_finsg('has-variant', 'have-variant'). tv_infpl('have-variant', 'have-variant').
+tv_finsg('has-license-model', 'have-license-model'). tv_infpl('have-license-model', 'have-license-model').
+noun_sg('open-source-license', 'open-source-license', neutr).
+noun_sg('open-weights-license', 'open-weights-license', neutr).
+noun_sg('closed-source-license', 'closed-source-license', neutr).
+tv_finsg('has-domain', 'have-domain'). tv_infpl('have-domain', 'have-domain').
+tv_finsg('has-subcategory', 'have-subcategory'). tv_infpl('have-subcategory', 'have-subcategory').
+tv_finsg('has-tag', 'have-tag'). tv_infpl('have-tag', 'have-tag').
+tv_finsg('succeeds', 'succeed'). tv_infpl('succeed', 'succeed').

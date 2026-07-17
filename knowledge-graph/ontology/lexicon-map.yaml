@@ -457,3 +457,25 @@ terms:
 - {id: credit-card, ace: {pos: noun, sg: credit-card}, onto: {role: Individual, iri: 'biz:credit-card', type: 'biz:FinancingInstrumentType', status: confirmed, vcr: VCR-0020}}
 - {id: joint, ace: {pos: noun, sg: joint}, onto: {role: Individual, iri: 'biz:joint', type: 'biz:SigningScope', status: confirmed, vcr: VCR-0020}}
 - {id: joint-and-several, ace: {pos: noun, sg: joint-and-several}, onto: {role: Individual, iri: 'biz:joint-and-several', type: 'biz:SigningScope', status: confirmed, vcr: VCR-0020}}
+
+# ---- VCR-0004 (2026-07-17): benchmark-demo vocabulary — ACE rows for the VCR-0003 aiw: module,
+# ---- frontmatter classification predicates, provider reuse, license-model enum members ----
+- {id: benchmark, ace: {pos: noun, sg: benchmark}, onto: {role: Class, iri: 'aiw:Benchmark', status: confirmed, vcr: VCR-0004}}
+- {id: benchmark-result, ace: {pos: noun, sg: benchmark-result}, onto: {role: Class, iri: 'aiw:BenchmarkResult', status: confirmed, vcr: VCR-0004}}
+- {id: foundation-model, ace: {pos: noun, sg: foundation-model}, onto: {role: Class, iri: 'aiw:FoundationModel', status: confirmed, vcr: VCR-0004}}
+- {id: model, ace: {pos: noun, sg: model}, onto: {role: Class, iri: 'aiw:FoundationModel', status: confirmed, vcr: VCR-0004}, aliases: [foundation-model]}  # alias precedent: strategy/pricing-strategy in the source project
+- {id: is-measured-on, ace: {pos: tv, finsg: is-measured-on, infpl: be-measured-on}, onto: {role: ObjectProperty, iri: 'aiw:onBenchmark', status: confirmed, vcr: VCR-0004, domain: 'aiw:BenchmarkResult', range: 'aiw:Benchmark'}}
+- {id: is-achieved-by, ace: {pos: tv, finsg: is-achieved-by, infpl: be-achieved-by}, onto: {role: ObjectProperty, iri: 'aiw:achievedBy', status: confirmed, vcr: VCR-0004, domain: 'aiw:BenchmarkResult'}}
+- {id: has-benchmark-result, ace: {pos: tv, finsg: has-benchmark-result, infpl: have-benchmark-result}, onto: {role: ObjectProperty, iri: 'aiw:hasBenchmarkResult', status: confirmed, vcr: VCR-0004, range: 'aiw:BenchmarkResult'}}
+- {id: score-value, ace: {pos: noun, sg: score-value}, onto: {role: DatatypeProperty, iri: 'aiw:scoreValue', status: confirmed, vcr: VCR-0004, domain: 'aiw:BenchmarkResult', datatype: 'xsd:decimal'}}
+- {id: score-unit, ace: {pos: noun, sg: score-unit}, onto: {role: DatatypeProperty, iri: 'aiw:scoreUnit', status: confirmed, vcr: VCR-0004, domain: 'aiw:BenchmarkResult', datatype: 'xsd:string', constraint: {in: ['percentage', 'points', 'elo', 'rank']}}}
+- {id: as-of-date, ace: {pos: noun, sg: as-of-date}, onto: {role: DatatypeProperty, iri: 'aiw:asOf', status: confirmed, vcr: VCR-0004, datatype: 'xsd:date'}}
+- {id: has-variant, ace: {pos: tv, finsg: has-variant, infpl: have-variant}, onto: {role: ObjectProperty, iri: 'aiw:hasVariant', status: confirmed, vcr: VCR-0004, domain: 'aiw:Benchmark', range: 'aiw:Benchmark'}}
+- {id: has-license-model, ace: {pos: tv, finsg: has-license-model, infpl: have-license-model}, onto: {role: ObjectProperty, iri: 'aiw:hasLicenseModel', status: confirmed, vcr: VCR-0004, range: 'aiw:LicenseModel'}}
+- {id: open-source-license, ace: {pos: noun, sg: open-source-license}, onto: {role: Individual, iri: 'aiw:open-source', type: 'aiw:LicenseModel', status: confirmed, vcr: VCR-0004}}
+- {id: open-weights-license, ace: {pos: noun, sg: open-weights-license}, onto: {role: Individual, iri: 'aiw:open-weights', type: 'aiw:LicenseModel', status: confirmed, vcr: VCR-0004}}
+- {id: closed-source-license, ace: {pos: noun, sg: closed-source-license}, onto: {role: Individual, iri: 'aiw:closed-source', type: 'aiw:LicenseModel', status: confirmed, vcr: VCR-0004}}
+- {id: has-domain, ace: {pos: tv, finsg: has-domain, infpl: have-domain}, onto: {role: ObjectProperty, iri: 'aiw:hasDomain', status: confirmed, vcr: VCR-0004, range: 'skos:Concept'}}
+- {id: has-subcategory, ace: {pos: tv, finsg: has-subcategory, infpl: have-subcategory}, onto: {role: ObjectProperty, iri: 'aiw:hasSubcategory', status: confirmed, vcr: VCR-0004, range: 'skos:Concept'}}
+- {id: has-tag, ace: {pos: tv, finsg: has-tag, infpl: have-tag}, onto: {role: ObjectProperty, iri: 'aiw:hasTag', status: confirmed, vcr: VCR-0004, range: 'skos:Concept'}}
+- {id: succeed, ace: {pos: tv, finsg: succeeds, infpl: succeed}, onto: {role: ObjectProperty, iri: 'aiw:supersedes', status: confirmed, vcr: VCR-0004}}

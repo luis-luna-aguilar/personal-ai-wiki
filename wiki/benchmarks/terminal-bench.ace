@@ -1,0 +1,73 @@
+# ACE sidecar for wiki/benchmarks/terminal-bench.md
+# Subject: aiw:terminal-bench. Vocabulary: VCR-0004 (aiw:) + flagged proposals (see tmp/ace-extractor/terminal-bench.new-terms.yaml).
+
+# --- Benchmark identity and metadata (frontmatter) ---
+Terminal-Bench is a benchmark.
+Terminal-Bench has-domain Domain-Agents.
+Terminal-Bench has-domain Domain-Coding.
+Terminal-Bench has-tag Tag-Agentic.
+Terminal-Bench has-tag Tag-Cli.
+Terminal-Bench has a as-of-date that is "2026-04-23".
+Terminal-Bench cites Agents-Evals-Deep-Research.
+
+# --- What the benchmark evaluates (body) ---
+Terminal-Bench assesses the agent.
+Terminal-Bench evaluates-in the container-environment.
+Terminal-Bench is not simulated.
+Terminal-Bench has a task-count that is "89".
+# has-subcategory dropped: this page's own frontmatter has no subcategory: field
+# (benchmarks aren't required to have one), and "system-administration"/
+# "compilation"/"debugging" are the benchmark's internal TASK CATEGORIES, not
+# wiki/_schema/subcategories.md entries — a modeling conflation, not a real fact.
+# The task categories themselves are legitimate content but need their own
+# vocabulary (e.g. an aiw:TaskCategory pattern), not the frontmatter subcategory
+# slot, which is exactly-one-per-page by design (aiw:SubcategoryShape).
+
+# --- Named variants ---
+Terminal-Bench-2-0 is a benchmark.
+Terminal-Bench-2-1 is a benchmark.
+Terminal-Bench has-variant Terminal-Bench-2-0.
+Terminal-Bench has-variant Terminal-Bench-2-1.
+
+# --- Benchmark results per model (hub; scores sourced from each model's own page) ---
+Claude-Fable-5-Terminalbench-Result is a benchmark-result.
+Claude-Fable-5-Terminalbench-Result is-measured-on Terminal-Bench-2-1.
+Claude-Fable-5-Terminalbench-Result is-achieved-by Claude-Fable-5.
+Claude-Fable-5-Terminalbench-Result has a score-value that is "88.0".
+Claude-Fable-5-Terminalbench-Result has a score-unit that is "percentage".
+Claude-Fable-5-Terminalbench-Result has an as-of-date that is "2026-07-07".
+
+Gpt-5-5-Terminalbench-Result is a benchmark-result.
+Gpt-5-5-Terminalbench-Result is-measured-on Terminal-Bench-2-0.
+Gpt-5-5-Terminalbench-Result is-achieved-by Gpt-5-5.
+Gpt-5-5-Terminalbench-Result has a score-value that is "82.7".
+Gpt-5-5-Terminalbench-Result has a score-unit that is "percentage".
+Gpt-5-5-Terminalbench-Result has an as-of-date that is "2026-05-18".
+
+Minimax-M3-Terminalbench-Result is a benchmark-result.
+Minimax-M3-Terminalbench-Result is-measured-on Terminal-Bench-2-1.
+Minimax-M3-Terminalbench-Result is-achieved-by Minimax-M3.
+Minimax-M3-Terminalbench-Result has a score-value that is "66.0".
+Minimax-M3-Terminalbench-Result has a score-unit that is "percentage".
+Minimax-M3-Terminalbench-Result has an as-of-date that is "2026-06-02".
+
+Composer-2-Terminalbench-Result is a benchmark-result.
+Composer-2-Terminalbench-Result is-measured-on Terminal-Bench-2-0.
+Composer-2-Terminalbench-Result is-achieved-by Composer-2.
+Composer-2-Terminalbench-Result has a score-value that is "61.7".
+Composer-2-Terminalbench-Result has a score-unit that is "percentage".
+Composer-2-Terminalbench-Result has an as-of-date that is "2026-03-23".
+
+Qwen-3-6-27B-Terminalbench-Result is a benchmark-result.
+Qwen-3-6-27B-Terminalbench-Result is-measured-on Terminal-Bench-2-0.
+Qwen-3-6-27B-Terminalbench-Result is-achieved-by Qwen-3-6-27B.
+Qwen-3-6-27B-Terminalbench-Result has a score-value that is "59.3".
+Qwen-3-6-27B-Terminalbench-Result has a score-unit that is "percentage".
+Qwen-3-6-27B-Terminalbench-Result has an as-of-date that is "2026-05-01".
+
+Glm-5-2-Terminalbench-Result is a benchmark-result.
+Glm-5-2-Terminalbench-Result is-measured-on Terminal-Bench-2-1.
+Glm-5-2-Terminalbench-Result is-achieved-by Glm-5-2.
+Glm-5-2-Terminalbench-Result has a score-value that is "81.0".
+Glm-5-2-Terminalbench-Result has a score-unit that is "percentage".
+Glm-5-2-Terminalbench-Result has an as-of-date that is "2026-07-02".

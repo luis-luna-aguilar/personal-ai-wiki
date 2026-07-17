@@ -1,0 +1,210 @@
+@prefix aiw: <https://ai-wiki.luisluna.dev/ontology/#> .
+@prefix biz: <https://musclepoints.com/ontology/biz#> .
+@prefix swe: <https://musclepoints.com/ontology/swe#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dbp: <http://dbpedia.org/resource/> .
+@prefix fibo-fbc-fct-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-fnd-utl-alx: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> .
+@prefix fibo-be-oc-op: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/> .
+@prefix fibo-be-le-lei: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# generated from minimax-m3.ace by drs2ttl_v3.py — build artifact, do not hand-edit
+# candidate for wiki/models/minimax-m3.ttl — promote only after review
+
+# ── annotations merged from the hand-authored sidecar (no ACE form) ──
+aiw:mcp-atlas rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:mcp-atlas rdfs:label "Mcp Atlas"@en .
+aiw:minimax-m3 rdfs:comment "MiniMax's claimed open-weight frontier model with 1M context; weight disclosure contested."@en .
+aiw:minimax-m3 rdfs:label "MiniMax M3"@en .
+aiw:posttrainbench rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:posttrainbench rdfs:label "Posttrainbench"@en .
+aiw:swe-bench-pro rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:swe-bench-pro rdfs:label "Swe Bench Pro"@en .
+aiw:terminal-bench-2-1 rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:terminal-bench-2-1 rdfs:label "Terminal Bench 2 1"@en .
+
+# L17: Minimax-M3 is a model.
+aiw:minimax-m3 a aiw:FoundationModel .
+
+# L18: Minimax-M3 has-domain Domain-Models.
+aiw:minimax-m3 aiw:hasDomain aiw:domain-models .
+
+# L19: Minimax-M3 has-domain Domain-Coding.
+aiw:minimax-m3 aiw:hasDomain aiw:domain-coding .
+
+# L20: Minimax-M3 has-subcategory Subcategory-Coding-Model.
+aiw:minimax-m3 aiw:hasSubcategory aiw:subcategory-coding-model .
+
+# L21: Minimax-M3 has-tag Tag-Agentic.
+aiw:minimax-m3 aiw:hasTag aiw:tag-agentic .
+
+# L22: Minimax-M3 has an as-of-date that is "2026-06-02".
+aiw:minimax-m3 aiw:asOf "2026-06-02"^^xsd:date .
+
+# L25: Minimax-M3 is-provided-by Minimax.
+aiw:minimax-m3 biz:providedBy aiw:minimax .
+
+# L37: Swe-Bench has-variant Swe-Bench-Pro.
+aiw:swe-bench aiw:hasVariant aiw:swe-bench-pro .
+
+# L38: Swe-Bench-Pro is a benchmark.
+aiw:swe-bench-pro a aiw:Benchmark .
+
+# L39: Terminal-Bench has-variant Terminal-Bench-2-1.
+aiw:terminal-bench aiw:hasVariant aiw:terminal-bench-2-1 .
+
+# L40: Terminal-Bench-2-1 is a benchmark.
+aiw:terminal-bench-2-1 a aiw:Benchmark .
+
+# L41: Mcp-Atlas is a benchmark.
+aiw:mcp-atlas a aiw:Benchmark .
+
+# L42: Posttrainbench is a benchmark.
+aiw:posttrainbench a aiw:Benchmark .
+
+# L45: Minimax-Swe-Bench-Pro-Result is a benchmark-result.
+aiw:minimax-swe-bench-pro-result a aiw:BenchmarkResult .
+
+# L46: Minimax-Swe-Bench-Pro-Result is-measured-on Swe-Bench-Pro.
+aiw:minimax-swe-bench-pro-result aiw:onBenchmark aiw:swe-bench-pro .
+
+# L47: Minimax-Swe-Bench-Pro-Result is-achieved-by Minimax-M3.
+aiw:minimax-swe-bench-pro-result aiw:achievedBy aiw:minimax-m3 .
+
+# L48: Minimax-Swe-Bench-Pro-Result has a score-value that is "59.0".
+aiw:minimax-swe-bench-pro-result aiw:scoreValue "59.0"^^xsd:decimal .
+
+# L49: Minimax-Swe-Bench-Pro-Result has a score-unit that is "percentage".
+aiw:minimax-swe-bench-pro-result aiw:scoreUnit "percentage" .
+
+# L50: Minimax-Swe-Bench-Pro-Result has an as-of-date that is "2026-06-02".
+aiw:minimax-swe-bench-pro-result aiw:asOf "2026-06-02"^^xsd:date .
+
+# L53: Minimax-Terminal-Bench-2-1-Result is a benchmark-result.
+aiw:minimax-terminal-bench-2-1-result a aiw:BenchmarkResult .
+
+# L54: Minimax-Terminal-Bench-2-1-Result is-measured-on Terminal-Bench-2-1.
+aiw:minimax-terminal-bench-2-1-result aiw:onBenchmark aiw:terminal-bench-2-1 .
+
+# L55: Minimax-Terminal-Bench-2-1-Result is-achieved-by Minimax-M3.
+aiw:minimax-terminal-bench-2-1-result aiw:achievedBy aiw:minimax-m3 .
+
+# L56: Minimax-Terminal-Bench-2-1-Result has a score-value that is "66.0".
+aiw:minimax-terminal-bench-2-1-result aiw:scoreValue "66.0"^^xsd:decimal .
+
+# L57: Minimax-Terminal-Bench-2-1-Result has a score-unit that is "percentage".
+aiw:minimax-terminal-bench-2-1-result aiw:scoreUnit "percentage" .
+
+# L58: Minimax-Terminal-Bench-2-1-Result has an as-of-date that is "2026-06-02".
+aiw:minimax-terminal-bench-2-1-result aiw:asOf "2026-06-02"^^xsd:date .
+
+# L61: Minimax-Mcp-Atlas-Result is a benchmark-result.
+aiw:minimax-mcp-atlas-result a aiw:BenchmarkResult .
+
+# L62: Minimax-Mcp-Atlas-Result is-measured-on Mcp-Atlas.
+aiw:minimax-mcp-atlas-result aiw:onBenchmark aiw:mcp-atlas .
+
+# L63: Minimax-Mcp-Atlas-Result is-achieved-by Minimax-M3.
+aiw:minimax-mcp-atlas-result aiw:achievedBy aiw:minimax-m3 .
+
+# L64: Minimax-Mcp-Atlas-Result has a score-value that is "74.2".
+aiw:minimax-mcp-atlas-result aiw:scoreValue "74.2"^^xsd:decimal .
+
+# L65: Minimax-Mcp-Atlas-Result has a score-unit that is "percentage".
+aiw:minimax-mcp-atlas-result aiw:scoreUnit "percentage" .
+
+# L66: Minimax-Mcp-Atlas-Result has an as-of-date that is "2026-06-02".
+aiw:minimax-mcp-atlas-result aiw:asOf "2026-06-02"^^xsd:date .
+
+# L69: Minimax-Posttrainbench-Result is a benchmark-result.
+aiw:minimax-posttrainbench-result a aiw:BenchmarkResult .
+
+# L70: Minimax-Posttrainbench-Result is-measured-on Posttrainbench.
+aiw:minimax-posttrainbench-result aiw:onBenchmark aiw:posttrainbench .
+
+# L71: Minimax-Posttrainbench-Result is-achieved-by Minimax-M3.
+aiw:minimax-posttrainbench-result aiw:achievedBy aiw:minimax-m3 .
+
+# L72: Minimax-Posttrainbench-Result has a score-value that is "3".
+aiw:minimax-posttrainbench-result aiw:scoreValue "3.0"^^xsd:decimal .
+
+# L73: Minimax-Posttrainbench-Result has a score-unit that is "rank".
+aiw:minimax-posttrainbench-result aiw:scoreUnit "rank" .
+
+# L74: Minimax-Posttrainbench-Result has an as-of-date that is "2026-06-02".
+aiw:minimax-posttrainbench-result aiw:asOf "2026-06-02"^^xsd:date .
+
+# L77: Minimax-M3 has-benchmark-result Minimax-Swe-Bench-Pro-Result.
+aiw:minimax-m3 aiw:hasBenchmarkResult aiw:minimax-swe-bench-pro-result .
+
+# L78: Minimax-M3 has-benchmark-result Minimax-Terminal-Bench-2-1-Result.
+aiw:minimax-m3 aiw:hasBenchmarkResult aiw:minimax-terminal-bench-2-1-result .
+
+# L79: Minimax-M3 has-benchmark-result Minimax-Mcp-Atlas-Result.
+aiw:minimax-m3 aiw:hasBenchmarkResult aiw:minimax-mcp-atlas-result .
+
+# L80: Minimax-M3 has-benchmark-result Minimax-Posttrainbench-Result.
+aiw:minimax-m3 aiw:hasBenchmarkResult aiw:minimax-posttrainbench-result .
+
+# L86: Novita supports Minimax-M3.
+aiw:novita swe:supports aiw:minimax-m3 .
+
+# L87: Novita is-provided-by Novita-Ai.
+aiw:novita biz:providedBy aiw:novita-ai .
+
+# L88: Vercel-Ai-Gateway supports Minimax-M3.
+aiw:vercel-ai-gateway swe:supports aiw:minimax-m3 .
+
+# L89: Vercel-Ai-Gateway is-provided-by Vercel.
+aiw:vercel-ai-gateway biz:providedBy aiw:vercel .
+
+# L90: Cloudflare-Workers-Ai supports Minimax-M3.
+aiw:cloudflare-workers-ai swe:supports aiw:minimax-m3 .
+
+# L91: Cloudflare-Workers-Ai is-provided-by Cloudflare.
+aiw:cloudflare-workers-ai biz:providedBy aiw:cloudflare .
+
+# ═══ compile report ═══
+# L28 [parse-fail] Minimax-M3 has a context-window that is "1000000".
+#      → run validate-ace.sh
+# L29 [parse-fail] Minimax-M3 has a guaranteed-context-window that is "512000".
+#      → run validate-ace.sh
+# L30 [parse-fail] Minimax-M3 is multimodal.
+#      → run validate-ace.sh
+# L33 [parse-fail] Minimax-M3 does not disclose a model-weight.
+#      → run validate-ace.sh
+# L34 [parse-fail] Minimax-M3 does not disclose a parameter-count.
+#      → run validate-ace.sh
+# L94 [parse-fail] Minimax-M3 exhibits a high-token-consumption.
+#      → run validate-ace.sh
+# L95 [parse-fail] Minimax-M3 exhibits a verbose-self-check-loop.
+#      → run validate-ace.sh
+# L96 [parse-fail] Minimax-M3 exhibits a requirement-drift.
+#      → run validate-ace.sh
+# L99 [parse-fail] Minimax-M3 has a launch-date that is "2026-06-02".
+#      → run validate-ace.sh
+
+# --- Organization rdfs:label / rdfs:comment enrichment (WikiEntityShape) ---
+aiw:cloudflare rdfs:label "Cloudflare"@en ; rdfs:comment "Web infrastructure and security company."@en .
+aiw:minimax rdfs:label "MiniMax"@en ; rdfs:comment "Chinese AI company; developer of the MiniMax model family."@en .
+aiw:novita-ai rdfs:label "Novita AI"@en ; rdfs:comment "AI inference platform providing day-0 hosting for newly released models."@en .
+aiw:vercel rdfs:label "Vercel"@en ; rdfs:comment "Cloud platform company; developer of the Vercel AI Gateway."@en .
+
+# --- Hand-authored enrichment (ACE has no distinct surface form for schema:provider
+# vs biz:providedBy — both read as "is provided by" in English, but SoftwareApplicationShape
+# requires schema:provider specifically, distinct from the inherited biz:providedBy relation
+# already asserted above from "X is-provided-by Y" sentences). Genuinely inexpressible in the
+# current ACE grammar without a second, confusing "provided-by"-alike verb; added directly here,
+# matching this pipeline's sanctioned small-enrichment-block convention. ---
+aiw:novita schema:provider aiw:novita-ai ; rdfs:label "Novita"@en ; rdfs:comment "AI inference platform; day-0 support for MiniMax M3."@en .
+aiw:vercel-ai-gateway schema:provider aiw:vercel ; rdfs:label "Vercel AI Gateway"@en ; rdfs:comment "Vercel's unified AI model routing gateway; day-0 support for MiniMax M3."@en .
+aiw:cloudflare-workers-ai schema:provider aiw:cloudflare ; rdfs:label "Cloudflare Workers AI"@en ; rdfs:comment "Cloudflare's edge AI inference platform; day-0 support for MiniMax M3."@en .

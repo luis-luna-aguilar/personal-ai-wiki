@@ -1,0 +1,60 @@
+# FrontierCode — ACE sidecar. Facts only; rhetoric stays in the .md.
+# Subject: aiw:frontiercode. Vocabulary: VCR-0004 benchmark terms + flagged new terms (see tmp/ace-extractor/frontiercode.new-terms.yaml).
+
+# --- Identity, provenance, classification ---
+Frontiercode is a benchmark.
+Frontiercode is-provided-by Cognition.
+Devin is-provided-by Cognition.
+Frontiercode has-domain Domain-Coding.
+# has-tag "cognition"/"benchmark" dropped: neither is in wiki/_schema/tags.md's
+# controlled 24-tag list despite being in this page's own frontmatter tags: —
+# a pre-existing content/schema gap, not something to fix by minting new schema
+# entries during a sidecar compile. Flagged for a future "Schema / vocabulary
+# additions" proposal per the wiki's own AGENTS.md process, not asserted here.
+Frontiercode has a as-of-date that is "2026-06-09".
+Frontiercode is-modeled-on FrontierMath.
+
+# --- Evaluation dimensions per task ---
+Frontiercode has-evaluation-dimension the regression-safety.
+Frontiercode has-evaluation-dimension the code-cleanliness.
+Frontiercode has-evaluation-dimension the scope-adherence.
+Frontiercode has-evaluation-dimension the test-correctness.
+Frontiercode has-evaluation-dimension the maintainability.
+
+# --- Tiers / variants ---
+Frontiercode has-variant Frontiercode-Diamond-Tier.
+Frontiercode-Diamond-Tier is a benchmark.
+
+# --- Adoption ---
+Frontiercode is-adopted-by Anthropic.
+
+# --- Models on the leaderboard ---
+Claude-Mythos-5 is a model.
+Claude-Fable-5 is a model.
+Claude-Opus-4-8 is a model.
+
+# --- Leaderboard results (FrontierCode Diamond, as of 2026-06-09) ---
+Frontiercode-Mythos5-Result is a benchmark-result.
+Frontiercode-Mythos5-Result is-measured-on Frontiercode-Diamond-Tier.
+Frontiercode-Mythos5-Result is-achieved-by Claude-Mythos-5.
+Frontiercode-Mythos5-Result has a score-value that is "30.9".
+Frontiercode-Mythos5-Result has a score-unit that is "percentage".
+Frontiercode-Mythos5-Result has a as-of-date that is "2026-06-09".
+
+Frontiercode-Fable5-Result is a benchmark-result.
+Frontiercode-Fable5-Result is-measured-on Frontiercode-Diamond-Tier.
+Frontiercode-Fable5-Result is-achieved-by Claude-Fable-5.
+Frontiercode-Fable5-Result has a score-value that is "29.3".
+Frontiercode-Fable5-Result has a score-unit that is "percentage".
+Frontiercode-Fable5-Result has a as-of-date that is "2026-06-09".
+
+Frontiercode-Opus48-Result is a benchmark-result.
+Frontiercode-Opus48-Result is-measured-on Frontiercode-Diamond-Tier.
+Frontiercode-Opus48-Result is-achieved-by Claude-Opus-4-8.
+Frontiercode-Opus48-Result has a score-value that is "13.4".
+Frontiercode-Opus48-Result has a score-unit that is "percentage".
+Frontiercode-Opus48-Result has a as-of-date that is "2026-06-09".
+
+# --- Sources cited ---
+Frontiercode cites Ainews-Frontiercode-June-2026.
+Frontiercode cites Ainews-Fable5-June-2026.

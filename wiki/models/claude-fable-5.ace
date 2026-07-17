@@ -1,0 +1,284 @@
+# ACE sidecar for wiki/models/claude-fable-5.md
+# Subject: Claude-Fable-5 (aiw:claude-fable-5, an aiw:FoundationModel).
+# VCR-0004 vocabulary (benchmark / benchmark-result / foundation-model,
+# is-measured-on / is-achieved-by / has-benchmark-result / has-variant /
+# has-license-model / has-domain / has-subcategory / has-tag / is-provided-by,
+# score-value / score-unit / as-of-date, the license individuals) is used as admitted.
+# Domains, tags, subcategory, benchmarks, comparison models and sources are Capitalized
+# proper-name individuals (auto-minted aiw:<slug>), matching wiki/concepts/agent-evals.ace.
+# Genuinely new content words are flagged in tmp/ace-extractor/claude-fable-5.new-terms.yaml.
+
+# --- Identity / classification (frontmatter + intro) ---
+Claude-Fable-5 is a model.
+Claude-Fable-5 is a mythos-class-model.
+Claude-Fable-5 has a name that is "Claude Fable 5".
+Claude-Fable-5 is-provided-by Anthropic.
+Claude-Fable-5 has-domain Domain-Models.
+Claude-Fable-5 has-domain Domain-Coding.
+Claude-Fable-5 has-domain Domain-Cybersecurity.
+Claude-Fable-5 has-subcategory Subcategory-Frontier-Model.
+Claude-Fable-5 has-tag Tag-Anthropic.
+# has-tag "frontier" dropped: not in wiki/_schema/tags.md's controlled 24-tag
+# list despite being in this page's own frontmatter — pre-existing content gap.
+Claude-Fable-5 has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has a launch-date that is "2026-06-09".
+Claude-Fable-5 has-license-model the closed-source-license.
+
+# --- Current status: safety fallback routing ---
+Claude-Fable-5 falls-back-to Claude-Opus-4-8.
+
+# --- Comparison models (typed for the head-to-head results below) ---
+Gpt-5-5 is a model.
+Claude-Mythos-5 is a model.
+Claude-Opus-4-8 is a model.
+Glm-5-2 is a model.
+
+# --- Benchmarks (and their named variants) ---
+Swe-Bench is a benchmark.
+Swe-Bench has-variant Swe-Bench-Pro.
+Swe-Bench-Pro is a benchmark.
+Deepswe-Index is a benchmark.
+Frontiercode is a benchmark.
+Frontiercode has-variant Frontiercode-Diamond-Tier.
+Frontierswe is a benchmark.
+Terminal-Bench is a benchmark.
+Terminal-Bench has-variant Terminal-Bench-2-1.
+Terminal-Bench-2-1 is a benchmark.
+Cursorbench is a benchmark.
+Frontiermath is a benchmark.
+Humanitys-Last-Exam is a benchmark.
+Artificial-Analysis-Intelligence-Index is a benchmark.
+Gdpval-Aa is a benchmark.
+Weirdml is a benchmark.
+Epoch-Capabilities-Index is a benchmark.
+Every-Senior-Engineer-Benchmark is a benchmark.
+Code-Arena is a benchmark.
+Design-Arena is a benchmark.
+
+# --- Benchmark record: SWE-Bench Pro (80.3% vs GPT-5.5 58.6%) ---
+Fable5-Swe-Bench-Pro-Result is a benchmark-result.
+Fable5-Swe-Bench-Pro-Result is-measured-on Swe-Bench-Pro.
+Fable5-Swe-Bench-Pro-Result is-achieved-by Claude-Fable-5.
+Fable5-Swe-Bench-Pro-Result has a score-value that is "80.3".
+Fable5-Swe-Bench-Pro-Result has a score-unit that is "percentage".
+Fable5-Swe-Bench-Pro-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Swe-Bench-Pro-Result.
+Gpt55-Swe-Bench-Pro-Result is a benchmark-result.
+Gpt55-Swe-Bench-Pro-Result is-measured-on Swe-Bench-Pro.
+Gpt55-Swe-Bench-Pro-Result is-achieved-by Gpt-5-5.
+Gpt55-Swe-Bench-Pro-Result has a score-value that is "58.6".
+Gpt55-Swe-Bench-Pro-Result has a score-unit that is "percentage".
+Gpt55-Swe-Bench-Pro-Result has an as-of-date that is "2026-07-07".
+
+# --- DeepSWE index: #1 rank, and 77 on the Artificial Analysis DeepSWE index ---
+Fable5-Deepswe-Index-Rank-Result is a benchmark-result.
+Fable5-Deepswe-Index-Rank-Result is-measured-on Deepswe-Index.
+Fable5-Deepswe-Index-Rank-Result is-achieved-by Claude-Fable-5.
+Fable5-Deepswe-Index-Rank-Result has a score-value that is "1".
+Fable5-Deepswe-Index-Rank-Result has a score-unit that is "rank".
+Fable5-Deepswe-Index-Rank-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Deepswe-Index-Rank-Result.
+Fable5-Deepswe-Index-Score-Result is a benchmark-result.
+Fable5-Deepswe-Index-Score-Result is-measured-on Deepswe-Index.
+Fable5-Deepswe-Index-Score-Result is-achieved-by Claude-Fable-5.
+Fable5-Deepswe-Index-Score-Result has a score-value that is "77".
+Fable5-Deepswe-Index-Score-Result has a score-unit that is "points".
+Fable5-Deepswe-Index-Score-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Deepswe-Index-Score-Result.
+
+# --- FrontierCode Diamond: 29.3% (Fable 5), 30.9% (Mythos 5), vs prior best 13.4% ---
+Fable5-Frontiercode-Diamond-Result is a benchmark-result.
+Fable5-Frontiercode-Diamond-Result is-measured-on Frontiercode-Diamond-Tier.
+Fable5-Frontiercode-Diamond-Result is-achieved-by Claude-Fable-5.
+Fable5-Frontiercode-Diamond-Result has a score-value that is "29.3".
+Fable5-Frontiercode-Diamond-Result has a score-unit that is "percentage".
+Fable5-Frontiercode-Diamond-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Frontiercode-Diamond-Result.
+Mythos5-Frontiercode-Diamond-Result is a benchmark-result.
+Mythos5-Frontiercode-Diamond-Result is-measured-on Frontiercode-Diamond-Tier.
+Mythos5-Frontiercode-Diamond-Result is-achieved-by Claude-Mythos-5.
+Mythos5-Frontiercode-Diamond-Result has a score-value that is "30.9".
+Mythos5-Frontiercode-Diamond-Result has a score-unit that is "percentage".
+Mythos5-Frontiercode-Diamond-Result has an as-of-date that is "2026-07-07".
+Priorbest-Frontiercode-Diamond-Result is a benchmark-result.
+Priorbest-Frontiercode-Diamond-Result is-measured-on Frontiercode-Diamond-Tier.
+Priorbest-Frontiercode-Diamond-Result is-achieved-by Claude-Opus-4-8.
+Priorbest-Frontiercode-Diamond-Result has a score-value that is "13.4".
+Priorbest-Frontiercode-Diamond-Result has a score-unit that is "percentage".
+Priorbest-Frontiercode-Diamond-Result has an as-of-date that is "2026-07-07".
+
+# --- FrontierSWE: #1 ---
+Fable5-Frontierswe-Result is a benchmark-result.
+Fable5-Frontierswe-Result is-measured-on Frontierswe.
+Fable5-Frontierswe-Result is-achieved-by Claude-Fable-5.
+Fable5-Frontierswe-Result has a score-value that is "1".
+Fable5-Frontierswe-Result has a score-unit that is "rank".
+Fable5-Frontierswe-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Frontierswe-Result.
+
+# --- Terminal-Bench 2.1: 88.0% (Fable 5), GPT-5.5 4.6 points below at 83.4% ---
+Fable5-Terminal-Bench-Result is a benchmark-result.
+Fable5-Terminal-Bench-Result is-measured-on Terminal-Bench-2-1.
+Fable5-Terminal-Bench-Result is-achieved-by Claude-Fable-5.
+Fable5-Terminal-Bench-Result has a score-value that is "88.0".
+Fable5-Terminal-Bench-Result has a score-unit that is "percentage".
+Fable5-Terminal-Bench-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Terminal-Bench-Result.
+Gpt55-Terminal-Bench-Result is a benchmark-result.
+Gpt55-Terminal-Bench-Result is-measured-on Terminal-Bench-2-1.
+Gpt55-Terminal-Bench-Result is-achieved-by Gpt-5-5.
+Gpt55-Terminal-Bench-Result has a score-value that is "83.4".
+Gpt55-Terminal-Bench-Result has a score-unit that is "percentage".
+Gpt55-Terminal-Bench-Result has an as-of-date that is "2026-07-07".
+
+# --- CursorBench: SOTA 72.9% ---
+Fable5-Cursorbench-Result is a benchmark-result.
+Fable5-Cursorbench-Result is-measured-on Cursorbench.
+Fable5-Cursorbench-Result is-achieved-by Claude-Fable-5.
+Fable5-Cursorbench-Result has a score-value that is "72.9".
+Fable5-Cursorbench-Result has a score-unit that is "percentage".
+Fable5-Cursorbench-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Cursorbench-Result.
+
+# --- FrontierMath Tiers 1-4: 87% / 88% ---
+Fable5-Frontiermath-Result-A is a benchmark-result.
+Fable5-Frontiermath-Result-A is-measured-on Frontiermath.
+Fable5-Frontiermath-Result-A is-achieved-by Claude-Fable-5.
+Fable5-Frontiermath-Result-A has a score-value that is "87".
+Fable5-Frontiermath-Result-A has a score-unit that is "percentage".
+Fable5-Frontiermath-Result-A has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Frontiermath-Result-A.
+Fable5-Frontiermath-Result-B is a benchmark-result.
+Fable5-Frontiermath-Result-B is-measured-on Frontiermath.
+Fable5-Frontiermath-Result-B is-achieved-by Claude-Fable-5.
+Fable5-Frontiermath-Result-B has a score-value that is "88".
+Fable5-Frontiermath-Result-B has a score-unit that is "percentage".
+Fable5-Frontiermath-Result-B has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Frontiermath-Result-B.
+
+# --- Humanity's Last Exam: 53% ---
+Fable5-Humanitys-Last-Exam-Result is a benchmark-result.
+Fable5-Humanitys-Last-Exam-Result is-measured-on Humanitys-Last-Exam.
+Fable5-Humanitys-Last-Exam-Result is-achieved-by Claude-Fable-5.
+Fable5-Humanitys-Last-Exam-Result has a score-value that is "53".
+Fable5-Humanitys-Last-Exam-Result has a score-unit that is "percentage".
+Fable5-Humanitys-Last-Exam-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Humanitys-Last-Exam-Result.
+
+# --- Artificial Analysis Intelligence Index: #1 (index 64.9) ---
+Fable5-Aa-Intelligence-Index-Rank-Result is a benchmark-result.
+Fable5-Aa-Intelligence-Index-Rank-Result is-measured-on Artificial-Analysis-Intelligence-Index.
+Fable5-Aa-Intelligence-Index-Rank-Result is-achieved-by Claude-Fable-5.
+Fable5-Aa-Intelligence-Index-Rank-Result has a score-value that is "1".
+Fable5-Aa-Intelligence-Index-Rank-Result has a score-unit that is "rank".
+Fable5-Aa-Intelligence-Index-Rank-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Aa-Intelligence-Index-Rank-Result.
+Fable5-Aa-Intelligence-Index-Score-Result is a benchmark-result.
+Fable5-Aa-Intelligence-Index-Score-Result is-measured-on Artificial-Analysis-Intelligence-Index.
+Fable5-Aa-Intelligence-Index-Score-Result is-achieved-by Claude-Fable-5.
+Fable5-Aa-Intelligence-Index-Score-Result has a score-value that is "64.9".
+Fable5-Aa-Intelligence-Index-Score-Result has a score-unit that is "points".
+Fable5-Aa-Intelligence-Index-Score-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Aa-Intelligence-Index-Score-Result.
+
+# --- GDPval-AA: Elo 1932, #1 agentic real-world knowledge work ---
+Fable5-Gdpval-Aa-Elo-Result is a benchmark-result.
+Fable5-Gdpval-Aa-Elo-Result is-measured-on Gdpval-Aa.
+Fable5-Gdpval-Aa-Elo-Result is-achieved-by Claude-Fable-5.
+Fable5-Gdpval-Aa-Elo-Result has a score-value that is "1932".
+Fable5-Gdpval-Aa-Elo-Result has a score-unit that is "elo".
+Fable5-Gdpval-Aa-Elo-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Gdpval-Aa-Elo-Result.
+Fable5-Gdpval-Aa-Rank-Result is a benchmark-result.
+Fable5-Gdpval-Aa-Rank-Result is-measured-on Gdpval-Aa.
+Fable5-Gdpval-Aa-Rank-Result is-achieved-by Claude-Fable-5.
+Fable5-Gdpval-Aa-Rank-Result has a score-value that is "1".
+Fable5-Gdpval-Aa-Rank-Result has a score-unit that is "rank".
+Fable5-Gdpval-Aa-Rank-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Gdpval-Aa-Rank-Result.
+
+# --- WeirdML: 87.8% ---
+Fable5-Weirdml-Result is a benchmark-result.
+Fable5-Weirdml-Result is-measured-on Weirdml.
+Fable5-Weirdml-Result is-achieved-by Claude-Fable-5.
+Fable5-Weirdml-Result has a score-value that is "87.8".
+Fable5-Weirdml-Result has a score-unit that is "percentage".
+Fable5-Weirdml-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Weirdml-Result.
+
+# --- Epoch Capabilities Index: 161 ---
+Fable5-Epoch-Capabilities-Index-Result is a benchmark-result.
+Fable5-Epoch-Capabilities-Index-Result is-measured-on Epoch-Capabilities-Index.
+Fable5-Epoch-Capabilities-Index-Result is-achieved-by Claude-Fable-5.
+Fable5-Epoch-Capabilities-Index-Result has a score-value that is "161".
+Fable5-Epoch-Capabilities-Index-Result has a score-unit that is "points".
+Fable5-Epoch-Capabilities-Index-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Epoch-Capabilities-Index-Result.
+
+# --- Every Senior Engineer benchmark: 91/100 vs Opus 4.8 (63) and GPT-5.5 (62) ---
+Fable5-Every-Senior-Engineer-Result is a benchmark-result.
+Fable5-Every-Senior-Engineer-Result is-measured-on Every-Senior-Engineer-Benchmark.
+Fable5-Every-Senior-Engineer-Result is-achieved-by Claude-Fable-5.
+Fable5-Every-Senior-Engineer-Result has a score-value that is "91".
+Fable5-Every-Senior-Engineer-Result has a score-unit that is "points".
+Fable5-Every-Senior-Engineer-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Every-Senior-Engineer-Result.
+Opus48-Every-Senior-Engineer-Result is a benchmark-result.
+Opus48-Every-Senior-Engineer-Result is-measured-on Every-Senior-Engineer-Benchmark.
+Opus48-Every-Senior-Engineer-Result is-achieved-by Claude-Opus-4-8.
+Opus48-Every-Senior-Engineer-Result has a score-value that is "63".
+Opus48-Every-Senior-Engineer-Result has a score-unit that is "points".
+Opus48-Every-Senior-Engineer-Result has an as-of-date that is "2026-07-07".
+Gpt55-Every-Senior-Engineer-Result is a benchmark-result.
+Gpt55-Every-Senior-Engineer-Result is-measured-on Every-Senior-Engineer-Benchmark.
+Gpt55-Every-Senior-Engineer-Result is-achieved-by Gpt-5-5.
+Gpt55-Every-Senior-Engineer-Result has a score-value that is "62".
+Gpt55-Every-Senior-Engineer-Result has a score-unit that is "points".
+Gpt55-Every-Senior-Engineer-Result has an as-of-date that is "2026-07-07".
+
+# --- Code Arena (frontend coding): #1 (Fable 5); GLM-5.2 moved to #1 when Fable unavailable ---
+Fable5-Code-Arena-Result is a benchmark-result.
+Fable5-Code-Arena-Result is-measured-on Code-Arena.
+Fable5-Code-Arena-Result is-achieved-by Claude-Fable-5.
+Fable5-Code-Arena-Result has a score-value that is "1".
+Fable5-Code-Arena-Result has a score-unit that is "rank".
+Fable5-Code-Arena-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Code-Arena-Result.
+Glm52-Code-Arena-Result is a benchmark-result.
+Glm52-Code-Arena-Result is-measured-on Code-Arena.
+Glm52-Code-Arena-Result is-achieved-by Glm-5-2.
+Glm52-Code-Arena-Result has a score-value that is "1".
+Glm52-Code-Arena-Result has a score-unit that is "rank".
+Glm52-Code-Arena-Result has an as-of-date that is "2026-07-07".
+
+# --- Design Arena: #1 (Fable 5); GLM-5.2 moved to #1 when Fable unavailable ---
+Fable5-Design-Arena-Result is a benchmark-result.
+Fable5-Design-Arena-Result is-measured-on Design-Arena.
+Fable5-Design-Arena-Result is-achieved-by Claude-Fable-5.
+Fable5-Design-Arena-Result has a score-value that is "1".
+Fable5-Design-Arena-Result has a score-unit that is "rank".
+Fable5-Design-Arena-Result has an as-of-date that is "2026-07-07".
+Claude-Fable-5 has-benchmark-result Fable5-Design-Arena-Result.
+Glm52-Design-Arena-Result is a benchmark-result.
+Glm52-Design-Arena-Result is-measured-on Design-Arena.
+Glm52-Design-Arena-Result is-achieved-by Glm-5-2.
+Glm52-Design-Arena-Result has a score-value that is "1".
+Glm52-Design-Arena-Result has a score-unit that is "rank".
+Glm52-Design-Arena-Result has an as-of-date that is "2026-07-07".
+
+# --- Pricing & access ---
+Claude-Fable-5 has an input-token-price that is "10".
+Claude-Fable-5 has an output-token-price that is "50".
+Claude-Fable-5 has a cache-write-price that is "12.50".
+Claude-Fable-5 has a cache-read-price that is "1".
+Claude-Fable-5 has a context-window that is "1000000".
+Claude-Fable-5 has a retention-period that is "30".
+
+# --- Sources (citations) ---
+Claude-Fable-5 cites Fable-Ban-June-2026.
+Claude-Fable-5 cites Ainews-Fable5-June-2026.
+Claude-Fable-5 cites Every-Fable5-Vibe-Check.
+Claude-Fable-5 cites Ainews-Not-Much-Happened-2026-07-02.
+Claude-Fable-5 cites Every-Tale-Of-Two-Models-2026-07-05.
+Claude-Fable-5 cites Claude-Sonnet-5-Official-2026-06-30.
+Claude-Fable-5 cites Fable-Unknowns-Routing-2026-07.

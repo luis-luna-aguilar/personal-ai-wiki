@@ -1,0 +1,748 @@
+@prefix aiw: <https://ai-wiki.luisluna.dev/ontology/#> .
+@prefix biz: <https://musclepoints.com/ontology/biz#> .
+@prefix swe: <https://musclepoints.com/ontology/swe#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dbp: <http://dbpedia.org/resource/> .
+@prefix fibo-fbc-fct-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-fnd-utl-alx: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> .
+@prefix fibo-be-oc-op: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/> .
+@prefix fibo-be-le-lei: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# generated from claude-fable-5.ace by drs2ttl_v3.py — build artifact, do not hand-edit
+# candidate for wiki/models/claude-fable-5.ttl — promote only after review
+
+# ── annotations merged from the hand-authored sidecar (no ACE form) ──
+aiw:artificial-analysis-intelligence-index rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:artificial-analysis-intelligence-index rdfs:label "Artificial Analysis Intelligence Index"@en .
+aiw:claude-fable-5 rdfs:comment "Anthropic's frontier model, the first generally available Mythos-class model, launched June 2026."@en .
+aiw:claude-fable-5 rdfs:label "Claude Fable 5"@en .
+aiw:claude-mythos-5 rdfs:comment "A foundation model referenced in this wiki's benchmark-comparison content."@en .
+aiw:claude-mythos-5 rdfs:label "Claude Mythos 5"@en .
+aiw:claude-opus-4-8 rdfs:comment "A foundation model referenced in this wiki's benchmark-comparison content."@en .
+aiw:claude-opus-4-8 rdfs:label "Claude Opus 4 8"@en .
+aiw:code-arena rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:code-arena rdfs:label "Code Arena"@en .
+aiw:cursorbench rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:cursorbench rdfs:label "Cursorbench"@en .
+aiw:deepswe-index rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:deepswe-index rdfs:label "Deepswe Index"@en .
+aiw:design-arena rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:design-arena rdfs:label "Design Arena"@en .
+aiw:epoch-capabilities-index rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:epoch-capabilities-index rdfs:label "Epoch Capabilities Index"@en .
+aiw:every-senior-engineer-benchmark rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:every-senior-engineer-benchmark rdfs:label "Every Senior Engineer Benchmark"@en .
+aiw:frontiercode rdfs:comment "A coding benchmark measuring whether AI-generated code is actually mergeable into a real production codebase, not just test-passing."@en .
+aiw:frontiercode rdfs:label "FrontierCode"@en .
+aiw:frontiermath rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:frontiermath rdfs:label "Frontiermath"@en .
+aiw:frontierswe rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:frontierswe rdfs:label "Frontierswe"@en .
+aiw:gdpval-aa rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:gdpval-aa rdfs:label "Gdpval Aa"@en .
+aiw:glm-5-2 rdfs:comment "A foundation model referenced in this wiki's benchmark-comparison content."@en .
+aiw:glm-5-2 rdfs:label "Glm 5 2"@en .
+aiw:gpt-5-5 rdfs:comment "OpenAI's April 2026 frontier model, positioned as its smartest and most intuitive model."@en .
+aiw:gpt-5-5 rdfs:label "GPT-5.5"@en .
+aiw:humanitys-last-exam rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:humanitys-last-exam rdfs:label "Humanitys Last Exam"@en .
+aiw:swe-bench rdfs:comment "The de facto standard benchmark for evaluating AI software engineering capability on real GitHub issues."@en .
+aiw:swe-bench rdfs:label "SWE-bench"@en .
+aiw:swe-bench-pro rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:swe-bench-pro rdfs:label "Swe Bench Pro"@en .
+aiw:terminal-bench rdfs:comment "A benchmark evaluating AI agents on real terminal/command-line tasks in a simulated environment."@en .
+aiw:terminal-bench rdfs:label "Terminal-Bench"@en .
+aiw:terminal-bench-2-1 rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:terminal-bench-2-1 rdfs:label "Terminal Bench 2 1"@en .
+aiw:weirdml rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:weirdml rdfs:label "Weirdml"@en .
+
+# L12: Claude-Fable-5 is a model.
+aiw:claude-fable-5 a aiw:FoundationModel .
+
+# L15: Claude-Fable-5 is-provided-by Anthropic.
+aiw:claude-fable-5 biz:providedBy aiw:anthropic .
+
+# L16: Claude-Fable-5 has-domain Domain-Models.
+aiw:claude-fable-5 aiw:hasDomain aiw:domain-models .
+
+# L17: Claude-Fable-5 has-domain Domain-Coding.
+aiw:claude-fable-5 aiw:hasDomain aiw:domain-coding .
+
+# L18: Claude-Fable-5 has-domain Domain-Cybersecurity.
+aiw:claude-fable-5 aiw:hasDomain aiw:domain-cybersecurity .
+
+# L19: Claude-Fable-5 has-subcategory Subcategory-Frontier-Model.
+aiw:claude-fable-5 aiw:hasSubcategory aiw:subcategory-frontier-model .
+
+# L20: Claude-Fable-5 has-tag Tag-Anthropic.
+aiw:claude-fable-5 aiw:hasTag aiw:tag-anthropic .
+
+# L23: Claude-Fable-5 has an as-of-date that is "2026-07-07".
+aiw:claude-fable-5 aiw:asOf "2026-07-07"^^xsd:date .
+
+# L25: Claude-Fable-5 has-license-model the closed-source-license.
+aiw:claude-fable-5 aiw:hasLicenseModel aiw:closed-source .
+
+# L31: Gpt-5-5 is a model.
+aiw:gpt-5-5 a aiw:FoundationModel .
+
+# L32: Claude-Mythos-5 is a model.
+aiw:claude-mythos-5 a aiw:FoundationModel .
+
+# L33: Claude-Opus-4-8 is a model.
+aiw:claude-opus-4-8 a aiw:FoundationModel .
+
+# L34: Glm-5-2 is a model.
+aiw:glm-5-2 a aiw:FoundationModel .
+
+# L37: Swe-Bench is a benchmark.
+aiw:swe-bench a aiw:Benchmark .
+
+# L38: Swe-Bench has-variant Swe-Bench-Pro.
+aiw:swe-bench aiw:hasVariant aiw:swe-bench-pro .
+
+# L39: Swe-Bench-Pro is a benchmark.
+aiw:swe-bench-pro a aiw:Benchmark .
+
+# L40: Deepswe-Index is a benchmark.
+aiw:deepswe-index a aiw:Benchmark .
+
+# L41: Frontiercode is a benchmark.
+aiw:frontiercode a aiw:Benchmark .
+
+# L42: Frontiercode has-variant Frontiercode-Diamond-Tier.
+aiw:frontiercode aiw:hasVariant aiw:frontiercode-diamond-tier .
+
+# L43: Frontierswe is a benchmark.
+aiw:frontierswe a aiw:Benchmark .
+
+# L44: Terminal-Bench is a benchmark.
+aiw:terminal-bench a aiw:Benchmark .
+
+# L45: Terminal-Bench has-variant Terminal-Bench-2-1.
+aiw:terminal-bench aiw:hasVariant aiw:terminal-bench-2-1 .
+
+# L46: Terminal-Bench-2-1 is a benchmark.
+aiw:terminal-bench-2-1 a aiw:Benchmark .
+
+# L47: Cursorbench is a benchmark.
+aiw:cursorbench a aiw:Benchmark .
+
+# L48: Frontiermath is a benchmark.
+aiw:frontiermath a aiw:Benchmark .
+
+# L49: Humanitys-Last-Exam is a benchmark.
+aiw:humanitys-last-exam a aiw:Benchmark .
+
+# L50: Artificial-Analysis-Intelligence-Index is a benchmark.
+aiw:artificial-analysis-intelligence-index a aiw:Benchmark .
+
+# L51: Gdpval-Aa is a benchmark.
+aiw:gdpval-aa a aiw:Benchmark .
+
+# L52: Weirdml is a benchmark.
+aiw:weirdml a aiw:Benchmark .
+
+# L53: Epoch-Capabilities-Index is a benchmark.
+aiw:epoch-capabilities-index a aiw:Benchmark .
+
+# L54: Every-Senior-Engineer-Benchmark is a benchmark.
+aiw:every-senior-engineer-benchmark a aiw:Benchmark .
+
+# L55: Code-Arena is a benchmark.
+aiw:code-arena a aiw:Benchmark .
+
+# L56: Design-Arena is a benchmark.
+aiw:design-arena a aiw:Benchmark .
+
+# L59: Fable5-Swe-Bench-Pro-Result is a benchmark-result.
+aiw:fable5-swe-bench-pro-result a aiw:BenchmarkResult .
+
+# L60: Fable5-Swe-Bench-Pro-Result is-measured-on Swe-Bench-Pro.
+aiw:fable5-swe-bench-pro-result aiw:onBenchmark aiw:swe-bench-pro .
+
+# L61: Fable5-Swe-Bench-Pro-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-swe-bench-pro-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L62: Fable5-Swe-Bench-Pro-Result has a score-value that is "80.3".
+aiw:fable5-swe-bench-pro-result aiw:scoreValue "80.3"^^xsd:decimal .
+
+# L63: Fable5-Swe-Bench-Pro-Result has a score-unit that is "percentage".
+aiw:fable5-swe-bench-pro-result aiw:scoreUnit "percentage" .
+
+# L64: Fable5-Swe-Bench-Pro-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-swe-bench-pro-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L65: Claude-Fable-5 has-benchmark-result Fable5-Swe-Bench-Pro-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-swe-bench-pro-result .
+
+# L66: Gpt55-Swe-Bench-Pro-Result is a benchmark-result.
+aiw:gpt55-swe-bench-pro-result a aiw:BenchmarkResult .
+
+# L67: Gpt55-Swe-Bench-Pro-Result is-measured-on Swe-Bench-Pro.
+aiw:gpt55-swe-bench-pro-result aiw:onBenchmark aiw:swe-bench-pro .
+
+# L68: Gpt55-Swe-Bench-Pro-Result is-achieved-by Gpt-5-5.
+aiw:gpt55-swe-bench-pro-result aiw:achievedBy aiw:gpt-5-5 .
+
+# L69: Gpt55-Swe-Bench-Pro-Result has a score-value that is "58.6".
+aiw:gpt55-swe-bench-pro-result aiw:scoreValue "58.6"^^xsd:decimal .
+
+# L70: Gpt55-Swe-Bench-Pro-Result has a score-unit that is "percentage".
+aiw:gpt55-swe-bench-pro-result aiw:scoreUnit "percentage" .
+
+# L71: Gpt55-Swe-Bench-Pro-Result has an as-of-date that is "2026-07-07".
+aiw:gpt55-swe-bench-pro-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L74: Fable5-Deepswe-Index-Rank-Result is a benchmark-result.
+aiw:fable5-deepswe-index-rank-result a aiw:BenchmarkResult .
+
+# L75: Fable5-Deepswe-Index-Rank-Result is-measured-on Deepswe-Index.
+aiw:fable5-deepswe-index-rank-result aiw:onBenchmark aiw:deepswe-index .
+
+# L76: Fable5-Deepswe-Index-Rank-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-deepswe-index-rank-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L77: Fable5-Deepswe-Index-Rank-Result has a score-value that is "1".
+aiw:fable5-deepswe-index-rank-result aiw:scoreValue "1.0"^^xsd:decimal .
+
+# L78: Fable5-Deepswe-Index-Rank-Result has a score-unit that is "rank".
+aiw:fable5-deepswe-index-rank-result aiw:scoreUnit "rank" .
+
+# L79: Fable5-Deepswe-Index-Rank-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-deepswe-index-rank-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L80: Claude-Fable-5 has-benchmark-result Fable5-Deepswe-Index-Rank-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-deepswe-index-rank-result .
+
+# L81: Fable5-Deepswe-Index-Score-Result is a benchmark-result.
+aiw:fable5-deepswe-index-score-result a aiw:BenchmarkResult .
+
+# L82: Fable5-Deepswe-Index-Score-Result is-measured-on Deepswe-Index.
+aiw:fable5-deepswe-index-score-result aiw:onBenchmark aiw:deepswe-index .
+
+# L83: Fable5-Deepswe-Index-Score-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-deepswe-index-score-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L84: Fable5-Deepswe-Index-Score-Result has a score-value that is "77".
+aiw:fable5-deepswe-index-score-result aiw:scoreValue "77.0"^^xsd:decimal .
+
+# L85: Fable5-Deepswe-Index-Score-Result has a score-unit that is "points".
+aiw:fable5-deepswe-index-score-result aiw:scoreUnit "points" .
+
+# L86: Fable5-Deepswe-Index-Score-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-deepswe-index-score-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L87: Claude-Fable-5 has-benchmark-result Fable5-Deepswe-Index-Score-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-deepswe-index-score-result .
+
+# L90: Fable5-Frontiercode-Diamond-Result is a benchmark-result.
+aiw:fable5-frontiercode-diamond-result a aiw:BenchmarkResult .
+
+# L91: Fable5-Frontiercode-Diamond-Result is-measured-on Frontiercode-Diamond-Tier.
+aiw:fable5-frontiercode-diamond-result aiw:onBenchmark aiw:frontiercode-diamond-tier .
+
+# L92: Fable5-Frontiercode-Diamond-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-frontiercode-diamond-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L93: Fable5-Frontiercode-Diamond-Result has a score-value that is "29.3".
+aiw:fable5-frontiercode-diamond-result aiw:scoreValue "29.3"^^xsd:decimal .
+
+# L94: Fable5-Frontiercode-Diamond-Result has a score-unit that is "percentage".
+aiw:fable5-frontiercode-diamond-result aiw:scoreUnit "percentage" .
+
+# L95: Fable5-Frontiercode-Diamond-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-frontiercode-diamond-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L96: Claude-Fable-5 has-benchmark-result Fable5-Frontiercode-Diamond-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-frontiercode-diamond-result .
+
+# L97: Mythos5-Frontiercode-Diamond-Result is a benchmark-result.
+aiw:mythos5-frontiercode-diamond-result a aiw:BenchmarkResult .
+
+# L98: Mythos5-Frontiercode-Diamond-Result is-measured-on Frontiercode-Diamond-Tier.
+aiw:mythos5-frontiercode-diamond-result aiw:onBenchmark aiw:frontiercode-diamond-tier .
+
+# L99: Mythos5-Frontiercode-Diamond-Result is-achieved-by Claude-Mythos-5.
+aiw:mythos5-frontiercode-diamond-result aiw:achievedBy aiw:claude-mythos-5 .
+
+# L100: Mythos5-Frontiercode-Diamond-Result has a score-value that is "30.9".
+aiw:mythos5-frontiercode-diamond-result aiw:scoreValue "30.9"^^xsd:decimal .
+
+# L101: Mythos5-Frontiercode-Diamond-Result has a score-unit that is "percentage".
+aiw:mythos5-frontiercode-diamond-result aiw:scoreUnit "percentage" .
+
+# L102: Mythos5-Frontiercode-Diamond-Result has an as-of-date that is "2026-07-07".
+aiw:mythos5-frontiercode-diamond-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L103: Priorbest-Frontiercode-Diamond-Result is a benchmark-result.
+aiw:priorbest-frontiercode-diamond-result a aiw:BenchmarkResult .
+
+# L104: Priorbest-Frontiercode-Diamond-Result is-measured-on Frontiercode-Diamond-Tier.
+aiw:priorbest-frontiercode-diamond-result aiw:onBenchmark aiw:frontiercode-diamond-tier .
+
+# L105: Priorbest-Frontiercode-Diamond-Result is-achieved-by Claude-Opus-4-8.
+aiw:priorbest-frontiercode-diamond-result aiw:achievedBy aiw:claude-opus-4-8 .
+
+# L106: Priorbest-Frontiercode-Diamond-Result has a score-value that is "13.4".
+aiw:priorbest-frontiercode-diamond-result aiw:scoreValue "13.4"^^xsd:decimal .
+
+# L107: Priorbest-Frontiercode-Diamond-Result has a score-unit that is "percentage".
+aiw:priorbest-frontiercode-diamond-result aiw:scoreUnit "percentage" .
+
+# L108: Priorbest-Frontiercode-Diamond-Result has an as-of-date that is "2026-07-07".
+aiw:priorbest-frontiercode-diamond-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L111: Fable5-Frontierswe-Result is a benchmark-result.
+aiw:fable5-frontierswe-result a aiw:BenchmarkResult .
+
+# L112: Fable5-Frontierswe-Result is-measured-on Frontierswe.
+aiw:fable5-frontierswe-result aiw:onBenchmark aiw:frontierswe .
+
+# L113: Fable5-Frontierswe-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-frontierswe-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L114: Fable5-Frontierswe-Result has a score-value that is "1".
+aiw:fable5-frontierswe-result aiw:scoreValue "1.0"^^xsd:decimal .
+
+# L115: Fable5-Frontierswe-Result has a score-unit that is "rank".
+aiw:fable5-frontierswe-result aiw:scoreUnit "rank" .
+
+# L116: Fable5-Frontierswe-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-frontierswe-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L117: Claude-Fable-5 has-benchmark-result Fable5-Frontierswe-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-frontierswe-result .
+
+# L120: Fable5-Terminal-Bench-Result is a benchmark-result.
+aiw:fable5-terminal-bench-result a aiw:BenchmarkResult .
+
+# L121: Fable5-Terminal-Bench-Result is-measured-on Terminal-Bench-2-1.
+aiw:fable5-terminal-bench-result aiw:onBenchmark aiw:terminal-bench-2-1 .
+
+# L122: Fable5-Terminal-Bench-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-terminal-bench-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L123: Fable5-Terminal-Bench-Result has a score-value that is "88.0".
+aiw:fable5-terminal-bench-result aiw:scoreValue "88.0"^^xsd:decimal .
+
+# L124: Fable5-Terminal-Bench-Result has a score-unit that is "percentage".
+aiw:fable5-terminal-bench-result aiw:scoreUnit "percentage" .
+
+# L125: Fable5-Terminal-Bench-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-terminal-bench-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L126: Claude-Fable-5 has-benchmark-result Fable5-Terminal-Bench-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-terminal-bench-result .
+
+# L127: Gpt55-Terminal-Bench-Result is a benchmark-result.
+aiw:gpt55-terminal-bench-result a aiw:BenchmarkResult .
+
+# L128: Gpt55-Terminal-Bench-Result is-measured-on Terminal-Bench-2-1.
+aiw:gpt55-terminal-bench-result aiw:onBenchmark aiw:terminal-bench-2-1 .
+
+# L129: Gpt55-Terminal-Bench-Result is-achieved-by Gpt-5-5.
+aiw:gpt55-terminal-bench-result aiw:achievedBy aiw:gpt-5-5 .
+
+# L130: Gpt55-Terminal-Bench-Result has a score-value that is "83.4".
+aiw:gpt55-terminal-bench-result aiw:scoreValue "83.4"^^xsd:decimal .
+
+# L131: Gpt55-Terminal-Bench-Result has a score-unit that is "percentage".
+aiw:gpt55-terminal-bench-result aiw:scoreUnit "percentage" .
+
+# L132: Gpt55-Terminal-Bench-Result has an as-of-date that is "2026-07-07".
+aiw:gpt55-terminal-bench-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L135: Fable5-Cursorbench-Result is a benchmark-result.
+aiw:fable5-cursorbench-result a aiw:BenchmarkResult .
+
+# L136: Fable5-Cursorbench-Result is-measured-on Cursorbench.
+aiw:fable5-cursorbench-result aiw:onBenchmark aiw:cursorbench .
+
+# L137: Fable5-Cursorbench-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-cursorbench-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L138: Fable5-Cursorbench-Result has a score-value that is "72.9".
+aiw:fable5-cursorbench-result aiw:scoreValue "72.9"^^xsd:decimal .
+
+# L139: Fable5-Cursorbench-Result has a score-unit that is "percentage".
+aiw:fable5-cursorbench-result aiw:scoreUnit "percentage" .
+
+# L140: Fable5-Cursorbench-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-cursorbench-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L141: Claude-Fable-5 has-benchmark-result Fable5-Cursorbench-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-cursorbench-result .
+
+# L144: Fable5-Frontiermath-Result-A is a benchmark-result.
+aiw:fable5-frontiermath-result-a a aiw:BenchmarkResult .
+
+# L145: Fable5-Frontiermath-Result-A is-measured-on Frontiermath.
+aiw:fable5-frontiermath-result-a aiw:onBenchmark aiw:frontiermath .
+
+# L146: Fable5-Frontiermath-Result-A is-achieved-by Claude-Fable-5.
+aiw:fable5-frontiermath-result-a aiw:achievedBy aiw:claude-fable-5 .
+
+# L147: Fable5-Frontiermath-Result-A has a score-value that is "87".
+aiw:fable5-frontiermath-result-a aiw:scoreValue "87.0"^^xsd:decimal .
+
+# L148: Fable5-Frontiermath-Result-A has a score-unit that is "percentage".
+aiw:fable5-frontiermath-result-a aiw:scoreUnit "percentage" .
+
+# L149: Fable5-Frontiermath-Result-A has an as-of-date that is "2026-07-07".
+aiw:fable5-frontiermath-result-a aiw:asOf "2026-07-07"^^xsd:date .
+
+# L150: Claude-Fable-5 has-benchmark-result Fable5-Frontiermath-Result-A.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-frontiermath-result-a .
+
+# L151: Fable5-Frontiermath-Result-B is a benchmark-result.
+aiw:fable5-frontiermath-result-b a aiw:BenchmarkResult .
+
+# L152: Fable5-Frontiermath-Result-B is-measured-on Frontiermath.
+aiw:fable5-frontiermath-result-b aiw:onBenchmark aiw:frontiermath .
+
+# L153: Fable5-Frontiermath-Result-B is-achieved-by Claude-Fable-5.
+aiw:fable5-frontiermath-result-b aiw:achievedBy aiw:claude-fable-5 .
+
+# L154: Fable5-Frontiermath-Result-B has a score-value that is "88".
+aiw:fable5-frontiermath-result-b aiw:scoreValue "88.0"^^xsd:decimal .
+
+# L155: Fable5-Frontiermath-Result-B has a score-unit that is "percentage".
+aiw:fable5-frontiermath-result-b aiw:scoreUnit "percentage" .
+
+# L156: Fable5-Frontiermath-Result-B has an as-of-date that is "2026-07-07".
+aiw:fable5-frontiermath-result-b aiw:asOf "2026-07-07"^^xsd:date .
+
+# L157: Claude-Fable-5 has-benchmark-result Fable5-Frontiermath-Result-B.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-frontiermath-result-b .
+
+# L160: Fable5-Humanitys-Last-Exam-Result is a benchmark-result.
+aiw:fable5-humanitys-last-exam-result a aiw:BenchmarkResult .
+
+# L161: Fable5-Humanitys-Last-Exam-Result is-measured-on Humanitys-Last-Exam.
+aiw:fable5-humanitys-last-exam-result aiw:onBenchmark aiw:humanitys-last-exam .
+
+# L162: Fable5-Humanitys-Last-Exam-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-humanitys-last-exam-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L163: Fable5-Humanitys-Last-Exam-Result has a score-value that is "53".
+aiw:fable5-humanitys-last-exam-result aiw:scoreValue "53.0"^^xsd:decimal .
+
+# L164: Fable5-Humanitys-Last-Exam-Result has a score-unit that is "percentage".
+aiw:fable5-humanitys-last-exam-result aiw:scoreUnit "percentage" .
+
+# L165: Fable5-Humanitys-Last-Exam-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-humanitys-last-exam-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L166: Claude-Fable-5 has-benchmark-result Fable5-Humanitys-Last-Exam-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-humanitys-last-exam-result .
+
+# L169: Fable5-Aa-Intelligence-Index-Rank-Result is a benchmark-result.
+aiw:fable5-aa-intelligence-index-rank-result a aiw:BenchmarkResult .
+
+# L170: Fable5-Aa-Intelligence-Index-Rank-Result is-measured-on Artificial-Analysis-Intelligence-Index.
+aiw:fable5-aa-intelligence-index-rank-result aiw:onBenchmark aiw:artificial-analysis-intelligence-index .
+
+# L171: Fable5-Aa-Intelligence-Index-Rank-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-aa-intelligence-index-rank-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L172: Fable5-Aa-Intelligence-Index-Rank-Result has a score-value that is "1".
+aiw:fable5-aa-intelligence-index-rank-result aiw:scoreValue "1.0"^^xsd:decimal .
+
+# L173: Fable5-Aa-Intelligence-Index-Rank-Result has a score-unit that is "rank".
+aiw:fable5-aa-intelligence-index-rank-result aiw:scoreUnit "rank" .
+
+# L174: Fable5-Aa-Intelligence-Index-Rank-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-aa-intelligence-index-rank-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L175: Claude-Fable-5 has-benchmark-result Fable5-Aa-Intelligence-Index-Rank-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-aa-intelligence-index-rank-result .
+
+# L176: Fable5-Aa-Intelligence-Index-Score-Result is a benchmark-result.
+aiw:fable5-aa-intelligence-index-score-result a aiw:BenchmarkResult .
+
+# L177: Fable5-Aa-Intelligence-Index-Score-Result is-measured-on Artificial-Analysis-Intelligence-Index.
+aiw:fable5-aa-intelligence-index-score-result aiw:onBenchmark aiw:artificial-analysis-intelligence-index .
+
+# L178: Fable5-Aa-Intelligence-Index-Score-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-aa-intelligence-index-score-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L179: Fable5-Aa-Intelligence-Index-Score-Result has a score-value that is "64.9".
+aiw:fable5-aa-intelligence-index-score-result aiw:scoreValue "64.9"^^xsd:decimal .
+
+# L180: Fable5-Aa-Intelligence-Index-Score-Result has a score-unit that is "points".
+aiw:fable5-aa-intelligence-index-score-result aiw:scoreUnit "points" .
+
+# L181: Fable5-Aa-Intelligence-Index-Score-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-aa-intelligence-index-score-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L182: Claude-Fable-5 has-benchmark-result Fable5-Aa-Intelligence-Index-Score-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-aa-intelligence-index-score-result .
+
+# L185: Fable5-Gdpval-Aa-Elo-Result is a benchmark-result.
+aiw:fable5-gdpval-aa-elo-result a aiw:BenchmarkResult .
+
+# L186: Fable5-Gdpval-Aa-Elo-Result is-measured-on Gdpval-Aa.
+aiw:fable5-gdpval-aa-elo-result aiw:onBenchmark aiw:gdpval-aa .
+
+# L187: Fable5-Gdpval-Aa-Elo-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-gdpval-aa-elo-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L188: Fable5-Gdpval-Aa-Elo-Result has a score-value that is "1932".
+aiw:fable5-gdpval-aa-elo-result aiw:scoreValue "1932.0"^^xsd:decimal .
+
+# L189: Fable5-Gdpval-Aa-Elo-Result has a score-unit that is "elo".
+aiw:fable5-gdpval-aa-elo-result aiw:scoreUnit "elo" .
+
+# L190: Fable5-Gdpval-Aa-Elo-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-gdpval-aa-elo-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L191: Claude-Fable-5 has-benchmark-result Fable5-Gdpval-Aa-Elo-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-gdpval-aa-elo-result .
+
+# L192: Fable5-Gdpval-Aa-Rank-Result is a benchmark-result.
+aiw:fable5-gdpval-aa-rank-result a aiw:BenchmarkResult .
+
+# L193: Fable5-Gdpval-Aa-Rank-Result is-measured-on Gdpval-Aa.
+aiw:fable5-gdpval-aa-rank-result aiw:onBenchmark aiw:gdpval-aa .
+
+# L194: Fable5-Gdpval-Aa-Rank-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-gdpval-aa-rank-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L195: Fable5-Gdpval-Aa-Rank-Result has a score-value that is "1".
+aiw:fable5-gdpval-aa-rank-result aiw:scoreValue "1.0"^^xsd:decimal .
+
+# L196: Fable5-Gdpval-Aa-Rank-Result has a score-unit that is "rank".
+aiw:fable5-gdpval-aa-rank-result aiw:scoreUnit "rank" .
+
+# L197: Fable5-Gdpval-Aa-Rank-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-gdpval-aa-rank-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L198: Claude-Fable-5 has-benchmark-result Fable5-Gdpval-Aa-Rank-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-gdpval-aa-rank-result .
+
+# L201: Fable5-Weirdml-Result is a benchmark-result.
+aiw:fable5-weirdml-result a aiw:BenchmarkResult .
+
+# L202: Fable5-Weirdml-Result is-measured-on Weirdml.
+aiw:fable5-weirdml-result aiw:onBenchmark aiw:weirdml .
+
+# L203: Fable5-Weirdml-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-weirdml-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L204: Fable5-Weirdml-Result has a score-value that is "87.8".
+aiw:fable5-weirdml-result aiw:scoreValue "87.8"^^xsd:decimal .
+
+# L205: Fable5-Weirdml-Result has a score-unit that is "percentage".
+aiw:fable5-weirdml-result aiw:scoreUnit "percentage" .
+
+# L206: Fable5-Weirdml-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-weirdml-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L207: Claude-Fable-5 has-benchmark-result Fable5-Weirdml-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-weirdml-result .
+
+# L210: Fable5-Epoch-Capabilities-Index-Result is a benchmark-result.
+aiw:fable5-epoch-capabilities-index-result a aiw:BenchmarkResult .
+
+# L211: Fable5-Epoch-Capabilities-Index-Result is-measured-on Epoch-Capabilities-Index.
+aiw:fable5-epoch-capabilities-index-result aiw:onBenchmark aiw:epoch-capabilities-index .
+
+# L212: Fable5-Epoch-Capabilities-Index-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-epoch-capabilities-index-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L213: Fable5-Epoch-Capabilities-Index-Result has a score-value that is "161".
+aiw:fable5-epoch-capabilities-index-result aiw:scoreValue "161.0"^^xsd:decimal .
+
+# L214: Fable5-Epoch-Capabilities-Index-Result has a score-unit that is "points".
+aiw:fable5-epoch-capabilities-index-result aiw:scoreUnit "points" .
+
+# L215: Fable5-Epoch-Capabilities-Index-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-epoch-capabilities-index-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L216: Claude-Fable-5 has-benchmark-result Fable5-Epoch-Capabilities-Index-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-epoch-capabilities-index-result .
+
+# L219: Fable5-Every-Senior-Engineer-Result is a benchmark-result.
+aiw:fable5-every-senior-engineer-result a aiw:BenchmarkResult .
+
+# L220: Fable5-Every-Senior-Engineer-Result is-measured-on Every-Senior-Engineer-Benchmark.
+aiw:fable5-every-senior-engineer-result aiw:onBenchmark aiw:every-senior-engineer-benchmark .
+
+# L221: Fable5-Every-Senior-Engineer-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-every-senior-engineer-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L222: Fable5-Every-Senior-Engineer-Result has a score-value that is "91".
+aiw:fable5-every-senior-engineer-result aiw:scoreValue "91.0"^^xsd:decimal .
+
+# L223: Fable5-Every-Senior-Engineer-Result has a score-unit that is "points".
+aiw:fable5-every-senior-engineer-result aiw:scoreUnit "points" .
+
+# L224: Fable5-Every-Senior-Engineer-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-every-senior-engineer-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L225: Claude-Fable-5 has-benchmark-result Fable5-Every-Senior-Engineer-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-every-senior-engineer-result .
+
+# L226: Opus48-Every-Senior-Engineer-Result is a benchmark-result.
+aiw:opus48-every-senior-engineer-result a aiw:BenchmarkResult .
+
+# L227: Opus48-Every-Senior-Engineer-Result is-measured-on Every-Senior-Engineer-Benchmark.
+aiw:opus48-every-senior-engineer-result aiw:onBenchmark aiw:every-senior-engineer-benchmark .
+
+# L228: Opus48-Every-Senior-Engineer-Result is-achieved-by Claude-Opus-4-8.
+aiw:opus48-every-senior-engineer-result aiw:achievedBy aiw:claude-opus-4-8 .
+
+# L229: Opus48-Every-Senior-Engineer-Result has a score-value that is "63".
+aiw:opus48-every-senior-engineer-result aiw:scoreValue "63.0"^^xsd:decimal .
+
+# L230: Opus48-Every-Senior-Engineer-Result has a score-unit that is "points".
+aiw:opus48-every-senior-engineer-result aiw:scoreUnit "points" .
+
+# L231: Opus48-Every-Senior-Engineer-Result has an as-of-date that is "2026-07-07".
+aiw:opus48-every-senior-engineer-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L232: Gpt55-Every-Senior-Engineer-Result is a benchmark-result.
+aiw:gpt55-every-senior-engineer-result a aiw:BenchmarkResult .
+
+# L233: Gpt55-Every-Senior-Engineer-Result is-measured-on Every-Senior-Engineer-Benchmark.
+aiw:gpt55-every-senior-engineer-result aiw:onBenchmark aiw:every-senior-engineer-benchmark .
+
+# L234: Gpt55-Every-Senior-Engineer-Result is-achieved-by Gpt-5-5.
+aiw:gpt55-every-senior-engineer-result aiw:achievedBy aiw:gpt-5-5 .
+
+# L235: Gpt55-Every-Senior-Engineer-Result has a score-value that is "62".
+aiw:gpt55-every-senior-engineer-result aiw:scoreValue "62.0"^^xsd:decimal .
+
+# L236: Gpt55-Every-Senior-Engineer-Result has a score-unit that is "points".
+aiw:gpt55-every-senior-engineer-result aiw:scoreUnit "points" .
+
+# L237: Gpt55-Every-Senior-Engineer-Result has an as-of-date that is "2026-07-07".
+aiw:gpt55-every-senior-engineer-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L240: Fable5-Code-Arena-Result is a benchmark-result.
+aiw:fable5-code-arena-result a aiw:BenchmarkResult .
+
+# L241: Fable5-Code-Arena-Result is-measured-on Code-Arena.
+aiw:fable5-code-arena-result aiw:onBenchmark aiw:code-arena .
+
+# L242: Fable5-Code-Arena-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-code-arena-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L243: Fable5-Code-Arena-Result has a score-value that is "1".
+aiw:fable5-code-arena-result aiw:scoreValue "1.0"^^xsd:decimal .
+
+# L244: Fable5-Code-Arena-Result has a score-unit that is "rank".
+aiw:fable5-code-arena-result aiw:scoreUnit "rank" .
+
+# L245: Fable5-Code-Arena-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-code-arena-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L246: Claude-Fable-5 has-benchmark-result Fable5-Code-Arena-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-code-arena-result .
+
+# L247: Glm52-Code-Arena-Result is a benchmark-result.
+aiw:glm52-code-arena-result a aiw:BenchmarkResult .
+
+# L248: Glm52-Code-Arena-Result is-measured-on Code-Arena.
+aiw:glm52-code-arena-result aiw:onBenchmark aiw:code-arena .
+
+# L249: Glm52-Code-Arena-Result is-achieved-by Glm-5-2.
+aiw:glm52-code-arena-result aiw:achievedBy aiw:glm-5-2 .
+
+# L250: Glm52-Code-Arena-Result has a score-value that is "1".
+aiw:glm52-code-arena-result aiw:scoreValue "1.0"^^xsd:decimal .
+
+# L251: Glm52-Code-Arena-Result has a score-unit that is "rank".
+aiw:glm52-code-arena-result aiw:scoreUnit "rank" .
+
+# L252: Glm52-Code-Arena-Result has an as-of-date that is "2026-07-07".
+aiw:glm52-code-arena-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L255: Fable5-Design-Arena-Result is a benchmark-result.
+aiw:fable5-design-arena-result a aiw:BenchmarkResult .
+
+# L256: Fable5-Design-Arena-Result is-measured-on Design-Arena.
+aiw:fable5-design-arena-result aiw:onBenchmark aiw:design-arena .
+
+# L257: Fable5-Design-Arena-Result is-achieved-by Claude-Fable-5.
+aiw:fable5-design-arena-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L258: Fable5-Design-Arena-Result has a score-value that is "1".
+aiw:fable5-design-arena-result aiw:scoreValue "1.0"^^xsd:decimal .
+
+# L259: Fable5-Design-Arena-Result has a score-unit that is "rank".
+aiw:fable5-design-arena-result aiw:scoreUnit "rank" .
+
+# L260: Fable5-Design-Arena-Result has an as-of-date that is "2026-07-07".
+aiw:fable5-design-arena-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L261: Claude-Fable-5 has-benchmark-result Fable5-Design-Arena-Result.
+aiw:claude-fable-5 aiw:hasBenchmarkResult aiw:fable5-design-arena-result .
+
+# L262: Glm52-Design-Arena-Result is a benchmark-result.
+aiw:glm52-design-arena-result a aiw:BenchmarkResult .
+
+# L263: Glm52-Design-Arena-Result is-measured-on Design-Arena.
+aiw:glm52-design-arena-result aiw:onBenchmark aiw:design-arena .
+
+# L264: Glm52-Design-Arena-Result is-achieved-by Glm-5-2.
+aiw:glm52-design-arena-result aiw:achievedBy aiw:glm-5-2 .
+
+# L265: Glm52-Design-Arena-Result has a score-value that is "1".
+aiw:glm52-design-arena-result aiw:scoreValue "1.0"^^xsd:decimal .
+
+# L266: Glm52-Design-Arena-Result has a score-unit that is "rank".
+aiw:glm52-design-arena-result aiw:scoreUnit "rank" .
+
+# L267: Glm52-Design-Arena-Result has an as-of-date that is "2026-07-07".
+aiw:glm52-design-arena-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# ═══ compile report ═══
+# L13 [parse-fail] Claude-Fable-5 is a mythos-class-model.
+#      → run validate-ace.sh
+# L14 [bare-have] Claude-Fable-5 has a name that is "Claude Fable 5".
+#      → has a 'name' — no canonical object property for generic 'have'; use a specific verb or open a VCR
+# L24 [parse-fail] Claude-Fable-5 has a launch-date that is "2026-06-09".
+#      → run validate-ace.sh
+# L28 [parse-fail] Claude-Fable-5 falls-back-to Claude-Opus-4-8.
+#      → run validate-ace.sh
+# L270 [parse-fail] Claude-Fable-5 has an input-token-price that is "10".
+#      → run validate-ace.sh
+# L271 [parse-fail] Claude-Fable-5 has an output-token-price that is "50".
+#      → run validate-ace.sh
+# L272 [parse-fail] Claude-Fable-5 has a cache-write-price that is "12.50".
+#      → run validate-ace.sh
+# L273 [parse-fail] Claude-Fable-5 has a cache-read-price that is "1".
+#      → run validate-ace.sh
+# L274 [parse-fail] Claude-Fable-5 has a context-window that is "1000000".
+#      → run validate-ace.sh
+# L275 [parse-fail] Claude-Fable-5 has a retention-period that is "30".
+#      → run validate-ace.sh
+# L278 [parse-fail] Claude-Fable-5 cites Fable-Ban-June-2026.
+#      → run validate-ace.sh
+# L279 [parse-fail] Claude-Fable-5 cites Ainews-Fable5-June-2026.
+#      → run validate-ace.sh
+# L280 [parse-fail] Claude-Fable-5 cites Every-Fable5-Vibe-Check.
+#      → run validate-ace.sh
+# L281 [parse-fail] Claude-Fable-5 cites Ainews-Not-Much-Happened-2026-07-02.
+#      → run validate-ace.sh
+# L282 [parse-fail] Claude-Fable-5 cites Every-Tale-Of-Two-Models-2026-07-05.
+#      → run validate-ace.sh
+# L283 [parse-fail] Claude-Fable-5 cites Claude-Sonnet-5-Official-2026-06-30.
+#      → run validate-ace.sh
+# L284 [parse-fail] Claude-Fable-5 cites Fable-Unknowns-Routing-2026-07.
+#      → run validate-ace.sh
+
+# --- Organization rdfs:label / rdfs:comment enrichment (WikiEntityShape) ---
+aiw:anthropic rdfs:label "Anthropic"@en ; rdfs:comment "AI safety company; developer of the Claude model family."@en .

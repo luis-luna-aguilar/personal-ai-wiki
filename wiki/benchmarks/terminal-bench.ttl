@@ -1,0 +1,179 @@
+@prefix aiw: <https://ai-wiki.luisluna.dev/ontology/#> .
+@prefix biz: <https://musclepoints.com/ontology/biz#> .
+@prefix swe: <https://musclepoints.com/ontology/swe#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dbp: <http://dbpedia.org/resource/> .
+@prefix fibo-fbc-fct-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-fnd-utl-alx: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> .
+@prefix fibo-be-oc-op: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/> .
+@prefix fibo-be-le-lei: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# generated from terminal-bench.ace by drs2ttl_v3.py — build artifact, do not hand-edit
+# candidate for wiki/benchmarks/terminal-bench.ttl — promote only after review
+
+# ── annotations merged from the hand-authored sidecar (no ACE form) ──
+aiw:terminal-bench rdfs:comment "A benchmark evaluating AI agents on real terminal/command-line tasks in a simulated environment."@en .
+aiw:terminal-bench rdfs:label "Terminal-Bench"@en .
+aiw:terminal-bench-2-0 rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:terminal-bench-2-0 rdfs:label "Terminal Bench 2 0"@en .
+aiw:terminal-bench-2-1 rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:terminal-bench-2-1 rdfs:label "Terminal Bench 2 1"@en .
+
+# L5: Terminal-Bench is a benchmark.
+aiw:terminal-bench a aiw:Benchmark .
+
+# L6: Terminal-Bench has-domain Domain-Agents.
+aiw:terminal-bench aiw:hasDomain aiw:domain-agents .
+
+# L7: Terminal-Bench has-domain Domain-Coding.
+aiw:terminal-bench aiw:hasDomain aiw:domain-coding .
+
+# L8: Terminal-Bench has-tag Tag-Agentic.
+aiw:terminal-bench aiw:hasTag aiw:tag-agentic .
+
+# L9: Terminal-Bench has-tag Tag-Cli.
+aiw:terminal-bench aiw:hasTag aiw:tag-cli .
+
+# L10: Terminal-Bench has a as-of-date that is "2026-04-23".
+aiw:terminal-bench aiw:asOf "2026-04-23"^^xsd:date .
+
+# L27: Terminal-Bench-2-0 is a benchmark.
+aiw:terminal-bench-2-0 a aiw:Benchmark .
+
+# L28: Terminal-Bench-2-1 is a benchmark.
+aiw:terminal-bench-2-1 a aiw:Benchmark .
+
+# L29: Terminal-Bench has-variant Terminal-Bench-2-0.
+aiw:terminal-bench aiw:hasVariant aiw:terminal-bench-2-0 .
+
+# L30: Terminal-Bench has-variant Terminal-Bench-2-1.
+aiw:terminal-bench aiw:hasVariant aiw:terminal-bench-2-1 .
+
+# L33: Claude-Fable-5-Terminalbench-Result is a benchmark-result.
+aiw:claude-fable-5-terminalbench-result a aiw:BenchmarkResult .
+
+# L34: Claude-Fable-5-Terminalbench-Result is-measured-on Terminal-Bench-2-1.
+aiw:claude-fable-5-terminalbench-result aiw:onBenchmark aiw:terminal-bench-2-1 .
+
+# L35: Claude-Fable-5-Terminalbench-Result is-achieved-by Claude-Fable-5.
+aiw:claude-fable-5-terminalbench-result aiw:achievedBy aiw:claude-fable-5 .
+
+# L36: Claude-Fable-5-Terminalbench-Result has a score-value that is "88.0".
+aiw:claude-fable-5-terminalbench-result aiw:scoreValue "88.0"^^xsd:decimal .
+
+# L37: Claude-Fable-5-Terminalbench-Result has a score-unit that is "percentage".
+aiw:claude-fable-5-terminalbench-result aiw:scoreUnit "percentage" .
+
+# L38: Claude-Fable-5-Terminalbench-Result has an as-of-date that is "2026-07-07".
+aiw:claude-fable-5-terminalbench-result aiw:asOf "2026-07-07"^^xsd:date .
+
+# L40: Gpt-5-5-Terminalbench-Result is a benchmark-result.
+aiw:gpt-5-5-terminalbench-result a aiw:BenchmarkResult .
+
+# L41: Gpt-5-5-Terminalbench-Result is-measured-on Terminal-Bench-2-0.
+aiw:gpt-5-5-terminalbench-result aiw:onBenchmark aiw:terminal-bench-2-0 .
+
+# L42: Gpt-5-5-Terminalbench-Result is-achieved-by Gpt-5-5.
+aiw:gpt-5-5-terminalbench-result aiw:achievedBy aiw:gpt-5-5 .
+
+# L43: Gpt-5-5-Terminalbench-Result has a score-value that is "82.7".
+aiw:gpt-5-5-terminalbench-result aiw:scoreValue "82.7"^^xsd:decimal .
+
+# L44: Gpt-5-5-Terminalbench-Result has a score-unit that is "percentage".
+aiw:gpt-5-5-terminalbench-result aiw:scoreUnit "percentage" .
+
+# L45: Gpt-5-5-Terminalbench-Result has an as-of-date that is "2026-05-18".
+aiw:gpt-5-5-terminalbench-result aiw:asOf "2026-05-18"^^xsd:date .
+
+# L47: Minimax-M3-Terminalbench-Result is a benchmark-result.
+aiw:minimax-m3-terminalbench-result a aiw:BenchmarkResult .
+
+# L48: Minimax-M3-Terminalbench-Result is-measured-on Terminal-Bench-2-1.
+aiw:minimax-m3-terminalbench-result aiw:onBenchmark aiw:terminal-bench-2-1 .
+
+# L49: Minimax-M3-Terminalbench-Result is-achieved-by Minimax-M3.
+aiw:minimax-m3-terminalbench-result aiw:achievedBy aiw:minimax-m3 .
+
+# L50: Minimax-M3-Terminalbench-Result has a score-value that is "66.0".
+aiw:minimax-m3-terminalbench-result aiw:scoreValue "66.0"^^xsd:decimal .
+
+# L51: Minimax-M3-Terminalbench-Result has a score-unit that is "percentage".
+aiw:minimax-m3-terminalbench-result aiw:scoreUnit "percentage" .
+
+# L52: Minimax-M3-Terminalbench-Result has an as-of-date that is "2026-06-02".
+aiw:minimax-m3-terminalbench-result aiw:asOf "2026-06-02"^^xsd:date .
+
+# L54: Composer-2-Terminalbench-Result is a benchmark-result.
+aiw:composer-2-terminalbench-result a aiw:BenchmarkResult .
+
+# L55: Composer-2-Terminalbench-Result is-measured-on Terminal-Bench-2-0.
+aiw:composer-2-terminalbench-result aiw:onBenchmark aiw:terminal-bench-2-0 .
+
+# L56: Composer-2-Terminalbench-Result is-achieved-by Composer-2.
+aiw:composer-2-terminalbench-result aiw:achievedBy aiw:composer-2 .
+
+# L57: Composer-2-Terminalbench-Result has a score-value that is "61.7".
+aiw:composer-2-terminalbench-result aiw:scoreValue "61.7"^^xsd:decimal .
+
+# L58: Composer-2-Terminalbench-Result has a score-unit that is "percentage".
+aiw:composer-2-terminalbench-result aiw:scoreUnit "percentage" .
+
+# L59: Composer-2-Terminalbench-Result has an as-of-date that is "2026-03-23".
+aiw:composer-2-terminalbench-result aiw:asOf "2026-03-23"^^xsd:date .
+
+# L61: Qwen-3-6-27B-Terminalbench-Result is a benchmark-result.
+aiw:qwen-3-6-27b-terminalbench-result a aiw:BenchmarkResult .
+
+# L62: Qwen-3-6-27B-Terminalbench-Result is-measured-on Terminal-Bench-2-0.
+aiw:qwen-3-6-27b-terminalbench-result aiw:onBenchmark aiw:terminal-bench-2-0 .
+
+# L63: Qwen-3-6-27B-Terminalbench-Result is-achieved-by Qwen-3-6-27B.
+aiw:qwen-3-6-27b-terminalbench-result aiw:achievedBy aiw:qwen-3-6-27b .
+
+# L64: Qwen-3-6-27B-Terminalbench-Result has a score-value that is "59.3".
+aiw:qwen-3-6-27b-terminalbench-result aiw:scoreValue "59.3"^^xsd:decimal .
+
+# L65: Qwen-3-6-27B-Terminalbench-Result has a score-unit that is "percentage".
+aiw:qwen-3-6-27b-terminalbench-result aiw:scoreUnit "percentage" .
+
+# L66: Qwen-3-6-27B-Terminalbench-Result has an as-of-date that is "2026-05-01".
+aiw:qwen-3-6-27b-terminalbench-result aiw:asOf "2026-05-01"^^xsd:date .
+
+# L68: Glm-5-2-Terminalbench-Result is a benchmark-result.
+aiw:glm-5-2-terminalbench-result a aiw:BenchmarkResult .
+
+# L69: Glm-5-2-Terminalbench-Result is-measured-on Terminal-Bench-2-1.
+aiw:glm-5-2-terminalbench-result aiw:onBenchmark aiw:terminal-bench-2-1 .
+
+# L70: Glm-5-2-Terminalbench-Result is-achieved-by Glm-5-2.
+aiw:glm-5-2-terminalbench-result aiw:achievedBy aiw:glm-5-2 .
+
+# L71: Glm-5-2-Terminalbench-Result has a score-value that is "81.0".
+aiw:glm-5-2-terminalbench-result aiw:scoreValue "81.0"^^xsd:decimal .
+
+# L72: Glm-5-2-Terminalbench-Result has a score-unit that is "percentage".
+aiw:glm-5-2-terminalbench-result aiw:scoreUnit "percentage" .
+
+# L73: Glm-5-2-Terminalbench-Result has an as-of-date that is "2026-07-02".
+aiw:glm-5-2-terminalbench-result aiw:asOf "2026-07-02"^^xsd:date .
+
+# ═══ compile report ═══
+# L11 [parse-fail] Terminal-Bench cites Agents-Evals-Deep-Research.
+#      → run validate-ace.sh
+# L14 [parse-fail] Terminal-Bench assesses the agent.
+#      → run validate-ace.sh
+# L15 [parse-fail] Terminal-Bench evaluates-in the container-environment.
+#      → run validate-ace.sh
+# L16 [parse-fail] Terminal-Bench is not simulated.
+#      → run validate-ace.sh
+# L17 [parse-fail] Terminal-Bench has a task-count that is "89".
+#      → run validate-ace.sh

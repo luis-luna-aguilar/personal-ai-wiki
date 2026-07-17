@@ -1,0 +1,225 @@
+@prefix aiw: <https://ai-wiki.luisluna.dev/ontology/#> .
+@prefix biz: <https://musclepoints.com/ontology/biz#> .
+@prefix swe: <https://musclepoints.com/ontology/swe#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dbp: <http://dbpedia.org/resource/> .
+@prefix fibo-fbc-fct-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-fnd-utl-alx: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> .
+@prefix fibo-be-oc-op: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/> .
+@prefix fibo-be-le-lei: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# generated from swe-bench.ace by drs2ttl_v3.py — build artifact, do not hand-edit
+# candidate for wiki/benchmarks/swe-bench.ttl — promote only after review
+
+# ── annotations merged from the hand-authored sidecar (no ACE form) ──
+aiw:swe-bench rdfs:comment "The de facto standard benchmark for evaluating AI software engineering capability on real GitHub issues."@en .
+aiw:swe-bench rdfs:label "SWE-bench"@en .
+aiw:swe-bench-multilingual rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:swe-bench-multilingual rdfs:label "Swe Bench Multilingual"@en .
+aiw:swe-bench-pro rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:swe-bench-pro rdfs:label "Swe Bench Pro"@en .
+aiw:swe-bench-verified rdfs:comment "A benchmark referenced in this wiki's benchmark-comparison content."@en .
+aiw:swe-bench-verified rdfs:label "Swe Bench Verified"@en .
+
+# L10: Swe-Bench is a benchmark.
+aiw:swe-bench a aiw:Benchmark .
+
+# L11: Swe-Bench has-domain Domain-Coding.
+aiw:swe-bench aiw:hasDomain aiw:domain-coding .
+
+# L12: Swe-Bench has-domain Domain-Models.
+aiw:swe-bench aiw:hasDomain aiw:domain-models .
+
+# L13: Swe-Bench has an as-of-date that is "2026-04-23".
+aiw:swe-bench aiw:asOf "2026-04-23"^^xsd:date .
+
+# L31: Swe-Bench has-variant Swe-Bench-Verified.
+aiw:swe-bench aiw:hasVariant aiw:swe-bench-verified .
+
+# L32: Swe-Bench-Verified is a benchmark.
+aiw:swe-bench-verified a aiw:Benchmark .
+
+# L36: Swe-Bench has-variant Swe-Bench-Pro.
+aiw:swe-bench aiw:hasVariant aiw:swe-bench-pro .
+
+# L37: Swe-Bench-Pro is a benchmark.
+aiw:swe-bench-pro a aiw:Benchmark .
+
+# L40: Swe-Bench has-variant Swe-Bench-Multilingual.
+aiw:swe-bench aiw:hasVariant aiw:swe-bench-multilingual .
+
+# L41: Swe-Bench-Multilingual is a benchmark.
+aiw:swe-bench-multilingual a aiw:Benchmark .
+
+# L52: Swe-Bench-Pro succeeds Swe-Bench-Verified.
+aiw:swe-bench-pro aiw:supersedes aiw:swe-bench-verified .
+
+# L57: Qwen-Verified-Result is a benchmark-result.
+aiw:qwen-verified-result a aiw:BenchmarkResult .
+
+# L58: Qwen-Verified-Result is-measured-on Swe-Bench-Verified.
+aiw:qwen-verified-result aiw:onBenchmark aiw:swe-bench-verified .
+
+# L59: Qwen-Verified-Result is-achieved-by Qwen-3-6-27B.
+aiw:qwen-verified-result aiw:achievedBy aiw:qwen-3-6-27b .
+
+# L60: Qwen-Verified-Result has a score-value that is "77.2".
+aiw:qwen-verified-result aiw:scoreValue "77.2"^^xsd:decimal .
+
+# L61: Qwen-Verified-Result has a score-unit that is "percentage".
+aiw:qwen-verified-result aiw:scoreUnit "percentage" .
+
+# L62: Qwen-Verified-Result has an as-of-date that is "2026-04-23".
+aiw:qwen-verified-result aiw:asOf "2026-04-23"^^xsd:date .
+
+# L64: Qwen-Pro-Result is a benchmark-result.
+aiw:qwen-pro-result a aiw:BenchmarkResult .
+
+# L65: Qwen-Pro-Result is-measured-on Swe-Bench-Pro.
+aiw:qwen-pro-result aiw:onBenchmark aiw:swe-bench-pro .
+
+# L66: Qwen-Pro-Result is-achieved-by Qwen-3-6-27B.
+aiw:qwen-pro-result aiw:achievedBy aiw:qwen-3-6-27b .
+
+# L67: Qwen-Pro-Result has a score-value that is "53.5".
+aiw:qwen-pro-result aiw:scoreValue "53.5"^^xsd:decimal .
+
+# L68: Qwen-Pro-Result has a score-unit that is "percentage".
+aiw:qwen-pro-result aiw:scoreUnit "percentage" .
+
+# L69: Qwen-Pro-Result has an as-of-date that is "2026-04-23".
+aiw:qwen-pro-result aiw:asOf "2026-04-23"^^xsd:date .
+
+# L71: Composer-Multilingual-Result is a benchmark-result.
+aiw:composer-multilingual-result a aiw:BenchmarkResult .
+
+# L72: Composer-Multilingual-Result is-measured-on Swe-Bench-Multilingual.
+aiw:composer-multilingual-result aiw:onBenchmark aiw:swe-bench-multilingual .
+
+# L73: Composer-Multilingual-Result is-achieved-by Composer-2.
+aiw:composer-multilingual-result aiw:achievedBy aiw:composer-2 .
+
+# L74: Composer-Multilingual-Result has a score-value that is "73.7".
+aiw:composer-multilingual-result aiw:scoreValue "73.7"^^xsd:decimal .
+
+# L75: Composer-Multilingual-Result has a score-unit that is "percentage".
+aiw:composer-multilingual-result aiw:scoreUnit "percentage" .
+
+# L76: Composer-Multilingual-Result has an as-of-date that is "2026-03-23".
+aiw:composer-multilingual-result aiw:asOf "2026-03-23"^^xsd:date .
+
+# L78: Minimax-Pro-Result is a benchmark-result.
+aiw:minimax-pro-result a aiw:BenchmarkResult .
+
+# L79: Minimax-Pro-Result is-measured-on Swe-Bench-Pro.
+aiw:minimax-pro-result aiw:onBenchmark aiw:swe-bench-pro .
+
+# L80: Minimax-Pro-Result is-achieved-by Minimax-M2-7.
+aiw:minimax-pro-result aiw:achievedBy aiw:minimax-m2-7 .
+
+# L81: Minimax-Pro-Result has a score-value that is "56.22".
+aiw:minimax-pro-result aiw:scoreValue "56.22"^^xsd:decimal .
+
+# L82: Minimax-Pro-Result has a score-unit that is "percentage".
+aiw:minimax-pro-result aiw:scoreUnit "percentage" .
+
+# L83: Minimax-Pro-Result has an as-of-date that is "2026-03-22".
+aiw:minimax-pro-result aiw:asOf "2026-03-22"^^xsd:date .
+
+# L108: Swe-Bench relates-to Swe-Polybench.
+aiw:swe-bench skos:related aiw:swe-polybench .
+aiw:swe-polybench skos:related aiw:swe-bench .
+
+# ═══ compile report ═══
+# L16 [parse-fail] Swe-Bench cites Amazon-Swe-Polybench.
+#      → run validate-ace.sh
+# L17 [parse-fail] Swe-Bench cites Kimi-K2-6-Blog.
+#      → run validate-ace.sh
+# L18 [parse-fail] Swe-Bench cites Ainews-2026-04-22.
+#      → run validate-ace.sh
+# L19 [parse-fail] Swe-Bench cites Late-March-Small-Coding-Models.
+#      → run validate-ace.sh
+# L20 [parse-fail] Swe-Bench cites Agents-Evals-Deep-Research.
+#      → run validate-ace.sh
+# L23 [parse-fail] Swe-Bench measures a software-engineering-capability.
+#      → run validate-ace.sh
+# L24 [parse-fail] A model resolves a github-issue.
+#      → run validate-ace.sh
+# L25 [parse-fail] A github-issue is-located-in a python-repository.
+#      → run validate-ace.sh
+# L26 [parse-fail] A python-repository is open-source.
+#      → run validate-ace.sh
+# L27 [parse-fail] A model generates a patch.
+#      → run validate-ace.sh
+# L28 [parse-fail] A patch passes a test-suite.
+#      → run validate-ace.sh
+# L33 [parse-fail] Swe-Bench-Verified is human-curated.
+#      → run validate-ace.sh
+# L34 [parse-fail] Swe-Bench-Verified is well-formed.
+#      → run validate-ace.sh
+# L35 [parse-fail] Swe-Bench-Verified has a task-count that is "500".
+#      → run validate-ace.sh
+# L38 [parse-fail] Swe-Bench-Pro covers a multi-file-issue.
+#      → run validate-ace.sh
+# L39 [parse-fail] Swe-Bench-Pro covers a cross-repo-issue.
+#      → run validate-ace.sh
+# L42 [parse-fail] Swe-Bench-Multilingual is multilingual.
+#      → run validate-ace.sh
+# L43 [parse-fail] Swe-Bench-Multilingual extends Swe-Bench.
+#      → run validate-ace.sh
+# L46 [parse-fail] OpenAI deprecates Swe-Bench-Verified.
+#      → run validate-ace.sh
+# L47 [parse-fail] Swe-Bench-Verified exhibits a data-contamination.
+#      → run validate-ace.sh
+# L48 [parse-fail] A model absorbs an evaluation-repository-code.
+#      → run validate-ace.sh
+# L49 [parse-fail] A pre-training-data contains an evaluation-repository-code.
+#      → run validate-ace.sh
+# L50 [parse-fail] A high-score reflects a memorization.
+#      → run validate-ace.sh
+# L51 [parse-fail] A high-score does not reflect a problem-solving-ability.
+#      → run validate-ace.sh
+# L53 [parse-fail] Swe-Bench-Pro evaluates a proprietary-codebase.
+#      → run validate-ace.sh
+# L54 [parse-fail] Swe-Bench-Pro evaluates a copyleft-licensed-repository.
+#      → run validate-ace.sh
+# L93 [parse-fail] Swe-Bench compares a coding-model.
+#      → run validate-ace.sh
+# L94 [parse-fail] Swe-Bench compares a coding-agent.
+#      → run validate-ace.sh
+# L97 [parse-fail] A scaffolding affects a benchmark-result.
+#      → run validate-ace.sh
+# L98 [parse-fail] A scaffolding has-component a harness.
+#      → run validate-ace.sh
+# L99 [parse-fail] A scaffolding has-component a tool.
+#      → run validate-ace.sh
+# L100 [parse-fail] A scaffolding has-component a retry-budget.
+#      → run validate-ace.sh
+# L101 [parse-fail] A model-score is a score.
+#      → run validate-ace.sh
+# L102 [parse-fail] An agent-system-score is a score.
+#      → run validate-ace.sh
+# L103 [parse-fail] A model-score is not an agent-system-score.
+#      → run validate-ace.sh
+# L104 [parse-fail] A benchmark-result is vendor-reported.
+#      → run validate-ace.sh
+# L105 [parse-fail] A vendor-reported-score is not reproducible.
+#      → run validate-ace.sh
+# L106 [parse-fail] Swe-Bench skews-toward a python-repository.
+#      → run validate-ace.sh
+# L107 [parse-fail] Swe-Bench skews-toward an open-source-repository.
+#      → run validate-ace.sh
+# canon-only facts (in the hand-authored .ttl, not derivable from the current ACE):
+#   aiw:kimi-result a aiw:BenchmarkResult .
+#   aiw:kimi-result aiw:achievedBy aiw:kimi-k2-6 .
+#   aiw:kimi-result aiw:asOf "2026-04-22"^^xsd:date .
+#   aiw:kimi-result aiw:onBenchmark aiw:swe-bench .

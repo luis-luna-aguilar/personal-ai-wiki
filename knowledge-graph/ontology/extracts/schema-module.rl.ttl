@@ -58,20 +58,6 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                                  <https://schema.org/URL> .
 
 
-###  https://schema.org/location
-<https://schema.org/location> rdf:type owl:AnnotationProperty ;
-                              rdfs:comment "The location of, for example, where an event is happening, where an organization is located, or where an action takes place." ;
-                              rdfs:label "location" ;
-                              <https://schema.org/domainIncludes> <https://schema.org/Action> ,
-                                                                  <https://schema.org/Event> ,
-                                                                  <https://schema.org/InteractionCounter> ,
-                                                                  <https://schema.org/Organization> ;
-                              <https://schema.org/rangeIncludes> <https://schema.org/Place> ,
-                                                                 <https://schema.org/PostalAddress> ,
-                                                                 <https://schema.org/Text> ,
-                                                                 <https://schema.org/VirtualLocation> .
-
-
 ###  https://schema.org/position
 <https://schema.org/position> rdf:type owl:AnnotationProperty ;
                               rdfs:comment "The position of an item in a series or sequence of items." ;

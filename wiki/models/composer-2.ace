@@ -1,0 +1,60 @@
+# ACE sidecar for wiki/models/composer-2.md  (subject: aiw:composer-2)
+# Controlled-English restatement of the page's assertable facts.
+# Vocabulary: VCR-0004 benchmark/model/license terms + inherited biz:providedBy,
+# prov:wasDerivedFrom. Proper names (Composer-2, Cursor, Kimi-k2-5, Moonshot,
+# Terminal-Bench-2, Swe-Bench, Swe-Bench-Multilingual, Composer2-Terminalbench-Result,
+# Composer2-Swebench-Result, Domain-Coding, Domain-Models, Coding-Model) compile to
+# aiw:<slug> — no lexicon entry needed.
+# Composer-2 slug matches wiki/benchmarks/swe-bench.md's leaderboard (cross-page consistency).
+
+# --- Type, provider, classification (frontmatter + intro) ---
+Composer-2 is a model.
+Composer-2 is-provided-by Cursor.
+Composer-2 has-license-model the closed-source-license.
+Composer-2 has-domain Domain-Coding.
+Composer-2 has-domain Domain-Models.
+Composer-2 has-subcategory Subcategory-Coding-Model.
+Composer-2 has an as-of-date that is "2026-03-23".
+
+# --- Benchmarks referenced ---
+Terminal-Bench-2 is a benchmark.
+Swe-Bench-Multilingual is a benchmark.
+Swe-Bench has-variant Swe-Bench-Multilingual.
+
+# --- TerminalBench 2.0 result: 61.7 (reified BenchmarkResult) ---
+Composer2-Terminalbench-Result is a benchmark-result.
+Composer2-Terminalbench-Result is-measured-on Terminal-Bench-2.
+Composer2-Terminalbench-Result is-achieved-by Composer-2.
+Composer2-Terminalbench-Result has a score-value that is "61.7".
+Composer2-Terminalbench-Result has a score-unit that is "percentage".
+Composer2-Terminalbench-Result has an as-of-date that is "2026-03-23".
+Composer-2 has-benchmark-result Composer2-Terminalbench-Result.
+
+# --- SWE-bench Multilingual result: 73.7 (reified BenchmarkResult; also on swe-bench.md leaderboard) ---
+Composer2-Swebench-Result is a benchmark-result.
+Composer2-Swebench-Result is-measured-on Swe-Bench-Multilingual.
+Composer2-Swebench-Result is-achieved-by Composer-2.
+Composer2-Swebench-Result has a score-value that is "73.7".
+Composer2-Swebench-Result has a score-unit that is "percentage".
+Composer2-Swebench-Result has an as-of-date that is "2026-03-23".
+Composer-2 has-benchmark-result Composer2-Swebench-Result.
+
+# --- Lineage: started from Moonshot's open Kimi-k2.5 (not trained from scratch) ---
+Composer-2 is-derived-from Kimi-k2-5.
+Kimi-k2-5 is-provided-by Moonshot.
+Kimi-k2-5 has-license-model the open-weights-license.
+
+# --- Distribution: no standalone API ---
+Composer-2 does not provide an api.
+
+# === TERM-BLOCKED below (facts retained; words not yet in lexicon — see new-terms.yaml) ===
+# Launch pricing: about $0.50 per million input tokens.
+Composer-2 has an input-token-price that is "0.50".
+# Availability restricted to Cursor products.
+Composer-2 is-available-in a cursor-product.
+# Integrated into Cursor's agent workspace.
+Composer-2 is-integrated-into an agent-workspace.
+# Training methodology applied by Cursor after the Kimi-k2.5 base.
+Composer-2 undergoes a continued-pretraining.
+Composer-2 undergoes a reinforcement-learning.
+Composer-2 undergoes a finetuning.
