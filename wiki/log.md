@@ -346,3 +346,4 @@ grep "^- \[" wiki/log.md | tail -20
 - [2026-07-06] **apply** | Claude Code loops taxonomy | 2 pages updated (tools/claude-code, workflows/agentic-orchestration-patterns), 1 source created
 - [2026-07-07] **triage** | AI Email Digest latest 20 unprocessed | 10 proposals, 6 skipped
 - [2026-07-08] **apply** | Approved July 7 proposal batch | 19 pages updated, 3 content pages created (models/gpt-5-6-sol, tools/claude-tag, concepts/model-internal-workspace), 9 sources created; loop source moved from tmp/ to raw/articles/
+- [2026-07-08] **triage** | AI Email Digest latest 25 unprocessed | 7 proposals, 8 skipped
