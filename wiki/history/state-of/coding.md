@@ -27,3 +27,11 @@
 - [2026-04-24] Broadened `agentic-devops` from provisioning-only CLI workflows toward a fuller infrastructure-operations stack: diagnosis, approval-gated mutation, and post-deploy verification
 - [2026-04-24] Codex's April direction now reads less like "coding with extras" and more like a broader computer-work agent that still happens to be anchored in software workflows
 - [2026-03-06] Cursor's cloud-agents walkthrough made the workspace thesis explicit: remote agents test their own work, return demo videos, and give humans a supervision surface rather than just an AI-enhanced editor
+
+## Archived from current page on 2026-07-14
+
+- [2026-05-15] Codex mobile preview: steer sessions from phone while agent runs on devbox; Remote SSH GA; enterprise 30-day switch promo (2 months free). Prime Intellect nanoGPT speedrun: both Opus 4.7 and GPT-5.5 beat human baseline in autonomous ML optimization (~10K runs)
+- [2026-05-15] xAI Grok Build enters the terminal coding agent category: plan mode + parallel worktree subagents at feature parity with Claude Code's core agent patterns; early beta, SuperGrok Heavy only
+- [2026-05-15] IDE convergence: GitHub Copilot App (technical preview), VS Code Agents window, and Cursor cloud dev environments all move toward managing parallel agent sessions as the primary UX — three major tools, same week, same direction
+- [2026-05-13] Model-harness fit is becoming a product moat: edit formats, action spaces, and tool-call reliability can matter as much as raw model benchmark scores in coding agents.
+- [2026-05-13] Codex and Claude Code are increasingly framed as workflow operating systems: command packs, browser-pane workflows, inbox triage, long-running goals, and multi-agent supervision are now part of the coding-agent competition.

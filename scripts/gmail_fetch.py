@@ -28,6 +28,7 @@ Usage:
     python scripts/gmail_fetch.py --week 2026-W15
     python scripts/gmail_fetch.py --start 2026-06-28 --end 2026-07-02
     python scripts/gmail_fetch.py --latest 20
+    python scripts/gmail_fetch.py --oldest 25   # walk a backlog chronologically, batch by batch
 """
 
 from __future__ import annotations
@@ -357,6 +358,7 @@ def generate_digest_manifest(
     account: str,
     args_week: str | None = None,
     latest_count: int | None = None,
+    oldest_count: int | None = None,
 ) -> Path:
     """Write a skeleton manifest listing all saved sources.
 
@@ -369,6 +371,9 @@ def generate_digest_manifest(
     if latest_count:
         label = f"latest {latest_count} unprocessed as of {date.today().isoformat()}"
         slug = f"{date.today().isoformat()}-{account}-latest-{latest_count}-digest"
+    elif oldest_count:
+        label = f"oldest {oldest_count} unprocessed as of {date.today().isoformat()}"
+        slug = f"{date.today().isoformat()}-{account}-oldest-{oldest_count}-digest"
     elif start == end:
         label = start.isoformat()
         slug = f"{start.isoformat()}-{account}-digest"
@@ -500,19 +505,26 @@ def main() -> None:
     parser.add_argument("--start", type=date.fromisoformat, help="Fetch from this date, inclusive (YYYY-MM-DD)")
     parser.add_argument("--end", type=date.fromisoformat, help="Fetch through this date, inclusive (YYYY-MM-DD)")
     parser.add_argument("--latest", type=int, help="Fetch latest N unprocessed inbox messages")
+    parser.add_argument(
+        "--oldest", type=int,
+        help="Fetch oldest N unprocessed inbox messages (chronological order). "
+             "Re-run repeatedly to walk the backlog forward in time, batch by batch.",
+    )
     parser.add_argument("--no-triage", action="store_true", help="Skip triage file generation")
     args = parser.parse_args()
 
-    range_args = [bool(args.days), bool(args.week), bool(args.start or args.end), bool(args.latest)]
+    range_args = [bool(args.days), bool(args.week), bool(args.start or args.end), bool(args.latest), bool(args.oldest)]
     if sum(range_args) != 1:
-        parser.error("Provide exactly one of --days N, --week YYYY-WNN, --start YYYY-MM-DD --end YYYY-MM-DD, or --latest N")
+        parser.error("Provide exactly one of --days N, --week YYYY-WNN, --start YYYY-MM-DD --end YYYY-MM-DD, --latest N, or --oldest N")
     if bool(args.start) != bool(args.end):
         parser.error("--start and --end must be provided together")
     if args.latest is not None and args.latest <= 0:
         parser.error("--latest must be positive")
+    if args.oldest is not None and args.oldest <= 0:
+        parser.error("--oldest must be positive")
 
     today = date.today()
-    if args.latest:
+    if args.latest or args.oldest:
         start = end = today
     elif args.week:
         start, end = parse_week(args.week)
@@ -538,12 +550,15 @@ def main() -> None:
     processed_label_id = get_or_create_label(service, PROCESSED_LABEL_NAME)
     print(f"Label '{PROCESSED_LABEL_NAME}' ready (id: {processed_label_id})", file=sys.stderr)
 
-    query = gmail_latest_query() if args.latest else gmail_date_query(start, end)
+    query = gmail_latest_query() if (args.latest or args.oldest) else gmail_date_query(start, end)
     print(f"Querying {args.account} Gmail: {query}", file=sys.stderr)
 
+    # Gmail's API always returns messages newest-first, regardless of query.
     message_ids = fetch_all_message_ids(service, query)
     if args.latest:
         message_ids = message_ids[:args.latest]
+    elif args.oldest:
+        message_ids = list(reversed(message_ids[-args.oldest:]))
     print(f"Found {len(message_ids)} messages", file=sys.stderr)
 
     saved: list[tuple[Path, str, str]] = []   # (path, type, subject)
@@ -598,6 +613,7 @@ def main() -> None:
             args.account,
             args_week=args.week,
             latest_count=args.latest,
+            oldest_count=args.oldest,
         )
         print(manifest_path.relative_to(VAULT_ROOT))
     elif not saved and not skipped_videos:

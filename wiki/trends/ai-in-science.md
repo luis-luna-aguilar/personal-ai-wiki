@@ -4,7 +4,7 @@ type: trend
 domains: [science]
 tags: []
 as_of: 2026-07-06
-sources: [noetik-cancer-trials, gpt-rosalind-launch, self-driving-lab-radical-ai, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07]
+sources: [noetik-cancer-trials, gpt-rosalind-launch, self-driving-lab-radical-ai, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07, esmfold2-protein-world-model-2026-05]
 ---
 
 # AI in Science
@@ -20,6 +20,13 @@ AI is increasingly moving from generic scientific assistance toward domain-speci
 - The pattern is shifting from "AI helps researchers" to "specialized models target a scientific bottleneck directly"
 - Anthropic's Claude Science signal reinforces a platform-first strategy in science AI: build tools for analysis, visualization, traceability, reviewer-agent verification, scientific databases, and lab/HPC compute, then dogfood them on real preclinical and partner research workflows.
 - The hard part is not only hypothesis generation. Biological feedback is slow and expensive, so evaluation and verification workflows become the bottleneck the platform must solve.
+- ESMFold2 adds a protein-world-model signal: general transformer scaling and diverse protein data are being applied to structure prediction, protein interactions, antibody tasks, and design/discovery workflows.
+
+## Protein world models
+
+ESMFold2 is a useful biology counterpoint to purely lab-automation stories. The source frames it as an open engine trained on diverse protein data, with reported strengths on protein interactions and antibodies, plus inference-time scaling across cancer and immunology targets.
+
+The practical importance is the same as other science-agent infrastructure: better models are only useful if they plug into data, verification, and downstream discovery loops. ESMFold2's atlas and open licensing make it a durable signal to watch, but the wiki should distinguish source-reported performance from broad clinical or wet-lab validation.
 
 ## Self-driving labs
 
@@ -46,6 +53,7 @@ Anthropic argues AI has advanced faster in coding than biology not because of in
 
 ## Recent changes
 
+- [2026-05-27] Added ESMFold2 as a protein-world-model signal: open protein prediction/design engine, antibody interaction strength, and atlas-scale structure predictions.
 - [2026-07-06] Claude Science public beta confirms a science-workflow platform layer: reproducible artifacts, persistent kernels, 60+ scientific databases, scientific connectors, and local/HPC compute integration.
 - [2026-07-01] Official Claude Science announcement adds reviewer agents, BioNeMo/Boltz/OpenFold-style integrations, and Manifold Bio / Allen Institute / UCSF case studies.
 - [2026-07-05] Claude Science and Anthropic's internal drug programs reframed science agents as dogfooded workflow platforms, not only model demos.

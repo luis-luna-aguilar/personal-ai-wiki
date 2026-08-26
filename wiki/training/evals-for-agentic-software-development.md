@@ -2,7 +2,7 @@
 title: Evals for agentic software development
 type: training
 as_of: 2026-07-08
-sources: [agents-evals-deep-research, qa-tooling-for-software-agents-deep-research, cost-aware-agent-evaluation-2026-04-28, opus-4-7-tokenizer-economics-2026-04-30, agentic-security-tooling-2026-05-13, ai-code-review-eval-integrity-2026-06, dashbench-code-review-understanding-2026-07]
+sources: [agents-evals-deep-research, qa-tooling-for-software-agents-deep-research, cost-aware-agent-evaluation-2026-04-28, opus-4-7-tokenizer-economics-2026-04-30, agentic-security-tooling-2026-05-13, ai-code-review-eval-integrity-2026-06, dashbench-code-review-understanding-2026-07, crabbox-remote-execution-2026-07, cognition-async-agents-testing-2026-05]
 ---
 
 # Evals for agentic software development
@@ -49,6 +49,7 @@ This makes the earlier trajectory-vs-result distinction operational rather than 
 - **Trajectory evaluators** such as [Agentrial](../tools/agentrial.md) that measure consistency and identify which step diverged between passing and failing runs
 - **Output harnesses** such as SWE-bench-style patch execution or the team's own repo-native test suite
 - **Browser verification** for frontend-changing work, using Playwright directly or AI-assisted layers such as [Stagehand](../tools/stagehand.md)
+- **Remote execution control planes** such as [Crabbox](../tools/crabbox.md) when the eval needs a fresh machine, remote platform, larger compute, Windows/macOS/Linux target, or auditable command output from an exact environment.
 
 The key design rule: do not let agent-generated code be evaluated only as text. Run it in an isolated environment, test it, and capture the artifacts.
 
@@ -153,6 +154,8 @@ Proof artifacts matter for two reasons:
 - they make review faster because humans can inspect the run without reproducing it locally
 - they improve the eval loop because the exact browser trace can become the next regression case
 
+Proof artifacts should identify where they ran, not only what they showed. For coding-agent PRs, a useful artifact includes the command, environment, runner identity, stdout/stderr, screenshots or video when relevant, and whether the runner was released or retained for debugging.
+
 ## Proven patterns
 
 - **Deterministic gates first, always.** AI-specific evals are expensive and noisy. Let cheap deterministic checks filter obvious failures before any LLM-as-judge or trajectory eval runs.
@@ -183,6 +186,7 @@ Proof artifacts matter for two reasons:
 
 ## Recent changes
 
+- [2026-07-08] Added remote execution control planes as part of the coding-agent eval/proof-artifact stack.
 - [2026-07-08] Moved detailed AI PR/code-review execution guidance into a dedicated workflow and added DashBench historical PR replay as the review-eval pattern.
 - [2026-06-26] Added AI review workflow guidance and public-benchmark leakage caveat from The Code / AINews coverage.
 
@@ -197,3 +201,5 @@ Proof artifacts matter for two reasons:
 - [Agentic security tooling category](../sources/newsletters/agentic-security-tooling-2026-05-13.md)
 - [AI code review and benchmark integrity](../sources/newsletters/ai-code-review-eval-integrity-2026-06.md)
 - [DashBench and understanding-preserving AI code review](../sources/newsletters/dashbench-code-review-understanding-2026-07.md)
+- [Crabbox remote execution docs](../sources/articles/crabbox-remote-execution-2026-07.md)
+- [Cognition async agents and testing proof](../sources/newsletters/cognition-async-agents-testing-2026-05.md)

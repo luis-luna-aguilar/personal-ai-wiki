@@ -4,7 +4,7 @@ type: state-of
 domains: [science]
 tags: []
 as_of: 2026-07-06
-sources: [curiosity-driven-imagination, noetik-cancer-trials, gpt-rosalind-launch, futurehouse-homepage, legacy-ai-tools-roadmap-xlsx, openai-gpt-5-5-launch, ai-co-mathematician-2026-05-13, genesis-ai-gene-26-5-2026-05-09, self-driving-lab-radical-ai, axiom-math-june-2026, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07]
+sources: [curiosity-driven-imagination, noetik-cancer-trials, gpt-rosalind-launch, futurehouse-homepage, legacy-ai-tools-roadmap-xlsx, openai-gpt-5-5-launch, ai-co-mathematician-2026-05-13, genesis-ai-gene-26-5-2026-05-09, self-driving-lab-radical-ai, axiom-math-june-2026, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07, esmfold2-protein-world-model-2026-05]
 ---
 
 # State of Science
@@ -19,6 +19,12 @@ Tools built to run or supervise literature-driven, hypothesis-oriented, or disco
 
 - [FutureHouse](../tools/futurehouse.md) — science-agent platform aimed at research and discovery workflows rather than generic assistant use *(as of 2026-04-22)*
 - [Claude Science](../tools/claude-science.md) — Anthropic beta science workbench for analysis, database search, reproducible artifacts, reviewer agents, scientific visualizations, 60+ databases, BioNeMo/Boltz/OpenFold-style integrations, and local/HPC compute; case studies now include Manifold Bio, Allen Institute, and UCSF workflows *(as of 2026-07-01)*
+
+### Protein models and molecular biology
+
+AI systems that model protein structure, interaction, and design as scientific infrastructure rather than generic chat assistance.
+
+- **ESMFold2** — BioHub / Alex Rives; open scientific engine for protein prediction, interaction modeling, design, and discovery; source coverage emphasizes antibody interactions, inference-time scaling, and a 6.8B-protein atlas with 1.1B predicted structures *(as of 2026-05-27)*
 
 ### Robotics
 
@@ -47,6 +53,7 @@ AI systems that generate or verify formal mathematical proofs, providing machine
 
 ## Recent changes
 
+- [2026-05-27] Added protein models and molecular biology subcategory with ESMFold2 as an open protein-world-model signal.
 - [2026-07-06] Claude Science entered the science-agent-platform set; Anthropic confirms public beta with reproducible artifacts, persistent kernels, 60+ scientific databases, and compute/tool integrations.
 - [2026-07-01] Claude Science official announcement adds reviewer agents, artifact rendering, scientific model integrations, and Manifold Bio / Allen Institute / UCSF case studies.
 - [2026-07-05] Anthropic's internal drug programs make evaluation/verification feedback loops the Claude Science strategy point to watch.
@@ -56,4 +63,3 @@ AI systems that generate or verify formal mathematical proofs, providing machine
 - [2026-05-13] Added AI Co-Mathematician (Google DeepMind): 48% FrontierMath Tier 4; asynchronous stateful workbench for mathematicians; physics-intern (related) boosted Gemini 3.1 Pro from 17.7% → 31.4% on CritPt via specialized subagent decomposition
 - [2026-04-23] Added `Frontier models used in science` with [GPT-5.5](../models/gpt-5-5.md); OpenAI is now making explicit science-performance claims rather than only general-reasoning claims
 - [2026-04-22] Added `Science agent platforms` with [FutureHouse](../tools/futurehouse.md) as the first productized science-agent signal from the legacy workbook exception
-- [2026-04-21] Biology and drug discovery emerge as the strongest current productization signal: Noetik's tumor-response models and OpenAI's GPT-Rosalind

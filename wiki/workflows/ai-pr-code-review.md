@@ -5,7 +5,7 @@ domains: [coding, agents]
 subcategory: agentic-orchestration-patterns
 tags: [agentic]
 as_of: 2026-07-08
-sources: [ai-code-review-eval-integrity-2026-06, agent-review-artifacts-2026-05-13, dashbench-code-review-understanding-2026-07]
+sources: [ai-code-review-eval-integrity-2026-06, agent-review-artifacts-2026-05-13, dashbench-code-review-understanding-2026-07, crabbox-remote-execution-2026-07, cognition-async-agents-testing-2026-05]
 ---
 
 # AI PR and code review
@@ -30,10 +30,12 @@ A practical AI PR review stack is layered:
 
 1. **Surface logic review** - summarize the diff, identify changed behavior, and map the change to the stated task.
 2. **Deterministic checks** - run the repo's existing tests and static checks before asking a model for qualitative judgment.
-3. **Scope and blast-radius checks** - verify the PR did not touch unrelated modules, configuration, schemas, credentials, generated files, or deployment paths.
-4. **Deep code review** - use a capable model with the repo's local review standards to inspect architecture, security, edge cases, migrations, and test adequacy.
-5. **Human comprehension artifact** - generate an annotated explainer or teaching document so the reviewer understands the change well enough to approve, redirect, or start the next agent loop.
-6. **Eval capture** - record accepted comments, rejected comments, missed issues, and post-merge failures as future review eval data.
+3. **Remote execution evidence** - run tests, builds, browser checks, and platform validation on a repeatable remote machine or sandbox when local execution is too slow, too small, or not representative.
+4. **Proof artifact capture** - attach logs, screenshots, videos, traces, and exact command output so the human reviewer can inspect what actually ran.
+5. **Scope and blast-radius checks** - verify the PR did not touch unrelated modules, configuration, schemas, credentials, generated files, or deployment paths.
+6. **Deep code review** - use a capable model with the repo's local review standards to inspect architecture, security, edge cases, migrations, and test adequacy.
+7. **Human comprehension artifact** - generate an annotated explainer or teaching document so the reviewer understands the change well enough to approve, redirect, or start the next agent loop.
+8. **Eval capture** - record accepted comments, rejected comments, missed issues, and post-merge failures as future review eval data.
 
 The review agent should have access to the task brief, diff, relevant files, tests, local instructions, and prior review standards. It should not be asked to infer the team's norms from the patch alone.
 
@@ -77,6 +79,8 @@ Useful artifacts include:
 - Checklists tied to local standards, such as migrations, permissions, privacy, accessibility, and rollback
 - Browser traces, screenshots, or videos for frontend-changing work
 - Reproduction steps and failing-test evidence for bug fixes
+- Remote-run transcripts from tools such as Crabbox, showing the leased machine, command, output, and release/cleanup state
+- Cloud or sandbox evidence from async agents, including screenshots and video proof for PRs where runtime behavior matters
 
 Artifacts should make review faster and more accurate. They should not become decorative paperwork that hides the underlying diff.
 
@@ -95,6 +99,9 @@ Artifacts should make review faster and more accurate. They should not become de
 - The Code reports that model combinations matter: a Kimi K2.6 + Claude Fable 5 combo beat DoorDash's production setup on weighted recall in the covered benchmark.
 - Shopify built its own PR review tooling because external tools did not spend enough compute on expensive models during review, suggesting review quality is becoming a bottleneck as generation gets cheaper.
 - Geoffrey Litt's `explain-diff` pattern turns changes into teaching artifacts and quizzes so understanding survives the agent loop.
+- Crabbox documents a remote execution control plane for tests, builds, browser checks, and review evidence, keeping the local developer story unchanged while running commands on leased or provider-backed machines.
+- Cognition's Walden Yan frames testing and proof artifacts as central to async coding-agent trust: screenshots, videos, and command results become the review surface, not just generated code.
+- Cursor's "/thermo-nuclear-code-review" signal suggests deep AI code review is becoming a productized mode, though the fetched source is only a thin tweet and should be treated as directional.
 
 ## Related
 
@@ -105,6 +112,7 @@ Artifacts should make review faster and more accurate. They should not become de
 
 ## Recent changes
 
+- [2026-07-08] Added remote execution and proof artifacts as first-class PR-review infrastructure for agent-authored work.
 - [2026-07-08] Created dedicated AI PR/code-review workflow from DashBench and understanding-preserving review coverage.
 
 ## Sources
@@ -112,3 +120,5 @@ Artifacts should make review faster and more accurate. They should not become de
 - [AI code review and benchmark integrity](../sources/newsletters/ai-code-review-eval-integrity-2026-06.md)
 - [Purpose-built review artifacts for agent work](../sources/tweets/agent-review-artifacts-2026-05-13.md)
 - [DashBench and understanding-preserving AI code review](../sources/newsletters/dashbench-code-review-understanding-2026-07.md)
+- [Crabbox remote execution docs](../sources/articles/crabbox-remote-execution-2026-07.md)
+- [Cognition async agents and testing proof](../sources/newsletters/cognition-async-agents-testing-2026-05.md)

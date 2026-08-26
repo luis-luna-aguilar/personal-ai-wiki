@@ -3,7 +3,7 @@ title: AI-native product building
 type: training
 domains: [coding]
 as_of: 2026-06-16
-sources: [ai-native-product-building-lessons-late-march, vibe-coding-reliability-and-distribution, post-vibe-coding-verification-february, agent-native-product-management-2026-05-13, loopcraft-june-2026]
+sources: [ai-native-product-building-lessons-late-march, vibe-coding-reliability-and-distribution, post-vibe-coding-verification-february, agent-native-product-management-2026-05-13, loopcraft-june-2026, every-compound-engineering-upgrade-2026-05, every-cheap-competence-after-automation-2026-05]
 ---
 
 # AI-native product building
@@ -21,6 +21,9 @@ AI-native product building means using models and agents to collapse the cost of
 - Give the model tools and let it reason; don't hardcode sequences. "If you give a reasoning model simple, powerful tools, it can handle situations you never thought to code for." (Stella Garber/Hoop, Every June 2026)
 - Bring the tool where people already work (Slack, email, existing apps) rather than building a new surface people have to learn.
 - Treat "frontier ecosystem, not just frontier model" as the guiding architecture goal: build a learning loop where human capital and token capital compound over time (Satya Nadella, June 2026).
+- As the agentic middle gets cheaper and more reliable, human leverage moves to the beginning and end of the loop: decide what is worth building, define the frame, then polish the final experience after the agent has produced technically working output.
+- Use the expanded compound-engineering loop for serious product work: **ideate -> brainstorm -> plan -> work -> review -> polish -> compound -> repeat**.
+- Treat cheap competence as a frontier shift, not a replacement for judgment: models automate fixed frames, while humans keep creating and revising the frames.
 
 ## Proven patterns
 
@@ -32,6 +35,8 @@ AI-native product building means using models and agents to collapse the cost of
 - **Move judgment upstream.** As agents generate more code, the most valuable human work shifts toward writing specs, acceptance criteria, and deterministic verification steps instead of skimming large diffs after the fact
 - **Fight cognitive debt deliberately.** Use walkthroughs, explanations, and other artifacts that make generated systems understandable enough to extend safely later
 - **Loop-first design.** Before writing a single prompt, define what a successful loop looks like: the trigger, the goal condition, the tool set, and the escalation points. A well-designed loop handles variance you never predicted; a one-shot prompt just handles the case you thought of.
+- **AI sandwich for product work.** Humans supply the bread: intent, context, taste, and final judgment. AI handles much of the middle: drafting, coding, gathering, summarizing, and first-pass execution.
+- **Polish as a first-class step.** Technically passing work can still feel wrong. Reserve human attention for copy, interaction quality, edge cases, and coherence after the agent has passed deterministic checks.
 
 ## Failure modes
 
@@ -49,6 +54,11 @@ AI-native product building means using models and agents to collapse the cost of
 
 The old scarcity was implementation bandwidth. The new scarcity is knowing what deserves to exist, getting it in front of users, and making it survive contact with real load. Teams that understand that shift can use AI-native building as an advantage instead of mistaking it for automation of the whole product job.
 
+## Recent changes
+
+- [2026-05-29] Expanded compound engineering loop added: ideate, brainstorm, plan, work, review, polish, compound, repeat.
+- [2026-05-27] Cheap competence / after-automation framing added: AI shifts human work toward framing, taste, and judgment rather than eliminating work.
+
 ## Sources
 
 - [AI-native product-building lessons in late March](../sources/newsletters/ai-native-product-building-lessons-late-march.md)
@@ -56,3 +66,5 @@ The old scarcity was implementation bandwidth. The new scarcity is knowing what 
 - [Post-vibe-coding verification and cognitive debt in late February](../sources/newsletters/post-vibe-coding-verification-february.md)
 - [Agent-native product management guide — Every](../sources/articles/agent-native-product-management-2026-05-13.md)
 - [Loopcraft and agent-native architecture — June 2026 digest](../sources/newsletters/loopcraft-june-2026.md)
+- [Every - Compound Engineering Gets an Upgrade](../sources/newsletters/every-compound-engineering-upgrade-2026-05.md)
+- [Every - Cheap competence and after automation](../sources/newsletters/every-cheap-competence-after-automation-2026-05.md)

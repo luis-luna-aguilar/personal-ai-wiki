@@ -2,7 +2,7 @@
 title: Company-wide AI enablement
 type: training
 as_of: 2026-07-08
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13, fde-race-may-2026, every-ai-adoption-levels, enterprise-spend-metered-june-2026, ai-strategy-explicit-bets-2026-06, codex-general-work-agents-2026-07, token-tightening-ai-finops-2026-06, efficiencymaxxing-model-routing-2026-07]
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13, fde-race-may-2026, every-ai-adoption-levels, enterprise-spend-metered-june-2026, ai-strategy-explicit-bets-2026-06, codex-general-work-agents-2026-07, token-tightening-ai-finops-2026-06, efficiencymaxxing-model-routing-2026-07, every-cheap-competence-after-automation-2026-05]
 ---
 
 # Company-wide AI enablement
@@ -80,6 +80,8 @@ Source: "AI Is Ready. Organizations Aren't." (Every, June 2026) — based on int
 - **Tasteful tokenmaxxing: depth over breadth.** The emerging leadership consensus (AIE Miami, April 2026) is not "burn more tokens" or "burn fewer tokens" but *how* you burn them. Shopify CTO Mikhail Parakhin: prefer serial autoresearch loops (depth) over kicking off 5, 10, 50 parallel LLM runs (breadth). Reid Hoffman's middle ground: track how people use AI, not just how much — team-wide experimentation plus regular check-ins to surface what's actually working. Dex Horthy (coiner of "Context Engineering") publicly retracted his earlier vibe-coding-only stance and encouraged engineers to read the code. The practical signal: measure the *quality* of token use, not the quantity.
 - **Token allocation as governance.** As enterprise AI costs rise, access to expensive models should be treated like an allocation decision: define budgets, route routine work to cheaper tools, and grant higher-cost access to workflows that can show returns in quality, speed, scope, or revenue impact.
 - **Efficiencymaxxing as model-routing practice.** Treat model selection like an operating system for work: use evals to identify which workflow stages can move to cheaper models, audit token use by step, and keep frontier access for ambiguous or high-risk stages. This is the practical middle ground between tokenmaxxing and blanket restriction.
+- **Design for new frames, not only task automation.** Cheap competence means more work can be done inside a given frame, but the higher-value organizational skill is creating better frames: what to investigate, what to ship, what tradeoff matters, and what "good" means.
+- **Keep humans at the judgment boundary.** As AI fills in the middle of workflows, employees need stronger habits for framing, taste, coordination, and review rather than only faster execution tactics.
 
 ## Failure modes
 
@@ -97,6 +99,7 @@ Source: "AI Is Ready. Organizations Aren't." (Every, June 2026) — based on int
 - **Tokenmaxxing — measuring token spend as a productivity proxy.** Meta's internal "Claudeonomics" leaderboard ranked 85,000 employees by AI token usage; within weeks employees were leaving agents idle to climb the rankings. One OpenAI engineer processed 210 billion tokens in a single week (enough to fill Wikipedia 33 times). Dubbed "tokenmaxxing," this mirrors the early 2000s lines-of-code mistake exactly. Reasoning models compound the problem by generating inner-monologue tokens as a function of architecture, not work done. Jensen Huang publicly said he'd be "deeply alarmed" if engineers weren't burning tokens worth half their annual salary — amplifying the leaderboard pressure. Reward outcomes and quality; token spend is a cost center, not a productivity signal. (See also: "Tasteful tokenmaxxing" in Proven patterns for the emerging middle-ground guidance.)
 - **AI spend shock on per-token billing.** GitHub Copilot's move from flat $39/month to per-token billing caught teams unprepared — some individual bills hit $3,000+/month. Uber's response: hard cap at $1,500/month per engineer. Cloudflare AI Gateway added model-level and user-level budget enforcement with automatic fallbacks to cheaper models. The pattern: enterprises need spend controls as a first-class operational concern, not an afterthought. (June 2026)
 - **Overcorrecting from tokenmaxxing to blanket token restriction.** The goal is not less AI use; it is better-routed AI use with visible ROI.
+- **Automation without reframing.** Teams speed up existing tasks but never redesign the workflow or ask what new work becomes possible once competent execution is cheap.
 
 ## Autonomy ladder
 
@@ -172,6 +175,7 @@ As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have
 
 ## Recent changes
 
+- [2026-05-27] Added cheap-competence / after-automation framing: AI expands the frontier of human work by shifting scarcity toward framing and judgment.
 - [2026-07-08] Added efficiencymaxxing: stage-level model routing, token audits, and one-variable reruns as a company-wide AI cost-control practice.
 - [2026-07-01] Codex/Claude Code coverage expands terminal/workspace agents beyond engineering into inbox, CRM, healthcare coordination, writing, and knowledge-work workflows.
 - [2026-06-24] Token tightening adds allocation-style AI governance: budgets, routing, and higher-cost access tied to visible ROI.
@@ -212,3 +216,4 @@ As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have
 - [Codex and Claude Code as general-purpose work agents](../sources/newsletters/codex-general-work-agents-2026-07.md)
 - [Token tightening and AI FinOps](../sources/newsletters/token-tightening-ai-finops-2026-06.md)
 - [Efficiencymaxxing and model-routing discipline](../sources/newsletters/efficiencymaxxing-model-routing-2026-07.md)
+- [Every - Cheap competence and after automation](../sources/newsletters/every-cheap-competence-after-automation-2026-05.md)

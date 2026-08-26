@@ -3,8 +3,8 @@ title: State of Voice AI
 type: state-of
 domains: [voice]
 tags: []
-as_of: 2026-06-16
-sources: [eleven-v3, hume-evi-3, elevenlabs-scribe, voice-becomes-agent-interface, legacy-ai-tools-roadmap-xlsx, gpt-realtime-2-2026-05-08, thinking-machines-interaction-2026-05-12, cartesia-voice-june-2026]
+as_of: 2026-07-07
+sources: [eleven-v3, hume-evi-3, elevenlabs-scribe, voice-becomes-agent-interface, legacy-ai-tools-roadmap-xlsx, gpt-realtime-2-2026-05-08, thinking-machines-interaction-2026-05-12, cartesia-voice-june-2026, gpt-live-launch-2026-07]
 ---
 
 # State of Voice AI
@@ -19,6 +19,7 @@ Healthcare voice tools (Dragon Copilot, Zo, Kora) are tracked in [State of Healt
 
 Streaming AI systems that process live speech, audio, and sometimes screen/video context with sub-second response, native interruption handling, and multi-turn conversation management. This merges the "real-time voice" and "real-time interaction" categories rather than treating them as separate tracks.
 
+- [GPT-Live](../tools/gpt-live.md) — OpenAI; full-duplex ChatGPT Voice model family; GPT-Live-1 default for Go/Plus/Pro and GPT-Live-1 mini default for Free; delegates deeper work to GPT-5.5/frontier models while maintaining conversation flow *(as of 2026-07-07)*
 - [GPT-Realtime-2](../tools/gpt-realtime-2.md) — OpenAI; "GPT-5-class reasoning" in voice; 128K context (4× prior), 5 reasoning levels (minimal→xhigh), tool use, interruption recovery, graceful failure handling; API: $1.15/hr input, $4.61/hr output *(as of 2026-05-08)*
 - **GPT-Realtime-Translate** — OpenAI; live speech-to-speech translation; 70+ input languages → 13 output languages; available in Realtime API *(as of 2026-05-08)*
 - **GPT-Realtime-Whisper** — OpenAI; streaming transcription and captions; available in Realtime API *(as of 2026-05-08)*
@@ -41,6 +42,7 @@ Products focused primarily on transcription, speech recognition, and converting 
 
 ## Recent changes
 
+- [2026-07-07] GPT-Live launched as the new ChatGPT Voice default: full-duplex interaction plus background delegation to GPT-5.5/frontier models.
 - [2026-06-16] Cartesia launches Sonic-3.5 (streaming TTS) and Ink-2 (streaming STT); claims #1 via Together AI benchmark; sub-90ms, 42 languages
 - [2026-05-13] Added merged `Real-time voice / interaction` subcategory: GPT-Realtime-2, GPT-Realtime-Translate, GPT-Realtime-Whisper, TML-Interaction-Small, and Gemini Magic Pointer; treats real-time voice and interaction as one category
 - [2026-04-23] Created `state-of/voice` page; added voice models and speech-to-text subcategories from existing tool pages that lacked state-of coverage

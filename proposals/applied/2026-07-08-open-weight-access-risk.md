@@ -15,9 +15,9 @@ The approved signal adds operational evidence to the existing open-weight trend:
 
 ## Intended changes
 
-- [ ] **Update** `wiki/trends/open-weight-momentum-broadens.md` - add April 2026 adoption stat and access-risk framing.
-- [ ] **Update** `wiki/state-of/models.md` - add a recent-change note about open-weight adoption and model-sovereignty risk.
-- [ ] **Create** `wiki/sources/newsletters/open-weight-adoption-access-risk-2026-05.md` - source summary.
+- [x] **Update** `wiki/trends/open-weight-momentum-broadens.md` - add April 2026 adoption stat and access-risk framing.
+- [x] **Update** `wiki/state-of/models.md` - add a recent-change note about open-weight adoption and model-sovereignty risk.
+- [x] **Create** `wiki/sources/newsletters/open-weight-adoption-access-risk-2026-05.md` - source summary.
 
 ## Page drafts
 
@@ -94,3 +94,4 @@ This source cluster connects open-weight adoption momentum with model-access ris
 ## Open questions
 
 - The one-in-three adoption stat is from newsletter coverage. If this becomes central to the trend page, should we fetch the underlying survey/source before applying?
+	- Dont

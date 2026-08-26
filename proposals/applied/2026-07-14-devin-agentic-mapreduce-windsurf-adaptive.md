@@ -18,45 +18,45 @@ Several of these updates land on the same pages (`tools/devin.md`, `state-of/cod
 
 ## Intended changes
 
-- [ ] **Update** `wiki/tools/devin.md` — add Agentic MapReduce architecture, Devin Fusion sidekick harness + FrontierCode Extended results, and the session productivity estimator; bump `as_of`/`sources`
+- [x] **Update** `wiki/tools/devin.md` — add Agentic MapReduce architecture, Devin Fusion sidekick harness + FrontierCode Extended results, and the session productivity estimator; bump `as_of`/`sources`
     > See draft below
 
-- [ ] **Update** `wiki/benchmarks/frontiercode.md` — add the new FrontierCode Extended (score + cost) tier from the Devin Fusion post; bump `as_of`/`sources`
+- [x] **Update** `wiki/benchmarks/frontiercode.md` — add the new FrontierCode Extended (score + cost) tier from the Devin Fusion post; bump `as_of`/`sources`
     > See draft below
 
-- [ ] **Update** `wiki/state-of/cybersecurity.md` — refresh the Devin leader line with the Agentic MapReduce architecture + 72% recall benchmark; bump `as_of`/`sources`
+- [x] **Update** `wiki/state-of/cybersecurity.md` — refresh the Devin leader line with the Agentic MapReduce architecture + 72% recall benchmark; bump `as_of`/`sources`
     > See draft below
 
-- [ ] **Update** `wiki/workflows/agentic-orchestration-patterns.md` — expand the passing "Agentic MapReduce" mention into a full pattern entry, and add a new "Sidekick multi-model harness" pattern from Devin Fusion; bump `as_of`/`sources`
+- [x] **Update** `wiki/workflows/agentic-orchestration-patterns.md` — expand the passing "Agentic MapReduce" mention into a full pattern entry, and add a new "Sidekick multi-model harness" pattern from Devin Fusion; bump `as_of`/`sources`
     > See draft below
 
-- [ ] **Spill** `wiki/workflows/agentic-orchestration-patterns.md` → `wiki/history/workflows/agentic-orchestration-patterns.md` — the two new pattern entries push Recent changes from 9 to 11; spill the oldest 1 entry to get back to the 10-entry cap (new history file)
+- [x] **Spill** `wiki/workflows/agentic-orchestration-patterns.md` → `wiki/history/workflows/agentic-orchestration-patterns.md` — the two new pattern entries push Recent changes from 9 to 11; spill the oldest 1 entry to get back to the 10-entry cap (new history file)
     > See draft below
 
-- [ ] **Update** `wiki/workflows/advisor-strategy.md` — add a contrast section with the sidekick pattern (per-call cache-miss cost vs. persistent dual-context agents); bump `as_of`/`sources`
+- [x] **Update** `wiki/workflows/advisor-strategy.md` — add a contrast section with the sidekick pattern (per-call cache-miss cost vs. persistent dual-context agents); bump `as_of`/`sources`
     > See draft below
 
-- [ ] **Create** `wiki/tools/windsurf.md` — no current page for Windsurf; Cognition's IDE-based coding workspace gets Adaptive model routing, pricing-transparent model picker, and no more Max daily limits
+- [x] **Create** `wiki/tools/windsurf.md` — no current page for Windsurf; Cognition's IDE-based coding workspace gets Adaptive model routing, pricing-transparent model picker, and no more Max daily limits
 
-- [ ] **Update** `wiki/state-of/coding.md` — add Windsurf to the `agentic-coding-workspace` subcategory; add Devin to the `terminal-coding-agent` subcategory (previously missing despite Devin's own frontmatter subcategory); bump `as_of`/`sources`
+- [x] **Update** `wiki/state-of/coding.md` — add Windsurf to the `agentic-coding-workspace` subcategory; add Devin to the `terminal-coding-agent` subcategory (previously missing despite Devin's own frontmatter subcategory); bump `as_of`/`sources`
     > See draft below
 
-- [ ] **Spill** `wiki/state-of/coding.md` → `wiki/history/state-of/coding.md` — adding the Windsurf + Devin Fusion entries pushes Recent changes from 13 to 15; the page was already 3 over the 10-entry cap before this ingest (pre-existing, per `scripts/recent_changes_cap.py`), so 5 oldest entries spill to bring it back to exactly 10
+- [x] **Spill** `wiki/state-of/coding.md` → `wiki/history/state-of/coding.md` — adding the Windsurf + Devin Fusion entries pushes Recent changes from 13 to 15; the page was already 3 over the 10-entry cap before this ingest (pre-existing, per `scripts/recent_changes_cap.py`), so 5 oldest entries spill to bring it back to exactly 10
     > See draft below
 
-- [ ] **Update** `wiki/concepts/agent-evals.md` — add a "Human-hours-equivalent productivity estimation" section (Cognition's estimator vs. METR/Anthropic prior work); bump `as_of`/`sources`
+- [x] **Update** `wiki/concepts/agent-evals.md` — add a "Human-hours-equivalent productivity estimation" section (Cognition's estimator vs. METR/Anthropic prior work); bump `as_of`/`sources`
     > See draft below
 
-- [ ] **Update** `wiki/training/ai-enablement-software-development.md` — add the productivity estimator as production evidence of hours/dollar-denominated ROI measurement; bump `as_of`/`sources`
+- [x] **Update** `wiki/training/ai-enablement-software-development.md` — add the productivity estimator as production evidence of hours/dollar-denominated ROI measurement; bump `as_of`/`sources`
     > See draft below
 
-- [ ] **Create** `wiki/sources/articles/devinai-blog-agentic-map-reduce.md` — source summary
+- [x] **Create** `wiki/sources/articles/devinai-blog-agentic-map-reduce.md` — source summary
 
-- [ ] **Create** `wiki/sources/articles/devinai-blog-windsurf-adaptive.md` — source summary
+- [x] **Create** `wiki/sources/articles/devinai-blog-windsurf-adaptive.md` — source summary
 
-- [ ] **Create** `wiki/sources/articles/cognitioncom-blog-devin-fusion.md` — source summary
+- [x] **Create** `wiki/sources/articles/cognitioncom-blog-devin-fusion.md` — source summary
 
-- [ ] **Create** `wiki/sources/articles/cognitioncom-blog-ai-productivity.md` — source summary
+- [x] **Create** `wiki/sources/articles/cognitioncom-blog-ai-productivity.md` — source summary
 
 ## Page drafts
 
@@ -553,6 +553,10 @@ Cognition built an automated system that reviews each completed Devin session, c
 ## Open questions
 
 - Windsurf shipped from the `devin.ai` blog domain, which strongly suggests Cognition ownership/integration, but the post itself doesn't explicitly restate "Cognition owns Windsurf." I've phrased the new tool page's framing around the observable fact (published on Devin's blog) rather than asserting a formal acquisition — flag if you'd like this phrased more strongly or more cautiously.
+	- Yes, Cognition owns Windsurf
 - The `state-of/coding.md` and `workflows/agentic-orchestration-patterns.md` spills fix pre-existing cap overflows/near-overflows that this ingest happened to touch. I did not touch the other 3 pages `scripts/recent_changes_cap.py` separately flagged (`state-of/agents.md`, `state-of/creative.md`, `state-of/models.md`) since this ingest doesn't otherwise touch them — let me know if you'd like a separate maintenance pass for those.
+	- don't
 - The `cognitioncom-blog-ai-productivity.md` source page has no `published:` date (none was visible in the fetched content) — `as_of` on derived pages uses the 2026-07-14 ingest date as fallback, per the date rule. Let me know if you have the actual publish date.
+	- I don't have it
 - I added Devin to `state-of/coding.md`'s Terminal coding agent subcategory since its own tool-page frontmatter already declares that subcategory but the dashboard never listed it — this looked like a real gap rather than a deliberate omission; flag if there was a reason it was left out.
+	- ok

@@ -4,8 +4,8 @@ type: workflow
 domains: [agents]
 subcategory: agent-orchestration
 tags: [anthropic, agentic]
-as_of: 2026-04-09
-sources: [advisor-strategy, ainews-ideogram-june-2026]
+as_of: 2026-06-29
+sources: [advisor-strategy, ainews-ideogram-june-2026, cognitioncom-blog-devin-fusion]
 ---
 
 # Advisor strategy
@@ -61,12 +61,17 @@ Harvey benchmarked the hybrid pattern on legal task completion. Results are Harv
 - Cost advantage shrinks if the executor over-invokes the advisor; `max_uses` is the only advertised ceiling.
 - Tied to Anthropic's server-side tooling today. Multi-vendor advisor setups are still DIY.
 
+## Contrast with the sidekick pattern (2026-06-29)
+
+Cognition's Devin Fusion post explicitly critiques per-call escalation tools like this one (and its own earlier "Smart Friend" prototype): querying a second model per call means that model's context isn't shared in a cacheable way, so every advisor invocation pays a full, uncached price. Devin Fusion's [sidekick pattern](../workflows/agentic-orchestration-patterns.md) avoids this by running the frontier and cheaper model as two persistent, separately-cached agents for the whole session, switching which one leads only at natural cache-invalidation points (context compaction). The tradeoff: sidekick needs a harness built for two parallel long-running agents, while the advisor tool is a single API primitive addable to an existing single-agent loop.
+
 ## Related
 
 - [Agents](../state-of/agents.md)
 
 ## Recent changes
 
+- [2026-06-29] Added contrast with Cognition's sidekick multi-model harness pattern, which avoids the advisor tool's per-call cache-miss cost by keeping both models' contexts persistently cached.
 - [2026-06-04] Harvey external validation: GLM 5.1 + Opus 4.7 advisor achieves 18% vs 14% all-pass on legal tasks at $368 vs $954/100 tasks; SFT Kimi K2.6 reaches 15% at 11x lower cost
 - [2026-04-09] First content for this page, from Anthropic's "The advisor strategy" launch post and the concurrent release of the `advisor_20260301` server-side tool.
 
@@ -74,3 +79,4 @@ Harvey benchmarked the hybrid pattern on legal task completion. Results are Harv
 
 - [The advisor strategy — Claude blog](../sources/articles/advisor-strategy.md)
 - [AINews — Ideogram 4, Reve 2 (June)](../sources/newsletters/ainews-ideogram-june-2026.md)
+- [Devin Fusion: Frontier Performance at 35% Lower Cost](../sources/articles/cognitioncom-blog-devin-fusion.md)

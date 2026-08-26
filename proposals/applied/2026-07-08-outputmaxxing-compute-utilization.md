@@ -15,9 +15,9 @@ The AMP/outputmaxxing interview adds an infrastructure nuance to the compute-moa
 
 ## Intended changes
 
-- [ ] **Update** `wiki/trends/compute-infrastructure.md` - add outputmaxxing/utilization section.
-- [ ] **Update** `wiki/state-of/models.md` - add recent-change note about compute utilization as a model-lab bottleneck.
-- [ ] **Create** `wiki/sources/newsletters/outputmaxxing-amp-compute-utilization-2026-06.md` - source summary.
+- [x] **Update** `wiki/trends/compute-infrastructure.md` - add outputmaxxing/utilization section.
+- [x] **Update** `wiki/state-of/models.md` - add recent-change note about compute utilization as a model-lab bottleneck.
+- [x] **Create** `wiki/sources/newsletters/outputmaxxing-amp-compute-utilization-2026-06.md` - source summary.
 
 ## Page drafts
 
@@ -93,3 +93,4 @@ Latent Space's AMP interview argues that frontier AI progress depends on extract
 ## Open questions
 
 - Should `outputmaxxing` become a standalone concept page if more sources use the term, or stay inside compute infrastructure for now?
+	- Lets make it standalone please

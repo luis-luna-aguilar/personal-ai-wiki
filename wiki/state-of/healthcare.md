@@ -3,8 +3,8 @@ title: State of Healthcare
 type: state-of
 domains: [healthcare]
 tags: []
-as_of: 2026-06-16
-sources: [legacy-ai-tools-roadmap-xlsx, dragon-copilot-launch, hippocratic-ai-homepage, tempus-homepage, zocdoc-zo, open-evidence-homepage, konko-kora-homepage, elevenlabs-scribe, 2026-06-16-metalearn-mystery-fatigue-ai]
+as_of: 2026-06-18
+sources: [legacy-ai-tools-roadmap-xlsx, dragon-copilot-launch, hippocratic-ai-homepage, tempus-homepage, zocdoc-zo, open-evidence-homepage, konko-kora-homepage, elevenlabs-scribe, 2026-06-16-metalearn-mystery-fatigue-ai, midjourney-medical-scanner-2026-06, ai-healthcare-triage-doctronic-2026-05]
 ---
 
 # State of Healthcare
@@ -12,6 +12,14 @@ sources: [legacy-ai-tools-roadmap-xlsx, dragon-copilot-launch, hippocratic-ai-ho
 Current state of AI in healthcare — clinical documentation, medical knowledge tools, patient-access operations, and healthcare-specific agent products. Organized by subcategory.
 
 ## Subcategories
+
+### Medical imaging infrastructure
+
+- **Midjourney Medical Scanner** — prototype full-body ultrasonic CT / ultrasound system; source coverage reports 358,000 ultrasonic elements, large reconstruction workloads, planned spa-like San Francisco deployment, and explicit caveats around FDA path, clinical validation, privacy, and overdiagnosis *(as of 2026-06-18)*
+
+### Healthcare triage and patient operations
+
+- [AI-assisted healthcare triage](../use-cases/ai-assisted-healthcare-triage.md) — prescription-renewal and patient-side self-triage workflows where AI does first-pass recommendation or question generation while clinicians retain final judgment *(as of 2026-05-31)*
 
 ### Healthcare AI
 
@@ -33,6 +41,8 @@ Current state of AI in healthcare — clinical documentation, medical knowledge 
 
 ## Recent changes
 
+- [2026-06-18] Midjourney Medical Scanner added as a speculative imaging-infrastructure signal with strong validation and regulatory caveats.
+- [2026-05-31] Doctronic prescription-renewal pilot and patient-side AI self-triage added as healthcare workflow signals.
 - [2026-06-16] Added "Patient-side AI" subcategory — frontier models documented to match/exceed PCP visits for ambiguous symptoms (Amy Deng, MetaLearn)
 - [2026-04-22] Created the `healthcare` domain and added initial pages for clinical voice, medical knowledge, patient-access, and healthcare operations tools from the legacy workbook exception
 

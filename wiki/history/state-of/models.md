@@ -1,5 +1,12 @@
 # State of Models — History
 
+## Archived from current page on 2026-08-25
+
+- [2026-06-17] GLM-5.2 released (MIT, 744B/40B MoE, 1M context): #1 open Agent Arena, #2 Code Arena frontend, Terminal-Bench 2.1: 81.0; supersedes GLM-5.1 (archived to history/)
+- [2026-06-13] Kimi K2.7-Code released: +21.8% Kimi Code Bench v2, 30% fewer reasoning tokens vs K2.6, open-source; K2.6 archived to history/
+- [2026-06-11] DiffusionGemma released (Google, Apache 2.0): 26B MoE diffusion text model; block denoising; 4× faster than diffusion baselines; first diffusion LLM natively in vLLM; open research direction for non-autoregressive text generation
+- [2026-06-05] Anthropic RSI: 80%+ code by Claude, 8x engineer throughput, task success 26% -> 76%; Mythos 52x speedup vs Opus 4 on training script task; S-1 confidentially filed with SEC
+
 - [2026-04-10] Gemini adds custom interactive visualizations in chat and notebooks (dedicated workspaces with grouped chats, file uploads, instructions); rolling out to paid accounts first
 - [2026-04-21] Added [Kimi K2.6](../models/kimi-k2-6.md) under new `Coding models` subcategory
 - [2026-04-10] Added `frontier-model` subcategory with [Muse Spark](../../models/muse-spark.md)

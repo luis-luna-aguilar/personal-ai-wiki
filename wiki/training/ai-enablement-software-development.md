@@ -1,8 +1,8 @@
 ---
 title: AI enablement — software development
 type: training
-as_of: 2026-07-08
-sources: [ramp-ai-adoption-playbook, shopify-latent-space-april-2026, lennysan-simonw-interview, agentic-cognitive-overhead, garrytan-gstack-repo, the-code-2026-04-23, qa-tooling-for-software-agents-deep-research, agent-review-artifacts-2026-05-13, agentic-coding-trap-may-2026, ai-stack-fungibility-hashimoto-2026-05, shopify-claude-code-bessemer-2026-05, stanford-labor-june-2026, github-kyle-daigle-june-2026, ainews-june-05-2026, software-factories-fde-2026-07, dashbench-code-review-understanding-2026-07]
+as_of: 2026-07-14
+sources: [ramp-ai-adoption-playbook, shopify-latent-space-april-2026, lennysan-simonw-interview, agentic-cognitive-overhead, garrytan-gstack-repo, the-code-2026-04-23, qa-tooling-for-software-agents-deep-research, agent-review-artifacts-2026-05-13, agentic-coding-trap-may-2026, ai-stack-fungibility-hashimoto-2026-05, shopify-claude-code-bessemer-2026-05, stanford-labor-june-2026, github-kyle-daigle-june-2026, ainews-june-05-2026, software-factories-fde-2026-07, dashbench-code-review-understanding-2026-07, cognitioncom-blog-ai-productivity]
 ---
 
 # AI enablement — software development
@@ -67,6 +67,7 @@ AI adoption inside engineering teams has moved fastest, but the bottlenecks and 
 - Shopify (May 2026, Bessemer conference, @darkzodchi synthesis): LLM proxy, CLAUDE.md discipline, critique loop, permission config deployed fleet-wide across 23,000 engineers. Reported 20% productivity gain. Strategy-to-execution ratio flipped from 30%/70% (2024) to 70%/30% (2026). Q3 2026 target: 90% autonomous coding.
 - GitHub commit volume (June 2026): 275M AI-generated commits per week in April 2026, on pace for 14B in 2026 vs 1B in 2025. At this scale, CI/CD (GitHub Actions, specifically CPU capacity) is the bottleneck — not model capability or developer willingness.
 - Anthropic internal RSI data (June 2026): The strongest first-party self-reported numbers from a frontier lab. Claude writes 80%+ of Anthropic's merged code commits. Engineers report shipping 8x more code per quarter than pre-Claude. Internal automated task success rate improved from 26% -> 76% over 6 months of harness iteration. Mythos Preview achieved a 52x speedup on a training script optimization task vs. 3x for Claude Opus 4 on the same task. Mythos gave better "next step" suggestions than humans 64% of the time. Caveat: self-reported, no independent verification.
+- Cognition (Devin, July 2026): built an automated system estimating human-engineering-hours-equivalent per completed session, validated against 258 self-reported sessions from 126 users across enterprise customers, reaching `r_log = 0.74` on held-out data — stronger than Anthropic's ticket-text-only approach (0.46) though behind METR's smaller-sample internal study (0.83); deliberately calibrated to underestimate; now running in production with customers. See [Agent evals](../concepts/agent-evals.md) for the full methodology comparison.
 
 ## Hiring AI-native engineers
 
@@ -96,6 +97,7 @@ The hollow pipeline concern is now data-backed: if the entry-level disappears, t
 
 ## Recent changes
 
+- [2026-07-14] Added Cognition's production session-productivity estimator (`r_log = 0.74`) as evidence that hours/dollar-denominated AI engineering ROI measurement is moving from research into deployed practice.
 - [2026-07-08] Added AI PR/code-review workflow as a first-class enablement concern: historical PR replay, local review standards, and understanding-preserving review artifacts.
 - [2026-07-01] Added software-factory/FDE rollout pattern: enterprise agent adoption needs workflow integration capacity, not only developer tooling.
 - [2026-06-05] Anthropic internal RSI evidence added: 80%+ merged code by Claude, 8x code/quarter, task success 26% -> 76%, Mythos 52x speedup on a training-script optimization task
@@ -128,3 +130,4 @@ The hollow pipeline concern is now data-backed: if the entry-level disappears, t
 - [AINews — Anthropic RSI and Nemotron follow-up (June 5)](../sources/newsletters/ainews-june-05-2026.md)
 - [Software factories and forward-deployed agent engineering](../sources/newsletters/software-factories-fde-2026-07.md)
 - [DashBench and understanding-preserving AI code review](../sources/newsletters/dashbench-code-review-understanding-2026-07.md)
+- [Estimating the Productivity of an Autonomous AI Software Engineer](../sources/articles/cognitioncom-blog-ai-productivity.md)

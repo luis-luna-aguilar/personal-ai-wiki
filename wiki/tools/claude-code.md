@@ -5,7 +5,7 @@ domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: [anthropic, cli, agentic]
 as_of: 2026-07-01
-sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, anthropic-claude-code-best-practices-2026-05, claude-code-fast-mode-default-2026-05, dynamic-workflows-claude-code, claude-code-getting-started-with-loops-2026-06-30, codex-general-work-agents-2026-07]
+sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, anthropic-claude-code-best-practices-2026-05, claude-code-fast-mode-default-2026-05, dynamic-workflows-claude-code, claude-code-getting-started-with-loops-2026-06-30, codex-general-work-agents-2026-07, ainews-opus-48-dynamic-workflows-2026-05, every-claude-dynamic-workflows-reliability-2026-06, claude-code-design-sync-2026-07]
 ---
 
 # Claude Code
@@ -64,6 +64,10 @@ Dynamic workflows (research preview, announced 2026-05-28) let Claude **dynamica
 - **How to run** — turn on auto mode, then either ask Claude to "create a workflow" or enable the `ultracode` setting from the effort menu (sets effort to xhigh and lets Claude decide when a workflow is warranted).
 - **Higher cost** — consumes substantially more tokens than a typical session; the first time a workflow triggers, Claude Code shows what is about to run and asks for confirmation. Org admins can disable workflows via managed settings.
 - **Availability** — research preview in the Claude Code CLI, Desktop, and VS Code extension, and on the Claude API, Amazon Bedrock, Vertex AI, and Microsoft Foundry. On by default for Max and Team (and the API); off by default for Enterprise at launch (admin can enable in settings).
+
+- **Reliability pattern:** Every's June 18 case study frames Dynamic Workflows as the productized version of manually coordinating a lead agent plus reviewer subagents through local files. Instead of hoping a prompt will reliably create multiple reviewers, Claude writes an orchestration script that instantiates the subagents and verification steps each time.
+- **Design-to-code use case:** Every describes using Dynamic Workflows to split a large Figma redesign into 11 sections, assign dedicated subagents, extract assets/details, generate code, and compare outputs to the source design.
+- **Claude Design sync:** Claude Code and Claude Design now sync both directions through `/design-sync`: pull a design system into the repo, build against existing components, or push built work back into a Claude Design canvas.
 
 **Flagship example — Bun rewrite:** Jarred Sumner used dynamic workflows to port Bun from Zig to Rust — ~750,000 lines of Rust, 99.8% of the existing test suite passing, eleven days from first commit to merge. One workflow mapped the correct Rust lifetime for every struct field; the next wrote each `.rs` file as a behavior-identical port of its `.zig` counterpart (hundreds of agents in parallel, two reviewers per file); a fix loop drove the build and test suite until clean; an overnight workflow removed unnecessary data copies and opened a PR per fix for review. (Not yet in production.)
 
@@ -145,6 +149,8 @@ That matters because it shifts the product story away from "Anthropic has a stro
 
 ## Recent changes
 
+- [2026-07-08] Claude Code and Claude Design add bidirectional `/design-sync` between repo work and Claude Design canvases.
+- [2026-06-18] Every case studies show Dynamic Workflows replacing manual subagent coordination for reviewer agents and large Figma-to-code work.
 - [2026-07-01] Every frames Claude Code alongside Codex as a general-purpose agent harness spilling beyond software work when tasks can be represented as files, tools, and review artifacts.
 - [2026-06-30] Anthropic published the official Claude Code loop taxonomy: turn-based, goal-based, time-based, and proactive loops, with guidance on matching loop primitive to task type and controlling token usage.
 - [2026-05-28] Dynamic workflows added (research preview): the `ultracode` effort setting (xhigh) lets Claude write orchestration scripts running tens-to-hundreds of parallel subagents that plan, verify (with adversarial agents), and iterate to convergence on hours-to-days work; runs checkpoint and resume. On by default for Max/Team/API, admin-enabled for Enterprise; uses substantially more tokens.
@@ -176,3 +182,6 @@ That matters because it shifts the product story away from "Anthropic has a stro
 - [Introducing dynamic workflows in Claude Code](../sources/articles/dynamic-workflows-claude-code.md)
 - [Getting started with loops](../sources/articles/claude-code-getting-started-with-loops-2026-06-30.md)
 - [Codex and Claude Code as general-purpose work agents](../sources/newsletters/codex-general-work-agents-2026-07.md)
+- [AINews - Anthropic raises Series H, releases Opus 4.8 and Dynamic Workflows](../sources/newsletters/ainews-opus-48-dynamic-workflows-2026-05.md)
+- [Every - How Anthropic makes Claude more reliable](../sources/newsletters/every-claude-dynamic-workflows-reliability-2026-06.md)
+- [Claude Code and Claude Design sync](../sources/tweets/claude-code-design-sync-2026-07.md)

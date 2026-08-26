@@ -1,0 +1,85 @@
+---
+title: Terminal-Bench-Science: Contribute your scientific workflows as tasks for AI Agents
+type: source
+source_type: article
+url: https://www.tbench.ai/news/tb-science-announcement
+fetched: 2026-08-25
+---
+
+# Terminal-Bench-Science: Contribute your scientific workflows as tasks for AI Agents
+
+A Benchmark for Evaluating AI Agents on Computational Workflows in the Natural Sciences
+
+Terminal-Bench-Science is a benchmark for evaluating AI agents on real computational workflows from scientific research. It builds on Terminal-Bench, which has been adopted by frontier labs including Anthropic, OpenAI, and Google DeepMind and has helped drive progress in AI agents on software engineering tasks by defining what those labs measure and optimize for. Terminal-Bench-Science brings the same approach to the natural sciences.
+
+Most existing "AI for Science" benchmarks test textbook knowledge, not real workflows. Terminal-Bench-Science closes this gap with real computational workflow tasks from research labs, evaluated in containerized environments with programmatic verification. Our goal is to give scientists a direct voice in shaping AI progress: domain experts contribute scientific workflows as benchmark tasks, frontier labs evaluate and improve their AI agents against them, and the improved AI agents with stronger scientific capabilities flow back as better tools for researchers.
+
+CONTRIBUTE TASKS
+
+EVALUATE & IMPROVE
+
+ACCELERATE SCIENCE
+
+Terminal-Bench-Science is targeting 100+ benchmark tasks across the life sciences, physical sciences, earth sciences, mathematical sciences, and engineering sciences.
+
+| Domain | Areas |
+| --- | --- |
+| [**Life Sciences**](https://github.com/harbor-framework/terminal-bench-science/tree/main/tasks/life-sciences) | Biology, Ecology, Medicine, Neuroscience |
+| [**Physical Sciences**](https://github.com/harbor-framework/terminal-bench-science/tree/main/tasks/physical-sciences) | Astronomy, Chemistry, Materials Science, Physics |
+| [**Earth Sciences**](https://github.com/harbor-framework/terminal-bench-science/tree/main/tasks/earth-sciences) | Atmospheric Sciences, Environmental Sciences, Geosciences, Ocean Sciences |
+| [**Mathematical Sciences**](https://github.com/harbor-framework/terminal-bench-science/tree/main/tasks/mathematical-sciences) | Applied Mathematics, Formal Mathematics, Operations Research, Statistics |
+| [**Engineering Sciences**](https://github.com/harbor-framework/terminal-bench-science/tree/main/tasks/engineering-sciences) | Chemical Engineering, Civil Engineering, Electrical Engineering, Mechanical Engineering |
+
+1. **Make AI better at your science.** Frontier labs optimize for what benchmarks measure. Your tasks directly incentivize them to improve their AI systems on the scientific problems in your domain.
+2. **Gain experience in agentic evaluation.** Get hands-on with evaluating frontier AI agents — learn how to design rigorous benchmarks and see firsthand where today's best models succeed and fail on real scientific work.
+3. **Become a co-author.** Contributors with merged tasks receive co-authorship on the Terminal-Bench-Science paper, targeting submission to a high-impact scientific journal.
+
+We're looking for complex, real-world computational workflows from practicing scientists across the natural sciences that meet the following three key criteria:
+
+1. **Scientifically grounded.** Tasks should reflect computational workflows from real research in the natural sciences — ideally drawn from your own work or replicating published results in your domain of expertise.
+2. **Objectively verifiable.** Solutions must be programmatically checkable with deterministic pytest-based evaluation. We are not looking for open-ended tasks like hypothesis generation or literature review.
+3. **Genuinely difficult.** We target tasks that today's best AI agents cannot yet reliably solve. Hard tasks expose real gaps and push capabilities forward — we're aiming for a 10–20% solve rate at release.
+
+Tasks follow the [Harbor Task Format](https://harborframework.com/docs/task-format). Check out [Example Tasks](https://github.com/harbor-framework/terminal-bench-science/tree/main/tasks) and the [Task Dashboard](https://stevendillmann.github.io/tb-science-task-dashboard/) for reference, and [How to Build a Good Terminal-Bench Task](https://x.com/neversupervised/status/2075432858270003462) by Ivan Bercovich for what makes a strong benchmark task.
+
+Before you start, join our [Discord](https://discord.com/invite/2Pe5uWGcV3), introduce yourself in **#tb-science**, and optionally pitch your task idea there for early feedback. Follow **#tb-science-announcements** for updates and our weekly meetings (Mondays, 9am PT). We then follow a curated three-stage contribution process to maintain quality:
+
+1. **Propose** — When you're ready, submit your idea via the [Task Proposal Form](https://airtable.com/appzZC5gEHrXSfNNw/pagjgS95lAQ5FVJxt/form). Proposals are posted on our [Task Proposal Board](https://github.com/harbor-framework/terminal-bench-science/discussions/categories/task-proposals) and in **#tb-science-task-proposals**. An LLM judge evaluates it against our [Task Proposal Rubric](https://github.com/harbor-framework/terminal-bench-science/blob/main/rubrics/task-proposal.md), and human reviewers use that to approve your proposal and guide you toward implementation.
+2. **Build** — Once approved, build the task in the [Harbor Task Format](https://harborframework.com/docs/task-format) and submit a [Pull Request](https://github.com/harbor-framework/terminal-bench-science/pulls) following our [Contributing Guide](https://github.com/harbor-framework/terminal-bench-science/blob/main/CONTRIBUTING.md); your implementation is evaluated against our [Task Implementation Rubric](https://github.com/harbor-framework/terminal-bench-science/blob/main/rubrics/task-implementation.toml), and human reviewers also assess difficulty, scientific quality, and overall fit. Every task PR goes through three rounds of review — domain, technical, and final. The domain and technical reviewers work in parallel; once both approve, the project lead (or a delegated final reviewer) gives the final bar-raiser sign-off. We work with you collaboratively through each round until it's ready to merge. Merging is ultimately at the discretion of the project lead: passing all three rounds is necessary but not on its own a guarantee of merge. Once merged, you earn [contributor status](https://www.tbench.ai/contributors/terminal-bench-science) and co-authorship credit on the Terminal-Bench-Science paper — and we ask that you stay available to maintain your task until the final benchmark release, which is a condition of co-authorship.
+3. **Review** — Top contributors are invited to [reviewer & maintainer status](https://github.com/harbor-framework/terminal-bench-science/blob/main/.github/reviewer-pool.yml) — a senior role with elevated co-authorship credit and **area chair** candidacy for a scientific domain. An area chair leads a specific scientific area: they recruit new contributors within their domain, manage the reviewing team and progress, and set the scientific bar for tasks in their area. It is one of the highest roles in the project.
+
+You can follow every open proposal, pull request, status, and domain coverage in real time on the [Task Dashboard](https://stevendillmann.github.io/tb-science-task-dashboard/). Once the task collection is complete, we run frontier AI agents against it to calibrate difficulty. Tasks that pass are included in the official Terminal-Bench-Science release on the [Terminal-Bench Benchmarks](https://www.tbench.ai/benchmarks) and [Terminal-Bench Leaderboards](https://www.tbench.ai/leaderboard).
+
+We host a **weekly meeting every Monday at 9am PT** for project updates and open discussion. Reviewers also run **office hours** throughout the week for feedback on proposals, implementation questions, and review guidance. You can subscribe to the [Terminal-Bench-Science calendar](https://calendar.google.com/calendar/embed?src=2ca3e7fdc9e51a42ce18142e897f7db23fbf8e65867da1a06dc3ea5e6ad4e893%40group.calendar.google.com&ctz=America%2FLos_Angeles&mode=WEEK) to see all upcoming sessions. Drop into any session — no RSVP needed.
+
+| Session | Areas | Time (PT) | Notes | Meeting |
+| --- | --- | --- | --- | --- |
+| **Weekly Meeting** | General | Monday 9am | [Notes](https://docs.google.com/document/d/1L5ynajRciLq4S6NnfAdrBgmowxu6kKS6raE6nCzZHhU/edit?tab=t.0) | [Join](https://meet.google.com/heg-tajv-qgx) |
+| **Office Hour: [Steven Dillmann](https://github.com/stevendillmann)** | Physical Sciences, Mathematical Sciences, Engineering Sciences, General | Monday 10am | [Notes](https://docs.google.com/document/d/1L5ynajRciLq4S6NnfAdrBgmowxu6kKS6raE6nCzZHhU/edit?tab=t.dxp0i6b94q4s) | [Join](https://meet.google.com/dhx-rtwo-fvt) |
+| **Office Hour: [Jiaming Hu](https://openreview.net/profile?id=~Jiaming_Hu5)** | Mathematical Sciences, General | Tuesday 10am | [Notes](https://docs.google.com/document/d/1L5ynajRciLq4S6NnfAdrBgmowxu6kKS6raE6nCzZHhU/edit?tab=t.iza9uupsbyr2#heading=h.d45pe0un0m2y) | [Join](https://meet.google.com/gds-xzeg-zjg) |
+| **Office Hour: [Joe Janssen](https://github.com/joej1997)** | Earth Sciences, Mathematical Sciences, General | Wednesday 2pm | [Notes](https://docs.google.com/document/d/1L5ynajRciLq4S6NnfAdrBgmowxu6kKS6raE6nCzZHhU/edit?tab=t.ape6pwby3tbu#heading=h.d45pe0un0m2y) | [Join](https://meet.google.com/hyw-dcwn-wxx) |
+| **Office Hour: [Allen Hart](https://github.com/AllenGrahamHart)** | Physical Sciences, Mathematical Sciences, Engineering Sciences, General | Thursday 10am | [Notes](https://docs.google.com/document/d/1L5ynajRciLq4S6NnfAdrBgmowxu6kKS6raE6nCzZHhU/edit?tab=t.hsp6zb1ob5o8) | [Join](https://meet.google.com/vun-kkxt-jyp) |
+
+Add to your calendar: [Google](https://calendar.google.com/calendar/u/0/r?cid=2ca3e7fdc9e51a42ce18142e897f7db23fbf8e65867da1a06dc3ea5e6ad4e893%40group.calendar.google.com)·[Outlook](https://outlook.office.com/calendar/0/addfromweb?url=https%3A%2F%2Fcalendar.google.com%2Fcalendar%2Fical%2F2ca3e7fdc9e51a42ce18142e897f7db23fbf8e65867da1a06dc3ea5e6ad4e893%2540group.calendar.google.com%2Fpublic%2Fbasic.ics&name=Terminal-Bench-Science)·[Apple](webcal://calendar.google.com/calendar/ical/2ca3e7fdc9e51a42ce18142e897f7db23fbf8e65867da1a06dc3ea5e6ad4e893%40group.calendar.google.com/public/basic.ics)
+
+Contributors with merged tasks earn **contributor status** — co-authorship on the Terminal-Bench-Science paper and a listing on the [Terminal-Bench Contributors](https://www.tbench.ai/contributors/terminal-bench-science) page. Each merged task is worth 1 co-authorship point; when multiple contributors collaborate on a task, the point is split equally between them. Co-authorship on the paper requires a minimum of 1 point, and author order is determined by the number and impact of accepted tasks. Only merged tasks earn co-authorship.
+
+Top contributors are invited into **reviewer & maintainer status** — a senior role that comes with elevated co-authorship credit, voting rights on proposal approvals and PR merges, and the chance to shape the benchmark's scientific direction.
+
+Reviewers in good standing become eligible for **area chair**, which leads a specific scientific area, manages its reviewing team and progress, and recruits new contributors — one of the highest roles in the project.
+
+Faculty who actively bring in contributors or review tasks as domain experts are eligible for **senior co-authorship**. Concretely, a senior researcher — e.g. a professor — who encourages and supervises students, postdocs or other collaborators whose tasks get merged is also eligible for co-authorship on the paper. As part of the condition for senior co-authorship, we expect senior authors to be available when it comes to framing the paper and giving review feedback on the manuscript.
+
+Such a collaboration with Terminal-Bench-Science should be discussed with us in advance, so please reach out early rather than after your group's tasks are merged. If you lead a group and want your students, postdocs or other collaborators involved, share [our contribution call](https://www.tbench.ai/news/tb-science-announcement) with them and get in touch at [stevendi@stanford.edu](mailto:stevendi@stanford.edu) or on [Discord](https://discord.com/invite/2Pe5uWGcV3).
+
+Co-authorship carries an ongoing commitment that runs until the final benchmark release and paper submission, on two fronts. First, **maintaining your task** — problems often only surface after merge, during further agent trials and re-validation (a broken environment, a flaky test, a shortcut that lets agents reward hack, an ambiguity in the instruction), and we count on you to fix them. Second, **helping analyse agent failures for the paper** — a central contribution is explaining *why* frontier agents fail on real scientific work, and that analysis is only credible coming from the person who built the task. Expect to read agent trajectories on your task, judge whether a failure is a genuine scientific limitation or an artifact of the environment, instruction, or verifier, and help write up the failure modes. This happens in focused rounds ahead of submission rather than continuously. Both are conditions of co-authorship, so keep the email in your `task.toml` current and tell us if you'll be hard to reach for a while. See the [Contributing Guide](https://github.com/harbor-framework/terminal-bench-science/blob/main/CONTRIBUTING.md#post-merge-maintenance) for the full terms.
+
+We reserve the right to exclude a task from the benchmark and its co-authorship credit at any stage — even after merge — if information that should have been disclosed surfaces later or turns out to be misrepresented. Grounds include a task or its solution having been published or used elsewhere without informing us (for example in another benchmark), an undisclosed conflict of interest or commercial affiliation, and inaccurate or misleading statements about your relevant experience or qualifications. Please disclose a task's provenance and prior use, any conflicts of interest, and your relevant background accurately and up front — honest disclosure is part of the quality bar.
+
+Pull requests must be submitted by **August 17, 2026**. Review, iteration, and merge happen after the deadline, but no new PRs will be accepted past that date. Starting early is highly recommended — most tasks require a few rounds of feedback and iteration before they're ready to merge.
+
+Join our [Discord](https://discord.com/invite/2Pe5uWGcV3) and reach out to @stevendi11 on Discord or [stevendi@stanford.edu](mailto:stevendi@stanford.edu) to get involved. Key channels: **#tb-science** for general discussion and early feedback on task ideas, **#tb-science-announcements** for project updates, and **#tb-science-task-proposals** for submitted proposals, automated reviews, and reviewer feedback. Drop into our weekly meetings and office hours — see the [Terminal-Bench-Science calendar](https://calendar.google.com/calendar/embed?src=2ca3e7fdc9e51a42ce18142e897f7db23fbf8e65867da1a06dc3ea5e6ad4e893%40group.calendar.google.com&ctz=America%2FLos_Angeles&mode=WEEK) for the schedule.
+
+Terminal-Bench-Science is an open academic collaboration hosted by Stanford University and the Laude Institute. As part of the Terminal-Bench franchise, it is built by the Terminal-Bench & Harbor Framework team, and scientific contributors. We thank Snorkel AI for support via the Open Benchmarks Grants program, the Laude Institute via the Slingshots program, and 2077AI for API credits that power benchmark evaluations.
+
+For questions, feedback, or if you're interested in contributing, reach out to Steven Dillmann at [stevendi@stanford.edu](mailto:stevendi@stanford.edu).

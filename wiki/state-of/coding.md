@@ -3,8 +3,8 @@ title: State of Coding
 type: state-of
 domains: [coding]
 tags: []
-as_of: 2026-07-02
-sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit, cursor-bugbot-learning, claude-code-routines, openai-codex-ongoing-tasks, orca-homepage, coding-agent-control-planes, claude-code-leak-architecture, cursor-3-orchestration-bet, skills-and-plugin-packaging-late-march, cursor-cloud-agents-march, claude-code-scheduled-tasks-march, codex-security-march, agentic-devops-deep-research, cursor-sdk-agent-runtime-2026-04-30, symphony-devin-terminal-orchestration-2026-04-28, end-of-finetuning-debate-2026-05-13, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, model-harness-fit-2026-05-13, agent-first-ide-convergence-may-2026, dynamic-workflows-claude-code, fable-ban-june-2026, spacex-cursor-june-2026, ainews-frontiercode-june-2026, ainews-not-much-happened-2026-07-02, every-sonnet-5-vibe-check-2026-07-02, the-code-devin-security-2026-07-02, every-tale-of-two-models-2026-07-05, claude-code-getting-started-with-loops-2026-06-30, claude-sonnet-5-official-2026-06-30, cursor-ios-mobile-app-2026-06]
+as_of: 2026-07-14
+sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit, cursor-bugbot-learning, claude-code-routines, openai-codex-ongoing-tasks, orca-homepage, coding-agent-control-planes, claude-code-leak-architecture, cursor-3-orchestration-bet, skills-and-plugin-packaging-late-march, cursor-cloud-agents-march, claude-code-scheduled-tasks-march, codex-security-march, agentic-devops-deep-research, cursor-sdk-agent-runtime-2026-04-30, symphony-devin-terminal-orchestration-2026-04-28, end-of-finetuning-debate-2026-05-13, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, model-harness-fit-2026-05-13, agent-first-ide-convergence-may-2026, dynamic-workflows-claude-code, fable-ban-june-2026, spacex-cursor-june-2026, ainews-frontiercode-june-2026, ainews-not-much-happened-2026-07-02, every-sonnet-5-vibe-check-2026-07-02, the-code-devin-security-2026-07-02, every-tale-of-two-models-2026-07-05, claude-code-getting-started-with-loops-2026-06-30, claude-sonnet-5-official-2026-06-30, cursor-ios-mobile-app-2026-06, devinai-blog-windsurf-adaptive, devinai-blog-agentic-map-reduce, cognitioncom-blog-devin-fusion]
 ---
 
 # State of Coding
@@ -30,6 +30,7 @@ Coding tools whose primary UI is built around managing one or more AI coding age
 - [Orca](../tools/orca.md) — Open-source worktree IDE for running Claude Code, Codex, and other coding agents side by side with built-in terminals, file review, diff review, and CI/PR status tracking *(as of 2026-04-21)*
 - **GitHub Copilot App** (technical preview) — GitHub; desktop surface for parallel workstreams, PR/repo lifecycle management, and model flexibility; agent-first rather than IDE-first *(as of 2026-05-15)*
 - **VS Code Agents window** — Microsoft; multi-agent, multi-project workflows from one window; browser/mobile access via vscode.dev/agents; BYOK and compressed terminal output *(as of 2026-05-15)*
+- [Windsurf](../tools/windsurf.md) — Cognition (Devin's parent); Adaptive model router auto-selects models to conserve quota at a flat per-token rate; transparent per-token pricing in the model picker; Max plan daily limits removed *(as of 2026-07-14)*
 
 ### Agentic DevOps
 
@@ -48,6 +49,7 @@ CLI-based AI coding agents that still anchor in the terminal, but are increasing
 - [Codex](../tools/codex.md) — OpenAI; cloud coding agent via CLI, ChatGPT, and now mobile (iOS/Android preview); remote SSH GA; direction increasingly spills into broader computer-work workflows *(as of 2026-05-15)*
 - [Grok Build](../tools/grok-build.md) — xAI; early beta CLI coding agent; plan mode (step-by-step diff review); parallel subagents in isolated git worktrees; SuperGrok Heavy subscribers only *(as of 2026-05-15)*
 - [Kimi Code](../tools/kimi-code.md) — Moonshot AI; open-source; 1-line CLI; video-as-coding-context; ACP support; IDE integration; powered by Kimi K2.7-Code model *(as of 2026-06-09)*
+- [Devin](../tools/devin.md) — Cognition; Devin Fusion (preview) multi-model "sidekick" harness matches frontier performance at 35% lower cost (41% with Fable 5) on FrontierCode Extended; Security Swarm's Agentic MapReduce architecture now documented, reporting 72% recall on a CVE-pinned vulnerability benchmark *(as of 2026-07-14)*
 
 ### Agent toolkits
 
@@ -57,6 +59,8 @@ Toolkits that package a developer platform's docs, schemas, validation, and rela
 
 ## Recent changes
 
+- [2026-07-14] Windsurf (Cognition) shipped Adaptive model router, transparent per-token pricing in the model picker, and removed daily quota limits for Max users.
+- [2026-06-29] Devin Fusion (preview): multi-model "sidekick" harness matches frontier performance at 35% lower cost on FrontierCode Extended; Devin added to the Terminal coding agent subcategory alongside the newly documented Agentic MapReduce architecture.
 - [2026-07-02] Fable 5 returned to coding-tool surfaces; Sonnet 5 testing reinforced cost-per-completed-task as a better routing metric than token list price.
 - [2026-06-30] Cursor iOS beta adds mobile launch/control for always-on cloud agents and desktop agents.
 - [2026-06-30] Official Sonnet 5 launch confirms Claude Code availability and `claude-sonnet-5` API access.
@@ -65,8 +69,3 @@ Toolkits that package a developer platform's docs, schemas, validation, and rela
 - [2026-06-17] SpaceX acquires Cursor ($60B all-stock); Cursor Origin launched (agent-native git/code hosting); jointly trained xAI model coming to both Cursor and Grok Build — completes a model + IDE + hosting vertical stack
 - [2026-06-17] Claude Fable 5 suspended under US export controls; had reached #1 on DeepSWE/FrontierSWE; Claude Code + Fable 5 [max] scored 77 on DeepSWE before ban; Claude Code + Opus 4.8 is now the accessible Anthropic coding stack
 - [2026-05-28] Claude Code adds dynamic workflows (research preview): the `ultracode` effort setting lets Claude write orchestration scripts that fan tens-to-hundreds of parallel subagents, verify findings (with adversarial agents) before folding them in, and iterate to convergence; runs checkpoint and resume across hours-to-days. On by default for Max/Team/API, admin-enabled for Enterprise; uses substantially more tokens. Bun's Zig→Rust port (~750K LOC Rust, 99.8% tests passing, 11 days) is the flagship case.
-- [2026-05-15] Codex mobile preview: steer sessions from phone while agent runs on devbox; Remote SSH GA; enterprise 30-day switch promo (2 months free). Prime Intellect nanoGPT speedrun: both Opus 4.7 and GPT-5.5 beat human baseline in autonomous ML optimization (~10K runs)
-- [2026-05-15] xAI Grok Build enters the terminal coding agent category: plan mode + parallel worktree subagents at feature parity with Claude Code's core agent patterns; early beta, SuperGrok Heavy only
-- [2026-05-15] IDE convergence: GitHub Copilot App (technical preview), VS Code Agents window, and Cursor cloud dev environments all move toward managing parallel agent sessions as the primary UX — three major tools, same week, same direction
-- [2026-05-13] Model-harness fit is becoming a product moat: edit formats, action spaces, and tool-call reliability can matter as much as raw model benchmark scores in coding agents.
-- [2026-05-13] Codex and Claude Code are increasingly framed as workflow operating systems: command packs, browser-pane workflows, inbox triage, long-running goals, and multi-agent supervision are now part of the coding-agent competition.

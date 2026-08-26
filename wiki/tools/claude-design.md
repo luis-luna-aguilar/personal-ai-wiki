@@ -4,8 +4,8 @@ type: tool
 domains: [creative]
 subcategory: visual-design-prototyping
 tags: [anthropic, closed-source, beta]
-as_of: 2026-05-05
-sources: [claude-design-anthropic-labs, claude-creative-tool-connectors-2026-04-29]
+as_of: 2026-07-08
+sources: [claude-design-anthropic-labs, claude-creative-tool-connectors-2026-04-29, claude-code-design-sync-2026-07]
 ---
 
 # Claude Design
@@ -52,8 +52,13 @@ Anthropic added Claude connectors for professional creative production tools —
 
 This extends Claude beyond artifact generation into direct integration with creative-production software workflows.
 
+## Current status (as of 2026-07-08)
+
+- Claude Design now syncs with Claude Code in both directions through `/design-sync`: design systems can be pulled into a repo for implementation work, and built work can be pushed back into the Claude Design canvas.
+
 ## Recent changes
 
+- [2026-07-08] Claude Code / Claude Design bidirectional sync announced through `/design-sync`.
 - [2026-04-29] Creative tool connectors reported: Claude integrations for Adobe, Blender, Fusion, Ableton, Splice, SketchUp, Affinity, Resolume; moves Claude from artifact generation toward in-workflow creative-production integration (secondary coverage)
 - [2026-04-22] Full launch via Anthropic Labs; brand onboarding, PPTX/Canva export, group editing, web capture — replacing earlier thin stub
 
@@ -61,3 +66,4 @@ This extends Claude beyond artifact generation into direct integration with crea
 
 - [Introducing Claude Design by Anthropic Labs](../sources/articles/claude-design-anthropic-labs.md)
 - [Claude creative tool connectors](../sources/newsletters/claude-creative-tool-connectors-2026-04-29.md)
+- [Claude Code and Claude Design sync](../sources/tweets/claude-code-design-sync-2026-07.md)

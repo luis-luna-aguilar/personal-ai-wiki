@@ -17,14 +17,14 @@ The approved signals refine the existing Claude Opus 4.8 and Claude Code pages r
 
 ## Intended changes
 
-- [ ] **Update** `wiki/models/claude-opus-4-8.md` - add benchmark, pricing, efficiency, and calibration detail from AINews and Every.
-- [ ] **Update** `wiki/state-of/models.md` - sharpen the Claude Opus 4.8 frontier-model line with accessible-flagship benchmark context.
-- [ ] **Update** `wiki/tools/claude-code.md` - add June 18 dynamic-workflow reliability case studies and July 8 Claude Design sync.
-- [ ] **Update** `wiki/tools/claude-design.md` - add bidirectional Claude Code / Claude Design sync note.
-- [ ] **Update** `wiki/workflows/agentic-orchestration-patterns.md` - add Dynamic Workflows as productized orchestration evidence.
-- [ ] **Create** `wiki/sources/newsletters/ainews-opus-48-dynamic-workflows-2026-05.md` - source summary.
-- [ ] **Create** `wiki/sources/newsletters/every-claude-dynamic-workflows-reliability-2026-06.md` - source summary.
-- [ ] **Create** `wiki/sources/tweets/claude-code-design-sync-2026-07.md` - source summary.
+- [x] **Update** `wiki/models/claude-opus-4-8.md` - add benchmark, pricing, efficiency, and calibration detail from AINews and Every.
+- [x] **Update** `wiki/state-of/models.md` - sharpen the Claude Opus 4.8 frontier-model line with accessible-flagship benchmark context.
+- [x] **Update** `wiki/tools/claude-code.md` - add June 18 dynamic-workflow reliability case studies and July 8 Claude Design sync.
+- [x] **Update** `wiki/tools/claude-design.md` - add bidirectional Claude Code / Claude Design sync note.
+- [x] **Update** `wiki/workflows/agentic-orchestration-patterns.md` - add Dynamic Workflows as productized orchestration evidence.
+- [x] **Create** `wiki/sources/newsletters/ainews-opus-48-dynamic-workflows-2026-05.md` - source summary.
+- [x] **Create** `wiki/sources/newsletters/every-claude-dynamic-workflows-reliability-2026-06.md` - source summary.
+- [x] **Create** `wiki/sources/tweets/claude-code-design-sync-2026-07.md` - source summary.
 
 ## Page drafts
 
@@ -246,3 +246,4 @@ Claude Devs announced bidirectional sync between Claude Code and Claude Design. 
 ## Open questions
 
 - The Opus 4.8 source dates precede the current 2026-07-02 model dashboard state. Should the Opus line be updated only with benchmark detail, or should it stay visually secondary to newer Fable/Sonnet 5 entries?
+	- Update only with benchmark detail

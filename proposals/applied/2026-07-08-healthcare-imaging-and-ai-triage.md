@@ -17,11 +17,11 @@ Two approved healthcare signals update different parts of the healthcare dashboa
 
 ## Intended changes
 
-- [ ] **Update** `wiki/state-of/healthcare.md` - add imaging infrastructure and healthcare triage/operations signals.
-- [ ] **Create** `wiki/use-cases/ai-assisted-healthcare-triage.md` - concise use-case page for AI-assisted prescription renewal and patient self-triage.
-- [ ] **Create** `wiki/sources/newsletters/midjourney-medical-scanner-2026-06.md` - source summary.
-- [ ] **Create** `wiki/sources/newsletters/ai-healthcare-triage-doctronic-2026-05.md` - source summary.
-- [ ] **Update** `wiki/index.md` - add the new use-case page.
+- [x] **Update** `wiki/state-of/healthcare.md` - add imaging infrastructure and healthcare triage/operations signals.
+- [x] **Create** `wiki/use-cases/ai-assisted-healthcare-triage.md` - concise use-case page for AI-assisted prescription renewal and patient self-triage.
+- [x] **Create** `wiki/sources/newsletters/midjourney-medical-scanner-2026-06.md` - source summary.
+- [x] **Create** `wiki/sources/newsletters/ai-healthcare-triage-doctronic-2026-05.md` - source summary.
+- [x] **Update** `wiki/index.md` - add the new use-case page.
 
 ## Page drafts
 
@@ -164,3 +164,4 @@ Every's late-May coverage describes practical AI healthcare triage patterns, inc
 ## Open questions
 
 - Should Midjourney Medical remain only on the healthcare dashboard until it has clinical validation, or should it get a dedicated `tools/` page because of its ambition and technical specificity?
+	- keep it in the healthcare dashboard

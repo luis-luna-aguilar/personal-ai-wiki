@@ -15,9 +15,9 @@ The approved ESMFold2 signal is a strong science update. It should add a protein
 
 ## Intended changes
 
-- [ ] **Update** `wiki/state-of/science.md` - add protein models / molecular biology subcategory with ESMFold2.
-- [ ] **Update** `wiki/trends/ai-in-science.md` - add protein world-model signal.
-- [ ] **Create** `wiki/sources/newsletters/esmfold2-protein-world-model-2026-05.md` - source summary.
+- [x] **Update** `wiki/state-of/science.md` - add protein models / molecular biology subcategory with ESMFold2.
+- [x] **Update** `wiki/trends/ai-in-science.md` - add protein world-model signal.
+- [x] **Create** `wiki/sources/newsletters/esmfold2-protein-world-model-2026-05.md` - source summary.
 
 ## Page drafts
 
@@ -100,3 +100,4 @@ Latent Space covers ESMFold2 as an open scientific engine for protein prediction
 ## Open questions
 
 - Should ESMFold2 later receive a dedicated `models/` page, or is a science dashboard/trend update enough for now?
+	- Its enough

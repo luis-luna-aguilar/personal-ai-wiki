@@ -4,7 +4,7 @@ type: trend
 domains: [models]
 tags: [anthropic]
 as_of: 2026-07-02
-sources: [ainews-2026-04-21, runtime-improvements-improve-agent-economics, google-cloud-next-2026, ainews-2026-04-25, ai-earnings-capex-2026-04-30, inference-inflection-agent-runtime-2026-04-30, parallel-web-agent-apis-2026-04-30, persistent-cloud-computers-agents-2026-05-01, stripe-agent-native-commerce-fraud-2026-04-29, ainews-not-much-happened-2026-07-02, local-ai-infrastructure-2026-06]
+sources: [ainews-2026-04-21, runtime-improvements-improve-agent-economics, google-cloud-next-2026, ainews-2026-04-25, ai-earnings-capex-2026-04-30, inference-inflection-agent-runtime-2026-04-30, parallel-web-agent-apis-2026-04-30, persistent-cloud-computers-agents-2026-05-01, stripe-agent-native-commerce-fraud-2026-04-29, ainews-not-much-happened-2026-07-02, local-ai-infrastructure-2026-06, outputmaxxing-amp-compute-utilization-2026-06]
 ---
 
 # Compute infrastructure as decisive competitive moat
@@ -23,6 +23,8 @@ Frontier AI labs are securing compute capacity at a scale that creates structura
 - Inference systems are becoming a second competitive axis beyond training scale: DSpark speculative decoding, vLLM native support, WebGPU/browser inference, and TwoTower-style parallel generation all aim to make capable models cheaper and faster to run.
 - NVIDIA's Nemotron-Labs-TwoTower result is a concrete architecture signal: a diffusion-style language-model adaptation claimed 2.42x faster generation while preserving 98.7% of original model quality.
 - Open-model ecosystems are using serving and decode speed as adoption levers; GLM-5.2 DSpark previews and DeepSeek/vLLM work matter because agent workflows are constrained by latency and throughput, not only benchmark accuracy.
+- Compute moat is not only cluster size. AMP's "outputmaxxing" thesis argues that utilization, scheduling, power, and systems coordination determine how much useful work a lab extracts from its GPUs.
+- The source frames future AI infrastructure as more grid-like: FLOPs flowing across capacity similar to electricity, with scheduling and market coordination becoming core infrastructure problems.
 
 ## Why it matters
 
@@ -31,6 +33,12 @@ Large compute commitments translate into longer training runs, larger experiment
 The reported Google/Anthropic investment would strengthen the compute-moat thesis by showing frontier labs treating compute access as a strategic balance-sheet and cloud-partnership problem, not just a vendor contract. The wiki should keep this caveated until the direct FT report or another primary/credible full-text source is available.
 
 But runtime improvements such as TurboQuant-style KV-cache compression can also lower the practical cost of longer-context and more agentic workflows without waiting for frontier-scale infrastructure deals.
+
+## Outputmaxxing
+
+Outputmaxxing is the discipline of maximizing useful model-training or inference output from fixed compute capacity. In AMP's framing, labs can own enormous clusters and still waste capacity through poor MFU, scheduling friction, power constraints, or insufficient systems coordination.
+
+The useful wiki update is not to treat AMP's exact MFU anecdotes as settled facts. The durable point is that frontier compute advantage is becoming a systems problem: GPU supply, memory, networking, workload scheduling, power, and utilization all affect model progress.
 
 ## What to watch
 
@@ -48,6 +56,7 @@ But runtime improvements such as TurboQuant-style KV-cache compression can also 
 
 ## Recent changes
 
+- [2026-06-18] Added outputmaxxing / compute-utilization framing from AMP: the frontier compute bottleneck includes MFU, scheduling, power, and grid-like coordination, not only GPU count.
 - [2026-07-02] Added inference-systems counterforce: DSpark/vLLM, TwoTower, WebGPU Gemma, and kernel-level work show competition moving below model weights into runtime speed and serving economics.
 - [2026-06-30] Added hybrid local/cloud routing as a compute-control counterforce for private, low-latency, repeated, or cheaper tasks.
 - [2026-05-05] Stripe frames stolen compute (API keys, tokens, credits, free trials) as the emerging AI fraud surface — "compute is the new cash"; agents as autonomous purchasers create new commerce and payment-flow design challenges

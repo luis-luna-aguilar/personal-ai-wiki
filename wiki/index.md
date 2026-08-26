@@ -72,6 +72,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/cartesia](tools/cartesia.md) — streaming TTS (Sonic-3.5) and STT (Ink-2); sub-90ms latency, 42 languages, strong structured-utterance handling *(as_of: 2026-06-16)*
 - [tools/checkly](tools/checkly.md) — synthetic verification and Monitoring as Code built around Playwright and API checks *(as_of: 2026-04-24)*
 - [tools/codex](tools/codex.md) — OpenAI's cloud agent surface for coding, computer work, cyber-defense workflows, mobile supervision, subagents, and broader knowledge-work automation *(as_of: 2026-07-01)*
+- [tools/crabbox](tools/crabbox.md) — remote software testing and execution control plane for running tests, builds, browser checks, platform validation, and review evidence on leased or provider-backed machines *(as_of: 2026-07-08)*
 - [tools/databricks](tools/databricks.md) — enterprise data/AI platform; Genie One (agentic coworker + ontology), Unity AI Gateway (MCP auth + governance), Lakebase (agent-native Postgres) *(as_of: 2026-06-17)*
 - [tools/cursor](tools/cursor.md) — Cursor 3.1 agentic coding workspace with tiled supervision, local↔cloud handoff, iOS cloud-agent control, and Bugbot learned rules; Cursor Origin launched *(as_of: 2026-06-30)*
 - [tools/devin](tools/devin.md) — Cognition's coding agent; Auto-Triage plus Security Swarm for parallel vulnerability discovery, exploitability validation, and fix PRs *(as_of: 2026-07-02)*
@@ -87,6 +88,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/genspark-slides](tools/genspark-slides.md) — AI slides workflow inside Genspark's broader agent/content product surface *(as_of: 2026-04-22)*
 - [tools/google-adk](tools/google-adk.md) — Google's open-source agent framework; ADK 2.0 now clearly centers graph workflows, coordinator-specialist routing, A2A handoffs, and sandboxed execution *(as_of: 2026-04-24)*
 - [tools/eve](tools/eve.md) — Vercel's agent framework for resumability, fallbacks, filesystem agents, skills, subagents, sandboxes, long-running jobs, observability, and evals *(as_of: 2026-07-03)*
+- [tools/gpt-live](tools/gpt-live.md) — OpenAI full-duplex ChatGPT Voice model family; GPT-Live-1 and mini power natural voice interaction while delegating deeper work to frontier models *(as_of: 2026-07-07)*
 - [tools/gpt-realtime-2](tools/gpt-realtime-2.md) — OpenAI streaming speech-to-speech model with 128K context, GPT-5-class reasoning, tool use, and interruption handling *(as_of: 2026-05-08)*
 - [tools/grok-build](tools/grok-build.md) — xAI early beta CLI coding agent with plan mode and parallel worktree subagents; SuperGrok Heavy only; jointly trained model with Cursor/SpaceX coming *(as_of: 2026-06-17)*
 - [tools/kimi-code](tools/kimi-code.md) — Moonshot AI open-source coding agent; 1-line CLI install, video-as-coding-context, ACP support, and Kimi Work Goal Mode *(as_of: 2026-06-19)*
@@ -133,6 +135,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/tessl](tools/tessl.md) — CLI + MCP framework exploring spec-as-source; private beta *(as_of: 2025-10-15)*
 - [tools/uipath-maestro](tools/uipath-maestro.md) — enterprise orchestration layer for agents, robots, people, and long-running workflows *(as_of: 2026-04-22)*
 - [tools/wilson](tools/wilson.md) — in-house-legal-focused AI product for contract review, redlines, and workflow support *(as_of: 2026-04-22)*
+- [tools/windsurf](tools/windsurf.md) — Cognition's AI coding workspace; Adaptive model router, pricing-transparent model picker, and removed Max-plan daily limits *(as_of: 2026-07-14)*
 - [tools/zcode](tools/zcode.md) — Z.ai's official GLM-5.2 coding workspace for long-running coding sessions *(as_of: 2026-07-02)*
 - [tools/amazon-quick](tools/amazon-quick.md) — Amazon's reported desktop work-context assistant; personal knowledge graph from files, calendar, and Slack; Kiro CLI and Claude Code integration; caveated — pending primary Amazon verification *(as_of: 2026-04-29)*
 - [tools/axiom-math](tools/axiom-math.md) — formal mathematical reasoning startup; 12/12 Putnam 2025; 99% ProofGen; AXLE Lean toolkit *(as_of: 2026-06-03)*
@@ -230,6 +233,7 @@ Concrete applications and repeatable business/workflow use cases.
 
 - [use-cases/onboarding-videos-from-screenshots](use-cases/onboarding-videos-from-screenshots.md) — using agent skills to turn app screenshots into animated onboarding or training videos *(as_of: 2026-05-13)*
 - [use-cases/ai-personal-health-investigation](use-cases/ai-personal-health-investigation.md) — 4-step Track→Test→Analyze→Experiment loop for patient-side symptom investigation with frontier models *(as_of: 2026-06-16)*
+- [use-cases/ai-assisted-healthcare-triage](use-cases/ai-assisted-healthcare-triage.md) — AI-assisted prescription renewal and patient-side self-triage workflows where AI prepares recommendations/questions and clinicians retain judgment *(as_of: 2026-05-31)*
 
 ## Sources
 
@@ -241,12 +245,12 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 
 - state-of: 11
 - models: 23
-- tools: 78
+- tools: 81
 - benchmarks: 11
 - workflows: 6
 - concepts: 19
 - trends: 11
 - training: 13
-- use-cases: 2
+- use-cases: 3
 
-**Total content pages: 174.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+**Total content pages: 178.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
