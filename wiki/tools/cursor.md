@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents]
 subcategory: agentic-coding-workspace
 tags: [closed-source, agentic]
-as_of: 2026-06-30
-sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models, cursor-cloud-agents-march, cursor-cloud-agents-february, cursor-third-era, ai-security-scanners-2026-05-01, cursor-sdk-agent-runtime-2026-04-30, agent-first-ide-convergence-may-2026, cursor-composer-2-5-launch, spacex-cursor-june-2026, cursor-ios-mobile-app-2026-06]
+as_of: 2026-07-08
+sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models, cursor-cloud-agents-march, cursor-cloud-agents-february, cursor-third-era, ai-security-scanners-2026-05-01, cursor-sdk-agent-runtime-2026-04-30, agent-first-ide-convergence-may-2026, cursor-composer-2-5-launch, spacex-cursor-june-2026, cursor-ios-mobile-app-2026-06, cursor-blog-grok-4-5-launch-2026-07, ainews-spacexai-grok-45-2026-07-09]
 ---
 
 # Cursor
@@ -14,7 +14,7 @@ Cursor is an AI coding product from Anysphere. It started life as a VS Code fork
 
 The strongest interpretive signal from the early-April reaction cycle is that Cursor 3 was not just a feature release. It was a bet about interface shape: the editor becomes secondary, while dispatching, monitoring, and reviewing agent work becomes the primary experience. That looks increasingly prescient as the broader category moves toward supervision surfaces, but the same sources also emphasize the risk that orchestration UX may outrun what mainstream users actually need today.
 
-## Current status (as of 2026-06-17)
+## Current status (as of 2026-07-08)
 
 - **Cursor 3** is the current shipped version, announced in the "Meet the new Cursor" post on cursor.com/blog
 - Cursor for iOS is in public beta for paid users, letting users launch always-on cloud agents, control desktop agents remotely, use voice and slash commands, receive push notifications/Live Activities, inspect diffs, follow up, and merge PRs from mobile.
@@ -30,7 +30,7 @@ The strongest interpretive signal from the early-April reaction cycle is that Cu
 - Plugin marketplace ("Cursor Marketplace") supports MCPs, skills, and subagents, with one-click install and private team marketplaces
 - Legacy "Cursor IDE" mode still available — switch back at any time
 - **Cloud development environments** (May 2026): fully configured environments with cloned repos, dependencies, version history, rollback, Dockerfile-based configs, audit logs, and cached builds running 70% faster; agents can trace a Slack-reported issue across all affected repos and open PRs in each simultaneously; isolated secrets per environment
-- **SpaceX acquisition (June 2026):** $60B all-stock deal; model co-training with xAI underway; expected to power both Cursor and Grok Build
+- **SpaceX acquisition (June 2026):** $60B all-stock deal; jointly trained model (Grok 4.5) launched July 2026, now available in both Cursor and Grok Build
 - **Cursor Origin (June 2026):** agent-native git/code hosting; MCP/API extensible; team-agent collaboration and merge conflict handling built for autonomous agent commits
 
 ## What's new in Cursor 3
@@ -94,18 +94,19 @@ The SDK repositions Cursor from a per-seat IDE product toward programmable agent
 
 SpaceX exercised a previously announced option to acquire Cursor in an all-stock $60B deal. Key implications:
 
-- **Jointly trained model.** SpaceX/xAI and Cursor have been co-training a new model that will power both Cursor and Grok Build.
+- **Jointly trained model — Grok 4.5 (July 2026).** SpaceXAI and Cursor jointly trained Grok 4.5, a 1.5T-parameter MoE trained on trillions of tokens of Cursor codebase and developer-agent data plus broad STEM/knowledge-work data. Launched immediately across Cursor's desktop, web, iOS, CLI, and SDK surfaces with double usage for the first week; also available in Grok Build and via API. Composer 2.5 remains available as Cursor's separate, smaller-weight-class model. Pricing: $2/M input, $6/M output ($4/$18 fast variant). See [Grok 4.5](../models/grok-4-5.md).
 - **Cursor Origin.** Launched alongside the acquisition news: a git/code hosting product built for agent workloads. Features merge conflict handling optimized for agent-generated commits, MCP/API extensibility, team-agent collaboration surfaces, and audit trails. Designed as the natural storage layer for autonomous agent work.
 - **Vertical integration.** The combined stack is model (xAI jointly trained) + IDE (Cursor) + code hosting (Origin), competing with Claude Code + Anthropic (model + terminal agent) and Codex + OpenAI (model + cloud agent).
 
 ## Recent changes
 
+- [2026-07-08] Grok 4.5 launched: jointly trained with SpaceXAI, 1.5T MoE, available across all Cursor surfaces with double usage for the first week; also available in Grok Build and via API.
 - [2026-06-30] Cursor for iOS public beta: launch always-on cloud agents, control desktop agents remotely, voice/slash commands, push notifications, Live Activities, diff review, follow-up, and PR merge from mobile.
 - [2026-06-17] SpaceX acquires Cursor in $60B all-stock deal; Cursor Origin launched (agent-native git/code hosting); jointly trained model with xAI coming to Cursor and Grok Build
 - [2026-05-18] Composer 2.5: targeted RL with textual hints + KL distillation; 25× synthetic tasks; fast-tier pricing ($3/$15 per M); next model in training at SpaceX/Colossus 2 scale
 - [2026-05-14] Cloud development environments: multi-repo agent work with full env config, Dockerfile support, version history, rollback, isolated secrets, 70% faster cached builds; agents can cross-repo trace Slack issues → PRs
-- [2026-04-30] Cursor SDK released: TypeScript SDK exposes the Cursor agent runtime headlessly for CI, automations, cloud VMs, MCP servers, model swapping, and embedded product agents; marks transition from IDE seat product toward agent infrastructure platform
 - [2026-05-01] Cursor Security Review reported: always-on PR review and scheduled codebase scans; source is AINews secondary coverage, primary Cursor page not yet fetched
+- [2026-04-30] Cursor SDK released: TypeScript SDK exposes the Cursor agent runtime headlessly for CI, automations, cloud VMs, MCP servers, model swapping, and embedded product agents; marks transition from IDE seat product toward agent infrastructure platform
 - [2026-04-22] Added Truell's third-era data: 35% of Cursor internal PRs from cloud agents; 2:1 agent-to-Tab user ratio; 15× agent usage growth YoY
 
 ## Sources
@@ -122,3 +123,5 @@ SpaceX exercised a previously announced option to acquire Cursor in an all-stock
 - [Cursor Composer 2.5 — launch post](../sources/articles/cursor-composer-2-5-launch.md)
 - [SpaceX acquires Cursor + Cursor Origin launch (June 2026)](../sources/newsletters/spacex-cursor-june-2026.md)
 - [Cursor iOS mobile app public beta](../sources/articles/cursor-ios-mobile-app-2026-06.md)
+- [Introducing Grok 4.5 (Cursor blog)](../sources/articles/cursor-blog-grok-4-5-launch-2026-07.md)
+- [AINews — SpaceXAI launches Grok 4.5](../sources/newsletters/ainews-spacexai-grok-45-2026-07-09.md)

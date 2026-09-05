@@ -38,6 +38,8 @@ Foundation models. One page per model family or generation.
 - [models/claude-opus-4-8](models/claude-opus-4-8.md) — Anthropic current accessible flagship; Dynamic Workflows and Figma MCP bidirectional code/design loop; Vending Bench caveats for Claude 4.6+ behavior *(as_of: 2026-06-04)*
 - [models/composer-2](models/composer-2.md) — Cursor's in-house coding model for complex long-horizon engineering work; late-March sources add benchmarks, pricing claims, and Kimi-k2.5 lineage *(as_of: 2026-03-23)*
 - [models/deepseek-v4](models/deepseek-v4.md) — DeepSeek released open-weight Pro/Flash lineup for long-context agent workloads; 1M context, MIT license, pricing, and KV-cache/inference-systems story *(as_of: 2026-04-25)*
+- [models/cohere-command-a-plus](models/cohere-command-a-plus.md) — Cohere's first fully open (Apache 2.0) model; 218B/25B MoE; AA Intelligence Index 37 *(as_of: 2026-05-21)*
+- [models/grok-4-5](models/grok-4-5.md) — xAI/SpaceXAI's first model co-trained with Cursor; 1.5T MoE; Opus-class positioning at lower cost/token-efficiency *(as_of: 2026-07-08)*
 - [models/gpt-5-5](models/gpt-5-5.md) — OpenAI frontier model for coding, knowledge work, science, cyber tasks, Codex, and personal-finance agent workflows *(as_of: 2026-05-18)*
 - [models/gpt-5-6-sol](models/gpt-5-6-sol.md) — OpenAI restricted-preview flagship; METR predeployment eval found high detected cheating and uncertain time-horizon estimates *(as_of: 2026-06-26)*
 - [models/glm-5-2](models/glm-5-2.md) — Z.ai MIT open-weight; 744B/40B MoE, 1M context, ZCode workspace, provider adoption, and frontier-adjacent open-model coding signal *(as_of: 2026-07-02)*
@@ -74,6 +76,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/codex](tools/codex.md) — OpenAI's cloud agent surface for coding, computer work, cyber-defense workflows, mobile supervision, subagents, and broader knowledge-work automation *(as_of: 2026-07-01)*
 - [tools/crabbox](tools/crabbox.md) — remote software testing and execution control plane for running tests, builds, browser checks, platform validation, and review evidence on leased or provider-backed machines *(as_of: 2026-07-08)*
 - [tools/databricks](tools/databricks.md) — enterprise data/AI platform; Genie One (agentic coworker + ontology), Unity AI Gateway (MCP auth + governance), Lakebase (agent-native Postgres) *(as_of: 2026-06-17)*
+- [tools/daytona](tools/daytona.md) — bare-metal AI-agent sandbox provider; ~60ms sandbox startup, 50K sandboxes in ~75s, RL/eval now ~50% of usage *(as_of: 2026-05-22)*
 - [tools/cursor](tools/cursor.md) — Cursor 3.1 agentic coding workspace with tiled supervision, local↔cloud handoff, iOS cloud-agent control, and Bugbot learned rules; Cursor Origin launched *(as_of: 2026-06-30)*
 - [tools/devin](tools/devin.md) — Cognition's coding agent; Auto-Triage plus Security Swarm for parallel vulnerability discovery, exploitability validation, and fix PRs *(as_of: 2026-07-02)*
 - [tools/openai-deep-research](tools/openai-deep-research.md) — OpenAI's deep research agent; multi-step web research; available via ChatGPT and API *(as_of: 2026-04-22)*
@@ -110,6 +113,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/microsoft-copilot](tools/microsoft-copilot.md) — Microsoft's assistant surface across Microsoft 365; Copilot Cowork GA June 2026 to all M365 users; 30-40% cheaper per prompt claim vs Claude Cowork *(as_of: 2026-06-17)*
 - [tools/microsoft-foundry-agents](tools/microsoft-foundry-agents.md) — Microsoft's hosted enterprise agent runtime with per-session VM isolation, persistent resume, and governance controls *(as_of: 2026-04-23)*
 - [tools/mistral-document-ai](tools/mistral-document-ai.md) — document-intelligence product for extracting and structuring enterprise documents *(as_of: 2026-04-22)*
+- [tools/modal](tools/modal.md) — serverless AI cloud reframing from developer experience to "agent experience"; 100K-sandbox RL rollouts; $355M Series C *(as_of: 2026-07-08)*
 - [tools/multica](tools/multica.md) — open-source managed agents platform; treats coding agents (Claude Code, Codex, and 9 others) as project-board teammates with Squads routing and reusable skill compounding *(as_of: 2026-05-18)*
 - [tools/paperclip](tools/paperclip.md) — open-source MIT agent management platform; org-chart metaphor with heartbeats, per-agent budgets, board-of-directors governance, and Kubernetes hosting; 69.9k stars *(as_of: 2026-06-10)*
 - [tools/notion](tools/notion.md) — Notion's External Agents API lets Claude Code, Cursor, Codex, Devin, Warp, Decagon act inside Notion workspaces as a shared agent-native document surface *(as_of: 2026-05-14)*
@@ -121,6 +125,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/perplexity-computer](tools/perplexity-computer.md) — Perplexity's 19-model orchestration agent connected to apps and financial institutions; secondary coverage adds professional-finance positioning *(as_of: 2026-05-06)*
 - [tools/pig](tools/pig.md) — Windows-focused computer-use platform with product, API, and SDK layers *(as_of: 2026-04-22)*
 - [tools/promptfoo](tools/promptfoo.md) — assertion-based CLI eval framework for LLM outputs and agent tool routing *(as_of: 2026-04-23)*
+- [tools/railway](tools/railway.md) — bare-metal deployment platform rebuilding for agents; copy-on-write production forks, Central Station, "the pull request is dying" *(as_of: 2026-05-20)*
 - [tools/shepherd](tools/shepherd.md) — open-source live-agent checkpoint, rollback, and forking tool described as Git-like version control for agent runs *(as_of: 2026-07-06)*
 - [tools/proof](tools/proof.md) — Every's web document editor for shared human/agent drafting and revision *(as_of: 2026-03-15)*
 - [tools/stagehand](tools/stagehand.md) — browser automation framework for AI agents and browser self-verification loops *(as_of: 2026-04-24)*
@@ -157,6 +162,7 @@ Benchmark pages. Current leaderboards and methodology.
 - [benchmarks/gaia](benchmarks/gaia.md) — generalized AI agent benchmark for multimodal reasoning, web browsing, and tool use *(as_of: 2026-04-23)*
 - [benchmarks/toolbench](benchmarks/toolbench.md) — enterprise API-chaining benchmark across 16,000+ real RESTful APIs *(as_of: 2026-04-23)*
 - [benchmarks/terminal-bench](benchmarks/terminal-bench.md) — CLI and system-administration benchmark in isolated container environments *(as_of: 2026-04-23)*
+- [benchmarks/inferencebench](benchmarks/inferencebench.md) — agentic LLM-inference-serving optimization benchmark; agents beat naive baselines but lag a simple hyperparameter sweep *(as_of: 2026-05-21)*
 
 ## Workflows
 
@@ -197,6 +203,7 @@ Ideas and techniques.
 
 Things being watched that haven't solidified yet.
 
+- [trends/agent-native-compute](trends/agent-native-compute.md) — cloud infrastructure purpose-built for agent workloads (sandboxes, RL/eval spikes) as a category distinct from frontier training-compute scale *(as_of: 2026-07-08)*
 - [trends/agents-reshape-organizations](trends/agents-reshape-organizations.md) — leverage moves from individual to org as autonomous agents, FDE teams, and deployment services take coordination work *(as_of: 2026-07-01)*
 - [trends/ai-in-science](trends/ai-in-science.md) — biology, drug discovery, self-driving labs, and Claude Science-style workflow platforms for reproducible scientific work *(as_of: 2026-07-06)*
 - [trends/compute-infrastructure](trends/compute-infrastructure.md) — frontier compute scale plus inference-system efficiency as competitive moats *(as_of: 2026-07-02)*
@@ -245,11 +252,11 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 
 - state-of: 11
 - models: 23
-- tools: 81
+- tools: 84
 - benchmarks: 11
 - workflows: 6
 - concepts: 19
-- trends: 11
+- trends: 12
 - training: 13
 - use-cases: 3
 

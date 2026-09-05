@@ -4,7 +4,7 @@ type: concept
 domains: [agents]
 tags: [agentic]
 as_of: 2026-07-08
-sources: [agentic-thinking-lin, langchain-better-harness, openai-agents-sdk-evolution, notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, claude-code-leak-architecture, harness-engineering-early-april, skills-and-plugin-packaging-late-march, harness-engineering-march, harness-debate-march, shopify-latent-space-april-2026, ainews-2026-04-22, thecode-april-22-2026, agent-infrastructure-harness-2026-05-01, mattpocock-dictionary-of-ai-coding, model-harness-fit-2026-05-13, shopify-claude-code-bessemer-2026-05, gas-city-software-factory-2026-05, cloudflare-glasswing-2026-05, loopcraft-june-2026, rl-harness-quality-june-2026, aiewf-loops-debate-2026-07-03, autoresearch-agent-recipes-2026-07, claude-tag-slack-agent-2026-06, gemini-managed-agents-2026-07, gray-swan-ai-security-2026-06, effective-feedback-compute-harness-2026-05]
+sources: [agentic-thinking-lin, langchain-better-harness, openai-agents-sdk-evolution, notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, claude-code-leak-architecture, harness-engineering-early-april, skills-and-plugin-packaging-late-march, harness-engineering-march, harness-debate-march, shopify-latent-space-april-2026, ainews-2026-04-22, thecode-april-22-2026, agent-infrastructure-harness-2026-05-01, mattpocock-dictionary-of-ai-coding, model-harness-fit-2026-05-13, shopify-claude-code-bessemer-2026-05, gas-city-software-factory-2026-05, cloudflare-glasswing-2026-05, loopcraft-june-2026, rl-harness-quality-june-2026, aiewf-loops-debate-2026-07-03, autoresearch-agent-recipes-2026-07, claude-tag-slack-agent-2026-06, gemini-managed-agents-2026-07, gray-swan-ai-security-2026-06, effective-feedback-compute-harness-2026-05, claude-managed-agents-updates-2026-05, code-as-agent-harness-paper]
 ---
 
 # Harness (agent)
@@ -68,8 +68,9 @@ In practice, a harness is not only the loop logic. Recent source material reinfo
 - **Narrow-scope parallel agents outperform exhaustive single agents in high-coverage tasks.** Cloudflare's Project Glasswing harness (8 stages, ~50 concurrent Mythos Preview agents) demonstrates this at security-research scale: each agent has one tightly scoped attack class + one target area; an independent adversarial agent validates but cannot emit new findings; root-cause deduplication collapses variant findings. The Trace stage further splits "is this buggy?" from "can an attacker reach this bug?" — a clean instance of decomposing a compound question into two separately answerable ones.
 - **Model neutrality by design.** Build your harness so the underlying model is a configurable parameter, not a hardcoded dependency. Routing, context packaging, and evaluation should live in the harness layer — not in model-specific prompt tricks. This became a risk management requirement (not just an engineering preference) after the Fable 5 export-control ban removed access to the leading frontier model for all customers overnight. The LangSmith Engine (a fine-tuned production-trace judge, 10-100× cheaper than frontier models) demonstrates that the evaluation layer can also be decoupled from frontier access.
 - **Org-embedded identity and permissioning.** Slack-native and team-channel agents need a legible identity, scoped access to channels/tools/data, audit trails for actions, and memory boundaries that match how the organization actually partitions work. Without that, the harness becomes an organizational risk surface: unclear accountability, prompt-injection exposure, budget opacity, and channel noise.
-- **Managed-agent platform primitives.** Hosted agent platforms are absorbing work that custom harnesses used to implement manually: tool connectivity through MCP, background execution, custom function calling, credential refresh, stateful interaction APIs, and sandboxed execution. Google adding these to the Gemini API is another sign that "harness" is becoming product infrastructure, not only application code.
+- **Managed-agent platform primitives.** Hosted agent platforms are absorbing work that custom harnesses used to implement manually: tool connectivity through MCP, background execution, custom function calling, credential refresh, stateful interaction APIs, and sandboxed execution. Google adding these to the Gemini API is another sign that "harness" is becoming product infrastructure, not only application code. Anthropic's Claude Managed Agents added self-hosted sandboxes (public beta) and MCP tunnels (research preview) in May 2026: the agent loop that handles orchestration, context management, and error recovery stays on Anthropic's infrastructure, while tool execution and private MCP connectivity run on customer-controlled infrastructure or a supported sandbox provider (Cloudflare, Daytona, Modal, Vercel).
 - **Security boundary as harness boundary.** Tool-using agents are not only productivity systems; they are software components that may read untrusted content, hold private context, and take actions. A production harness must define identity, permissions, data exfiltration boundaries, guardrails, red-team tests, and audit trails as part of the agent architecture.
+- **Code as the operational substrate, not just output.** A May 2026 survey ("Code as Agent Harness," arXiv:2605.18747) frames code as the shared medium connecting agent reasoning, acting, and environment modeling — not merely the artifact an agent produces. It organizes harness design around three layers: the interface where code links reasoning/action/environment; harness mechanisms (planning, memory, tool use, feedback-driven control); and scaling from single-agent to multi-agent settings, where shared code artifacts support coordination, review, and verification.
 
 ## Harness vs model
 
@@ -113,13 +114,15 @@ Treating the training harness like production code — with tests, versioning, a
 
 ## Recent changes
 
-- [2026-05-30] Added Effective Feedback Compute and model-specific harness profiles as harness-quality signals beyond token/tool counts.
 - [2026-07-08] Gemini API managed agents add hosted harness primitives: MCP support, background execution, custom function calling, credential refresh, and stateful agent interactions.
-- [2026-06-22] Gray Swan security coverage adds prompt injection, exfiltration, identity, permissions, and automated red teaming as harness-boundary concerns for tool-using agents.
-- [2026-07-01] Added agent recipes as a harness packaging pattern: model choices, evals, judges, human expertise, failure history, and signal processing bundled with the workflow.
 - [2026-07-03] Added control-layer framing from AI Engineer World Fair: permissions, cost ceilings, recovery, and review routing are part of the harness boundary.
+- [2026-07-01] Added agent recipes as a harness packaging pattern: model choices, evals, judges, human expertise, failure history, and signal processing bundled with the workflow.
 - [2026-06-24] Claude Tag coverage adds org-embedded agent identity, permission scoping, and Slack-channel memory boundaries as harness concerns.
+- [2026-06-22] Gray Swan security coverage adds prompt injection, exfiltration, identity, permissions, and automated red teaming as harness-boundary concerns for tool-using agents.
 - [2026-06-05] Added RL harness quality section: 8 failure modes taxonomy from Auriel W (Google Gemini RL team); "5% failure rate = harness problem, not model problem"
+- [2026-05-30] Added Effective Feedback Compute and model-specific harness profiles as harness-quality signals beyond token/tool counts.
+- [2026-05-20] Claude Managed Agents added self-hosted sandboxes (public beta) and MCP tunnels (research preview), extending the harness security boundary so tool execution and private MCP connectivity can run on customer infrastructure while Anthropic keeps the orchestration loop.
+- [2026-05-18] "Code as Agent Harness" survey (arXiv:2605.18747) frames code as the operational substrate for agent reasoning, planning, memory, tool use, and multi-agent coordination.
 
 ## Related
 
@@ -158,3 +161,5 @@ Treating the training harness like production code — with tests, versioning, a
 - [Gemini managed agents in the API](../sources/newsletters/gemini-managed-agents-2026-07.md)
 - [Gray Swan on AI-native security and prompt injection](../sources/newsletters/gray-swan-ai-security-2026-06.md)
 - [Effective Feedback Compute and harness profiles](../sources/newsletters/effective-feedback-compute-harness-2026-05.md)
+- [New in Claude Managed Agents: self-hosted sandboxes and MCP tunnels](../sources/articles/claude-managed-agents-updates-2026-05.md)
+- [Code as Agent Harness (arXiv:2605.18747)](../sources/articles/code-as-agent-harness-paper.md)

@@ -4,8 +4,8 @@ type: tool
 domains: [agents]
 subcategory: agent-orchestration
 tags: [anthropic, closed-source, agentic]
-as_of: 2026-05-13
-sources: [managed-agents, every-managed-agents-vibe-check, anthropic-platform-expansion-april-2026, claude-managed-agents-memory, anthropic-spacex-dreams-2026-05-07, claude-managed-agents-feature-parity-2026-05-13]
+as_of: 2026-05-20
+sources: [managed-agents, every-managed-agents-vibe-check, anthropic-platform-expansion-april-2026, claude-managed-agents-memory, anthropic-spacex-dreams-2026-05-07, claude-managed-agents-feature-parity-2026-05-13, claude-managed-agents-updates-2026-05, anthropic-is-onto-something]
 ---
 
 # Claude Managed Agents
@@ -20,7 +20,7 @@ Those three pieces are:
 
 Anthropic's core idea is that these pieces should be decoupled so the system can keep evolving as models improve, without forcing users to rebuild around each model generation's quirks.
 
-## Current status (as of 2026-05-13)
+## Current status (as of 2026-05-20)
 
 - Public beta service on the Claude Platform for long-running agents
 - Official launch framing: developers specify tasks and tools while Anthropic handles orchestration, permissions, and sandboxing
@@ -40,6 +40,8 @@ Anthropic's core idea is that these pieces should be decoupled so the system can
 - Anthropic is explicitly pitching memory as a way to replace custom retrieval / memory infrastructure for long-running agent deployments
 - **Dreams feature** (May 2026, research preview): agents periodically reflect on past sessions to identify long-term patterns that no single session can surface — recurring mistakes, shared user preferences, stale assumptions. The reflection produces a cleaned-up, consolidated memory store that improves future session performance. Available in research preview; request access via Claude's form.
 - Anthropic says new Claude API features such as advisor strategy, code execution, and web search ship same-day into Managed Agents, reinforcing the product as a hosted platform service rather than a static sample runtime.
+- **Self-hosted sandboxes** (public beta, announced at Code with Claude London, May 2026): tool execution can run on the customer's own infrastructure or through a supported managed provider (Cloudflare, Daytona, Modal, Vercel), while Anthropic's hosted agent loop — orchestration, context management, error recovery — stays on Anthropic's side. Sensitive files, packages, and services never leave the customer's perimeter; the customer controls compute sizing and the runtime image.
+- **MCP tunnels** (research preview): let Managed Agents reach MCP servers inside a private network without exposing them to the public internet. A lightweight gateway the customer deploys makes a single outbound connection — no inbound firewall rules, no public endpoints, traffic encrypted end to end. Supported in both Managed Agents and the Messages API; managed from Claude Console workspace settings by org admins.
 
 ## Why it matters
 
@@ -113,6 +115,7 @@ The simple reason is that sessions that do not need a sandbox immediately can st
 
 ## Recent changes
 
+- [2026-05-20] Anthropic shipped self-hosted sandboxes (public beta) and MCP tunnels (research preview): tool execution can run on customer infrastructure or through Cloudflare/Daytona/Modal/Vercel while Anthropic keeps the orchestration loop; MCP tunnels reach private MCP servers without exposing them publicly.
 - [2026-05-13] Anthropic says Managed Agents receives new Claude API capabilities such as advisor strategy, code execution, and web search on the same day they ship.
 - [2026-05-07] Dreams feature added (research preview): periodic session reflection producing consolidated memory stores for long-term pattern recognition across sessions; available via research preview access request
 - [2026-04-24] Built-in memory launched in public beta: file-backed stores, scoped sharing, audit logs, rollback/redaction controls, and Claude Console event visibility
@@ -126,3 +129,5 @@ The simple reason is that sessions that do not need a sandbox immediately can st
 - [Anthropic platform expansion — April 2026](../sources/newsletters/anthropic-platform-expansion-april-2026.md)
 - [Built-in memory for Claude Managed Agents](../sources/articles/claude-managed-agents-memory.md)
 - [Claude Managed Agents same-day Claude API feature parity](../sources/tweets/claude-managed-agents-feature-parity-2026-05-13.md)
+- [New in Claude Managed Agents: self-hosted sandboxes and MCP tunnels](../sources/articles/claude-managed-agents-updates-2026-05.md)
+- [The Code — Anthropic is onto something (2026-05-20)](../sources/newsletters/anthropic-is-onto-something.md)

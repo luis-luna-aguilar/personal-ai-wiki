@@ -4,7 +4,7 @@ type: concept
 domains: [agents]
 tags: [agentic]
 as_of: 2026-07-07
-sources: [agent-memory-without-vector-db, memory-vs-context-rot-february, agent-memory-systems-layer-2026-06]
+sources: [agent-memory-without-vector-db, memory-vs-context-rot-february, agent-memory-systems-layer-2026-06, minteval-paper-2026-05, ainews-erdos-benchmarks-cluster-2026-05-21]
 ---
 
 # Agent memory
@@ -18,6 +18,7 @@ Agent memory is the problem of helping an AI system recover the right facts from
 - Engram-style systems frame memory as asynchronous infrastructure that turns traces and activity into cleaned, scoped memories rather than stuffing every event back into the prompt.
 - A-TMA-style "ghost memory" work highlights a concrete failure mode: stale and current facts can be retrieved together, causing long-running assistants to act on outdated state.
 - ReContext and BlockSearch-style work suggests some memory failures are inference-time evidence-use problems, not only storage problems.
+- MINTEval (arXiv, 2026-05) gives independent benchmark evidence for this: across 7 systems (vanilla long-context LLMs, RAG, and memory-augmented agent frameworks) evaluated on long, interference-heavy contexts (state tracking, multi-turn dialogue, Wikipedia revisions, GitHub commits — averaging 138.8k tokens, up to 1.8M), average accuracy is only 27.9% (best system 33.4%, per AINews' recap of the authors' thread), with accuracy degrading further as the number of intervening updates increases.
 
 ## Why it matters
 
@@ -36,6 +37,7 @@ Many agent systems fail not because they lack storage, but because they surface 
 ## Recent changes
 
 - [2026-07-07] AINews memory cluster updates agent memory from retrieval problem to systems layer: extraction, dedupe, reconciliation, scoping, lifecycle, and offline trace writeback.
+- [2026-05-19] MINTEval published: a dedicated benchmark for long-horizon memory under multi-target interference; 7 evaluated systems average 27.9% accuracy (best 33.4% per AINews' recap), giving independent confirmation that current memory systems are far from solved.
 
 ## Related
 
@@ -43,11 +45,14 @@ Many agent systems fail not because they lack storage, but because they surface 
 
 ## Caveats
 
-- The current source set is centered on one startup's claims and a benchmark delta reported through newsletter coverage
-- This should be read as an architectural signal worth watching, not as proof that vector retrieval is obsolete in every setting
+- Most of the lifecycle-architecture framing (extraction, dedupe, reconciliation) still traces back to one startup's claims (Supermemory, plus Engram) and a benchmark delta reported through newsletter coverage, not to independent benchmarks
+- MINTEval is an independent academic benchmark (an arXiv preprint, not a vendor claim) and gives harder evidence that current memory systems — vanilla long-context LLMs, RAG, and memory-augmented agents alike — struggle badly (27.9% avg accuracy) on realistic interference-heavy tasks
+- This should still be read as an architectural signal worth watching, not as proof that vector retrieval is obsolete in every setting — MINTEval shows every evaluated approach struggling, not one architecture winning
 
 ## Sources
 
 - [Agent memory without vector databases](../sources/newsletters/agent-memory-without-vector-db.md)
 - [Memory versus context rot in late February](../sources/newsletters/memory-vs-context-rot-february.md)
 - [Agent memory becomes a systems layer](../sources/newsletters/agent-memory-systems-layer-2026-06.md)
+- [MINTEval (arXiv paper)](../sources/papers/minteval-paper-2026-05.md)
+- [AINews — agent-benchmark cluster (InferenceBench, Terminal-Bench Science, MINTEval)](../sources/newsletters/ainews-erdos-benchmarks-cluster-2026-05-21.md)

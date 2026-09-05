@@ -6,7 +6,7 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
-Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`, `agent-sandbox-infra`
 
 ### spec-driven-development
 - **Parent domain(s):** coding
@@ -49,6 +49,12 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Applies to types:** tool
 - **Definition:** End-to-end AI products built specifically for legal workflows (matters, contracts, research, drafting), as distinct from generic horizontal assistants applied to legal use cases.
 - **Examples:** [Harvey](../tools/harvey.md)
+
+### agent-sandbox-infra
+- **Parent domain(s):** agents
+- **Applies to types:** tool
+- **Definition:** Managed compute providers whose core product is execution environments purpose-built for AI agents — instant-start, stateful, isolated sandboxes or agent-operable cloud primitives that scale from zero to tens of thousands of concurrent instances for background-agent and RL/eval workloads.
+- **Examples:** [Daytona](../tools/daytona.md), [Modal](../tools/modal.md), [Railway](../tools/railway.md)
 
 ### agentic-devops
 - **Parent domain(s):** coding, agents

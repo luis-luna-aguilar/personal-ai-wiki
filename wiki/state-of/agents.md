@@ -4,7 +4,7 @@ type: state-of
 domains: [agents]
 tags: []
 as_of: 2026-07-08
-sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, ainews-2026-04-22, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents, cursor-cloud-agents-march, cursor-cloud-agents-february, google-adk, openai-deep-research, gemini-deep-research-max, futurehouse-homepage, uipath-maestro-introduction, anthropic-mcp, google-a2a, legacy-ai-tools-roadmap-xlsx, microsoft-foundry-agents-2026, google-cloud-next-2026, superhuman-2026-04-23, awsai-cowork-bedrock-2026-04-23, microsoft-copilot-agent-mode-office, claude-managed-agents-memory, agentic-devops-deep-research, agent-infrastructure-harness-2026-05-01, codex-for-work-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, inference-inflection-agent-runtime-2026-04-30, persistent-cloud-computers-agents-2026-05-01, production-agent-orchestration-2026-04-29, hermes-openclaw-persistent-agents-2026-05-11, metr-long-horizon-2026-05-12, thinking-machines-interaction-2026-05-12, frontier-labs-deployment-services-2026-05-13, multica-repo, notion-external-agents-api-may-2026, langchain-interrupt-may-2026, devin-auto-triage-2026-05, papercliping, ainews-june-06-2026, vercel-agents-new-software-2026-07-03, ainews-not-much-happened-2026-07-02, the-code-devin-security-2026-07-02, claude-tag-slack-agent-2026-06, claude-cowork-mobile-2026-07, gemini-managed-agents-2026-07, kimi-goal-mode-creative-agents-2026-06]
+sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, ainews-2026-04-22, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents, cursor-cloud-agents-march, cursor-cloud-agents-february, google-adk, openai-deep-research, gemini-deep-research-max, futurehouse-homepage, uipath-maestro-introduction, anthropic-mcp, google-a2a, legacy-ai-tools-roadmap-xlsx, microsoft-foundry-agents-2026, google-cloud-next-2026, superhuman-2026-04-23, awsai-cowork-bedrock-2026-04-23, microsoft-copilot-agent-mode-office, claude-managed-agents-memory, agentic-devops-deep-research, agent-infrastructure-harness-2026-05-01, codex-for-work-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, inference-inflection-agent-runtime-2026-04-30, persistent-cloud-computers-agents-2026-05-01, production-agent-orchestration-2026-04-29, hermes-openclaw-persistent-agents-2026-05-11, metr-long-horizon-2026-05-12, thinking-machines-interaction-2026-05-12, frontier-labs-deployment-services-2026-05-13, multica-repo, notion-external-agents-api-may-2026, langchain-interrupt-may-2026, devin-auto-triage-2026-05, papercliping, ainews-june-06-2026, vercel-agents-new-software-2026-07-03, ainews-not-much-happened-2026-07-02, the-code-devin-security-2026-07-02, claude-tag-slack-agent-2026-06, claude-cowork-mobile-2026-07, gemini-managed-agents-2026-07, kimi-goal-mode-creative-agents-2026-06, railway-agent-native-cloud-2026-05-20, daytona-giving-agents-computers-2026-05-21, modal-agent-experience-2026-07-08, ainews-new-ai-infra-unicorns-2026-05-22]
 ---
 
 # State of Agents
@@ -69,6 +69,14 @@ Agent-compatible infrastructure tools and control planes for provisioning, diagn
 - [Skyflo](../tools/skyflo.md) — approval-gated AI control layer for Kubernetes and CI/CD; strongest current example of explicit mutate-with-approval ops design *(as of 2026-04-24)*
 - [Checkly](../tools/checkly.md) — outside-in post-deploy verification via synthetic monitoring and Playwright-based checks *(as of 2026-04-24)*
 
+### Agent sandbox / compute infrastructure
+
+Managed compute providers whose core product is execution environments purpose-built for agents: instant-start, stateful, isolated sandboxes and agent-operable cloud primitives that scale from zero to tens of thousands of concurrent instances for background-agent and RL/eval workloads. See [Agent-native compute infrastructure](../trends/agent-native-compute.md) for the trend view.
+
+- [Daytona](../tools/daytona.md) — bare-metal sandboxes on its own scheduler; ~60ms startup, 50K sandboxes in ~75s, largest customer ~850K/day; RL/eval now ~50% of usage; Windows/macOS computer-use sandboxes in progress *(as of 2026-05-22)*
+- [Modal](../tools/modal.md) — serverless AI cloud reframing from developer to "agent experience"; 100K-sandbox RL rollouts, sidecars, 17-cloud capacity pool; $355M Series C *(as of 2026-07-08)*
+- [Railway](../tools/railway.md) — bare-metal deployment platform with copy-on-write production forks, progressive rollouts, and a CLI-first agent interface *(as of 2026-05-20)*
+
 ### Agent-native documents
 
 Document surfaces built for humans and agents to collaborate inside the same working artifact, with revision, provenance, and comments happening in-place instead of around pasted AI output.
@@ -90,16 +98,13 @@ Platforms built to support literature-driven or discovery-oriented scientific wo
 
 ## Recent changes
 
+- [2026-07-08] Added `Agent sandbox / compute infrastructure` subcategory with [Daytona](../tools/daytona.md), [Modal](../tools/modal.md), and [Railway](../tools/railway.md); agent execution-layer providers now tracked here and in [Agent-native compute infrastructure](../trends/agent-native-compute.md)
 - [2026-07-08] Claude Cowork beta expands to web/mobile and strengthens scheduled background work, making Cowork a cross-device agent surface rather than only a desktop app.
 - [2026-07-08] Google managed agents in the Gemini API add MCP support, background execution, custom function calling, and credential refresh, making hosted agent runtime features first-party Gemini primitives.
-- [2026-06-19] Kimi Work adds Goal Mode, a long-running desktop-agent loop that continues until the user-defined objective is reached.
 - [2026-07-03] Vercel eve interview adds an agent-framework signal: agents as a new software category needing resumability, long-running jobs, skills, sandboxes, observability, and evals.
-- [2026-06-24] Claude Tag beta makes Slack a multiplayer Anthropic agent surface: Claude can be tagged into threads with selected channel/tool/data/codebase access.
 - [2026-07-02] Devin Security Swarm showed Agentic MapReduce applied to enterprise security: fan out bounded agents, aggregate findings, validate exploitability, and hand humans reviewable PRs.
 - [2026-07-02] OpenWiki and wiki memory reinforce maintained codebase documentation as an agent context layer.
+- [2026-06-24] Claude Tag beta makes Slack a multiplayer Anthropic agent surface: Claude can be tagged into threads with selected channel/tool/data/codebase access.
+- [2026-06-19] Kimi Work adds Goal Mode, a long-running desktop-agent loop that continues until the user-defined objective is reached.
 - [2026-06-06] New benchmarks: SWE-Marathon (1B-token budget, long-horizon software projects); Meta-Agent Challenge (anti-reward-hacking); Princeton ICML 2026: top models still unreliable on repeated identical tasks
 - [2026-05-19] Devin Auto-Triage: Cognition ships always-on session-persistent bug triage agent; Slack monitoring + parent/child Devin structure + long-term deduplication memory
-- [2026-05-14] Anthropic launched Claude for Small Business and Claude for Legal on Cowork: 27 one-click agentic workflows; first direct vertical automation bundles targeting end-users rather than developers
-- [2026-05-18] Multica launches
-- [2026-05-15] LangChain Interrupt cluster: SmithDB (purpose-built agent trace DB, 12-15× faster, DataFusion+Vortex), LangSmith Engine (trace→cluster→fix loop), LangChain Labs (continual learning from production traces, Prime Intellect partnership) as open-source managed-agents platform: agents are first-class project-board members, not just CLI tools; Squads abstraction routes work through a leader agent; skills compound across sessions
-- [2026-05-14] Notion External Agents API: Claude Code, Cursor, Codex, Devin, Warp, Decagon can now operate inside Notion workspaces via secure Workers sandbox — Notion joins Proof as an agent-native document surface

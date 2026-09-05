@@ -4,20 +4,21 @@ type: model
 domains: [models, cybersecurity, agents]
 subcategory: frontier-model
 tags: [anthropic, closed-source, beta]
-as_of: 2026-05-19
-sources: [glasswing, metr-long-horizon-2026-05-12, claude-mythos-m5-bypass-2026-05, cloudflare-glasswing-2026-05]
+as_of: 2026-05-23
+sources: [glasswing, metr-long-horizon-2026-05-12, claude-mythos-m5-bypass-2026-05, cloudflare-glasswing-2026-05, anthropic-glasswing-10k-vulnerabilities]
 ---
 
 # Claude Mythos Preview
 
 Anthropic's restricted-preview frontier model, demonstrated through Project Glasswing. Not publicly available. Operates above the current Opus 4.7 tier in autonomous cybersecurity capability.
 
-## Current status (as of 2026-05-12)
+## Current status (as of 2026-05-23)
 
 - Not publicly available; accessible only via Anthropic's Project Glasswing partner program
 - Used to autonomously identify thousands of zero-day vulnerabilities in every major OS and web browser — without human steering
 - Partners confirmed: Cisco, AWS, Microsoft
 - Substantially outperforms Claude Opus 4.6 on the CyberGym benchmark
+- **Program-wide results (May 2026):** Anthropic said Project Glasswing and its partners found more than 10,000 high- or critical-severity vulnerabilities in essential software within a month of the program's launch; per AINews' recap of the post, Anthropic framed this as a warning that the industry will need to adapt to the volume of findings a model at Mythos's capability level can produce.
 
 ## METR long-horizon benchmark (May 2026)
 
@@ -66,6 +67,7 @@ Mythos Preview is the first public evidence of an Anthropic model operating auto
 
 ## Recent changes
 
+- [2026-05-23] Anthropic reported Project Glasswing and partners found 10,000+ high/critical-severity vulnerabilities in essential software within a month of launch — a program-wide figure, not just the Cloudflare result; AINews' recap adds that Anthropic framed it as an industry-wide volume-adaptation warning.
 - [2026-05-19] Cloudflare Project Glasswing detailed writeup: exploit chain construction, proof generation loop, inconsistent organic refusals, and 8-stage narrow-scope harness architecture confirmed
 - [2026-05-18] Apple M5 MIE bypass: Calif team + Mythos Preview defeated Memory Integrity Enforcement in <5 days — first public kernel memory corruption on M5; small team + frontier AI matches org-scale security research throughput
 - [2026-05-12] METR long-horizon benchmark: 50% at 16+ hours (breaks scale ceiling); 80% reliability threshold ~3 human-hours; Gemini 3.1 Pro closest competitor at ~1.5 hours
@@ -77,3 +79,4 @@ Mythos Preview is the first public evidence of an Anthropic model operating auto
 - [METR long-horizon benchmark — The Fallacy of the 16-Hour Agent](../sources/newsletters/metr-long-horizon-2026-05-12.md)
 - [Apple M5 MIE bypass — Claude Mythos Preview](../sources/newsletters/claude-mythos-m5-bypass-2026-05.md)
 - [Project Glasswing: what Mythos showed us — Cloudflare](../sources/articles/cloudflare-glasswing-2026-05.md)
+- [Anthropic on X — Project Glasswing finds 10,000+ vulnerabilities](../sources/tweets/anthropic-glasswing-10k-vulnerabilities.md)

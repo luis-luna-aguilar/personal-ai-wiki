@@ -1,5 +1,12 @@
 # State of Agents — History
 
+## Archived from current page on 2026-09-05
+
+- [2026-05-18] Multica launches
+- [2026-05-15] LangChain Interrupt cluster: SmithDB (purpose-built agent trace DB, 12-15× faster, DataFusion+Vortex), LangSmith Engine (trace→cluster→fix loop), LangChain Labs (continual learning from production traces, Prime Intellect partnership) as open-source managed-agents platform: agents are first-class project-board members, not just CLI tools; Squads abstraction routes work through a leader agent; skills compound across sessions
+- [2026-05-14] Anthropic launched Claude for Small Business and Claude for Legal on Cowork: 27 one-click agentic workflows; first direct vertical automation bundles targeting end-users rather than developers
+- [2026-05-14] Notion External Agents API: Claude Code, Cursor, Codex, Devin, Warp, Decagon can now operate inside Notion workspaces via secure Workers sandbox — Notion joins Proof as an agent-native document surface
+
 - [2026-05-05] Model-pool routing and local-first browser agents emerge as a two-tier orchestration pattern: AI-managed orchestrators route across model pools at the top; local browser agents handle tasks client-side without cloud handoff
 - [2026-05-01] Production harness engineering expanding into deployment manifests, auth, RBAC, credential management, and artifact-backed multi-agent collaboration — beyond loop logic and evals alone
 

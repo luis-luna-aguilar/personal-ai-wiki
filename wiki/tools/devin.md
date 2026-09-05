@@ -5,7 +5,7 @@ domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: []
 as_of: 2026-07-14
-sources: [devin-auto-triage-2026-05, the-code-devin-security-2026-07-02, ainews-not-much-happened-2026-07-02, devinai-blog-agentic-map-reduce, cognitioncom-blog-devin-fusion, cognitioncom-blog-ai-productivity]
+sources: [devin-auto-triage-2026-05, the-code-devin-security-2026-07-02, ainews-not-much-happened-2026-07-02, devinai-blog-agentic-map-reduce, cognitioncom-blog-devin-fusion, cognitioncom-blog-ai-productivity, the-code-spacexai-drops-grok-45-2026-07-09]
 ---
 
 # Devin
@@ -27,6 +27,7 @@ Cognition's autonomous coding agent, initially positioned as one of the first "f
 - **Devin Fusion (preview):** a multi-model "sidekick" harness — a frontier model runs alongside a cheaper sidekick model, each a fully capable agent with its own tools and persistent, separately-cached context; the frontier model plans, interprets ambiguity, and reviews, while delegating mechanical or well-scoped work to the sidekick; a lightweight classifier can reassign which model leads mid-session, timed to coincide with context-compaction points so the switch doesn't cost an extra cache miss
 - On **FrontierCode Extended** (a cost-aware coding benchmark tracking both score and average cost per task), Fusion matches frontier-model performance at **35% lower cost** than running Opus 4.8 or GPT-5.5 alone, and **41% lower cost** when paired with Fable 5 (measured before Fable 5's access was suspended); internally, **88%** of Cognition's own merged PRs were driven entirely by the automated Fusion router
 - **Session productivity estimator:** an automated system that reviews each completed Devin session, classifies whether it produced useful (typically merged) work, then estimates the equivalent human-engineering hours it saved; calibrated against 258 self-reported sessions from 126 users, reaching `r_log = 0.74` on held-out data, deliberately calibrated to underestimate rather than overestimate; now running in production with customers — Cognition frames this as the first automated system measuring AI engineering productivity in production
+- **SWE-1.7 (July 2026):** a budget frontier coding model for Devin, post-trained from Kimi K2.7 inside Devin's own agent harness; per The Code's recap, Cognition claims it matches GPT-5.5 within a point on FrontierCode at roughly $2/task with Opus 4.8 slightly ahead (secondhand — tier and numeric score unspecified, Cognition's blog post not yet read); can summarize its own progress and resume where it left off, enabling coding sessions up to six hours
 
 ## Why it matters
 
@@ -38,8 +39,9 @@ Security Swarm extends the same architecture into enterprise security work, and 
 
 - [2026-07-14] Cognition detailed Agentic MapReduce (Plan/Shard/Map/Reduce/Verify) as the architecture behind Security Swarm; reported 72% recall on a CVE-pinned benchmark vs. rival scanners.
 - [2026-07-14] Cognition's session-level productivity estimator (`r_log = 0.74`, human-hours-equivalent, calibrated conservative) is now running in production with customers.
-- [2026-06-29] Devin Fusion (preview): multi-model "sidekick" harness matches frontier performance at 35% lower cost (41% with Fable 5) on FrontierCode Extended; 88% of Cognition's internal merged PRs driven by the automated router.
+- [2026-07-09] Cognition released SWE-1.7, a budget frontier coding model post-trained from Kimi K2.7 inside Devin's agent harness; per The Code's recap, Cognition claims it matches GPT-5.5 within a point on FrontierCode at ~$2/task with Opus 4.8 slightly ahead (secondhand, tier unspecified); supports up to six-hour sessions via self-summarization and resume.
 - [2026-07-02] Cognition shipped Devin Security Swarm for parallel vulnerability discovery, sandbox reproduction, exploitability validation, and fix PRs.
+- [2026-06-29] Devin Fusion (preview): multi-model "sidekick" harness matches frontier performance at 35% lower cost (41% with Fable 5) on FrontierCode Extended; 88% of Cognition's internal merged PRs driven by the automated router.
 - [2026-05-19] Auto-Triage shipped: always-on Slack monitoring, parent/child Devin structure, shared long-term deduplication memory
 
 ## Sources
@@ -50,3 +52,4 @@ Security Swarm extends the same architecture into enterprise security work, and 
 - [Agentic MapReduce (Cognition/Devin blog)](../sources/articles/devinai-blog-agentic-map-reduce.md)
 - [Devin Fusion: Frontier Performance at 35% Lower Cost](../sources/articles/cognitioncom-blog-devin-fusion.md)
 - [Estimating the Productivity of an Autonomous AI Software Engineer](../sources/articles/cognitioncom-blog-ai-productivity.md)
+- [The Code - SpaceXAI drops Grok 4.5](../sources/newsletters/the-code-spacexai-drops-grok-45-2026-07-09.md)

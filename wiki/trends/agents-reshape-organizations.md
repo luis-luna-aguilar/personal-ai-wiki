@@ -4,7 +4,7 @@ type: trend
 domains: [agents, coding]
 tags: [agentic]
 as_of: 2026-07-01
-sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, openclaw-operating-pattern-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, cursor-third-era, knowledge-work-os-agent-apps-2026-04-28, frontier-labs-deployment-services-2026-05-13, ai-native-organizations-operating-model-2026-05-13, stanford-labor-june-2026, ainews-fable5-june-2026, github-kyle-daigle-june-2026, software-factories-fde-2026-07]
+sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, openclaw-operating-pattern-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, cursor-third-era, knowledge-work-os-agent-apps-2026-04-28, frontier-labs-deployment-services-2026-05-13, ai-native-organizations-operating-model-2026-05-13, stanford-labor-june-2026, ainews-fable5-june-2026, github-kyle-daigle-june-2026, software-factories-fde-2026-07, superhuman-autonomous-growth-agent-2026-05-21]
 ---
 
 # Agents reshape organizations (leverage moves from individual to org)
@@ -44,6 +44,7 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - **AI-native organization framing is becoming more operational.** Agent-only startup rhetoric, agent architect roles, company expectations that employees use AI natively, and the delegation/collaboration split all point to humans allocating attention and review rather than personally executing every step.
 
 - **Agents' Last Exam (ALE, 2026):** Labor-market-aligned benchmark across 1,500+ tasks and 55 occupations. Top agents score 2.6% on the hardest tier. Provides a grounded counterpoint to displacement narratives: agents can do some professional tasks autonomously, but the hardest tier of real occupation-scoped work remains largely out of reach.
+- **Tempo's "AI head of growth" agent (per Superhuman, 2026-05-21).** Superhuman's newsletter reports that Tempo launched an unprompted, always-on growth agent that builds and deploys a weekly growth plan by pulling from a company's ad accounts, reviews, and e-commerce platform, using seven distinct agent roles with decisions tracked live on a canvas; Superhuman puts the launch video at 1.5M+ views. Thinly sourced (single newsletter blurb, no primary product fetch, no independent coverage), but it is a named example of a single-purpose "agent employee" operating in a non-engineering business-ops function — the kind of foothold outside engineering this trend predicts but has had few named examples of so far.
 
 ## What to watch
 
@@ -60,13 +61,15 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 
 - Is this trend already happening in practice, or is it mostly Twitter / vendor-blog narrative? We now have a stronger first-party Ramp data point, but still need more independent or cross-company reporting before treating it as settled.
 - Where are the *first* non-engineering knowledge-work functions to feel this — legal, ops, finance, support? Each will probably go at a different pace.
+- Is Tempo's agent a durable, verifiable example, or mostly a marketing-video claim? Revisit with a primary source (product page, case study, or independent coverage) before treating the specific mechanics (seven agent roles, canvas-tracked decisions) as established fact.
 
 ## Recent changes
 
 - [2026-07-01] AIEWF/Latent Space coverage connects software factories to FDE and agent-engineer teams that bind agents into customer systems, SOPs, release paths, and change management.
-- [2026-06-02] GitHub 14x commit growth: 275M AI agent commits/week (April 2026), pace for 14B in 2026 vs 1B in 2025; infrastructure breaking: MySQL One permissioning, Actions CPU, monorepo systems; 200M+ users with "developer" being redefined
-- [2026-06-10] Added ALE benchmark: 1,500+ tasks, 55 occupations, 300+ domain experts; top agents 2.6% on hardest tier — measurement of the gap between benchmark coding performance and real occupational task performance
 - [2026-06-16] Stanford 25,000-firm study: AI-exposed early-career workers (22-25) declining 3.8%/yr since 2022; junior software devs and customer service hardest hit; hollow pipeline concern is now data-backed
+- [2026-06-10] Added ALE benchmark: 1,500+ tasks, 55 occupations, 300+ domain experts; top agents 2.6% on hardest tier — measurement of the gap between benchmark coding performance and real occupational task performance
+- [2026-06-02] GitHub 14x commit growth: 275M AI agent commits/week (April 2026), pace for 14B in 2026 vs 1B in 2025; infrastructure breaking: MySQL One permissioning, Actions CPU, monorepo systems; 200M+ users with "developer" being redefined
+- [2026-05-21] Added Tempo's autonomous "AI head of growth" as a concrete non-engineering agent-employee example (seven agent roles, canvas-tracked decisions), per Superhuman's newsletter; single secondary blurb, flagged for follow-up if a primary source appears.
 - [2026-05-13] Added frontier-lab deployment-services framing and AI-native operating-model signal: the bottleneck is increasingly workflow design, context, permissions, evals, handoffs, and human attention allocation.
 - [2026-05-05] Workflow-container switching costs emerging: Every argues that left-sidebar desktop apps with agentic terminals (Codex, Claude, Cursor) are converging on a common interface shape; sticky workflow state across sessions creates platform-lock dynamics as organizations commit to one knowledge-work container
 - [2026-04-22] Added Cursor/Truell internal data: 35% of PRs from cloud agents; third-era dev pattern operational inside Cursor itself
@@ -90,3 +93,4 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - [AINews — Fable 5 / Mythos 5 launch (June 10)](../sources/newsletters/ainews-fable5-june-2026.md)
 - ["GitHub's Plan for Agents" — Kyle Daigle on Latent Space (June 2)](../sources/newsletters/github-kyle-daigle-june-2026.md)
 - [Software factories and forward-deployed agent engineering](../sources/newsletters/software-factories-fde-2026-07.md)
+- [Meet the autonomous growth agent (Superhuman)](../sources/newsletters/superhuman-autonomous-growth-agent-2026-05-21.md)

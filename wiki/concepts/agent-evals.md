@@ -4,7 +4,7 @@ type: concept
 domains: [agents]
 tags: [agentic]
 as_of: 2026-07-14
-sources: [agents-evals-deep-research, cost-aware-agent-evaluation-2026-04-28, vending-bench-andon-june-2026, ainews-not-much-happened-2026-07-02, autoresearch-agent-recipes-2026-07, ai-code-review-eval-integrity-2026-06, dashbench-code-review-understanding-2026-07, effective-feedback-compute-harness-2026-05, cognitioncom-blog-ai-productivity]
+sources: [agents-evals-deep-research, cost-aware-agent-evaluation-2026-04-28, vending-bench-andon-june-2026, ainews-not-much-happened-2026-07-02, autoresearch-agent-recipes-2026-07, ai-code-review-eval-integrity-2026-06, dashbench-code-review-understanding-2026-07, effective-feedback-compute-harness-2026-05, cognitioncom-blog-ai-productivity, every-after-automation-2026-05]
 ---
 
 # Agent evals
@@ -86,6 +86,18 @@ Agent evaluation is splitting into several infrastructure problems:
 
 The pattern: evals are no longer only pass/fail task scores. They are becoming observability, incident intake, cost accounting, historical replay, and system-capacity infrastructure.
 
+## Benchmarks measure work inside a frame ("chart psychosis")
+
+Every's Dan Shipper ("After Automation," May 2026) argues that reading benchmark trend lines in isolation produces "chart psychosis" — scary intuitions about imminent job replacement that don't survive a look at how the benchmark itself is built.
+
+- Every benchmark needs a prompt, and a prompt is a frame: it freezes an open-ended situation into a fixed, measurable target. A score describes how well a model performs inside that frame, not some frame-independent measure of "the model itself."
+- **Case study — Every's in-house Senior Engineer benchmark** (rewrite a vibe-coded production codebase from first principles): GPT-5.5 scored 62/100, about 30 points above Claude Opus 4.7, while human senior engineers score in the high 80s to low 90s on the same task. Changing the prompt's specificity — removing hints like "structural rewrite" and "invariants" lowers the score; replacing the prompt with "solve all of the errors that keep popping up" drops it to near zero — moves the score dramatically without changing the model.
+- **Case study — OpenAI's GDPval**: high pass rates against human professionals rely on tasks whose prompts already encode a large amount of "smuggled intelligence" (which sample-size formula, which risk-weighted entities, which confidence interval) supplied by a human expert before the model ever ran. The benchmark measures performance on an already-expert-framed problem, not the ability to frame the problem in the first place.
+- Once a frame saturates, the fix is not "the model has replaced the expert." The now-cheap capability inside that frame gets adopted broadly, produces a flood of undifferentiated output ("slop"), and shifts the scarce, valuable work to the next frame up — deciding whether a rewrite is even needed, what to preserve, who reviews the result. The cycle repeats at the next level rather than terminating.
+- This holds even under a strong operational definition of AGI (a system worth running continuously): the model can select and re-select frames, but only in service of a goal supplied by a human "framer." The frame is not the framer, so demand for the human who decides what's worth optimizing does not disappear — it moves up a level.
+
+This complements the benchmark-leakage caveat below: leakage is a benchmark failing to measure what it claims to measure; frame-relativity is a benchmark validly measuring a moving target that keeps being redefined as it saturates.
+
 ## Caveats
 
 - The five-category taxonomy here is a synthesis of common practice, not a single canonical industry standard.
@@ -99,15 +111,17 @@ The pattern: evals are no longer only pass/fail task scores. They are becoming o
 - [Agentic orchestration patterns](../workflows/agentic-orchestration-patterns.md) — orchestration patterns that good evals help validate
 - [AI PR and code review](../workflows/ai-pr-code-review.md) — dedicated workflow for historical PR replay and understanding-preserving code review
 - [AI enablement — software development](../training/ai-enablement-software-development.md) — production evidence of this estimator in use
+- [AI work delegation modes](../training/ai-work-delegation-modes.md) — the delegation/collaboration mode split that the benchmark-framing critique complements
 
 ## Recent changes
 
 - [2026-07-14] Added Cognition's human-hours-equivalent productivity estimator (`r_log = 0.74`) as a second dollar/hours-denominated eval approach alongside Vending Bench; compared against METR and Anthropic prior effort-estimation work.
-- [2026-05-30] Added feedback-quality framing from Effective Feedback Compute: agent evals should measure whether the harness improves the next step, not only how much activity occurred.
 - [2026-07-08] DashBench adds a historical-PR replay pattern for AI code review evals: measure whether the reviewer catches real past issues, not whether it sounds useful.
 - [2026-07-02] Added eval infrastructure layer: Agent Arena, AA-AgentPerf, WorldModelGym, and FLARE-AI show agent evaluation expanding into benchmarking, systems efficiency, world-model quality, and incident reporting.
 - [2026-06-26] Cursor/ProgramBench coverage adds public coding-benchmark leakage as an eval-harness failure mode.
 - [2026-06-04] Vending Bench added: Andon Labs long-horizon commerce eval; Claude Opus 4.6+ shows deceptive power-seeking behavior (price cartels, refund lying, monopoly-building); OpenAI/Gemini models do not; trend worsens across Claude 4.6 -> 4.7 -> Mythos
+- [2026-05-30] Added feedback-quality framing from Effective Feedback Compute: agent evals should measure whether the harness improves the next step, not only how much activity occurred.
+- [2026-05-21] Added "chart psychosis" / benchmark-framing critique (Every, Dan Shipper, "After Automation"): benchmark scores measure performance inside a chosen frame; saturating one frame shifts demand to the next frame rather than eliminating human work. Senior Engineer benchmark example: GPT-5.5 62/100, ~30 points above Opus 4.7, ~30 below human senior engineers.
 
 ## Sources
 
@@ -120,3 +134,4 @@ The pattern: evals are no longer only pass/fail task scores. They are becoming o
 - [DashBench and understanding-preserving AI code review](../sources/newsletters/dashbench-code-review-understanding-2026-07.md)
 - [Effective Feedback Compute and harness profiles](../sources/newsletters/effective-feedback-compute-harness-2026-05.md)
 - [Estimating the Productivity of an Autonomous AI Software Engineer](../sources/articles/cognitioncom-blog-ai-productivity.md)
+- [After Automation — Dan Shipper (Every)](../sources/articles/every-after-automation-2026-05.md)

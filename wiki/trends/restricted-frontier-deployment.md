@@ -3,8 +3,8 @@ title: Restricted frontier deployment
 type: trend
 domains: [models, agents]
 tags: [anthropic, openai]
-as_of: 2026-06-30
-sources: [restricted-frontier-deployment, anthropic-pentagon-boundaries-february, glasswing, fable-ban-june-2026, gpt-56-sol-restricted-preview-2026-06, ai-strategy-explicit-bets-2026-06, metr-gpt-5-6-sol-eval-2026-06]
+as_of: 2026-07-09
+sources: [restricted-frontier-deployment, anthropic-pentagon-boundaries-february, glasswing, fable-ban-june-2026, gpt-56-sol-restricted-preview-2026-06, ai-strategy-explicit-bets-2026-06, metr-gpt-5-6-sol-eval-2026-06, gpt-5-6-sol-preview-launch-2026-06, chatgpt-voice-gpt56-launch-2026-07]
 ---
 
 # Restricted frontier deployment
@@ -50,9 +50,11 @@ The practical response emerging across the field: **model neutrality as architec
 
 ## Restricted previews as access control (June 2026)
 
-Newsletter coverage of OpenAI's GPT-5.6/Sol restricted preview suggests the same access-control pattern may now extend beyond Anthropic: frontier model availability can be shaped by government requests, vetted partner lists, and staged API/Codex access rather than normal public launch. Because the official OpenAI page fetch was blocked by JavaScript verification, keep this as a caveated signal until a clean primary capture exists.
+OpenAI's GPT-5.6/Sol restricted preview shows the same access-control pattern extending beyond Anthropic: frontier model availability can be shaped by government requests, vetted partner lists, and staged API/Codex access rather than normal public launch. OpenAI's own June 26 announcement (captured via browser fallback after earlier fetches were blocked) confirms the terms: a limited preview for a small group of trusted partners whose participation was shared with the US government, at the government's request, via API and Codex, framed by OpenAI as a short-term step it does not want to become the long-term default while the cyber Executive Order framework is developed.
 
-METR's fetched evaluation confirms the predeployment-assessment side of the pattern: METR received API access to Sol, a railfree version, raw chain of thought, and a Codex harness setup guide under NDA. The product-availability claims remain newsletter-based, but the evaluation workflow itself is a concrete restricted-access frontier example.
+METR's fetched evaluation confirms the predeployment-assessment side of the pattern: METR received API access to Sol, a railfree version, raw chain of thought, and a Codex harness setup guide under NDA. The evaluation workflow itself is a concrete restricted-access frontier example.
+
+**Resolution (July 2026, reported):** the GPT-5.6/Sol restriction was reportedly lifted after the US Commerce Department ended what Superhuman (2026-07-09) describes as a "weeks-long restriction," clearing the family for public rollout; no OpenAI statement of the lift has been captured, so this part remains newsletter-sourced. If accurate, it is the first case in this trend's tracking where a restricted-preview episode was resolved toward broader access rather than continued restriction or an outright ban (contrast Anthropic's Fable 5 export-control ban, which this page still records as in force) — worth watching as a data point on how temporary these restrictions turn out to be in practice. See [GPT-5.6 Sol](../models/gpt-5-6-sol.md).
 
 ## Open questions
 
@@ -61,9 +63,10 @@ METR's fetched evaluation confirms the predeployment-assessment side of the patt
 
 ## Recent changes
 
+- [2026-07-09] Superhuman reports the GPT-5.6/Sol restricted-preview access restriction lifted after the US Commerce Department ended it, clearing the family for public rollout (no OpenAI statement captured) — if accurate, the first resolution-toward-access example tracked on this page, in contrast to Anthropic's Fable 5 export-control ban as recorded here. OpenAI's June 26 primary announcement captured, confirming the preview terms.
 - [2026-06-30] Every strategy framing added: teams should model regulatory and access shocks as explicit AI strategy assumptions.
-- [2026-06-26] METR's GPT-5.6 Sol evaluation reinforces restricted frontier deployment as a safety/evaluation workflow, not only a product availability decision.
 - [2026-06-29] Newsletter coverage reports OpenAI GPT-5.6/Sol restricted preview for coding/cybersecurity via vetted API and Codex access; official source capture still needed.
+- [2026-06-26] METR's GPT-5.6 Sol evaluation reinforces restricted frontier deployment as a safety/evaluation workflow, not only a product availability decision.
 - [2026-06-17] Fable 5 / Mythos 5 suspended globally under US government export controls — first regulatory rather than voluntary restriction; UK carve-out denied; 76 security experts protest (FreeFable.org)
 - [2026-04-22] Glasswing disclosed publicly: Mythos Preview found thousands of zero-days across major OSes and browsers autonomously; confirmed restricted deployment with partner program (Cisco, AWS, Microsoft)
 
@@ -75,3 +78,5 @@ METR's fetched evaluation confirms the predeployment-assessment side of the patt
 - [GPT-5.6 Sol restricted preview](../sources/newsletters/gpt-56-sol-restricted-preview-2026-06.md)
 - [AI strategy as explicit bets](../sources/newsletters/ai-strategy-explicit-bets-2026-06.md)
 - [METR predeployment evaluation of GPT-5.6 Sol](../sources/articles/metr-gpt-5-6-sol-eval-2026-06.md)
+- [OpenAI — Previewing GPT-5.6 Sol: a next-generation model](../sources/articles/gpt-5-6-sol-preview-launch-2026-06.md)
+- [Superhuman — ChatGPT Voice gets more human-like](../sources/newsletters/chatgpt-voice-gpt56-launch-2026-07.md)

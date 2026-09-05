@@ -4,14 +4,14 @@ type: trend
 domains: [science]
 tags: []
 as_of: 2026-07-06
-sources: [noetik-cancer-trials, gpt-rosalind-launch, self-driving-lab-radical-ai, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07, esmfold2-protein-world-model-2026-05]
+sources: [noetik-cancer-trials, gpt-rosalind-launch, self-driving-lab-radical-ai, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07, esmfold2-protein-world-model-2026-05, openai-erdos-unit-distance-2026-05]
 ---
 
 # AI in Science
 
 AI is increasingly moving from generic scientific assistance toward domain-specific scientific reasoning systems. The strongest current signal in this wiki is biology and drug discovery: models are being positioned not just as literature copilots, but as systems that infer treatment response, model tumor environments, or support translational medicine workflows.
 
-## Current status (as of 2026-04-21)
+## Current status (as of 2026-07-06)
 
 - Noetik is presented as using large multimodal tumor datasets and transformer models to predict treatment response and improve cancer-trial selection
 - The company reportedly signed a $50M GSK deal tied to this stack
@@ -21,6 +21,7 @@ AI is increasingly moving from generic scientific assistance toward domain-speci
 - Anthropic's Claude Science signal reinforces a platform-first strategy in science AI: build tools for analysis, visualization, traceability, reviewer-agent verification, scientific databases, and lab/HPC compute, then dogfood them on real preclinical and partner research workflows.
 - The hard part is not only hypothesis generation. Biological feedback is slow and expensive, so evaluation and verification workflows become the bottleneck the platform must solve.
 - ESMFold2 adds a protein-world-model signal: general transformer scaling and diverse protein data are being applied to structure prediction, protein interactions, antibody tasks, and design/discovery workflows.
+- The domain-specific-reasoning pattern is not limited to biology: an OpenAI general-purpose reasoning model (not a math-specialized or scaffolded system) disproved the 1946 Erdős planar unit-distance conjecture, verified by external mathematicians. OpenAI discloses no model name, runtime, or cost; the "<32 hours / <$1,000 / GPT-5.6" figures in secondary coverage are speculation — see [State of Science](../state-of/science.md).
 
 ## Protein world models
 
@@ -53,11 +54,12 @@ Anthropic argues AI has advanced faster in coding than biology not because of in
 
 ## Recent changes
 
-- [2026-05-27] Added ESMFold2 as a protein-world-model signal: open protein prediction/design engine, antibody interaction strength, and atlas-scale structure predictions.
 - [2026-07-06] Claude Science public beta confirms a science-workflow platform layer: reproducible artifacts, persistent kernels, 60+ scientific databases, scientific connectors, and local/HPC compute integration.
-- [2026-07-01] Official Claude Science announcement adds reviewer agents, BioNeMo/Boltz/OpenFold-style integrations, and Manifold Bio / Allen Institute / UCSF case studies.
 - [2026-07-05] Claude Science and Anthropic's internal drug programs reframed science agents as dogfooded workflow platforms, not only model demos.
+- [2026-07-01] Official Claude Science announcement adds reviewer agents, BioNeMo/Boltz/OpenFold-style integrations, and Manifold Bio / Allen Institute / UCSF case studies.
 - [2026-06-17] Added self-driving labs section: Radical AI achieving ~10× DARPA/GE MACH pace in alloys; infrastructure-as-bottleneck framing from Anthropic science blog
+- [2026-05-27] Added ESMFold2 as a protein-world-model signal: open protein prediction/design engine, antibody interaction strength, and atlas-scale structure predictions.
+- [2026-05-20] Added OpenAI's Erdős unit-distance disproof as evidence the "specialized scientific reasoning" pattern extends beyond biology into pure mathematics; anchored to OpenAI's own announcement (no model name, runtime, or cost disclosed)
 - [2026-04-21] Added biology and drug-discovery productization signals: Noetik and GPT-Rosalind
 - [2026-04-10] Page seeded from Superhuman AI newsletter overview of AI-driven scientific breakthroughs
 
@@ -69,3 +71,5 @@ Anthropic argues AI has advanced faster in coding than biology not because of in
 - [Claude Science beta](../sources/articles/claude-science-beta-2026-07-06.md)
 - [Claude Science AI workbench announcement](../sources/articles/claude-science-workbench-2026-07.md)
 - [Every - A Tale of Two Models](../sources/newsletters/every-tale-of-two-models-2026-07-05.md)
+- [ESMFold2 - The bitter lesson is coming for protein](../sources/newsletters/esmfold2-protein-world-model-2026-05.md)
+- [OpenAI model disproves the Erdős planar unit-distance conjecture](../sources/articles/openai-erdos-unit-distance-2026-05.md)

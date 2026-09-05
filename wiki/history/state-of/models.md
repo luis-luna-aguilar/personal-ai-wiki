@@ -1,5 +1,11 @@
 # State of Models — History
 
+## Archived from current page on 2026-09-05
+
+- [2026-05-29] Opus 4.8 launch coverage adds benchmark/pricing detail and positions Dynamic Workflows as the companion Claude Code systems feature.
+- [2026-05-23] China closes the price/capability gap: DeepSeek made its V4-Pro 75% discount permanent (Artificial Analysis via AINews: ~19x cheaper than Opus 4.7 to run its Intelligence Index — a May 2026 snapshot; DeepSeek has since restructured pricing); Qwen3.7-Max drew a positive third-party review (@ZhihuFrontier via AINews) on instruction-following/stability; a single-tweet ALE-Bench claim had Kimi-K2.6/DeepSeek-V4/GLM-5.1 beating several Western releases (unverified, see trend page). Cohere also shipped Command A+, its first fully open (Apache 2.0) model, added to Open-weight models.
+- [2026-05-19] Google I/O 2026: Gemini 3.5 Flash GA as default AI Mode model, added under Frontier models (per AINews: Terminal-Bench 2.1 76.2%, AA Intelligence Index 55 but 5.5x costlier than Gemini 3 Flash, Arena #9 text)
+
 ## Archived from current page on 2026-08-25
 
 - [2026-06-17] GLM-5.2 released (MIT, 744B/40B MoE, 1M context): #1 open Agent Arena, #2 Code Arena frontend, Terminal-Bench 2.1: 81.0; supersedes GLM-5.1 (archived to history/)

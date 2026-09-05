@@ -4,7 +4,7 @@ type: concept
 domains: [agents, coding, models]
 tags: [competitive-dynamics, moats]
 as_of: 2026-06-11
-sources: [ainews-open-models-june-2026]
+sources: [ainews-open-models-june-2026, brockman-model-not-product, ainews-all-model-labs-are-now-agent-labs]
 ---
 
 # Agent Labs vs Model Labs
@@ -43,6 +43,19 @@ This applies to Agent Labs too: the moat is not just integration depth but the j
 
 The Fable 5 export-control ban (June 2026) made model neutrality from a preference into a risk management requirement. Agent Labs that had built their harness to work with multiple models were less disrupted. This is Guo's thesis played out in practice: integration depth matters more than which underlying model you use.
 
+## Evidence the shift is accelerating (May 2026)
+
+- OpenAI President Greg Brockman: "the model alone is no longer the product" — AINews calls this a big reversal from a stance held almost uniformly by "Team Big Model" veterans, Brockman included.
+- AI21 shuttered its model team and is pivoting to agents (per AINews).
+- Even DeepSeek is building a "harness team" for the first time (per AINews).
+- AINews (swyx) adds a counterpoint to the model-neutrality implication above: a lab that co-trains its model with its own harness can post-train the model to perform well only inside its closed agent, funnelling users toward that agent at the expense of its model/API business — a force that works *against* model neutrality.
+
+## Recent changes
+
+- [2026-05-22] Greg Brockman's "the model alone is no longer the product," AI21 shuttering its model team for an agents pivot, and DeepSeek building its first harness team reinforce the Agent Labs framing — even historically model-only labs are absorbing harness work.
+
 ## Sources
 
 - [AINews — Open Models, Model Labs vs Agent Labs (June 11)](../sources/newsletters/ainews-open-models-june-2026.md)
+- [Greg Brockman: "the model alone is no longer the product"](../sources/tweets/brockman-model-not-product.md)
+- [AINews — All Model Labs are now Agent Labs](../sources/newsletters/ainews-all-model-labs-are-now-agent-labs.md)

@@ -3,8 +3,8 @@ title: AI work delegation modes
 type: training
 domains: [agents]
 tags: [agentic]
-as_of: 2026-05-13
-sources: [ai-work-splitting-2026-05-10, task-routing-cost-discipline-2026-05-13]
+as_of: 2026-05-21
+sources: [ai-work-splitting-2026-05-10, task-routing-cost-discipline-2026-05-13, every-after-automation-2026-05]
 ---
 
 # AI work delegation modes
@@ -43,11 +43,14 @@ The shift: the question is no longer "can I use AI here?" but "which mode fits t
 - **Delegating judgment-dependent work**: agent produces confident-sounding output that misses the point; no one caught it because it wasn't reviewed carefully
 - **Collaborating on delegatable work**: human micromanages step-by-step when the agent could complete the task autonomously; wastes the human's time without improving the output
 - **Unclear success criterion at handoff**: agent loops or produces superficially correct but substantively wrong output; criterion ambiguity at the start propagates to the end
+- **Personal agents go stale without a maintenance team**: Every rolled back an "every employee gets an agent" experiment to team/company-owned agents because individually owned agents degraded once their owner stopped tending them. Even a "simple" delegation-mode automation can hide real maintenance cost — one of Every's PowerPoint-generation automations needed 24 skills and 18 scripts, and costs $62 in tokens per deck.
 
 ## Evidence from practice
 
 - Framework synthesized from Anthropic's Claude platform team's guidance on designing agent workflows, reported by Every (May 2026)
 - Anthropic's Claude Managed Agents documentation for "Define outcomes" (May 2026) formalizes the delegation-mode approach at the platform level
+- Every's "After Automation" essay (Dan Shipper, May 2026) reframes delegation mode as "agent employees" — coworker agents you tag and ask to do work (Every's Claudie, Andy, Viktor) and embedded agents living inside a product workflow (Fin, which closed 40.1% of actionable customer-service conversations without a human in a recent week) — and reframes collaboration mode as the "human sandwich": a human frames the task, the agent collapses it, and a human judges and extends the result inside tools like Codex, Claude Code, and Claude Cowork.
+- OpenClaw's pull-request volume (44,469 PRs by May 16, 2026; 12,430 since April 1 — versus Kubernetes' 5,200 PRs in all of 2022) is offered as evidence of how fast delegation-mode volume rises once a skill becomes cheaply available, independent of whether review capacity rises with it.
 
 ## Open questions
 
@@ -58,3 +61,4 @@ The shift: the question is no longer "can I use AI here?" but "which mode fits t
 
 - [AI work splitting in two — Every](../sources/newsletters/ai-work-splitting-2026-05-10.md)
 - [Task routing and cost discipline — May 2026](../sources/newsletters/task-routing-cost-discipline-2026-05-13.md)
+- [After Automation — Dan Shipper (Every)](../sources/articles/every-after-automation-2026-05.md)

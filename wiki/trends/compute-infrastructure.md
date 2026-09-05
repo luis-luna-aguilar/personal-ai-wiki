@@ -3,15 +3,15 @@ title: Compute infrastructure as decisive competitive moat
 type: trend
 domains: [models]
 tags: [anthropic]
-as_of: 2026-07-02
-sources: [ainews-2026-04-21, runtime-improvements-improve-agent-economics, google-cloud-next-2026, ainews-2026-04-25, ai-earnings-capex-2026-04-30, inference-inflection-agent-runtime-2026-04-30, parallel-web-agent-apis-2026-04-30, persistent-cloud-computers-agents-2026-05-01, stripe-agent-native-commerce-fraud-2026-04-29, ainews-not-much-happened-2026-07-02, local-ai-infrastructure-2026-06, outputmaxxing-amp-compute-utilization-2026-06]
+as_of: 2026-07-08
+sources: [ainews-2026-04-21, runtime-improvements-improve-agent-economics, google-cloud-next-2026, ainews-2026-04-25, ai-earnings-capex-2026-04-30, inference-inflection-agent-runtime-2026-04-30, parallel-web-agent-apis-2026-04-30, persistent-cloud-computers-agents-2026-05-01, stripe-agent-native-commerce-fraud-2026-04-29, ainews-not-much-happened-2026-07-02, local-ai-infrastructure-2026-06, outputmaxxing-amp-compute-utilization-2026-06, railway-agent-native-cloud-2026-05-20, daytona-giving-agents-computers-2026-05-21, modal-agent-experience-2026-07-08, ainews-new-ai-infra-unicorns-2026-05-22]
 ---
 
 # Compute infrastructure as decisive competitive moat
 
 Frontier AI labs are securing compute capacity at a scale that creates structural competitive advantages beyond what algorithm quality alone can overcome. As of 2026, access to multi-gigawatt compute is diverging rapidly between labs with strategic infrastructure partnerships and those without.
 
-## Current status (as of 2026-04-25)
+## Current status (as of 2026-07-08)
 
 - Google TPU v8 announced at Cloud Next '26: split into 8t for training and 8i for inference; Google claims ~3× compute per pod vs Ironwood for 8t, 1,152 TPUs per pod for 8i, and up to 1 million TPUs in a single 8t cluster
 - Anthropic secured up to 5 GW of compute with Amazon alongside a $5B investment, with up to $20B more available
@@ -53,12 +53,14 @@ The useful wiki update is not to treat AMP's exact MFU anecdotes as settled fact
 ## Related
 
 - [Proprietary data becomes model moat](proprietary-data-becomes-model-moat.md) — a parallel structural-advantage thesis
+- [Agent-native compute infrastructure](agent-native-compute.md) — the agent-execution-layer analog: sandboxes, RL/eval workload shapes, and the Daytona/Modal/Railway thesis plus the broader infra funding wave
 
 ## Recent changes
 
-- [2026-06-18] Added outputmaxxing / compute-utilization framing from AMP: the frontier compute bottleneck includes MFU, scheduling, power, and grid-like coordination, not only GPU count.
+- [2026-07-08] Agent-execution-layer analog spun off into a dedicated page: [Agent-native compute infrastructure](agent-native-compute.md) covers Daytona/Modal/Railway sandbox economics, RL/eval workload shapes, and the infra funding wave (Exa, Turbopuffer, Hark, Modal).
 - [2026-07-02] Added inference-systems counterforce: DSpark/vLLM, TwoTower, WebGPU Gemma, and kernel-level work show competition moving below model weights into runtime speed and serving economics.
 - [2026-06-30] Added hybrid local/cloud routing as a compute-control counterforce for private, low-latency, repeated, or cheaper tasks.
+- [2026-06-18] Added outputmaxxing / compute-utilization framing from AMP: the frontier compute bottleneck includes MFU, scheduling, power, and grid-like coordination, not only GPU count.
 - [2026-05-05] Stripe frames stolen compute (API keys, tokens, credits, free trials) as the emerging AI fraud surface — "compute is the new cash"; agents as autonomous purchasers create new commerce and payment-flow design challenges
 - [2026-05-05] Manus Cloud Computer: persistent Ubuntu environments with SSH/web-terminal access and tool state that survives across agent sessions; durable-agent runtime as an infrastructure category distinct from ephemeral-per-task containers
 - [2026-05-05] Parallel Web Systems raised at a $2B valuation (secondary coverage) for internet/research APIs optimized for AI agents — market signal that agent-oriented web access infrastructure is becoming a standalone investable category
@@ -78,3 +80,8 @@ The useful wiki update is not to treat AMP's exact MFU anecdotes as settled fact
 - [Stripe agent-native commerce and compute fraud](../sources/newsletters/stripe-agent-native-commerce-fraud-2026-04-29.md)
 - [AINews - not much happened today](../sources/newsletters/ainews-not-much-happened-2026-07-02.md)
 - [Local AI as open-weight infrastructure](../sources/newsletters/local-ai-infrastructure-2026-06.md)
+- [The Professor of Outputmaxxing - Anjney Midha / AMP](../sources/newsletters/outputmaxxing-amp-compute-utilization-2026-06.md)
+- [Railway: The Agent-Native Cloud — Jake Cooper](../sources/newsletters/railway-agent-native-cloud-2026-05-20.md)
+- [Giving Agents Computers — Ivan Burazin, Daytona](../sources/newsletters/daytona-giving-agents-computers-2026-05-21.md)
+- [Why AI Infrastructure must evolve for Agent Experience — Akshat Bubna, Modal CTO](../sources/newsletters/modal-agent-experience-2026-07-08.md)
+- [AINews — New AI Infra unicorns: Exa, Modal, TurboPuffer](../sources/newsletters/ainews-new-ai-infra-unicorns-2026-05-22.md)
