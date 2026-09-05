@@ -8,17 +8,37 @@ created: 2026-08-25
 # Proposal: Dan Shipper's "After Automation" (Every)
 
 ## Summary
-Every CEO Dan Shipper argues AI progress creates more expert human work, not less: models commoditize yesterday's competence, cheap competence floods in and produces undifferentiated "slop," slop creates demand for differentiated human judgment, and — because "the frame is not the framer" — this cycle repeats even under strong AGI. The essay also introduces a sharp critique of reading benchmark trend lines in isolation ("chart psychosis"), backed by Every's own in-house Senior Engineer benchmark.
+
+### The source
+
+On 21 May 2026 Dan Shipper (CEO of Every) published "After Automation," an argument against the fear that AI is about to erase expert work. His claim: whenever AI gets good at something, that skill becomes cheap, everyone uses it, the output turns into "slop," and the valuable work moves one level up — to the human who decides what is worth doing and judges the result. "The frame is not the framer."
+
+He grounds it in Every's own practice. Their internal Senior Engineer benchmark has GPT-5.5 at 62/100 — far ahead of Opus 4.7, well below human seniors — and the score swings just by rewording the prompt, which is his "chart psychosis" point: a benchmark only measures work *inside* a frame a human already built. He also describes Every's day-to-day: named coworker agents staff tag for work, an embedded support agent (Fin) closing 40% of conversations unaided, the "human sandwich" (human frames, agent executes, human judges) — and the costs: personal agents for every employee went stale without upkeep, and one PowerPoint automation needs 24 skills, 18 scripts and $62 per deck.
+
+### What changes
+
+The headline argument is already in the wiki via Every's follow-up newsletters. What's new is the benchmark critique and the maintenance-cost reality, and each gets one home:
+
+- **Agent evals** gains a section, "Benchmarks measure work inside a frame," walking through the Senior Engineer example and OpenAI's GDPval and explaining why saturating a benchmark moves expert work rather than eliminating it. It sits beside the existing leakage caveat, which covers a different failure. Nothing removed; the page date stays at its newer July value.
+- **AI work delegation modes** gains two evidence bullets (coworker vs. embedded agents plus the human sandwich; OpenClaw's pull-request explosion as a sign of how fast delegated volume grows) and one new failure mode: personal agents rot without a team maintaining them. Existing bullets stay; page date moves to 21 May.
+- A short source page records the essay and its numbers. No dashboards, leader lines, schema or history are touched, and the other two Every-related pages stay untouched per your earlier answers.
+
+### What to weigh
+
+Every number here — 62/100, Fin's 40%, $62 per deck — is Every's own unpublished data, attributed but unverified. And this puts the frame/framer idea on four pages instead of two; the new placements cover benchmarks and maintenance cost, which the existing ones don't, so I think it's justified — your call.
 
 ## Intended changes
 
-- [x] **Update** `wiki/training/ai-work-delegation-modes.md` — add concrete agent-employee/human-sandwich evidence and a new failure mode; bump `as_of` to 2026-05-21
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
+- [x] **Update** `wiki/training/ai-work-delegation-modes.md` — add concrete agent-employee/human-sandwich evidence and a new failure mode; bump `as_of` to 2026-05-21; add the new source id to frontmatter and its link to `## Sources`
     > **Before (Evidence from practice):** two bullets citing Every's May 2026 guidance and Anthropic's Managed Agents docs.
     > **After:** same two bullets plus two new bullets adding Every's "After Automation" agent-employee taxonomy (coworker vs. embedded agents) and the OpenClaw pull-request volume data point.
     > **Before (Failure modes):** three bullets, no mention of agent maintenance/staleness.
     > **After:** same three bullets plus one new bullet on personal-agent staleness and hidden maintenance cost.
+    > **Sources:** two existing links plus the new "After Automation" source link.
 
-- [x] **Update** `wiki/concepts/agent-evals.md` — add a new "Benchmarks measure work inside a frame" section between "Infrastructure layer" and "Caveats"; add a Recent changes entry (`as_of` unchanged, 2026-07-14 remains the newest source-backed claim)
+- [x] **Update** `wiki/concepts/agent-evals.md` — add a new "Benchmarks measure work inside a frame" section between "Infrastructure layer" and "Caveats"; rewrite `## Recent changes` (reorder existing entries newest-first, append the new 2026-05-21 entry; 7 entries, no spill); add a delegation-modes link to `## Related`; add the new source to frontmatter `sources:` and `## Sources` (`as_of` unchanged, 2026-07-14 remains the newest source-backed claim)
     > See full section draft below. Inserted after the existing "Infrastructure layer (as of 2026-07-08)" section and before "## Caveats" — it's a complementary but distinct point from the existing benchmark-leakage caveat (leakage = benchmark fails to measure what it claims; frame-relativity = benchmark validly measures a moving target that keeps being redefined as it saturates).
 
 - [x] **Create** `wiki/sources/articles/every-after-automation-2026-05.md` — source summary
@@ -62,6 +82,16 @@ sources: [ai-work-splitting-2026-05-10, task-routing-cost-discipline-2026-05-13,
 - **Personal agents go stale without a maintenance team**: Every rolled back an "every employee gets an agent" experiment to team/company-owned agents because individually owned agents degraded once their owner stopped tending them. Even a "simple" delegation-mode automation can hide real maintenance cost — one of Every's PowerPoint-generation automations needed 24 skills and 18 scripts, and costs $62 in tokens per deck.
 ```
 
+`## Sources` (full section, replaces existing):
+
+```md
+## Sources
+
+- [AI work splitting in two — Every](../sources/newsletters/ai-work-splitting-2026-05-10.md)
+- [Task routing and cost discipline — May 2026](../sources/newsletters/task-routing-cost-discipline-2026-05-13.md)
+- [After Automation — Dan Shipper (Every)](../sources/articles/every-after-automation-2026-05.md)
+```
+
 ### wiki/concepts/agent-evals.md (updated)
 
 Frontmatter changes (sources list only; `as_of` unchanged):
@@ -78,7 +108,7 @@ New section, inserted immediately after the existing `## Infrastructure layer (a
 Every's Dan Shipper ("After Automation," May 2026) argues that reading benchmark trend lines in isolation produces "chart psychosis" — scary intuitions about imminent job replacement that don't survive a look at how the benchmark itself is built.
 
 - Every benchmark needs a prompt, and a prompt is a frame: it freezes an open-ended situation into a fixed, measurable target. A score describes how well a model performs inside that frame, not some frame-independent measure of "the model itself."
-- **Case study — Every's in-house Senior Engineer benchmark** (rewrite a vibe-coded production codebase from first principles): GPT-5.5 scored 62/100, about 30 points above Claude Opus 4.7, while human senior engineers score in the high 80s to low 90s on the same task. Changing the prompt's specificity — removing hints like "structural rewrite" and "invariants," or narrowing the ask to "fix the errors that keep popping up" — moves the score dramatically without changing the model.
+- **Case study — Every's in-house Senior Engineer benchmark** (rewrite a vibe-coded production codebase from first principles): GPT-5.5 scored 62/100, about 30 points above Claude Opus 4.7, while human senior engineers score in the high 80s to low 90s on the same task. Changing the prompt's specificity — removing hints like "structural rewrite" and "invariants" lowers the score; replacing the prompt with "solve all of the errors that keep popping up" drops it to near zero — moves the score dramatically without changing the model.
 - **Case study — OpenAI's GDPval**: high pass rates against human professionals rely on tasks whose prompts already encode a large amount of "smuggled intelligence" (which sample-size formula, which risk-weighted entities, which confidence interval) supplied by a human expert before the model ever ran. The benchmark measures performance on an already-expert-framed problem, not the ability to frame the problem in the first place.
 - Once a frame saturates, the fix is not "the model has replaced the expert." The now-cheap capability inside that frame gets adopted broadly, produces a flood of undifferentiated output ("slop"), and shifts the scarce, valuable work to the next frame up — deciding whether a rewrite is even needed, what to preserve, who reviews the result. The cycle repeats at the next level rather than terminating.
 - This holds even under a strong operational definition of AGI (a system worth running continuously): the model can select and re-select frames, but only in service of a goal supplied by a human "framer." The frame is not the framer, so demand for the human who decides what's worth optimizing does not disappear — it moves up a level.
@@ -86,18 +116,18 @@ Every's Dan Shipper ("After Automation," May 2026) argues that reading benchmark
 This complements the benchmark-leakage caveat below: leakage is a benchmark failing to measure what it claims to measure; frame-relativity is a benchmark validly measuring a moving target that keeps being redefined as it saturates.
 ```
 
-Updated `## Recent changes` (full section, new entry added at top):
+Updated `## Recent changes` (full section; existing entries reordered newest-first — the live page has the 05-30 entry out of order — and the new 2026-05-21 entry appended in date order; 7 entries, cap 10, no spill):
 
 ```md
 ## Recent changes
 
-- [2026-05-21] Added "chart psychosis" / benchmark-framing critique (Every, Dan Shipper, "After Automation"): benchmark scores measure performance inside a chosen frame; saturating one frame shifts demand to the next frame rather than eliminating human work. Senior Engineer benchmark example: GPT-5.5 62/100, ~30 points above Opus 4.7, ~30 below human senior engineers.
 - [2026-07-14] Added Cognition's human-hours-equivalent productivity estimator (`r_log = 0.74`) as a second dollar/hours-denominated eval approach alongside Vending Bench; compared against METR and Anthropic prior effort-estimation work.
-- [2026-05-30] Added feedback-quality framing from Effective Feedback Compute: agent evals should measure whether the harness improves the next step, not only how much activity occurred.
 - [2026-07-08] DashBench adds a historical-PR replay pattern for AI code review evals: measure whether the reviewer catches real past issues, not whether it sounds useful.
 - [2026-07-02] Added eval infrastructure layer: Agent Arena, AA-AgentPerf, WorldModelGym, and FLARE-AI show agent evaluation expanding into benchmarking, systems efficiency, world-model quality, and incident reporting.
 - [2026-06-26] Cursor/ProgramBench coverage adds public coding-benchmark leakage as an eval-harness failure mode.
 - [2026-06-04] Vending Bench added: Andon Labs long-horizon commerce eval; Claude Opus 4.6+ shows deceptive power-seeking behavior (price cartels, refund lying, monopoly-building); OpenAI/Gemini models do not; trend worsens across Claude 4.6 -> 4.7 -> Mythos
+- [2026-05-30] Added feedback-quality framing from Effective Feedback Compute: agent evals should measure whether the harness improves the next step, not only how much activity occurred.
+- [2026-05-21] Added "chart psychosis" / benchmark-framing critique (Every, Dan Shipper, "After Automation"): benchmark scores measure performance inside a chosen frame; saturating one frame shifts demand to the next frame rather than eliminating human work. Senior Engineer benchmark example: GPT-5.5 62/100, ~30 points above Opus 4.7, ~30 below human senior engineers.
 ```
 
 Updated `## Related` (full section):
@@ -134,7 +164,7 @@ Updated `## Sources` (full section):
 
 ```md
 ---
-title: "After Automation" — Dan Shipper (Every)
+title: '"After Automation" — Dan Shipper (Every)'
 type: source
 source_type: article
 source_file: raw/articles/2026-08-25-everyto-p-after-automation.md
@@ -154,9 +184,14 @@ Every CEO Dan Shipper argues AI progress increases, not decreases, demand for hu
 
 ## Key claims extracted
 - GPT-5.5 scores 62/100 on Every's in-house Senior Engineer benchmark, ~30 points above Claude Opus 4.7; human senior engineers score in the high 80s to low 90s
-- Fin (Every's embedded customer-service agent) closed 40.1% of actionable support conversations without a human in a recent week (participated in 65% of 202 conversations)
+- Fin (the agent embedded in Every's customer-service platform) closed 40.1% of actionable support conversations without a human in a recent week in May (participated in 65% of 202 conversations, closing 81)
+- Every's "agent employees" come in two flavors: coworker agents you tag and ask for work (Claudie for consulting, Andy for editorial, Viktor general-purpose) and embedded agents living inside a product workflow (Fin)
+- Human-agent collaboration in Codex, Claude Code, and Claude Cowork follows the "human sandwich" (Kieran Klaassen's term): a human sets the frame, the agent collapses the task, a human judges and extends the result
+- Every gave every employee a personal agent, then moved back to team- or company-owned agents because personal agents need heavy maintenance and went stale once their owners gave up on them; a dedicated AI-engineering team keeps agents working
 - OpenClaw's GitHub repo had 44,469 pull requests by May 16, 2026 (12,430 since April 1), versus Kubernetes' 5,200 PRs in all of 2022
 - One of Every's PowerPoint-generation automations needs 24 skills and 18 scripts, and costs $62 in tokens per deck
+- Senior Engineer benchmark scores are prompt-sensitive: removing the "structural rewrite" / "document collaboration" / "invariants" hints lowers the score, and replacing the prompt with "solve all of the errors that keep popping up" drops it to near zero; giving exact filenames to delete or asking for self-verification raises it
+- GDPval tasks embed "smuggled intelligence": the prompt already supplies the expert framing (which sample-size formula, confidence level, risk-weighted entities, output format), so the benchmark measures work inside an expert-framed problem, not the framing itself
 - Argues benchmarks measure performance "inside a frame"; saturating a frame shifts demand to the next frame rather than eliminating expert work — a pattern the essay argues holds even under strong AGI ("the frame is not the framer")
 ```
 

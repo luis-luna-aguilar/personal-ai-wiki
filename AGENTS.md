@@ -477,9 +477,24 @@ created: 2026-04-09
 # Proposal: Cursor 3 release
 
 ## Summary
-Two-sentence TL;DR of the source.
+
+### The source
+One or two prose paragraphs telling the story of the source for a reader who has not read it and does not carry the wiki in their head. Who, when, what happened or was argued, the key numbers, and the caveats the source itself admits.
+
+### What changes
+One or two sentences on what the wiki said before on this topic (the only place prior state appears — keep it short). Then one bullet per page or natural group of pages, in plain language: what the page gains, what is removed or replaced, and its new date.
+
+- **State of Coding** swaps the Cursor leader line from 68% to 74%; the previous claim is kept in Recent changes so the transition is legible. Page date moves to 9 April.
+- **Cursor** gains a version bump and a Recent-changes entry; the oldest entry moves to history because the list is at its cap.
+- New page `benchmarks/swe-bench.md`, since three sources now reference it.
+- One new source page for the launch post.
+
+### What to weigh
+One paragraph, honest, listing only the judgment calls the reviewer must make (thin or secondary sourcing, inferred dates, scope choices, schema approvals, collisions with other open proposals). If nothing: "Nothing beyond the sourcing noted above."
 
 ## Intended changes
+
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/state-of/coding.md` — bump Cursor line, update as_of
     > **Before:** `- [Cursor](../tools/cursor.md) — Leads SWE-bench at 68% (as of 2026-03-22)`
@@ -523,8 +538,19 @@ Two-sentence TL;DR of the source.
 - The article mentions a new "agent mode" — worth its own page under `concepts/` or just a section in the tool page?
 ```
 
+**Rules for the `## Summary` section (the reviewer's decision surface):**
+- The user decides from the summary alone whether to accept the whole proposal or open the drafts. Write it as a **story, not an expert report**: consistent prose that carries its own context, because the reader does not hold the wiki in their head.
+- Exactly three `###` subsections: `The source`, `What changes`, `What to weigh`. Target 350–450 words; up to ~480 when the proposal touches five or more pages; ~250–350 for a single-page proposal.
+- `The source` is narrative prose. No bullet dumps of facts. Define jargon inline. If several raw files feed the proposal, weave them into one story.
+- `What changes` leads with the incoming changes. Prior wiki state gets one or two sentences of context at the top and nowhere else. One bullet per page or natural group of pages; bold page names in natural language (**State of Models**, **Cursor**), code paths only for pages being created. Every leader-line swap, deletion, history spill and schema addition is named explicitly but briefly. Say "page date moves to 8 July", not "`as_of` bumped".
+- `What to weigh` is one paragraph of genuine judgment items only — thin or secondary-only sourcing, inferred publication dates, scope choices, schema approvals. Mechanical defects (ordering, caps, missing links, date mismatches) are fixed in the drafts, never listed here. **Never mention other pending proposals**: overlap between proposals is resolved by sequential rebase at apply time (Workflow 5), not by the reviewer.
+- Never repeat a fact across the three subsections. Numbers appear only where they change the decision.
+- Every statement in the summary must be traceable to the drafts under `## Page drafts` or the source summary — the summary describes the proposal as written, not the source in general.
+
 **Rules for proposals:**
-- Every intended change is a checkbox. Unchecked = skip.
+- Every intended change is a checkbox. **All boxes are written unchecked** (`- [ ]`). Checking a box is the user's act of approval; never pre-check one, and never treat an inline answer in `## Open questions` as a substitute for a checked box.
+- The first item under `## Intended changes` is a single `- [ ] **Approve all**` checkbox. When it is checked, every item under `## Intended changes` and `## Schema / vocabulary additions` counts as checked, whether or not the individual boxes are. When it is unchecked, only individually checked items apply. Approve-all is the normal path; individual boxes exist for partial approval.
+- Each proposal is written against the wiki as it is on its `created` date and is self-contained. Do not reference, coordinate with, or warn about other pending proposals; the apply step rebases each one onto the live wiki in sequence. Drafts for list-like sections (Recent changes, Sources) must make the *delta* explicit in `## Intended changes` ("adds one entry dated …", "spills the oldest entry") so the apply step can re-derive them from the live page.
 - Every draft appears **in full** inside the proposal's `## Page drafts` section, in a fenced code block. The user may edit drafts directly in the file before applying.
 - If a draft contains fenced code examples, wrap the full draft in a longer fence such as ````md ... ```` so inner ```text blocks do not break proposal formatting.
 - For **updated** pages, show only the relevant diff snippet in the proposal unless the user explicitly asks for the full file. Do not paste the entire unchanged page just to show a small edit. The snippet must still be a complete, reviewable draft of the changed section(s), not a prose description.
@@ -552,17 +578,31 @@ Triggered by **"apply this proposal"** / **"apply proposals/xxx.md"**.
 
 **Critical rule:** before applying, you must re-open and re-read the proposal file from disk immediately before making any changes. Assume the user may have edited the proposal in Obsidian or another editor after you last looked at it. Do **not** rely on your memory, prior tool output, or an earlier read of the file.
 
+**Proposals are snapshots; the wiki moves.** A proposal's drafts describe the outcome *given the wiki as it was on the proposal's `created` date*. Other proposals may have been applied since. Applying therefore means **rebasing the approved changes onto the live page**, not pasting the draft over it. Proposals never coordinate with each other; sequencing at apply time resolves overlap.
+
 **Steps:**
 1. Re-read the proposal file **from disk, as it is now, immediately before applying** (the user may have edited it externally).
-2. For each **checked** item, perform the action using the draft content **as it now appears in the file** (the user may have edited drafts).
+2. Determine the approved set: if the `**Approve all**` box at the top is checked, every item under `## Intended changes` and `## Schema / vocabulary additions` is approved; otherwise only the individually checked items are. For each approved item, read the **live** target page from `wiki/` now, then apply the draft **as it now appears in the file** using the rebase rules below.
 3. Update `wiki/index.md` with any new pages.
 4. Update `wiki/_schema/` files for any approved vocabulary additions.
 5. Append a log entry: `- [YYYY-MM-DD] **ingest** | <source title> | <N> pages updated, <M> created`.
 6. Move the proposal file to `proposals/applied/`.
 7. Run an internal link sanity check on everything you wrote; fix any broken links before reporting done.
-8. Report a short summary to the user.
+8. Report a short summary to the user, naming any rebase that changed the outcome from what the draft showed.
 
-**Never apply an unchecked item.** Never apply a draft that has been deleted from the file. If the file is in an inconsistent state (checked boxes reference deleted drafts), stop and ask. If what you see in the editor/session conflicts with the last version you remember, trust the fresh on-disk read.
+**Rebase rules (apply time):**
+- **Apply order is not chronology. The source's date decides what is current, never the order in which proposals are applied.** If the wiki already says version 2.2 is current and a proposal about version 2.1 is applied afterwards, 2.2 stays current: the 2.1 proposal contributes only what the wiki is missing (a fact, a caveat, a history entry dated to its own source date) and nothing that would regress a newer claim. If it contributes nothing the wiki lacks, apply nothing to that page and say so. Compare the proposal's source date against the `as_of` of the live line/section it targets before every write.
+- **Prose sections and leader lines:** if the section or line the draft replaces still reads as the draft's "Before", apply the "After". If it has changed but the draft's claim is still the newer one, apply the "After" onto the current text. If a *newer* claim has landed since (a later `as_of` on that line, or a Recent-changes entry dated after the proposal's source), keep the live text and record the proposal's claim only in Recent changes — do not overwrite newer state with older.
+- **`## Recent changes`:** never paste the draft's full list. Insert only the proposal's *new* entries into the live list, in date order (newest first), then enforce the cap from the live list by spilling the oldest-dated entries to `wiki/history/`. The draft's Spill item names what it *expected* to spill; the actual spill is whatever is oldest at apply time. Add an `## Archived from current page on <apply date>` header when opening a new archive block.
+- **Frontmatter `sources:` and body `## Sources`:** merge — append the proposal's new ids/links to whatever is live; never replace the list.
+- **`as_of` and `## Current status (as of …)`:** set to the newer of the live value and the proposal's value — never move a date backwards.
+- **New pages:** if the page already exists at apply time (created by an earlier proposal), treat the Create as an Update and merge section by section using the rules above.
+- **Source pages — one per raw file:** before creating `wiki/sources/<type>/<slug>.md`, `grep -rl "source_file: <raw path>" wiki/sources/`. If a page for that raw file exists under any slug, do **not** create a second one: append the new Influenced-pages and Key-claims lines to the existing page and use its slug (id and link) everywhere the proposal's drafts referenced the new one.
+- **Stop and ask** only when the rebase is semantic, not mechanical: the section the draft edits no longer exists, a leader line now names a different tool/model than the draft assumes, or two claims directly contradict and neither is clearly newer.
+
+**Batch apply — "apply all approved proposals":** process every file in `proposals/*.md` that has `Approve all` checked or at least one individually checked item, **one at a time, oldest first** (by `created`, then filename). Each proposal is rebased onto the wiki as left by the previous one. Finish steps 1–7 for one before opening the next. Skip unchecked items and files with no checked boxes; report per-proposal results at the end.
+
+**Never apply an unchecked item** (unchecked meaning: not individually checked *and* `Approve all` not checked). Never apply a draft that has been deleted from the file. If the file is in an inconsistent state (checked boxes reference deleted drafts), stop and ask. If what you see in the editor/session conflicts with the last version you remember, trust the fresh on-disk read.
 
 ### 6. Reject proposal
 
