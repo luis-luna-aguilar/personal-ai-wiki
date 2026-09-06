@@ -1,20 +1,20 @@
 ---
 title: GPT-Realtime-2
 type: tool
-domains: [voice]
+domains: [voice, models]
 subcategory: voice-models
 tags: [openai, closed-source, agentic]
-as_of: 2026-05-08
-sources: [gpt-realtime-2-2026-05-08]
+as_of: 2026-07-07
+sources: [gpt-realtime-2-2026-05-08, gpt-live-launch-2026-07]
 ---
 
 # GPT-Realtime-2
 
 OpenAI's flagship streaming speech-to-speech voice model, released May 8, 2026. Brings "GPT-5-class reasoning" into native voice with 128K context, adjustable reasoning effort, tool use, and improved interruption recovery.
 
-## Current status (as of 2026-05-08)
+## Current status (as of 2026-07-07)
 
-- Live in the Realtime API as of May 8, 2026; ChatGPT voice upgrade "coming soon"
+- Live in the Realtime API as of May 8, 2026; ChatGPT Voice moved to a different model family, [GPT-Live](gpt-live.md), on 2026-07-07 — GPT-Realtime-2 remains the model for the Realtime API
 - Context window: 128K tokens (4× the previous 32K Realtime API limit)
 - Reasoning: five levels of adjustable effort — minimal, low, medium, high, xhigh — configurable per request
 - Benchmark scores (AINews technical breakdown): 96.6% Balanced Behavioral Alignment (BBA); 96.1% Conversational Dynamics; instruction retention improved from 36.7% → 70.8%
@@ -38,13 +38,14 @@ OpenAI's flagship streaming speech-to-speech voice model, released May 8, 2026. 
 ## Weaknesses / caveats
 
 - Pricing ($1.15-$4.61/hr) remains expensive for consumer-scale voice applications
-- ChatGPT voice is still running the older model; upgrade date not announced
 - BBA and Conversational Dynamics benchmarks are reported by OpenAI; no independent replication yet
 
 ## Recent changes
 
+- [2026-07-07] ChatGPT Voice moved to GPT-Live-1/GPT-Live-1 mini, a separate full-duplex model family; GPT-Realtime-2 continues as the Realtime API's speech-to-speech model.
 - [2026-05-08] Initial release; GPT-Realtime-2 goes live in Realtime API with 128K context, GPT-5-class reasoning, and 5 reasoning levels
 
 ## Sources
 
 - [GPT-Realtime-2, Translate, and Whisper launch](../sources/newsletters/gpt-realtime-2-2026-05-08.md)
+- [GPT-Live launch](../sources/articles/gpt-live-launch-2026-07.md)

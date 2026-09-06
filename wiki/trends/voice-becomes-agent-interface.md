@@ -9,7 +9,7 @@ sources: [voice-becomes-agent-interface, gpt-live-launch-2026-07]
 
 # Voice becomes an agent interface
 
-The late-March signal is that voice is no longer just an add-on to chat products. Texting your AI, smoother real-time voice agents, and open-weight TTS releases all point to conversational audio becoming part of the practical agent stack.
+Voice is becoming a practical agent interface rather than a chat add-on. What started in late March as texting-your-AI and open-weight TTS signals has, by July, produced GPT-Live's full-duplex voice layer with background task delegation — the clearest evidence yet that conversational audio and task execution are separating into distinct layers of the agent stack.
 
 ## Current status
 

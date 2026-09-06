@@ -62,7 +62,7 @@ Source: "AI Is Ready. Organizations Aren't." (Every, June 2026) — based on int
 - **Promotion only after reliability.** Expand an agent from one bounded workflow to broader responsibility only after it is stable in the narrower role
 - **Shared workflow marketplace.** Internal skills or templates let one person's discovery become everyone else's shortcut
 - **Visible adoption loops.** Leaderboards, all-hands demos, and team channels turn private experimentation into contagious behavior
-- **Exploration budget.** Removing token caps and access restrictions gives people room to discover high-leverage use cases before ROI is obvious
+- **Exploration budget, then governance.** Removing token caps and access restrictions gives people room to discover high-leverage use cases before ROI is obvious — treat this as the deliberate first phase, with [token allocation as governance](#proven-patterns) (below) as the second phase once a workflow's value is established, not a contradiction to resolve.
 - **End-to-end workflow ownership.** Best use cases cut across multiple teams; redesigning the whole workflow (who owns what, where humans stay in vs. above the loop) beats optimizing individual steps
 - **Cross-level redesign teams.** Process re-imagination needs both leaders who can identify lighthouse use cases and employees deep in the day-to-day work — not just one or the other
 - **Operational-complexity targeting.** Some of the highest-leverage AI opportunities sit inside messy, regulated, service-heavy businesses where software is only one piece of the workflow
@@ -76,11 +76,11 @@ Source: "AI Is Ready. Organizations Aren't." (Every, June 2026) — based on int
 - **Start with one durable personal agent role.** Early OpenClaw onboarding guidance reinforces that adoption is easier when each person starts with one persistent, messaging-native agent with a bounded job before expanding into a larger swarm of helpers
 - **Agent-to-agent collaboration in shared channels.** Every's March OpenClaw reporting showed personal agents explaining failures to each other, broadcasting to groups, and operating as named participants in team communication
 - **Proof-based status rules.** A practical reliability pattern from the OpenClaw cluster: agents should not say "done" or "working on it" without concrete evidence such as a process ID, file path, URL, or command output
-- **Trust battery with judge agent.** Grant autonomy incrementally rather than all at once. Implement a nightly judge agent that reviews interactions, scores behavior, adjusts a trust percentage, and lets the primary agent self-update memory from negative feedback. Start at a deliberately low trust level (Every's Claudie: 20% vs 50% for human new hires) and let the agent earn scope through demonstrated reliability rather than through time or configuration changes.
+- **Trust battery with judge agent.** Grant autonomy incrementally, tied to demonstrated reliability rather than elapsed time — see [Agents reshape organizations](../trends/agents-reshape-organizations.md) for the concrete Claudie mechanism (nightly judge agent, starting trust percentage, self-updating memory).
 - **Tasteful tokenmaxxing: depth over breadth.** The emerging leadership consensus (AIE Miami, April 2026) is not "burn more tokens" or "burn fewer tokens" but *how* you burn them. Shopify CTO Mikhail Parakhin: prefer serial autoresearch loops (depth) over kicking off 5, 10, 50 parallel LLM runs (breadth). Reid Hoffman's middle ground: track how people use AI, not just how much — team-wide experimentation plus regular check-ins to surface what's actually working. Dex Horthy (coiner of "Context Engineering") publicly retracted his earlier vibe-coding-only stance and encouraged engineers to read the code. The practical signal: measure the *quality* of token use, not the quantity.
 - **Token allocation as governance.** As enterprise AI costs rise, access to expensive models should be treated like an allocation decision: define budgets, route routine work to cheaper tools, and grant higher-cost access to workflows that can show returns in quality, speed, scope, or revenue impact.
-- **Efficiencymaxxing as model-routing practice.** Treat model selection like an operating system for work: use evals to identify which workflow stages can move to cheaper models, audit token use by step, and keep frontier access for ambiguous or high-risk stages. This is the practical middle ground between tokenmaxxing and blanket restriction.
-- **Design for new frames, not only task automation.** Cheap competence means more work can be done inside a given frame, but the higher-value organizational skill is creating better frames: what to investigate, what to ship, what tradeoff matters, and what "good" means.
+- **Efficiencymaxxing as model-routing practice.** Treat model selection like an operating system for work: use evals to identify which workflow stages can move to cheaper models, audit token use by step, and keep frontier access for ambiguous or high-risk stages. This is the practical middle ground between tokenmaxxing and blanket restriction. See [Cost-aware AI task routing](cost-aware-ai-task-routing.md) for the routing mechanics and FinOps controls this practice depends on.
+- **Design for new frames, not only task automation.** Cheap competence means more work can be done inside a given frame, but the higher-value organizational skill is creating better frames: what to investigate, what to ship, what tradeoff matters, and what "good" means. See [AI work delegation modes](ai-work-delegation-modes.md) for the task-level version of this argument.
 - **Keep humans at the judgment boundary.** As AI fills in the middle of workflows, employees need stronger habits for framing, taste, coordination, and review rather than only faster execution tactics.
 
 ## Failure modes
@@ -184,9 +184,11 @@ As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have
 
 ## See also
 
+- [Agents reshape organizations](../trends/agents-reshape-organizations.md) — the trend-level evidence (GitHub commit growth, Stanford labor data, Ramp's internal numbers) that this page's guidance responds to
 - [AI enablement — software development](ai-enablement-software-development.md) — engineering-specific patterns: critique loops, CI/CD as bottleneck, Shopify evidence, junior talent pipeline
 - [Agentic infrastructure operations](agentic-infrastructure-operations.md) — practical guidance for safe agent use around production infrastructure, deployment safety, and post-action verification
 - [Evals for workflow and task agents](evals-for-agentic-work.md) — eval patterns for workflow and task agents: reliability metrics, task-specific patterns, simulated users
+- [Cost-aware AI task routing](cost-aware-ai-task-routing.md) — the mechanics behind the token-allocation and efficiencymaxxing guidance above
 
 ## Open questions
 

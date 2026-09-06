@@ -1,7 +1,7 @@
 ---
 title: Codex
 type: tool
-domains: [coding, cybersecurity, computer-use]
+domains: [coding, agents, cybersecurity, computer-use]
 subcategory: terminal-coding-agent
 tags: [openai, closed-source, agentic]
 as_of: 2026-07-01
@@ -105,7 +105,7 @@ Research preview. Background agents monitor recent screen activity, build memori
 
 ## Sources
 
-- [OpenAI launches $100/mo Pro plan](../sources/articles/openai-pro-100.md)
+- [OpenAI launches $100/mo Pro plan](../sources/tweets/openai-pro-100.md)
 - [AINews — Moonshot Kimi K2.6, Hermes Agent, Codex Chronicle (2026-04-21)](../sources/newsletters/ainews-2026-04-21.md)
 - [OpenAI — Codex for (almost) everything](../sources/tweets/openai-codex-ongoing-tasks.md)
 - [Coding agents move toward review and concurrent supervision](../sources/newsletters/coding-agents-review-and-orchestration-march.md)

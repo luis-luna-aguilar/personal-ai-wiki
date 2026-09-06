@@ -10,7 +10,7 @@ sources: [managed-agents, every-managed-agents-vibe-check, anthropic-platform-ex
 
 # Claude Managed Agents
 
-Claude Managed Agents is not yet documented here as a mature end-user product. At this point, the source reads more like an Anthropic architecture and platform direction: a hosted Claude Platform runtime for long-running agents built around three separate pieces, instead of one all-in-one agent container.
+Claude Managed Agents is a hosted Claude Platform runtime for long-running agents, in public beta, built around three separate pieces instead of one all-in-one agent container.
 
 Those three pieces are:
 
@@ -101,9 +101,8 @@ The simple reason is that sessions that do not need a sandbox immediately can st
 
 ## Weaknesses / caveats
 
-- The source is an engineering architecture post, not full product documentation
 - The adjacent "custom agents" surface is still thinly documented in the current source set. Here it should be read as preconfigured recurring agents for specific jobs, not a fully separate platform category.
-- No pricing, availability tiering, or detailed public API surface is captured here
+- No pricing or availability tiering is captured here; the public API surface is documented above but granular pricing has not been
 - Reported latency improvements are vendor-internal numbers
 - Every's Spiral example is a practitioner anecdote, not a broad evaluation
 - The post and mini-vibe-check explain the platform shape better than current limits, production constraints, or failure cases

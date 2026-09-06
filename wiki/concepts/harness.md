@@ -11,7 +11,7 @@ sources: [agentic-thinking-lin, langchain-better-harness, openai-agents-sdk-evol
 
 The scaffolding that wraps an AI model and turns it into an agent capable of acting in the world. A harness defines *what* the model can do (tools, APIs, memory), *how* it reasons and plans (system prompt, instructions, routing logic), and *what environment* it operates in (browser, terminal, code sandbox, external services).
 
-The analogy to model training is explicit in the field: just as training data shapes a model, the harness shapes an agent's behavior. As [LangChain's Better-Harness](../sources/articles/langchain-better-harness.md) frames it: `harness + evals + harness engineering → better agent` mirrors `model + training data + gradient descent → better model`.
+The analogy to model training is explicit in the field: just as training data shapes a model, the harness shapes an agent's behavior. As [LangChain's Better-Harness](../sources/tweets/langchain-better-harness.md) frames it: `harness + evals + harness engineering → better agent` mirrors `model + training data + gradient descent → better model`.
 
 ## What a harness includes
 
@@ -41,19 +41,12 @@ In practice, a harness is not only the loop logic. Recent source material reinfo
 
 ## What good harness engineering looks like
 
-- **Ambiguity gates** stop the agent to ask for clarification at forks where guessing wrong is expensive, instead of turning every step into a confirmation dialog.
-- **Scoped context** gives each sub-agent only the files, tools, and instructions it needs, which reduces context bleed and instruction collisions.
-- **Failure-metadata replanning** treats errors as structured input to a new plan, rather than blindly retrying the same approach with slightly different wording.
-- **Eval-driven simplification** keeps the harness as simple as possible while it still passes the target evals; cleaner interfaces and stronger verification often beat more elaborate scaffolding.
+Most of the field's accumulated patterns for harness design — ambiguity gates, scoped context, failure-aware replanning, eval-driven simplification, skills as the reusable abstraction, hook-based reliability plumbing, externalized knowledge layers, robust loop primitives, decoupled shared context with isolated execution, the dark/light factory split, and the mayor-and-polecats worker topology — are cataloged with fuller detail on [Agentic orchestration patterns](../workflows/agentic-orchestration-patterns.md). What follows are the points specific to harness *architecture* rather than orchestration *pattern*:
+
 - **Layered memory** keeps durable knowledge, topic files, and live-session context separate instead of forcing everything into one rolling transcript.
 - **Repo-state awareness** gives the agent current branch, recent commits, and file-level state so it acts on the real workspace instead of a stale abstract summary.
 - **Permission boundaries** stay explicit. Good harnesses make it legible when the agent is allowed to act, when it must ask, and where risky execution is isolated.
 - **Cache-efficient subagent parallelism** lets worker agents inherit enough shared context to be useful without rebuilding the full setup cost every time.
-- **Skills as the reusable abstraction** let teams share operating judgment as modules instead of only sharing code snippets or prompts.
-- **Hook-based reliability plumbing** invokes the right capability at the right moment instead of hoping the model notices a textual instruction.
-- **Externalized knowledge layers** help the harness retrieve the right context without dumping everything into the prompt.
-- **Robust loop primitives** give agents a clean way to keep going, pause, rewind, and resume without relying on awkward prompt hacks like reissuing "loop forever" in a brittle session.
-- **Decoupled shared context with isolated execution** lets teams of agents coordinate through the same source of truth while keeping actual runs sandboxed and failure-contained.
 - **Critique-loop orchestration** over flat parallel dispatch: a generator agent + a separate critic model reviewing the output + the generator redoing the work based on the critique produces higher-quality output than equivalent compute spent on parallel independent agents. Observed by Shopify at scale; slower but more reliable for tasks with clear correctness signals.
 - **CI/CD as part of the harness boundary**: at sufficient agent throughput (e.g. 30% MoM PR growth), deployment and verification infrastructure becomes the bottleneck. Harness design must account for the downstream pipeline, not only the generation loop.
 - **Agent-friendly CLI design.** Tools built for human interactive use break agent pipelines: interactive prompts stall agents, undocumented flags require inference, and missing non-interactive modes force workarounds. Agent-facing CLI tools should be non-interactive by default, expose all behaviors through explicit flags, and document internal conventions. This applies equally to the tools the agent calls and to the CLIs agents themselves expose.
@@ -62,19 +55,16 @@ In practice, a harness is not only the loop logic. Recent source material reinfo
 - **Measure effective feedback, not only activity.** Raw token counts, tool counts, and trace length are weak proxies for agent success. AINews coverage of Effective Feedback Compute argues that the useful signal is whether the harness gives the model actionable feedback that improves the next step.
 - **Model-specific harness profiles.** LangChain Deep Agents coverage suggests that Qwen, Kimi, DeepSeek, and frontier closed models can require different prompts, tools, and memory layouts. A cheaper model can become viable when the harness matches its operating style.
 - **LLM proxy as the fleet management layer.** At org scale (Shopify, 23K engineers), routing all AI coding-tool traffic through a centralized LLM proxy creates a control plane for cost, model choice, and policy enforcement without requiring per-tool reconfiguration. This positions the proxy as part of the enterprise harness boundary — above the individual tool harness, below the model.
-- **Dark/light factory split.** Separate the parts of your workflow where humans and agents collaborate (planning, design, review) — the "light" side — from the parts where agents execute clearly defined work on their own in the background — the "dark" side. As trust in agent output increases, more work can migrate from light to dark. Gas City runs ~100 agents in the dark while the human interaction surface stays small and visible.
-- **One pet, many cattle (mayor + polecats).** One persistent named supervisor agent ("mayor") you interact with directly coordinates anonymous disposable worker agents ("polecats") that each execute one job and shut down. Instead of managing 100 agents individually, you manage one conversation while the mayor routes work. Workers stay context-clean because they start fresh per task.
 - **Multi-model parallel code review.** Submitting the same code to Claude, Codex, and Kimi simultaneously in parallel finds different bugs than running one model three times. Three different models with different training distributions catch issues each would miss alone. Higher signal per review cycle at the cost of higher parallel token spend.
-- **Narrow-scope parallel agents outperform exhaustive single agents in high-coverage tasks.** Cloudflare's Project Glasswing harness (8 stages, ~50 concurrent Mythos Preview agents) demonstrates this at security-research scale: each agent has one tightly scoped attack class + one target area; an independent adversarial agent validates but cannot emit new findings; root-cause deduplication collapses variant findings. The Trace stage further splits "is this buggy?" from "can an attacker reach this bug?" — a clean instance of decomposing a compound question into two separately answerable ones.
-- **Model neutrality by design.** Build your harness so the underlying model is a configurable parameter, not a hardcoded dependency. Routing, context packaging, and evaluation should live in the harness layer — not in model-specific prompt tricks. This became a risk management requirement (not just an engineering preference) after the Fable 5 export-control ban removed access to the leading frontier model for all customers overnight. The LangSmith Engine (a fine-tuned production-trace judge, 10-100× cheaper than frontier models) demonstrates that the evaluation layer can also be decoupled from frontier access.
+- **Model neutrality by design.** Build your harness so the underlying model is a configurable parameter, not a hardcoded dependency — routing, context packaging, and evaluation should live in the harness layer, not in model-specific prompt tricks. LangChain's LangSmith Engine, which automatically consumes production traces, clusters failures, identifies likely code issues, and proposes fixes and evals, demonstrates that the evaluation layer can also be decoupled from frontier access. See [Agent Labs vs Model Labs](agent-labs-vs-model-labs.md) for the competitive-moat argument this connects to.
 - **Org-embedded identity and permissioning.** Slack-native and team-channel agents need a legible identity, scoped access to channels/tools/data, audit trails for actions, and memory boundaries that match how the organization actually partitions work. Without that, the harness becomes an organizational risk surface: unclear accountability, prompt-injection exposure, budget opacity, and channel noise.
 - **Managed-agent platform primitives.** Hosted agent platforms are absorbing work that custom harnesses used to implement manually: tool connectivity through MCP, background execution, custom function calling, credential refresh, stateful interaction APIs, and sandboxed execution. Google adding these to the Gemini API is another sign that "harness" is becoming product infrastructure, not only application code. Anthropic's Claude Managed Agents added self-hosted sandboxes (public beta) and MCP tunnels (research preview) in May 2026: the agent loop that handles orchestration, context management, and error recovery stays on Anthropic's infrastructure, while tool execution and private MCP connectivity run on customer-controlled infrastructure or a supported sandbox provider (Cloudflare, Daytona, Modal, Vercel).
-- **Security boundary as harness boundary.** Tool-using agents are not only productivity systems; they are software components that may read untrusted content, hold private context, and take actions. A production harness must define identity, permissions, data exfiltration boundaries, guardrails, red-team tests, and audit trails as part of the agent architecture.
+- **Security boundary as harness boundary.** Tool-using agents are not only productivity systems; they are software components that may read untrusted content, hold private context, and take actions. A production harness must define identity, permissions, data exfiltration boundaries, guardrails, red-team tests, and audit trails as part of the agent architecture — see [Prompt injection](prompt-injection.md) for the concrete attack pattern this defends against.
 - **Code as the operational substrate, not just output.** A May 2026 survey ("Code as Agent Harness," arXiv:2605.18747) frames code as the shared medium connecting agent reasoning, acting, and environment modeling — not merely the artifact an agent produces. It organizes harness design around three layers: the interface where code links reasoning/action/environment; harness mechanisms (planning, memory, tool use, feedback-driven control); and scaling from single-agent to multi-agent settings, where shared code artifacts support coordination, review, and verification.
 
 ## Harness vs model
 
-A well-engineered harness can compensate for a weaker model. A poor harness can cripple a strong one. This is why [Better-Harness](../sources/articles/langchain-better-harness.md) and similar systems focus on *harness hill-climbing* — iteratively improving the harness using evals as a signal, separate from any model update.
+A well-engineered harness can compensate for a weaker model. A poor harness can cripple a strong one. This is why [Better-Harness](../sources/tweets/langchain-better-harness.md) and similar systems focus on *harness hill-climbing* — iteratively improving the harness using evals as a signal, separate from any model update.
 
 The practical model/harness split is now measurable: the same model can underperform in a mismatched product surface, while a cheaper model can approach frontier behavior in a tuned harness. Treat benchmark results as model + harness + environment, not model-only.
 
@@ -109,7 +99,7 @@ Treating the training harness like production code — with tests, versioning, a
 ## Caveats
 
 - The term has no single agreed definition across the field. Some sources use it narrowly (just the prompt + tool config); others include the full execution environment and orchestration layer.
-- This page reflects the broader definition, consistent with [Lin's essay](../sources/articles/agentic-thinking-lin.md) and [LangChain's Better-Harness](../sources/articles/langchain-better-harness.md) framing.
+- This page reflects the broader definition, consistent with [Lin's essay](../sources/articles/agentic-thinking-lin.md) and [LangChain's Better-Harness](../sources/tweets/langchain-better-harness.md) framing.
 - Some practitioners now implicitly split "harness" from "folder-level context." The distinction is useful operationally even if the vocabulary is not yet standardized.
 
 ## Recent changes
@@ -126,14 +116,16 @@ Treating the training harness like production code — with tests, versioning, a
 
 ## Related
 
+- [Agentic orchestration patterns](../workflows/agentic-orchestration-patterns.md) — the pattern catalog for agent loop design, escalation, and multi-agent topology; this page covers harness architecture, that page covers reusable operating patterns
 - [Agent evals](agent-evals.md) — taxonomy of agent evaluation categories and why trajectory quality matters alongside final results
 - [Agent improvement loop](agent-improvement-loop.md) — the loop for improving a harness systematically via traces, evals, and targeted changes
 - [Skillify — Agent Reliability Pattern](../workflows/skillify-agent-reliability.md) — pattern for encoding agent failures as permanent tested skills; "thin harness / fat skills" architecture
+- [Prompt injection](prompt-injection.md) — the concrete security attack the harness security boundary defends against
 
 ## Sources
 
 - [From 'Reasoning' Thinking to 'Agentic' Thinking by Junyang Lin](../sources/articles/agentic-thinking-lin.md)
-- ["Better Harness: A Recipe for Harness Hill-Climbing with Evals" — LangChain](../sources/articles/langchain-better-harness.md)
+- ["Better Harness: A Recipe for Harness Hill-Climbing with Evals" — LangChain](../sources/tweets/langchain-better-harness.md)
 - [The next evolution of the Agents SDK](../sources/articles/openai-agents-sdk-evolution.md)
 - [Notion's Token Town / software factory discussion](../sources/newsletters/notion-token-town.md)
 - [AINews — The Two Sides of OpenClaw (harness section)](../sources/newsletters/ainews-openclaw-2026-04-18.md)

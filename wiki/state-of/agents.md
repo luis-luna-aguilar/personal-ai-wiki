@@ -3,7 +3,7 @@ title: State of Agents
 type: state-of
 domains: [agents]
 tags: []
-as_of: 2026-07-08
+as_of: 2026-07-14
 sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, ainews-2026-04-22, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents, cursor-cloud-agents-march, cursor-cloud-agents-february, google-adk, openai-deep-research, gemini-deep-research-max, futurehouse-homepage, uipath-maestro-introduction, anthropic-mcp, google-a2a, legacy-ai-tools-roadmap-xlsx, microsoft-foundry-agents-2026, google-cloud-next-2026, superhuman-2026-04-23, awsai-cowork-bedrock-2026-04-23, microsoft-copilot-agent-mode-office, claude-managed-agents-memory, agentic-devops-deep-research, agent-infrastructure-harness-2026-05-01, codex-for-work-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, inference-inflection-agent-runtime-2026-04-30, persistent-cloud-computers-agents-2026-05-01, production-agent-orchestration-2026-04-29, hermes-openclaw-persistent-agents-2026-05-11, metr-long-horizon-2026-05-12, thinking-machines-interaction-2026-05-12, frontier-labs-deployment-services-2026-05-13, multica-repo, notion-external-agents-api-may-2026, langchain-interrupt-may-2026, devin-auto-triage-2026-05, papercliping, ainews-june-06-2026, vercel-agents-new-software-2026-07-03, ainews-not-much-happened-2026-07-02, the-code-devin-security-2026-07-02, claude-tag-slack-agent-2026-06, claude-cowork-mobile-2026-07, gemini-managed-agents-2026-07, kimi-goal-mode-creative-agents-2026-06, railway-agent-native-cloud-2026-05-20, daytona-giving-agents-computers-2026-05-21, modal-agent-experience-2026-07-08, ainews-new-ai-infra-unicorns-2026-05-22]
 ---
 
@@ -22,16 +22,16 @@ Platforms, surfaces, and patterns for running, supervising, or routing AI agents
 - [Claude Cowork](../tools/claude-cowork.md) — Anthropic; cross-device background agent for delegated knowledge work, now available on web/mobile beta with scheduled tasks that can run while the user's computer is closed *(as of 2026-07-08)*
 - [Kimi Work](../tools/kimi-code.md) — Moonshot AI desktop agent companion to Kimi Code; Goal Mode keeps work running until a user-defined objective is reached, with progress tracking and redirection *(as of 2026-06-19)*
 - [Claude Tag](../tools/claude-tag.md) — Anthropic; Slack-native multiplayer agent product where Claude joins selected channels as a named participant with chosen channel/tool/data/codebase access, async thread work, and in-channel team review *(as of 2026-06-24)*
-- [Codex](../tools/codex.md) (Workspace Agents) — OpenAI; shareable team agents in Slack and ChatGPT for scheduling, research, drafting, coding, and data analysis; now positioned as a broader computer-work agent (docs, sheets, slides, browser flows, connected apps) beyond software engineering *(as of 2026-05-01)*
+- [Codex](../tools/codex.md) (Workspace Agents) — OpenAI; shareable team agents in Slack and ChatGPT for scheduling, research, drafting, coding, and data analysis; now positioned as a broader computer-work agent (docs, sheets, slides, browser flows, connected apps) beyond software engineering; Every's July coverage frames it as a general-purpose workspace agent spanning inbox, CRM, healthcare coordination, writing, and personal-knowledge workflows *(as of 2026-07-01)*
 - [Orca](../tools/orca.md) — open-source desktop surface for supervising multiple coding agents across isolated worktrees, with live status, diff review, and CI visibility *(as of 2026-04-21)*
-- [Claude Managed Agents](../tools/claude-managed-agents.md) — Anthropic's hosted runtime; separates session, harness, sandbox, and now file-backed built-in memory with shared stores and auditability *(as of 2026-04-24)*
-- [Microsoft Copilot](../tools/microsoft-copilot.md) — Microsoft; agentic default mode inside Word, Excel, and PowerPoint; takes multi-step native actions in documents, worksheets, and presentations while users stay in control *(as of 2026-04-22)*
+- [Claude Managed Agents](../tools/claude-managed-agents.md) — Anthropic's hosted runtime; separates session, harness, sandbox, and file-backed built-in memory with shared stores and auditability; added self-hosted sandboxes (public beta, including Cloudflare/Daytona/Modal/Vercel) and MCP tunnels (research preview) *(as of 2026-05-20)*
+- [Microsoft Copilot](../tools/microsoft-copilot.md) — Microsoft; agentic default mode inside Word, Excel, and PowerPoint; takes multi-step native actions in documents, worksheets, and presentations while users stay in control; Copilot Cowork reached general availability in June 2026 (Microsoft claims 30-40% cheaper per prompt than Claude Cowork), and Microsoft Autopilot launched as a hosted long-running agent runtime with OpenClaw and Hermes Agent as early examples *(as of 2026-06-17)*
 - [Microsoft Foundry Hosted Agents](../tools/microsoft-foundry-agents.md) — Microsoft; hosted runtime with per-session VM isolation, persistent filesystems, Entra Agent ID governance, MCP Toolbox, and multi-framework support *(as of 2026-04-23)*
-- [OpenAI Agents SDK](../tools/openai-agents-sdk.md) — model-native harness with native sandbox execution, durable checkpoint / rehydration, and provider-neutral manifests *(as of 2026-04-15)*
 - [UiPath Maestro](../tools/uipath-maestro.md) — enterprise orchestration for agents, robots, and people; stronger fit for operational process flows than pure research workloads *(as of 2026-04-22)*
 - [Multica](../tools/multica.md) — open-source; vendor-neutral managed agents platform; assign GitHub-style issues to agent CLIs (Claude Code, Codex, Copilot, and 8 others); Squads for leader-delegated routing; reusable skill compounding *(as of 2026-05-18)*
 - [Paperclip](../tools/paperclip.md) — open-source (MIT), self-hosted; org-chart model: agents get titles, reporting lines, monthly budgets, and heartbeat schedules; Kubernetes deployment for hosted agents; governance keeps humans as the board of directors; 69.9k GitHub stars *(as of 2026-06-10)*
-- [Advisor strategy](../workflows/advisor-strategy.md) — small executor (Sonnet/Haiku) drives the loop; escalates to Opus only when stuck; +2.7% SWE-bench Multilingual, −11.9% cost vs Sonnet alone *(as of 2026-04-09)*
+- [Advisor strategy](../workflows/advisor-strategy.md) — small executor (Sonnet/Haiku) drives the loop; escalates to Opus only when stuck; +2.7% SWE-bench Multilingual, −11.9% cost vs Sonnet alone; externally validated by Harvey on legal tasks (18% vs 14% all-pass, $368 vs $954 per 100 tasks); Cognition's sidekick pattern is offered as a contrasting approach that avoids the advisor tool's per-call cache-miss cost *(as of 2026-06-29)*
+- [Devin](../tools/devin.md) — Cognition; Auto-Triage is an always-on persistent agent that monitors Slack channels and investigates bugs as reported, with parent Devin dispatching focused sub-sessions and shared long-term memory for deduplication; early users (Modal) describe it as more useful than homegrown triage automations; Security Swarm extends the same fan-out pattern (Agentic MapReduce) to vulnerability discovery, exploitability validation, and fix-PR generation *(as of 2026-07-14)*
 
 ### Agent frameworks
 
@@ -39,18 +39,12 @@ SDKs and development kits for building custom agents with tools, multi-agent pat
 
 - [Gemini](../tools/gemini.md) / Gemini API managed agents — Google; hosted managed-agent interface with MCP support, background execution, custom function calling, credential refresh, and Interactions API statefulness *(as of 2026-07-08)*
 - [Google ADK](../tools/google-adk.md) — Google; open-source ADK now positioned as the developer layer inside Gemini Enterprise Agent Platform; Agent Studio adds a low-code wrapper, and Model Garden expands the surrounding stack to 200+ models *(as of 2026-04-23)*
-- [Hermes Agent](../tools/hermes-agent.md) — NousResearch; open-source; brain+muscle architecture, Kanban supervision dashboard, weekly automated skill pruning, local-first memory, and 118 bundled skills *(as of 2026-05-13)*
+- [Hermes Agent](../tools/hermes-agent.md) — NousResearch; open-source; brain+muscle architecture (separate reasoning and execution layers); Kanban supervision dashboard, weekly automated skill pruning, local-first memory, and 118 bundled skills *(as of 2026-05-13)*
 - [LangChain / LangSmith](../tools/langchain-langsmith.md) — LangChain; open-source agent framework and observability platform; LangSmith Engine closes the trace→improvement loop automatically; SmithDB is a purpose-built agent-trace database *(as of 2026-05-15)*
 - [eve](../tools/eve.md) — Vercel; prescriptive agent framework built around model/provider switching, fallbacks, resumability, filesystem agents, skills, compaction, subagents, sandboxes, long-running jobs, observability, and evals *(as of 2026-07-03)*
 - [OpenWiki](../tools/openwiki.md) — LangChain; codebase documentation layer for agents, part of the broader move toward maintained, agent-readable context surfaces *(as of 2026-07-02)*
-
-### Persistent coding agents
-
-Always-on background coding services that maintain memory across months, can initiate contact (Telegram, Discord, etc.), and manage their own skill libraries. Distinct from session-scoped coding agents.
-
-- [Hermes Agent](../tools/hermes-agent.md) — NousResearch; open-source; brain+muscle architecture (separate reasoning and execution layers); Kanban supervision dashboard; weekly automated skill pruning; local-first memory *(as of 2026-05-13)*
+- [OpenAI Agents SDK](../tools/openai-agents-sdk.md) — model-native harness with native sandbox execution, durable checkpoint / rehydration, and provider-neutral manifests *(as of 2026-04-15)*
 - **OpenClaw** — viral open-source framework (345K stars); deep messaging-app integrations; **security advisory (May 2026):** 341 malicious registry entries planted in coordinated attack; Microsoft recommends enterprise customers avoid on work machines *(as of 2026-05-13)*
-- [Devin Auto-Triage](../tools/devin.md) — Cognition; always-on persistent agent that monitors Slack channels and investigates bugs as reported; parent Devin filters noise and dispatches focused sub-sessions; shared long-term memory for deduplication across repeat reports; early users (Modal) describe it as more useful than homegrown triage automations *(as of 2026-05-19)*
 
 ### Deep research tools
 
@@ -76,6 +70,7 @@ Managed compute providers whose core product is execution environments purpose-b
 - [Daytona](../tools/daytona.md) — bare-metal sandboxes on its own scheduler; ~60ms startup, 50K sandboxes in ~75s, largest customer ~850K/day; RL/eval now ~50% of usage; Windows/macOS computer-use sandboxes in progress *(as of 2026-05-22)*
 - [Modal](../tools/modal.md) — serverless AI cloud reframing from developer to "agent experience"; 100K-sandbox RL rollouts, sidecars, 17-cloud capacity pool; $355M Series C *(as of 2026-07-08)*
 - [Railway](../tools/railway.md) — bare-metal deployment platform with copy-on-write production forks, progressive rollouts, and a CLI-first agent interface *(as of 2026-05-20)*
+- [E2B](../tools/e2b.md) — isolated sandbox runtime for AI agents; disposable Linux VMs exposed as a programmable execution layer via SDK; command execution, SSH/terminal access, persistence/snapshots, BYOC deployment *(as of 2026-04-24)*
 
 ### Agent-native documents
 

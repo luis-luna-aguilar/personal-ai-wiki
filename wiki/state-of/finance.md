@@ -4,7 +4,7 @@ type: state-of
 domains: [finance]
 tags: []
 as_of: 2026-07-02
-sources: [perplexity-computer-plaid, hebbia-homepage, legacy-ai-tools-roadmap-xlsx, stripe-agent-native-commerce-fraud-2026-04-29, finance-agent-workflows-2026-05-06, chatgpt-personal-finance-2026-05, thinking-machines-financial-expert-judgment-2026-07-02, superhuman-bridgewater-thinking-machines-2026-07-02]
+sources: [perplexity-computer-plaid, hebbia-homepage, legacy-ai-tools-roadmap-xlsx, stripe-agent-native-commerce-fraud-2026-04-29, finance-agent-workflows-2026-05-06, chatgpt-personal-finance-2026-05, thinking-machines-financial-expert-judgment-2026-07-02, superhuman-bridgewater-thinking-machines-2026-07-02, mistral-document-ai, landingai-agentic-document-extraction]
 ---
 
 # State of Finance
@@ -19,7 +19,6 @@ AI products specialized for financial analysis, modeling, and document-heavy fin
 
 - [Hebbia](../tools/hebbia.md) — document-heavy knowledge-work platform with especially strong practical relevance in finance analysis and modeling workflows *(as of 2026-04-22)*
 - **Anthropic finance agent templates** — secondary newsletter coverage describes templates for pitch generation, valuation review, KYC, and month-end close with market-data integrations; pending primary Anthropic verification *(as of 2026-05-06)*
-- [Perplexity Computer](../tools/perplexity-computer.md) — professional-finance positioning now reportedly combines licensed finance data with packaged workflows; current signal is newsletter coverage pending primary verification *(as of 2026-05-06)*
 - **Bridgewater / Thinking Machines expert-judgment model** — expert-labeled financial information-filtering tasks fine-tuned on Qwen3-235B; trained model reached 84.7% average accuracy and 13.8x lower inference cost per task than frontier baselines in the public Thinking Machines report *(as of 2026-07-02)*
 
 ### Personal finance AI
@@ -27,7 +26,14 @@ AI products specialized for financial analysis, modeling, and document-heavy fin
 Consumer-facing AI tools that connect to financial accounts and assist with budgeting, tracking, and everyday money workflows.
 
 - **ChatGPT @Finances** — OpenAI; activated with `@Finances` in any ChatGPT conversation; connects to 12,000+ financial providers; gives personalized money advice grounded in real income and spending data; GPT-5.5 Thinking 79/100 on complex finance tasks; US Pro preview only *(as of 2026-05-18)*
-- [Perplexity Computer](../tools/perplexity-computer.md) — Perplexity Computer connects to 12,000+ financial institutions via Plaid, letting users build custom budgeting/tracking tools inside an AI chat interface *(as of 2026-04-10)*
+- [Perplexity Computer](../tools/perplexity-computer.md) — connects to 12,000+ financial institutions via Plaid, letting users build custom budgeting/tracking tools inside an AI chat interface; also reportedly moving toward a professional-finance positioning combining licensed finance data with packaged workflows (newsletter coverage, pending primary verification) *(as of 2026-05-06)*
+
+### Document intelligence
+
+AI products specialized for extracting, structuring, querying, or reasoning over documents, PDFs, forms, and tables — as distinct from general-purpose finance assistants.
+
+- [Mistral Document AI](../tools/mistral-document-ai.md) — Mistral; document-intelligence product for extracting and structuring information from PDFs, forms, and enterprise document flows *(as of 2026-04-22)*
+- [LandingAI Agentic Document Extraction](../tools/landingai-agentic-document-extraction.md) — LandingAI; agentic extraction for visually complex documents, emphasizing preserved structural context across tables, forms, and segmented layouts *(as of 2026-04-22)*
 
 ### Agent-native commerce and fraud
 

@@ -112,7 +112,7 @@ SpaceX exercised a previously announced option to acquire Cursor in an all-stock
 ## Sources
 
 - [Meet the new Cursor (Cursor 3 launch)](../sources/articles/cursor-3-launch.md)
-- [Cursor ships PR demo attachments](../sources/articles/cursor-pr-demos.md)
+- [Cursor ships PR demo attachments](../sources/tweets/cursor-pr-demos.md)
 - [Coding agent control planes](../sources/newsletters/coding-agent-control-planes.md)
 - [Cursor 3 orchestration bet](../sources/newsletters/cursor-3-orchestration-bet.md)
 - [Cursor cloud agents and the supervision workspace thesis](../sources/newsletters/cursor-cloud-agents-march.md)

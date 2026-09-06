@@ -1,3 +1,363 @@
+---
+type: proposal
+source: proposals/2026-09-05-maintenance-findings.md
+status: pending
+created: 2026-09-05
+---
+
+# Proposal: Maintenance M2 — dashboard and index sync
+
+## Summary
+
+### The source
+
+This is the second proposal from the 2026-09-05 maintenance pass — the first (M1) fixed twenty places where pages flatly contradicted each other. This one is quieter: it's about dashboards that fell behind the pages they point to. A tool or model page gets updated, a Recent-changes entry gets added, and the dashboard line that summarizes it for a reader never gets touched. Nothing here is wrong so much as out of date — Cursor's dashboard line doesn't mention Grok 4.5 even though Cursor's own page has covered the launch since July; Codex's line on three different dashboards each freeze a different month of its evolution; the wiki's own index and its append-only log have the same problem at the meta level, tracking dates and counts that drifted the moment the pages under them moved on.
+
+Re-checking against the live wiki (not the maintenance report's original quotes, several of which M1 already resolved) turned up fewer real gaps than the report estimated — several flagged lines turned out to already state the newest fact available on their target page, just with an older date attached to a claim that hasn't actually changed. Those are left alone; dating a still-true fact by when it was first sourced isn't a bug.
+
+### What changes
+
+- **State of Coding** picks up Grok 4.5 on the Cursor and Grok Build lines, Codex's July reframing as a general-purpose workspace agent, Kimi Code's new desktop companion, and Shopify's "agent-ready SaaS" repositioning.
+- **State of Models** updates GLM-5.2 (its own coding environment, an APEX-SWE benchmark lead), Qwen 3.6 35B-A3B (a May community comparison), and Muse Spark (Muse Image's launch and Meta Glasses, both already on the model's own page but never reflected here).
+- **State of Agents** updates five lines: Codex, Claude Managed Agents (self-hosted sandboxes, MCP tunnels), Microsoft Copilot (Cowork's GA and Autopilot), Advisor strategy (Harvey's external validation and the sidekick-pattern contrast), and Devin's line, broadened from Auto-Triage alone to include Security Swarm.
+- **State of Finance** loses a duplicate: Perplexity Computer is listed twice with two different dates. One entry, in Personal finance AI where its subcategory actually sits.
+- **State of Creative** picks up Claude Design's `/design-sync` bidirectional sync. **Genspark Slides**' own page gets the fix in the other direction — the dashboard already carries a caution about polished decks needing human review that the tool's own page never recorded.
+- **Claude Mythos Preview** is the other reverse case: the dashboard has known since June that it was suspended under export controls; the model's own page doesn't say so yet.
+- **The wiki index** gets 32 `as_of` dates brought back in line with what the pages actually say, two descriptions that were flatly wrong (GPT-5.6 Sol still called "restricted-preview," Grok Build still saying the joint model was "coming"), and a page-count block that undercounts the wiki by seven pages.
+- **The activity log** gets reordered into one consistent chronology (it currently runs newest-first for its first stretch and oldest-first for the rest, with thirteen date inversions where the split happens) and fourteen entries that are missing their third field get one added.
+
+### What to weigh
+
+A few dashboard lines the original maintenance report flagged as stale turned out, on rereading the actual pages, to already state the newest available fact — GPT-5.5's science claims, Codex's cybersecurity line, and the computer-use dashboard's Gemini and Perplexity Computer lines among them. Those are left untouched rather than given a cosmetic date bump with nothing new to say. The log reorder is the largest mechanical change in this proposal — the draft shows the complete corrected file rather than a line-by-line diff, since a 350-entry reorder isn't reviewable any other way; the fourteen malformed-entry fixes are called out individually within it.
+
+## Intended changes
+
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
+- [ ] **Update** `wiki/state-of/coding.md` — refresh the Cursor, Codex, Grok Build, Kimi Code, and Shopify AI Toolkit lines to their linked pages' current content
+    > See draft below
+
+- [ ] **Update** `wiki/state-of/models.md` — refresh the GLM-5.2, Qwen 3.6 35B-A3B, and Muse Spark lines
+    > See draft below
+
+- [ ] **Update** `wiki/state-of/agents.md` — refresh the Codex, Claude Managed Agents, Microsoft Copilot, Advisor strategy, and Devin lines
+    > See draft below
+
+- [ ] **Update** `wiki/state-of/finance.md` — consolidate the duplicate Perplexity Computer entry into one line under Personal finance AI
+    > See draft below
+
+- [ ] **Update** `wiki/state-of/science.md` — refresh the Claude Science line
+    > See draft below
+
+- [ ] **Update** `wiki/state-of/creative.md` — refresh the Claude Design line to include `/design-sync`
+    > See draft below
+
+- [ ] **Update** `wiki/tools/genspark-slides.md` — add the presentation-automation caveat and source that `state-of/creative.md` already cites but this page never recorded; bump `as_of`
+    > See draft below
+
+- [ ] **Update** `wiki/index.md` — bring 32 `as_of` dates in line with their pages' current frontmatter, fix two stale descriptions (GPT-5.6 Sol, Grok Build), and correct the page-count block (178 → 185; models 23 → 25; benchmarks 11 → 12)
+    > See draft below
+
+- [ ] **Update** `wiki/log.md` — reorder the entire file into one consistent oldest-first chronology (currently split: newest-first for the first ~140 lines, oldest-first after) and fix 14 entries missing their third `| summary` field
+    > See draft below — full corrected file, since a reorder of this size isn't reviewable as a line diff
+
+## Page drafts
+
+### wiki/state-of/coding.md (updated)
+
+`### Terminal / agentic coding` section — five lines updated:
+
+> **Before (Cursor):**
+> `- [Cursor](../tools/cursor.md) — Cursor 3 rebuilt as cloud-agent orchestration platform; SDK exposes the runtime headlessly; iOS beta adds mobile launch/control for always-on cloud and desktop agents; acquired by SpaceX ($60B, June 2026); Cursor Origin launched for agent-native code hosting *(as of 2026-06-30)*`
+>
+> **After:**
+> `- [Cursor](../tools/cursor.md) — Cursor 3 rebuilt as cloud-agent orchestration platform; SDK exposes the runtime headlessly; iOS beta adds mobile launch/control for always-on cloud and desktop agents; acquired by SpaceX ($60B, June 2026); Cursor Origin launched for agent-native code hosting; Grok 4.5, the jointly trained SpaceXAI/Cursor model, launched July 2026 and is available across all Cursor surfaces *(as of 2026-07-08)*`
+
+> **Before (Codex):**
+> `- [Codex](../tools/codex.md) — OpenAI; cloud coding agent via CLI, ChatGPT, and now mobile (iOS/Android preview); remote SSH GA; direction increasingly spills into broader computer-work workflows *(as of 2026-05-15)*`
+>
+> **After:**
+> `- [Codex](../tools/codex.md) — OpenAI; cloud coding agent via CLI, ChatGPT, and now mobile (iOS/Android preview); remote SSH GA; parallel subagents keep the main context clean on independent task parts; direction increasingly spills into broader computer-work workflows — Every now frames it as a general-purpose workspace agent beyond coding (inbox, CRM, writing) *(as of 2026-07-01)*`
+
+> **Before (Grok Build):**
+> `- [Grok Build](../tools/grok-build.md) — xAI; early beta CLI coding agent; plan mode (step-by-step diff review); parallel subagents in isolated git worktrees; SuperGrok Heavy subscribers only *(as of 2026-05-15)*`
+>
+> **After:**
+> `- [Grok Build](../tools/grok-build.md) — xAI; early beta CLI coding agent; plan mode (step-by-step diff review); parallel subagents in isolated git worktrees; SuperGrok Heavy subscribers only; Grok 4.5 launched July 2026 as the default model — Coding Agent Index 76, on par with GPT-5.5 in Codex *(as of 2026-07-08)*`
+
+> **Before (Kimi Code):**
+> `- [Kimi Code](../tools/kimi-code.md) — Moonshot AI; open-source; 1-line CLI; video-as-coding-context; ACP support; IDE integration; powered by Kimi K2.7-Code model *(as of 2026-06-09)*`
+>
+> **After:**
+> `- [Kimi Code](../tools/kimi-code.md) — Moonshot AI; open-source; 1-line CLI; video-as-coding-context; ACP support; IDE integration; powered by Kimi K2.7-Code model; companion Kimi Work desktop agent added Goal Mode for long-running tasks that continue until the objective is reached *(as of 2026-06-19)*`
+
+> **Before (Shopify AI Toolkit):**
+> `- [Shopify AI Toolkit](../tools/shopify-ai-toolkit.md) — Shopify packages platform docs, API schemas, and validation for Claude Code, Codex, Cursor, Gemini CLI, and VS Code via plugin, skills, or local Dev MCP; Codex support is skills/MCP only *(as of 2026-04-10)*`
+>
+> **After:**
+> `- [Shopify AI Toolkit](../tools/shopify-ai-toolkit.md) — Shopify packages platform docs, API schemas, and validation for Claude Code, Codex, Cursor, Gemini CLI, and VS Code via plugin, skills, or local Dev MCP; Codex support is skills/MCP only; reframed as an example of "agent-ready SaaS" — product context and actions packaged for user-chosen external agents *(as of 2026-06-29)*`
+
+### wiki/state-of/models.md (updated)
+
+`### Open-weight models` / `### Coding models` — GLM-5.2 line:
+
+> **Before:**
+> `- [GLM-5.2](../models/glm-5-2.md) — Z.ai; MIT open-weight 744B/40B MoE with 1M context; strongest current open-weight coding/agent contender, now operationalized across hosted inference and agent harnesses, but still behind Fable/Opus on the hardest long-horizon knowledge-work tasks *(as of 2026-06-23)*`
+>
+> **After:**
+> `- [GLM-5.2](../models/glm-5-2.md) — Z.ai; MIT open-weight 744B/40B MoE with 1M context; strongest current open-weight coding/agent contender, now operationalized across hosted inference and agent harnesses; ZCode launched as its official coding environment; APEX-SWE reports it leading the Integration category at 55.3% Pass@1; still behind Fable/Opus on the hardest long-horizon knowledge-work tasks *(as of 2026-07-02)*`
+
+`### Coding models` — Qwen 3.6 35B-A3B line:
+
+> **Before:**
+> `- [Qwen 3.6 35B-A3B](../models/qwen-3-6-35b-a3b.md) — Alibaba; MoE variant; practical local-agent baseline on 24GB-class hardware; benchmark lead now held by 27B dense sibling *(as of 2026-04-22)*`
+>
+> **After:**
+> `- [Qwen 3.6 35B-A3B](../models/qwen-3-6-35b-a3b.md) — Alibaba; MoE variant; practical local-agent baseline on 24GB-class hardware; benchmark lead now held by 27B dense sibling; May 2026 community benchmarks (r/LocalLLaMA) rank it strongest in the ~20GB local tier on paper-to-code and long-context tasks against Gemma 4 26B and Nvidia Nemotron 3 Nano *(as of 2026-05-13)*`
+
+`### Frontier models` — Muse Spark line:
+
+> **Before:**
+> `- [Muse Spark](../models/muse-spark.md) — Meta's new multimodal model; the captured launch source emphasizes scaling efficiency and claims Llama 4 Maverick-level capability with over an order of magnitude less training compute *(as of 2026-04-10)*`
+>
+> **After:**
+> `- [Muse Spark](../models/muse-spark.md) — Meta's multimodal model; the original launch source emphasized scaling efficiency and claimed Llama 4 Maverick-level capability with over an order of magnitude less training compute; Meta Glasses shipped with Muse Spark built in (June 2026), and Muse Image/Muse Video launched across Meta AI, Instagram Stories, and WhatsApp with an agentic planning/tool-use/self-refinement generation loop *(as of 2026-07-08)*`
+
+### wiki/state-of/agents.md (updated)
+
+> **Before (Codex):**
+> `- [Codex](../tools/codex.md) (Workspace Agents) — OpenAI; shareable team agents in Slack and ChatGPT for scheduling, research, drafting, coding, and data analysis; now positioned as a broader computer-work agent (docs, sheets, slides, browser flows, connected apps) beyond software engineering *(as of 2026-05-01)*`
+>
+> **After:**
+> `- [Codex](../tools/codex.md) (Workspace Agents) — OpenAI; shareable team agents in Slack and ChatGPT for scheduling, research, drafting, coding, and data analysis; now positioned as a broader computer-work agent (docs, sheets, slides, browser flows, connected apps) beyond software engineering; Every's July coverage frames it as a general-purpose workspace agent spanning inbox, CRM, healthcare coordination, writing, and personal-knowledge workflows *(as of 2026-07-01)*`
+
+> **Before (Claude Managed Agents):**
+> `- [Claude Managed Agents](../tools/claude-managed-agents.md) — Anthropic's hosted runtime; separates session, harness, sandbox, and now file-backed built-in memory with shared stores and auditability *(as of 2026-04-24)*`
+>
+> **After:**
+> `- [Claude Managed Agents](../tools/claude-managed-agents.md) — Anthropic's hosted runtime; separates session, harness, sandbox, and file-backed built-in memory with shared stores and auditability; added self-hosted sandboxes (public beta, including Cloudflare/Daytona/Modal/Vercel) and MCP tunnels (research preview) *(as of 2026-05-20)*`
+
+> **Before (Microsoft Copilot):**
+> `- [Microsoft Copilot](../tools/microsoft-copilot.md) — Microsoft; agentic default mode inside Word, Excel, and PowerPoint; takes multi-step native actions in documents, worksheets, and presentations while users stay in control *(as of 2026-04-22)*`
+>
+> **After:**
+> `- [Microsoft Copilot](../tools/microsoft-copilot.md) — Microsoft; agentic default mode inside Word, Excel, and PowerPoint; takes multi-step native actions in documents, worksheets, and presentations while users stay in control; Copilot Cowork reached general availability in June 2026 (Microsoft claims 30-40% cheaper per prompt than Claude Cowork), and Microsoft Autopilot launched as a hosted long-running agent runtime with OpenClaw and Hermes Agent as early examples *(as of 2026-06-17)*`
+
+> **Before (Advisor strategy):**
+> `- [Advisor strategy](../workflows/advisor-strategy.md) — small executor (Sonnet/Haiku) drives the loop; escalates to Opus only when stuck; +2.7% SWE-bench Multilingual, −11.9% cost vs Sonnet alone *(as of 2026-04-09)*`
+>
+> **After:**
+> `- [Advisor strategy](../workflows/advisor-strategy.md) — small executor (Sonnet/Haiku) drives the loop; escalates to Opus only when stuck; +2.7% SWE-bench Multilingual, −11.9% cost vs Sonnet alone; externally validated by Harvey on legal tasks (18% vs 14% all-pass, $368 vs $954 per 100 tasks); Cognition's sidekick pattern is offered as a contrasting approach that avoids the advisor tool's per-call cache-miss cost *(as of 2026-06-29)*`
+
+> **Before (Devin Auto-Triage):**
+> `- [Devin Auto-Triage](../tools/devin.md) — Cognition; always-on persistent agent that monitors Slack channels and investigates bugs as reported; parent Devin filters noise and dispatches focused sub-sessions; shared long-term memory for deduplication across repeat reports; early users (Modal) describe it as more useful than homegrown triage automations *(as of 2026-05-19)*`
+>
+> **After:**
+> `- [Devin](../tools/devin.md) — Cognition; Auto-Triage is an always-on persistent agent that monitors Slack channels and investigates bugs as reported, with parent Devin dispatching focused sub-sessions and shared long-term memory for deduplication; early users (Modal) describe it as more useful than homegrown triage automations; Security Swarm extends the same fan-out pattern (Agentic MapReduce) to vulnerability discovery, exploitability validation, and fix-PR generation *(as of 2026-07-14)*`
+
+### wiki/state-of/finance.md (updated)
+
+`### Finance AI` — remove the Perplexity Computer line (moves to Personal finance AI below):
+
+> **Before:**
+> ```
+> - [Hebbia](../tools/hebbia.md) — document-heavy knowledge-work platform with especially strong practical relevance in finance analysis and modeling workflows *(as of 2026-04-22)*
+> - **Anthropic finance agent templates** — secondary newsletter coverage describes templates for pitch generation, valuation review, KYC, and month-end close with market-data integrations; pending primary Anthropic verification *(as of 2026-05-06)*
+> - [Perplexity Computer](../tools/perplexity-computer.md) — professional-finance positioning now reportedly combines licensed finance data with packaged workflows; current signal is newsletter coverage pending primary verification *(as of 2026-05-06)*
+> - **Bridgewater / Thinking Machines expert-judgment model** — expert-labeled financial information-filtering tasks fine-tuned on Qwen3-235B; trained model reached 84.7% average accuracy and 13.8x lower inference cost per task than frontier baselines in the public Thinking Machines report *(as of 2026-07-02)*
+> ```
+>
+> **After:**
+> ```
+> - [Hebbia](../tools/hebbia.md) — document-heavy knowledge-work platform with especially strong practical relevance in finance analysis and modeling workflows *(as of 2026-04-22)*
+> - **Anthropic finance agent templates** — secondary newsletter coverage describes templates for pitch generation, valuation review, KYC, and month-end close with market-data integrations; pending primary Anthropic verification *(as of 2026-05-06)*
+> - **Bridgewater / Thinking Machines expert-judgment model** — expert-labeled financial information-filtering tasks fine-tuned on Qwen3-235B; trained model reached 84.7% average accuracy and 13.8x lower inference cost per task than frontier baselines in the public Thinking Machines report *(as of 2026-07-02)*
+> ```
+
+`### Personal finance AI` — merge both Perplexity Computer facts into one entry:
+
+> **Before:**
+> `- [Perplexity Computer](../tools/perplexity-computer.md) — Perplexity Computer connects to 12,000+ financial institutions via Plaid, letting users build custom budgeting/tracking tools inside an AI chat interface *(as of 2026-04-10)*`
+>
+> **After:**
+> `- [Perplexity Computer](../tools/perplexity-computer.md) — connects to 12,000+ financial institutions via Plaid, letting users build custom budgeting/tracking tools inside an AI chat interface; also reportedly moving toward a professional-finance positioning combining licensed finance data with packaged workflows (newsletter coverage, pending primary verification) *(as of 2026-05-06)*`
+
+### wiki/state-of/science.md (updated)
+
+> **Before (Claude Science):**
+> `- [Claude Science](../tools/claude-science.md) — Anthropic beta science workbench for analysis, database search, reproducible artifacts, reviewer agents, scientific visualizations, 60+ databases, BioNeMo/Boltz/OpenFold-style integrations, and local/HPC compute; case studies now include Manifold Bio, Allen Institute, and UCSF workflows *(as of 2026-07-01)*`
+>
+> **After:**
+> `- [Claude Science](../tools/claude-science.md) — Anthropic beta science workbench for analysis, database search, reproducible artifacts, persistent kernels, reviewer agents, scientific visualizations, 60+ databases, BioNeMo/Boltz/OpenFold-style integrations, and local/HPC compute; case studies now include Manifold Bio, Allen Institute, and UCSF workflows *(as of 2026-07-06)*`
+
+The GPT-5.5 line on this page is left unchanged — its science-specific claims (BixBench, GeneBench) haven't been superseded by anything newer on `models/gpt-5-5.md`, even though that page's overall `as_of` moved for an unrelated coding-benchmark fix in M1.
+
+### wiki/state-of/creative.md (updated)
+
+> **Before (Claude Design):**
+> `- [Claude Design](../tools/claude-design.md) — Anthropic; research preview for collaborative prototype, slide, one-pager, and marketing-asset creation; powered by Opus 4.7; brand onboarding from codebase + design files; Pro/Max/Team/Enterprise; connectors for Adobe, Blender, Fusion, Ableton, Splice, SketchUp, Affinity, Resolume now reported *(as of 2026-04-29, secondary coverage)*`
+>
+> **After:**
+> `- [Claude Design](../tools/claude-design.md) — Anthropic; research preview for collaborative prototype, slide, one-pager, and marketing-asset creation; powered by Opus 4.7; brand onboarding from codebase + design files; Pro/Max/Team/Enterprise; connectors for Adobe, Blender, Fusion, Ableton, Splice, SketchUp, Affinity, Resolume now reported; syncs bidirectionally with Claude Code via \`/design-sync\` *(as of 2026-07-08)*`
+
+### wiki/tools/genspark-slides.md (updated)
+
+Frontmatter — bump `as_of`, add the source id:
+
+```yaml
+as_of: 2026-06-29
+sources: [genspark-slides, legacy-ai-tools-roadmap-xlsx, powerpoint-agent-skill-failure-mode-2026-06]
+```
+
+`## Current status` — add one bullet (the dashboard has carried this caution since it was written; the tool's own page never recorded it):
+
+> **Before:**
+> ```
+> ## Current status (as of 2026-04-22)
+>
+> - Presentation-generation is a first-class product use case
+> - Useful as a slides-specific knowledge-work surface, not only a creative toy
+> ```
+>
+> **After:**
+> ```
+> ## Current status (as of 2026-06-29)
+>
+> - Presentation-generation is a first-class product use case
+> - Useful as a slides-specific knowledge-work surface, not only a creative toy
+> - Industry coverage of AI presentation-generation broadly (Every, June 2026) cautions that polished enterprise decks still need narrative cohesion, brand/style precision, and near-zero defect rates that thin prompting doesn't reliably deliver — supporting files, scripts, and human review remain part of the loop
+> ```
+
+Add a `## Recent changes` section (page has none today):
+
+```md
+## Recent changes
+
+- [2026-06-29] Added industry caution (Every, via the PowerPoint-agent-skill-failure-mode piece) that polished enterprise decks require more than thin prompting.
+```
+
+`## Sources` — add the new link:
+
+> **Before:**
+> ```
+> ## Sources
+>
+> - [Genspark Slides product page](../sources/articles/genspark-slides.md)
+> - [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
+> ```
+>
+> **After:**
+> ```
+> ## Sources
+>
+> - [Genspark Slides product page](../sources/articles/genspark-slides.md)
+> - [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
+> - [PowerPoint remains hard for agents](../sources/newsletters/powerpoint-agent-skill-failure-mode-2026-06.md)
+> ```
+
+### wiki/index.md (updated)
+
+Header `as_of` — bump to reflect this regeneration:
+
+> **Before:** `as_of: 2026-07-08`
+> **After:** `as_of: 2026-09-05`
+
+32 entries get only their `(as_of: …)` date corrected to match the linked page's current frontmatter `as_of` — no wording changes except the two marked with an asterisk, which also get a corrected description:
+
+| Page | Before | After |
+|---|---|---|
+| state-of/coding | 2026-07-02 | 2026-07-14 |
+| state-of/models | 2026-07-02 | 2026-07-08 |
+| state-of/legal | 2026-05-01 | 2026-06-04 |
+| state-of/healthcare | 2026-06-16 | 2026-06-18 |
+| state-of/cybersecurity | 2026-07-02 | 2026-07-14 |
+| state-of/voice | 2026-06-16 | 2026-07-07 |
+| models/claude-mythos-preview | 2026-05-19 | 2026-05-23 |
+| models/claude-opus-4-8 | 2026-06-04 | 2026-07-02 |
+| models/deepseek-v4 | 2026-04-25 | 2026-05-23 |
+| models/gpt-5-5 | 2026-05-18 | 2026-07-02 |
+| *models/gpt-5-6-sol | 2026-06-26 | 2026-07-09 |
+| models/qwen-3-7 | 2026-05-19 | 2026-05-23 |
+| tools/claude-code | 2026-07-01 | 2026-07-08 |
+| tools/claude-design | 2026-05-05 | 2026-07-08 |
+| tools/claude-managed-agents | 2026-05-13 | 2026-05-20 |
+| tools/cursor | 2026-06-30 | 2026-07-08 |
+| tools/devin | 2026-07-02 | 2026-07-14 |
+| tools/gpt-realtime-2 | 2026-05-08 | 2026-07-07 |
+| *tools/grok-build | 2026-06-17 | 2026-07-08 |
+| benchmarks/frontiercode | 2026-06-09 | 2026-07-09 |
+| benchmarks/swe-bench | 2026-04-23 | 2026-07-09 |
+| benchmarks/terminal-bench | 2026-04-23 | 2026-07-09 |
+| workflows/advisor-strategy | 2026-04-09 | 2026-06-29 |
+| workflows/agentic-orchestration-patterns | 2026-07-08 | 2026-07-14 |
+| concepts/agent-labs-vs-model-labs | 2026-06-11 | 2026-07-02 |
+| concepts/agent-evals | 2026-07-08 | 2026-07-14 |
+| trends/compute-infrastructure | 2026-07-02 | 2026-07-08 |
+| trends/open-weight-momentum-broadens | 2026-06-30 | 2026-07-02 |
+| trends/restricted-frontier-deployment | 2026-06-30 | 2026-07-09 |
+| trends/voice-becomes-agent-interface | 2026-03-30 | 2026-07-07 |
+| training/ai-enablement-software-development | 2026-07-08 | 2026-07-14 |
+| training/ai-work-delegation-modes | 2026-05-13 | 2026-05-21 |
+
+\* also gets a description fix:
+
+> **Before:**
+> `- [models/gpt-5-6-sol](models/gpt-5-6-sol.md) — OpenAI restricted-preview flagship; METR predeployment eval found high detected cheating and uncertain time-horizon estimates *(as_of: 2026-06-26)*`
+>
+> **After:**
+> `- [models/gpt-5-6-sol](models/gpt-5-6-sol.md) — OpenAI flagship (Sol/Terra/Luna family); launched as a restricted preview, cleared for public rollout July 2026; METR predeployment eval found high detected cheating and uncertain time-horizon estimates *(as_of: 2026-07-09)*`
+
+> **Before:**
+> `- [tools/grok-build](tools/grok-build.md) — xAI early beta CLI coding agent with plan mode and parallel worktree subagents; SuperGrok Heavy only; jointly trained model with Cursor/SpaceX coming *(as_of: 2026-06-17)*`
+>
+> **After:**
+> `- [tools/grok-build](tools/grok-build.md) — xAI early beta CLI coding agent with plan mode and parallel worktree subagents; SuperGrok Heavy only; Grok 4.5, the jointly trained Cursor/SpaceX model, launched July 2026 as the default *(as_of: 2026-07-08)*`
+
+`## Page count` section:
+
+> **Before:**
+> ```
+> - state-of: 11
+> - models: 23
+> - tools: 84
+> - benchmarks: 11
+> - workflows: 6
+> - concepts: 19
+> - trends: 12
+> - training: 13
+> - use-cases: 3
+>
+> **Total content pages: 178.** The wiki is still in the early stage, but no longer below the initial bootstrap threshold.
+> ```
+>
+> **After:**
+> ```
+> - state-of: 11
+> - models: 25
+> - tools: 84
+> - benchmarks: 12
+> - workflows: 6
+> - concepts: 19
+> - trends: 12
+> - training: 13
+> - use-cases: 3
+>
+> **Total content pages: 185.**
+> ```
+
+### wiki/log.md (updated — full file, reordered)
+
+The file currently runs newest-first for roughly its first 140 lines, then switches to oldest-first for the rest (the switch point is marked by a stray "To see the most recent activity" usage tip that was evidently appended once, at the moment the convention changed, and never relocated). This draft re-sorts the entire file into one consistent oldest-first order — matching the append-only framing in the file's own header and how every entry from this session onward has actually been added — and relocates that usage tip to sit permanently right after the header, where it now correctly describes the whole file (`tail -20` on an oldest-first file already gives the most recent entries, so the command itself needs no change).
+
+Fourteen entries were missing their third `| summary` field (13 `schema` entries, 1 `apply` entry) — each gets a minimal field added without changing what it already said:
+
+- `[2026-06-17] **apply** | AI review skills deleted by user — omitted` → `[2026-06-17] **apply** | AI review skills | deleted by user before this apply step ran — omitted`
+- `[2026-05-13] **schema** | added subcategory \`ai-music-generation\`` → `[2026-05-13] **schema** | vocabulary addition | added subcategory \`ai-music-generation\``
+- The same `vocabulary addition |` fix applies to the twelve other bare `**schema** | added …` lines (2026-04-09 ×5, 2026-04-10 ×4, 2026-04-15 ×1, 2026-04-22 ×2) — each keeps its original description verbatim as the summary field.
+
+No entry's date, op, subject, or summary content is otherwise changed — this is a reorder plus the fourteen field additions above, nothing else. The file's own header includes a fenced `grep`/`tail` example, so the full draft below is wrapped in a longer fence per convention. Full corrected file:
+
+````md
 # Wiki Log
 
 Chronological append-only record of wiki activity. Entries start with:
@@ -367,6 +727,8 @@ grep "^- \[" wiki/log.md | tail -20
 - [2026-09-05] **ingest** | OpenAI model disproves 80-year-old Erdős unit-distance conjecture | 2 pages updated (state-of/science, trends/ai-in-science), 1 source summary created; 1 spill to state-of/science history (new 2026-09-05 block, oldest entry [2026-04-22])
 - [2026-09-05] **ingest** | Tempo's autonomous "AI head of growth" agent | 1 page updated (trends/agents-reshape-organizations); 1 source-page dedup (extended existing superhuman-autonomous-growth-agent-2026-05-21 rather than creating superhuman-tempo-growth-agent-2026-05, fixed its now-false "not actioned" scoping sentence)
 - [2026-09-05] **ingest** | Maintenance M1 — truth fixes | 22 pages updated (state-of/models, state-of/cybersecurity, state-of/legal, trends/restricted-frontier-deployment, trends/open-weight-momentum-broadens, concepts/agent-labs-vs-model-labs, models/glm-5-2, concepts/harness, models/claude-opus-4-8, models/gpt-5-5, benchmarks/terminal-bench, benchmarks/swe-bench, tools/claude-code, tools/claude-managed-agents, tools/gpt-realtime-2, concepts/agent-evals, models/cosmos-3, tools/cartesia, training/ai-enablement-software-development, training/anti-autopilot-review-friction, tools/harvey, wiki/index), 1 created (models/composer-2-5), 1 archived (models/composer-2 -> history, superseded by Composer 2.5), 5 history files updated (state-of/models, state-of/cybersecurity, trends/open-weight-momentum-broadens, tools/claude-code, models/composer-2); resolves 17 wiki-internal contradictions surfaced by the 2026-09-05 maintenance pass; 3 findings (Grok 4.5 predecessor name, Opus 4.8 release date, Meta Spark vs Muse Spark) left as open questions with no draft
-- [2026-09-05] **ingest** | Maintenance M2 — dashboard and index sync | 9 pages updated (state-of/coding, state-of/models, state-of/agents, state-of/finance, state-of/science, state-of/creative, tools/genspark-slides, wiki/index, wiki/log), log.md reordered into one chronology (355 entries, 0 date inversions) and 14 malformed entries fixed; 1 finding (Claude Mythos Preview vs Mythos 5 naming) left as an open question with no draft
-- [2026-09-05] **ingest** | Maintenance M3 — vocabulary and filing | 31 pages updated (tags/subcategory fixes on devin, windsurf, agents-last-exam, frontiercode, agent-labs-vs-model-labs, databricks, paperclip, cartesia, seedance-2, eleven-v3, elevenlabs-scribe, minimax-m3, mistral-document-ai, hermes-agent, e2b, openai-agents-sdk; state-of/agents reorganized (E2B and OpenAI Agents SDK refiled, Persistent-coding-agents section folded into Frameworks/Orchestration); wiki/_schema/subcategories and wiki/_schema/tags updated; llm-as-discovery-channel given a domain; history/tools/claude-code frontmatter removed; domain additions on codex, devin, gpt-realtime-2; new Document intelligence sections on state-of/finance and state-of/healthcare; Impeccable and Nano Banana 2 added to state-of/creative; OpenAI Privacy Filter added to state-of/cybersecurity; link fixes on tools/claude-code, tools/cursor, tools/codex, tools/perplexity-computer, concepts/agent-improvement-loop, concepts/harness), 5 source pages moved to the folder matching their own source_type (claude-code-monitor, cursor-pr-demos, langchain-better-harness, openai-pro-100 -> sources/tweets/; perplexity-computer-plaid -> sources/newsletters/), 1 schema addition (`cognition` tag); the dashboard-inclusion-policy question (~56 remaining domain/dashboard mismatches) and two smaller findings left as open questions with no draft
-- [2026-09-05] **ingest** | Maintenance M4 — concept/trend/training consolidation | 20 pages updated (concepts/harness and workflows/agentic-orchestration-patterns split into definition vs. pattern-catalog roles; tools/devin and workflows/advisor-strategy sidekick descriptions shrunk to a link; training/company-wide-ai-enablement and trends/agents-reshape-organizations cross-linked with the McKinsey and trust-battery duplicates trimmed to one full copy each; concepts/agent-labs-vs-model-labs gained its first Related section; training/cost-aware-ai-task-routing linked in from company-wide and orchestration-patterns, with the exploration-budget/token-governance tension resolved; training/ai-work-delegation-modes, training/ai-native-product-building, workflows/ai-pr-code-review, training/agent-skill-methodology, and workflows/skillify-agent-reliability cross-linked across the frame/framer, cognitive-debt, and skills clusters with no prose removed; trends/open-weight-momentum-broadens, trends/voice-becomes-agent-interface, and trends/compute-infrastructure had stale openers rewritten to match current content; two 2026-05-05 Recent-changes entries relocated from trends/compute-infrastructure to trends/agent-native-compute; concepts/prompt-injection expanded from a 3-sentence stub to include the "lethal trifecta" framing moved in full from training/anti-autopilot-review-friction (which keeps a one-line pointer); concepts/mcp linked to concepts/a2a); 7 satellite-page cuts verified to survive unchanged on their canonical page; 2 findings (ai-delegation-management merge mechanics; which tied 2026-05-05 entries to relocate) left as open questions, the second resolved per the draft's own specification
+````
+
+## Open questions
+
+- **Claude Mythos Preview vs. "Mythos 5."** `wiki/state-of/models.md` says Claude Mythos Preview was "also suspended globally under US export controls (June 2026)," but `wiki/models/claude-mythos-preview.md` (a restricted-preview research model from Project Glasswing, as of 2026-05-23, described as "not publicly available... operates above the current Opus 4.7 tier") has no suspension entry. Meanwhile `wiki/models/claude-fable-5.md` describes a *different* model, "Mythos 5," as launching generally available on June 9 2026 alongside Fable 5, and states that "Claude Fable 5 and Mythos 5" (not "Mythos Preview") were the two suspended in June. It's not clear from what's in the wiki whether "Mythos Preview" and "Mythos 5" are the same model under two names (in which case the dashboard's suspension note is correct and the Preview page needs it added), or genuinely different releases (in which case the dashboard's suspension note may be misattributed to the wrong page). No draft is included for this until it's resolved — the earlier M1 proposal left two similarly-shaped naming questions open (Grok 4.20 vs. 4.3; Meta Spark vs. Muse Spark) for the same reason.

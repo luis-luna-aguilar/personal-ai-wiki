@@ -54,7 +54,7 @@ OpenAI's GPT-5.6/Sol restricted preview shows the same access-control pattern ex
 
 METR's fetched evaluation confirms the predeployment-assessment side of the pattern: METR received API access to Sol, a railfree version, raw chain of thought, and a Codex harness setup guide under NDA. The evaluation workflow itself is a concrete restricted-access frontier example.
 
-**Resolution (July 2026, reported):** the GPT-5.6/Sol restriction was reportedly lifted after the US Commerce Department ended what Superhuman (2026-07-09) describes as a "weeks-long restriction," clearing the family for public rollout; no OpenAI statement of the lift has been captured, so this part remains newsletter-sourced. If accurate, it is the first case in this trend's tracking where a restricted-preview episode was resolved toward broader access rather than continued restriction or an outright ban (contrast Anthropic's Fable 5 export-control ban, which this page still records as in force) — worth watching as a data point on how temporary these restrictions turn out to be in practice. See [GPT-5.6 Sol](../models/gpt-5-6-sol.md).
+**Resolution (July 2026, reported):** the GPT-5.6/Sol restriction was reportedly lifted after the US Commerce Department ended what Superhuman (2026-07-09) describes as a "weeks-long restriction," clearing the family for public rollout; no OpenAI statement of the lift has been captured, so this part remains newsletter-sourced. It is not the first resolution tracked on this page, though: Anthropic's Fable 5 export-control ban was itself resolved on 2026-07-02, a week before Sol's — Fable 5 returned online with added safety fallback routing to Opus 4.8 for some sensitive requests. Between the two, this page now has two examples of a restricted-preview or export-control episode resolving toward broader access rather than continued restriction, both within about five weeks of the original restriction. See [GPT-5.6 Sol](../models/gpt-5-6-sol.md) and [Claude Fable 5](../models/claude-fable-5.md).
 
 ## Open questions
 
@@ -63,7 +63,8 @@ METR's fetched evaluation confirms the predeployment-assessment side of the patt
 
 ## Recent changes
 
-- [2026-07-09] Superhuman reports the GPT-5.6/Sol restricted-preview access restriction lifted after the US Commerce Department ended it, clearing the family for public rollout (no OpenAI statement captured) — if accurate, the first resolution-toward-access example tracked on this page, in contrast to Anthropic's Fable 5 export-control ban as recorded here. OpenAI's June 26 primary announcement captured, confirming the preview terms.
+- [2026-07-09] Superhuman reports the GPT-5.6/Sol restricted-preview access restriction lifted after the US Commerce Department ended it, clearing the family for public rollout (no OpenAI statement captured). OpenAI's June 26 primary announcement captured, confirming the preview terms.
+- [2026-07-02] Fable 5 returned online after its export-control suspension, with added safety fallback routing (some cyber/bio/chem requests route to Opus 4.8) — the resolution referenced above corrects the 2026-07-09 entry's "first resolution" framing, since this predates it.
 - [2026-06-30] Every strategy framing added: teams should model regulatory and access shocks as explicit AI strategy assumptions.
 - [2026-06-29] Newsletter coverage reports OpenAI GPT-5.6/Sol restricted preview for coding/cybersecurity via vetted API and Codex access; official source capture still needed.
 - [2026-06-26] METR's GPT-5.6 Sol evaluation reinforces restricted frontier deployment as a safety/evaluation workflow, not only a product availability decision.

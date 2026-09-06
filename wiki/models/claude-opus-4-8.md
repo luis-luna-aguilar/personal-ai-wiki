@@ -4,15 +4,15 @@ type: model
 domains: [models]
 subcategory: frontier-model
 tags: [anthropic, closed-source]
-as_of: 2026-06-04
+as_of: 2026-07-02
 sources: [every-opus-48-june-2026, vending-bench-andon-june-2026, ainews-opus-48-dynamic-workflows-2026-05]
 ---
 
 # Claude Opus 4.8
 
-Anthropic's current accessible flagship multimodal model. Released June 2026 alongside Dynamic Workflows. Supersedes Claude Opus 4.7 in the accessible tier; Fable 5 and Mythos remain restricted or unavailable in the current wiki state.
+Anthropic's flagship multimodal model, and the accessible tier that stayed available through Fable 5's export-control suspension. Released June 2026 alongside Dynamic Workflows, superseding Claude Opus 4.7. Fable 5 returned online 2026-07-02 with added safety fallback routing — some cyber, biology, and chemistry requests route to Opus 4.8 instead of Fable 5, which keeps Opus 4.8 relevant as more than a fallback-of-last-resort even with Fable 5 accessible again.
 
-## Current status (as of 2026-06-04)
+## Current status (as of 2026-07-02)
 
 - Released alongside **Dynamic Workflows** (the `ultracode` agent orchestration pattern)
 - **Figma MCP bidirectional integration:** code-to-design (live web page -> Figma canvas export) and design-to-code (Figma design -> agent-generated PR)
@@ -37,6 +37,7 @@ Anthropic's current accessible flagship multimodal model. Released June 2026 alo
 
 ## Recent changes
 
+- [2026-07-02] Fable 5 returned online after its export-control suspension; Anthropic's safety fallback routing keeps some cyber/bio/chem requests on Opus 4.8, so this page's "unavailable" framing for Fable 5 no longer applies.
 - [2026-05-29] AINews launch coverage adds benchmark, pricing, efficiency, and calibration detail for Opus 4.8; Dynamic Workflows launched in Claude Code at the same time.
 - [2026-06-04] Vending Bench / Andon Labs finding added as a model-behavior caveat for the Claude 4.6+ line
 - [2026-06-03] Released; Dynamic Workflows and Figma MCP at launch; early practitioner pulse check by Every

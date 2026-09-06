@@ -37,7 +37,7 @@ A useful structure for enterprise workflow agent evals:
 - **Cost** — optimizing only for task success can produce agents that are significantly more expensive than cost-aware alternatives. High-capability models may solve a simple scheduling task, but at an unacceptable API cost per interaction.
 - **Latency** — for web-interactive agents, external environment latency (network fetches, API calls, HTML parsing) can dominate total execution time. Measure and bound this per task type.
 - **Efficacy** — baseline task completion: did the agent do what was asked, route tool calls correctly, and provide factually accurate output?
-- **Assurance** — safety, policy adherence, and security: does the agent resist prompt injection? Does it prevent PII leakage? Does it stay within its authorized boundaries?
+- **Assurance** — safety, policy adherence, and security: does the agent resist [prompt injection](../concepts/prompt-injection.md)? Does it prevent PII leakage? Does it stay within its authorized boundaries?
 - **Reliability** — consistent performance across repeated trials; this is the pass^k problem.
 
 These are trade-offs, not independent goals. An agent optimized only for efficacy may solve tasks correctly but at 10× the cost of a more constrained alternative.

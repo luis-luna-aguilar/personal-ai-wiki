@@ -1,7 +1,7 @@
 ---
 title: LLMs as commercial discovery channel
 type: trend
-domains: []
+domains: [models]
 tags: []
 as_of: 2026-06-15
 sources: [ai-referred-shoppers-june-2026]

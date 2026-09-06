@@ -3,7 +3,7 @@ title: SWE-bench
 type: benchmark
 domains: [coding, models]
 tags: []
-as_of: 2026-04-23
+as_of: 2026-07-09
 sources: [amazon-swe-polybench, kimi-k2-6-blog, ainews-2026-04-22, late-march-small-coding-models, agents-evals-deep-research]
 ---
 
@@ -25,17 +25,22 @@ The successor addressing this is **SWE-bench Pro**, which evaluates against priv
 
 **Practical implication:** When comparing agents on SWE-bench Verified, treat scores with skepticism, especially for models with large and recent pre-training corpora. SWE-bench Pro and SWE-bench Multilingual scores are better proxies for generalizable capability.
 
-## Current leaderboard (as of 2026-04-23)
+## Current leaderboard (as of 2026-07-09)
 
 Scores are % of issues resolved. Higher is better.
 
 | Model | Variant | Score | As of |
 |---|---|---|---|
-| [Qwen 3.6 27B](../models/qwen-3-6-27b.md) | SWE-bench Verified | 77.2% | 2026-04-23 |
-| [Qwen 3.6 27B](../models/qwen-3-6-27b.md) | SWE-bench Pro | 53.5% | 2026-04-23 |
-| [Composer 2](../models/composer-2.md) | SWE-bench Multilingual | 73.7% | 2026-03-23 |
-| [MiniMax M2.7](../history/models/minimax-m2-7.md) | SWE-Pro | 56.22% | 2026-03-22 |
-| [Kimi K2.6](../history/models/kimi-k2-6.md) | SWE-bench (various) | SOTA claims | 2026-04-22 |
+| [Claude Fable 5](../models/claude-fable-5.md) | Pro | 80.3% | 2026-07-02 |
+| [Claude Opus 4.8](../models/claude-opus-4-8.md) | Pro | 69.2% | 2026-06-04 |
+| [Qwen 3.6 27B](../models/qwen-3-6-27b.md) | Verified | 77.2% | 2026-05-01 |
+| [MiniMax M3](../models/minimax-m3.md) | Pro | 59.0% | 2026-06-02 |
+| [GPT-5.5](../models/gpt-5-5.md) | Pro | 58.6% | 2026-05-18 |
+| [MAI-Thinking-1](../models/mai-thinking-1.md) | Pro | 53% | 2026-06-03 |
+| [Qwen 3.6 27B](../models/qwen-3-6-27b.md) | Pro | 53.5% | 2026-05-01 |
+| [Composer 2](../history/models/composer-2.md) (historical, superseded by [Composer 2.5](../models/composer-2-5.md)) | Multilingual | 73.7% | 2026-03-23 |
+| [MiniMax M2.7](../history/models/minimax-m2-7.md) (historical) | Pro | 56.22% | 2026-03-22 |
+| [Kimi K2.6](../history/models/kimi-k2-6.md) (historical) | various | SOTA claims | 2026-04-22 |
 
 *Note: claims are vendor-reported unless otherwise noted. Independent replication is not always available.*
 
@@ -52,6 +57,7 @@ SWE-bench is the most widely cited benchmark for comparing coding model and codi
 
 ## Recent changes
 
+- [2026-07-09] Rebuilt the leaderboard from current model pages: added Claude Fable 5 (80.3% Pro) and Claude Opus 4.8 (69.2% Pro), both previously missing despite being current on `state-of/models.md`; repointed the Composer entry to Composer 2.5's supersession of Composer 2.
 - [2026-04-24] Added contamination warning for SWE-bench Verified; reframed SWE-bench Pro as the more meaningful successor
 - [2026-04-23] Page created; compiled leaderboard from model pages referencing SWE-bench scores
 

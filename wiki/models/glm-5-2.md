@@ -59,6 +59,7 @@ Follow-on coverage described GLM-5.2 as the first open-weight model many practit
 
 - [2026-06-23] Follow-on coverage adds strong ecosystem signal: GLM-5.2 quickly landed in coding-agent harnesses and inference providers; AA-Briefcase and practitioner reports frame it as frontier-adjacent but still behind Fable/Opus on hardest long-horizon work.
 - [2026-07-02] ZCode launched as GLM-5.2's official coding environment; APEX-SWE reported GLM-5.2 leading Integration at 55.3% Pass@1; DSpark/vLLM work reinforced inference optimization as part of the open-model stack.
+- [2026-07-02] Correction: Claude Fable 5 returned online this same day after its export-control suspension. The "[banned]" / "[unavailable]" qualifiers on the FrontierSWE/DeepSWE and Code Arena benchmark lines above reflect the measurement window when those benchmarks were run (June 2026) and are not being restated as current.
 - [2026-06-17] Released; MIT license; #1 open-weight Agent Arena; #1 Design Arena; #2 Code Frontend; Terminal-Bench 2.1: 81.0; supersedes GLM-5.1
 
 ## Sources

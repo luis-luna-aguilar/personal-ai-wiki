@@ -33,9 +33,9 @@ AI-native product building means using models and agents to collapse the cost of
 - **Use AI for leverage, not certainty.** The model can generate many possible fixes; the human still chooses which theory of the bug is coherent
 - **Invest in distribution.** When building gets cheaper, standing out and getting users gets harder
 - **Move judgment upstream.** As agents generate more code, the most valuable human work shifts toward writing specs, acceptance criteria, and deterministic verification steps instead of skimming large diffs after the fact
-- **Fight cognitive debt deliberately.** Use walkthroughs, explanations, and other artifacts that make generated systems understandable enough to extend safely later
+- **Fight cognitive debt deliberately.** Use walkthroughs, explanations, and other artifacts that make generated systems understandable enough to extend safely later — see [Anti-autopilot review friction](anti-autopilot-review-friction.md) for the underlying research and prescriptions.
 - **Loop-first design.** Before writing a single prompt, define what a successful loop looks like: the trigger, the goal condition, the tool set, and the escalation points. A well-designed loop handles variance you never predicted; a one-shot prompt just handles the case you thought of.
-- **AI sandwich for product work.** Humans supply the bread: intent, context, taste, and final judgment. AI handles much of the middle: drafting, coding, gathering, summarizing, and first-pass execution.
+- **AI sandwich for product work.** Humans supply the bread: intent, context, taste, and final judgment. AI handles much of the middle: drafting, coding, gathering, summarizing, and first-pass execution. See [AI work delegation modes](ai-work-delegation-modes.md) for the general task-level version of this split.
 - **Polish as a first-class step.** Technically passing work can still feel wrong. Reserve human attention for copy, interaction quality, edge cases, and coherence after the agent has passed deterministic checks.
 
 ## Failure modes

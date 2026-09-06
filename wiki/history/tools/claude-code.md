@@ -1,12 +1,10 @@
----
-title: Claude Code History
-type: history
-as_of: 2026-05-13
----
-
 # Claude Code History
 
 Older recent-change entries spilled from [Claude Code](../../tools/claude-code.md).
+
+## Archived from current page on 2026-09-05
+
+- [2026-05-13] Opus 4.7 fast mode added (research preview): 2.5× faster, ~6× cost per Cursor benchmarks; new latency/price tier
 
 ## Recent changes
 

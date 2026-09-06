@@ -19,9 +19,9 @@ Two agents can reach the same correct answer through very different paths. One g
 
 This is why trajectory evaluation matters: the path reveals planning quality, tool efficiency, and failure risk, none of which are visible from the final answer alone.
 
-## Five eval categories
+## Seven eval dimensions
 
-A useful agent eval suite covers five categories, each catching a different class of failure:
+A useful agent eval suite covers seven dimensions, each catching a different class of failure:
 
 - **Capability** — can the agent perform the task at all? This establishes baseline usefulness before worrying about efficiency or robustness.
 - **Regression** — did a change to the prompt, tools, or underlying model break something that used to work?

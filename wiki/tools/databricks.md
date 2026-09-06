@@ -3,7 +3,7 @@ title: Databricks
 type: tool
 domains: [agents]
 subcategory: ai-assistant
-tags: [enterprise, closed-source]
+tags: [closed-source]
 as_of: 2026-06-17
 sources: [databricks-summit-june-2026]
 ---

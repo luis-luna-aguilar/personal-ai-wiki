@@ -2,8 +2,8 @@
 title: Cartesia
 type: tool
 domains: [voice]
-subcategory: voice-model
-tags: [voice]
+subcategory: voice-models
+tags: []
 as_of: 2026-06-16
 sources: [cartesia-voice-june-2026, ainews-all-model-labs-are-now-agent-labs]
 ---
@@ -32,7 +32,7 @@ AI voice platform focused on low-latency streaming voice models. Offers both tex
 
 ## Recent changes
 
-- [2026-06-16] Sonic-3.5 and Ink-2 launched; claim #1 TTS and STT positions via Together AI
+- [2026-06-16] Sonic-3.5 and Ink-2 first covered in this wiki (via AINews); claim #1 TTS and STT positions via Together AI. No earlier launch date for either model is documented in any source cited on this page — the 2026-05-23 entry below, reporting a Speech Arena #1 ranking for Sonic-3.5, predates this entry and implies Sonic-3.5 was already live by then.
 - [2026-05-23] AINews reports Artificial Analysis ranked Sonic-3.5 #1 on its Speech Arena (Elo 1218, 42 languages); Cartesia separately claims ~82ms end-to-end first-audio latency in production. Second independent evaluator corroborating the Together AI #1 TTS claim.
 
 ## Sources

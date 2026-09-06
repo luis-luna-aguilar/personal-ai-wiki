@@ -29,6 +29,7 @@ Model Context Protocol, usually shortened to MCP, is an open protocol for exposi
 - Lets SaaS vendors expose a compressed, agent-facing product surface: one well-designed MCP server can be easier for agents to use than hundreds of raw API endpoints.
 - Makes it easier for ecosystems to share integrations across hosts
 - Helps separate the agent harness problem from the underlying model problem
+- Complements [Agent2Agent (A2A)](a2a.md): MCP is about how one agent reaches tools and context, A2A is about how one agent delegates and coordinates with another
 - It is increasingly not just a transport layer but a design surface: Anthropic now explicitly recommends remote servers, intent-grouped tools, richer semantics like inline UI and elicitation, and skills layered on top of MCP rather than treated as a separate concern
 - In practice, MCP strategy now splits into local-first and remote-first deployment. Local MCP is the straightforward path for Claude Desktop; ChatGPT-style custom integrations currently point more toward publicly reachable remote MCP servers or connector/app surfaces
 

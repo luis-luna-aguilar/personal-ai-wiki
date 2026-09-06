@@ -4,7 +4,7 @@ type: tool
 domains: [legal]
 subcategory: legal-ai
 tags: [closed-source, agentic]
-as_of: 2026-04-02
+as_of: 2026-06-04
 sources: [harvey-legal-is-next, ainews-ideogram-june-2026]
 ---
 

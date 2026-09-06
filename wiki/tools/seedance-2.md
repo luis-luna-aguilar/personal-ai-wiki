@@ -3,7 +3,7 @@ title: Seedance 2.0
 type: tool
 domains: [creative]
 subcategory: ai-video-generation
-tags: [closed-source]
+tags: [bytedance, closed-source]
 as_of: 2026-04-22
 sources: [seedance-2, legacy-ai-tools-roadmap-xlsx]
 ---

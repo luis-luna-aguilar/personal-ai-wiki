@@ -2,7 +2,7 @@
 title: "Agents' Last Exam (ALE)"
 type: benchmark
 domains: [agents]
-tags: [benchmark, labor-market]
+tags: []
 as_of: 2026-06-10
 sources: [ainews-fable5-june-2026, ainews-june-06-2026]
 ---

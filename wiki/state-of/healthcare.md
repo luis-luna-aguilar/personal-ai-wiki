@@ -4,7 +4,7 @@ type: state-of
 domains: [healthcare]
 tags: []
 as_of: 2026-06-18
-sources: [legacy-ai-tools-roadmap-xlsx, dragon-copilot-launch, hippocratic-ai-homepage, tempus-homepage, zocdoc-zo, open-evidence-homepage, konko-kora-homepage, elevenlabs-scribe, 2026-06-16-metalearn-mystery-fatigue-ai, midjourney-medical-scanner-2026-06, ai-healthcare-triage-doctronic-2026-05]
+sources: [legacy-ai-tools-roadmap-xlsx, dragon-copilot-launch, hippocratic-ai-homepage, tempus-homepage, zocdoc-zo, open-evidence-homepage, konko-kora-homepage, elevenlabs-scribe, 2026-06-16-metalearn-mystery-fatigue-ai, midjourney-medical-scanner-2026-06, ai-healthcare-triage-doctronic-2026-05, mistral-document-ai]
 ---
 
 # State of Healthcare
@@ -29,6 +29,12 @@ Current state of AI in healthcare — clinical documentation, medical knowledge 
 - [Zo](../tools/zo.md) — Zocdoc's patient-access and scheduling phone assistant *(as of 2026-04-22)*
 - [OpenEvidence](../tools/open-evidence.md) — physician-oriented evidence and medical-answer layer *(as of 2026-04-22)*
 - [Kora](../tools/kora.md) — healthcare operations assistant for scheduling and patient-service workflows *(as of 2026-04-22)*
+
+### Document intelligence
+
+AI products specialized for extracting, structuring, querying, or reasoning over documents, PDFs, forms, and tables — as distinct from general clinical or patient-facing tools.
+
+- [Mistral Document AI](../tools/mistral-document-ai.md) — Mistral; document-intelligence product for extracting and structuring information from PDFs, forms, and enterprise document flows *(as of 2026-04-22)*
 
 ### Speech to text
 

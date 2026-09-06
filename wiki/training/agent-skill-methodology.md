@@ -80,6 +80,11 @@ When a team switches default models, run the skill's positive and negative cases
 - What is the right pruning cadence: weekly, monthly, after every production incident, or after each model upgrade?
 - How should teams share reusable business skills without leaking private policy, customer, or employee context?
 
+## Related
+
+- [Skillify — Agent Reliability Pattern](../workflows/skillify-agent-reliability.md) — the 10-step checklist for turning a specific production failure into a tested skill; this page covers the general authoring method
+- [Agentic orchestration patterns](../workflows/agentic-orchestration-patterns.md) — where "share skills, not just code" and progressive disclosure show up as operating patterns
+
 ## Sources
 
 - [Perplexity agent skill methodology](../sources/newsletters/perplexity-agent-skill-methodology-2026-05-12.md)

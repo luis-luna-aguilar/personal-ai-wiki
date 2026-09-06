@@ -90,7 +90,7 @@ Artifacts should make review faster and more accurate. They should not become de
 - **Generic standards:** the review applies generic best practices while missing team-specific architecture, data, security, or operational constraints.
 - **Large-diff blindness:** the PR is too broad for either the model or human to build a coherent mental model.
 - **Review noise:** automated comments fire on every push, teams learn to ignore them, and real findings get buried.
-- **Cognitive debt:** humans approve code they cannot explain, which weakens their ability to direct future agent work.
+- **Cognitive debt:** humans approve code they cannot explain, which weakens their ability to direct future agent work — see [Anti-autopilot review friction](../training/anti-autopilot-review-friction.md) for the underlying studies and remedies.
 - **Eval leakage:** the review benchmark becomes a public or overfit artifact that models can game rather than a realistic test of review judgment.
 
 ## Evidence from practice

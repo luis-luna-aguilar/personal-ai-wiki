@@ -63,7 +63,7 @@ Harvey benchmarked the hybrid pattern on legal task completion. Results are Harv
 
 ## Contrast with the sidekick pattern (2026-06-29)
 
-Cognition's Devin Fusion post explicitly critiques per-call escalation tools like this one (and its own earlier "Smart Friend" prototype): querying a second model per call means that model's context isn't shared in a cacheable way, so every advisor invocation pays a full, uncached price. Devin Fusion's [sidekick pattern](../workflows/agentic-orchestration-patterns.md) avoids this by running the frontier and cheaper model as two persistent, separately-cached agents for the whole session, switching which one leads only at natural cache-invalidation points (context compaction). The tradeoff: sidekick needs a harness built for two parallel long-running agents, while the advisor tool is a single API primitive addable to an existing single-agent loop.
+Cognition's Devin Fusion critiques per-call escalation tools like this one: querying a second model per call means that model's context isn't shared in a cacheable way, so every advisor invocation pays a full, uncached price. The [sidekick pattern](../workflows/agentic-orchestration-patterns.md) avoids this by running both models as persistent, separately-cached agents for the whole session. The tradeoff: sidekick needs a harness built for two parallel long-running agents, while the advisor tool is a single API primitive addable to an existing single-agent loop.
 
 ## Related
 

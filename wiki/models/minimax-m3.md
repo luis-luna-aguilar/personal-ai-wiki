@@ -3,7 +3,7 @@ title: MiniMax M3
 type: model
 domains: [models, coding]
 subcategory: coding-model
-tags: [agentic]
+tags: [minimax, agentic]
 as_of: 2026-06-02
 sources: [ainews-cosmos-nemotron-june-2026, ainews-june-05-2026]
 ---

@@ -2,6 +2,7 @@
 
 ## Archived from current page on 2026-09-05
 
+- [2026-05-30] Open-weight adoption broadened operationally: AINews reports one in three AI teams ran open weights in April 2026, while access-risk coverage reframes local/open models as resilience infrastructure, not only cheaper alternatives.
 - [2026-05-29] Opus 4.8 launch coverage adds benchmark/pricing detail and positions Dynamic Workflows as the companion Claude Code systems feature.
 - [2026-05-23] China closes the price/capability gap: DeepSeek made its V4-Pro 75% discount permanent (Artificial Analysis via AINews: ~19x cheaper than Opus 4.7 to run its Intelligence Index — a May 2026 snapshot; DeepSeek has since restructured pricing); Qwen3.7-Max drew a positive third-party review (@ZhihuFrontier via AINews) on instruction-following/stability; a single-tweet ALE-Bench claim had Kimi-K2.6/DeepSeek-V4/GLM-5.1 beating several Western releases (unverified, see trend page). Cohere also shipped Command A+, its first fully open (Apache 2.0) model, added to Open-weight models.
 - [2026-05-19] Google I/O 2026: Gemini 3.5 Flash GA as default AI Mode model, added under Frontier models (per AINews: Terminal-Bench 2.1 76.2%, AA Intelligence Index 55 but 5.5x costlier than Gemini 3 Flash, Arena #9 text)

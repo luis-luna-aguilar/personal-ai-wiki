@@ -57,6 +57,12 @@ The shift: the question is no longer "can I use AI here?" but "which mode fits t
 - How do you handle tasks that start as collaboration but transition to delegation mid-work (e.g., once the approach is agreed on)?
 - Does team size change the optimal split? (Small teams tend toward collaboration; larger orgs toward structured delegation)
 
+## Related
+
+- [Agent evals](../concepts/agent-evals.md) — the benchmark-framing half of Every's "After Automation" argument; this page covers the task-delegation half
+- [AI-native product building](ai-native-product-building.md) — the "AI sandwich" pattern applied specifically to product-building work
+- [Agents reshape organizations](../trends/agents-reshape-organizations.md) — the same framing applied at org-design scale
+
 ## Sources
 
 - [AI work splitting in two — Every](../sources/newsletters/ai-work-splitting-2026-05-10.md)

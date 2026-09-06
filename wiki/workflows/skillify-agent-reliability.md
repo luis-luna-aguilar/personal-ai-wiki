@@ -74,6 +74,7 @@ The pattern is not specific to any particular harness or model. The 10-step chec
 ## Related
 
 - [Harness (agent)](../concepts/harness.md) — the thin harness is the other half of the "thin harness / fat skills" duality
+- [Agent skill methodology](../training/agent-skill-methodology.md) — the general skill-authoring method this pattern's `SKILL.md` step draws on
 - [Agent improvement loop](../concepts/agent-improvement-loop.md) — complementary improvement loop; operates at the harness/eval layer rather than the skill/script layer; the two approaches address different failure modes
 - [Agentic orchestration patterns](agentic-orchestration-patterns.md) — overlapping concern: agent reliability and recovery patterns
 - [gstack](../tools/gstack.md) — Garry Tan's Claude Code config (related system; gstack is the Claude Code layer, GBrain/OpenClaw is the personal agent layer where Skillify lives)

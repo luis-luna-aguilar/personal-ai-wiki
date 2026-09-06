@@ -3,7 +3,7 @@ title: Windsurf
 type: tool
 domains: [coding, agents]
 subcategory: agentic-coding-workspace
-tags: [closed-source, agentic]
+tags: [cognition, closed-source, agentic]
 as_of: 2026-07-14
 sources: [devinai-blog-windsurf-adaptive]
 ---

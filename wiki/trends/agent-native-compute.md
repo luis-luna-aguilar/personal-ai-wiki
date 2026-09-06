@@ -42,6 +42,8 @@ RL and eval workloads are structurally different from serving ordinary backgroun
 - [2026-05-21] Daytona detailed its pivot to AI sandboxes: 60ms startup, 850K sandboxes/day at its largest customer, RL/eval workloads at ~50% of usage, and new Windows/macOS computer-use sandboxes.
 - [2026-05-21] OpenAI launched Guaranteed Capacity (per Superhuman), letting enterprises lock in 1–3 year compute commitments at volume discounts.
 - [2026-05-20] Railway detailed its agent-native infrastructure thesis: bare-metal 3-month payback, Central Station, agent-safe production forks, and the "pull request is dying" argument for CLI-first agent interfaces.
+- [2026-05-05] AINews "inference inflection" framing: inference throughput is the dominant bottleneck for production agent workloads, and agent systems add a compound requirement — CPU, sandbox, browser, and execution capacity matter alongside GPU. Originally recorded on [Compute infrastructure](compute-infrastructure.md); relocated here as the execution-layer analog once this page split off from it.
+- [2026-05-05] Manus Cloud Computer: persistent Ubuntu environments with SSH/web-terminal access and tool state that survives across agent sessions — durable-agent runtime as an infrastructure category distinct from ephemeral-per-task containers. Originally recorded on [Compute infrastructure](compute-infrastructure.md); relocated here as the execution-layer analog once this page split off from it.
 
 ## Sources
 

@@ -28,6 +28,7 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 
 - [Ideogram 4.0](../models/ideogram-4.md) — Ideogram; 9.3B DiT; #8 overall Image Arena, #1 open image model; strong text rendering and structured layout control via JSON prompting; fp8/nf4 checkpoints with ComfyUI support; no commercial license *(as of 2026-06-04)*
 - [Muse Image](../models/muse-spark.md) — Meta; launched inside Meta AI, Instagram Stories, and WhatsApp; Superhuman reports #2 on Arena text-to-image behind GPT-Image-2; uses agentic planning/self-refinement loop per AINews *(as of 2026-07-08)*
+- [Nano Banana 2](../models/nano-banana-2.md) — Google; uses Gemini's world understanding plus real-time web search imagery to generate images reflecting current real-world conditions *(as of 2026-04-22)*
 - **Krea 2 Raw / Turbo** — open-weight image model pair; Raw is positioned as an undistilled fine-tuning checkpoint, while Turbo is a distilled fast-inference checkpoint with reported day-0 diffusers, LoRA, and training-tool support *(as of 2026-06-24)*
 
 ### AI avatar video
@@ -40,10 +41,11 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 
 ### Visual design & prototyping
 
-- [Claude Design](../tools/claude-design.md) — Anthropic; research preview for collaborative prototype, slide, one-pager, and marketing-asset creation; powered by Opus 4.7; brand onboarding from codebase + design files; Pro/Max/Team/Enterprise; connectors for Adobe, Blender, Fusion, Ableton, Splice, SketchUp, Affinity, Resolume now reported *(as of 2026-04-29, secondary coverage)*
+- [Claude Design](../tools/claude-design.md) — Anthropic; research preview for collaborative prototype, slide, one-pager, and marketing-asset creation; powered by Opus 4.7; brand onboarding from codebase + design files; Pro/Max/Team/Enterprise; connectors for Adobe, Blender, Fusion, Ableton, Splice, SketchUp, Affinity, Resolume now reported; syncs bidirectionally with Claude Code via `/design-sync` *(as of 2026-07-08)*
 - [Genspark Slides](../tools/genspark-slides.md) — AI presentation generation inside Genspark's broader agent/content surface; current training evidence still cautions that polished enterprise decks need deep skill/tooling support and human review, not a thin prompt *(as of 2026-06-29)*
 - **Adobe Firefly AI Assistant** — Adobe assistant that executes multi-step creative tasks across Premiere, Photoshop, InDesign, and other Adobe apps, with expansion planned to ChatGPT, Claude, Gemini, Copilot, and Slack. Current evidence is newsletter coverage only *(as of 2026-06-19)*
 - **Figma Agent** — Figma; a native, in-canvas design agent released 2026-05-20 that edits directly inside the canvas (switching component states, restyling layouts, generating new screens), built on a mix of Gemini Flash, Claude Sonnet, and Figma's own fine-tuned models; follows Figma opening its canvas to external MCP-connected agents (Claude Code, Cursor, Codex) in March 2026. Per Every's one-day hands-on mini-review: solves the blank-page problem for first-pass exploration and layout starts, but detail fidelity is weak (misrendered tabs, doubled buttons, low-res output), there is no image/link reference input, and it does not draw on an existing design system. Current evidence is Every's review only; primary Figma announcement not fetched *(as of 2026-05-20)*
+- [Impeccable](../tools/impeccable.md) — open-source design-agent skill system; encodes domain vocabulary, exact levels of control, and reusable evaluation language so agents make design decisions more reliably rather than one-shot prompting *(as of 2026-07-02)*
 
 ### AI music generation
 

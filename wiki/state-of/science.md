@@ -18,7 +18,7 @@ Current state of AI applied to scientific research — data analysis at scale, e
 Tools built to run or supervise literature-driven, hypothesis-oriented, or discovery-oriented scientific workflows.
 
 - [FutureHouse](../tools/futurehouse.md) — science-agent platform aimed at research and discovery workflows rather than generic assistant use *(as of 2026-04-22)*
-- [Claude Science](../tools/claude-science.md) — Anthropic beta science workbench for analysis, database search, reproducible artifacts, reviewer agents, scientific visualizations, 60+ databases, BioNeMo/Boltz/OpenFold-style integrations, and local/HPC compute; case studies now include Manifold Bio, Allen Institute, and UCSF workflows *(as of 2026-07-01)*
+- [Claude Science](../tools/claude-science.md) — Anthropic beta science workbench for analysis, database search, reproducible artifacts, persistent kernels, reviewer agents, scientific visualizations, 60+ databases, BioNeMo/Boltz/OpenFold-style integrations, and local/HPC compute; case studies now include Manifold Bio, Allen Institute, and UCSF workflows *(as of 2026-07-06)*
 
 ### Protein models and molecular biology
 

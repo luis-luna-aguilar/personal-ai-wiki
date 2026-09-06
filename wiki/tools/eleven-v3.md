@@ -3,7 +3,7 @@ title: Eleven v3
 type: tool
 domains: [agents, voice]
 subcategory: voice-models
-tags: [closed-source]
+tags: [elevenlabs, closed-source]
 as_of: 2026-04-22
 sources: [eleven-v3, legacy-ai-tools-roadmap-xlsx]
 ---

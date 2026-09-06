@@ -15,7 +15,7 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Examples:** [Kiro](../tools/kiro.md), [spec-kit](../tools/spec-kit.md), [Tessl Framework](../tools/tessl.md), [Spec-Driven Development (SDD)](../concepts/spec-driven-development.md)
 
 ### agentic-coding-workspace
-- **Parent domain(s):** coding
+- **Parent domain(s):** coding, agents
 - **Applies to types:** tool
 - **Definition:** Coding tools whose primary UI is built around managing one or more AI coding agents (local and/or cloud), rather than file-centric editing with AI assistance bolted on.
 - **Examples:** [Cursor](../tools/cursor.md)
@@ -30,7 +30,7 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Parent domain(s):** models, coding
 - **Applies to types:** model
 - **Definition:** A foundation model trained or specialized for code generation, completion, or agentic coding tasks.
-- **Examples:** [Composer 2](../models/composer-2.md)
+- **Examples:** [Composer 2.5](../models/composer-2-5.md)
 
 ### frontier-model
 - **Parent domain(s):** models
@@ -54,7 +54,7 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Parent domain(s):** agents
 - **Applies to types:** tool
 - **Definition:** Managed compute providers whose core product is execution environments purpose-built for AI agents — instant-start, stateful, isolated sandboxes or agent-operable cloud primitives that scale from zero to tens of thousands of concurrent instances for background-agent and RL/eval workloads.
-- **Examples:** [Daytona](../tools/daytona.md), [Modal](../tools/modal.md), [Railway](../tools/railway.md)
+- **Examples:** [Daytona](../tools/daytona.md), [Modal](../tools/modal.md), [Railway](../tools/railway.md), [E2B](../tools/e2b.md)
 
 ### agentic-devops
 - **Parent domain(s):** coding, agents
@@ -69,7 +69,7 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Examples:** [Perplexity Computer](../tools/perplexity-computer.md)
 
 ### ai-assistant
-- **Parent domain(s):** models
+- **Parent domain(s):** models, agents
 - **Applies to types:** tool
 - **Definition:** General-purpose AI assistant products that combine conversational AI, search, and productivity features into a consumer or enterprise interface.
 - **Examples:** [Gemini](../tools/gemini.md)

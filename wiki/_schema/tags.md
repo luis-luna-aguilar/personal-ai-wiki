@@ -29,6 +29,7 @@ Valid values for the `tags:` field in frontmatter. Tags are for cross-cutting at
 - **`xai`** — vendor/org: xAI (Elon Musk / Grok)
 - **`collaboration`** — flavor: designed for shared human/agent or multi-user workflows
 - **`cohere`** — vendor/org: Cohere
+- **`cognition`** — vendor/org: Cognition (Devin, Windsurf, FrontierCode)
 
 ## Conventions
 

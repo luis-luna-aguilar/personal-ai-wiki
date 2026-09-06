@@ -3,7 +3,7 @@ title: Hermes Agent
 type: tool
 domains: [agents]
 subcategory: agent-framework
-tags: [open-source, agentic]
+tags: [nousresearch, open-source, agentic]
 as_of: 2026-05-13
 sources: [ainews-2026-04-21, ainews-2026-04-22, hermes-openclaw-persistent-agents-2026-05-11]
 ---

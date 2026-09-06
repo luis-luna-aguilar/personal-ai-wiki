@@ -3,7 +3,7 @@ title: Paperclip
 type: tool
 domains: [agents]
 subcategory: agent-orchestration
-tags: [open-source, agentic, self-hosted]
+tags: [open-source, agentic]
 as_of: 2026-06-10
 sources: [papercliping]
 ---

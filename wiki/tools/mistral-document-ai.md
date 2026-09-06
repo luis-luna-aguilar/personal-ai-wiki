@@ -3,7 +3,7 @@ title: Mistral Document AI
 type: tool
 domains: [agents, finance, healthcare]
 subcategory: document-intelligence
-tags: [closed-source]
+tags: [mistral, closed-source]
 as_of: 2026-04-22
 sources: [mistral-document-ai, legacy-ai-tools-roadmap-xlsx]
 ---

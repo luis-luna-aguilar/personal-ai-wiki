@@ -2,7 +2,7 @@
 title: OpenAI Agents SDK
 type: tool
 domains: [agents]
-subcategory: agent-orchestration
+subcategory: agent-framework
 tags: [openai, closed-source, agentic]
 as_of: 2026-04-15
 sources: [openai-agents-sdk-evolution]

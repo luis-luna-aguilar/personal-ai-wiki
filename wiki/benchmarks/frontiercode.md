@@ -2,7 +2,7 @@
 title: FrontierCode
 type: benchmark
 domains: [coding]
-tags: [cognition, benchmark]
+tags: [cognition]
 as_of: 2026-07-09
 sources: [ainews-frontiercode-june-2026, ainews-fable5-june-2026, cognitioncom-blog-devin-fusion, the-code-spacexai-drops-grok-45-2026-07-09]
 ---

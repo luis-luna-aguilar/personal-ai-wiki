@@ -9,7 +9,7 @@ sources: [ainews-2026-04-21, runtime-improvements-improve-agent-economics, googl
 
 # Compute infrastructure as decisive competitive moat
 
-Frontier AI labs are securing compute capacity at a scale that creates structural competitive advantages beyond what algorithm quality alone can overcome. As of 2026, access to multi-gigawatt compute is diverging rapidly between labs with strategic infrastructure partnerships and those without.
+Frontier AI labs are securing compute capacity at a scale that creates structural competitive advantages beyond what algorithm quality alone can overcome — but by mid-2026 the page's own evidence carries as many counterforces to that moat (open-weight models competing with far less disclosed infrastructure, runtime and inference-systems efficiency gains, hybrid local/cloud routing, and the "outputmaxxing" argument that utilization matters as much as cluster size) as signals reinforcing it. As of 2026, access to multi-gigawatt compute is diverging rapidly between labs with strategic infrastructure partnerships and those without, but the compute-moat thesis should be read alongside its limits, not in isolation.
 
 ## Current status (as of 2026-07-08)
 
@@ -62,9 +62,7 @@ The useful wiki update is not to treat AMP's exact MFU anecdotes as settled fact
 - [2026-06-30] Added hybrid local/cloud routing as a compute-control counterforce for private, low-latency, repeated, or cheaper tasks.
 - [2026-06-18] Added outputmaxxing / compute-utilization framing from AMP: the frontier compute bottleneck includes MFU, scheduling, power, and grid-like coordination, not only GPU count.
 - [2026-05-05] Stripe frames stolen compute (API keys, tokens, credits, free trials) as the emerging AI fraud surface — "compute is the new cash"; agents as autonomous purchasers create new commerce and payment-flow design challenges
-- [2026-05-05] Manus Cloud Computer: persistent Ubuntu environments with SSH/web-terminal access and tool state that survives across agent sessions; durable-agent runtime as an infrastructure category distinct from ephemeral-per-task containers
 - [2026-05-05] Parallel Web Systems raised at a $2B valuation (secondary coverage) for internet/research APIs optimized for AI agents — market signal that agent-oriented web access infrastructure is becoming a standalone investable category
-- [2026-05-05] AINews "inference inflection" framing: inference throughput is the dominant current bottleneck, and agent systems add a compound requirement — CPU, sandbox, browser, and execution capacity matter alongside GPU for production agent workloads
 - [2026-05-05] Superhuman reports Q1 2026 Big Tech earnings (Alphabet, Amazon, Meta, Microsoft) show AI revenue materializing while capex continues climbing; treat directional signal as confirmed, specific figures as pending primary verification
 
 ## Sources

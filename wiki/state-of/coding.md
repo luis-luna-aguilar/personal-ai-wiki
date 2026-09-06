@@ -25,7 +25,7 @@ Tools where a structured natural-language spec is the primary input to AI coding
 
 Coding tools whose primary UI is built around managing one or more AI coding agents (local and cloud), rather than file-centric editing with AI assistance bolted on.
 
-- [Cursor](../tools/cursor.md) — Cursor 3 rebuilt as cloud-agent orchestration platform; SDK exposes the runtime headlessly; iOS beta adds mobile launch/control for always-on cloud and desktop agents; acquired by SpaceX ($60B, June 2026); Cursor Origin launched for agent-native code hosting *(as of 2026-06-30)*
+- [Cursor](../tools/cursor.md) — Cursor 3 rebuilt as cloud-agent orchestration platform; SDK exposes the runtime headlessly; iOS beta adds mobile launch/control for always-on cloud and desktop agents; acquired by SpaceX ($60B, June 2026); Cursor Origin launched for agent-native code hosting; Grok 4.5, the jointly trained SpaceXAI/Cursor model, launched July 2026 and is available across all Cursor surfaces *(as of 2026-07-08)*
 - [ZCode](../tools/zcode.md) — Z.ai's official GLM-5.2 coding workspace; converts open coding model momentum into a first-party product surface for long-running coding sessions *(as of 2026-07-02)*
 - [Orca](../tools/orca.md) — Open-source worktree IDE for running Claude Code, Codex, and other coding agents side by side with built-in terminals, file review, diff review, and CI/PR status tracking *(as of 2026-04-21)*
 - **GitHub Copilot App** (technical preview) — GitHub; desktop surface for parallel workstreams, PR/repo lifecycle management, and model flexibility; agent-first rather than IDE-first *(as of 2026-05-15)*
@@ -46,16 +46,16 @@ Tools that move AI coding systems closer to full software delivery by covering p
 CLI-based AI coding agents that still anchor in the terminal, but are increasingly expanding into supervised workspaces with repeatable workflows, background execution, and broader agent control surfaces.
 
 - [Claude Code](../tools/claude-code.md) — Anthropic; terminal-first agent expanding toward supervised multi-session workflows; now supports Sonnet 5 as a broadly available agentic default while Fable 5 remains the high-capability but fallback-routed tier, making model-routing resilience part of the coding-agent operating model *(as of 2026-07-02)*
-- [Codex](../tools/codex.md) — OpenAI; cloud coding agent via CLI, ChatGPT, and now mobile (iOS/Android preview); remote SSH GA; direction increasingly spills into broader computer-work workflows *(as of 2026-05-15)*
-- [Grok Build](../tools/grok-build.md) — xAI; early beta CLI coding agent; plan mode (step-by-step diff review); parallel subagents in isolated git worktrees; SuperGrok Heavy subscribers only *(as of 2026-05-15)*
-- [Kimi Code](../tools/kimi-code.md) — Moonshot AI; open-source; 1-line CLI; video-as-coding-context; ACP support; IDE integration; powered by Kimi K2.7-Code model *(as of 2026-06-09)*
+- [Codex](../tools/codex.md) — OpenAI; cloud coding agent via CLI, ChatGPT, and now mobile (iOS/Android preview); remote SSH GA; parallel subagents keep the main context clean on independent task parts; direction increasingly spills into broader computer-work workflows — Every now frames it as a general-purpose workspace agent beyond coding (inbox, CRM, writing) *(as of 2026-07-01)*
+- [Grok Build](../tools/grok-build.md) — xAI; early beta CLI coding agent; plan mode (step-by-step diff review); parallel subagents in isolated git worktrees; SuperGrok Heavy subscribers only; Grok 4.5 launched July 2026 as the default model — Coding Agent Index 76, on par with GPT-5.5 in Codex *(as of 2026-07-08)*
+- [Kimi Code](../tools/kimi-code.md) — Moonshot AI; open-source; 1-line CLI; video-as-coding-context; ACP support; IDE integration; powered by Kimi K2.7-Code model; companion Kimi Work desktop agent added Goal Mode for long-running tasks that continue until the objective is reached *(as of 2026-06-19)*
 - [Devin](../tools/devin.md) — Cognition; Devin Fusion (preview) multi-model "sidekick" harness matches frontier performance at 35% lower cost (41% with Fable 5) on FrontierCode Extended; Security Swarm's Agentic MapReduce architecture now documented, reporting 72% recall on a CVE-pinned vulnerability benchmark *(as of 2026-07-14)*
 
 ### Agent toolkits
 
 Toolkits that package a developer platform's docs, schemas, validation, and related capabilities for AI coding tools via plugins, skills, or MCP.
 
-- [Shopify AI Toolkit](../tools/shopify-ai-toolkit.md) — Shopify packages platform docs, API schemas, and validation for Claude Code, Codex, Cursor, Gemini CLI, and VS Code via plugin, skills, or local Dev MCP; Codex support is skills/MCP only *(as of 2026-04-10)*
+- [Shopify AI Toolkit](../tools/shopify-ai-toolkit.md) — Shopify packages platform docs, API schemas, and validation for Claude Code, Codex, Cursor, Gemini CLI, and VS Code via plugin, skills, or local Dev MCP; Codex support is skills/MCP only; reframed as an example of "agent-ready SaaS" — product context and actions packaged for user-chosen external agents *(as of 2026-06-29)*
 
 ## Recent changes
 

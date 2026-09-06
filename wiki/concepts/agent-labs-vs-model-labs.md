@@ -2,8 +2,8 @@
 title: Agent Labs vs Model Labs
 type: concept
 domains: [agents, coding, models]
-tags: [competitive-dynamics, moats]
-as_of: 2026-06-11
+tags: []
+as_of: 2026-07-02
 sources: [ainews-open-models-june-2026, brockman-model-not-product, ainews-all-model-labs-are-now-agent-labs]
 ---
 
@@ -41,7 +41,7 @@ This applies to Agent Labs too: the moat is not just integration depth but the j
 
 ## Relationship to model sovereignty
 
-The Fable 5 export-control ban (June 2026) made model neutrality from a preference into a risk management requirement. Agent Labs that had built their harness to work with multiple models were less disrupted. This is Guo's thesis played out in practice: integration depth matters more than which underlying model you use.
+The Fable 5 export-control ban (June 2026, resolved 2026-07-02 when Fable returned online) made model neutrality from a preference into a risk management requirement. Agent Labs that had built their harness to work with multiple models were less disrupted. This is Guo's thesis played out in practice: integration depth matters more than which underlying model you use.
 
 ## Evidence the shift is accelerating (May 2026)
 
@@ -52,7 +52,14 @@ The Fable 5 export-control ban (June 2026) made model neutrality from a preferen
 
 ## Recent changes
 
+- [2026-07-02] Noted that the Fable 5 export-control ban referenced above was resolved on this date, about two weeks after it took effect.
 - [2026-05-22] Greg Brockman's "the model alone is no longer the product," AI21 shuttering its model team for an agents pivot, and DeepSeek building its first harness team reinforce the Agent Labs framing — even historically model-only labs are absorbing harness work.
+
+## Related
+
+- [Open-weight momentum broadens](../trends/open-weight-momentum-broadens.md) — carries the model-sovereignty argument (open weights as the practical escape hatch from single-vendor dependence) that this page's "model neutrality becomes rational" point connects to
+- [Harness (agent)](harness.md) — "model neutrality by design" as a concrete harness-architecture principle
+- [Agentic orchestration patterns](../workflows/agentic-orchestration-patterns.md) — where harness-level model routing shows up as an operating pattern
 
 ## Sources
 

@@ -2,7 +2,7 @@
 title: E2B
 type: tool
 domains: [agents, coding]
-subcategory: agent-framework
+subcategory: agent-sandbox-infra
 tags: [open-source, agentic]
 as_of: 2026-04-24
 sources: [qa-tooling-for-software-agents-deep-research]

@@ -3,7 +3,7 @@ title: ElevenLabs Scribe
 type: tool
 domains: [agents, healthcare, voice]
 subcategory: speech-to-text
-tags: [closed-source]
+tags: [elevenlabs, closed-source]
 as_of: 2026-04-22
 sources: [elevenlabs-scribe, legacy-ai-tools-roadmap-xlsx]
 ---

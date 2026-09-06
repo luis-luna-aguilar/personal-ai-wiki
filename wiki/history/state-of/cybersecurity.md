@@ -1,5 +1,9 @@
 # State of Cybersecurity — History
 
+## Archived from current page on 2026-09-05
+
+- [2026-05-01] Added Claude Security and Cursor Security Review to AI-assisted vulnerability detection; both are secondary-source entries pending primary verification
+
 ## Archived from current page on 2026-05-19
 
 - [2026-04-23] Added [GPT-5.5](../../models/gpt-5-5.md) under `Frontier model capabilities (offensive)` and noted OpenAI's Trusted Access for Cyber program for verified defenders

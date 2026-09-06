@@ -142,7 +142,7 @@ This applies in both directions: do not let holdout cases leak into training dat
 ## Sources
 
 - [The Agent Improvement Loop Starts with a Trace — LangChain](../sources/articles/trace-agent-improvement-loop.md)
-- ["Better Harness: A Recipe for Harness Hill-Climbing with Evals" — LangChain](../sources/articles/langchain-better-harness.md)
+- ["Better Harness: A Recipe for Harness Hill-Climbing with Evals" — LangChain](../sources/tweets/langchain-better-harness.md)
 - [Bugbot now self-improves with learned rules](../sources/articles/cursor-bugbot-learning.md)
 - [Self-improving agent skills — auto-improvement loops](../sources/tweets/self-improving-skills.md)
 - [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)

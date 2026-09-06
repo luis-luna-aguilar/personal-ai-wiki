@@ -1,9 +1,9 @@
 ---
 title: Devin
 type: tool
-domains: [coding, agents]
+domains: [coding, agents, cybersecurity]
 subcategory: terminal-coding-agent
-tags: []
+tags: [cognition]
 as_of: 2026-07-14
 sources: [devin-auto-triage-2026-05, the-code-devin-security-2026-07-02, ainews-not-much-happened-2026-07-02, devinai-blog-agentic-map-reduce, cognitioncom-blog-devin-fusion, cognitioncom-blog-ai-productivity, the-code-spacexai-drops-grok-45-2026-07-09]
 ---
@@ -24,7 +24,7 @@ Cognition's autonomous coding agent, initially positioned as one of the first "f
 - **Agentic MapReduce (the architecture behind Security Swarm):** a Plan agent studies the repo and authors deterministic "selectors" (Tree-sitter queries, symbol/type queries, import-graph traversals, lexical patterns); the selectors run over every file with no model in the loop (Shard), producing a bounded, inspectable work queue instead of an open-ended search; one fresh Devin session per batch investigates its shard in parallel (Map); a Reducer session dedupes findings and composes cross-shard attack chains, e.g. an unauthenticated ID leak plus an ID-gated RCE becoming one P0 (Reduce); a final Verify stage reproduces each serious finding in a sandboxed session against a running build and marks it Confirmed, False Positive, or Inconclusive
 - Benchmarked against a CVE-pinned ground-truth set (GitHub Advisory Database, each pinned to the commit before its fix, dozens of cases across 12+ languages and vulnerability classes): Security Swarm reports **72% recall**, ahead of other scanners tested in the same eval, at a fraction of their cost
 - Cognition claims the system finds more verified vulnerabilities at 30% lower cost than rivals; treat both this and the 72% recall figure as vendor-reported until independently verified, though the CVE-pinned methodology is more rigorous than a bare cost claim
-- **Devin Fusion (preview):** a multi-model "sidekick" harness — a frontier model runs alongside a cheaper sidekick model, each a fully capable agent with its own tools and persistent, separately-cached context; the frontier model plans, interprets ambiguity, and reviews, while delegating mechanical or well-scoped work to the sidekick; a lightweight classifier can reassign which model leads mid-session, timed to coincide with context-compaction points so the switch doesn't cost an extra cache miss
+- **Devin Fusion (preview):** applies the [sidekick multi-model harness pattern](../workflows/agentic-orchestration-patterns.md) — a frontier model and a cheaper model run as two persistent, separately-cached agents, with the frontier model planning and reviewing while the sidekick handles mechanical work.
 - On **FrontierCode Extended** (a cost-aware coding benchmark tracking both score and average cost per task), Fusion matches frontier-model performance at **35% lower cost** than running Opus 4.8 or GPT-5.5 alone, and **41% lower cost** when paired with Fable 5 (measured before Fable 5's access was suspended); internally, **88%** of Cognition's own merged PRs were driven entirely by the automated Fusion router
 - **Session productivity estimator:** an automated system that reviews each completed Devin session, classifies whether it produced useful (typically merged) work, then estimates the equivalent human-engineering hours it saved; calibrated against 258 self-reported sessions from 126 users, reaching `r_log = 0.74` on held-out data, deliberately calibrated to underestimate rather than overestimate; now running in production with customers — Cognition frames this as the first automated system measuring AI engineering productivity in production
 - **SWE-1.7 (July 2026):** a budget frontier coding model for Devin, post-trained from Kimi K2.7 inside Devin's own agent harness; per The Code's recap, Cognition claims it matches GPT-5.5 within a point on FrontierCode at roughly $2/task with Opus 4.8 slightly ahead (secondhand — tier and numeric score unspecified, Cognition's blog post not yet read); can summarize its own progress and resume where it left off, enabling coding sessions up to six hours

@@ -4,7 +4,7 @@ type: model
 domains: [models, coding, agents, science, cybersecurity]
 subcategory: frontier-model
 tags: [openai, closed-source]
-as_of: 2026-05-18
+as_of: 2026-07-02
 sources: [openai-gpt-5-5-launch, danshipper-gpt-5-5-vibe-check, gpt-5-5-instant-default-2026-05-06, chatgpt-personal-finance-2026-05]
 ---
 
@@ -18,7 +18,7 @@ OpenAI's April 2026 frontier model, positioned as "our smartest and most intuiti
 - Two variants: GPT-5.5 and GPT-5.5 Pro; OpenAI also frames GPT-5.5 Thinking as the ChatGPT mode for harder tasks
 - Codex now runs on GPT-5.5 with a 400K context window; API launch notes a 1M-context offering
 - Public benchmark lead on Terminal-Bench 2.0 (82.7%), GDPval (84.9%), ARC-AGI-2 (85.0%), CyberGym (81.8%), and BixBench (80.5%)
-- Claude Opus 4.7 still leads on SWE-Bench Pro (64.3% vs 58.6%), MCP Atlas (79.1% vs 75.3%), and FinanceAgent (64.4% vs 60.0%)
+- At launch, Claude Opus 4.7 led on SWE-Bench Pro (64.3% vs 58.6%), MCP Atlas (79.1% vs 75.3%), and FinanceAgent (64.4% vs 60.0%); Opus 4.7 has since been superseded by Opus 4.8 (69.2% SWE-Bench Pro) and Claude Fable 5 (80.3% SWE-Bench Pro), both now ahead of GPT-5.5 on this metric
 - OpenAI says GPT-5.5 reaches better Codex outcomes with fewer tokens than GPT-5.4 and now powers heavy internal weekly usage across many functions
 - Secondary May 2026 coverage says GPT-5.5 Instant replaced GPT-5.3 Instant as ChatGPT's default model, with API exposure via `chat-latest`; verify against OpenAI docs before treating specific hallucination-reduction numbers as official.
 
@@ -46,6 +46,7 @@ OpenAI's April 2026 frontier model, positioned as "our smartest and most intuiti
 
 ## Recent changes
 
+- [2026-07-02] Noted that GPT-5.5's SWE-Bench Pro comparison against Opus 4.7 is now historical: Opus 4.8 (69.2%) and Claude Fable 5 (80.3%) have both since surpassed GPT-5.5's 58.6% on this benchmark.
 - [2026-05-18] @Finances agent launched: 12,000+ financial providers; personalized money advice grounded in real spending data; GPT-5.5 Thinking 79/100, Pro 82.5/100; US Pro preview; 14M views in 48h
 - [2026-05-06] Secondary coverage says GPT-5.5 Instant became ChatGPT's default model, replacing GPT-5.3 Instant; official verification still needed for exact rollout and hallucination claims.
 - [2026-04-23] Released; GPT-5.5 supersedes GPT-5.4 as OpenAI's current frontier model and leads on Terminal-Bench 2.0, GDPval, ARC-AGI-2, CyberGym, and BixBench

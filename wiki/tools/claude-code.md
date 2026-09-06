@@ -4,15 +4,15 @@ type: tool
 domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: [anthropic, cli, agentic]
-as_of: 2026-07-01
-sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, anthropic-claude-code-best-practices-2026-05, claude-code-fast-mode-default-2026-05, dynamic-workflows-claude-code, claude-code-getting-started-with-loops-2026-06-30, codex-general-work-agents-2026-07, ainews-opus-48-dynamic-workflows-2026-05, every-claude-dynamic-workflows-reliability-2026-06, claude-code-design-sync-2026-07]
+as_of: 2026-07-08
+sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, anthropic-claude-code-best-practices-2026-05, claude-code-fast-mode-default-2026-05, dynamic-workflows-claude-code, claude-code-getting-started-with-loops-2026-06-30, codex-general-work-agents-2026-07, ainews-opus-48-dynamic-workflows-2026-05, every-claude-dynamic-workflows-reliability-2026-06, claude-code-design-sync-2026-07, claude-sonnet-5-official-2026-06-30]
 ---
 
 # Claude Code
 
 Anthropic's terminal-first AI coding agent. Runs in the shell, operates autonomously on files, shell commands, and tool calls, and is expanding toward supervised multi-session workflows; users increasingly treat it as a general-purpose agent harness for product, research, and operational work when those workflows can be represented as files, commands, skills, and review artifacts.
 
-## Current status (as of 2026-05-13)
+## Current status (as of 2026-07-08)
 
 - Terminal CLI agent with persistent project context via `CLAUDE.md`
 - Late-February expanded Claude Code's persistence story further: auto-memory writes project-local `MEMORY.md` plus topic files, while Boris Cherny previewed `/batch` and `/simplify` as built-in commands for parallel migrations and post-change cleanup
@@ -36,7 +36,7 @@ Anthropic's terminal-first AI coding agent. Runs in the shell, operates autonomo
 - `/autofix-pr` now triggerable from CLI: run `/autofix-pr` after finishing a PR, and it sends your session to the cloud so the PR autofixer has full context to address CI failures and reviewer comments
 - Remote Control: `claude remote-control` spawns a new local Claude Code session from the mobile app (available on Max, Team, and Enterprise plans at version ≥2.1.74); lets you kick off sessions from your phone
 - `/goal` command (May 2026, research preview): set a target (e.g. "pass all tests in this folder") and Claude loops autonomously until an evaluator model confirms it is met — analogous to the `/goals` command OpenAI added to Codex; the first native long-horizon success-criterion primitive in Claude Code
-- Opus 4.7 fast mode (now default, as of 2026-05-19): was research preview; now the default mode for Claude Code; Cursor reports 2.5× faster output at approximately 6× the cost compared to standard Opus 4.7
+- Fast mode (introduced May 2026 as an Opus 4.7 research preview) has moved with the platform's model lineup since Opus 4.7 was superseded: Claude Sonnet 5 (Anthropic's most agentic Sonnet model) became available in Claude Code and via the API on 2026-06-30, alongside Claude Fable 5 (restored 2026-07-02 after a brief export-control suspension, with some cyber/bio/chem requests routed to Opus 4.8) and Opus 4.8 itself
 - Claude Console prompt cache diagnostics (May 2026): developers can now see cache hit/miss rates for their Claude Code sessions in Claude Console; useful for debugging context reuse and cost efficiency in multi-agent setups
 - Agent View (research preview, Claude Code v2.1.139+): `claude agents` opens one terminal screen for dispatching and supervising background Claude Code sessions. Sessions are grouped by state, can be peeked/replied to without opening the full transcript, attached/detached for full conversation, and launched from Agent View, `/bg`, or `claude --bg`; editable background sessions are isolated in git worktrees under `.claude/worktrees/` when possible.
 - Every's product-management guide adds command-pack examples such as strategy interviews and product-pulse reviews, reinforcing Claude Code as a product workflow surface, not only a code editor.
@@ -150,19 +150,19 @@ That matters because it shifts the product story away from "Anthropic has a stro
 ## Recent changes
 
 - [2026-07-08] Claude Code and Claude Design add bidirectional `/design-sync` between repo work and Claude Design canvases.
-- [2026-06-18] Every case studies show Dynamic Workflows replacing manual subagent coordination for reviewer agents and large Figma-to-code work.
 - [2026-07-01] Every frames Claude Code alongside Codex as a general-purpose agent harness spilling beyond software work when tasks can be represented as files, tools, and review artifacts.
 - [2026-06-30] Anthropic published the official Claude Code loop taxonomy: turn-based, goal-based, time-based, and proactive loops, with guidance on matching loop primitive to task type and controlling token usage.
+- [2026-06-30] Claude Sonnet 5 became available in Claude Code and via the API as `claude-sonnet-5`, alongside Claude Fable 5's return two days later — Claude Code's model lineup moved from a single fast-mode tier to multiple concurrently available models.
+- [2026-06-18] Every case studies show Dynamic Workflows replacing manual subagent coordination for reviewer agents and large Figma-to-code work.
 - [2026-05-28] Dynamic workflows added (research preview): the `ultracode` effort setting (xhigh) lets Claude write orchestration scripts running tens-to-hundreds of parallel subagents that plan, verify (with adversarial agents), and iterate to convergence on hours-to-days work; runs checkpoint and resume. On by default for Max/Team/API, admin-enabled for Enterprise; uses substantially more tokens.
 - [2026-05-19] Fast mode promoted from research preview to default for Claude Code; Claude Console gains prompt cache diagnostics
 - [2026-05-18] Anthropic engineering best practices: context window as #1 constraint; verification-criteria pattern; explore-plan-code workflow (plan mode + Ctrl+G); Chrome extension for UI screenshot verification
 - [2026-05-13] /goal command added (research preview): autonomous loop until evaluator model confirms target met — first native long-horizon success-criterion primitive in Claude Code
-- [2026-05-13] Opus 4.7 fast mode added (research preview): 2.5× faster, ~6× cost per Cursor benchmarks; new latency/price tier
 - [2026-05-13] Agent View added (research preview, v2.1.139+): `claude agents` supervises background sessions with peek/reply, attach/detach, `/bg`, `--bg`, and worktree isolation.
 
 ## Sources
 
-- [Claude Code Monitor tool announcement](../sources/articles/claude-code-monitor.md)
+- [Claude Code Monitor tool announcement](../sources/tweets/claude-code-monitor.md)
 - [Claude Code routines launch](../sources/tweets/claude-code-routines.md)
 - [Claude Code leak architecture lessons](../sources/newsletters/claude-code-leak-architecture.md)
 - [Claude computer use in late March](../sources/newsletters/claude-computer-use-late-march.md)
@@ -185,3 +185,4 @@ That matters because it shifts the product story away from "Anthropic has a stro
 - [AINews - Anthropic raises Series H, releases Opus 4.8 and Dynamic Workflows](../sources/newsletters/ainews-opus-48-dynamic-workflows-2026-05.md)
 - [Every - How Anthropic makes Claude more reliable](../sources/newsletters/every-claude-dynamic-workflows-reliability-2026-06.md)
 - [Claude Code and Claude Design sync](../sources/tweets/claude-code-design-sync-2026-07.md)
+- [Claude Sonnet 5 — official launch](../sources/articles/claude-sonnet-5-official-2026-06-30.md)
