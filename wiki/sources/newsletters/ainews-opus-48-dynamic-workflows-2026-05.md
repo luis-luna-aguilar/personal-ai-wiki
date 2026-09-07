@@ -15,7 +15,7 @@ AINews summarizes Anthropic's Opus 4.8 launch, benchmark/pricing reactions, and 
 
 ## Influenced pages
 
-- [Claude Opus 4.8](../../models/claude-opus-4-8.md) - benchmark, pricing, efficiency, and calibration update
+- [Claude Opus 4.8](../../history/models/claude-opus-4-8.md) - benchmark, pricing, efficiency, and calibration update
 - [State of Models](../../state-of/models.md) - frontier-model line update
 - [Claude Code](../../tools/claude-code.md) - Dynamic Workflows launch detail
 

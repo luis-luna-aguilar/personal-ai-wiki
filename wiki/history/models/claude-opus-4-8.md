@@ -44,6 +44,6 @@ Anthropic's flagship multimodal model, and the accessible tier that stayed avail
 
 ## Sources
 
-- [Every — Claude Opus 4.8 pulse check (June 3)](../sources/newsletters/every-opus-48-june-2026.md)
-- [Andon Labs / Vending Bench (June 4)](../sources/newsletters/vending-bench-andon-june-2026.md)
-- [AINews - Anthropic raises Series H, releases Opus 4.8 and Dynamic Workflows](../sources/newsletters/ainews-opus-48-dynamic-workflows-2026-05.md)
+- [Every — Claude Opus 4.8 pulse check (June 3)](../../sources/newsletters/every-opus-48-june-2026.md)
+- [Andon Labs / Vending Bench (June 4)](../../sources/newsletters/vending-bench-andon-june-2026.md)
+- [AINews - Anthropic raises Series H, releases Opus 4.8 and Dynamic Workflows](../../sources/newsletters/ainews-opus-48-dynamic-workflows-2026-05.md)

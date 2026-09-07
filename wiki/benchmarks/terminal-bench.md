@@ -32,7 +32,7 @@ Terminal-Bench has multiple non-comparable variants (2.0, 2.1, Hard); scores bel
 | [GPT-5.5](../models/gpt-5-5.md) | 2.0 | 82.7% | 2026-05-06 |
 | [Qwen 3.6 27B](../models/qwen-3-6-27b.md) | 2.0 | 59.3% | 2026-05-01 |
 | [Composer 2](../history/models/composer-2.md) (historical) | 2.0 | 61.7% | 2026-03-23 |
-| [Claude Opus 4.8](../models/claude-opus-4-8.md) | Hard | gains reported; no exact score published | 2026-06-04 |
+| [Claude Opus 4.8](../history/models/claude-opus-4-8.md) (historical, superseded by [Claude Opus 5](../models/claude-opus-5.md)) | Hard | gains reported; no exact score published | 2026-06-04 |
 | [Cohere Command A+](../models/cohere-command-a-plus.md) | Hard | 3% → 25% (vs. Command A Reasoning) | 2026-05-21 |
 
 ## Why it matters
@@ -57,6 +57,7 @@ Terminal-Bench Science (TB-Science) extends the Terminal-Bench franchise from so
 
 ## Recent changes
 
+- [2026-09-06] Repointed Claude Opus 4.8 to its archived page after Claude Opus 5 superseded it; score unchanged, link/label fix only.
 - [2026-07-09] Rebuilt the current-leaderboard section from model pages already citing Terminal-Bench scores, replacing the stale "frontier models below 65%" line with a table grouped by variant (2.0/2.1/Hard).
 - [2026-05-21] Terminal-Bench Science extension announced: 100+ planned tasks across five scientific domains, contributor-sourced via the Harbor Task Format, targeting a 10-20% solve rate at release.
 

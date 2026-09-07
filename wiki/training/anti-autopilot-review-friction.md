@@ -2,7 +2,7 @@
 title: Anti-autopilot review friction
 type: training
 as_of: 2026-06-29
-sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026, lennysan-simonw-interview, prof-devs-control, agents-evals-deep-research, agentic-devops-deep-research, agent-review-artifacts-2026-05-13, osmani-cognitive-debt-ai-learning-2026-05, claude-code-fast-mode-default-2026-05, powerpoint-agent-skill-failure-mode-2026-06]
+sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026, lennysan-simonw-interview, prof-devs-control, agents-evals-deep-research, agentic-devops-deep-research, agent-review-artifacts-2026-05-13, osmani-cognitive-debt-ai-learning-2026-05, claude-code-fast-mode-default-2026-05, powerpoint-agent-skill-failure-mode-2026-06, anthropic-ai-assistance-coding-skills-2026]
 ---
 
 # Anti-autopilot review friction
@@ -66,7 +66,7 @@ Cognitive debt (Addy Osmani, May 2026): the accumulated deficit in comprehension
 
 **Three empirical studies:**
 
-- **Anthropic comprehension study:** Engineers learned a new Python library — half with AI assistance, half without. Both groups finished tasks at the same speed. But the AI group scored 50% on the follow-up comprehension quiz vs 67% for the manual group; the gap widened on debugging tasks. Within the AI group: engineers who used AI for conceptual questions scored above 65%; engineers who copy-pasted generated code scored under 40%. **Finding: the tool didn't determine the outcome — the posture did.** (A different secondary account, cited on [AI enablement — software development](ai-enablement-software-development.md), gives a 47% debugging-ability drop for what may be the same underlying Anthropic study — the two haven't been reconciled against a primary source.)
+- **Anthropic comprehension study:** Engineers learned a new Python library — half with AI assistance, half without. Both groups finished tasks at about the same speed. But the AI group scored 50% on the follow-up comprehension quiz vs 67% for the manual group (Cohen's *d*=0.738); the gap widened most on debugging questions. Within the AI group, *how* people used the assistant mattered more than *whether* they did: three low-scoring patterns (quiz average under 40%) all involved heavy reliance with little independent thought — wholesale AI delegation, starting with a few questions before drifting into full delegation, and asking AI to debug rather than to explain. Three high-scoring patterns (65%+) all paired AI use with active comprehension-checking — generating code then asking follow-up questions, requesting code and explanation together, or asking only conceptual questions and reasoning the rest independently. Anthropic's own framing: "not all AI-reliance is the same" — the posture, not the tool, determined the outcome. Confirmed against Anthropic's own primary writeup (arXiv 2601.20245); no longer a secondary-account figure.
 
 - **MIT brain-connectivity study:** Essay writing across LLM, search-engine, and brain-only groups. EEG showed brain connectivity scaling down with every layer of external support; LLM group showed weakest coupling. After writing, 83% of LLM users couldn't quote a single line of what they had just produced. Researchers called this "cognitive debt."
 
@@ -111,3 +111,4 @@ Cognitive debt (Addy Osmani, May 2026): the accumulated deficit in comprehension
 - ["Don't Outsource the Learning" — Addy Osmani](../sources/tweets/osmani-cognitive-debt-ai-learning-2026-05.md)
 - [Claude Code Fast mode becomes default + spec-drift logging](../sources/newsletters/claude-code-fast-mode-default-2026-05.md)
 - [PowerPoint remains hard for agents](../sources/newsletters/powerpoint-agent-skill-failure-mode-2026-06.md)
+- [How AI assistance impacts the formation of coding skills](../sources/articles/anthropic-ai-assistance-coding-skills-2026.md)

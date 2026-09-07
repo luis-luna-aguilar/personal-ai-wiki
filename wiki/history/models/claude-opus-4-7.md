@@ -10,7 +10,7 @@ sources: [ainews-2026-04-21, every-opus-4-7-vibe-check, vectorlab-opus-4-7-flop,
 
 # Claude Opus 4.7 (archived)
 
-**Superseded by [Claude Opus 4.8](../../models/claude-opus-4-8.md) (June 2026).**
+**Superseded by [Claude Opus 4.8](claude-opus-4-8.md) (June 2026), itself since superseded by [Claude Opus 5](../../models/claude-opus-5.md).**
 
 Claude Opus 4.7 was Anthropic's flagship multimodal model before Opus 4.8. It appeared stronger than 4.6 on explicit coding, document, and visual artifact tasks, but early practitioner reactions described a more literal, less gap-filling model whose real-world reliability depended more heavily on prompt quality and reasoning mode.
 

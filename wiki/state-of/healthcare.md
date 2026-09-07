@@ -3,8 +3,8 @@ title: State of Healthcare
 type: state-of
 domains: [healthcare]
 tags: []
-as_of: 2026-06-18
-sources: [legacy-ai-tools-roadmap-xlsx, dragon-copilot-launch, hippocratic-ai-homepage, tempus-homepage, zocdoc-zo, open-evidence-homepage, konko-kora-homepage, elevenlabs-scribe, 2026-06-16-metalearn-mystery-fatigue-ai, midjourney-medical-scanner-2026-06, ai-healthcare-triage-doctronic-2026-05, mistral-document-ai]
+as_of: 2026-07-22
+sources: [legacy-ai-tools-roadmap-xlsx, dragon-copilot-launch, hippocratic-ai-homepage, tempus-homepage, zocdoc-zo, open-evidence-homepage, konko-kora-homepage, elevenlabs-scribe, 2026-06-16-metalearn-mystery-fatigue-ai, midjourney-medical-scanner-2026-06, ai-healthcare-triage-doctronic-2026-05, mistral-document-ai, bfl-flux-3-2026-07-24]
 ---
 
 # State of Healthcare
@@ -44,9 +44,11 @@ AI products specialized for extracting, structuring, querying, or reasoning over
 
 - Frontier models (Claude Opus 4.8, GPT 5.5) + a structured investigation process are documented to match or exceed PCP visits for ambiguous multi-system symptoms *(as of 2026-06-16)*
 - See use case: [AI-Assisted Personal Health Investigation](../use-cases/ai-personal-health-investigation.md)
+- **Health in ChatGPT** — OpenAI's U.S. rollout connecting Apple Health and supported medical records into ChatGPT; connected health data gets additional encryption, is excluded from foundation-model training and ad targeting, per OpenAI built on substantial physician review *(as of 2026-07-22)*
 
 ## Recent changes
 
+- [2026-07-22] Health in ChatGPT rolled out in the U.S. — connects Apple Health and medical records, with encryption and training/ad-targeting exclusions for connected health data.
 - [2026-06-18] Midjourney Medical Scanner added as a speculative imaging-infrastructure signal with strong validation and regulatory caveats.
 - [2026-05-31] Doctronic prescription-renewal pilot and patient-side AI self-triage added as healthcare workflow signals.
 - [2026-06-16] Added "Patient-side AI" subcategory — frontier models documented to match/exceed PCP visits for ambiguous symptoms (Amy Deng, MetaLearn)

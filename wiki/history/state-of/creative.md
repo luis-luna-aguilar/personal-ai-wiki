@@ -1,5 +1,9 @@
 # State of Creative — History
 
+## Archived from current page on 2026-09-07
+
+- [2026-05-01] Added `AI music generation` subcategory; ElevenMusic, Suno, and Udio are the named entrants per Superhuman newsletter; AI-created artists reportedly reaching Billboard charts; rightsholder economics flagged as emerging pressure
+
 ## Archived from current page on 2026-09-05
 
 - [2026-04-22] Created the `creative` domain and added initial pages for video generation, avatar video, UI generation, and slides workflows from the legacy workbook exception

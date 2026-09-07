@@ -4,16 +4,17 @@ type: tool
 domains: [voice, agents]
 subcategory: voice-models
 tags: [openai, closed-source, agentic]
-as_of: 2026-07-07
-sources: [gpt-live-launch-2026-07]
+as_of: 2026-07-22
+sources: [gpt-live-launch-2026-07, bfl-flux-3-2026-07-24]
 ---
 
 # GPT-Live
 
 GPT-Live is OpenAI's full-duplex voice model family for natural human-AI interaction. It powers the new ChatGPT Voice experience and is designed to listen and speak at the same time instead of forcing rigid turn-taking.
 
-## Current status (as of 2026-07-07)
+## Current status (as of 2026-07-22)
 
+- Desktop app rollout (2026-07-22) adds computer-control and cross-app coordination across ChatGPT Work and Codex, alongside the existing mobile/web full-duplex experience.
 - Rolling out globally to ChatGPT on iOS, Android, and ChatGPT.com.
 - **GPT-Live-1** becomes the default ChatGPT Voice model for Go, Plus, and Pro users.
 - **GPT-Live-1 mini** becomes the default ChatGPT Voice model for Free users.
@@ -43,8 +44,10 @@ OpenAI says GPT-Live adds audio-native safety tests, generated-audio synthetic e
 
 ## Recent changes
 
+- [2026-07-22] Desktop app rollout: ChatGPT Voice can now control the computer and coordinate work across ChatGPT Work and Codex.
 - [2026-07-07] GPT-Live-1 and GPT-Live-1 mini launched in ChatGPT Voice globally; API access planned.
 
 ## Sources
 
 - [Introducing GPT-Live](../sources/articles/gpt-live-launch-2026-07.md)
+- [AINews — Black Forest Labs FLUX 3](../sources/newsletters/bfl-flux-3-2026-07-24.md)

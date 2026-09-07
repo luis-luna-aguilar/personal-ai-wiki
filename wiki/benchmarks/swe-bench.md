@@ -32,7 +32,7 @@ Scores are % of issues resolved. Higher is better.
 | Model | Variant | Score | As of |
 |---|---|---|---|
 | [Claude Fable 5](../models/claude-fable-5.md) | Pro | 80.3% | 2026-07-02 |
-| [Claude Opus 4.8](../models/claude-opus-4-8.md) | Pro | 69.2% | 2026-06-04 |
+| [Claude Opus 4.8](../history/models/claude-opus-4-8.md) (historical, superseded by [Claude Opus 5](../models/claude-opus-5.md)) | Pro | 69.2% | 2026-06-04 |
 | [Qwen 3.6 27B](../models/qwen-3-6-27b.md) | Verified | 77.2% | 2026-05-01 |
 | [MiniMax M3](../models/minimax-m3.md) | Pro | 59.0% | 2026-06-02 |
 | [GPT-5.5](../models/gpt-5-5.md) | Pro | 58.6% | 2026-05-18 |
@@ -57,6 +57,7 @@ SWE-bench is the most widely cited benchmark for comparing coding model and codi
 
 ## Recent changes
 
+- [2026-09-06] Repointed Claude Opus 4.8 to its archived page after Claude Opus 5 superseded it; score unchanged, link/label fix only.
 - [2026-07-09] Rebuilt the leaderboard from current model pages: added Claude Fable 5 (80.3% Pro) and Claude Opus 4.8 (69.2% Pro), both previously missing despite being current on `state-of/models.md`; repointed the Composer entry to Composer 2.5's supersession of Composer 2.
 - [2026-04-24] Added contamination warning for SWE-bench Verified; reframed SWE-bench Pro as the more meaningful successor
 - [2026-04-23] Page created; compiled leaderboard from model pages referencing SWE-bench scores

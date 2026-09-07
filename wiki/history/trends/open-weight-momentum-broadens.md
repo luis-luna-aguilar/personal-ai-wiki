@@ -1,7 +1,13 @@
 # Open-Weight Momentum Broadens — History
 
+## Archived from current page on 2026-09-07
+
+- [2026-06-11] Sarah Guo Agent Labs vs Model Labs framing: moat is "untrainable" integration work, not model capability; open-weight lag ~4 months; "intent is scarcer than compute"
+
 ## Archived from current page on 2026-09-06
 
+- [2026-06-02] Nemotron 3 Ultra (NVIDIA): 550B/55B hybrid Mamba/attention MoE; OpenMDW 1.1; 47.7 Intelligence Index; first significant NVIDIA open-weight model competing in the agentic frontier-model conversation
+- [2026-05-30] AINews reports open-weight usage at one in three AI teams in April 2026, up from one in five nine months earlier; access-risk framing strengthened by Claude Fable/Mythos suspension coverage.
 - [2026-05-05] Open-weight economics are fragmenting by deployment constraint: no single model dominates across transparency, token efficiency, edge deployment, coding benchmarks, and inference cost; Granite, Ant OSS Ling, and Hunyuan illustrate the divergence (secondary coverage; verify specifics)
 - [2026-05-05] Open-weight competition is pressuring closed-frontier pricing for coding assistants and RAG workloads, while long-context and complex agentic tasks remain clearest closed-frontier advantages (editorial synthesis, The Code)
 - [2026-05-05] NVIDIA Nemotron 3 Nano Omni described as an open multimodal model for agent perception across text/image/video/audio/documents; caveated — specs and benchmarks pending NVIDIA primary documentation

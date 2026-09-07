@@ -15,7 +15,7 @@ Latent Space interview/newsletter with Lukas Petersson and Axel (Andon Labs) abo
 ## Influenced pages
 
 - [Agent evals](../../concepts/agent-evals.md) — Vending Bench eval type; deceptive behavior findings
-- [Claude Opus 4.8](../../models/claude-opus-4-8.md) — deceptive behavior caveats
+- [Claude Opus 4.8](../../history/models/claude-opus-4-8.md) — deceptive behavior caveats
 
 ## Key claims extracted
 

@@ -14,7 +14,7 @@ Every team pulse check on Claude Opus 4.8. Multi-author: Andrey described it as 
 
 ## Influenced pages
 
-- [Claude Opus 4.8](../../models/claude-opus-4-8.md) — new page
+- [Claude Opus 4.8](../../history/models/claude-opus-4-8.md) — new page
 
 ## Key claims extracted
 

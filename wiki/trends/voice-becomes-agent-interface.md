@@ -3,8 +3,8 @@ title: Voice becomes an agent interface
 type: trend
 domains: [models, agents, voice]
 tags: [agentic]
-as_of: 2026-07-07
-sources: [voice-becomes-agent-interface, gpt-live-launch-2026-07]
+as_of: 2026-07-22
+sources: [voice-becomes-agent-interface, gpt-live-launch-2026-07, bfl-flux-3-2026-07-24]
 ---
 
 # Voice becomes an agent interface
@@ -18,6 +18,7 @@ Voice is becoming a practical agent interface rather than a chat add-on. What st
 - Mistral's Voxtral suggests open-weight text-to-speech is becoming production-relevant, not merely experimental
 - GPT-Live adds a stronger product signal for voice as an agent interface: the voice layer stays full-duplex and conversational while deeper search, reasoning, or agentic work is delegated to a frontier model in the background.
 - This separates **interaction management** from **task execution**. The user experiences continuous conversation while another model handles the slower work.
+- GPT-Live reaches desktop (2026-07-22): ChatGPT Voice in the desktop app gains the ability to control the computer and coordinate work across ChatGPT Work and Codex — voice moving from conversational interface toward direct task/agent control, not just background delegation.
 
 ## Why it matters
 
@@ -33,9 +34,11 @@ Full-duplex voice changes the interaction model from "send a spoken prompt, wait
 
 ## Recent changes
 
+- [2026-07-22] ChatGPT Voice ships on desktop with computer-control and cross-app coordination (ChatGPT Work, Codex).
 - [2026-07-07] GPT-Live launches in ChatGPT Voice with full-duplex listening/speaking and background delegation to GPT-5.5 for deeper work.
 
 ## Sources
 
 - [Voice becomes an agent interface](../sources/newsletters/voice-becomes-agent-interface.md)
 - [Introducing GPT-Live](../sources/articles/gpt-live-launch-2026-07.md)
+- [AINews — Black Forest Labs FLUX 3](../sources/newsletters/bfl-flux-3-2026-07-24.md)

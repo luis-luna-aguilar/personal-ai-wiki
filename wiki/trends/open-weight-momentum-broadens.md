@@ -3,8 +3,8 @@ title: Open-weight momentum broadens
 type: trend
 domains: [models, computer-use]
 tags: [open-weights, google]
-as_of: 2026-07-21
-sources: [open-weight-momentum-early-april, deepseek-v4-preview, ainews-2026-04-25, china-open-agent-models-2026-04-28, local-offline-agents-2026-04-29, nvidia-nemotron-3-nano-omni-2026-04-29, open-weight-economics-fragmenting-2026-04-30, open-weight-pricing-pressure-2026-04-29, fable-ban-june-2026, ainews-glm-52-june-2026, ainews-open-models-june-2026, ainews-cosmos-nemotron-june-2026, local-ai-infrastructure-2026-06, open-weight-adoption-access-risk-2026-05, cohere-command-a-plus-launch, ainews-erdos-benchmarks-cluster-2026-05-21, ainews-all-model-labs-are-now-agent-labs, alibaba-qwen38-preview-2026-07-20, moonshot-kimi-k3-launch-2026-07-17, ainews-china-policy-openweight-2026-07-21, ainews-kimi-k3-2026-07-17, ainews-thinkys-inkling-2026-07-16]
+as_of: 2026-07-28
+sources: [open-weight-momentum-early-april, deepseek-v4-preview, ainews-2026-04-25, china-open-agent-models-2026-04-28, local-offline-agents-2026-04-29, nvidia-nemotron-3-nano-omni-2026-04-29, open-weight-economics-fragmenting-2026-04-30, open-weight-pricing-pressure-2026-04-29, fable-ban-june-2026, ainews-glm-52-june-2026, ainews-open-models-june-2026, ainews-cosmos-nemotron-june-2026, local-ai-infrastructure-2026-06, open-weight-adoption-access-risk-2026-05, cohere-command-a-plus-launch, ainews-erdos-benchmarks-cluster-2026-05-21, ainews-all-model-labs-are-now-agent-labs, alibaba-qwen38-preview-2026-07-20, moonshot-kimi-k3-launch-2026-07-17, ainews-china-policy-openweight-2026-07-21, ainews-kimi-k3-2026-07-17, ainews-thinkys-inkling-2026-07-16, ainews-much-ado-about-open-weights-2026-07-28, ainews-laguna-kratsios-2026-07-23, poolside-model-factory-interview-2026-07-23, ainews-cybersecurity-top-of-mind-2026-07-22]
 ---
 
 # Open-weight momentum broadens
@@ -27,6 +27,7 @@ The trend: open-weight momentum has broadened well past its original coding-mode
 - **Qwen3.8-Max-Preview (July 2026):** Alibaba put its next flagship into live preview on 2026-07-20, days after Kimi K3 — a third-party community roundup (via AINews) puts it at 2.4T parameters with native video understanding, still inconsistent on long-horizon tasks and language stability. Alibaba's own account says the model is "improving daily" and explicitly signals intent to open-weight the eventual official release, not just the preview.
 - **Kimi K3 (Moonshot, July 2026):** the clearest open-weight capability jump in this trend so far — 2.8T params, Intelligence Index 57 (Opus 4.8/GPT-5.5 tier), and #1 on Arena's Frontend Code Arena, up from #18 as K2.6. Open weights promised 2026-07-27.
 - **Inkling (Thinking Machines Lab, July 2026):** the lab's first flagship release, and a US lab choosing to ship it as open weights (975B/41B MoE, Apache 2.0, Intelligence Index 41) rather than a closed frontier push — notable because most open-weight competition to date has come from Chinese labs, not US ones.
+- **Laguna S 2.1 (Poolside, July 2026):** a credible non-Chinese open-weight coding entrant arriving in the same window as Inkling and Kimi K3 — 118B/8B-active MoE, OpenMDW-1.1 license, runs on a single DGX Spark, strong agentic-coding benchmarks (70.2% Terminal-Bench 2.1, 78.5% SWE-bench Multilingual). Poolside, a Western "neolab," frames the release the same way as the sovereignty argument above: resisting intelligence concentrating in "three or four companies."
 
 ## Why it matters
 
@@ -49,6 +50,10 @@ Fable 5 itself returned online 2026-07-02, about two weeks after the ban — a r
 
 By July 2026 the sovereignty pressure has started running in reverse. Rather than only labs and teams protecting themselves against losing access to a closed frontier model, AINews reports the Trump administration is weighing measures that could amount to a de facto ban on frontier Chinese open models such as Kimi — procurement restrictions, Entity List designations, hosting-liability rules, and public pressure campaigns, short of a clean statutory ban. Technical voices including Hugging Face's Clément Delangue argued the restriction would hurt competition and defensive security more than it helps incumbents, citing Hugging Face's own disclosed use of self-hosted GLM-5.2 during a cyber incident — commercial frontier APIs' guardrails blocked the forensic analysis it needed, and sensitive attacker data had to stay on-prem. The same week, 29 countries with no US or Western European signatories founded the Shanghai-headquartered World AI Cooperation Organization, and Xi Jinping called for shared global AI development at Shanghai's World AI Conference, pledging 5,000 AI-training slots to developing nations.
 
+The restriction pressure named its first concrete target on 2026-07-23: US Tech & Science Advisor Michael Kratsios publicly accused Moonshot AI of "large-scale, covert industrial distillation" of Anthropic's Fable to build Kimi K3, citing Moonshot's access to GB300 chips in Thailand, with Treasury signaling possible Entity List sanctions. The accusation drew immediate technical pushback — critics noted only about 15 days separated Fable's release from K3's announcement, making a full distillation-driven capability jump implausible on that timeline — and legal commentators flagged that current copyright doctrine doesn't clearly support treating distillation itself as theft. The dispute is unresolved, but it converts the sovereignty story from general policy pressure into a live sanctions threat against a specific, already-shipping model.
+
+The institutional response arrived days later. NVIDIA formally launched the "Open Secure AI Alliance" on 2026-07-28 (Microsoft, Hugging Face, LangChain, Nous Research, and others), with Jensen Huang citing the OpenAI/Hugging Face incident directly: a closed model's guardrails blocked essential forensics while a self-hosted open-weight model helped contain the intrusion. OpenAI signed the alliance's letter after rumors it wouldn't; Anthropic did not, instead publishing its own position saying it has "never advocated for a ban on open-weights models" but supports chip controls on China, anti-industrial-scale-distillation measures, and mandatory safety testing regardless of a model's openness. Separately, the New York Times reported OpenAI and Anthropic have been quietly lobbying Washington to restrict open-source AI even as Sam Altman publicly backs it, and US officials are reportedly weighing a mandatory pre-release review window (up to 30 days) for frontier models, with open-vs-closed treatment still unresolved.
+
 ## What to watch
 
 - Whether NVIDIA sustains Nemotron as a recurring open-weight release cadence or treats it as a one-off signal
@@ -57,6 +62,9 @@ By July 2026 the sovereignty pressure has started running in reverse. Rather tha
 
 ## Recent changes
 
+- [2026-07-28] NVIDIA launches the "Open Secure AI Alliance" (Microsoft, Hugging Face, LangChain, Nous Research); OpenAI signs, Anthropic does not — publishing its own position (chip controls, anti-distillation, safety testing, not a ban) instead; NYT reports both labs lobbying Washington against open models even as Altman publicly backs them
+- [2026-07-28] Kimi K3's weights ship in full (104B active/896 experts, FlashKDA/MoonEP/AgentENV infra open-sourced); separately, Kratsios accuses Moonshot of covertly distilling Fable to build it, Treasury signals possible Entity List sanctions, critics call the timeline technically implausible
+- [2026-07-22] Poolside released Laguna S 2.1 (118B/8B-active MoE, OpenMDW-1.1 license): a new non-Chinese open-weight coding entrant, strong on agentic-coding benchmarks, more prone to fabrication under pressure than Qwen3.5-122B per one independent eval.
 - [2026-07-21] Sovereignty pressure reverses direction: US reported weighing restrictions on Chinese open-weight models (procurement, Entity List, hosting liability); Hugging Face's Clément Delangue and others push back citing HF's own self-hosted GLM-5.2 use during a cyber incident as evidence open models are security infrastructure
 - [2026-07-20] Qwen3.8-Max-Preview enters live preview, 2.4T parameters (third-party estimate), native video understanding; Alibaba signals the eventual official release will be open-weighted
 - [2026-07-17] Kimi K3 (Moonshot, 2.8T) announced: Intelligence Index 57, #1 Frontend Code Arena — the clearest open-weight capability jump in this trend so far.
@@ -64,9 +72,7 @@ By July 2026 the sovereignty pressure has started running in reverse. Rather tha
 - [2026-07-02] Fable 5 returned online after its export-control suspension; the sovereignty argument above stands independent of whether any specific restriction turns out to be temporary.
 - [2026-06-30] Local AI framing added: open-weight deployment is becoming a stack of models, search, documents, agents, harnesses, and hybrid routing rather than just running a checkpoint locally.
 - [2026-06-17] Fable 5 export-control ban accelerated model sovereignty framing: @hwchase17 argues model neutrality matters more than cloud neutrality; GLM-5.2 (MIT) adopted as the concrete alternative for teams losing closed frontier access
-- [2026-06-11] Sarah Guo Agent Labs vs Model Labs framing: moat is "untrainable" integration work, not model capability; open-weight lag ~4 months; "intent is scarcer than compute"
-- [2026-06-02] Nemotron 3 Ultra (NVIDIA): 550B/55B hybrid Mamba/attention MoE; OpenMDW 1.1; 47.7 Intelligence Index; first significant NVIDIA open-weight model competing in the agentic frontier-model conversation
-- [2026-05-30] AINews reports open-weight usage at one in three AI teams in April 2026, up from one in five nine months earlier; access-risk framing strengthened by Claude Fable/Mythos suspension coverage.
+
 ## Sources
 
 - [AINews — Open Models, Model Labs vs Agent Labs (June 11)](../sources/newsletters/ainews-open-models-june-2026.md)
@@ -85,3 +91,7 @@ By July 2026 the sovereignty pressure has started running in reverse. Rather tha
 - [AINews — All model labs are now agent labs](../sources/newsletters/ainews-all-model-labs-are-now-agent-labs.md)
 - [AINews — Kimi K3 (2.8T, largest open model)](../sources/newsletters/ainews-kimi-k3-2026-07-17.md)
 - [AINews — Thinking Machines' Inkling (975B/41B, multimodal)](../sources/newsletters/ainews-thinkys-inkling-2026-07-16.md)
+- [AINews — Much ado about Open Weights](../sources/newsletters/ainews-much-ado-about-open-weights-2026-07-28.md)
+- [AINews — Laguna S 2.1 / Kratsios distillation accusation](../sources/newsletters/ainews-laguna-kratsios-2026-07-23.md)
+- [Poolside Laguna S 2.1 — Model Factory interview](../sources/newsletters/poolside-model-factory-interview-2026-07-23.md)
+- [AINews — AI Cybersecurity becomes top of mind](../sources/newsletters/ainews-cybersecurity-top-of-mind-2026-07-22.md)

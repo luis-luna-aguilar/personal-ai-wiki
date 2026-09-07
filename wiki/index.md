@@ -35,7 +35,7 @@ Foundation models. One page per model family or generation.
 - [models/claude-fable-5](models/claude-fable-5.md) — Anthropic frontier model; re-enabled after June export-control suspension, with safety fallback routing and a practical niche for ambiguous premise-risky work *(as_of: 2026-07-07)*
 - [models/claude-sonnet-5](models/claude-sonnet-5.md) — Anthropic middle-tier Claude 5 model; official Claude Code/API availability plus early high-effort cost-per-task caveats *(as_of: 2026-07-02)*
 - [models/claude-mythos-preview](models/claude-mythos-preview.md) — Anthropic restricted-preview model for autonomous zero-day discovery, METR long-horizon tasks, and Cloudflare Project Glasswing security findings *(as_of: 2026-05-23)*
-- [models/claude-opus-4-8](models/claude-opus-4-8.md) — Anthropic current accessible flagship; Dynamic Workflows and Figma MCP bidirectional code/design loop; Vending Bench caveats for Claude 4.6+ behavior *(as_of: 2026-07-02)*
+- [models/claude-opus-5](models/claude-opus-5.md) — Anthropic current flagship, supersedes Opus 4.8; Epoch Capabilities Index 159, SWE-ECI 161 tied with Fable 5; prickly/over-verbose day-to-day per practitioner reports *(as_of: 2026-07-28)*
 - [models/composer-2-5](models/composer-2-5.md) — Cursor's in-house coding model, upgraded from Composer 2 in May 2026 (targeted RL + KL distillation, 25× synthetic tasks) *(as_of: 2026-05-18)*
 - [models/deepseek-v4](models/deepseek-v4.md) — DeepSeek released open-weight Pro/Flash lineup for long-context agent workloads; 1M context, MIT license, pricing, and KV-cache/inference-systems story *(as_of: 2026-05-23)*
 - [models/cohere-command-a-plus](models/cohere-command-a-plus.md) — Cohere's first fully open (Apache 2.0) model; 218B/25B MoE; AA Intelligence Index 37 *(as_of: 2026-05-21)*
@@ -47,6 +47,7 @@ Foundation models. One page per model family or generation.
 - [models/cosmos-3](models/cosmos-3.md) — NVIDIA; Mixture-of-Transformers (autoregressive reasoner + diffusion generator); Nano 16B / Super 64B; #1 open-weight Text-to-Image and Image-to-Video *(as_of: 2026-06-02)*
 - [models/diffusiongemma](models/diffusiongemma.md) — Google experimental 26B MoE; block denoising text generation (non-autoregressive); first diffusion LLM natively in vLLM; Apache 2.0; research artifact *(as_of: 2026-06-11)*
 - [models/kimi-k3](models/kimi-k3.md) — Moonshot AI's 2.8T flagship; Intelligence Index 57; #1 Frontend Code Arena; supersedes Kimi K2.7-Code *(as_of: 2026-07-17)*
+- [models/laguna-s-2-1](models/laguna-s-2-1.md) — Poolside's flagship open-weight coding model; 118B/8B-active MoE; OpenMDW-1.1 license; runs on a single DGX Spark *(as_of: 2026-07-23)*
 - [models/inkling](models/inkling.md) — Thinking Machines Lab's first flagship; 975B/41B MoE; natively multimodal; Apache 2.0; Intelligence Index 41, strongest US-origin open-weight release *(as_of: 2026-07-16)*
 - [models/mai-thinking-1](models/mai-thinking-1.md) — Microsoft's first frontier-class reasoning model; 35B active / 1T MoE; trained from scratch; 97% AIME 2025 and 53% SWE-Bench Pro *(as_of: 2026-06-03)*
 - [models/minimax-m3](models/minimax-m3.md) — MiniMax 1M-context model with strong agent benchmarks and contested open-weight claim because weights were not disclosed at launch *(as_of: 2026-06-02)*
@@ -89,6 +90,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/eleven-v3](tools/eleven-v3.md) — expressive text-to-speech model optimized for high-control generated voice output *(as_of: 2026-04-22)*
 - [tools/elevenlabs-scribe](tools/elevenlabs-scribe.md) — speech-to-text product line for real-time and enterprise transcription workflows *(as_of: 2026-04-22)*
 - [tools/futurehouse](tools/futurehouse.md) — science-agent platform for research and discovery workflows *(as_of: 2026-04-22)*
+- [tools/flux-3](tools/flux-3.md) — Black Forest Labs' unified image/video/audio/action-prediction model, built on "Self Flow" research; companion FLUX3-mimic extends it to robot control *(as_of: 2026-07-24)*
 - [tools/gemini](tools/gemini.md) — Gemini umbrella page covering Google's assistant surfaces, enterprise agent platform, artifact generation, computer use, and managed-agent API primitives *(as_of: 2026-07-08)*
 - [tools/genspark-slides](tools/genspark-slides.md) — AI slides workflow inside Genspark's broader agent/content product surface *(as_of: 2026-04-22)*
 - [tools/google-adk](tools/google-adk.md) — Google's open-source agent framework; ADK 2.0 now clearly centers graph workflows, coordinator-specialist routing, A2A handoffs, and sandboxed execution *(as_of: 2026-04-24)*

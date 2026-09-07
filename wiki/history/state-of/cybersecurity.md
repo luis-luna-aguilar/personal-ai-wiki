@@ -1,7 +1,12 @@
 # State of Cybersecurity — History
 
+## Archived from current page on 2026-09-07
+
+- [2026-05-23] Anthropic reported Project Glasswing and partners found 10,000+ high/critical-severity vulnerabilities in essential software within a month of launch; added as a program-wide figure to the Claude Mythos Preview entry (industry-adaptation framing attributed to AINews' recap).
+
 ## Archived from current page on 2026-09-06
 
+- [2026-05-19] Added GitHub internal-repo breach (compromised employee device, poisoned VS Code extension; attacker's ~3,800-repo claim "directionally consistent" with GitHub's investigation, not confirmed) under AI developer supply chain attacks — a non-AI-specific but dev-tooling-relevant counterpoint to Glasswing's offensive findings.
 - [2026-05-13] OpenAI announced Daybreak as a thin official cyber-defense signal combining frontier models, Codex, and security partners; implementation details remain pending.
 - [2026-05-13] Agentic security tooling is becoming a category signal: scanner, monitor, fix-validation, and deployment-risk workflows are being redesigned for software built and operated by agents.
 - [2026-05-13] Added `AI developer supply chain attacks`: Mini Shai-Hulud campaign (persistence via .claude/settings.json + .vscode/tasks.json hooks; Guardrails AI v0.10.1 confirmed compromised) and Hugging Face Transformers impersonator; mitigations: minimumReleaseAge, blockExoticSubdeps
