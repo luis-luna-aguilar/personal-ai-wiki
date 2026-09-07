@@ -17,7 +17,8 @@ An internal OpenAI general-purpose reasoning model — not a math-specialized or
 
 ## Influenced pages
 - [State of Science](../../state-of/science.md) — added as a new bullet under "Frontier models used in science" and a Recent changes entry
-- [AI in Science](../../trends/ai-in-science.md) — added as evidence the domain-specific-reasoning pattern extends beyond biology into pure mathematics, with the unverified secondary-source figures flagged
+- [AI in Science](../../trends/ai-in-science.md) — originally added as evidence the domain-specific-reasoning pattern extends beyond biology into pure mathematics, with the unverified secondary-source figures flagged; this content later moved to AI in Mathematics
+- [AI in Mathematics](../../trends/ai-in-mathematics.md) — new page; primary source for the Erdős disproof entry
 
 ## Key claims extracted
 - Disproves the "square grid is optimal" belief about the planar unit-distance problem (Erdős, 1946); yields ≥ n^(1+δ) unit-distance pairs for infinitely many n, δ > 0 (later refined to δ = 0.014 by Will Sawin)

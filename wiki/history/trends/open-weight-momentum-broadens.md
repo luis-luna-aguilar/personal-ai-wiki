@@ -2,6 +2,7 @@
 
 ## Archived from current page on 2026-09-07
 
+- [2026-07-17] Kimi K3 (Moonshot, 2.8T) announced: Intelligence Index 57, #1 Frontend Code Arena — the clearest open-weight capability jump in this trend so far.
 - [2026-07-16] Thinking Machines Lab released Inkling (975B/41B MoE, Apache 2.0, Intelligence Index 41) — its first flagship model, and a rare US-origin open-weight flagship choice.
 - [2026-07-02] Fable 5 returned online after its export-control suspension; the sovereignty argument above stands independent of whether any specific restriction turns out to be temporary.
 - [2026-06-30] Local AI framing added: open-weight deployment is becoming a stack of models, search, documents, agents, harnesses, and hybrid routing rather than just running a checkpoint locally.

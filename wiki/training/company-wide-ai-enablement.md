@@ -1,8 +1,8 @@
 ---
 title: Company-wide AI enablement
 type: training
-as_of: 2026-07-29
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13, fde-race-may-2026, every-ai-adoption-levels, enterprise-spend-metered-june-2026, ai-strategy-explicit-bets-2026-06, codex-general-work-agents-2026-07, token-tightening-ai-finops-2026-06, efficiencymaxxing-model-routing-2026-07, every-cheap-competence-after-automation-2026-05, slack-agent-native-os-2026-07-29]
+as_of: 2026-08-06
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13, fde-race-may-2026, every-ai-adoption-levels, enterprise-spend-metered-june-2026, ai-strategy-explicit-bets-2026-06, codex-general-work-agents-2026-07, token-tightening-ai-finops-2026-06, efficiencymaxxing-model-routing-2026-07, every-cheap-competence-after-automation-2026-05, slack-agent-native-os-2026-07-29, codex-interview-onboarding-2026-08-06]
 ---
 
 # Company-wide AI enablement
@@ -83,6 +83,7 @@ Source: "AI Is Ready. Organizations Aren't." (Every, June 2026) — based on int
 - **Efficiencymaxxing as model-routing practice.** Treat model selection like an operating system for work: use evals to identify which workflow stages can move to cheaper models, audit token use by step, and keep frontier access for ambiguous or high-risk stages. This is the practical middle ground between tokenmaxxing and blanket restriction. See [Cost-aware AI task routing](cost-aware-ai-task-routing.md) for the routing mechanics and FinOps controls this practice depends on.
 - **Design for new frames, not only task automation.** Cheap competence means more work can be done inside a given frame, but the higher-value organizational skill is creating better frames: what to investigate, what to ship, what tradeoff matters, and what "good" means. See [AI work delegation modes](ai-work-delegation-modes.md) for the task-level version of this argument.
 - **Keep humans at the judgment boundary.** As AI fills in the middle of workflows, employees need stronger habits for framing, taste, coordination, and review rather than only faster execution tactics.
+- **Interview-driven agent-workspace onboarding.** Rather than copying someone else's agent setup, have the agent interview the new user first — about their work, their needs, and which decisions they want to keep making themselves — then let it propose a workspace structure (pinned threads, file/desktop organization) from those answers. Every's Katie Parrott used this pattern with Codex, then handed the same approach to a colleague to run for herself. The reason it matters: two Every staffers who compared their own hand-built Codex setups found them almost nothing alike — one built on minimal process and reminders, the other on detailed planning and supervision — because a workable setup mirrors how the individual actually works, not a template borrowed from someone else.
 
 ## Failure modes
 
@@ -177,6 +178,7 @@ As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have
 
 ## Recent changes
 
+- [2026-08-06] Added interview-driven agent-workspace onboarding pattern: have the agent interview the new user before proposing a workspace structure, rather than copying someone else's setup.
 - [2026-07-29] Added thread-per-task chat orchestration pattern: chat channels/threads mapped directly onto agent session lifecycle; two independent implementations (Every's Claude Home Base, Block's Buzz) converged on the same shape in the same week.
 - [2026-05-27] Added cheap-competence / after-automation framing: AI expands the frontier of human work by shifting scarcity toward framing and judgment.
 - [2026-07-08] Added efficiencymaxxing: stage-level model routing, token audits, and one-variable reruns as a company-wide AI cost-control practice.
@@ -223,3 +225,4 @@ As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have
 - [Efficiencymaxxing and model-routing discipline](../sources/newsletters/efficiencymaxxing-model-routing-2026-07.md)
 - [Every - Cheap competence and after automation](../sources/newsletters/every-cheap-competence-after-automation-2026-05.md)
 - [What If Slack Was Your AI Command Center](../sources/newsletters/slack-agent-native-os-2026-07-29.md)
+- [A Codex of One's Own — Every](../sources/newsletters/codex-interview-onboarding-2026-08-06.md)

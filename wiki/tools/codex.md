@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents, cybersecurity, computer-use]
 subcategory: terminal-coding-agent
 tags: [openai, closed-source, agentic]
-as_of: 2026-07-14
-sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026, openai-gpt-5-5-launch, superhuman-2026-04-23, codex-broader-computer-work-2026-04-24, codex-for-work-2026-05-01, symphony-devin-terminal-orchestration-2026-04-28, openai-daybreak-2026-05-13, codex-mobile-may-2026, codex-adoption-ecosystem-2026-05, codex-maxxing-jxnl-2026-05, codex-zoom-mobile-2026-05, codex-general-work-agents-2026-07, every-urge-to-merge-2026-07-14, ainews-devin-fusion-router-moat-2026-07-14]
+as_of: 2026-08-04
+sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026, openai-gpt-5-5-launch, superhuman-2026-04-23, codex-broader-computer-work-2026-04-24, codex-for-work-2026-05-01, symphony-devin-terminal-orchestration-2026-04-28, openai-daybreak-2026-05-13, codex-mobile-may-2026, codex-adoption-ecosystem-2026-05, codex-maxxing-jxnl-2026-05, codex-zoom-mobile-2026-05, codex-general-work-agents-2026-07, every-urge-to-merge-2026-07-14, ainews-devin-fusion-router-moat-2026-07-14, chatgpt-work-launch-2026-08-04]
 ---
 
 # Codex
@@ -95,8 +95,21 @@ Research preview. Background agents monitor recent screen activity, build memori
 - Shift from explicit chat history to passive ambient context capture
 - Competitive framing: Harrison Chase's "memory will be the great lock-in" argument points to accumulated ambient context as a switching cost, not just a convenience
 
+## ChatGPT Work architecture (as of 2026-08-04)
+
+A detailed independent teardown of Work — the ChatGPT mode OpenAI folded Codex into on 2026-07-14 — clarifies how the product actually holds state across tasks.
+
+- Each Work task runs inside a persistent, isolated cloud microVM (Pro: 8 CPUs/20GB RAM/64GB disk; Plus: 14GB RAM), with the agent operating a separately hosted, persistent-profile Chrome browser through tool calls rather than a local browser on the same machine.
+- Continuity across tasks deliberately does **not** live on the computer the way it does in OpenClaw. Each task gets its own `/workspace/scratch` directory, but cross-task context flows through product-managed services instead: Personal Context (queries prior chat/Work history on demand), the Library (a canonical file store distinct from each thread's local copy — the two can silently diverge if a file changes in the Library after a thread already has a local copy), and Projects (standing instructions plus source files, supplied to new tasks but not represented as a real directory).
+- The user's "memory" supplied to each task is a product-maintained synthesized profile; the agent can reason from it but can't edit it or write OpenClaw-style memory files other tasks load by default.
+- Early proactive-task suggestions: Work can surface a pre-authored prompt drawn from calendar/email context (e.g. a meeting-prep brief) at the start of a new conversation, though the user still has to select and run it — full unprompted autonomy isn't there yet.
+- Scheduled Tasks come in two forms: a standalone automation that opens a fresh task from a saved prompt each run, and a heartbeat-triggered automation that resumes a specific existing thread with its context intact (heartbeats work in the desktop app but aren't yet exposed in Work on the web).
+- The Plugin Directory has scaled past 1,000 plugins (apps, skills, app templates) but has a real discovery gap: Work doesn't suggest an installed-but-relevant plugin for a task, even when the user names the target service directly.
+- Three weeks after the July 9 launch, Work plus Codex had reportedly crossed 10 million users; Greg Brockman has confirmed Work and regular Chat will merge into one product by the end of 2026.
+
 ## Recent changes
 
+- [2026-08-04] Independent architecture teardown of ChatGPT Work: persistent cloud microVM specs, deliberate split between agent-owned scratch space and product-managed continuity (Personal Context/Library/Projects), browser-service tool-call model, two-tier Scheduled Tasks, Plugin Directory discovery gap, and 10M-user milestone three weeks post-launch.
 - [2026-07-14] OpenAI folded Codex into a new ChatGPT desktop "superapp" (Chat/Work/Codex modes); power users pushed back hard, but usage estimates put Codex around 6-7M users by mid-July, roughly 10x growth year-to-date.
 - [2026-07-11] Rollout friction: 36-plus model/effort configuration combinations drew complaints; OpenAI ran multiple usage-limit resets and rolled the context limit back from 372K to 272K.
 - [2026-07-01] Every frames Codex as a general-purpose workspace agent for inbox, CRM, healthcare coordination, writing, meeting-note, and personal knowledge workflows.
@@ -126,3 +139,4 @@ Research preview. Background agents monitor recent screen activity, build memori
 - [Codex and Claude Code as general-purpose work agents](../sources/newsletters/codex-general-work-agents-2026-07.md)
 - [Every — The Urge to Merge (ChatGPT and Codex)](../sources/newsletters/every-urge-to-merge-2026-07-14.md)
 - [AINews — Codex usage growth, coding-agent cost/perf tradeoffs, and Devin Fusion](../sources/newsletters/ainews-devin-fusion-router-moat-2026-07-14.md)
+- [ChatGPT Work architecture teardown](../sources/newsletters/chatgpt-work-launch-2026-08-04.md)

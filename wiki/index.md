@@ -33,7 +33,7 @@ Read-me-first dashboards per domain.
 Foundation models. One page per model family or generation.
 
 - [models/claude-fable-5](models/claude-fable-5.md) — Anthropic frontier model; re-enabled after June export-control suspension, with safety fallback routing and a practical niche for ambiguous premise-risky work *(as_of: 2026-07-07)*
-- [models/claude-sonnet-5](models/claude-sonnet-5.md) — Anthropic middle-tier Claude 5 model; official Claude Code/API availability plus early high-effort cost-per-task caveats *(as_of: 2026-07-02)*
+- [models/claude-sonnet-5](models/claude-sonnet-5.md) — Anthropic middle-tier Claude 5 model; official Claude Code/API availability plus early high-effort cost-per-task caveats *(as_of: 2026-08-11)*
 - [models/claude-mythos-preview](models/claude-mythos-preview.md) — Anthropic restricted-preview model for autonomous zero-day discovery, METR long-horizon tasks, and Cloudflare Project Glasswing security findings *(as_of: 2026-05-23)*
 - [models/claude-opus-5](models/claude-opus-5.md) — Anthropic current flagship, supersedes Opus 4.8; Epoch Capabilities Index 159, SWE-ECI 161 tied with Fable 5; prickly/over-verbose day-to-day per practitioner reports *(as_of: 2026-07-28)*
 - [models/composer-2-5](models/composer-2-5.md) — Cursor's in-house coding model, upgraded from Composer 2 in May 2026 (targeted RL + KL distillation, 25× synthetic tasks) *(as_of: 2026-05-18)*
@@ -53,7 +53,8 @@ Foundation models. One page per model family or generation.
 - [models/minimax-m3](models/minimax-m3.md) — MiniMax 1M-context model with strong agent benchmarks and contested open-weight claim because weights were not disclosed at launch *(as_of: 2026-06-02)*
 - [models/nano-banana-2](models/nano-banana-2.md) — Google image generation model; Gemini world understanding + real-time web search grounding *(as_of: 2026-04-22)*
 - [models/ideogram-4](models/ideogram-4.md) — Ideogram 9.3B DiT; #8 Image Arena, #1 open image model; strong text rendering and branding *(as_of: 2026-06-04)*
-- [models/muse-spark](models/muse-spark.md) — Meta multimodal model family; Muse Image/Video add agentic planning, tool use, code execution, and self-refinement before rendering; Muse Spark 1.1 is Meta's first paid model *(as_of: 2026-07-09)*
+- [models/muse-spark](models/muse-spark.md) — Meta multimodal model family; Muse Image/Video add agentic planning, tool use, code execution, and self-refinement before rendering; Muse Spark 1.1 is Meta's first paid model, Muse Spark 1.2 breaks into frontier-tier benchmarks *(as_of: 2026-08-11)*
+- [models/muse-glimmer](models/muse-glimmer.md) — Meta's first genuinely open-weight frontier-adjacent model; 30B dense multimodal, Apache 2.0, logit-distilled from Muse Spark for always-on local agents *(as_of: 2026-08-11)*
 - [models/openai-privacy-filter](models/openai-privacy-filter.md) — OpenAI open-weight MoE for on-device PII detection and redaction; 1.5B-total / 50M-active; Apache 2.0 *(as_of: 2026-04-23)*
 - [models/nemotron-3-ultra](models/nemotron-3-ultra.md) — NVIDIA open-weight 550B/55B MoE; hybrid Mamba/attention + LatentMoE; 1M context; high-throughput serving signal *(as_of: 2026-06-02)*
 - [models/qwen-3-6-27b](models/qwen-3-6-27b.md) — Alibaba dense 27B open-weight; beats prior 397B MoE on all coding benchmarks; runs under 20 GB RAM *(as_of: 2026-05-01)*
@@ -119,6 +120,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/mistral-document-ai](tools/mistral-document-ai.md) — document-intelligence product for extracting and structuring enterprise documents *(as_of: 2026-04-22)*
 - [tools/modal](tools/modal.md) — serverless AI cloud reframing from developer experience to "agent experience"; 100K-sandbox RL rollouts; $355M Series C *(as_of: 2026-07-08)*
 - [tools/multica](tools/multica.md) — open-source managed agents platform; treats coding agents (Claude Code, Codex, and 9 others) as project-board teammates with Squads routing and reusable skill compounding *(as_of: 2026-05-18)*
+- [tools/muse-code](tools/muse-code.md) — Meta's first terminal coding agent, launched in beta August 2026; Meta's answer to Claude Code and Codex *(as_of: 2026-08-06)*
 - [tools/paperclip](tools/paperclip.md) — open-source MIT agent management platform; org-chart metaphor with heartbeats, per-agent budgets, board-of-directors governance, and Kubernetes hosting; 69.9k stars *(as_of: 2026-06-10)*
 - [tools/notion](tools/notion.md) — Notion's External Agents API lets Claude Code, Cursor, Codex, Devin, Warp, Decagon act inside Notion workspaces as a shared agent-native document surface *(as_of: 2026-05-14)*
 - [tools/open-evidence](tools/open-evidence.md) — physician-oriented medical evidence and clinical-question tool *(as_of: 2026-04-22)*
@@ -211,7 +213,8 @@ Things being watched that haven't solidified yet.
 - [trends/agent-native-compute](trends/agent-native-compute.md) — cloud infrastructure purpose-built for agent workloads (sandboxes, RL/eval spikes) as a category distinct from frontier training-compute scale *(as_of: 2026-07-08)*
 - [trends/agents-reshape-organizations](trends/agents-reshape-organizations.md) — leverage moves from individual to org as autonomous agents, FDE teams, and deployment services take coordination work *(as_of: 2026-07-01)*
 - [trends/ai-governance-and-policy](trends/ai-governance-and-policy.md) — pressure for governments to actively steer AI development (disclosure mandates, pre-release review, equity-stake proposals) rather than leaving it to labs and market forces *(as_of: 2026-07-14)*
-- [trends/ai-in-science](trends/ai-in-science.md) — biology, drug discovery, self-driving labs, virtual-cell models, and Claude Science-style workflow platforms for reproducible scientific work *(as_of: 2026-07-21)*
+- [trends/ai-in-science](trends/ai-in-science.md) — biology, drug discovery, self-driving labs, virtual-cell models, and Claude Science-style workflow platforms for reproducible scientific work *(as_of: 2026-08-06)*
+- [trends/ai-in-mathematics](trends/ai-in-mathematics.md) — pure-mathematics results from general-purpose reasoning models (OpenAI's Erdős disproof, Anthropic's Riemann Hypothesis bound), split out from AI in Science *(as_of: 2026-08-11)*
 - [trends/compute-infrastructure](trends/compute-infrastructure.md) — frontier compute scale plus inference-system efficiency as competitive moats *(as_of: 2026-07-08)*
 - [trends/open-weight-momentum-broadens](trends/open-weight-momentum-broadens.md) — open-weight competition is spreading beyond coding into multimodal, computer-use, long-context, and local-AI infrastructure *(as_of: 2026-07-21)*
 - [trends/proprietary-data-becomes-model-moat](trends/proprietary-data-becomes-model-moat.md) — proprietary operational data and domain evals may become moats, but vertical durability remains a strategic bet *(as_of: 2026-06-30)*

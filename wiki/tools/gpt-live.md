@@ -4,8 +4,8 @@ type: tool
 domains: [voice, agents]
 subcategory: voice-models
 tags: [openai, closed-source, agentic]
-as_of: 2026-07-22
-sources: [gpt-live-launch-2026-07, bfl-flux-3-2026-07-24]
+as_of: 2026-08-05
+sources: [gpt-live-launch-2026-07, bfl-flux-3-2026-07-24, chatgpt-voice-mode-vibe-check-2026-08-05]
 ---
 
 # GPT-Live
@@ -33,7 +33,7 @@ GPT-Live is OpenAI's full-duplex voice model family for natural human-AI interac
 
 ## Weaknesses / caveats
 
-- Launch source is OpenAI's own announcement; independent evals are not yet available.
+- A week-long independent trial (Every, August 2026) found real friction alongside genuine strengths: fluid for reading-aloud-and-asking workflows against a live codebase, but mobile voice mode can't reach context outside the current thread, "ordinary" cloud voice mode and Remote-connected voice mode behave inconsistently and confusingly, filtering speech meant for the model from ambient conversation was unreliable, lag makes it a poor real-time writing partner, and some responses felt shallower than the same question put to text chat on GPT-5.6 Sol.
 - API support is planned but not yet live at launch.
 - No voice with video or screen sharing in ChatGPT at launch, though OpenAI says those capabilities are planned.
 - Some languages may have non-native accent or fluency gaps.
@@ -44,6 +44,7 @@ OpenAI says GPT-Live adds audio-native safety tests, generated-audio synthetic e
 
 ## Recent changes
 
+- [2026-08-05] Independent week-long trial (Every) finds strong read-and-ask/codebase workflows but real gaps: cross-device/thread context, ambient-speech filtering, and latency.
 - [2026-07-22] Desktop app rollout: ChatGPT Voice can now control the computer and coordinate work across ChatGPT Work and Codex.
 - [2026-07-07] GPT-Live-1 and GPT-Live-1 mini launched in ChatGPT Voice globally; API access planned.
 
@@ -51,3 +52,4 @@ OpenAI says GPT-Live adds audio-native safety tests, generated-audio synthetic e
 
 - [Introducing GPT-Live](../sources/articles/gpt-live-launch-2026-07.md)
 - [AINews — Black Forest Labs FLUX 3](../sources/newsletters/bfl-flux-3-2026-07-24.md)
+- [Mini-Vibe Check: ChatGPT Voice Mode](../sources/newsletters/chatgpt-voice-mode-vibe-check-2026-08-05.md)

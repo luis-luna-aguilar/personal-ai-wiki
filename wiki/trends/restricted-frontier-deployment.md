@@ -3,8 +3,8 @@ title: Restricted frontier deployment
 type: trend
 domains: [models, agents]
 tags: [anthropic, openai]
-as_of: 2026-07-09
-sources: [restricted-frontier-deployment, anthropic-pentagon-boundaries-february, glasswing, fable-ban-june-2026, gpt-56-sol-restricted-preview-2026-06, ai-strategy-explicit-bets-2026-06, metr-gpt-5-6-sol-eval-2026-06, gpt-5-6-sol-preview-launch-2026-06, chatgpt-voice-gpt56-launch-2026-07]
+as_of: 2026-08-11
+sources: [restricted-frontier-deployment, anthropic-pentagon-boundaries-february, glasswing, fable-ban-june-2026, gpt-56-sol-restricted-preview-2026-06, ai-strategy-explicit-bets-2026-06, metr-gpt-5-6-sol-eval-2026-06, gpt-5-6-sol-preview-launch-2026-06, chatgpt-voice-gpt56-launch-2026-07, zawinskis-law-multiagents-2026-08-08, anthropic-riemann-hypothesis-2026-08-11]
 ---
 
 # Restricted frontier deployment
@@ -56,6 +56,12 @@ METR's fetched evaluation confirms the predeployment-assessment side of the patt
 
 **Resolution (July 2026, reported):** the GPT-5.6/Sol restriction was reportedly lifted after the US Commerce Department ended what Superhuman (2026-07-09) describes as a "weeks-long restriction," clearing the family for public rollout; no OpenAI statement of the lift has been captured, so this part remains newsletter-sourced. It is not the first resolution tracked on this page, though: Anthropic's Fable 5 export-control ban was itself resolved on 2026-07-02, a week before Sol's — Fable 5 returned online with added safety fallback routing to Opus 4.8 for some sensitive requests. Between the two, this page now has two examples of a restricted-preview or export-control episode resolving toward broader access rather than continued restriction, both within about five weeks of the original restriction. See [GPT-5.6 Sol](../models/gpt-5-6-sol.md) and [Claude Fable 5](../models/claude-fable-5.md).
 
+## Capability-threshold gating before release (August 2026)
+
+OpenAI's handling of its forthcoming Astra model is the clearest new example of this trend since the GPT-5.6 Sol restriction lifted in July. OpenAI said internal evaluations of Astra show "significant advancements in agentic coding and cybersecurity" strong enough that it cannot rule out the Critical capability level under its own Preparedness Framework — the framework's strictest tier. Rather than treating this as a launch detail, OpenAI is pausing internal activities that don't meet strengthened controls and tightening network/tool access and weight security ahead of any release, while still stating an intent to get the model "into the hands of defenders."
+
+That stated intent resolved on 2026-08-11 as **GPT-5.6-Cyber**, launched under an expanded Daybreak initiative and restricted to "approved defenders" with extra controls and monitoring for higher-risk cyber tasks. This is a distinct pattern from the GPT-5.6 Sol and Fable 5 episodes tracked above: rather than a broad model being restricted after launch by external pressure (a jailbreak report, a government export-control action), here a lab pre-announces a capability-threshold classification for an unreleased model and ships a narrower, defender-only variant instead of the full model. See [GPT-5.6 Sol](../models/gpt-5-6-sol.md).
+
 ## Open questions
 
 - Is Anthropic the first durable example of this pattern, or just an unusually public one?
@@ -63,6 +69,8 @@ METR's fetched evaluation confirms the predeployment-assessment side of the patt
 
 ## Recent changes
 
+- [2026-08-11] OpenAI launched GPT-5.6-Cyber under an expanded Daybreak initiative, restricted to approved defenders — the resolution of Astra's capability-threshold gating below.
+- [2026-08-08] OpenAI classified its forthcoming Astra model as unable to rule out Critical cyber capability under its Preparedness Framework, pausing internal activities pending strengthened controls ahead of any release — a new pre-release capability-threshold-gating example for this trend.
 - [2026-07-09] Superhuman reports the GPT-5.6/Sol restricted-preview access restriction lifted after the US Commerce Department ended it, clearing the family for public rollout (no OpenAI statement captured). OpenAI's June 26 primary announcement captured, confirming the preview terms.
 - [2026-07-02] Fable 5 returned online after its export-control suspension, with added safety fallback routing (some cyber/bio/chem requests route to Opus 4.8) — the resolution referenced above corrects the 2026-07-09 entry's "first resolution" framing, since this predates it.
 - [2026-06-30] Every strategy framing added: teams should model regulatory and access shocks as explicit AI strategy assumptions.
@@ -81,3 +89,5 @@ METR's fetched evaluation confirms the predeployment-assessment side of the patt
 - [METR predeployment evaluation of GPT-5.6 Sol](../sources/articles/metr-gpt-5-6-sol-eval-2026-06.md)
 - [OpenAI — Previewing GPT-5.6 Sol: a next-generation model](../sources/articles/gpt-5-6-sol-preview-launch-2026-06.md)
 - [Superhuman — ChatGPT Voice gets more human-like](../sources/newsletters/chatgpt-voice-gpt56-launch-2026-07.md)
+- [AINews — Zawinski's Law of MultiAgents](../sources/newsletters/zawinskis-law-multiagents-2026-08-08.md)
+- [AINews — Anthropic's Riemann Hypothesis bound improvement](../sources/newsletters/anthropic-riemann-hypothesis-2026-08-11.md)

@@ -2,6 +2,10 @@
 
 Older recent-change entries spilled from [Claude Code](../../tools/claude-code.md).
 
+## Archived from current page on 2026-09-07
+
+- [2026-05-18] Anthropic engineering best practices: context window as #1 constraint; verification-criteria pattern; explore-plan-code workflow (plan mode + Ctrl+G); Chrome extension for UI screenshot verification
+
 ## Archived from current page on 2026-09-06
 
 - [2026-05-13] Agent View added (research preview, v2.1.139+): `claude agents` supervises background sessions with peek/reply, attach/detach, `/bg`, `--bg`, and worktree isolation.

@@ -4,8 +4,8 @@ type: model
 domains: [models, creative]
 subcategory: frontier-model
 tags: [closed-source, agentic, meta]
-as_of: 2026-07-09
-sources: [muse-spark, open-creative-workflows-2026-06, meta-muse-image-video-2026-07, superhuman-chatgpt-work-muse-spark-2026-07, the-code-databricks-coding-benchmark-2026-07-10, ainews-gpt-56-rollout-not-much-happened-2026-07-11]
+as_of: 2026-08-11
+sources: [muse-spark, open-creative-workflows-2026-06, meta-muse-image-video-2026-07, superhuman-chatgpt-work-muse-spark-2026-07, the-code-databricks-coding-benchmark-2026-07-10, ainews-gpt-56-rollout-not-much-happened-2026-07-11, amd-acquires-taalas-2026-08-07, anthropic-riemann-hypothesis-2026-08-11]
 ---
 
 # Muse Spark
@@ -46,8 +46,18 @@ Meta shipped Muse Spark 1.1 on a new "Meta Model API" — the first Meta model w
 - Arena: #9 on Code Arena: Frontend, with reported strength in instruction-following and longer-query categories (per Artificial Analysis, via AINews)
 - Meta's own claims (unverified independently): competitive with GPT-5.5 and Opus 4.8 on agentic evals; strong on Harvey's Legal Bench, TaxEval, and MedScribe (per Superhuman/AINews relaying Meta)
 
+## Muse Spark 1.2 breaks into frontier benchmarks (as of 2026-08-07)
+
+Muse Spark 1.2 moved from off-the-board to frontier-tier quickly. On the Vals Index, it entered the top 5 at $0.69/test — reportedly 3x cheaper than Kimi and 10x+ cheaper than Fable, Opus, and GPT-5.6 Sol — and became the first model to score above 60% on Finance Agent v2, at $0.77/test versus the prior #1 (Claude Opus 5) at $5.12/test and roughly half the latency. Artificial Analysis's v4.1.1 grading-update patch also gave Muse Spark 1.2 one of the largest score increases of any model that round.
+
+Meta separately claimed gold-medal-level performance across five STEM Olympiads (APhO, IPhO — perfect theory scores — IMO, IChO, RMM), three submitted under live competition conditions and officially graded, using no external tools (no search, code execution, or calculator) and attributing part of the gain to multi-agent orchestration with parallel reasoning. The tool-free framing immediately fed into the ongoing "LLMs vs. harnesses vs. neurosymbolic" debate (François Chollet and others), since Meta's own explanation credits orchestration as much as raw model capability.
+
+A smaller, architecturally distinct sibling, **Muse Glimmer** (30B dense, multimodal, Apache 2.0, designed for always-on local agents) shipped 2026-08-11 — see [Muse Glimmer](muse-glimmer.md). Alexandr Wang confirmed Muse Spark 1.2's own weights are coming "soon," a reversal from Spark 1.1's closed, metered-API-only launch.
+
 ## Recent changes
 
+- [2026-08-11] Muse Glimmer ships as a smaller, open-weight (Apache 2.0) sibling model; Muse Spark 1.2's own weights promised "soon" — a reversal from Spark 1.1's closed API-only launch.
+- [2026-08-07] Muse Spark 1.2 breaks into frontier-tier benchmarks: Vals Index top 5 at $0.69/test, first model above 60% on Finance Agent v2, five STEM Olympiad gold-medal-level results under no-tool conditions.
 - [2026-07-09] Muse Spark 1.1 launches on the new Meta Model API — Meta's first paid, metered model; AA Intelligence Index 51 (+8 vs 1.0); Arena #9 Code Arena: Frontend.
 - [2026-07-08] Muse Image launches in Meta AI, Instagram Stories, and WhatsApp; Muse Video previewed; AINews describes an agentic planning/tool-use/self-refinement generation loop.
 - [2026-06-24] Superhuman reports Meta Glasses launched with Muse Spark built in; secondary coverage only.
@@ -61,3 +71,5 @@ Meta shipped Muse Spark 1.1 on a new "Meta Model API" — the first Meta model w
 - [Superhuman — ChatGPT gets a work-focused agent (Muse Spark 1.1)](../sources/newsletters/superhuman-chatgpt-work-muse-spark-2026-07.md)
 - [The Code — Databricks' real-PR coding-agent cost benchmark (Muse Spark 1.1 detail)](../sources/newsletters/the-code-databricks-coding-benchmark-2026-07-10.md)
 - [AINews — GPT-5.6 rollout, not much happened today (Muse Spark 1.1 benchmarks)](../sources/newsletters/ainews-gpt-56-rollout-not-much-happened-2026-07-11.md)
+- [AMD acquires Taalas](../sources/newsletters/amd-acquires-taalas-2026-08-07.md)
+- [AINews — Anthropic's Riemann Hypothesis bound improvement](../sources/newsletters/anthropic-riemann-hypothesis-2026-08-11.md)

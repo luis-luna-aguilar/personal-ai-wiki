@@ -3,15 +3,15 @@ title: AI in Science
 type: trend
 domains: [science]
 tags: []
-as_of: 2026-07-21
-sources: [noetik-cancer-trials, gpt-rosalind-launch, self-driving-lab-radical-ai, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07, esmfold2-protein-world-model-2026-05, openai-erdos-unit-distance-2026-05, lila-sciences-automated-wet-lab-2026-07-16, xaira-x-cell-causal-virtual-cell-2026-07-21]
+as_of: 2026-08-06
+sources: [noetik-cancer-trials, gpt-rosalind-launch, self-driving-lab-radical-ai, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07, esmfold2-protein-world-model-2026-05, openai-erdos-unit-distance-2026-05, lila-sciences-automated-wet-lab-2026-07-16, xaira-x-cell-causal-virtual-cell-2026-07-21, anthropic-riemann-hypothesis-2026-08-11, gdm-reshuffle-discovery-loop-2026-08-06]
 ---
 
 # AI in Science
 
 AI is increasingly moving from generic scientific assistance toward domain-specific scientific reasoning systems. The strongest current signal in this wiki is biology and drug discovery: models are being positioned not just as literature copilots, but as systems that infer treatment response, model tumor environments, or support translational medicine workflows.
 
-## Current status (as of 2026-07-06)
+## Current status (as of 2026-08-06)
 
 - Noetik is presented as using large multimodal tumor datasets and transformer models to predict treatment response and improve cancer-trial selection
 - The company reportedly signed a $50M GSK deal tied to this stack
@@ -21,7 +21,8 @@ AI is increasingly moving from generic scientific assistance toward domain-speci
 - Anthropic's Claude Science signal reinforces a platform-first strategy in science AI: build tools for analysis, visualization, traceability, reviewer-agent verification, scientific databases, and lab/HPC compute, then dogfood them on real preclinical and partner research workflows.
 - The hard part is not only hypothesis generation. Biological feedback is slow and expensive, so evaluation and verification workflows become the bottleneck the platform must solve.
 - ESMFold2 adds a protein-world-model signal: general transformer scaling and diverse protein data are being applied to structure prediction, protein interactions, antibody tasks, and design/discovery workflows.
-- The domain-specific-reasoning pattern is not limited to biology: an OpenAI general-purpose reasoning model (not a math-specialized or scaffolded system) disproved the 1946 Erdős planar unit-distance conjecture, verified by external mathematicians. OpenAI discloses no model name, runtime, or cost; the "<32 hours / <$1,000 / GPT-5.6" figures in secondary coverage are speculation — see [State of Science](../state-of/science.md).
+- The domain-specific-reasoning pattern is not limited to biology: pure-mathematics results (OpenAI's Erdős disproof, Anthropic's Riemann Hypothesis bound) now form their own cluster — see [AI in Mathematics](ai-in-mathematics.md).
+- A wave of senior technical leadership left a model lab for AI-driven science ventures: Jeff Dean, Sanjay Ghemawat, Oriol Vinyals, and Quoc Le departed Google DeepMind to found Discovery Loop, a Public Benefit Corporation aimed at automating machine learning, science, and engineering research ("autoresearch"), backed by Radical Ventures, Khosla Ventures, Lightspeed, Kleiner Perkins, Doerr Capital — and Google itself. The move accompanied a DeepMind leadership reshuffle: after 16 years as CEO, Demis Hassabis became Chair of GDM and Chief Scientist of Alphabet, stepping back from day-to-day operations toward long-term strategy, AGI, and Isomorphic Labs, while CTO Koray Kavukcuoglu took over as SVP running Gemini, frontier research, and product.
 
 ## Protein world models
 
@@ -62,6 +63,9 @@ Anthropic argues AI has advanced faster in coding than biology not because of in
 
 ## Recent changes
 
+- [2026-09-07] Pure-mathematics signals (OpenAI's Erdős disproof, Anthropic's Riemann Hypothesis bound) split out into a new dedicated page, [AI in Mathematics](ai-in-mathematics.md), at the user's request.
+- [2026-08-11] Anthropic reported an unreleased research Claude variant improved a Riemann Hypothesis-related bound (proportion of zeta zeros proven on the critical line: 41.6% → 67.2%), via ~31M output tokens of retries/exploration — a second pure-math signal alongside OpenAI's Erdős disproof; not yet independently verified.
+- [2026-08-06] Jeff Dean, Sanjay Ghemawat, Oriol Vinyals, and Quoc Le left Google DeepMind to found autoresearch startup Discovery Loop; accompanied by a DeepMind leadership reshuffle (Hassabis to Chair of GDM/Chief Scientist of Alphabet, Kavukcuoglu to SVP of DeepMind)
 - [2026-07-21] Added Xaira Therapeutics' X-Cell/X-Atlas as a causal counterpoint to correlational RNA-expression virtual-cell models
 - [2026-07-16] Added Lila Sciences as a second self-driving-lab signal: cross-domain automated wet lab, 10T+ validated scientific reasoning tokens, ~2,500x gas-sorption speedup
 - [2026-07-06] Claude Science public beta confirms a science-workflow platform layer: reproducible artifacts, persistent kernels, 60+ scientific databases, scientific connectors, and local/HPC compute integration.
@@ -69,9 +73,6 @@ Anthropic argues AI has advanced faster in coding than biology not because of in
 - [2026-07-01] Official Claude Science announcement adds reviewer agents, BioNeMo/Boltz/OpenFold-style integrations, and Manifold Bio / Allen Institute / UCSF case studies.
 - [2026-06-17] Added self-driving labs section: Radical AI achieving ~10× DARPA/GE MACH pace in alloys; infrastructure-as-bottleneck framing from Anthropic science blog
 - [2026-05-27] Added ESMFold2 as a protein-world-model signal: open protein prediction/design engine, antibody interaction strength, and atlas-scale structure predictions.
-- [2026-05-20] Added OpenAI's Erdős unit-distance disproof as evidence the "specialized scientific reasoning" pattern extends beyond biology into pure mathematics; anchored to OpenAI's own announcement (no model name, runtime, or cost disclosed)
-- [2026-04-21] Added biology and drug-discovery productization signals: Noetik and GPT-Rosalind
-- [2026-04-10] Page seeded from Superhuman AI newsletter overview of AI-driven scientific breakthroughs
 
 ## Sources
 
@@ -85,3 +86,5 @@ Anthropic argues AI has advanced faster in coding than biology not because of in
 - [OpenAI model disproves the Erdős planar unit-distance conjecture](../sources/articles/openai-erdos-unit-distance-2026-05.md)
 - [Latent Space — The Lab of the Future Should Feel Like a Data Center (Lila Sciences)](../sources/newsletters/lila-sciences-automated-wet-lab-2026-07-16.md)
 - [Latent Space — Causal Models Need Causal Data (Xaira X-Cell)](../sources/newsletters/xaira-x-cell-causal-virtual-cell-2026-07-21.md)
+- [AINews — Anthropic's Riemann Hypothesis bound improvement](../sources/newsletters/anthropic-riemann-hypothesis-2026-08-11.md)
+- [AINews — Jeff, Sanjay, Oriol, and Quoc depart DeepMind; Discovery Loop founded](../sources/newsletters/gdm-reshuffle-discovery-loop-2026-08-06.md)

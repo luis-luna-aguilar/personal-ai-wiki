@@ -3,8 +3,8 @@ title: AI delegation management
 type: training
 domains: [agents, training]
 tags: [agentic]
-as_of: 2026-08-04
-sources: [management-as-ai-superpower-2026-07, andy-matuschak-agent-loop-tempo-2026-07, design-layer-framework-2026-08-04]
+as_of: 2026-08-10
+sources: [management-as-ai-superpower-2026-07, andy-matuschak-agent-loop-tempo-2026-07, design-layer-framework-2026-08-04, vibe-coded-security-risk-2026-08-10]
 ---
 
 # AI delegation management
@@ -35,9 +35,11 @@ Working with agents is increasingly a management skill: define the job, explain 
 - Creating partial-control loops where the human is responsible for planning and review but cannot keep enough context in working memory.
 - Treating speed as success when review and correction consume the saved time.
 - **Constraint drift.** AI output quality drifts as models, inputs, and context change; a setup that works well on day one can quietly degrade by month three with no obvious trigger unless someone deliberately re-checks output against the original spec on a schedule.
+- **Happy-path-only testing plus the illusion of explanatory depth.** A non-expert who tests only the intended-use path, then reads an agent's fluent, followable reasoning and mistakes "I can follow this" for "the right questions were asked," ships work whose adversarial cases were never checked. Case in point: a writer built and shipped an MCP connector for a small app with Claude's help, tested that it worked, and only learned it had a public, unauthenticated registration route when a second model reviewed the same code cold weeks later. Mitigation: learn the field's basics before delegating consequential work, get a human expert review, and don't let the same system's self-assessment be the only evidence a feature is safe.
 
 ## Recent changes
 
+- [2026-08-10] Added a failure-mode case study on happy-path-only testing plus the illusion of explanatory depth (a vibe-coded MCP connector security hole).
 - [2026-08-04] Added spec-first "design layer" framework: a worked spec example, targeted review questions, converting recurring corrections into reusable instructions, tool selection by problem-fit, and constraint drift as a failure mode.
 
 ## See also
@@ -50,3 +52,4 @@ Working with agents is increasingly a management skill: define the job, explain 
 - [Management as AI superpower](../sources/articles/management-as-ai-superpower-2026-07.md)
 - [Andy Matuschak on agent loop tempo](../sources/tweets/andy-matuschak-agent-loop-tempo-2026-07.md)
 - [To Stay Ahead on AI, Think Like a Designer](../sources/newsletters/design-layer-framework-2026-08-04.md)
+- [I Vibe Coded a Security Risk](../sources/newsletters/vibe-coded-security-risk-2026-08-10.md)

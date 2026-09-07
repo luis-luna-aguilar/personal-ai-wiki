@@ -2,6 +2,9 @@
 
 ## Archived from current page on 2026-09-07
 
+- [2026-07-14] Devin Security Swarm detailed as Agentic MapReduce (deterministic-selector Plan/Shard, parallel Map, reasoning Reduce, sandboxed Verify); Cognition reported 72% recall on a CVE-pinned benchmark vs. rival scanners, still vendor-run.
+- [2026-07-10] GPT-5.6 Sol's offensive-capability line gains the UK AI Safety Institute's finding of universal jailbreaks in every testing round, enabling exploit development.
+- [2026-07-09] Added Claude Fable 5 and GPT-5.6 Sol to the offensive frontier-model section; both carry the `cybersecurity` domain and neither had been listed. Softened the GPT-5.5 line to a point-in-time claim now that GPT-5.6 Sol has shipped.
 - [2026-07-02] Cognition launched Devin Security Swarm, pushing AI-assisted vulnerability detection toward parallel agent workflows that validate exploitability and generate fix PRs.
 - [2026-06-22] Gray Swan interview adds AI-native security framing: agents should be treated as untrusted systems; indirect prompt injection, identity, permissions, guardrails, and automated red teaming are core deployment concerns.
 - [2026-05-23] Anthropic reported Project Glasswing and partners found 10,000+ high/critical-severity vulnerabilities in essential software within a month of launch; added as a program-wide figure to the Claude Mythos Preview entry (industry-adaptation framing attributed to AINews' recap).
