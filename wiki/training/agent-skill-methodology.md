@@ -3,8 +3,8 @@ title: Agent skill methodology
 type: training
 domains: [agents]
 tags: [perplexity, agentic]
-as_of: 2026-07-15
-sources: [perplexity-agent-skill-methodology-2026-05-12, agent-html-artifacts-2026-05-13, agent-skills-context-evals-2026-05-13, skill-engineering-impeccable-2026-07-02, vercel-agents-new-software-2026-07-03, autoresearch-agent-recipes-2026-07, powerpoint-agent-skill-failure-mode-2026-06, gpt-56-raising-concerns-2026-07-15]
+as_of: 2026-07-16
+sources: [perplexity-agent-skill-methodology-2026-05-12, agent-html-artifacts-2026-05-13, agent-skills-context-evals-2026-05-13, skill-engineering-impeccable-2026-07-02, vercel-agents-new-software-2026-07-03, autoresearch-agent-recipes-2026-07, powerpoint-agent-skill-failure-mode-2026-06, gpt-56-raising-concerns-2026-07-15, case-against-skills-2026-07-16, swe-skills-bench-2026-07]
 ---
 
 # Agent skill methodology
@@ -52,6 +52,12 @@ Keep the trigger and core principle small; link deeper references, examples, sch
 **7. Regression-test skills after model changes**
 When a team switches default models, run the skill's positive and negative cases again. A skill that helped one model may be redundant, harmful, or under-specified for the next.
 
+**8. Run a keep/retest/retire audit**
+When reviewing an existing skill library, sort every skill into one of three buckets:
+- **Keep** — skills that supply private context, custom tool access, personal taste, or a specific company workflow the model has no way to know on its own.
+- **Retest** — skills that exist to compensate for a general model weakness or quirk; these have a shelf life as models improve, and may already be doing nothing or actively hurting on the current model.
+- **Retire** — skills that don't demonstrably improve results when tested with and without them (a favorite AI agent can run the comparison directly).
+
 ## Failure modes
 
 - **Procedure rot:** detailed steps become wrong as policies, tools, or model behavior changes; principles last longer.
@@ -79,8 +85,11 @@ The methodology above was practitioner-sourced until SkillsBench and a companion
 
 The SkillsBench harness is open-source, so a team can run these same comparisons on its own skills rather than trusting the published numbers alone.
 
+- **A second, independent benchmark points the same direction — with a caution.** SWE-Skills-Bench (arXiv 2603.15401, March 2026) is a distinct study from SkillsBench above, despite the similar name. It pairs 49 public software-engineering skills with real GitHub repos and requirement documents carrying explicit, execution-tested acceptance criteria — about 565 task instances across six SE subdomains. Result: 39 of 49 skills produced zero measurable pass-rate improvement, and the average gain across all 49 was only +1.2%. Token overhead ran as high as +451% independent of any accuracy gain. Only 7 skills helped (up to +30%) — all supplying specialized knowledge the model couldn't otherwise have. Three actively hurt performance (up to -10%), specifically because their guidance was mismatched to the project's actual code version — a concrete, named failure mode for the "procedure rot" entry above.
+
 ## Recent changes
 
+- [2026-07-16] Added SWE-Skills-Bench (distinct from SkillsBench): 49 skills tested against real repos, 39 with zero effect, average +1.2% gain, 7 real winners (up to +30%), 3 regressions (up to -10%) from version-mismatched guidance. Added a keep/retest/retire skill-audit pattern.
 - [2026-07-15] Added SkillsBench findings: self-written skills score worse than no skills; short skills beat exhaustive documentation; loading every available skill underperforms a few relevant ones; skill regressions are invisible without a head-to-head comparison ("polish hides the damage").
 - [2026-07-03] Vercel eve interview and Impeccable coverage reinforced skills as a current-knowledge and domain-judgment layer across agent harnesses.
 - [2026-07-01] Added agent recipes as portable bundles of instructions, evals, failure history, and signal-processing logic.
@@ -107,3 +116,5 @@ The SkillsBench harness is open-source, so a team can run these same comparisons
 - [Autoresearch and agent recipes](../sources/newsletters/autoresearch-agent-recipes-2026-07.md)
 - [PowerPoint remains hard for agents](../sources/newsletters/powerpoint-agent-skill-failure-mode-2026-06.md)
 - [The Code — GPT-5.6 is raising concerns (SkillsBench)](../sources/newsletters/gpt-56-raising-concerns-2026-07-15.md)
+- [The Case Against Skills](../sources/newsletters/case-against-skills-2026-07-16.md)
+- [SWE-Skills-Bench: Do Agent Skills Actually Help in Real-World Software Engineering?](../sources/papers/swe-skills-bench-2026-07.md)

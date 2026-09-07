@@ -10,6 +10,10 @@ Older recent-change entries spilled from [Claude Code](../../tools/claude-code.m
 
 - [2026-05-13] Opus 4.7 fast mode added (research preview): 2.5× faster, ~6× cost per Cursor benchmarks; new latency/price tier
 
+## Archived from current page on 2026-09-06
+
+- [2026-05-13] /goal command added (research preview): autonomous loop until evaluator model confirms target met — first native long-horizon success-criterion primitive in Claude Code
+
 ## Recent changes
 
 - [2026-04-22] Added /recap (session gap summaries after inactivity) and /fewer-permission-prompts skill (history-based allowlist generator)

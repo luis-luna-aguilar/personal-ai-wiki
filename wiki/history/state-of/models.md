@@ -2,6 +2,8 @@
 
 ## Archived from current page on 2026-09-06
 
+- [2026-06-18] Outputmaxxing coverage adds compute-utilization nuance: frontier lab advantage depends on scheduling, MFU, power, and systems coordination, not only announced GPU capacity.
+- [2026-06-17] OpenAI FY2025 leaked: $38.5B net loss, $13B revenue, below-50% ChatGPT market share; IPO S-1 filed; SemiAnalysis: $200/mo Claude Max costs Anthropic up to $8,000/mo compute; Scale 6% Report: only 6% of orgs at AI-at-scale stage
 - [2026-06-17] Claude Fable 5 and Mythos 5 suspended globally under US government export controls; Fable 5 had topped DeepSWE, FrontierSWE, FrontierMath, and Epoch Capabilities Index (161) before suspension; Claude Opus 4.8 remains the accessible Anthropic frontier model
 
 ## Archived from current page on 2026-09-05

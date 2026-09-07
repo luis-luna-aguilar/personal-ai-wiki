@@ -3,8 +3,8 @@ title: Open-weight momentum broadens
 type: trend
 domains: [models, computer-use]
 tags: [open-weights, google]
-as_of: 2026-07-02
-sources: [open-weight-momentum-early-april, deepseek-v4-preview, ainews-2026-04-25, china-open-agent-models-2026-04-28, local-offline-agents-2026-04-29, nvidia-nemotron-3-nano-omni-2026-04-29, open-weight-economics-fragmenting-2026-04-30, open-weight-pricing-pressure-2026-04-29, fable-ban-june-2026, ainews-glm-52-june-2026, ainews-open-models-june-2026, ainews-cosmos-nemotron-june-2026, local-ai-infrastructure-2026-06, open-weight-adoption-access-risk-2026-05, cohere-command-a-plus-launch, ainews-erdos-benchmarks-cluster-2026-05-21, ainews-all-model-labs-are-now-agent-labs]
+as_of: 2026-07-21
+sources: [open-weight-momentum-early-april, deepseek-v4-preview, ainews-2026-04-25, china-open-agent-models-2026-04-28, local-offline-agents-2026-04-29, nvidia-nemotron-3-nano-omni-2026-04-29, open-weight-economics-fragmenting-2026-04-30, open-weight-pricing-pressure-2026-04-29, fable-ban-june-2026, ainews-glm-52-june-2026, ainews-open-models-june-2026, ainews-cosmos-nemotron-june-2026, local-ai-infrastructure-2026-06, open-weight-adoption-access-risk-2026-05, cohere-command-a-plus-launch, ainews-erdos-benchmarks-cluster-2026-05-21, ainews-all-model-labs-are-now-agent-labs, alibaba-qwen38-preview-2026-07-20, moonshot-kimi-k3-launch-2026-07-17, ainews-china-policy-openweight-2026-07-21, ainews-kimi-k3-2026-07-17, ainews-thinkys-inkling-2026-07-16]
 ---
 
 # Open-weight momentum broadens
@@ -24,6 +24,9 @@ The trend: open-weight momentum has broadened well past its original coding-mode
 - **Operational adoption is rising:** AINews reports that one in three AI teams ran open-weight models in April 2026, up from one in five nine months earlier.
 - **Frontier lag is narrowing but real:** the same coverage cites Epoch's estimate that open weights lag frontier models by roughly four months on average.
 - **Access-risk mitigation is now part of the value proposition:** Superhuman's Claude Fable/Mythos suspension framing argues that teams should prepare for provider, policy, and access changes with handoff documents and open/local fallback options.
+- **Qwen3.8-Max-Preview (July 2026):** Alibaba put its next flagship into live preview on 2026-07-20, days after Kimi K3 — a third-party community roundup (via AINews) puts it at 2.4T parameters with native video understanding, still inconsistent on long-horizon tasks and language stability. Alibaba's own account says the model is "improving daily" and explicitly signals intent to open-weight the eventual official release, not just the preview.
+- **Kimi K3 (Moonshot, July 2026):** the clearest open-weight capability jump in this trend so far — 2.8T params, Intelligence Index 57 (Opus 4.8/GPT-5.5 tier), and #1 on Arena's Frontend Code Arena, up from #18 as K2.6. Open weights promised 2026-07-27.
+- **Inkling (Thinking Machines Lab, July 2026):** the lab's first flagship release, and a US lab choosing to ship it as open weights (975B/41B MoE, Apache 2.0, Intelligence Index 41) rather than a closed frontier push — notable because most open-weight competition to date has come from Chinese labs, not US ones.
 
 ## Why it matters
 
@@ -44,6 +47,8 @@ The Fable ban was the event that moved model neutrality from an architectural pr
 
 Fable 5 itself returned online 2026-07-02, about two weeks after the ban — a reminder that the sovereignty argument is about not being architecturally dependent on any one model, not a claim that any given restriction is permanent.
 
+By July 2026 the sovereignty pressure has started running in reverse. Rather than only labs and teams protecting themselves against losing access to a closed frontier model, AINews reports the Trump administration is weighing measures that could amount to a de facto ban on frontier Chinese open models such as Kimi — procurement restrictions, Entity List designations, hosting-liability rules, and public pressure campaigns, short of a clean statutory ban. Technical voices including Hugging Face's Clément Delangue argued the restriction would hurt competition and defensive security more than it helps incumbents, citing Hugging Face's own disclosed use of self-hosted GLM-5.2 during a cyber incident — commercial frontier APIs' guardrails blocked the forensic analysis it needed, and sensitive attacker data had to stay on-prem. The same week, 29 countries with no US or Western European signatories founded the Shanghai-headquartered World AI Cooperation Organization, and Xi Jinping called for shared global AI development at Shanghai's World AI Conference, pledging 5,000 AI-training slots to developing nations.
+
 ## What to watch
 
 - Whether NVIDIA sustains Nemotron as a recurring open-weight release cadence or treats it as a one-off signal
@@ -52,17 +57,16 @@ Fable 5 itself returned online 2026-07-02, about two weeks after the ban — a r
 
 ## Recent changes
 
+- [2026-07-21] Sovereignty pressure reverses direction: US reported weighing restrictions on Chinese open-weight models (procurement, Entity List, hosting liability); Hugging Face's Clément Delangue and others push back citing HF's own self-hosted GLM-5.2 use during a cyber incident as evidence open models are security infrastructure
+- [2026-07-20] Qwen3.8-Max-Preview enters live preview, 2.4T parameters (third-party estimate), native video understanding; Alibaba signals the eventual official release will be open-weighted
+- [2026-07-17] Kimi K3 (Moonshot, 2.8T) announced: Intelligence Index 57, #1 Frontend Code Arena — the clearest open-weight capability jump in this trend so far.
+- [2026-07-16] Thinking Machines Lab released Inkling (975B/41B MoE, Apache 2.0, Intelligence Index 41) — its first flagship model, and a rare US-origin open-weight flagship choice.
 - [2026-07-02] Fable 5 returned online after its export-control suspension; the sovereignty argument above stands independent of whether any specific restriction turns out to be temporary.
 - [2026-06-30] Local AI framing added: open-weight deployment is becoming a stack of models, search, documents, agents, harnesses, and hybrid routing rather than just running a checkpoint locally.
 - [2026-06-17] Fable 5 export-control ban accelerated model sovereignty framing: @hwchase17 argues model neutrality matters more than cloud neutrality; GLM-5.2 (MIT) adopted as the concrete alternative for teams losing closed frontier access
 - [2026-06-11] Sarah Guo Agent Labs vs Model Labs framing: moat is "untrainable" integration work, not model capability; open-weight lag ~4 months; "intent is scarcer than compute"
 - [2026-06-02] Nemotron 3 Ultra (NVIDIA): 550B/55B hybrid Mamba/attention MoE; OpenMDW 1.1; 47.7 Intelligence Index; first significant NVIDIA open-weight model competing in the agentic frontier-model conversation
 - [2026-05-30] AINews reports open-weight usage at one in three AI teams in April 2026, up from one in five nine months earlier; access-risk framing strengthened by Claude Fable/Mythos suspension coverage.
-- [2026-05-23] China price/capability gap narrows further: DeepSeek's V4-Pro 75% discount made permanent (Artificial Analysis via AINews: ~19x cheaper than Opus 4.7 to run its Intelligence Index — May 2026 snapshot, pricing since restructured); Qwen3.7-Max reviewed favorably on instruction-following/stability (single third-party review via AINews); unverified single-tweet ALE-Bench claim has several Chinese open models beating Western releases. Cohere Command A+ also extends fully-open (Apache 2.0) releases to a previously-closed lab.
-- [2026-05-05] Open-weight economics are fragmenting by deployment constraint: no single model dominates across transparency, token efficiency, edge deployment, coding benchmarks, and inference cost; Granite, Ant OSS Ling, and Hunyuan illustrate the divergence (secondary coverage; verify specifics)
-- [2026-05-05] Open-weight competition is pressuring closed-frontier pricing for coding assistants and RAG workloads, while long-context and complex agentic tasks remain clearest closed-frontier advantages (editorial synthesis, The Code)
-- [2026-05-05] NVIDIA Nemotron 3 Nano Omni described as an open multimodal model for agent perception across text/image/video/audio/documents; caveated — specs and benchmarks pending NVIDIA primary documentation
-
 ## Sources
 
 - [AINews — Open Models, Model Labs vs Agent Labs (June 11)](../sources/newsletters/ainews-open-models-june-2026.md)
@@ -79,3 +83,5 @@ Fable 5 itself returned online 2026-07-02, about two weeks after the ban — a r
 - [Introducing Command A+](../sources/articles/cohere-command-a-plus-launch.md)
 - [AINews — Erdős result and agent-benchmark cluster (Command A+ recap)](../sources/newsletters/ainews-erdos-benchmarks-cluster-2026-05-21.md)
 - [AINews — All model labs are now agent labs](../sources/newsletters/ainews-all-model-labs-are-now-agent-labs.md)
+- [AINews — Kimi K3 (2.8T, largest open model)](../sources/newsletters/ainews-kimi-k3-2026-07-17.md)
+- [AINews — Thinking Machines' Inkling (975B/41B, multimodal)](../sources/newsletters/ainews-thinkys-inkling-2026-07-16.md)

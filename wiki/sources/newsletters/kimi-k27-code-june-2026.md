@@ -14,7 +14,7 @@ AINews coverage of the Kimi K2.7-Code open-source release. Covered in the same i
 
 ## Influenced pages
 
-- [Kimi K2.7-Code](../../models/kimi-k2-7-code.md) — new model page
+- [Kimi K2.7-Code](../../history/models/kimi-k2-7-code.md) — new model page (superseded July 2026, archived to history)
 - [State of Models](../../state-of/models.md) — coding models section updated
 
 ## Key claims extracted

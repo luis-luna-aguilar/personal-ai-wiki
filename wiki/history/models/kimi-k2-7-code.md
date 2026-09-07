@@ -33,7 +33,8 @@ Moonshot AI's June 2026 open-source coding model. Successor to Kimi K2.6. 1T tot
 ## Recent changes
 
 - [2026-06-13] Released as open-source; supersedes Kimi K2.6
+- [2026-07-17] Superseded by Kimi K3 as Moonshot's current flagship; archived to history
 
 ## Sources
 
-- [Kimi K2.7-Code release — AINews June 2026](../sources/newsletters/kimi-k27-code-june-2026.md)
+- [Kimi K2.7-Code release — AINews June 2026](../../sources/newsletters/kimi-k27-code-june-2026.md)

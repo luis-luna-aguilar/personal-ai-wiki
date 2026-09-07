@@ -46,7 +46,8 @@ Foundation models. One page per model family or generation.
 - [models/gpt-image-2](models/gpt-image-2.md) — OpenAI image generation model; #1 across image-arena categories by a wide Elo margin *(as_of: 2026-04-22)*
 - [models/cosmos-3](models/cosmos-3.md) — NVIDIA; Mixture-of-Transformers (autoregressive reasoner + diffusion generator); Nano 16B / Super 64B; #1 open-weight Text-to-Image and Image-to-Video *(as_of: 2026-06-02)*
 - [models/diffusiongemma](models/diffusiongemma.md) — Google experimental 26B MoE; block denoising text generation (non-autoregressive); first diffusion LLM natively in vLLM; Apache 2.0; research artifact *(as_of: 2026-06-11)*
-- [models/kimi-k2-7-code](models/kimi-k2-7-code.md) — Moonshot AI open-source 1T/32B MoE; +21.8% Kimi Code Bench v2; 30% fewer reasoning tokens vs K2.6 *(as_of: 2026-06-13)*
+- [models/kimi-k3](models/kimi-k3.md) — Moonshot AI's 2.8T flagship; Intelligence Index 57; #1 Frontend Code Arena; supersedes Kimi K2.7-Code *(as_of: 2026-07-17)*
+- [models/inkling](models/inkling.md) — Thinking Machines Lab's first flagship; 975B/41B MoE; natively multimodal; Apache 2.0; Intelligence Index 41, strongest US-origin open-weight release *(as_of: 2026-07-16)*
 - [models/mai-thinking-1](models/mai-thinking-1.md) — Microsoft's first frontier-class reasoning model; 35B active / 1T MoE; trained from scratch; 97% AIME 2025 and 53% SWE-Bench Pro *(as_of: 2026-06-03)*
 - [models/minimax-m3](models/minimax-m3.md) — MiniMax 1M-context model with strong agent benchmarks and contested open-weight claim because weights were not disclosed at launch *(as_of: 2026-06-02)*
 - [models/nano-banana-2](models/nano-banana-2.md) — Google image generation model; Gemini world understanding + real-time web search grounding *(as_of: 2026-04-22)*
@@ -57,6 +58,7 @@ Foundation models. One page per model family or generation.
 - [models/qwen-3-6-27b](models/qwen-3-6-27b.md) — Alibaba dense 27B open-weight; beats prior 397B MoE on all coding benchmarks; runs under 20 GB RAM *(as_of: 2026-05-01)*
 - [models/qwen-3-6-35b-a3b](models/qwen-3-6-35b-a3b.md) — Alibaba open-weight MoE coding/agent model; community benchmarks now place it strongest in the ~20GB local tier for long-context paper-to-code tasks *(as_of: 2026-05-13)*
 - [models/qwen-3-7](models/qwen-3-7.md) — Alibaba Qwen 3.7 preview; #13 Arena text overall, #7 Math; first Alibaba model in top-15 overall *(as_of: 2026-05-23)*
+- [models/qwen-3-8](models/qwen-3-8.md) — Qwen3.8-Max-Preview; reported 2.4T parameters, native video understanding, open-weight commitment for the official release *(as_of: 2026-07-21)*
 
 ## Tools
 
@@ -206,9 +208,9 @@ Things being watched that haven't solidified yet.
 - [trends/agent-native-compute](trends/agent-native-compute.md) — cloud infrastructure purpose-built for agent workloads (sandboxes, RL/eval spikes) as a category distinct from frontier training-compute scale *(as_of: 2026-07-08)*
 - [trends/agents-reshape-organizations](trends/agents-reshape-organizations.md) — leverage moves from individual to org as autonomous agents, FDE teams, and deployment services take coordination work *(as_of: 2026-07-01)*
 - [trends/ai-governance-and-policy](trends/ai-governance-and-policy.md) — pressure for governments to actively steer AI development (disclosure mandates, pre-release review, equity-stake proposals) rather than leaving it to labs and market forces *(as_of: 2026-07-14)*
-- [trends/ai-in-science](trends/ai-in-science.md) — biology, drug discovery, self-driving labs, and Claude Science-style workflow platforms for reproducible scientific work *(as_of: 2026-07-06)*
+- [trends/ai-in-science](trends/ai-in-science.md) — biology, drug discovery, self-driving labs, virtual-cell models, and Claude Science-style workflow platforms for reproducible scientific work *(as_of: 2026-07-21)*
 - [trends/compute-infrastructure](trends/compute-infrastructure.md) — frontier compute scale plus inference-system efficiency as competitive moats *(as_of: 2026-07-08)*
-- [trends/open-weight-momentum-broadens](trends/open-weight-momentum-broadens.md) — open-weight competition is spreading beyond coding into multimodal, computer-use, long-context, and local-AI infrastructure *(as_of: 2026-07-02)*
+- [trends/open-weight-momentum-broadens](trends/open-weight-momentum-broadens.md) — open-weight competition is spreading beyond coding into multimodal, computer-use, long-context, and local-AI infrastructure *(as_of: 2026-07-21)*
 - [trends/proprietary-data-becomes-model-moat](trends/proprietary-data-becomes-model-moat.md) — proprietary operational data and domain evals may become moats, but vertical durability remains a strategic bet *(as_of: 2026-06-30)*
 - [trends/physical-ai-deployment](trends/physical-ai-deployment.md) — embodied AI and robotics follow a different deployment curve from screen agents because validation, safety, and hardware constraints dominate *(as_of: 2026-05-13)*
 - [trends/restricted-frontier-deployment](trends/restricted-frontier-deployment.md) — frontier labs and governments may withhold, selectively deploy, or restrict highest-capability systems through partner programs, policy, export controls, or restricted previews *(as_of: 2026-07-09)*
@@ -227,13 +229,13 @@ Practical guidance for teaching teams and businesses to use AI well.
 - [training/agentic-infrastructure-operations](training/agentic-infrastructure-operations.md) — safe operating patterns for infrastructure agents: read-only diagnosis, propose-only plans, approval-gated mutations, sandboxing, and post-deploy verification *(as_of: 2026-04-24)*
 - [training/agent-skill-methodology](training/agent-skill-methodology.md) — evals-first method for writing maintainable agent skills with natural triggers, principles, production lessons, pruning, and portable domain judgment *(as_of: 2026-07-15)*
 - [training/company-wide-ai-enablement](training/company-wide-ai-enablement.md) — operating patterns for broad AI adoption, explicit AI strategy bets, token allocation, model routing, agent governance, and staged autonomy *(as_of: 2026-07-08)*
-- [training/ai-enablement-software-development](training/ai-enablement-software-development.md) — engineering-specific AI adoption: critique loops, AI-native hiring, PR review workflows, software-factory rollout, CI/CD bottlenecks, and junior talent pipeline risk *(as_of: 2026-07-14)*
+- [training/ai-enablement-software-development](training/ai-enablement-software-development.md) — engineering-specific AI adoption: critique loops, AI-native hiring, PR review workflows, software-factory rollout, CI/CD bottlenecks, and junior talent pipeline risk *(as_of: 2026-07-16)*
 - [training/evals-for-agentic-software-development](training/evals-for-agentic-software-development.md) — eval stack for coding agents: deterministic gates, sandboxed execution, historical PR replay, benchmark integrity, QA artifact capture, browser self-verification, MVES, and trace mining *(as_of: 2026-07-08)*
 - [training/evals-for-agentic-work](training/evals-for-agentic-work.md) — eval patterns for workflow and task agents: pass^k reliability, task-specific metrics, simulated users *(as_of: 2026-04-23)*
 - [training/ai-coding-vocabulary](training/ai-coding-vocabulary.md) — shared language for agentic coding: model vs harness vs agent vs context vs session vs environment *(as_of: 2026-05-01)*
 - [training/ai-work-delegation-modes](training/ai-work-delegation-modes.md) — framework for choosing between autonomous delegation and human-steered collaboration when working with AI *(as_of: 2026-05-21)*
 - [training/ai-delegation-management](training/ai-delegation-management.md) — practical guidance for delegating work to agents using management fundamentals: scope, authority, loop tempo, review cost, and definition of done *(as_of: 2026-07-08)*
-- [training/cost-aware-ai-task-routing](training/cost-aware-ai-task-routing.md) — routing work among scripts, small models, frontier models, fine-tuned domain models, agents, and humans based on uncertainty, determinism, risk, token cost, and review cost *(as_of: 2026-07-08)*
+- [training/cost-aware-ai-task-routing](training/cost-aware-ai-task-routing.md) — routing work among scripts, small models, frontier models, fine-tuned domain models, agents, and humans based on uncertainty, determinism, risk, token cost, and review cost *(as_of: 2026-07-19)*
 
 ## Use Cases
 

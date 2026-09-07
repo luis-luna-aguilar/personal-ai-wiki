@@ -3,8 +3,8 @@ title: AI in Science
 type: trend
 domains: [science]
 tags: []
-as_of: 2026-07-06
-sources: [noetik-cancer-trials, gpt-rosalind-launch, self-driving-lab-radical-ai, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07, esmfold2-protein-world-model-2026-05, openai-erdos-unit-distance-2026-05]
+as_of: 2026-07-21
+sources: [noetik-cancer-trials, gpt-rosalind-launch, self-driving-lab-radical-ai, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07, esmfold2-protein-world-model-2026-05, openai-erdos-unit-distance-2026-05, lila-sciences-automated-wet-lab-2026-07-16, xaira-x-cell-causal-virtual-cell-2026-07-21]
 ---
 
 # AI in Science
@@ -29,6 +29,12 @@ ESMFold2 is a useful biology counterpoint to purely lab-automation stories. The 
 
 The practical importance is the same as other science-agent infrastructure: better models are only useful if they plug into data, verification, and downstream discovery loops. ESMFold2's atlas and open licensing make it a durable signal to watch, but the wiki should distinguish source-reported performance from broad clinical or wet-lab validation.
 
+## Virtual cell models
+
+Most RNA-expression models (the dominant "Virtual Cell" approach, built on datasets like the Chan Zuckerberg Institute's 168M-cell CELLxGENE) describe correlations between cell types and states, but can't reliably predict what happens if you change a gene's expression — because gene expression changes are highly correlated and rarely tell you what causes what.
+
+**Xaira's causal counterpoint (as of 2026-07-21):** Xaira Therapeutics' earlier RNA-expression model plateaued around 1.5B parameters — a sign the ceiling was the information in the training data, not model size or compute. Their fix, X-Atlas, is built from CRISPR experiments that perturb one gene at a time, producing data rich enough to establish actual causal (not merely correlational) gene-expression relationships. The resulting model, X-Cell, resumed scaling with added parameters and compute once trained on this richer data — Xaira reports it beats the linear baseline that had outperformed prior virtual-cell models.
+
 ## Self-driving labs
 
 The self-driving lab (SDL) is an architecture that closes the loop between AI hypothesis generation and physical experimentation — removing the human from the serial bottleneck of: hypothesize → lab → wait → analyze → repeat.
@@ -52,8 +58,12 @@ Anthropic argues AI has advanced faster in coding than biology not because of in
 - TorchSim — PyTorch-based molecular dynamics simulation framework (spun out to a non-profit)
 - MATRIX / MATRIX-PT — open benchmark for autonomous SDL evaluation + model trained on that benchmark; improving reasoning for materials also improved biological systems reasoning (unexpected transfer result)
 
+**A second automated lab (Lila Sciences, as of 2026-07-16):** Flagship Pioneering spinout Lila Sciences runs a fully automated, 24/7 robotic wet lab spanning biology, chemistry, drug discovery, and materials science simultaneously — the same lab, same AI, across domains Radical AI treats separately. Lila has generated over 10 trillion experimentally-validated scientific reasoning tokens so far, and rebuilt a gas-sorption measurement to run roughly 2,500x faster by treating lab instruments as nodes on a graph rather than serial steps. Lila's stated goal is a general scientific reasoner, not an automation tool: they report breadth (small-molecule chemistry priors transferring to materials science) outperforming domain-specific models sample-for-sample.
+
 ## Recent changes
 
+- [2026-07-21] Added Xaira Therapeutics' X-Cell/X-Atlas as a causal counterpoint to correlational RNA-expression virtual-cell models
+- [2026-07-16] Added Lila Sciences as a second self-driving-lab signal: cross-domain automated wet lab, 10T+ validated scientific reasoning tokens, ~2,500x gas-sorption speedup
 - [2026-07-06] Claude Science public beta confirms a science-workflow platform layer: reproducible artifacts, persistent kernels, 60+ scientific databases, scientific connectors, and local/HPC compute integration.
 - [2026-07-05] Claude Science and Anthropic's internal drug programs reframed science agents as dogfooded workflow platforms, not only model demos.
 - [2026-07-01] Official Claude Science announcement adds reviewer agents, BioNeMo/Boltz/OpenFold-style integrations, and Manifold Bio / Allen Institute / UCSF case studies.
@@ -73,3 +83,5 @@ Anthropic argues AI has advanced faster in coding than biology not because of in
 - [Every - A Tale of Two Models](../sources/newsletters/every-tale-of-two-models-2026-07-05.md)
 - [ESMFold2 - The bitter lesson is coming for protein](../sources/newsletters/esmfold2-protein-world-model-2026-05.md)
 - [OpenAI model disproves the Erdős planar unit-distance conjecture](../sources/articles/openai-erdos-unit-distance-2026-05.md)
+- [Latent Space — The Lab of the Future Should Feel Like a Data Center (Lila Sciences)](../sources/newsletters/lila-sciences-automated-wet-lab-2026-07-16.md)
+- [Latent Space — Causal Models Need Causal Data (Xaira X-Cell)](../sources/newsletters/xaira-x-cell-causal-virtual-cell-2026-07-21.md)

@@ -2,7 +2,10 @@
 
 ## Archived from current page on 2026-09-06
 
+- [2026-05-13] OpenAI announced Daybreak as a thin official cyber-defense signal combining frontier models, Codex, and security partners; implementation details remain pending.
+- [2026-05-13] Agentic security tooling is becoming a category signal: scanner, monitor, fix-validation, and deployment-risk workflows are being redesigned for software built and operated by agents.
 - [2026-05-13] Added `AI developer supply chain attacks`: Mini Shai-Hulud campaign (persistence via .claude/settings.json + .vscode/tasks.json hooks; Guardrails AI v0.10.1 confirmed compromised) and Hugging Face Transformers impersonator; mitigations: minimumReleaseAge, blockExoticSubdeps
+- [2026-05-19] Cloudflare Project Glasswing: detailed harness architecture (8 stages, ~50 concurrent agents, adversarial validate agent); Mythos exploit chain construction and proof loop confirmed; organic refusals inconsistent as safety boundary; architectural resilience over patch speed as the defender takeaway
 
 ## Archived from current page on 2026-09-05
 
