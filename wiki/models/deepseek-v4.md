@@ -4,8 +4,8 @@ type: model
 domains: [models, coding, agents]
 subcategory: coding-model
 tags: [open-weights, agentic]
-as_of: 2026-05-23
-sources: [deepseek-v4-preview, ainews-2026-04-25, ainews-all-model-labs-are-now-agent-labs]
+as_of: 2026-07-31
+sources: [deepseek-v4-preview, ainews-2026-04-25, ainews-all-model-labs-are-now-agent-labs, ainews-not-much-happened-2026-08-01]
 ---
 
 # DeepSeek V4
@@ -21,6 +21,16 @@ DeepSeek's April 2026 open-weight release for long-context agent workloads. The 
 - Huawei Ascend compatibility and rapid vLLM / third-party support make the release part of a broader inference-substrate story, not just a checkpoint drop
 - **Permanent price cut (as of 2026-05-23):** DeepSeek made its previously-temporary 75% V4-Pro discount permanent (via AINews). Artificial Analysis (via AINews) quantifies first-party pricing at $0.435/M input, $0.87/M output, $0.0036/M cached input — a blended ~$0.18/M — and estimates running AA's Intelligence Index on V4-Pro costs ~3x less than Gemini 3.1 Pro Preview, ~12x less than GPT-5.5, and ~19x less than Claude Opus 4.7. **Caveat:** DeepSeek's own pricing page (`api-docs.deepseek.com/quick_start/pricing`), as fetched 2026-08-25, lists `deepseek-v4-pro` with a peak/off-peak, cache-hit/cache-miss structure whose figures no longer match the May numbers — treat the figures above as a May 2026 snapshot, not current pricing; current pricing needs its own dated ingest.
 
+## V4-Flash 0731 update (as of 2026-07-31)
+
+DeepSeek shipped a post-training-only upgrade to V4-Flash — same 284B total / 13B active architecture, no scaling or architecture change:
+
+- **Benchmarks:** Terminal-Bench 56.9 → 82.7 (+25.8); Artificial Analysis Intelligence Index 40 → 50, one point behind GPT-5.6 Luna's 51 at roughly 60% lower cost per task on DeepSeek's own API; GDPval-AA v2 Elo 1189 → 1559; output-token usage down 12% versus the predecessor.
+- **Pricing:** $0.14 / $0.28 per 1M input/output tokens, with a 98% cache-hit discount down to $0.0028/1M cached tokens.
+- **Open weights:** released under MIT with immediate day-0 vLLM support — 256 routed experts, 6 active per token, three reasoning-effort levels, and an included DSpark speculative-decoding module enabled via a single flag. Local/quantized builds landed same-day (Unsloth: ~168GB RAM for lossless 4-bit, ~110GB for 3-bit).
+- **Scope:** this update applies to V4-Flash only. V4-Pro's API, app, and web product are unchanged; an official V4-Pro release remains pending.
+- Widely read as a direct competitive response to OpenAI's GPT-5.6 price cuts the day before.
+
 ## Strengths
 
 - Serious open-weight long-context release with unusually concrete attention to KV-cache and long-trace economics
@@ -35,6 +45,7 @@ DeepSeek's April 2026 open-weight release for long-context agent workloads. The 
 
 ## Recent changes
 
+- [2026-07-31] V4-Flash 0731: post-training-only update jumps Terminal-Bench to 82.7 (+25.8) and AA Intelligence Index to 50 (from 40), now 1pt behind GPT-5.6 Luna; open-weighted under MIT with day-0 vLLM support; V4-Pro unaffected, still pending its own release.
 - [2026-05-23] DeepSeek made the 75% V4-Pro discount permanent; Artificial Analysis pricing/cost-per-Intelligence-Index comparison (via AINews) added, caveated as a May 2026 snapshot since DeepSeek's pricing page (fetched 2026-08-25) has since moved to peak/off-peak, cache-hit/miss tiers.
 - [2026-04-25] AINews follow-up reframed DeepSeek V4 from preview to release: Pro/Flash specs, MIT license, API pricing, independent open-model placement, Huawei Ascend compatibility, and token-volume caveats
 - [2026-04-24] Preview released: DeepSeek moves its open-model story toward 1M-context agent workloads, hybrid attention for cheaper long traces, and stronger tool-use positioning
@@ -44,3 +55,4 @@ DeepSeek's April 2026 open-weight release for long-context agent workloads. The 
 - [DeepSeek V4 Preview](../sources/articles/deepseek-v4-preview.md)
 - [AINews - DeepSeek V4 Pro and Flash](../sources/newsletters/ainews-2026-04-25.md)
 - [AINews — All model labs are now agent labs (DeepSeek V4-Pro permanent discount)](../sources/newsletters/ainews-all-model-labs-are-now-agent-labs.md)
+- [AINews — not much happened today (DeepSeek V4-Flash 0731)](../sources/newsletters/ainews-not-much-happened-2026-08-01.md)

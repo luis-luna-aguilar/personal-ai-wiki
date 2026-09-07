@@ -1,8 +1,8 @@
 ---
 title: Company-wide AI enablement
 type: training
-as_of: 2026-07-08
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13, fde-race-may-2026, every-ai-adoption-levels, enterprise-spend-metered-june-2026, ai-strategy-explicit-bets-2026-06, codex-general-work-agents-2026-07, token-tightening-ai-finops-2026-06, efficiencymaxxing-model-routing-2026-07, every-cheap-competence-after-automation-2026-05]
+as_of: 2026-07-29
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, anthropic-81k-economics, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13, fde-race-may-2026, every-ai-adoption-levels, enterprise-spend-metered-june-2026, ai-strategy-explicit-bets-2026-06, codex-general-work-agents-2026-07, token-tightening-ai-finops-2026-06, efficiencymaxxing-model-routing-2026-07, every-cheap-competence-after-automation-2026-05, slack-agent-native-os-2026-07-29]
 ---
 
 # Company-wide AI enablement
@@ -69,6 +69,7 @@ Source: "AI Is Ready. Organizations Aren't." (Every, June 2026) — based on int
 - **Reward outcomes, not AI usage.** Teams stall or drift when "used AI" becomes the goal; quality and throughput improvements are the only metrics that matter
 - **Concrete example promotion.** A single visible example of someone using AI to rethink the work itself can unlock broader adoption better than generic encouragement to "use AI more"
 - **Messaging-native personal agents.** OpenClaw-style assistants living in WhatsApp, Telegram, Discord, SMS, or Slack reduce activation energy because the agent shows up where people already work and communicate
+- **Thread-per-task chat orchestration.** A concrete implementation pattern for messaging-native agents: map the chat app's own structure onto agent session lifecycle — each top-level channel message starts a new agent session, and each thread reply resumes that same session, so chat history stays attached to the task instead of scattering across tabs or getting buried in a long transcript. Per-channel model routing lets teams send routine work to a cheaper default model and reserve an expensive frontier model for a dedicated channel, with standing instructions (e.g. in CLAUDE.md) for that model to delegate execution to cheaper subagents. Two independent implementations converged on the same shape within the same week in July 2026: Every's open-sourced "Claude Home Base" starter kit (Slack + Claude Code) and Block's Buzz, a general-purpose shared workspace for humans and agents that one early tester called "a Slack clone with a different color."
 - **Terminal and workspace agents for non-engineering roles.** Claude Code and Codex are being used for roadmap drafting, PRD writing, ticket management, GitHub Projects tracking, strategy documentation, inbox cleanup, CRM enrichment, healthcare coordination, and personal knowledge workflows. The category label matters less than whether the work can be represented as durable files, tools, and reviewable artifacts.
 - **Make the strategic bets explicit.** AI strategy should name the assumptions it depends on: cheap token supply, model-provider lock-in, wrapper durability, vertical specialization, data moat, regulatory exposure, and switching cost. Teams should write the failure condition for each bet before turning it into roadmap or vendor strategy.
 - **Let AI write the agent instructions.** Every found that telling Notion AI what the agent should accomplish and letting it generate the instructions works better than writing detailed step-by-step instructions manually. Over-prescribing ("create a database, then add a relation, then filter by...") tends to confuse the model. State the outcome; let the agent figure out implementation.
@@ -160,6 +161,7 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - **Benefits flow to workers more than employers.** Most respondents who named a beneficiary cited themselves. Only 10% said employers were extracting more work. But this is uneven across career stage.
 - **Early-career workers are worse positioned.** 60% of early-career respondents personally benefited from AI vs 80% of senior professionals. Early-career workers also expressed significantly higher job displacement concern, consistent with tentative signs of slowdowns in hiring of recent graduates.
 - **Wage-productivity relationship is U-shaped.** Highest-paid workers (software developers, management) report the largest gains. But some lowest-wage workers also report large gains — often for side projects or new capabilities. Mid-tier scientific and legal professionals are the least enthusiastic.
+- Every's Nityesh Agarwal reports his entire personal development loop now runs inside Slack via "Luo Ji": task assignment, code review via posted screenshots, and revision requests all happen in-thread; only pull-request review happens outside Slack, on GitHub. (July 2026)
 
 ## Forward-deployed engineer (FDE) model
 
@@ -175,6 +177,7 @@ As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have
 
 ## Recent changes
 
+- [2026-07-29] Added thread-per-task chat orchestration pattern: chat channels/threads mapped directly onto agent session lifecycle; two independent implementations (Every's Claude Home Base, Block's Buzz) converged on the same shape in the same week.
 - [2026-05-27] Added cheap-competence / after-automation framing: AI expands the frontier of human work by shifting scarcity toward framing and judgment.
 - [2026-07-08] Added efficiencymaxxing: stage-level model routing, token audits, and one-variable reruns as a company-wide AI cost-control practice.
 - [2026-07-01] Codex/Claude Code coverage expands terminal/workspace agents beyond engineering into inbox, CRM, healthcare coordination, writing, and knowledge-work workflows.
@@ -219,3 +222,4 @@ As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have
 - [Token tightening and AI FinOps](../sources/newsletters/token-tightening-ai-finops-2026-06.md)
 - [Efficiencymaxxing and model-routing discipline](../sources/newsletters/efficiencymaxxing-model-routing-2026-07.md)
 - [Every - Cheap competence and after automation](../sources/newsletters/every-cheap-competence-after-automation-2026-05.md)
+- [What If Slack Was Your AI Command Center](../sources/newsletters/slack-agent-native-os-2026-07-29.md)

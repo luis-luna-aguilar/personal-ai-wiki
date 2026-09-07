@@ -3,8 +3,8 @@ title: Agent improvement loop
 type: concept
 domains: [agents]
 tags: [agentic]
-as_of: 2026-07-07
-sources: [trace-agent-improvement-loop, langchain-better-harness, cursor-bugbot-learning, self-improving-skills, agents-evals-deep-research, langchain-interrupt-may-2026, autoresearch-agent-recipes-2026-07, agent-memory-systems-layer-2026-06]
+as_of: 2026-07-29
+sources: [trace-agent-improvement-loop, langchain-better-harness, cursor-bugbot-learning, self-improving-skills, agents-evals-deep-research, langchain-interrupt-may-2026, autoresearch-agent-recipes-2026-07, agent-memory-systems-layer-2026-06, ainews-eating-finance-aie-nyc-2026-07-29]
 ---
 
 # Agent improvement loop
@@ -20,6 +20,7 @@ A workflow for improving AI agents by studying **execution traces** and feedback
 - LangChain's Better-Harness (open-sourced 2026-04-10) automates the loop: sources evals, splits optimization/holdout sets, iteratively diagnoses failures from traces, and proposes targeted harness changes with overfitting guards
 - Cursor's Bugbot provides a product example of the same pattern: reactions, replies, and reviewer comments become candidate rules that are promoted or disabled based on later production signal
 - Autoresearch treats the agent system itself as the research subject: agents inspect traces, failures, eval results, human feedback, and cost signals to propose improvements under governance controls
+- **Cross-product example (July 2026):** Cline reported that Kimi K3 (an external open-weight model, not Cline's own) spent 17 hours recursively improving Cline's own coding-agent harness — raising Terminal-Bench performance from 77.5% to 88.8% while cutting the run's cost from $79 to $49.8. A concrete instance of the autoresearch pattern applied by one product's agent to a different product's harness, not just self-improvement in isolation.
 
 ## The loop
 
@@ -124,6 +125,7 @@ This applies in both directions: do not let holdout cases leak into training dat
 
 ## Recent changes
 
+- [2026-07-29] Added a cross-product autoresearch example: Kimi K3 recursively improved Cline's own harness over 17 hours, Terminal-Bench 77.5%→88.8%, cost $79→$49.8
 - [2026-07-07] Added trace-to-memory feedback: offline trace analysis can write back maintained memories, but needs dedupe, scope, and conflict checks.
 - [2026-07-01] Added autoresearch as an outer-loop pattern: agents study and improve the primary agent system using traces, evals, human signals, and cost data.
 - [2026-05-15] LangSmith Engine added: actively clusters trace failures and proposes fixes/evals — observability as improvement loop, not passive logging. SmithDB: purpose-built agent-trace database, 12-15× faster, Apache DataFusion + Vortex
@@ -149,3 +151,4 @@ This applies in both directions: do not let holdout cases leak into training dat
 - [LangChain Interrupt conference — May 2026](../sources/newsletters/langchain-interrupt-may-2026.md)
 - [Autoresearch and agent recipes](../sources/newsletters/autoresearch-agent-recipes-2026-07.md)
 - [Agent memory becomes a systems layer](../sources/newsletters/agent-memory-systems-layer-2026-06.md)
+- [AINews — AI is eating Finance; AIE NYC now open](../sources/newsletters/ainews-eating-finance-aie-nyc-2026-07-29.md)

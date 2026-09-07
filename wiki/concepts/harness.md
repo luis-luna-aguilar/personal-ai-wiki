@@ -124,6 +124,7 @@ Treating the training harness like production code — with tests, versioning, a
 - [Agent improvement loop](agent-improvement-loop.md) — the loop for improving a harness systematically via traces, evals, and targeted changes
 - [Skillify — Agent Reliability Pattern](../workflows/skillify-agent-reliability.md) — pattern for encoding agent failures as permanent tested skills; "thin harness / fat skills" architecture
 - [Prompt injection](prompt-injection.md) — the concrete security attack the harness security boundary defends against
+- [Ontologies as agent guardrails](ontology-agent-guardrails.md) — a distinct, formally rule-based control mechanism that sits inside the harness's control/evaluation layer alongside prompts, evals, and permission logic
 
 ## Sources
 

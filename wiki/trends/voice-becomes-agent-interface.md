@@ -3,8 +3,8 @@ title: Voice becomes an agent interface
 type: trend
 domains: [models, agents, voice]
 tags: [agentic]
-as_of: 2026-07-22
-sources: [voice-becomes-agent-interface, gpt-live-launch-2026-07, bfl-flux-3-2026-07-24]
+as_of: 2026-08-02
+sources: [voice-becomes-agent-interface, gpt-live-launch-2026-07, bfl-flux-3-2026-07-24, every-voice-guide-2026-07-31, every-team-of-specialists-2026-08-02]
 ---
 
 # Voice becomes an agent interface
@@ -19,6 +19,8 @@ Voice is becoming a practical agent interface rather than a chat add-on. What st
 - GPT-Live adds a stronger product signal for voice as an agent interface: the voice layer stays full-duplex and conversational while deeper search, reasoning, or agentic work is delegated to a frontier model in the background.
 - This separates **interaction management** from **task execution**. The user experiences continuous conversation while another model handles the slower work.
 - GPT-Live reaches desktop (2026-07-22): ChatGPT Voice in the desktop app gains the ability to control the computer and coordinate work across ChatGPT Work and Codex — voice moving from conversational interface toward direct task/agent control, not just background delegation.
+- A five-step workflow loop — capture, retrieve and ground, define the outcome, act, review and redirect — is emerging as the standard shape for voice-driven agent work (Every, July 2026): voice removes the "translation step" between a raw thought and a polished agent instruction, not the review step itself.
+- Monologue (Every's voice-dictation tool) passed 500 million words dictated by early August 2026, up from roughly 1 million words/week at its September 2025 launch, now running on Mac, iPhone, and Apple Watch — a concrete usage datapoint for voice as a working interface rather than a novelty mode.
 
 ## Why it matters
 
@@ -34,6 +36,8 @@ Full-duplex voice changes the interaction model from "send a spoken prompt, wait
 
 ## Recent changes
 
+- [2026-08-02] Monologue passed 500 million words dictated (up from ~1M/week at its September 2025 launch), now on Mac, iPhone, and Apple Watch.
+- [2026-07-31] Every formalized a five-step voice-agent workflow loop (capture → retrieve/ground → define outcome → act → review/redirect) for turning speech into finished work with an agent.
 - [2026-07-22] ChatGPT Voice ships on desktop with computer-control and cross-app coordination (ChatGPT Work, Codex).
 - [2026-07-07] GPT-Live launches in ChatGPT Voice with full-duplex listening/speaking and background delegation to GPT-5.5 for deeper work.
 
@@ -42,3 +46,5 @@ Full-duplex voice changes the interaction model from "send a spoken prompt, wait
 - [Voice becomes an agent interface](../sources/newsletters/voice-becomes-agent-interface.md)
 - [Introducing GPT-Live](../sources/articles/gpt-live-launch-2026-07.md)
 - [AINews — Black Forest Labs FLUX 3](../sources/newsletters/bfl-flux-3-2026-07-24.md)
+- [Build Faster With Voice — Every guide](../sources/newsletters/every-voice-guide-2026-07-31.md)
+- [Every — Your AI Is a Team of Specialists (weekly roundup)](../sources/newsletters/every-team-of-specialists-2026-08-02.md)

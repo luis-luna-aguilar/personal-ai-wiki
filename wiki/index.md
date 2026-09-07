@@ -59,7 +59,7 @@ Foundation models. One page per model family or generation.
 - [models/qwen-3-6-27b](models/qwen-3-6-27b.md) — Alibaba dense 27B open-weight; beats prior 397B MoE on all coding benchmarks; runs under 20 GB RAM *(as_of: 2026-05-01)*
 - [models/qwen-3-6-35b-a3b](models/qwen-3-6-35b-a3b.md) — Alibaba open-weight MoE coding/agent model; community benchmarks now place it strongest in the ~20GB local tier for long-context paper-to-code tasks *(as_of: 2026-05-13)*
 - [models/qwen-3-7](models/qwen-3-7.md) — Alibaba Qwen 3.7 preview; #13 Arena text overall, #7 Math; first Alibaba model in top-15 overall *(as_of: 2026-05-23)*
-- [models/qwen-3-8](models/qwen-3-8.md) — Qwen3.8-Max-Preview; reported 2.4T parameters, native video understanding, open-weight commitment for the official release *(as_of: 2026-07-21)*
+- [models/qwen-3-8](models/qwen-3-8.md) — Alibaba's flagship; Qwen3.8-Max ships in full at 2.4T/~95B active; #4 Frontend Code Arena; open weights promised for Max + 27B sibling; license reportedly restricts US/EU/UK/Korea *(as_of: 2026-08-04)*
 
 ## Tools
 
@@ -202,6 +202,7 @@ Ideas and techniques.
 - [concepts/prompt-injection](concepts/prompt-injection.md) — AI-specific attack where untrusted content steers a model or agent, especially dangerous when agents combine private context, tools, and action authority *(as_of: 2026-06-22)*
 - [concepts/slopsquatting](concepts/slopsquatting.md) — supply-chain attack via LLM-hallucinated package names; 19.7% hallucination rate (USENIX 2025) *(as_of: 2026-04-22)*
 - [concepts/quantization](concepts/quantization.md) — LLM weight compression: 4× smaller, 2× faster, 5-10% accuracy loss; makes local deployment practical *(as_of: 2026-07-15)*
+- [concepts/ontology-agent-guardrails](concepts/ontology-agent-guardrails.md) — ontologies and OWL/RDF reasoners as a machine-enforced rule layer that checks and constrains LLM agent reasoning, distinct from prompt-level instructions ("neurosymbolic AI") *(as_of: 2026-07-30)*
 
 ## Trends
 
@@ -236,7 +237,7 @@ Practical guidance for teaching teams and businesses to use AI well.
 - [training/evals-for-agentic-work](training/evals-for-agentic-work.md) — eval patterns for workflow and task agents: pass^k reliability, task-specific metrics, simulated users *(as_of: 2026-04-23)*
 - [training/ai-coding-vocabulary](training/ai-coding-vocabulary.md) — shared language for agentic coding: model vs harness vs agent vs context vs session vs environment *(as_of: 2026-05-01)*
 - [training/ai-work-delegation-modes](training/ai-work-delegation-modes.md) — framework for choosing between autonomous delegation and human-steered collaboration when working with AI *(as_of: 2026-05-21)*
-- [training/ai-delegation-management](training/ai-delegation-management.md) — practical guidance for delegating work to agents using management fundamentals: scope, authority, loop tempo, review cost, and definition of done *(as_of: 2026-07-08)*
+- [training/ai-delegation-management](training/ai-delegation-management.md) — practical guidance for delegating work to agents using management fundamentals: scope, authority, loop tempo, review cost, definition of done, and spec-first delegation *(as_of: 2026-08-04)*
 - [training/cost-aware-ai-task-routing](training/cost-aware-ai-task-routing.md) — routing work among scripts, small models, frontier models, fine-tuned domain models, agents, and humans based on uncertainty, determinism, risk, token cost, and review cost *(as_of: 2026-07-19)*
 
 ## Use Cases

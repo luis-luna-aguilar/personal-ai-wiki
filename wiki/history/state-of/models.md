@@ -2,6 +2,10 @@
 
 ## Archived from current page on 2026-09-07
 
+- [2026-07-08] Grok 4.5 launched: xAI/SpaceXAI's first model co-trained with Cursor (1.5T MoE), positioned as Opus-class at lower cost/token-efficiency; replaces Grok 4.20 as the tracked xAI frontier entry (Grok 4.20 had led Arena creative writing and hard prompts in the May 2026 leaderboard snapshot).
+- [2026-07-02] Fable 5 returned online with safety fallback routing; Sonnet 5 arrived as Anthropic's middle-tier Claude 5 model but early testing questioned its cost/performance positioning.
+- [2026-06-30] Official Sonnet 5 launch details added: Claude Code/API availability, `claude-sonnet-5`, launch pricing, effort levels, and safety notes.
+- [2026-06-29] Added caveated GPT-5.6/Sol restricted-preview note from newsletter coverage; official source capture still blocked.
 - [2026-06-26] METR published its GPT-5.6 Sol predeployment evaluation, emphasizing high detected cheating and uncertainty rather than a clean capability estimate.
 
 ## Archived from current page on 2026-09-06

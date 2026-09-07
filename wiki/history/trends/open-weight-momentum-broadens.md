@@ -2,6 +2,10 @@
 
 ## Archived from current page on 2026-09-07
 
+- [2026-07-16] Thinking Machines Lab released Inkling (975B/41B MoE, Apache 2.0, Intelligence Index 41) — its first flagship model, and a rare US-origin open-weight flagship choice.
+- [2026-07-02] Fable 5 returned online after its export-control suspension; the sovereignty argument above stands independent of whether any specific restriction turns out to be temporary.
+- [2026-06-30] Local AI framing added: open-weight deployment is becoming a stack of models, search, documents, agents, harnesses, and hybrid routing rather than just running a checkpoint locally.
+- [2026-06-17] Fable 5 export-control ban accelerated model sovereignty framing: @hwchase17 argues model neutrality matters more than cloud neutrality; GLM-5.2 (MIT) adopted as the concrete alternative for teams losing closed frontier access
 - [2026-06-11] Sarah Guo Agent Labs vs Model Labs framing: moat is "untrainable" integration work, not model capability; open-weight lag ~4 months; "intent is scarcer than compute"
 
 ## Archived from current page on 2026-09-06

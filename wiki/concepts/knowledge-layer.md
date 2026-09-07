@@ -37,6 +37,7 @@ For research workflows, this suggests a practical pattern: use agents to maintai
 ## Related
 
 - [Agent memory](agent-memory.md) — complementary concept: long-term memory as a retrieval-and-reasoning problem; the knowledge layer addresses the *content* layer, agent memory addresses the *retrieval mechanics*
+- [Ontologies as agent guardrails](ontology-agent-guardrails.md) — a related but different structured-knowledge idea: this page is compiled context for retrieval, that page is a formal rule layer for validation and constraint
 
 ## Recent changes
 
