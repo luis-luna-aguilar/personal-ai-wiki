@@ -3,8 +3,8 @@ title: State of Healthcare
 type: state-of
 domains: [healthcare]
 tags: []
-as_of: 2026-07-22
-sources: [legacy-ai-tools-roadmap-xlsx, dragon-copilot-launch, hippocratic-ai-homepage, tempus-homepage, zocdoc-zo, open-evidence-homepage, konko-kora-homepage, elevenlabs-scribe, 2026-06-16-metalearn-mystery-fatigue-ai, midjourney-medical-scanner-2026-06, ai-healthcare-triage-doctronic-2026-05, mistral-document-ai, bfl-flux-3-2026-07-24]
+as_of: 2026-08-13
+sources: [legacy-ai-tools-roadmap-xlsx, dragon-copilot-launch, hippocratic-ai-homepage, tempus-homepage, zocdoc-zo, open-evidence-homepage, konko-kora-homepage, elevenlabs-scribe, 2026-06-16-metalearn-mystery-fatigue-ai, midjourney-medical-scanner-2026-06, ai-healthcare-triage-doctronic-2026-05, mistral-document-ai, bfl-flux-3-2026-07-24, ainews-spacexai-grok-46-and-grok-bot-2026-08-13]
 ---
 
 # State of Healthcare
@@ -20,6 +20,7 @@ Current state of AI in healthcare — clinical documentation, medical knowledge 
 ### Healthcare triage and patient operations
 
 - [AI-assisted healthcare triage](../use-cases/ai-assisted-healthcare-triage.md) — prescription-renewal and patient-side self-triage workflows where AI does first-pass recommendation or question generation while clinicians retain final judgment *(as of 2026-05-31)*
+- **Google ResidencyRL** — RL-trained Gemini 3.5 Flash over 49,870 simulated telehealth encounters; diagnostic accuracy under adversarial conditions rose from 81% to 88%, missed red flags down 31%; known only via a secondary summary thread, no primary Google writeup yet *(as of 2026-08-13)*
 
 ### Healthcare AI
 
@@ -48,6 +49,7 @@ AI products specialized for extracting, structuring, querying, or reasoning over
 
 ## Recent changes
 
+- [2026-08-13] Added Google's ResidencyRL — RL training over simulated telehealth encounters lifted diagnostic accuracy under adversarial conditions from 81% to 88% (secondary source; no primary writeup).
 - [2026-07-22] Health in ChatGPT rolled out in the U.S. — connects Apple Health and medical records, with encryption and training/ad-targeting exclusions for connected health data.
 - [2026-06-18] Midjourney Medical Scanner added as a speculative imaging-infrastructure signal with strong validation and regulatory caveats.
 - [2026-05-31] Doctronic prescription-renewal pilot and patient-side AI self-triage added as healthcare workflow signals.
@@ -64,4 +66,5 @@ AI products specialized for extracting, structuring, querying, or reasoning over
 - [OpenEvidence official page](../sources/articles/open-evidence-homepage.md)
 - [Konko Kora official page](../sources/articles/konko-kora-homepage.md)
 - [ElevenLabs Scribe speech-to-text page](../sources/articles/elevenlabs-scribe.md)
+- [AINews — SpaceXAI Grok 4.6 and Grok Bot (Google ResidencyRL)](../sources/newsletters/ainews-spacexai-grok-46-and-grok-bot-2026-08-13.md)
 

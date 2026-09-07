@@ -3,15 +3,15 @@ title: AI in Science
 type: trend
 domains: [science]
 tags: []
-as_of: 2026-08-06
-sources: [noetik-cancer-trials, gpt-rosalind-launch, self-driving-lab-radical-ai, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07, esmfold2-protein-world-model-2026-05, openai-erdos-unit-distance-2026-05, lila-sciences-automated-wet-lab-2026-07-16, xaira-x-cell-causal-virtual-cell-2026-07-21, anthropic-riemann-hypothesis-2026-08-11, gdm-reshuffle-discovery-loop-2026-08-06]
+as_of: 2026-08-11
+sources: [noetik-cancer-trials, gpt-rosalind-launch, self-driving-lab-radical-ai, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07, esmfold2-protein-world-model-2026-05, openai-erdos-unit-distance-2026-05, lila-sciences-automated-wet-lab-2026-07-16, xaira-x-cell-causal-virtual-cell-2026-07-21, anthropic-riemann-hypothesis-2026-08-11, gdm-reshuffle-discovery-loop-2026-08-06, chai-discovery-bioai-phase-shift-2026-08-11]
 ---
 
 # AI in Science
 
 AI is increasingly moving from generic scientific assistance toward domain-specific scientific reasoning systems. The strongest current signal in this wiki is biology and drug discovery: models are being positioned not just as literature copilots, but as systems that infer treatment response, model tumor environments, or support translational medicine workflows.
 
-## Current status (as of 2026-08-06)
+## Current status (as of 2026-08-11)
 
 - Noetik is presented as using large multimodal tumor datasets and transformer models to predict treatment response and improve cancer-trial selection
 - The company reportedly signed a $50M GSK deal tied to this stack
@@ -22,6 +22,7 @@ AI is increasingly moving from generic scientific assistance toward domain-speci
 - The hard part is not only hypothesis generation. Biological feedback is slow and expensive, so evaluation and verification workflows become the bottleneck the platform must solve.
 - ESMFold2 adds a protein-world-model signal: general transformer scaling and diverse protein data are being applied to structure prediction, protein interactions, antibody tasks, and design/discovery workflows.
 - The domain-specific-reasoning pattern is not limited to biology: pure-mathematics results (OpenAI's Erdős disproof, Anthropic's Riemann Hypothesis bound) now form their own cluster — see [AI in Mathematics](ai-in-mathematics.md).
+- Chai Discovery ($4B valuation) reports four major pharma tools deals since January — Lilly, Novartis, argenx, and an expanded Eli Lilly program — as structural models give way to binding models that support real molecule design, not just prediction
 - A wave of senior technical leadership left a model lab for AI-driven science ventures: Jeff Dean, Sanjay Ghemawat, Oriol Vinyals, and Quoc Le departed Google DeepMind to found Discovery Loop, a Public Benefit Corporation aimed at automating machine learning, science, and engineering research ("autoresearch"), backed by Radical Ventures, Khosla Ventures, Lightspeed, Kleiner Perkins, Doerr Capital — and Google itself. The move accompanied a DeepMind leadership reshuffle: after 16 years as CEO, Demis Hassabis became Chair of GDM and Chief Scientist of Alphabet, stepping back from day-to-day operations toward long-term strategy, AGI, and Isomorphic Labs, while CTO Koray Kavukcuoglu took over as SVP running Gemini, frontier research, and product.
 
 ## Protein world models
@@ -35,6 +36,12 @@ The practical importance is the same as other science-agent infrastructure: bett
 Most RNA-expression models (the dominant "Virtual Cell" approach, built on datasets like the Chan Zuckerberg Institute's 168M-cell CELLxGENE) describe correlations between cell types and states, but can't reliably predict what happens if you change a gene's expression — because gene expression changes are highly correlated and rarely tell you what causes what.
 
 **Xaira's causal counterpoint (as of 2026-07-21):** Xaira Therapeutics' earlier RNA-expression model plateaued around 1.5B parameters — a sign the ceiling was the information in the training data, not model size or compute. Their fix, X-Atlas, is built from CRISPR experiments that perturb one gene at a time, producing data rich enough to establish actual causal (not merely correlational) gene-expression relationships. The resulting model, X-Cell, resumed scaling with added parameters and compute once trained on this richer data — Xaira reports it beats the linear baseline that had outperformed prior virtual-cell models.
+
+## AI-native drug design (Chai Discovery)
+
+Most AI-for-pharma startups have historically ended up building their own drug pipelines rather than selling tools, because convincing a pharma partner to license a tool required proof only a real pipeline could provide. Chai Discovery's cofounders trace a shift starting around January 2026's JPM Healthcare conference: the underlying models crossed a threshold from structural prediction (a molecule's shape) to binding prediction (how strongly two molecules bind), which unlocks actual molecule design rather than analysis. That reframes drug discovery closer to an engineering problem — getting good candidate molecules "right out of the gate" cuts the iteration time that otherwise requires years of lab trial and error, such as engineering an antibody to trigger a precise molecular cascade.
+
+Chai's product bet is UX-driven: a CAD-like molecule editor ("Photoshop for molecules") built from tight partner feedback loops rather than a chatbot interface. Since June 2026, that approach has produced three further major deals on top of the January wave — Lilly, Novartis, argenx, and an expanded existing Eli Lilly program — with Chai now valued at $4B, two years after founding.
 
 ## Self-driving labs
 
@@ -64,6 +71,7 @@ Anthropic argues AI has advanced faster in coding than biology not because of in
 ## Recent changes
 
 - [2026-09-07] Pure-mathematics signals (OpenAI's Erdős disproof, Anthropic's Riemann Hypothesis bound) split out into a new dedicated page, [AI in Mathematics](ai-in-mathematics.md), at the user's request.
+- [2026-08-11] Added Chai Discovery as an AI-native drug-design signal: structural-to-binding-model shift, CAD-style molecule editor, four pharma deals since January (Lilly, Novartis, argenx, expanded Eli Lilly program), $4B valuation
 - [2026-08-11] Anthropic reported an unreleased research Claude variant improved a Riemann Hypothesis-related bound (proportion of zeta zeros proven on the critical line: 41.6% → 67.2%), via ~31M output tokens of retries/exploration — a second pure-math signal alongside OpenAI's Erdős disproof; not yet independently verified.
 - [2026-08-06] Jeff Dean, Sanjay Ghemawat, Oriol Vinyals, and Quoc Le left Google DeepMind to found autoresearch startup Discovery Loop; accompanied by a DeepMind leadership reshuffle (Hassabis to Chair of GDM/Chief Scientist of Alphabet, Kavukcuoglu to SVP of DeepMind)
 - [2026-07-21] Added Xaira Therapeutics' X-Cell/X-Atlas as a causal counterpoint to correlational RNA-expression virtual-cell models
@@ -72,7 +80,6 @@ Anthropic argues AI has advanced faster in coding than biology not because of in
 - [2026-07-05] Claude Science and Anthropic's internal drug programs reframed science agents as dogfooded workflow platforms, not only model demos.
 - [2026-07-01] Official Claude Science announcement adds reviewer agents, BioNeMo/Boltz/OpenFold-style integrations, and Manifold Bio / Allen Institute / UCSF case studies.
 - [2026-06-17] Added self-driving labs section: Radical AI achieving ~10× DARPA/GE MACH pace in alloys; infrastructure-as-bottleneck framing from Anthropic science blog
-- [2026-05-27] Added ESMFold2 as a protein-world-model signal: open protein prediction/design engine, antibody interaction strength, and atlas-scale structure predictions.
 
 ## Sources
 
@@ -88,3 +95,4 @@ Anthropic argues AI has advanced faster in coding than biology not because of in
 - [Latent Space — Causal Models Need Causal Data (Xaira X-Cell)](../sources/newsletters/xaira-x-cell-causal-virtual-cell-2026-07-21.md)
 - [AINews — Anthropic's Riemann Hypothesis bound improvement](../sources/newsletters/anthropic-riemann-hypothesis-2026-08-11.md)
 - [AINews — Jeff, Sanjay, Oriol, and Quoc depart DeepMind; Discovery Loop founded](../sources/newsletters/gdm-reshuffle-discovery-loop-2026-08-06.md)
+- [Latent Space — The BioAI Phase Shift (Chai Discovery)](../sources/newsletters/chai-discovery-bioai-phase-shift-2026-08-11.md)

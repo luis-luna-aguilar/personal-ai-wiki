@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents, cybersecurity, computer-use]
 subcategory: terminal-coding-agent
 tags: [openai, closed-source, agentic]
-as_of: 2026-08-04
-sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026, openai-gpt-5-5-launch, superhuman-2026-04-23, codex-broader-computer-work-2026-04-24, codex-for-work-2026-05-01, symphony-devin-terminal-orchestration-2026-04-28, openai-daybreak-2026-05-13, codex-mobile-may-2026, codex-adoption-ecosystem-2026-05, codex-maxxing-jxnl-2026-05, codex-zoom-mobile-2026-05, codex-general-work-agents-2026-07, every-urge-to-merge-2026-07-14, ainews-devin-fusion-router-moat-2026-07-14, chatgpt-work-launch-2026-08-04]
+as_of: 2026-08-12
+sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026, openai-gpt-5-5-launch, superhuman-2026-04-23, codex-broader-computer-work-2026-04-24, codex-for-work-2026-05-01, symphony-devin-terminal-orchestration-2026-04-28, openai-daybreak-2026-05-13, codex-mobile-may-2026, codex-adoption-ecosystem-2026-05, codex-maxxing-jxnl-2026-05, codex-zoom-mobile-2026-05, codex-general-work-agents-2026-07, every-urge-to-merge-2026-07-14, ainews-devin-fusion-router-moat-2026-07-14, chatgpt-work-launch-2026-08-04, unsloth-desktop-chatgpt-linux-2026-08-12]
 ---
 
 # Codex
@@ -109,6 +109,7 @@ A detailed independent teardown of Work — the ChatGPT mode OpenAI folded Codex
 
 ## Recent changes
 
+- [2026-08-12] ChatGPT desktop app ships for Linux in preview (Ubuntu, Debian, Fedora; x64/ARM64); the desktop app can now import and sync projects, chats, skills, and plugins from other agents into ChatGPT Work and Codex with automatic updates — read as an effort to cut agent-switching friction and make Codex/Desktop an integration hub.
 - [2026-08-04] Independent architecture teardown of ChatGPT Work: persistent cloud microVM specs, deliberate split between agent-owned scratch space and product-managed continuity (Personal Context/Library/Projects), browser-service tool-call model, two-tier Scheduled Tasks, Plugin Directory discovery gap, and 10M-user milestone three weeks post-launch.
 - [2026-07-14] OpenAI folded Codex into a new ChatGPT desktop "superapp" (Chat/Work/Codex modes); power users pushed back hard, but usage estimates put Codex around 6-7M users by mid-July, roughly 10x growth year-to-date.
 - [2026-07-11] Rollout friction: 36-plus model/effort configuration combinations drew complaints; OpenAI ran multiple usage-limit resets and rolled the context limit back from 372K to 272K.
@@ -140,3 +141,4 @@ A detailed independent teardown of Work — the ChatGPT mode OpenAI folded Codex
 - [Every — The Urge to Merge (ChatGPT and Codex)](../sources/newsletters/every-urge-to-merge-2026-07-14.md)
 - [AINews — Codex usage growth, coding-agent cost/perf tradeoffs, and Devin Fusion](../sources/newsletters/ainews-devin-fusion-router-moat-2026-07-14.md)
 - [ChatGPT Work architecture teardown](../sources/newsletters/chatgpt-work-launch-2026-08-04.md)
+- [Local AI tooling: Unsloth Desktop, ChatGPT desktop for Linux](../sources/newsletters/unsloth-desktop-chatgpt-linux-2026-08-12.md)

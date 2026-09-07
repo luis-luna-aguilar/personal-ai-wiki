@@ -4,18 +4,18 @@ type: model
 domains: [models, coding]
 subcategory: frontier-model
 tags: [alibaba, open-weights]
-as_of: 2026-08-04
-sources: [alibaba-qwen38-preview-2026-07-20, ainews-china-policy-openweight-2026-07-21, ainews-qwen38-max-launch-2026-08-04]
+as_of: 2026-08-13
+sources: [alibaba-qwen38-preview-2026-07-20, ainews-china-policy-openweight-2026-07-21, ainews-qwen38-max-launch-2026-08-04, ainews-spacexai-grok-46-and-grok-bot-2026-08-13]
 ---
 
 # Qwen 3.8
 
-Alibaba's flagship after Qwen 3.7. Entered live preview 2026-07-20 and shipped as a full launch on 2026-08-04 as Qwen3.8-Max, with open weights promised "next week" for both Qwen3.8-Max and a smaller companion, Qwen3.8-27B.
+Alibaba's flagship after Qwen 3.7. Entered live preview 2026-07-20, shipped as a full launch on 2026-08-04 as Qwen3.8-Max, and shipped open weights for Max on 2026-08-13 (text-only initial drop, no vision yet). The promised Qwen3.8-27B sibling's weights are not confirmed shipped by this update.
 
-## Current status (as of 2026-08-04)
+## Current status (as of 2026-08-13)
 
 - Qwen3.8-Max: 2.4T total parameters, ~95B active per token (third-party estimate, ~4% activation ratio); 1M context; API priced at $2/M input, $6/M output, $0.25/M cached tokens
-- Open weights promised "next week" for both Qwen3.8-Max and a companion Qwen3.8-27B
+- Open weights shipped 2026-08-13 for Qwen3.8-Max (text-only initial drop, no vision); day-0 vLLM support plus vendor-specific 4-bit checkpoints for NVIDIA B300 and AMD MI355X; Together AI and Baseten also announced immediate support
 - Frontend Code Arena: #4 overall at 1,668 Elo, behind only Claude Opus 5 (1,705) and Kimi K3 (1,676)
 - Vals AI Index: 66.1, matching Claude Opus 4.7 at roughly 2.3x lower cost per test; SWE-bench 87.3% (ahead of GPT-5.5 and GLM-5.2, behind Claude Opus 4.8's 89.2%); Terminal-Bench 2.1 at 67.4, up from 57.5 for Qwen 3.7 Max about two and a half months earlier
 - Vision Arena: #2 at 1,305, 13 points behind Claude Fable 5
@@ -33,6 +33,7 @@ Succeeds [Qwen 3.7](qwen-3-7.md) as Alibaba's flagship, moving from preview to a
 
 ## Recent changes
 
+- [2026-08-13] Open weights shipped for Qwen3.8-Max (2.4T/~95B active MoE) — text-only initial drop, no vision yet; day-0 vLLM support plus 4-bit checkpoints for NVIDIA B300/AMD MI355X; Together AI and Baseten also added support
 - [2026-08-04] Full launch as Qwen3.8-Max: 2.4T/~95B active, real benchmarks (Frontend Code Arena #4, SWE-bench 87.3%, Terminal-Bench 2.1 67.4), open weights promised "next week" alongside a Qwen3.8-27B sibling; license reportedly restricts use/download in US/EU/UK/Korea
 - [2026-07-21] Third-party roundup reports 2.4T parameters, native video understanding, still inconsistent on long-horizon tasks
 - [2026-07-20] Alibaba puts Qwen3.8-Max into live preview, claiming near-Fable-5 capability
@@ -42,3 +43,4 @@ Succeeds [Qwen 3.7](qwen-3-7.md) as Alibaba's flagship, moving from preview to a
 - [Superhuman — Alibaba teases new frontier model](../sources/newsletters/alibaba-qwen38-preview-2026-07-20.md)
 - [AINews — Open-weight competition, Chinese model policy, geopolitics of AI](../sources/newsletters/ainews-china-policy-openweight-2026-07-21.md)
 - [AINews — Qwen 3.8 Max (2.4T) and 27B ship](../sources/newsletters/ainews-qwen38-max-launch-2026-08-04.md)
+- [AINews — SpaceXAI Grok 4.6 and Grok Bot (Qwen3.8-Max open weights)](../sources/newsletters/ainews-spacexai-grok-46-and-grok-bot-2026-08-13.md)

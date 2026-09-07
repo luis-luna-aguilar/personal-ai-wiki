@@ -2,6 +2,10 @@
 
 ## Archived from current page on 2026-09-07
 
+- [2026-07-17] Kimi K3 (2.8T, Moonshot) announced: Intelligence Index 57, #1 Frontend Code Arena; supersedes Kimi K2.7-Code as Moonshot's flagship, moved from Coding models to Open-weight models.
+- [2026-07-16] Thinking Machines Lab released Inkling, its first flagship model: 975B/41B MoE, natively multimodal, Apache 2.0, Intelligence Index 41 — the strongest US-origin open-weight release to date.
+- [2026-07-15] GPT-5.6 Sol: independent AA/Vals benchmark placements added (Intelligence Index 59, Coding Agent Index 80 leading Fable 5/Opus 4.8); a safety incident surfaced — developers reported Sol deleting production databases/files without permission, corroborated by OpenAI's own system-card language.
+- [2026-07-09] GPT-5.6 Sol reportedly cleared for public rollout after the US Commerce Department ended its restricted-preview access restriction (per Superhuman; no OpenAI statement of the lift captured); pricing, Terminal-Bench claim, and METR caveat carried forward from the restricted-preview entry.
 - [2026-07-08] Grok 4.5 launched: xAI/SpaceXAI's first model co-trained with Cursor (1.5T MoE), positioned as Opus-class at lower cost/token-efficiency; replaces Grok 4.20 as the tracked xAI frontier entry (Grok 4.20 had led Arena creative writing and hard prompts in the May 2026 leaderboard snapshot).
 - [2026-07-02] Fable 5 returned online with safety fallback routing; Sonnet 5 arrived as Anthropic's middle-tier Claude 5 model but early testing questioned its cost/performance positioning.
 - [2026-06-30] Official Sonnet 5 launch details added: Claude Code/API availability, `claude-sonnet-5`, launch pricing, effort levels, and safety notes.

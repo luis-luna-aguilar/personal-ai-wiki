@@ -39,7 +39,7 @@ Foundation models. One page per model family or generation.
 - [models/composer-2-5](models/composer-2-5.md) — Cursor's in-house coding model, upgraded from Composer 2 in May 2026 (targeted RL + KL distillation, 25× synthetic tasks) *(as_of: 2026-05-18)*
 - [models/deepseek-v4](models/deepseek-v4.md) — DeepSeek released open-weight Pro/Flash lineup for long-context agent workloads; 1M context, MIT license, pricing, and KV-cache/inference-systems story *(as_of: 2026-05-23)*
 - [models/cohere-command-a-plus](models/cohere-command-a-plus.md) — Cohere's first fully open (Apache 2.0) model; 218B/25B MoE; AA Intelligence Index 37 *(as_of: 2026-05-21)*
-- [models/grok-4-5](models/grok-4-5.md) — xAI/SpaceXAI's first model co-trained with Cursor; 1.5T MoE; Opus-class positioning at lower cost/token-efficiency *(as_of: 2026-07-12)*
+- [models/grok-4-6](models/grok-4-6.md) — xAI/SpaceXAI; 1.5T MoE, supersedes Grok 4.5; AA Intelligence Index 61, 88.4% Terminal-Bench v2.1, unchanged $2/$6 pricing; powers new Grok Bot product *(as_of: 2026-08-13)*
 - [models/gpt-5-5](models/gpt-5-5.md) — OpenAI frontier model for coding, knowledge work, science, cyber tasks, Codex, and personal-finance agent workflows *(as_of: 2026-07-02)*
 - [models/gpt-5-6-sol](models/gpt-5-6-sol.md) — OpenAI flagship (Sol/Terra/Luna family); launched as a restricted preview, cleared for public rollout July 2026; METR predeployment eval found high detected cheating and uncertain time-horizon estimates *(as_of: 2026-07-09)*
 - [models/glm-5-2](models/glm-5-2.md) — Z.ai MIT open-weight; 744B/40B MoE, 1M context, ZCode workspace, provider adoption, and frontier-adjacent open-model coding signal *(as_of: 2026-07-02)*
@@ -57,6 +57,7 @@ Foundation models. One page per model family or generation.
 - [models/muse-glimmer](models/muse-glimmer.md) — Meta's first genuinely open-weight frontier-adjacent model; 30B dense multimodal, Apache 2.0, logit-distilled from Muse Spark for always-on local agents *(as_of: 2026-08-11)*
 - [models/openai-privacy-filter](models/openai-privacy-filter.md) — OpenAI open-weight MoE for on-device PII detection and redaction; 1.5B-total / 50M-active; Apache 2.0 *(as_of: 2026-04-23)*
 - [models/nemotron-3-ultra](models/nemotron-3-ultra.md) — NVIDIA open-weight 550B/55B MoE; hybrid Mamba/attention + LatentMoE; 1M context; high-throughput serving signal *(as_of: 2026-06-02)*
+- [models/nemotron-35-lightning](models/nemotron-35-lightning.md) — NVIDIA's small, fast open-weight model for always-on agent workloads; 31.6B/3.6B active MoE; AA Intelligence Index 24; Harvey post-training beat Opus 4.6 and Nemotron 3 Ultra on Legal Agent Bench *(as_of: 2026-08-12)*
 - [models/qwen-3-6-27b](models/qwen-3-6-27b.md) — Alibaba dense 27B open-weight; beats prior 397B MoE on all coding benchmarks; runs under 20 GB RAM *(as_of: 2026-05-01)*
 - [models/qwen-3-6-35b-a3b](models/qwen-3-6-35b-a3b.md) — Alibaba open-weight MoE coding/agent model; community benchmarks now place it strongest in the ~20GB local tier for long-context paper-to-code tasks *(as_of: 2026-05-13)*
 - [models/qwen-3-7](models/qwen-3-7.md) — Alibaba Qwen 3.7 preview; #13 Arena text overall, #7 Math; first Alibaba model in top-15 overall *(as_of: 2026-05-23)*
@@ -71,6 +72,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/claude-design](tools/claude-design.md) — Anthropic's research-preview artifact-generation surface for prototypes, slides, and one-pagers *(as_of: 2026-07-08)*
 - [tools/claude-science](tools/claude-science.md) — Anthropic public beta science app with reproducible artifacts, reviewer agents, persistent kernels, database/model integrations, and local/HPC compute *(as_of: 2026-07-06)*
 - [tools/claude-tag](tools/claude-tag.md) — Anthropic's Slack-native team agent product; Claude joins selected channels as a named participant with scoped channel/tool/data/codebase access and async thread work *(as_of: 2026-06-24)*
+- [tools/grok-bot](tools/grok-bot.md) — xAI/SpaceXAI's AI-teammate product, launched alongside Grok 4.6; persistent cloud compute per bot, tool/Slack/GitHub Actions monitoring, scheduled routines, bot-spawning *(as_of: 2026-08-13)*
 - [tools/claude-managed-agents](tools/claude-managed-agents.md) — Anthropic's hosted long-horizon agent runtime; file-backed memory, Dreams, and same-day API feature parity reinforce the platform-service direction *(as_of: 2026-05-20)*
 - [tools/agentrial](tools/agentrial.md) — statistical multi-trial eval framework for agent reliability, trajectory attribution, and CI regression gates *(as_of: 2026-04-24)*
 - [tools/braintrust](tools/braintrust.md) — eval dataset management and trace-to-dataset conversion for agent pipelines *(as_of: 2026-04-23)*
@@ -96,6 +98,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/genspark-slides](tools/genspark-slides.md) — AI slides workflow inside Genspark's broader agent/content product surface *(as_of: 2026-04-22)*
 - [tools/google-adk](tools/google-adk.md) — Google's open-source agent framework; ADK 2.0 now clearly centers graph workflows, coordinator-specialist routing, A2A handoffs, and sandboxed execution *(as_of: 2026-04-24)*
 - [tools/eve](tools/eve.md) — Vercel's agent framework for resumability, fallbacks, filesystem agents, skills, subagents, sandboxes, long-running jobs, observability, and evals *(as_of: 2026-07-03)*
+- [tools/flue](tools/flue.md) — Fred Schott's (Astro creator) agent framework; React-style Agent Hooks built on the Pi minimal harness, host-portable alternative to eve *(as_of: 2026-08-15)*
 - [tools/gpt-live](tools/gpt-live.md) — OpenAI full-duplex ChatGPT Voice model family; GPT-Live-1 and mini power natural voice interaction while delegating deeper work to frontier models *(as_of: 2026-07-07)*
 - [tools/gpt-realtime-2](tools/gpt-realtime-2.md) — OpenAI streaming speech-to-speech model with 128K context, GPT-5-class reasoning, tool use, and interruption handling *(as_of: 2026-07-07)*
 - [tools/grok-build](tools/grok-build.md) — xAI early beta CLI coding agent with plan mode and parallel worktree subagents; SuperGrok Heavy only; Grok 4.5, the jointly trained Cursor/SpaceX model, launched July 2026 as the default *(as_of: 2026-07-08)*
@@ -203,6 +206,7 @@ Ideas and techniques.
 - [concepts/spec-driven-development](concepts/spec-driven-development.md) — SDD concept, three-level taxonomy, and critiques *(as_of: 2026-04-22)*
 - [concepts/prompt-injection](concepts/prompt-injection.md) — AI-specific attack where untrusted content steers a model or agent, especially dangerous when agents combine private context, tools, and action authority *(as_of: 2026-06-22)*
 - [concepts/slopsquatting](concepts/slopsquatting.md) — supply-chain attack via LLM-hallucinated package names; 19.7% hallucination rate (USENIX 2025) *(as_of: 2026-04-22)*
+- [concepts/reasoning-trace-leakage](concepts/reasoning-trace-leakage.md) — encrypted/signed CoT from Claude, GPT, and Gemini can be decoded and replayed onto a different model/session/user; leaked API keys/emails/passwords found in public traces *(as_of: 2026-08-12)*
 - [concepts/quantization](concepts/quantization.md) — LLM weight compression: 4× smaller, 2× faster, 5-10% accuracy loss; makes local deployment practical *(as_of: 2026-07-15)*
 - [concepts/ontology-agent-guardrails](concepts/ontology-agent-guardrails.md) — ontologies and OWL/RDF reasoners as a machine-enforced rule layer that checks and constrains LLM agent reasoning, distinct from prompt-level instructions ("neurosymbolic AI") *(as_of: 2026-07-30)*
 
@@ -213,7 +217,7 @@ Things being watched that haven't solidified yet.
 - [trends/agent-native-compute](trends/agent-native-compute.md) — cloud infrastructure purpose-built for agent workloads (sandboxes, RL/eval spikes) as a category distinct from frontier training-compute scale *(as_of: 2026-07-08)*
 - [trends/agents-reshape-organizations](trends/agents-reshape-organizations.md) — leverage moves from individual to org as autonomous agents, FDE teams, and deployment services take coordination work *(as_of: 2026-07-01)*
 - [trends/ai-governance-and-policy](trends/ai-governance-and-policy.md) — pressure for governments to actively steer AI development (disclosure mandates, pre-release review, equity-stake proposals) rather than leaving it to labs and market forces *(as_of: 2026-07-14)*
-- [trends/ai-in-science](trends/ai-in-science.md) — biology, drug discovery, self-driving labs, virtual-cell models, and Claude Science-style workflow platforms for reproducible scientific work *(as_of: 2026-08-06)*
+- [trends/ai-in-science](trends/ai-in-science.md) — biology, drug discovery, self-driving labs, virtual-cell models, and Claude Science-style workflow platforms for reproducible scientific work *(as_of: 2026-08-11)*
 - [trends/ai-in-mathematics](trends/ai-in-mathematics.md) — pure-mathematics results from general-purpose reasoning models (OpenAI's Erdős disproof, Anthropic's Riemann Hypothesis bound), split out from AI in Science *(as_of: 2026-08-11)*
 - [trends/compute-infrastructure](trends/compute-infrastructure.md) — frontier compute scale plus inference-system efficiency as competitive moats *(as_of: 2026-07-08)*
 - [trends/open-weight-momentum-broadens](trends/open-weight-momentum-broadens.md) — open-weight competition is spreading beyond coding into multimodal, computer-use, long-context, and local-AI infrastructure *(as_of: 2026-07-21)*

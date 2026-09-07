@@ -3,8 +3,8 @@ title: AI delegation management
 type: training
 domains: [agents, training]
 tags: [agentic]
-as_of: 2026-08-10
-sources: [management-as-ai-superpower-2026-07, andy-matuschak-agent-loop-tempo-2026-07, design-layer-framework-2026-08-04, vibe-coded-security-risk-2026-08-10]
+as_of: 2026-08-14
+sources: [management-as-ai-superpower-2026-07, andy-matuschak-agent-loop-tempo-2026-07, design-layer-framework-2026-08-04, vibe-coded-security-risk-2026-08-10, securing-ai-employee-guide-2026-08-14, next-era-of-great-work-2026-08-16]
 ---
 
 # AI delegation management
@@ -28,6 +28,7 @@ Working with agents is increasingly a management skill: define the job, explain 
 - **Targeted review questions over exhaustive reading.** When an agent produces a large multi-file output, ask four or five pointed questions that expose likely failure points — "How are you handling auth?", "What happens when a token expires mid-session?", "What are the different failure paths?" — rather than reading every line. The domain expertise is in knowing what to ask, not in reading everything.
 - **Turn recurring corrections into reusable instructions.** When the same correction keeps recurring across AI drafts, write it into a standing instruction or prompt rule instead of correcting it again next time — converts one-off taste into something reusable by the team and its agents.
 - **Evaluate new tools by the problem they solve, not by novelty.** Skip tools that take a long time to learn or pull you back into low-level execution unless they solve a real, understood problem; also check whether an agent, not just a person, can use the tool.
+- **Layered access control for always-on agents.** Every's Claudie (a Claude-Code-based chief-of-staff agent with standing access to Slack, email, Google Workspace, a logged-in browser, and code execution) is secured through four backing-each-other-up layers rather than one static access list: least-access scoping (removing capabilities whose risk outweighs their benefit), programmatic controls (deterministic enforcement, not prompt text), prompt-based controls (softer guidance layered on top), and observability (catching what the other layers miss). Every restriction is treated as an explicit safety/capability tradeoff — limiting inbox access reduces exposure but also changes what work the agent can do — and the framework is deliberately a work in progress, tightened weekly as new threats are found rather than a fixed checklist. (Nityesh Agarwal / Every, Aug 2026)
 
 ## Failure modes
 
@@ -39,6 +40,7 @@ Working with agents is increasingly a management skill: define the job, explain 
 
 ## Recent changes
 
+- [2026-08-14] Added Every's four-layer access-control framework for always-on agents (least access, programmatic controls, prompt-based controls, observability), via the Claudie chief-of-staff case study.
 - [2026-08-10] Added a failure-mode case study on happy-path-only testing plus the illusion of explanatory depth (a vibe-coded MCP connector security hole).
 - [2026-08-04] Added spec-first "design layer" framework: a worked spec example, targeted review questions, converting recurring corrections into reusable instructions, tool selection by problem-fit, and constraint drift as a failure mode.
 
@@ -53,3 +55,5 @@ Working with agents is increasingly a management skill: define the job, explain 
 - [Andy Matuschak on agent loop tempo](../sources/tweets/andy-matuschak-agent-loop-tempo-2026-07.md)
 - [To Stay Ahead on AI, Think Like a Designer](../sources/newsletters/design-layer-framework-2026-08-04.md)
 - [I Vibe Coded a Security Risk](../sources/newsletters/vibe-coded-security-risk-2026-08-10.md)
+- ["How to Secure an AI Employee" (Every guide announcement)](../sources/newsletters/securing-ai-employee-guide-2026-08-14.md)
+- ["The Next Era of Great Work" (Every weekly digest)](../sources/newsletters/next-era-of-great-work-2026-08-16.md)

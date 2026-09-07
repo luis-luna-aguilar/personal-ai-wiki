@@ -12,6 +12,8 @@ sources: [cursor-blog-grok-4-5-launch-2026-07, ainews-spacexai-grok-45-2026-07-0
 
 xAI's (rebranded SpaceXAI following its Cursor acquisition) first model co-trained with Cursor — a 1.5T-parameter mixture-of-experts model, 3x larger than Grok 4.3. Positioned as "Opus-class" but faster, more token-efficient, and lower cost, and as xAI's first model trained for more than software engineering: a deliberately broad STEM/knowledge-work data mix alongside coding and agent trajectories drawn from Cursor's own usage data.
 
+**Superseded by [Grok 4.6](../../models/grok-4-6.md), 2026-08-13.**
+
 ## Current status (as of 2026-07-12)
 
 - Mixture-of-experts; 1.5T parameters, 3x Grok 4.3 (Musk disclosure, per Artificial Analysis via AINews); trained jointly by xAI/SpaceXAI and Cursor on trillions of tokens of Cursor codebase + developer-agent interaction data, plus broader STEM/knowledge-work data (Cursor blog)
@@ -40,6 +42,6 @@ Grok 4.5 is the first public output of the SpaceX-Cursor tie-up: a frontier-adja
 
 ## Sources
 
-- [Cursor — Introducing Grok 4.5](../sources/articles/cursor-blog-grok-4-5-launch-2026-07.md)
-- [AINews — SpaceXAI launches Grok 4.5](../sources/newsletters/ainews-spacexai-grok-45-2026-07-09.md)
-- [Every — mini vibe-check on Grok 4.5](../sources/newsletters/every-grok-4-5-mini-vibe-check-2026-07.md)
+- [Cursor — Introducing Grok 4.5](../../sources/articles/cursor-blog-grok-4-5-launch-2026-07.md)
+- [AINews — SpaceXAI launches Grok 4.5](../../sources/newsletters/ainews-spacexai-grok-45-2026-07-09.md)
+- [Every — mini vibe-check on Grok 4.5](../../sources/newsletters/every-grok-4-5-mini-vibe-check-2026-07.md)

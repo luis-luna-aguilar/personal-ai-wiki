@@ -24,6 +24,7 @@ The Erdős and Riemann results share a pattern worth watching: both come from *g
 ## Recent changes
 
 - [2026-09-07] Split out of [AI in Science](ai-in-science.md) into its own page, at the user's request, once pure-math signals (Erdős, Riemann Hypothesis) accumulated enough weight to warrant separate tracking from the page's broader biology/materials/self-driving-lab focus.
+- [2026-08-13] Unconfirmed: a tweet from mathematician Steven Strogatz reported that a neurosurgery resident used ChatGPT 5.6 to solve an open numerical-linear-algebra problem; no name, paper, or institutional confirmation exists yet. Not added to Current status pending verification.
 - [2026-08-11] Anthropic reported an unreleased research Claude variant improved a Riemann Hypothesis-related bound (41.6% → 67.2% of zeta zeros proven on the critical line), via ~31M output tokens of retries/exploration; not yet independently verified.
 - [2026-05-20] OpenAI's general-purpose reasoning model disproved the 1946 Erdős planar unit-distance conjecture, verified by external mathematicians with a companion paper — the first pure-math signal in this cluster.
 

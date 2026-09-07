@@ -17,7 +17,7 @@ xAI's CLI coding agent. Early beta, available to SuperGrok Heavy subscribers via
 - Early beta; install via `curl` command; SuperGrok Heavy subscribers only
 - **Plan mode**: review and adjust each step before diffs are applied — prevents runaway changes on large tasks
 - **Parallel subagents in worktrees**: delegates massive tasks to parallel subagents, each in their own git worktree — same isolation pattern as Claude Code's `--worktree` flag
-- **Grok 4.5 (July 2026):** the jointly trained SpaceXAI/Cursor model launched and is available in Grok Build; Coding Agent Index 76 in Grok Build, on par with GPT-5.5 in Codex and below Fable 5 in Claude Code (per Artificial Analysis, via AINews). See [Grok 4.5](../models/grok-4-5.md).
+- **Grok 4.5 (July 2026):** the jointly trained SpaceXAI/Cursor model launched and is available in Grok Build; Coding Agent Index 76 in Grok Build, on par with GPT-5.5 in Codex and below Fable 5 in Claude Code (per Artificial Analysis, via AINews). See [Grok 4.5](../history/models/grok-4-5.md) (superseded by [Grok 4.6](../models/grok-4-6.md)).
 - **Open source (July 2026):** the full agent codebase (844,530 lines of Rust) is now open on GitHub — developers can audit it, run it locally, and extend it with plugins and subagents. Released as the resolution to the SSH-key upload incident below.
 
 ## Weaknesses / caveats

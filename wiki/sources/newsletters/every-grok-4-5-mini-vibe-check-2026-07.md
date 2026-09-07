@@ -14,7 +14,7 @@ domains: [models]
 Every's newsletter, whose main content is unrelated (AI scribes and clinical cognitive offloading), but which opens with a mini vibe-check of Grok 4.5 — the first output of the SpaceX/Cursor co-training tie-up. Only the Grok 4.5 portion is used here.
 
 ## Influenced pages
-- [Grok 4.5](../../models/grok-4-5.md) — added Every's internal benchmark placement
+- [Grok 4.5](../../history/models/grok-4-5.md) — added Every's internal benchmark placement (page later superseded by [Grok 4.6](../../models/grok-4-6.md))
 
 ## Key claims extracted
 - Every's internal evals place Grok 4.5 roughly at Claude Opus 4.8 level

@@ -4,8 +4,8 @@ type: model
 domains: [models, coding]
 subcategory: frontier-model
 tags: [microsoft, closed-source]
-as_of: 2026-06-03
-sources: [ainews-mai-build-june-2026, satya-nadella-no-priors-june-2026]
+as_of: 2026-08-13
+sources: [ainews-mai-build-june-2026, satya-nadella-no-priors-june-2026, ainews-spacexai-grok-46-and-grok-bot-2026-08-13]
 ---
 
 # MAI-Thinking-1
@@ -46,9 +46,11 @@ Microsoft's first frontier-class reasoning model, launched at Build 2026. The he
 
 ## Recent changes
 
+- [2026-08-13] Reached general availability in Azure AI Foundry; Microsoft (Finbarr Timbers) specifically soliciting feedback on tool-use behavior
 - [2026-06-03] Launched at Microsoft Build 2026; initial benchmarks and tech report
 
 ## Sources
 
 - [AINews — Microsoft Build, MAI-Thinking-1 (June 3)](../sources/newsletters/ainews-mai-build-june-2026.md)
 - [Satya Nadella — No Priors x Latent Space (June 3)](../sources/newsletters/satya-nadella-no-priors-june-2026.md)
+- [AINews — SpaceXAI Grok 4.6 and Grok Bot (MAI-Thinking-1 Foundry GA)](../sources/newsletters/ainews-spacexai-grok-46-and-grok-bot-2026-08-13.md)

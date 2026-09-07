@@ -4,8 +4,8 @@ type: model
 domains: [models, coding, agents]
 subcategory: coding-model
 tags: [open-weights, agentic]
-as_of: 2026-07-31
-sources: [deepseek-v4-preview, ainews-2026-04-25, ainews-all-model-labs-are-now-agent-labs, ainews-not-much-happened-2026-08-01]
+as_of: 2026-08-13
+sources: [deepseek-v4-preview, ainews-2026-04-25, ainews-all-model-labs-are-now-agent-labs, ainews-not-much-happened-2026-08-01, ainews-spacexai-grok-46-and-grok-bot-2026-08-13]
 ---
 
 # DeepSeek V4
@@ -31,6 +31,14 @@ DeepSeek shipped a post-training-only upgrade to V4-Flash — same 284B total / 
 - **Scope:** this update applies to V4-Flash only. V4-Pro's API, app, and web product are unchanged; an official V4-Pro release remains pending.
 - Widely read as a direct competitive response to OpenAI's GPT-5.6 price cuts the day before.
 
+## V4 Pro general availability (as of 2026-08-13)
+
+DeepSeek's V4 Pro reached general availability, closing out the "official release still pending" status noted after the July V4-Flash update:
+
+- **Pricing:** confirmed at $0.435/M input, $0.87/M output — Cline reports this as roughly 57x cheaper than Claude Fable 5
+- **Benchmarks:** a reported 15.8% Terminal-Bench gain over the V4 Pro preview (absolute score not given in this source)
+- **Reception:** mixed — some early users (Yuchen Jin, scaling01, teortaxesTex) found it solid but not clearly ahead of Kimi/Flash on all tasks; observers suggested DeepSeek's next gains may depend more on RL/agent-environment work than raw scale
+
 ## Strengths
 
 - Serious open-weight long-context release with unusually concrete attention to KV-cache and long-trace economics
@@ -45,6 +53,7 @@ DeepSeek shipped a post-training-only upgrade to V4-Flash — same 284B total / 
 
 ## Recent changes
 
+- [2026-08-13] V4 Pro reached general availability: $0.435/$0.87 per M token pricing confirmed, +15.8% Terminal-Bench over its preview; capability reception mixed versus Kimi/Flash
 - [2026-07-31] V4-Flash 0731: post-training-only update jumps Terminal-Bench to 82.7 (+25.8) and AA Intelligence Index to 50 (from 40), now 1pt behind GPT-5.6 Luna; open-weighted under MIT with day-0 vLLM support; V4-Pro unaffected, still pending its own release.
 - [2026-05-23] DeepSeek made the 75% V4-Pro discount permanent; Artificial Analysis pricing/cost-per-Intelligence-Index comparison (via AINews) added, caveated as a May 2026 snapshot since DeepSeek's pricing page (fetched 2026-08-25) has since moved to peak/off-peak, cache-hit/miss tiers.
 - [2026-04-25] AINews follow-up reframed DeepSeek V4 from preview to release: Pro/Flash specs, MIT license, API pricing, independent open-model placement, Huawei Ascend compatibility, and token-volume caveats
@@ -56,3 +65,4 @@ DeepSeek shipped a post-training-only upgrade to V4-Flash — same 284B total / 
 - [AINews - DeepSeek V4 Pro and Flash](../sources/newsletters/ainews-2026-04-25.md)
 - [AINews — All model labs are now agent labs (DeepSeek V4-Pro permanent discount)](../sources/newsletters/ainews-all-model-labs-are-now-agent-labs.md)
 - [AINews — not much happened today (DeepSeek V4-Flash 0731)](../sources/newsletters/ainews-not-much-happened-2026-08-01.md)
+- [AINews — SpaceXAI Grok 4.6 and Grok Bot (DeepSeek V4 Pro GA)](../sources/newsletters/ainews-spacexai-grok-46-and-grok-bot-2026-08-13.md)

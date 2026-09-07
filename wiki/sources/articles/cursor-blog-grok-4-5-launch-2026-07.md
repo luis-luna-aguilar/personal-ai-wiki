@@ -14,7 +14,7 @@ domains: [coding, models]
 Cursor's official announcement of Grok 4.5, trained jointly with SpaceXAI (xAI post-Cursor-acquisition). Positions it as Cursor's most powerful model yet and its first trained for more than software engineering — a deliberately broad data mix spanning STEM tasks, research papers, and general knowledge work, in addition to trillions of tokens of Cursor codebase and developer-agent interaction data. Available immediately across Cursor's desktop, web, iOS, CLI, and SDK surfaces, with double usage for the first week. Composer 2.5 remains available as a separate, smaller-weight-class model.
 
 ## Influenced pages
-- [Grok 4.5](../../models/grok-4-5.md) — new model page
+- [Grok 4.5](../../history/models/grok-4-5.md) — new model page (later superseded by [Grok 4.6](../../models/grok-4-6.md))
 - [Cursor](../../tools/cursor.md) — updated SpaceX-acquisition section to reflect the model's launch
 - [Grok Build](../../tools/grok-build.md) — updated to reflect Grok 4.5's launch and availability
 - [State of Models](../../state-of/models.md) — replaced the Grok 4.20 entry with Grok 4.5

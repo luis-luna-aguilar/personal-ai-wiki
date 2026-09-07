@@ -14,7 +14,7 @@ domains: [coding, models]
 AINews' Twitter-recap coverage of the Grok 4.5 launch, compiling Elon Musk's and xAI/SpaceXAI's own framing plus Artificial Analysis' independent benchmark evaluation.
 
 ## Influenced pages
-- [Grok 4.5](../../models/grok-4-5.md) — benchmark and pricing detail
+- [Grok 4.5](../../history/models/grok-4-5.md) — benchmark and pricing detail (page later superseded by [Grok 4.6](../../models/grok-4-6.md))
 - [State of Models](../../state-of/models.md) — updated Grok entry
 - [Grok Build](../../tools/grok-build.md) — Coding Agent Index detail
 

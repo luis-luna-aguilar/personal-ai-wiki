@@ -20,7 +20,7 @@ Composer 2.5 is Cursor's in-house long-horizon coding model, an upgrade of Compo
 - Sharded Muon + dual mesh HSDP optimizer; reported 0.2s step time on a 1T-parameter model
 - Pricing: $0.50/M input, $2.50/M output standard; $3.00/M input, $15.00/M output fast variant
 - Cursor's next model is training on a SpaceX partnership at Colossus 2 scale (targeting million H100-equivalents)
-- Backs [Cursor](../tools/cursor.md)'s coding workspace; remains Cursor's separate, smaller-weight-class model alongside [Grok 4.5](grok-4-5.md), the jointly trained SpaceXAI model that launched in July 2026
+- Backs [Cursor](../tools/cursor.md)'s coding workspace; remains Cursor's separate, smaller-weight-class model alongside [Grok 4.6](grok-4-6.md) (the jointly trained SpaceXAI model line, launched in July 2026 as Grok 4.5 and superseded 2026-08-13)
 
 ## Strengths
 

@@ -2,6 +2,8 @@
 
 ## Archived from current page on 2026-09-07
 
+- [2026-07-16] Added GPT-Red, OpenAI's in-house prompt-injection attack model used to adversarially train GPT-5.6; GPT-5.6 now falls for only 0.05% of GPT-Red's attacks.
+- [2026-07-16] Grok Build caught uploading entire local directories, including SSH keys, to xAI's servers; feature disabled and full Rust source (844,530 lines) opened on GitHub in response — added as a new coding-agent local-data-upload attack surface, distinct from prompt injection
 - [2026-07-14] Devin Security Swarm detailed as Agentic MapReduce (deterministic-selector Plan/Shard, parallel Map, reasoning Reduce, sandboxed Verify); Cognition reported 72% recall on a CVE-pinned benchmark vs. rival scanners, still vendor-run.
 - [2026-07-10] GPT-5.6 Sol's offensive-capability line gains the UK AI Safety Institute's finding of universal jailbreaks in every testing round, enabling exploit development.
 - [2026-07-09] Added Claude Fable 5 and GPT-5.6 Sol to the offensive frontier-model section; both carry the `cybersecurity` domain and neither had been listed. Softened the GPT-5.5 line to a point-in-time claim now that GPT-5.6 Sol has shipped.

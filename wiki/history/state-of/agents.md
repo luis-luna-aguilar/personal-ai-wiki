@@ -1,5 +1,9 @@
 # State of Agents — History
 
+## Archived from current page on 2026-09-07
+
+- [2026-05-19] Devin Auto-Triage: Cognition ships always-on session-persistent bug triage agent; Slack monitoring + parent/child Devin structure + long-term deduplication memory
+
 ## Archived from current page on 2026-09-05
 
 - [2026-05-18] Multica launches
