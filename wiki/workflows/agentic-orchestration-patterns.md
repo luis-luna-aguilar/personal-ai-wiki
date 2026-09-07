@@ -5,7 +5,7 @@ domains: [agents, coding]
 subcategory: agentic-orchestration-patterns
 tags: [agentic]
 as_of: 2026-07-14
-sources: [notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, harness-engineering-early-april, open-agent-orchestration-late-march, skills-and-plugin-packaging-late-march, harness-engineering-march, deep-agents-overview, goose-platform, googlecloudtech-adk-2-orchestration-patterns, agent-infrastructure-harness-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, production-agent-orchestration-2026-04-29, agent-html-artifacts-2026-05-13, gas-city-software-factory-2026-05, dynamic-workflows-claude-code, loopcraft-june-2026, aiewf-loops-debate-2026-07-03, shepherd-live-agent-rollback-2026-07-06, claude-code-getting-started-with-loops-2026-06-30, software-factories-fde-2026-07, ai-code-review-eval-integrity-2026-06, token-tightening-ai-finops-2026-06, what-the-hell-is-a-loop-anyway, dashbench-code-review-understanding-2026-07, andy-matuschak-agent-loop-tempo-2026-07, every-compound-engineering-upgrade-2026-05, every-claude-dynamic-workflows-reliability-2026-06, devinai-blog-agentic-map-reduce, cognitioncom-blog-devin-fusion, ainews-new-ai-infra-unicorns-2026-05-22]
+sources: [notion-token-town, ainews-openclaw-2026-04-18, garrytan-confusion-protocol, matt-pocock-ddd-adr, harness-engineering-patterns, harness-engineering-early-april, open-agent-orchestration-late-march, skills-and-plugin-packaging-late-march, harness-engineering-march, deep-agents-overview, goose-platform, googlecloudtech-adk-2-orchestration-patterns, agent-infrastructure-harness-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, production-agent-orchestration-2026-04-29, agent-html-artifacts-2026-05-13, gas-city-software-factory-2026-05, dynamic-workflows-claude-code, loopcraft-june-2026, aiewf-loops-debate-2026-07-03, shepherd-live-agent-rollback-2026-07-06, claude-code-getting-started-with-loops-2026-06-30, software-factories-fde-2026-07, ai-code-review-eval-integrity-2026-06, token-tightening-ai-finops-2026-06, what-the-hell-is-a-loop-anyway, dashbench-code-review-understanding-2026-07, andy-matuschak-agent-loop-tempo-2026-07, every-compound-engineering-upgrade-2026-05, every-claude-dynamic-workflows-reliability-2026-06, devinai-blog-agentic-map-reduce, cognitioncom-blog-devin-fusion, ainews-new-ai-infra-unicorns-2026-05-22, aiewf-2026-five-trends-latentspace]
 ---
 
 # Agentic orchestration patterns
@@ -89,6 +89,8 @@ Reusable patterns for getting better behavior from one or more agents without de
 - AINews coined "Loopcraft" (June 2026) to name the paradigm: designing loops that prompt agents rather than prompting agents directly.
 - Dhinakaran and Seldo's loop map separates execution, task/Ralph, product/software-factory, system/autoresearch, and oversight loops, giving each a different iterated object, exit signal, and human role.
 - Cognition's Agentic MapReduce writeup cites three 2026 studies motivating whole-codebase agent limits: Zhang et al.'s *FastContext* found repository reading/searching consumes over half of coding-agent tool-use turns across 300 SWE-bench Multilingual trajectories; Zeng et al.'s *LOCA-bench* (ICML 2026) showed agent success falling sharply as environment description length grows (e.g. Claude Opus 4.5 96.0%→34.0% from 8K to 128K tokens); Ko et al. found search agents terminate with an underverified answer on 52.1% of multi-constraint search tasks.
+- AI Engineer World's Fair 2026 named the inner-loop/outer-loop split explicitly: Introspection's Roland Gavrilescu frames "autoresearch" as an outer-loop system that studies and maintains a primary inner-loop system; OpenClaw's Peter Steinberger put it plainly — "the agent runs the inner execution loop; I set the direction and I make decisions in the outer loop." A stage debate on whether fully autonomous loops are ready surfaced real disagreement: HumanLayer's Dex Horthy argued "the hype is outrunning the discipline" (loops need to be deterministic, like Kubernetes' control loops, not "frontier thinking"), while Ralph Loop creator Geoffrey Huntley likened the AI engineer's job to a locomotive engineer's: "[We're] kind of like locomotive engineers now. That's our job: to keep the locomotive on the rails."
+- AI Engineer World's Fair 2026 gave the software-factory/FDE pattern concrete named examples: Sierra's Natalie Meurer described forward-deployed-engineer work as managing "all the integrations and all the teams that contribute to the agent"; Cursor's Pauline Brunet framed FDE engagements around a "strict ROI" bar so customers don't turn the agents off after the engagement ends; Warp CEO Zach Lloyd described Oz, a new software-factory platform where organizations choose which lifecycle stages to automate and where humans stay in the loop for high-risk changes.
 
 ## Failure modes
 
@@ -108,6 +110,7 @@ Reusable patterns for getting better behavior from one or more agents without de
 
 ## Recent changes
 
+- [2026-07-14] Added named AI Engineer World's Fair 2026 detail to the loop-engineering and software-factory/FDE patterns: inner/outer loop framing (Introspection, OpenClaw), the autonomy-readiness stage debate (HumanLayer, Ralph Loop), and named FDE examples (Sierra, Cursor, Warp Oz).
 - [2026-07-14] Expanded Agentic MapReduce from a passing mention into a full pattern entry: deterministic Plan/Shard/Map/Reduce (+Verify for Security Swarm) architecture, sourced from Cognition's engineering writeup, with three supporting whole-codebase-agent-limits research citations.
 - [2026-07-08] Added loop-tempo selection from Andy Matuschak: fast controlled loops and slow delegated loops are easier to sustain than mid-speed partial-control loops.
 - [2026-07-08] Linked PR review artifacts and repo-local review standards to the dedicated AI PR/code-review workflow.
@@ -117,7 +120,6 @@ Reusable patterns for getting better behavior from one or more agents without de
 - [2026-06-26] Added AI review standards and review-noise failure mode from code-review workflow coverage.
 - [2026-06-24] Token-tightening coverage adds AI FinOps controls: budgets, model routing, prompt caching, cheaper defaults, checkpoints, and outcome-based spend review.
 - [2026-06-18] Every case studies add scripted-subagent orchestration as a practical Dynamic Workflows reliability pattern.
-- [2026-05-29] Every updated compound engineering from a four-step loop to an eight-step loop that explicitly includes ideation and polish around the agentic work phase.
 
 ## Related
 
@@ -158,3 +160,4 @@ Reusable patterns for getting better behavior from one or more agents without de
 - [Agentic MapReduce (Cognition/Devin blog)](../sources/articles/devinai-blog-agentic-map-reduce.md)
 - [Devin Fusion: Frontier Performance at 35% Lower Cost](../sources/articles/cognitioncom-blog-devin-fusion.md)
 - [AINews — New AI Infra unicorns: Exa, Modal, TurboPuffer](../sources/newsletters/ainews-new-ai-infra-unicorns-2026-05-22.md)
+- [5 Trends That Defined AI Engineering at World's Fair 2026 — Latent Space](../sources/newsletters/aiewf-2026-five-trends-latentspace.md)

@@ -1,5 +1,9 @@
 # State of Models — History
 
+## Archived from current page on 2026-09-06
+
+- [2026-06-17] Claude Fable 5 and Mythos 5 suspended globally under US government export controls; Fable 5 had topped DeepSWE, FrontierSWE, FrontierMath, and Epoch Capabilities Index (161) before suspension; Claude Opus 4.8 remains the accessible Anthropic frontier model
+
 ## Archived from current page on 2026-09-05
 
 - [2026-05-30] Open-weight adoption broadened operationally: AINews reports one in three AI teams ran open weights in April 2026, while access-risk coverage reframes local/open models as resilience infrastructure, not only cheaper alternatives.

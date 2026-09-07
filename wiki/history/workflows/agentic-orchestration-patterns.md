@@ -1,5 +1,9 @@
 # Agentic orchestration patterns — History
 
+## Archived from current page on 2026-09-06
+
+- [2026-05-29] Every updated compound engineering from a four-step loop to an eight-step loop that explicitly includes ideation and polish around the agentic work phase.
+
 ## Archived from current page on 2026-08-25
 
 - [2026-07-01] AIEWF / Latent Space software-factory coverage adds lifecycle-level factory loop and FDE/agent-engineer rollout pattern.

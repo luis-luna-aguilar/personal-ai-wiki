@@ -2,6 +2,10 @@
 
 Older recent-change entries spilled from [Claude Code](../../tools/claude-code.md).
 
+## Archived from current page on 2026-09-06
+
+- [2026-05-13] Agent View added (research preview, v2.1.139+): `claude agents` supervises background sessions with peek/reply, attach/detach, `/bg`, `--bg`, and worktree isolation.
+
 ## Archived from current page on 2026-09-05
 
 - [2026-05-13] Opus 4.7 fast mode added (research preview): 2.5× faster, ~6× cost per Cursor benchmarks; new latency/price tier

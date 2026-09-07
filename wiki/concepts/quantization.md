@@ -2,15 +2,15 @@
 title: Quantization
 type: concept
 domains: [models]
-as_of: 2026-05-05
-sources: [ngrok-quantization, local-offline-agents-2026-04-29]
+as_of: 2026-07-15
+sources: [ngrok-quantization, local-offline-agents-2026-04-29, gpt-56-raising-concerns-2026-07-15]
 ---
 
 # Quantization
 
 A compression technique that reduces the precision of a model's parameters (weights) to make the model smaller and faster to run, at a modest accuracy cost. The headline result: 4× smaller, 2× faster, 5-10% accuracy loss.
 
-## Current status (as of 2026-04-22)
+## Current status (as of 2026-07-15)
 
 - Standard technique for running large models on consumer hardware
 - Typical tradeoff: INT4 quantization → ~4× size reduction, ~2× inference speed, 5-10% accuracy drop
@@ -42,7 +42,14 @@ Quantization is what makes local model deployment practical. Without it, running
 
 Quantization is increasingly the enabling layer for local and offline agents. AINews reports that hardware-aware Hugging Face model selection is now common practice — users match model size to local GPU/CPU capacity after quantization. Gemma family models running via MLX on Apple Silicon and browser-local agents running quantized models client-side are moving from demos toward practical workflows. The pattern: quantization + hardware-aware selection makes capable offline agents accessible without cloud API calls.
 
+A July 2026 example pushes past standard INT4: PrismML compressed Alibaba's Qwen 3.6 27B into two Apache-2.0 variants — "Ternary Bonsai 27B" (5.9GB, 1.71 effective bits/parameter) and a "1-bit Bonsai 27B" (3.9GB, 1.125 effective bits) — claiming the 1-bit variant fits on an iPhone 17 Pro at 90% of the original model's performance (PrismML's own figure, not independently benchmarked). A developer-preview API is available via Together AI. Billed as the first 27B-class model that runs on a phone.
+
+## Recent changes
+
+- [2026-07-15] PrismML ships Bonsai 27B, a sub-2-bit quantization of Qwen 3.6 27B claimed to run on an iPhone 17 Pro at 90% of original performance.
+
 ## Sources
 
 - [Quantization from the ground up — ngrok blog](../sources/articles/ngrok-quantization.md)
 - [Local and offline agents become more credible](../sources/newsletters/local-offline-agents-2026-04-29.md)
+- [The Code — GPT-5.6 is raising concerns (PrismML Bonsai 27B)](../sources/newsletters/gpt-56-raising-concerns-2026-07-15.md)

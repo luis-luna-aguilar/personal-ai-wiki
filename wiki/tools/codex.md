@@ -4,16 +4,17 @@ type: tool
 domains: [coding, agents, cybersecurity, computer-use]
 subcategory: terminal-coding-agent
 tags: [openai, closed-source, agentic]
-as_of: 2026-07-01
-sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026, openai-gpt-5-5-launch, superhuman-2026-04-23, codex-broader-computer-work-2026-04-24, codex-for-work-2026-05-01, symphony-devin-terminal-orchestration-2026-04-28, openai-daybreak-2026-05-13, codex-mobile-may-2026, codex-adoption-ecosystem-2026-05, codex-maxxing-jxnl-2026-05, codex-zoom-mobile-2026-05, codex-general-work-agents-2026-07]
+as_of: 2026-07-14
+sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026, openai-gpt-5-5-launch, superhuman-2026-04-23, codex-broader-computer-work-2026-04-24, codex-for-work-2026-05-01, symphony-devin-terminal-orchestration-2026-04-28, openai-daybreak-2026-05-13, codex-mobile-may-2026, codex-adoption-ecosystem-2026-05, codex-maxxing-jxnl-2026-05, codex-zoom-mobile-2026-05, codex-general-work-agents-2026-07, every-urge-to-merge-2026-07-14, ainews-devin-fusion-router-moat-2026-07-14]
 ---
 
 # Codex
 
 OpenAI's cloud-based agent surface, accessed via CLI, ChatGPT, and mobile. It started as a coding agent, but current product direction is expanding into a broader computer-work system that can operate across code, browser flows, documents, spreadsheets, inboxes, CRM cleanup, healthcare coordination, meeting notes, and repeatable knowledge-work tasks.
 
-## Current status (as of 2026-05-18)
+## Current status (as of 2026-07-14)
 
+- **Folded into a ChatGPT "superapp" (July 2026):** OpenAI merged the standalone Codex app into a new ChatGPT desktop app with three modes — Chat (questions), Work (longer cross-tool assignments), and Codex (developer workflows); the previous ChatGPT app was relabeled "ChatGPT Classic." The move drew immediate backlash from power users (Theo Browne called it a "generational fumble"; Reddit threads described "mayhem" — duplicate apps, buried chats and projects, broken plugins, unclear usage limits). OpenAI course-corrected publicly with multiple usage-limit resets and, per Codex lead Thibault Sottiaux, a rollback of the context limit from 372K back down to 272K after it caused billing/usage side effects. Despite the rocky rollout, usage grew fast: chaining Fidji Simo's March disclosure (2M Codex users, an estimated 550K-700K on January 1) with a July tweet reporting 6M users on July 12 and 7M roughly a day later, AINews estimates Codex has grown around 10x year-to-date — compared with Claude Code's last public figure of roughly 2M weekly users and $2.5B ARR from February.
 - 4M+ weekly active users; 5× messages/user growth; 1M+ app downloads in first week of launch
 - Ollama added Codex app support, enabling local/open-model launch paths alongside cloud Codex
 - MagicPath canvas now ships natively inside Codex for visual task planning
@@ -96,6 +97,8 @@ Research preview. Background agents monitor recent screen activity, build memori
 
 ## Recent changes
 
+- [2026-07-14] OpenAI folded Codex into a new ChatGPT desktop "superapp" (Chat/Work/Codex modes); power users pushed back hard, but usage estimates put Codex around 6-7M users by mid-July, roughly 10x growth year-to-date.
+- [2026-07-11] Rollout friction: 36-plus model/effort configuration combinations drew complaints; OpenAI ran multiple usage-limit resets and rolled the context limit back from 372K to 272K.
 - [2026-07-01] Every frames Codex as a general-purpose workspace agent for inbox, CRM, healthcare coordination, writing, meeting-note, and personal knowledge workflows.
 - [2026-05-19] Zoom plugin (meeting-to-task context handoffs), keep-Mac-awake for long-running remote sessions, additional mobile remote-execution improvements
 - [2026-05-10] Codex-maxxing usage patterns (jxnl): durable threads, Heartbeats (thread-local scheduling), Goals with verification criteria, memory as files (vault + AGENTS.md), $browser/@chrome/@computer, side panel as live work surface
@@ -121,3 +124,5 @@ Research preview. Background agents monitor recent screen activity, build memori
 - [Codex-maxxing — Jason Liu](../sources/articles/codex-maxxing-jxnl-2026-05.md)
 - [Codex Zoom plugin + keep-Mac-awake — AINews (May 2026)](../sources/newsletters/codex-zoom-mobile-2026-05.md)
 - [Codex and Claude Code as general-purpose work agents](../sources/newsletters/codex-general-work-agents-2026-07.md)
+- [Every — The Urge to Merge (ChatGPT and Codex)](../sources/newsletters/every-urge-to-merge-2026-07-14.md)
+- [AINews — Codex usage growth, coding-agent cost/perf tradeoffs, and Devin Fusion](../sources/newsletters/ainews-devin-fusion-router-moat-2026-07-14.md)

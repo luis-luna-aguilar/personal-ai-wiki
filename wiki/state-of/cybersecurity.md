@@ -4,7 +4,7 @@ type: state-of
 domains: [cybersecurity]
 tags: []
 as_of: 2026-07-14
-sources: [slopcop-repo, glasswing, openai-gpt-5-5-launch, ai-security-scanners-2026-05-01, supply-chain-attacks-2026-05-13, agentic-security-tooling-2026-05-13, openai-daybreak-2026-05-13, cloudflare-glasswing-2026-05, the-code-devin-security-2026-07-02, ainews-not-much-happened-2026-07-02, gray-swan-ai-security-2026-06, devinai-blog-agentic-map-reduce, anthropic-glasswing-10k-vulnerabilities, github-breach-confirmation-2026-05]
+sources: [slopcop-repo, glasswing, openai-gpt-5-5-launch, ai-security-scanners-2026-05-01, supply-chain-attacks-2026-05-13, agentic-security-tooling-2026-05-13, openai-daybreak-2026-05-13, cloudflare-glasswing-2026-05, the-code-devin-security-2026-07-02, ainews-not-much-happened-2026-07-02, gray-swan-ai-security-2026-06, devinai-blog-agentic-map-reduce, anthropic-glasswing-10k-vulnerabilities, github-breach-confirmation-2026-05, ainews-gpt-56-launch-benchmarks-2026-07-10]
 ---
 
 # State of Cybersecurity
@@ -85,7 +85,7 @@ Frontier models operating above public tiers, deployed selectively for cybersecu
 
 - [Claude Mythos Preview](../models/claude-mythos-preview.md) — Anthropic; restricted preview; autonomously found thousands of zero-days; chains low-severity bugs into working exploits (exploit chain construction); autonomous proof generation loop; partners: Cisco, AWS, Microsoft; Cloudflare used it across 50+ repos (Project Glasswing, May 2026); Anthropic reported Project Glasswing and partners found 10,000+ high/critical-severity vulnerabilities within a month of launch (per AINews' recap, framed as a warning that the industry must adapt to this volume of AI-discovered findings) *(as of 2026-05-23)*
 - [Claude Fable 5](../models/claude-fable-5.md) — Anthropic; generally available Mythos-class flagship (launched June 9, restored July 2 after a brief export-control suspension); Anthropic routes some cyber, biology, and chemistry requests to Opus 4.8 instead of Fable 5 as a safety fallback *(as of 2026-07-02)*
-- [GPT-5.6 Sol](../models/gpt-5-6-sol.md) — OpenAI; "most capable model yet" for cybersecurity per OpenAI, competitive with Claude Mythos Preview on ExploitBench using about 1/3 the output tokens; does not cross the Cyber Critical threshold under OpenAI's Preparedness Framework *(as of 2026-07-09)*
+- [GPT-5.6 Sol](../models/gpt-5-6-sol.md) — OpenAI; "most capable model yet" for cybersecurity per OpenAI, competitive with Claude Mythos Preview on ExploitBench using about 1/3 the output tokens; does not cross the Cyber Critical threshold under OpenAI's Preparedness Framework; the UK AI Safety Institute reported finding universal jailbreaks in every round of testing, enabling long-form agentic vulnerability discovery and exploit development (per AINews, 2026-07-10) *(as of 2026-07-10)*
 - [GPT-5.5](../models/gpt-5-5.md) — OpenAI; CyberGym 81.8% in its own launch comparison table, above GPT-5.4 and Claude Opus 4.7 among publicly available models at the time of its April 2026 launch; publicly deployed with tighter safeguards rather than restricted-access-only release *(as of 2026-04-23)*
 
 ### Trusted defensive access
@@ -97,8 +97,9 @@ Provider programs that expand access to higher-risk cyber capabilities for verif
 
 ## Recent changes
 
-- [2026-07-09] Added Claude Fable 5 and GPT-5.6 Sol to the offensive frontier-model section; both carry the `cybersecurity` domain and neither had been listed. Softened the GPT-5.5 line to a point-in-time claim now that GPT-5.6 Sol has shipped.
 - [2026-07-14] Devin Security Swarm detailed as Agentic MapReduce (deterministic-selector Plan/Shard, parallel Map, reasoning Reduce, sandboxed Verify); Cognition reported 72% recall on a CVE-pinned benchmark vs. rival scanners, still vendor-run.
+- [2026-07-10] GPT-5.6 Sol's offensive-capability line gains the UK AI Safety Institute's finding of universal jailbreaks in every testing round, enabling exploit development.
+- [2026-07-09] Added Claude Fable 5 and GPT-5.6 Sol to the offensive frontier-model section; both carry the `cybersecurity` domain and neither had been listed. Softened the GPT-5.5 line to a point-in-time claim now that GPT-5.6 Sol has shipped.
 - [2026-07-02] Cognition launched Devin Security Swarm, pushing AI-assisted vulnerability detection toward parallel agent workflows that validate exploitability and generate fix PRs.
 - [2026-06-22] Gray Swan interview adds AI-native security framing: agents should be treated as untrusted systems; indirect prompt injection, identity, permissions, guardrails, and automated red teaming are core deployment concerns.
 - [2026-05-23] Anthropic reported Project Glasswing and partners found 10,000+ high/critical-severity vulnerabilities in essential software within a month of launch; added as a program-wide figure to the Claude Mythos Preview entry (industry-adaptation framing attributed to AINews' recap).
@@ -106,7 +107,6 @@ Provider programs that expand access to higher-risk cyber capabilities for verif
 - [2026-05-19] Cloudflare Project Glasswing: detailed harness architecture (8 stages, ~50 concurrent agents, adversarial validate agent); Mythos exploit chain construction and proof loop confirmed; organic refusals inconsistent as safety boundary; architectural resilience over patch speed as the defender takeaway
 - [2026-05-13] OpenAI announced Daybreak as a thin official cyber-defense signal combining frontier models, Codex, and security partners; implementation details remain pending.
 - [2026-05-13] Agentic security tooling is becoming a category signal: scanner, monitor, fix-validation, and deployment-risk workflows are being redesigned for software built and operated by agents.
-- [2026-05-13] Added `AI developer supply chain attacks`: Mini Shai-Hulud campaign (persistence via .claude/settings.json + .vscode/tasks.json hooks; Guardrails AI v0.10.1 confirmed compromised) and Hugging Face Transformers impersonator; mitigations: minimumReleaseAge, blockExoticSubdeps
 
 ## Sources
 

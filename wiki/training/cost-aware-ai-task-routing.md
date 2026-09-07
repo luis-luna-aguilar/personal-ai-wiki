@@ -3,8 +3,8 @@ title: Cost-aware AI task routing
 type: training
 domains: [agents, models]
 tags: [agentic]
-as_of: 2026-07-08
-sources: [task-routing-cost-discipline-2026-05-13, thinking-machines-financial-expert-judgment-2026-07-02, superhuman-bridgewater-thinking-machines-2026-07-02, local-ai-infrastructure-2026-06, token-tightening-ai-finops-2026-06, efficiencymaxxing-model-routing-2026-07, fable-unknowns-routing-2026-07]
+as_of: 2026-07-14
+sources: [task-routing-cost-discipline-2026-05-13, thinking-machines-financial-expert-judgment-2026-07-02, superhuman-bridgewater-thinking-machines-2026-07-02, local-ai-infrastructure-2026-06, token-tightening-ai-finops-2026-06, efficiencymaxxing-model-routing-2026-07, fable-unknowns-routing-2026-07, the-code-databricks-coding-benchmark-2026-07-10, databricks-benchmarking-coding-agents-2026-07, the-code-eval-data-moat-2026-07-13, ainews-devin-fusion-router-moat-2026-07-14]
 ---
 
 # Cost-aware AI task routing
@@ -28,6 +28,8 @@ AI cost discipline is moving from token counting to routing work to the cheapest
 - **Bridgewater / Thinking Machines finance case.** Thinking Machines reports that Bridgewater AIA Labs used expert-labeled data to train a Qwen3-235B model for six investor information-filtering tasks. Frontier models with naive prompts averaged roughly 50% accuracy; expert prompts raised them to the mid-70s; the final trained model improved from 78.2% to 84.7%, made 29.8% fewer mistakes than the best frontier model evaluated, and reduced inference cost per task by 13.8x. The routing lesson is durable: for repeated expert-judgment tasks, domain examples and smaller tuned models can beat generic frontier defaults on both quality and cost.
 - **Spiral / OpenRouter routing.** Every reports Spiral uses 12 models through OpenRouter: Sonnet 4.6 for most prose, Gemini 2.5 Flash for a top-edit pass that removes AI tells, and a smaller OpenAI model for file summaries. The reason is not only price: OpenRouter also standardizes provider APIs and provides fallback paths when one provider is unavailable.
 - **Fable for unknowns.** Every reports using Fable to find missing questions, hidden standards, and invalid targets before execution. In one workflow, Fable diagnosed that a copy-editing target was unvalidated; in another, it turned a video-clipping job into scripts and instructions that a cheaper model could reuse.
+- **Eval data, not the router, is the moat.** With several frontier models shipping in the same month, picking the right one for a task has become its own problem, and routing itself has commoditized — OpenRouter, Azure, and generic open-source routers all offer one. What none of them supply is the eval data that tells a router what "good" looks like for a specific workload: Not Diamond trains custom routers from a customer's own uploaded, scored examples, and the same approach powers OpenRouter's "Auto" mode. Cognition's Devin Fusion is a concrete instance of the mechanism working: running on Fable 5, it can beat Opus 4.8 on cost per task not because Fable is cheaper, but because stronger delegation and judgment mean fewer wasted actions — in 81% of sampled Fable-led runs, the lead model never makes a code edit itself (per AINews, relaying an independent coding-agent index analysis).
+- **Databricks' real-PR coding-agent benchmark.** Databricks built a private benchmark from real pull requests its own engineers had already completed in a multi-million-line production codebase, grading agents against each PR's original tests — a task set no model has trained on. Findings: open-source GLM 5.2 matched Claude Opus 4.8's quality at roughly 30% lower cost per task; running the *same* model with the same thinking effort through different coding harnesses (Claude Code/Codex vs. Pi) produced a >2x cost difference at equal quality — Pi sent roughly 3x less context per turn and finished in fewer runs, though Databricks is explicit that this isn't "Pi is always cheaper," just that harness choice is an independent variable from model choice; and per-token sticker prices mislead — in this benchmark Sonnet 5 cost $2.09 per completed task versus Opus's $1.94, despite Sonnet's lower per-token rate, because it took longer and re-read more context. Databricks argues a team's own merged PRs, with passing tests, are an untapped, model-agnostic eval set — the routing lesson extends from "which model" to "which model *and* which harness, measured per completed task."
 
 ## AI FinOps controls
 
@@ -67,3 +69,7 @@ AI cost discipline is becoming an operating function, not just a prompt-writing 
 - [Token tightening and AI FinOps](../sources/newsletters/token-tightening-ai-finops-2026-06.md)
 - [Efficiencymaxxing and model-routing discipline](../sources/newsletters/efficiencymaxxing-model-routing-2026-07.md)
 - [Fable for unknowns and cheaper specialists for settled work](../sources/newsletters/fable-unknowns-routing-2026-07.md)
+- [The Code — Databricks' real-PR coding-agent cost benchmark](../sources/newsletters/the-code-databricks-coding-benchmark-2026-07-10.md)
+- [Databricks — Benchmarking coding agents on our multi-million line codebase](../sources/articles/databricks-benchmarking-coding-agents-2026-07.md)
+- [The Code — Everyone is building AI model routers; the real asset is your eval data](../sources/newsletters/the-code-eval-data-moat-2026-07-13.md)
+- [AINews — Coding-agent cost/perf tradeoffs: Terra Max, Devin Fusion, and Fable-led delegation](../sources/newsletters/ainews-devin-fusion-router-moat-2026-07-14.md)

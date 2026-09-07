@@ -3,8 +3,8 @@ title: Agent skill methodology
 type: training
 domains: [agents]
 tags: [perplexity, agentic]
-as_of: 2026-07-03
-sources: [perplexity-agent-skill-methodology-2026-05-12, agent-html-artifacts-2026-05-13, agent-skills-context-evals-2026-05-13, skill-engineering-impeccable-2026-07-02, vercel-agents-new-software-2026-07-03, autoresearch-agent-recipes-2026-07, powerpoint-agent-skill-failure-mode-2026-06]
+as_of: 2026-07-15
+sources: [perplexity-agent-skill-methodology-2026-05-12, agent-html-artifacts-2026-05-13, agent-skills-context-evals-2026-05-13, skill-engineering-impeccable-2026-07-02, vercel-agents-new-software-2026-07-03, autoresearch-agent-recipes-2026-07, powerpoint-agent-skill-failure-mode-2026-06, gpt-56-raising-concerns-2026-07-15]
 ---
 
 # Agent skill methodology
@@ -68,8 +68,20 @@ When a team switches default models, run the skill's positive and negative cases
 - Vercel's eve interview frames skills as a way to keep agents current when model training data contains stale product knowledge.
 - Impeccable coverage shows the same pattern applied to design agents: encode design vocabulary and constraints as reusable skills rather than relying on one-shot taste prompts.
 
+## What the benchmarks say
+
+The methodology above was practitioner-sourced until SkillsBench and a companion paper (July 2026) became the first controlled measurements of whether skills actually help:
+
+- **Self-written skills underperform no skills at all.** SkillsBench tested the shortcut every team tries first — asking the model to write its own skill — against a no-skill baseline. Self-written skills scored *worse on average* than no skills. The operating knowledge has to come from a human; the model cannot bootstrap its own judgment into a skill.
+- **Short beats exhaustive, with a number behind it now.** Two or three focused modules outperformed detailed, exhaustive documentation, which scored below the no-skill baseline — the same direction as this page's existing "cut every line the agent would get right without it" guidance, now with a benchmark result rather than only intuition.
+- **Loading every skill you have makes things worse too.** A second paper (name not given in the source newsletter) found that a few relevant skills beat loading the full skill library, at lower token cost as well — reinforcing progressive disclosure as a correctness concern, not just an efficiency one.
+- **Polish hides the damage.** Responses with skills enabled looked more professional even when they failed more often: 16 of 84 SkillsBench tasks performed worse with skills turned on, invisible without a direct head-to-head comparison against the no-skill baseline. This argues for extending this page's "regression-test skills after model changes" guidance to any skill change, not only model upgrades — a skill edit can silently make things worse behind more polished-looking output.
+
+The SkillsBench harness is open-source, so a team can run these same comparisons on its own skills rather than trusting the published numbers alone.
+
 ## Recent changes
 
+- [2026-07-15] Added SkillsBench findings: self-written skills score worse than no skills; short skills beat exhaustive documentation; loading every available skill underperforms a few relevant ones; skill regressions are invisible without a head-to-head comparison ("polish hides the damage").
 - [2026-07-03] Vercel eve interview and Impeccable coverage reinforced skills as a current-knowledge and domain-judgment layer across agent harnesses.
 - [2026-07-01] Added agent recipes as portable bundles of instructions, evals, failure history, and signal-processing logic.
 - [2026-06-29] Presentation automation added as a high-context skill example where reliable output requires supporting files, scripts, references, and review loops.
@@ -94,3 +106,4 @@ When a team switches default models, run the skill's positive and negative cases
 - [Vercel's Andrew Qu on why agents are a new kind of software](../sources/newsletters/vercel-agents-new-software-2026-07-03.md)
 - [Autoresearch and agent recipes](../sources/newsletters/autoresearch-agent-recipes-2026-07.md)
 - [PowerPoint remains hard for agents](../sources/newsletters/powerpoint-agent-skill-failure-mode-2026-06.md)
+- [The Code — GPT-5.6 is raising concerns (SkillsBench)](../sources/newsletters/gpt-56-raising-concerns-2026-07-15.md)

@@ -4,15 +4,15 @@ type: model
 domains: [models]
 subcategory: frontier-model
 tags: [xai]
-as_of: 2026-07-08
-sources: [cursor-blog-grok-4-5-launch-2026-07, ainews-spacexai-grok-45-2026-07-09]
+as_of: 2026-07-12
+sources: [cursor-blog-grok-4-5-launch-2026-07, ainews-spacexai-grok-45-2026-07-09, every-grok-4-5-mini-vibe-check-2026-07]
 ---
 
 # Grok 4.5
 
 xAI's (rebranded SpaceXAI following its Cursor acquisition) first model co-trained with Cursor — a 1.5T-parameter mixture-of-experts model, 3x larger than Grok 4.3. Positioned as "Opus-class" but faster, more token-efficient, and lower cost, and as xAI's first model trained for more than software engineering: a deliberately broad STEM/knowledge-work data mix alongside coding and agent trajectories drawn from Cursor's own usage data.
 
-## Current status (as of 2026-07-08)
+## Current status (as of 2026-07-12)
 
 - Mixture-of-experts; 1.5T parameters, 3x Grok 4.3 (Musk disclosure, per Artificial Analysis via AINews); trained jointly by xAI/SpaceXAI and Cursor on trillions of tokens of Cursor codebase + developer-agent interaction data, plus broader STEM/knowledge-work data (Cursor blog)
 - Pricing: $2/M input, $6/M output (base); $4/M input, $18/M output (fast variant) (Cursor blog); cache hits discounted 75% to $0.50/M; inputs over 200K tokens cost double (per Artificial Analysis, via AINews)
@@ -20,6 +20,7 @@ xAI's (rebranded SpaceXAI following its Cursor acquisition) first model co-train
 - Available immediately in Cursor (desktop, web, iOS, CLI, SDK) with double usage for the first week; also available in Grok Build and via API from day 0 (per AINews)
 - Per Artificial Analysis, via AINews: #4 Intelligence Index (score 54, +16 vs. Grok 4.3), behind Fable 5/GPT-5.5/Opus 4.8; GDPval-AA v2 Elo 1543 (#4); Coding Agent Index 76 in Grok Build (on par with GPT-5.5 in Codex, below Fable 5 in Claude Code); ~14K avg output tokens per Intelligence Index task, 60%+ lower than Opus 4.8; $0.31 cost per Intelligence Index task
 - Composer 2.5 remains Cursor's separate, smaller-weight-class model; Cursor plans to keep releasing models in that size tier alongside the Grok 4.5 weight class
+- Every's mini vibe-check (internal, non-public evals) placed Grok 4.5 roughly at Claude Opus 4.8 level — one tester ranked it slightly above Opus 4.8 since it completed assignments end-to-end that Opus abandoned partway, while another placed it in the Opus-4.5-to-4.6 range on Every's compound-engineering workflow ("not state of the art, but pretty good for a lot of things, and very fast"); rated near Opus 4.6/4.7 on PowerPoint-style slide generation; Every still prefers GPT-5.6 Sol for writing
 
 ## Why it matters
 
@@ -34,9 +35,11 @@ Grok 4.5 is the first public output of the SpaceX-Cursor tie-up: a frontier-adja
 
 ## Recent changes
 
+- [2026-07-12] Every's mini vibe-check rates it roughly Opus-4.8-level on internal evals; strong at vibe-coded UI work and slide generation, cheaper than both Opus 4.8 and GPT-5.6 Sol.
 - [2026-07-08] Launched: 1.5T MoE co-trained with Cursor, $2/$6 pricing, available across all Cursor surfaces plus Grok Build and API
 
 ## Sources
 
 - [Cursor — Introducing Grok 4.5](../sources/articles/cursor-blog-grok-4-5-launch-2026-07.md)
 - [AINews — SpaceXAI launches Grok 4.5](../sources/newsletters/ainews-spacexai-grok-45-2026-07-09.md)
+- [Every — mini vibe-check on Grok 4.5](../sources/newsletters/every-grok-4-5-mini-vibe-check-2026-07.md)
