@@ -4,8 +4,8 @@ type: model
 domains: [models, creative]
 subcategory: frontier-model
 tags: [closed-source, agentic, meta]
-as_of: 2026-08-11
-sources: [muse-spark, open-creative-workflows-2026-06, meta-muse-image-video-2026-07, superhuman-chatgpt-work-muse-spark-2026-07, the-code-databricks-coding-benchmark-2026-07-10, ainews-gpt-56-rollout-not-much-happened-2026-07-11, amd-acquires-taalas-2026-08-07, anthropic-riemann-hypothesis-2026-08-11]
+as_of: 2026-08-21
+sources: [muse-spark, open-creative-workflows-2026-06, meta-muse-image-video-2026-07, superhuman-chatgpt-work-muse-spark-2026-07, the-code-databricks-coding-benchmark-2026-07-10, ainews-gpt-56-rollout-not-much-happened-2026-07-11, amd-acquires-taalas-2026-08-07, anthropic-riemann-hypothesis-2026-08-11, ainews-poolside-nvidia-2026-08-21]
 ---
 
 # Muse Spark
@@ -52,10 +52,13 @@ Muse Spark 1.2 moved from off-the-board to frontier-tier quickly. On the Vals In
 
 Meta separately claimed gold-medal-level performance across five STEM Olympiads (APhO, IPhO — perfect theory scores — IMO, IChO, RMM), three submitted under live competition conditions and officially graded, using no external tools (no search, code execution, or calculator) and attributing part of the gain to multi-agent orchestration with parallel reasoning. The tool-free framing immediately fed into the ongoing "LLMs vs. harnesses vs. neurosymbolic" debate (François Chollet and others), since Meta's own explanation credits orchestration as much as raw model capability.
 
+Further third-party numbers followed on 2026-08-21: Agent Arena reported a +2.1% net improvement (up from +0.9% in v1.1), with a particularly strong Bash Recovery gain of +11.4%, and DesignArena ranked it #1 for Video-to-Website, #2 for Image-to-HTML, and #3 for Image-to-Frontend, describing it as sitting on the price/quality Pareto frontier.
+
 A smaller, architecturally distinct sibling, **Muse Glimmer** (30B dense, multimodal, Apache 2.0, designed for always-on local agents) shipped 2026-08-11 — see [Muse Glimmer](muse-glimmer.md). Alexandr Wang confirmed Muse Spark 1.2's own weights are coming "soon," a reversal from Spark 1.1's closed, metered-API-only launch.
 
 ## Recent changes
 
+- [2026-08-21] Additional third-party benchmarks: Agent Arena +2.1% net improvement (Bash Recovery +11.4%); DesignArena #1 Video-to-Website, #2 Image-to-HTML, #3 Image-to-Frontend.
 - [2026-08-11] Muse Glimmer ships as a smaller, open-weight (Apache 2.0) sibling model; Muse Spark 1.2's own weights promised "soon" — a reversal from Spark 1.1's closed API-only launch.
 - [2026-08-07] Muse Spark 1.2 breaks into frontier-tier benchmarks: Vals Index top 5 at $0.69/test, first model above 60% on Finance Agent v2, five STEM Olympiad gold-medal-level results under no-tool conditions.
 - [2026-07-09] Muse Spark 1.1 launches on the new Meta Model API — Meta's first paid, metered model; AA Intelligence Index 51 (+8 vs 1.0); Arena #9 Code Arena: Frontend.
@@ -73,3 +76,4 @@ A smaller, architecturally distinct sibling, **Muse Glimmer** (30B dense, multim
 - [AINews — GPT-5.6 rollout, not much happened today (Muse Spark 1.1 benchmarks)](../sources/newsletters/ainews-gpt-56-rollout-not-much-happened-2026-07-11.md)
 - [AMD acquires Taalas](../sources/newsletters/amd-acquires-taalas-2026-08-07.md)
 - [AINews — Anthropic's Riemann Hypothesis bound improvement](../sources/newsletters/anthropic-riemann-hypothesis-2026-08-11.md)
+- [AINews — Poolside gets $12B reverse-execuhire to NVIDIA](../sources/newsletters/ainews-poolside-nvidia-2026-08-21.md)

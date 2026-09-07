@@ -25,7 +25,7 @@ Terminal-Bench has multiple non-comparable variants (2.0, 2.1, Hard); scores bel
 | Model | Variant | Score | As of |
 |---|---|---|---|
 | [Claude Fable 5](../models/claude-fable-5.md) | 2.1 | 88.0% | 2026-07-02 |
-| [GLM-5.2](../models/glm-5-2.md) | 2.1 | 81.0% | 2026-06-17 |
+| [GLM-5.2](../history/models/glm-5-2.md) | 2.1 | 81.0% | 2026-06-17 |
 | [Gemini 3.5 Flash](../tools/gemini.md) | 2.1 | 76.2% | 2026-05-20 |
 | GPT-5.6 Sol | 2.1 | OpenAI claims a new state of the art; exact score not recoverable from the launch post | 2026-07-09 |
 | [MiniMax M3](../models/minimax-m3.md) | 2.1 | 66.0% | 2026-06-02 |

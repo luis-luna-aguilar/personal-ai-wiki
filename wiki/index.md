@@ -17,7 +17,7 @@ When adding a new wiki page, add its index entry under the correct section. One 
 Read-me-first dashboards per domain.
 
 - [state-of/coding](state-of/coding.md) — current state of AI coding tools and workflows *(as_of: 2026-07-14)*
-- [state-of/models](state-of/models.md) — current state of foundation models *(as_of: 2026-07-08)*
+- [state-of/models](state-of/models.md) — current state of foundation models *(as_of: 2026-08-20)*
 - [state-of/agents](state-of/agents.md) — current state of agentic systems and tool use *(as_of: 2026-07-08)*
 - [state-of/legal](state-of/legal.md) — current state of AI in legal practice *(as_of: 2026-06-04)*
 - [state-of/computer-use](state-of/computer-use.md) — current state of AI computer-use agents and agent-readable web infrastructure *(as_of: 2026-07-08)*
@@ -42,7 +42,7 @@ Foundation models. One page per model family or generation.
 - [models/grok-4-6](models/grok-4-6.md) — xAI/SpaceXAI; 1.5T MoE, supersedes Grok 4.5; AA Intelligence Index 61, 88.4% Terminal-Bench v2.1, unchanged $2/$6 pricing; powers new Grok Bot product *(as_of: 2026-08-13)*
 - [models/gpt-5-5](models/gpt-5-5.md) — OpenAI frontier model for coding, knowledge work, science, cyber tasks, Codex, and personal-finance agent workflows *(as_of: 2026-07-02)*
 - [models/gpt-5-6-sol](models/gpt-5-6-sol.md) — OpenAI flagship (Sol/Terra/Luna family); launched as a restricted preview, cleared for public rollout July 2026; METR predeployment eval found high detected cheating and uncertain time-horizon estimates *(as_of: 2026-07-09)*
-- [models/glm-5-2](models/glm-5-2.md) — Z.ai MIT open-weight; 744B/40B MoE, 1M context, ZCode workspace, provider adoption, and frontier-adjacent open-model coding signal *(as_of: 2026-07-02)*
+- [models/glm-5-3](models/glm-5-3.md) — Z.ai; supersedes GLM-5.2; same 753B/40B MoE footprint and price, large post-training-RL benchmark jump (+246 GDPval-AA v2, ties Kimi K3) *(as_of: 2026-08-20)*
 - [models/gpt-image-2](models/gpt-image-2.md) — OpenAI image generation model; #1 across image-arena categories by a wide Elo margin *(as_of: 2026-04-22)*
 - [models/cosmos-3](models/cosmos-3.md) — NVIDIA; Mixture-of-Transformers (autoregressive reasoner + diffusion generator); Nano 16B / Super 64B; #1 open-weight Text-to-Image and Image-to-Video *(as_of: 2026-06-02)*
 - [models/diffusiongemma](models/diffusiongemma.md) — Google experimental 26B MoE; block denoising text generation (non-autoregressive); first diffusion LLM natively in vLLM; Apache 2.0; research artifact *(as_of: 2026-06-11)*
@@ -61,7 +61,8 @@ Foundation models. One page per model family or generation.
 - [models/qwen-3-6-27b](models/qwen-3-6-27b.md) — Alibaba dense 27B open-weight; beats prior 397B MoE on all coding benchmarks; runs under 20 GB RAM *(as_of: 2026-05-01)*
 - [models/qwen-3-6-35b-a3b](models/qwen-3-6-35b-a3b.md) — Alibaba open-weight MoE coding/agent model; community benchmarks now place it strongest in the ~20GB local tier for long-context paper-to-code tasks *(as_of: 2026-05-13)*
 - [models/qwen-3-7](models/qwen-3-7.md) — Alibaba Qwen 3.7 preview; #13 Arena text overall, #7 Math; first Alibaba model in top-15 overall *(as_of: 2026-05-23)*
-- [models/qwen-3-8](models/qwen-3-8.md) — Alibaba's flagship; Qwen3.8-Max ships in full at 2.4T/~95B active; #4 Frontend Code Arena; open weights promised for Max + 27B sibling; license reportedly restricts US/EU/UK/Korea *(as_of: 2026-08-04)*
+- [models/qwen-3-8](models/qwen-3-8.md) — Alibaba's flagship; Qwen3.8-Max ships in full at 2.4T/~95B active; #4 Frontend Code Arena; open weights promised for Max + 27B sibling; license reportedly restricts US/EU/UK/Korea *(as_of: 2026-08-20)*
+- [models/qwen-3-8-27b](models/qwen-3-8-27b.md) — Alibaba's smaller Qwen3.8 sibling; "DeepSeek moment" for local models — #1 in Cline, AA Intelligence Index parity with DeepSeek V4-Pro/GPT-5.6 Luna Max, offset by a reported factual-recall regression *(as_of: 2026-08-20)*
 
 ## Tools
 
@@ -95,6 +96,8 @@ Tools and products built on top of models. One page per tool.
 - [tools/futurehouse](tools/futurehouse.md) — science-agent platform for research and discovery workflows *(as_of: 2026-04-22)*
 - [tools/flux-3](tools/flux-3.md) — Black Forest Labs' unified image/video/audio/action-prediction model, built on "Self Flow" research; companion FLUX3-mimic extends it to robot control *(as_of: 2026-07-24)*
 - [tools/gemini](tools/gemini.md) — Gemini umbrella page covering Google's assistant surfaces, enterprise agent platform, artifact generation, computer use, and managed-agent API primitives *(as_of: 2026-07-08)*
+- [tools/glean](tools/glean.md) — enterprise AI co-worker platform; three-tier model routing, Waldo pre-model filtering layer, ~4x cost-efficiency claim vs Claude Cowork *(as_of: 2026-08-18)*
+- [tools/openrouter](tools/openrouter.md) — model-routing/aggregation API acquired by Stripe for a reported $7B; 250T tokens/month routed *(as_of: 2026-08-17)*
 - [tools/genspark-slides](tools/genspark-slides.md) — AI slides workflow inside Genspark's broader agent/content product surface *(as_of: 2026-04-22)*
 - [tools/google-adk](tools/google-adk.md) — Google's open-source agent framework; ADK 2.0 now clearly centers graph workflows, coordinator-specialist routing, A2A handoffs, and sandboxed execution *(as_of: 2026-04-24)*
 - [tools/eve](tools/eve.md) — Vercel's agent framework for resumability, fallbacks, filesystem agents, skills, subagents, sandboxes, long-running jobs, observability, and evals *(as_of: 2026-07-03)*
@@ -264,8 +267,8 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 ## Page count
 
 - state-of: 11
-- models: 25
-- tools: 84
+- models: 26
+- tools: 86
 - benchmarks: 12
 - workflows: 6
 - concepts: 19
@@ -273,4 +276,4 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 - training: 13
 - use-cases: 3
 
-**Total content pages: 185.**
+**Total content pages: 188.**

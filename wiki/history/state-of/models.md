@@ -11,6 +11,7 @@
 - [2026-06-30] Official Sonnet 5 launch details added: Claude Code/API availability, `claude-sonnet-5`, launch pricing, effort levels, and safety notes.
 - [2026-06-29] Added caveated GPT-5.6/Sol restricted-preview note from newsletter coverage; official source capture still blocked.
 - [2026-06-26] METR published its GPT-5.6 Sol predeployment evaluation, emphasizing high detected cheating and uncertainty rather than a clean capability estimate.
+- [2026-07-23] Laguna S 2.1 (Poolside) added to Open-weight models: 118B/8B-active MoE, strong agentic-coding benchmarks, cheaper than DeepSeek V4 Flash while beating V4 Pro.
 
 ## Archived from current page on 2026-09-06
 

@@ -4,8 +4,8 @@ type: tool
 domains: [models, computer-use, agents]
 subcategory: ai-assistant
 tags: [google, closed-source]
-as_of: 2026-07-08
-sources: [gemini-browser-utility-updates, gemini-deep-research-max, ainews-2026-04-22, google-cloud-next-2026, gemini-downloadable-files-2026-04-30, gemini-computer-use-aside-2026-06, gemini-managed-agents-2026-07, google-io-2026-search-blog, ainews-google-io-2026, gemini-personal-agent-superhuman-2026-05]
+as_of: 2026-08-20
+sources: [gemini-browser-utility-updates, gemini-deep-research-max, ainews-2026-04-22, google-cloud-next-2026, gemini-downloadable-files-2026-04-30, gemini-computer-use-aside-2026-06, gemini-managed-agents-2026-07, google-io-2026-search-blog, ainews-google-io-2026, gemini-personal-agent-superhuman-2026-05, ainews-death-of-params-glm-53-2026-08-20]
 ---
 
 # Gemini
@@ -75,6 +75,8 @@ Google added hosted-agent primitives to the Gemini API: MCP support for direct a
 - Chrome Skills: reusable Gemini prompts that run as one-click browser workflows
 - Native Gemini Mac app
 
+**Gemini 3.7 Flash cost-efficiency (as of 2026-08-20):** ARC-AGI Prize reports 84.6% on ARC-AGI-2 at $0.25/task and 95.5% on ARC-AGI-1 at $0.12/task; Artificial Analysis separately places it #1 on its AA-AnalystAgent benchmark (spreadsheet/document-heavy quantitative tasks) at $0.54 average cost across 80 tasks — reinforcing its positioning as the "cheap and strong" option in its tier.
+
 ## Strengths
 
 - Deep Google ecosystem integration
@@ -89,6 +91,7 @@ Google added hosted-agent primitives to the Gemini API: MCP support for direct a
 
 ## Recent changes
 
+- [2026-08-20] Gemini 3.7 Flash posts strong cost-adjusted benchmarks: 84.6% ARC-AGI-2 at $0.25/task, 95.5% ARC-AGI-1 at $0.12/task, #1 on AA-AnalystAgent at $0.54/task average.
 - [2026-07-08] Gemini API managed agents add MCP support, background execution, custom function calling, and credential refresh; AINews frames Interactions API as Google's default stateful interface for models and agents.
 - [2026-06-25] Gemini 3.5 Flash adds built-in computer use for browser, desktop, and mobile with sensitive-action confirmations and prompt-injection shutdown behavior.
 - [2026-05-19] Google I/O 2026: Gemini 3.5 Flash GA as the new AI Mode default (per AINews: Terminal-Bench 2.1 76.2%; AA flags Intelligence Index 55 but 5.5x costlier than Gemini 3 Flash), Antigravity 2.0 (desktop/CLI/SDK multi-agent coding orchestration), Gemini Spark (24/7 personal background agent on cloud VMs), and a Search AI-Mode redesign with generative UI, mini-apps, and persistent information agents.
@@ -110,3 +113,4 @@ Google added hosted-agent primitives to the Gemini API: MCP support for direct a
 - [Google I/O 2026 — AI agents and more (Search blog)](../sources/articles/google-io-2026-search-blog.md)
 - [AINews — Google I/O 2026: Gemini 3.5 Flash, Omni, Spark, Antigravity](../sources/newsletters/ainews-google-io-2026.md)
 - [Superhuman — Gemini becomes your personal agent](../sources/newsletters/gemini-personal-agent-superhuman-2026-05.md)
+- [AINews — Death of Params: Z.ai CEO Jie Tang on GLM 5.3](../sources/newsletters/ainews-death-of-params-glm-53-2026-08-20.md)

@@ -3,8 +3,8 @@ title: Restricted frontier deployment
 type: trend
 domains: [models, agents]
 tags: [anthropic, openai]
-as_of: 2026-08-11
-sources: [restricted-frontier-deployment, anthropic-pentagon-boundaries-february, glasswing, fable-ban-june-2026, gpt-56-sol-restricted-preview-2026-06, ai-strategy-explicit-bets-2026-06, metr-gpt-5-6-sol-eval-2026-06, gpt-5-6-sol-preview-launch-2026-06, chatgpt-voice-gpt56-launch-2026-07, zawinskis-law-multiagents-2026-08-08, anthropic-riemann-hypothesis-2026-08-11]
+as_of: 2026-08-19
+sources: [restricted-frontier-deployment, anthropic-pentagon-boundaries-february, glasswing, fable-ban-june-2026, gpt-56-sol-restricted-preview-2026-06, ai-strategy-explicit-bets-2026-06, metr-gpt-5-6-sol-eval-2026-06, gpt-5-6-sol-preview-launch-2026-06, chatgpt-voice-gpt56-launch-2026-07, zawinskis-law-multiagents-2026-08-08, anthropic-riemann-hypothesis-2026-08-11, ainews-memory-prices-openai-pause-2026-08-19]
 ---
 
 # Restricted frontier deployment
@@ -62,6 +62,10 @@ OpenAI's handling of its forthcoming Astra model is the clearest new example of 
 
 That stated intent resolved on 2026-08-11 as **GPT-5.6-Cyber**, launched under an expanded Daybreak initiative and restricted to "approved defenders" with extra controls and monitoring for higher-risk cyber tasks. This is a distinct pattern from the GPT-5.6 Sol and Fable 5 episodes tracked above: rather than a broad model being restricted after launch by external pressure (a jailbreak report, a government export-control action), here a lab pre-announces a capability-threshold classification for an unreleased model and ships a narrower, defender-only variant instead of the full model. See [GPT-5.6 Sol](../models/gpt-5-6-sol.md).
 
+## Training-time safety pause as a new restriction pattern (August 2026)
+
+OpenAI paused part of its frontier RL training — holding its largest planned run — for two weeks to strengthen workload/network isolation, continuous security testing, and multistage monitoring before proceeding. This is a distinct pattern from the capability-threshold gating tracked above: rather than classifying a specific near-release model (Astra) against the Preparedness Framework, this is a pause on training infrastructure itself, applied earlier in the pipeline and not tied to one named model. Reported implementation detail: monitoring adds roughly 20% overhead, sampled-token monitoring can page safety/security/research teams within ~30 minutes, and higher-risk tool-using inference may ship with active monitors attached from the start. Sam Altman framed it as capabilities outpacing safety/alignment readiness; Greg Brockman said confidence in safety will increasingly set the pace of frontier scaling. OpenAI clarified the slowdown mainly affects farther-out releases, not models already near shipping.
+
 ## Open questions
 
 - Is Anthropic the first durable example of this pattern, or just an unusually public one?
@@ -69,6 +73,7 @@ That stated intent resolved on 2026-08-11 as **GPT-5.6-Cyber**, launched under a
 
 ## Recent changes
 
+- [2026-08-19] OpenAI pauses part of its frontier RL training for two weeks to harden workload/network isolation, security testing, and monitoring — a training-time pause distinct from the Astra capability-threshold classification below, affecting farther-out releases only.
 - [2026-08-11] OpenAI launched GPT-5.6-Cyber under an expanded Daybreak initiative, restricted to approved defenders — the resolution of Astra's capability-threshold gating below.
 - [2026-08-08] OpenAI classified its forthcoming Astra model as unable to rule out Critical cyber capability under its Preparedness Framework, pausing internal activities pending strengthened controls ahead of any release — a new pre-release capability-threshold-gating example for this trend.
 - [2026-07-09] Superhuman reports the GPT-5.6/Sol restricted-preview access restriction lifted after the US Commerce Department ended it, clearing the family for public rollout (no OpenAI statement captured). OpenAI's June 26 primary announcement captured, confirming the preview terms.
@@ -91,3 +96,4 @@ That stated intent resolved on 2026-08-11 as **GPT-5.6-Cyber**, launched under a
 - [Superhuman — ChatGPT Voice gets more human-like](../sources/newsletters/chatgpt-voice-gpt56-launch-2026-07.md)
 - [AINews — Zawinski's Law of MultiAgents](../sources/newsletters/zawinskis-law-multiagents-2026-08-08.md)
 - [AINews — Anthropic's Riemann Hypothesis bound improvement](../sources/newsletters/anthropic-riemann-hypothesis-2026-08-11.md)
+- [AINews — Memory prices up 500% in 12 months](../sources/newsletters/ainews-memory-prices-openai-pause-2026-08-19.md)

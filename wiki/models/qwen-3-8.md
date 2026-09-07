@@ -4,13 +4,13 @@ type: model
 domains: [models, coding]
 subcategory: frontier-model
 tags: [alibaba, open-weights]
-as_of: 2026-08-13
-sources: [alibaba-qwen38-preview-2026-07-20, ainews-china-policy-openweight-2026-07-21, ainews-qwen38-max-launch-2026-08-04, ainews-spacexai-grok-46-and-grok-bot-2026-08-13]
+as_of: 2026-08-20
+sources: [alibaba-qwen38-preview-2026-07-20, ainews-china-policy-openweight-2026-07-21, ainews-qwen38-max-launch-2026-08-04, ainews-spacexai-grok-46-and-grok-bot-2026-08-13, ainews-memory-prices-openai-pause-2026-08-19, ainews-death-of-params-glm-53-2026-08-20]
 ---
 
 # Qwen 3.8
 
-Alibaba's flagship after Qwen 3.7. Entered live preview 2026-07-20, shipped as a full launch on 2026-08-04 as Qwen3.8-Max, and shipped open weights for Max on 2026-08-13 (text-only initial drop, no vision yet). The promised Qwen3.8-27B sibling's weights are not confirmed shipped by this update.
+Alibaba's flagship after Qwen 3.7. Entered live preview 2026-07-20, shipped as a full launch on 2026-08-04 as Qwen3.8-Max, and shipped open weights for Max on 2026-08-13 (text-only initial drop, no vision yet). The promised Qwen3.8-27B sibling gained enough independent momentum in the following week to warrant its own page — see [Qwen 3.8 27B](qwen-3-8-27b.md).
 
 ## Current status (as of 2026-08-13)
 
@@ -28,11 +28,11 @@ Succeeds [Qwen 3.7](qwen-3-7.md) as Alibaba's flagship, moving from preview to a
 ## Caveats
 
 - Active-parameter count (~95B) and some benchmark framing come from third-party summaries (ZhihuFrontier), not Alibaba's own spec sheet
-- Weights not yet released at time of writing — "next week" is Alibaba's stated timeline, not a confirmed date
 - The license-restriction claim comes from a single X post (@ostrisai) reacting to the terms; no clarifying statement from Alibaba appears in the source coverage
 
 ## Recent changes
 
+- [2026-08-20] The promised Qwen3.8-27B sibling gained enough independent momentum (local-model rankings, benchmark parity claims, community builds) to get its own page — see [Qwen 3.8 27B](qwen-3-8-27b.md).
 - [2026-08-13] Open weights shipped for Qwen3.8-Max (2.4T/~95B active MoE) — text-only initial drop, no vision yet; day-0 vLLM support plus 4-bit checkpoints for NVIDIA B300/AMD MI355X; Together AI and Baseten also added support
 - [2026-08-04] Full launch as Qwen3.8-Max: 2.4T/~95B active, real benchmarks (Frontend Code Arena #4, SWE-bench 87.3%, Terminal-Bench 2.1 67.4), open weights promised "next week" alongside a Qwen3.8-27B sibling; license reportedly restricts use/download in US/EU/UK/Korea
 - [2026-07-21] Third-party roundup reports 2.4T parameters, native video understanding, still inconsistent on long-horizon tasks

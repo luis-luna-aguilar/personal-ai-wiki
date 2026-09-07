@@ -3,8 +3,8 @@ title: AI delegation management
 type: training
 domains: [agents, training]
 tags: [agentic]
-as_of: 2026-08-14
-sources: [management-as-ai-superpower-2026-07, andy-matuschak-agent-loop-tempo-2026-07, design-layer-framework-2026-08-04, vibe-coded-security-risk-2026-08-10, securing-ai-employee-guide-2026-08-14, next-era-of-great-work-2026-08-16]
+as_of: 2026-08-19
+sources: [management-as-ai-superpower-2026-07, andy-matuschak-agent-loop-tempo-2026-07, design-layer-framework-2026-08-04, vibe-coded-security-risk-2026-08-10, securing-ai-employee-guide-2026-08-14, next-era-of-great-work-2026-08-16, engineering-team-cost-of-codex-2026-08-19]
 ---
 
 # AI delegation management
@@ -30,6 +30,8 @@ Working with agents is increasingly a management skill: define the job, explain 
 - **Evaluate new tools by the problem they solve, not by novelty.** Skip tools that take a long time to learn or pull you back into low-level execution unless they solve a real, understood problem; also check whether an agent, not just a person, can use the tool.
 - **Layered access control for always-on agents.** Every's Claudie (a Claude-Code-based chief-of-staff agent with standing access to Slack, email, Google Workspace, a logged-in browser, and code execution) is secured through four backing-each-other-up layers rather than one static access list: least-access scoping (removing capabilities whose risk outweighs their benefit), programmatic controls (deterministic enforcement, not prompt text), prompt-based controls (softer guidance layered on top), and observability (catching what the other layers miss). Every restriction is treated as an explicit safety/capability tradeoff — limiting inbox access reduces exposure but also changes what work the agent can do — and the framework is deliberately a work in progress, tightened weekly as new threats are found rather than a fixed checklist. (Nityesh Agarwal / Every, Aug 2026)
 
+- **Run a roster of named specialist agents, not one generalist.** Every profiled Naveen Naidu, the one-person team behind the Monologue app, who manages distinct Codex-project "agents" — engineer agents by discipline, a customer-support agent, a growth-strategist agent — each configured with its own `AGENTS.md`, skills, memory, and codebase context that turns it into a specialist. GPT-5.6 let him move from manually copying context between projects to instructing one agent to hand context directly to another and kick off a task there — the agent equivalent of a direct report passing an assignment to a coworker. Worked example: his support agent (reading live tickets from Fin) handled a bug report by opening a separate worktree, fixing the issue, and opening a PR, without Naveen relaying anything by hand. **Dispatch-desk triage recipe:** keep one thread per project to handle incoming tasks (don't spin up a new thread per ticket); decide upfront what the agent can resolve itself versus route elsewhere; when a request needs another specialist, tell the current agent which project should take it and what's needed back, using a short handoff template ("Review this issue, create a new worktree in [project] to [complete the task], and [produce the deliverable]"). (Naveen Naidu / Every, Aug 2026)
+
 ## Failure modes
 
 - Delegating vague work where the desired output is specific but unstated.
@@ -40,6 +42,7 @@ Working with agents is increasingly a management skill: define the job, explain 
 
 ## Recent changes
 
+- [2026-08-19] Added the specialist-agent-roster pattern and dispatch-desk triage recipe from a solo builder running several named Codex "team members," each with its own AGENTS.md, skills, and memory.
 - [2026-08-14] Added Every's four-layer access-control framework for always-on agents (least access, programmatic controls, prompt-based controls, observability), via the Claudie chief-of-staff case study.
 - [2026-08-10] Added a failure-mode case study on happy-path-only testing plus the illusion of explanatory depth (a vibe-coded MCP connector security hole).
 - [2026-08-04] Added spec-first "design layer" framework: a worked spec example, targeted review questions, converting recurring corrections into reusable instructions, tool selection by problem-fit, and constraint drift as a failure mode.
@@ -57,3 +60,4 @@ Working with agents is increasingly a management skill: define the job, explain 
 - [I Vibe Coded a Security Risk](../sources/newsletters/vibe-coded-security-risk-2026-08-10.md)
 - ["How to Secure an AI Employee" (Every guide announcement)](../sources/newsletters/securing-ai-employee-guide-2026-08-14.md)
 - ["The Next Era of Great Work" (Every weekly digest)](../sources/newsletters/next-era-of-great-work-2026-08-16.md)
+- [An Engineering Team for the Cost of Codex](../sources/articles/engineering-team-cost-of-codex-2026-08-19.md)

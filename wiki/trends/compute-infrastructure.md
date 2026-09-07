@@ -3,8 +3,8 @@ title: Compute infrastructure as decisive competitive moat
 type: trend
 domains: [models]
 tags: [anthropic]
-as_of: 2026-08-07
-sources: [ainews-2026-04-21, runtime-improvements-improve-agent-economics, google-cloud-next-2026, ainews-2026-04-25, ai-earnings-capex-2026-04-30, inference-inflection-agent-runtime-2026-04-30, parallel-web-agent-apis-2026-04-30, persistent-cloud-computers-agents-2026-05-01, stripe-agent-native-commerce-fraud-2026-04-29, ainews-not-much-happened-2026-07-02, local-ai-infrastructure-2026-06, outputmaxxing-amp-compute-utilization-2026-06, railway-agent-native-cloud-2026-05-20, daytona-giving-agents-computers-2026-05-21, modal-agent-experience-2026-07-08, ainews-new-ai-infra-unicorns-2026-05-22, amd-acquires-taalas-2026-08-07]
+as_of: 2026-08-19
+sources: [ainews-2026-04-21, runtime-improvements-improve-agent-economics, google-cloud-next-2026, ainews-2026-04-25, ai-earnings-capex-2026-04-30, inference-inflection-agent-runtime-2026-04-30, parallel-web-agent-apis-2026-04-30, persistent-cloud-computers-agents-2026-05-01, stripe-agent-native-commerce-fraud-2026-04-29, ainews-not-much-happened-2026-07-02, local-ai-infrastructure-2026-06, outputmaxxing-amp-compute-utilization-2026-06, railway-agent-native-cloud-2026-05-20, daytona-giving-agents-computers-2026-05-21, modal-agent-experience-2026-07-08, ainews-new-ai-infra-unicorns-2026-05-22, amd-acquires-taalas-2026-08-07, ainews-memory-prices-openai-pause-2026-08-19]
 ---
 
 # Compute infrastructure as decisive competitive moat
@@ -25,6 +25,7 @@ Frontier AI labs are securing compute capacity at a scale that creates structura
 - Open-model ecosystems are using serving and decode speed as adoption levers; GLM-5.2 DSpark previews and DeepSeek/vLLM work matter because agent workflows are constrained by latency and throughput, not only benchmark accuracy.
 - Compute moat is not only cluster size. AMP's "outputmaxxing" thesis argues that utilization, scheduling, power, and systems coordination determine how much useful work a lab extracts from its GPUs.
 - The source frames future AI infrastructure as more grid-like: FLOPs flowing across capacity similar to electricity, with scheduling and market coordination becoming core infrastructure problems.
+- Memory pricing has reversed its usual decline: 128GB DDR5 kits reportedly cost ~10x their lowest-ever price, hyperscalers have pre-committed most of 2027's global DRAM production capacity, and DRAM is now worth over half as much per kilogram as gold (Tom's Hardware, via AINews). In the same window, Cerebras announced CS-4 — same 5nm wafer/4T transistors/900k cores as WSE-3, but redesigned power delivery and cooling roughly double per-wafer throughput (250 PFLOPs per WSE-3 Turbo, 750 PFLOPs for a 3-wafer rack), with a claimed 4,400+ tok/s per user on GPT-OSS-120B, up to 30x faster than GPU-based systems. Together the two data points show compute-infrastructure economics diverging on two axes at once: memory getting structurally more expensive while specialized inference silicon gets structurally faster.
 
 ## Why it matters
 
@@ -57,6 +58,7 @@ The useful wiki update is not to treat AMP's exact MFU anecdotes as settled fact
 
 ## Recent changes
 
+- [2026-08-19] DRAM/memory prices reportedly up to ~10x their lowest-ever level, with 2027 production capacity largely pre-committed by hyperscalers; Cerebras announces CS-4, roughly doubling per-wafer inference throughput over WSE-3 (4,400+ tok/s/user on GPT-OSS-120B, claimed up to 30x faster than GPUs).
 - [2026-08-07] AMD (Lisa Su) acquired custom-ASIC inference startup Taalas, which etches specific model weights directly into silicon — a concrete vertical-integration move by a major GPU vendor, though the source itself notes unresolved skepticism about etched-LLM economics from its own podcast coverage.
 - [2026-07-08] Agent-execution-layer analog spun off into a dedicated page: [Agent-native compute infrastructure](agent-native-compute.md) covers Daytona/Modal/Railway sandbox economics, RL/eval workload shapes, and the infra funding wave (Exa, Turbopuffer, Hark, Modal).
 - [2026-07-02] Added inference-systems counterforce: DSpark/vLLM, TwoTower, WebGPU Gemma, and kernel-level work show competition moving below model weights into runtime speed and serving economics.
@@ -85,3 +87,4 @@ The useful wiki update is not to treat AMP's exact MFU anecdotes as settled fact
 - [Why AI Infrastructure must evolve for Agent Experience — Akshat Bubna, Modal CTO](../sources/newsletters/modal-agent-experience-2026-07-08.md)
 - [AINews — New AI Infra unicorns: Exa, Modal, TurboPuffer](../sources/newsletters/ainews-new-ai-infra-unicorns-2026-05-22.md)
 - [AMD acquires Taalas](../sources/newsletters/amd-acquires-taalas-2026-08-07.md)
+- [AINews — Memory prices up 500% in 12 months](../sources/newsletters/ainews-memory-prices-openai-pause-2026-08-19.md)

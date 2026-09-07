@@ -15,7 +15,7 @@ AINews reports that GLM-5.2 became the day's consensus open-model story, with pr
 
 ## Influenced pages
 
-- [GLM-5.2](../../models/glm-5-2.md) - adds ecosystem adoption and cost/performance details.
+- [GLM-5.2](../../history/models/glm-5-2.md) - adds ecosystem adoption and cost/performance details.
 - [State of Models](../../state-of/models.md) - refreshes open-weight contender line.
 
 ## Key claims extracted

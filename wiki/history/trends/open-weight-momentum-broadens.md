@@ -9,6 +9,7 @@
 - [2026-06-30] Local AI framing added: open-weight deployment is becoming a stack of models, search, documents, agents, harnesses, and hybrid routing rather than just running a checkpoint locally.
 - [2026-06-17] Fable 5 export-control ban accelerated model sovereignty framing: @hwchase17 argues model neutrality matters more than cloud neutrality; GLM-5.2 (MIT) adopted as the concrete alternative for teams losing closed frontier access
 - [2026-06-11] Sarah Guo Agent Labs vs Model Labs framing: moat is "untrainable" integration work, not model capability; open-weight lag ~4 months; "intent is scarcer than compute"
+- [2026-07-21] Sovereignty pressure reverses direction: US reported weighing restrictions on Chinese open-weight models (procurement, Entity List, hosting liability); Hugging Face's Clément Delangue and others push back citing HF's own self-hosted GLM-5.2 use during a cyber incident as evidence open models are security infrastructure
 
 ## Archived from current page on 2026-09-06
 

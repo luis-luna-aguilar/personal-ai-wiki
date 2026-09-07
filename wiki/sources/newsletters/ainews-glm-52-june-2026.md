@@ -14,7 +14,7 @@ AINews and Superhuman coverage of Z.ai's GLM-5.2 release. Full technical breakdo
 
 ## Influenced pages
 
-- [GLM-5.2](../../models/glm-5-2.md) — new model page (supersedes GLM-5.1)
+- [GLM-5.2](../../history/models/glm-5-2.md) — new model page (supersedes GLM-5.1)
 - [State of Models](../../state-of/models.md) — coding models section updated
 
 ## Key claims extracted

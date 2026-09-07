@@ -12,6 +12,8 @@ sources: [ainews-glm-52-june-2026, ainews-not-much-happened-2026-07-02, the-code
 
 Z.ai's June 2026 open-weight frontier model. MIT-licensed, 744B total / 40B active MoE, 1M context. Released opportunistically right after the Fable 5 export-control ban; positioned as the practical open alternative for teams that lost access to the strongest closed frontier models.
 
+**Superseded by [GLM-5.3](../../models/glm-5-3.md), 2026-08-20.**
+
 ## Current status (as of 2026-06-17)
 
 - MIT license; 744B total / 40B active MoE; 1M context window
@@ -20,7 +22,7 @@ Z.ai's June 2026 open-weight frontier model. MIT-licensed, 744B total / 40B acti
 - **IndexShare:** reuses one sparse-attention indexer across four layers → 2.9× lower FLOPs at 1M context vs naive sparse attention
 - **MTP (Multi-Token Prediction):** speculative decoding acceptance +20% over prior version
 - **Anti-reward-hacking during RL training:** LLM judge blocked suspicious tool calls, returned dummy info, let trajectories continue — an unusually transparent description of RL reward gaming mitigation
-- Z.ai launched [ZCode](../tools/zcode.md), an official coding environment for GLM-5.2 with BYOK support, cross-platform desktop availability, and long-running coding sessions.
+- Z.ai launched [ZCode](../../tools/zcode.md), an official coding environment for GLM-5.2 with BYOK support, cross-platform desktop availability, and long-running coding sessions.
 - Mercor reported GLM-5.2 as the first open model to lead an APEX-SWE category, with 55.3% Pass@1 on Integration, while still not clearly surpassing the strongest closed frontier models overall.
 - The ecosystem story now includes inference work: DSpark speculative decoding previews for GLM-5.2 and native vLLM DSpark support for DeepSeek-style models show speed/serving work becoming part of open-model competitiveness.
 
@@ -57,6 +59,7 @@ Follow-on coverage described GLM-5.2 as the first open-weight model many practit
 
 ## Recent changes
 
+- [2026-08-20] Superseded by GLM-5.3 (same 753B/40B footprint and price, +246 GDPval-AA v2, post-training RL gains) — see [GLM-5.3](../../models/glm-5-3.md).
 - [2026-06-23] Follow-on coverage adds strong ecosystem signal: GLM-5.2 quickly landed in coding-agent harnesses and inference providers; AA-Briefcase and practitioner reports frame it as frontier-adjacent but still behind Fable/Opus on hardest long-horizon work.
 - [2026-07-02] ZCode launched as GLM-5.2's official coding environment; APEX-SWE reported GLM-5.2 leading Integration at 55.3% Pass@1; DSpark/vLLM work reinforced inference optimization as part of the open-model stack.
 - [2026-07-02] Correction: Claude Fable 5 returned online this same day after its export-control suspension. The "[banned]" / "[unavailable]" qualifiers on the FrontierSWE/DeepSWE and Code Arena benchmark lines above reflect the measurement window when those benchmarks were run (June 2026) and are not being restated as current.
@@ -64,7 +67,7 @@ Follow-on coverage described GLM-5.2 as the first open-weight model many practit
 
 ## Sources
 
-- [GLM-5.2 release coverage](../sources/newsletters/ainews-glm-52-june-2026.md)
-- [AINews - not much happened today](../sources/newsletters/ainews-not-much-happened-2026-07-02.md)
-- [The Code - Cognition ships Devin for Security](../sources/newsletters/the-code-devin-security-2026-07-02.md)
-- [GLM-5.2 frontier-adjacent open-weight signal](../sources/newsletters/glm-52-frontier-adjacent-2026-06.md)
+- [GLM-5.2 release coverage](../../sources/newsletters/ainews-glm-52-june-2026.md)
+- [AINews - not much happened today](../../sources/newsletters/ainews-not-much-happened-2026-07-02.md)
+- [The Code - Cognition ships Devin for Security](../../sources/newsletters/the-code-devin-security-2026-07-02.md)
+- [GLM-5.2 frontier-adjacent open-weight signal](../../sources/newsletters/glm-52-frontier-adjacent-2026-06.md)
