@@ -3,8 +3,8 @@ title: Model Context Protocol
 type: concept
 domains: [agents]
 tags: [anthropic]
-as_of: 2026-08-07
-sources: [anthropic-mcp, legacy-ai-tools-roadmap-xlsx, anthropic-mcp-deployment-surfaces, openai-chatgpt-mcp-surfaces, anthropic-mcp-production-systems, agent-ready-saas-mcp-2026-06, mcp-2026-07-28-stateless-rc, anthropic-acquires-stainless, google-io-agents-agents-agents, ainews-all-model-labs-are-now-agent-labs, amd-acquires-taalas-2026-08-07]
+as_of: 2026-08-26
+sources: [anthropic-mcp, legacy-ai-tools-roadmap-xlsx, anthropic-mcp-deployment-surfaces, openai-chatgpt-mcp-surfaces, anthropic-mcp-production-systems, agent-ready-saas-mcp-2026-06, mcp-2026-07-28-stateless-rc, anthropic-acquires-stainless, google-io-agents-agents-agents, ainews-all-model-labs-are-now-agent-labs, amd-acquires-taalas-2026-08-07, lovable-future-of-saas-2026-08-26]
 ---
 
 # Model Context Protocol
@@ -24,6 +24,8 @@ Model Context Protocol, usually shortened to MCP, is an open protocol for exposi
 - Anthropic acquired Stainless (May 2026) — an SDK/CLI/MCP-server generation platform that Anthropic says hundreds of companies use, and whose former customers include OpenAI and Google per Every — to extend Claude's ability to connect to data and tools. Stainless CEO Alex Rattray had already argued publicly (Every's *AI & I* podcast) for MCP server design principles that make tools legible to agents: keep the tool count small, give tools precise names, and aim for tightly defined outputs.
 - OpenAI introduced Agent Plugins (August 2026), an open cross-client standard built with AWS, Cursor, GitHub, and Vercel for packaging Agent Skills and MCP server configs into one shared format, with day-one support across Codex, ChatGPT, Cursor, GitHub Copilot, Kiro, and VS Code — another sign MCP-adjacent packaging is consolidating around shared tooling rather than per-vendor formats.
 
+- **Lovable's "capabilities" pivot (August 2026):** Lovable ($13.3B valuation, $400M Series C, >$500M ARR) is repositioning from an app-builder toward a per-organization "company brain" agent. Discrete functions from a published Lovable app are exposed as callable tools through a hosted MCP server, so an agent (ChatGPT, Claude, or other MCP-compatible client) can invoke the function directly instead of a human opening the app. Credentials stay server-side in Lovable's connector gateway — never exposed to the generated app's code — with each user's app-level permissions preserved via short-lived scoped keys.
+
 ## Why it matters
 
 - Replaces one-off tool glue with a protocol-level integration surface
@@ -36,6 +38,7 @@ Model Context Protocol, usually shortened to MCP, is an open protocol for exposi
 
 ## Recent changes
 
+- [2026-08-26] Lovable pivots toward a "company brain" model: published apps expose discrete functions as MCP-callable capabilities, with credentials held server-side by a connector gateway rather than exposed to generated app code — a large, funded production example of MCP compressing a SaaS surface for agents.
 - [2026-08-07] OpenAI launched Agent Plugins, an open cross-client standard for packaging Agent Skills and MCP server configs, with day-one support across Codex, ChatGPT, Cursor, GitHub Copilot, Kiro, and VS Code.
 - [2026-05-22] MCP 2026-07-28 release candidate makes the protocol stateless (no handshake, no session ID, any request can hit any server instance); adds MCP Apps and Tasks as first-class extensions, auth hardening, and a formal deprecation policy.
 - [2026-05-18] Anthropic acquired Stainless, an SDK/MCP-server generation platform used by hundreds of companies including former customers OpenAI and Google, to strengthen Claude's agent-facing developer tooling stack. Price undisclosed by Anthropic; reported by The Information at "north of $300M" via secondary coverage (unverified against a primary figure).
@@ -53,3 +56,4 @@ Model Context Protocol, usually shortened to MCP, is an open protocol for exposi
 - [Every — Google I/O: Agents, Agents, Agents (Stainless / Rattray)](../sources/newsletters/google-io-agents-agents-agents.md)
 - [AINews — All Model Labs are now Agent Labs (MCP RC recap)](../sources/newsletters/ainews-all-model-labs-are-now-agent-labs.md)
 - [AMD acquires Taalas](../sources/newsletters/amd-acquires-taalas-2026-08-07.md)
+- [Latent Space — Lovable: The Future of SaaS Is Apps That Agents Can Use](../sources/newsletters/lovable-future-of-saas-2026-08-26.md)

@@ -229,6 +229,7 @@ Things being watched that haven't solidified yet.
 - [trends/restricted-frontier-deployment](trends/restricted-frontier-deployment.md) — frontier labs and governments may withhold, selectively deploy, or restrict highest-capability systems through partner programs, policy, export controls, or restricted previews *(as_of: 2026-07-09)*
 - [trends/voice-becomes-agent-interface](trends/voice-becomes-agent-interface.md) — voice, texting, and real-time audio are becoming agent surfaces rather than side features *(as_of: 2026-07-07)*
 - [trends/ai-music-commercialization](trends/ai-music-commercialization.md) — AI music moving from novelty to commercial category; ElevenMusic, Suno, Udio as early anchors; rightsholder economics emerging *(as_of: 2026-05-01)*
+- [trends/synthetic-human-simulation](trends/synthetic-human-simulation.md) — models trained on interviews, transaction data, and RCTs to reproduce real human behavior for concept testing and synthetic panels, led by Simile AI *(as_of: 2026-08-22)*
 - [trends/llm-as-discovery-channel](trends/llm-as-discovery-channel.md) — LLM-referred shoppers convert 54% more and spend 53% more time on site vs non-AI-referred traffic (Adobe Analytics, June 2026) *(as_of: 2026-06-15)*
 - [trends/video-agents-next-frontier](trends/video-agents-next-frontier.md) — video quality driven by LLM prompt rewriters, not diffusion models; Grok Imagine Agent beta as first public video agent *(as_of: 2026-06-01)*
 
@@ -241,6 +242,7 @@ Practical guidance for teaching teams and businesses to use AI well.
 - [training/anti-autopilot-review-friction](training/anti-autopilot-review-friction.md) — deliberate review friction, acceptance reasons, review artifacts, escalation evals, and near-correct artifact caveats to keep human judgment active *(as_of: 2026-06-29)*
 - [training/agentic-infrastructure-operations](training/agentic-infrastructure-operations.md) — safe operating patterns for infrastructure agents: read-only diagnosis, propose-only plans, approval-gated mutations, sandboxing, and post-deploy verification *(as_of: 2026-04-24)*
 - [training/agent-skill-methodology](training/agent-skill-methodology.md) — evals-first method for writing maintainable agent skills with natural triggers, principles, production lessons, pruning, and portable domain judgment *(as_of: 2026-07-15)*
+- [training/ai-engineering-skills](training/ai-engineering-skills.md) — four-skill taxonomy (building/deploying AI apps, SWE fundamentals, using coding agents, shaping the build) from Andrew Ng's DeepLearning.AI relaunch, evidence-gathered from 10,000+ job postings *(as_of: 2026-08-25)*
 - [training/company-wide-ai-enablement](training/company-wide-ai-enablement.md) — operating patterns for broad AI adoption, explicit AI strategy bets, token allocation, model routing, agent governance, and staged autonomy *(as_of: 2026-07-08)*
 - [training/ai-enablement-software-development](training/ai-enablement-software-development.md) — engineering-specific AI adoption: critique loops, AI-native hiring, PR review workflows, software-factory rollout, CI/CD bottlenecks, and junior talent pipeline risk *(as_of: 2026-07-16)*
 - [training/evals-for-agentic-software-development](training/evals-for-agentic-software-development.md) — eval stack for coding agents: deterministic gates, sandboxed execution, historical PR replay, benchmark integrity, QA artifact capture, browser self-verification, MVES, and trace mining *(as_of: 2026-07-08)*
@@ -272,8 +274,8 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 - benchmarks: 12
 - workflows: 6
 - concepts: 19
-- trends: 12
-- training: 13
+- trends: 13
+- training: 14
 - use-cases: 3
 
-**Total content pages: 188.**
+**Total content pages: 190.**

@@ -1,8 +1,8 @@
 ---
 title: Evals for workflow and task agents
 type: training
-as_of: 2026-04-23
-sources: [agents-evals-deep-research]
+as_of: 2026-08-25
+sources: [agents-evals-deep-research, every-benchmarks-dont-know-your-job-2026-08-25]
 ---
 
 # Evals for workflow and task agents
@@ -72,6 +72,13 @@ Use simulation for:
 - Adversarial testing of policy boundaries (what happens when a user asks for something the agent isn't authorized to do?)
 - Measuring how the agent handles out-of-scope requests (does it escalate? hallucinate? refuse cleanly?)
 
+## Evidence from practice
+
+- **Public benchmarks can't answer a buying decision.** Mercor CEO Brendan Foody and Box CEO Aaron Levie both argue companies spending tens of millions of dollars a year on AI frequently do so without offline evals — a fixed set of real internal tasks used to compare models before they touch live work — leaving them unable to say whether a model actually does the job they bought it for, or whether a cheaper model would do it just as well.
+- **KateBench: a high acceptance rate that looked finished but wasn't.** Every's internal AI copyeditor (trained on ~30,000 of its editor-in-chief's past edits, run inside Google Docs) showed an apparently strong 85-90% acceptance rate — until the engineer who owns it found the number was inflated by a silent cap that discarded any suggestion past the 40th on long essays, quietly dropping good edits before an editor ever saw them. The acceptance rate is also noisy run-to-run, since the model doesn't produce identical edits twice, so a single high-scoring run doesn't prove improvement.
+- **CentaurBench: the best solo performer isn't always the best helper.** On 5 of 7 tasks tested, the model best at completing a task alone was not the model best at improving a weaker model's first attempt — a distinct failure mode from the reliability problem above, relevant whenever an eval setup assumes "the strongest model" is interchangeable across roles.
+- **Thinkingbox: reliability collapses under repetition, echoing this page's pass^k thesis with a fresh number.** The strongest coding model tested passed 65% of single attempts, but its success rate fell to 25% when required to perform reliably across 20 consecutive attempts — an independent data point for the same pass@k-vs-pass^k gap this page already documents.
+
 ## LLM-as-judge for qualitative dimensions
 
 For dimensions like tone, helpfulness, and policy adherence — where there's no single correct answer — a capable secondary model can grade the primary agent's outputs at scale. Key safeguards:
@@ -102,6 +109,11 @@ Observability platforms (Braintrust, Langfuse) support trace ingestion and score
 - What is the right pass^k threshold before a workflow agent is deployed to real users? The answer depends on the stakes of the task and acceptable error rates per interaction volume.
 - How do you evaluate emergent multi-agent behavior when a workflow agent hands off to another agent?
 
+## Recent changes
+
+- [2026-08-25] Added Evidence from practice: Mercor/Box CEO case for task-specific offline evals over leaderboard-chasing; KateBench's inflated acceptance rate (silent 40-suggestion cap, run-to-run noise); CentaurBench (best solo model ≠ best helper model, 5/7 tasks); Thinkingbox (65% single-attempt pass rate falls to 25% across 20 consecutive attempts).
+
 ## Sources
 
 - [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)
+- [Every — Benchmarks Don't Know Your Job](../sources/newsletters/every-benchmarks-dont-know-your-job-2026-08-25.md)

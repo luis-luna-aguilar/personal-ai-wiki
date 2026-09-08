@@ -1,5 +1,9 @@
 # Open-Weight Momentum Broadens — History
 
+## Archived from current page on 2026-09-07 (2)
+
+- [2026-07-22] Poolside released Laguna S 2.1 (118B/8B-active MoE, OpenMDW-1.1 license): a new non-Chinese open-weight coding entrant, strong on agentic-coding benchmarks, more prone to fabrication under pressure than Qwen3.5-122B per one independent eval.
+
 ## Archived from current page on 2026-09-07
 
 - [2026-07-20] Qwen3.8-Max-Preview enters live preview, 2.4T parameters (third-party estimate), native video understanding; Alibaba signals the eventual official release will be open-weighted

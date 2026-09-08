@@ -1,17 +1,16 @@
 ---
 type: triage
 sources:
-  - raw/newsletters/2026-08-17-ainews-stripe-buys-openrouter-for-7b.md
-  - raw/newsletters/2026-08-18-what-does-human-work-look-like-after-automation.md
-  - raw/newsletters/2026-08-18-office-hours-this-friday-an-hour-with-the-every-t.md
-  - raw/newsletters/2026-08-18-frontier-model-cost-and-open-weights-popularity-is.md
-  - raw/newsletters/2026-08-19-ainews-memory-prices-up-500-in-12-months.md
-  - raw/newsletters/2026-08-19-an-engineering-team-for-the-cost-of-codex.md
-  - raw/newsletters/2026-08-20-ainews-death-of-params-zai-ceo-jie-tang-on-glm.md
-  - raw/newsletters/2026-08-20-in-defense-of-ai-writing.md
-  - raw/newsletters/2026-08-20-the-wayfinder-skill-navigating-the-fog-of-war.md
-  - raw/newsletters/2026-08-21-ainews-poolside-gets-12b-reverse-execuhire-to-n.md
-  - raw/newsletters/2026-08-21-the-healthcare-company-that-built-the-ai-tool-it-c.md
+  - raw/newsletters/2026-08-21-simulation-the-new-scaling-law-joon-sung-park.md
+  - raw/newsletters/2026-08-22-the-evolution-of-the-agent-harness.md
+  - raw/newsletters/2026-08-22-ainews-10-worse-100x-cheaper-10000x-faster-w.md
+  - raw/newsletters/2026-08-23-life-after-automation.md
+  - raw/newsletters/2026-08-24-i-tried-the-ai-model-built-to-fix-ai-writing.md
+  - raw/newsletters/2026-08-25-ainews-andrew-ng-gets-into-ai-engineering.md
+  - raw/newsletters/2026-08-25-benchmarks-dont-know-your-job.md
+  - raw/newsletters/2026-08-26-we-have-foundation-models-for-language-not-for.md
+  - raw/newsletters/2026-08-26-the-future-of-saas-is-apps-that-agents-can-use.md
+  - raw/newsletters/2026-08-26-the-case-for-cloning-your-coworkers.md
 status: pending
 period: "oldest 20 unprocessed as of 2026-09-07"
 account: ai
@@ -19,183 +18,154 @@ account: ai
 
 # Email Digest — Ai — oldest 20 unprocessed as of 2026-09-07
 
-11 sources fetched (11 saved, 0 videos skipped). Covers 2026-08-17 to 2026-08-21 (5 days;
-9 additional inbox items were skipped by the fetch script as having no discoverable URL —
-mostly tweet/repo forwards with no linked article).
+10 sources fetched (10 saved, 0 videos skipped). 9 further emails had no ingestible URL (X/tweet screenshots, video-only, GitHub repo link with no URL captured) and were skipped.
 
 ## Sources
 
-- `raw/newsletters/2026-08-17-ainews-stripe-buys-openrouter-for-7b.md` (newsletter)
-- `raw/newsletters/2026-08-18-what-does-human-work-look-like-after-automation.md` (newsletter) — paywalled teaser, no signal
-- `raw/newsletters/2026-08-18-office-hours-this-friday-an-hour-with-the-every-t.md` (newsletter) — event promo, no signal
-- `raw/newsletters/2026-08-18-frontier-model-cost-and-open-weights-popularity-is.md` (newsletter)
-- `raw/newsletters/2026-08-19-ainews-memory-prices-up-500-in-12-months.md` (newsletter)
-- `raw/newsletters/2026-08-19-an-engineering-team-for-the-cost-of-codex.md` (newsletter)
-- `raw/newsletters/2026-08-20-ainews-death-of-params-zai-ceo-jie-tang-on-glm.md` (newsletter)
-- `raw/newsletters/2026-08-20-in-defense-of-ai-writing.md` (newsletter) — paywalled opinion teaser, no signal
-- `raw/newsletters/2026-08-20-the-wayfinder-skill-navigating-the-fog-of-war.md` (newsletter)
-- `raw/newsletters/2026-08-21-ainews-poolside-gets-12b-reverse-execuhire-to-n.md` (newsletter)
-- `raw/newsletters/2026-08-21-the-healthcare-company-that-built-the-ai-tool-it-c.md` (newsletter) — paywalled teaser, no signal (Headway/Claude Code SDK story stub only)
+- `raw/newsletters/2026-08-21-simulation-the-new-scaling-law-joon-sung-park.md` (newsletter)
+- `raw/newsletters/2026-08-22-the-evolution-of-the-agent-harness.md` (newsletter)
+- `raw/newsletters/2026-08-22-ainews-10-worse-100x-cheaper-10000x-faster-w.md` (newsletter)
+- `raw/newsletters/2026-08-23-life-after-automation.md` (newsletter)
+- `raw/newsletters/2026-08-24-i-tried-the-ai-model-built-to-fix-ai-writing.md` (newsletter)
+- `raw/newsletters/2026-08-25-ainews-andrew-ng-gets-into-ai-engineering.md` (newsletter)
+- `raw/newsletters/2026-08-25-benchmarks-dont-know-your-job.md` (newsletter)
+- `raw/newsletters/2026-08-26-we-have-foundation-models-for-language-not-for.md` (newsletter)
+- `raw/newsletters/2026-08-26-the-future-of-saas-is-apps-that-agents-can-use.md` (newsletter)
+- `raw/newsletters/2026-08-26-the-case-for-cloning-your-coworkers.md` (newsletter)
 
 ## Signals
 
-- [x] **[agents]** Model routing consolidates into a real business layer — Stripe buys OpenRouter for $7B, Glean details enterprise routing economics
+- [x] **[trends]** Simile's $2B round makes "simulate the human" the next synthetic-data frontier
 
-    **What it is:** Stripe's reported $7B acquisition of OpenRouter closed (90 days after OpenRouter's $1.3B Series B), on ~$140M annualized revenue, ~70% gross margin, and 250T tokens/month routed (up from 50T in February) — a striking monetization outcome for a layer that mostly takes a routing markup. The same week, Latent Space published a long interview with Glean co-founder Arvind Jain on how Glean does model routing for enterprises: three tiers (user choice, admin restriction, automatic routing), a pre-model filtering layer called Waldo that assembles "raw materials" before invoking an LLM, and Glean claiming ~4x cost-efficiency vs. Claude Cowork ($0.45/task vs $1.84). Jain says open-weight interest went from "minuscule" a year ago to "a key part of AI strategy" at most enterprises in the last three months, driven purely by cost.
+    **What it is:** Simile AI (cofounded by Generative Agents/"Smallville" author Joon Sung Park) raised a $2B Series B (GreenOaks, Index, backed by Fei-Fei Li and Andrej Karpathy) to build "digital twins" — models post-trained on two-hour biographical interviews, transaction data, and registered randomized-controlled-trial data from the Open Science Framework — that reproduce a real person's survey and behavioral responses 85% as accurately as the person reproduces their own answers two weeks later. Frontier chat models manage only 20-60% on the same replication task, because they're trained to be rational/agentic rather than to copy human bias and inconsistency. Customers (CVS, Wealthfront, Gallup, Deloitte) use it for concept testing, focus-group replacement, and earnings-call simulation at the population level. A same-week AINews piece frames this as "Stage 7" of a broader pattern it traces back to 2022: judges, training data, teachers, curricula, researchers, and RL environments have each gone synthetic in turn, and the human "subject" (preferences/behavior/demand) is next — with the physical world (wet-lab science) the one stage that resists full synthesis.
 
-    **Why it matters:** Two independent, concrete data points that the model-routing/aggregation layer is becoming valuable infrastructure in its own right, not just a convenience wrapper — relevant to how enterprises actually spend on AI.
+    **Why it matters:** No existing wiki page covers AI-simulated human populations/digital twins as a category; this is a well-sourced, multi-signal candidate for a new concept or trend page, with the "synthetic-everything" framing as useful connective tissue to existing coverage of synthetic data / RLVR / agent environments.
 
     **Sources:**
-      - `raw/newsletters/2026-08-17-ainews-stripe-buys-openrouter-for-7b.md`
-      - `raw/newsletters/2026-08-18-frontier-model-cost-and-open-weights-popularity-is.md`
+      - `raw/newsletters/2026-08-21-simulation-the-new-scaling-law-joon-sung-park.md` — Latent Space podcast transcript with Joon Sung Park
+      - `raw/newsletters/2026-08-22-ainews-10-worse-100x-cheaper-10000x-faster-w.md` — AINews "synthetic-everything" framing essay, cites Simile as Stage 7
 
-    **Primary URL:** https://www.latent.space/p/glean-model-routing
+    **Primary URL:** https://www.latent.space/p/simile
+    **Recommended:** full ingest — new page
+
+- [x] **[agents]** The agent harness keeps compounding: co-evolution theory, self-modifying harnesses, and enterprise MCP auth
+
+    **What it is:** A Latent Space essay argues model and harness capability have been racing each other since 2022 (ReAct → AutoGPT's premature autonomy → Cursor's human-in-the-loop retreat → Claude Code's "curves cross" moment in Feb 2025), and that the harness now absorbs capability from the model in a repeating train→absorb→shed cycle (Anthropic reportedly deleted 80% of Claude Code's system prompt as the model absorbed what it used to specify). Concretely: Harness-Bench found a 23.8-point swing (52.4→76.2) running the same model through different harnesses on the same 106 tasks, and OpenAI tripled GPT-5.6 Sol's ARC-AGI-3 score (13.3%→38.3%) via harness changes (retained reasoning + compaction) alone. The same week, AINews reports NVIDIA proposing a "Skill Lift" metric (measuring task-completion delta with/without a skill, since structural skill checks barely predict usefulness — Spearman ρ=0.14), two new open-source "self-modifying" agent harnesses (Headlong: persistent/continuously-thinking agents with DAG-based trajectory storage; exo: recursive self-improvement with append-only event logs and rollback-safe sandboxes), a position paper arguing enterprises should standardize on one harness rather than bespoke orchestration graphs, and Anthropic's enterprise-managed auth for MCP connectors (centralized via org identity provider, no more per-tool OAuth).
+
+    **Why it matters:** Directly extends [concepts/harness.md](../../wiki/concepts/harness.md), which already tracks the "harness matters as much as the model" thesis and managed-agent platform primitives.
+
+    **Sources:**
+      - `raw/newsletters/2026-08-22-the-evolution-of-the-agent-harness.md` — Latent Space essay, "Harness 1.0/2.0/3.0" framing
+      - `raw/newsletters/2026-08-25-ainews-andrew-ng-gets-into-ai-engineering.md` — AINews harness/persistent-agent/MCP roundup
+
+    **Primary URL:** https://www.latent.space/p/attention-interface
     **Recommended:** full ingest
 
-- [x] **[models]** Qwen3.8-27B becomes the "DeepSeek moment" for locally-run open models
+- [x] **[models]** DeepSeek-V4-Flash-Vision-Exp adds multimodal input, claims near-Opus-4.8 agent performance
 
-    **What it is:** Across three consecutive AINews issues (8/17, 8/19, 8/20), Qwen3.8-27B keeps coming up as a genuine inflection point for local/open models: #1 local model in Cline within 4 days, scoring near DeepSeek V4-Pro / GPT-5.6 Luna Max territory on the Artificial Analysis Intelligence Index (described as the first local model to reach that tier), #7 on AA's Agentic Index, #1 on Harvey's legal benchmark among open weights, and a "refusal-removed" MLX build running locally on Apple Silicon with near-zero refusals at 262K context. Pushback is also real: some practitioners argue benchmark parity overstates real-world quality versus Opus 4.5, and one Reddit thread found it regressed on offline factual recall versus Qwen3.6-27B (an apparent parameter-budget tradeoff toward coding/agentic strength).
+    **What it is:** DeepSeek shipped DeepSeek-V4-Flash-Vision-Exp, adding multimodal (text+image) input to V4-Flash while reportedly preserving its text capability. Benchmarks per AINews: 83.9 Terminal-Bench 2.1, 75.9 Toolathlon-Verified, 64.3 Chartography — a large jump over the prior V4-Flash-0731 release, positioned as closing the multimodal-agent gap to Opus-4.8. Ships with mixed text+image API support (up to 384 tokens/image at Flash pricing) and a new Files API for reusable image uploads. Weights not yet found on Hugging Face at time of writing — appears API-only for now.
 
-    **Why it matters:** Repeated, corroborated signal (not a single hot take) that a 27B locally-runnable model is now credibly frontier-adjacent — directly relevant to `open-weight-momentum-broadens` and the existing `qwen-3-8` page.
-
-    **Sources:**
-      - `raw/newsletters/2026-08-17-ainews-stripe-buys-openrouter-for-7b.md`
-      - `raw/newsletters/2026-08-19-ainews-memory-prices-up-500-in-12-months.md`
-      - `raw/newsletters/2026-08-20-ainews-death-of-params-zai-ceo-jie-tang-on-glm.md`
-
-    **Primary URL:** https://www.latent.space/p/ainews-death-of-params-zai-ceo-jie (has the most direct benchmark citations; no single canonical primary source, content is aggregated Twitter/Reddit commentary)
-    **Recommended:** full ingest
-
-- [x] **[models]** GLM-5.3 launches; Z.ai's Jie Tang argues parameter count alone is now a misleading proxy for capability
-
-    **What it is:** Z.ai shipped GLM-5.3 via API at the same price as GLM-5.2, same 753B total / 40B active MoE footprint and 1M context, but with a reported 246-point jump on GDPval-AA v2 (to 1770 Elo) and parity with Kimi K3 (60) on the AA Intelligence Index — gains attributed almost entirely to post-training RL (SAO — single-rollout async optimization — plus executable sandbox training and on-policy distillation to avoid catastrophic forgetting) rather than scale. Separately, Z.ai CEO Jie Tang published a thread arguing "parameter count is only meaningful alongside" data volume, compute allocation, and deployment conditions, proposing model-family notation (e.g. "XA-YB" for MoE sparsity) and arguing advanced skills like vulnerability-finding require long causal chains (20+ inference steps) that don't live in total parameter count once a knowledge threshold is crossed.
-
-    **Why it matters:** A named lab CEO explicitly arguing scaling laws are shifting from parameters to post-training/RL quality, backed by a concrete same-size model jump — a useful data point for how "bigger model" claims should be read going forward.
+    **Why it matters:** [models/deepseek-v4.md](../../wiki/models/deepseek-v4.md) exists and is due an update; this is a concrete version/capability bump.
 
     **Sources:**
-      - `raw/newsletters/2026-08-20-ainews-death-of-params-zai-ceo-jie-tang-on-glm.md`
+      - `raw/newsletters/2026-08-22-ainews-10-worse-100x-cheaper-10000x-faster-w.md`
 
-    **Primary URL:** https://www.latent.space/p/ainews-death-of-params-zai-ceo-jie
-    **Recommended:** full ingest
-
-- [x] **[models]** Compute infrastructure squeeze: DRAM prices up 500% in 12 months, Cerebras doubles inference throughput with CS-4
-
-    **What it is:** Per Tom's Hardware (relayed via AINews 8/19), 128GB DDR5 kits now cost ~10x their lowest-ever price, hyperscalers have reportedly pre-committed to most of 2027's global DRAM production, and mainstream DRAM is now worth over half as much per kilogram as gold — Moore's-Law-style price declines have reversed for memory specifically. In the same window, Cerebras announced CS-4: same 5nm wafer/4T transistors/900k cores as WSE-3 but redesigned power delivery and cooling roughly double per-wafer throughput (250 PFLOPs per WSE-3 Turbo, 750 PFLOPs for a 3-wafer rack), with a claimed 4,400+ tok/s per user on GPT-OSS-120B — up to 30x faster than GPU-based systems.
-
-    **Why it matters:** Concrete evidence that compute-infrastructure economics are diverging on two axes at once — memory getting structurally more expensive while specialized inference silicon gets structurally faster — both relevant to the existing compute-moat trend page.
-
-    **Sources:**
-      - `raw/newsletters/2026-08-19-ainews-memory-prices-up-500-in-12-months.md`
-
-    **Primary URL:** https://www.latent.space/p/ainews-memory-prices-up-500-in-12
-    **Recommended:** full ingest
-
-- [x] **[models]** OpenAI pauses some frontier RL training for two weeks over safety/security hardening
-
-    **What it is:** OpenAI said it paused part of its frontier RL training (holding its largest planned run) to strengthen workload/network isolation, continuous security testing, and multistage monitoring before proceeding. Reported implementation detail: monitoring adds roughly 20% overhead, sampled-token monitoring can page safety/security/research teams within ~30 minutes, and higher-risk tool-using inference may ship with active monitors attached. Sam Altman framed it as capabilities outpacing safety/alignment readiness; OpenAI clarified the slowdown mainly affects farther-out releases, not near-ship models.
-
-    **Why it matters:** A rare concrete, quantified example of a frontier lab pausing training specifically for safety/security infrastructure reasons rather than capability reasons — relevant to the restricted-frontier-deployment trend.
-
-    **Sources:**
-      - `raw/newsletters/2026-08-19-ainews-memory-prices-up-500-in-12-months.md`
-
-    **Primary URL:** https://www.latent.space/p/ainews-memory-prices-up-500-in-12
-    **Recommended:** full ingest
-
-- [x] **[agents]** Agent harnesses keep hardening into the real competitive/product layer
-
-    **What it is:** A cluster of harness-layer developments across three AINews issues: DeepSeek Harness (DSH) is revealed as an intentionally thin shell over a plugin architecture ("Cordis") where even the agent loop itself is a plugin — beta users shipped 100+ plugins and 400+ issues in under a week. TrueFoundry open-sourced TrueForge, an MIT-licensed self-hostable harness that reportedly matched Claude Managed Agents on Opus 4.8 using ~30% fewer tokens, and cut cost ~75% when routed to GLM-5.2. Anthropic reached general availability for computer use, browser tool, Skills API, and Files API on the Claude Platform, plus an AG-UI adapter for Managed Agents. Separately, two research threads: a paper on "harness continual learning" identifies harness-level forgetting (improving one component silently breaks another) and proposes guarded harness evolution (separating proposing updates from committing them, >10% gains); and an instrumented study of 1,902 multi-agent coding runs found naming a coordinator doesn't reliably help, and replacing repeated 1:1 messages with shared files cut output tokens ~42% at 8 agents.
-
-    **Why it matters:** Directly extends the wiki's existing "harness choice keeps outweighing model choice" thread with both new products (DSH, TrueForge, Claude Platform GA) and new empirical research on where harnesses fail and how to fix them.
-
-    **Sources:**
-      - `raw/newsletters/2026-08-19-ainews-memory-prices-up-500-in-12-months.md`
-      - `raw/newsletters/2026-08-20-ainews-death-of-params-zai-ceo-jie-tang-on-glm.md`
-      - `raw/newsletters/2026-08-21-ainews-poolside-gets-12b-reverse-execuhire-to-n.md`
-
-    **Primary URL:** none single — recommend fetching the TrueForge launch post and the harness-continual-learning paper directly during proposal drafting
-    **Recommended:** full ingest
-
-- [x] **[agents]** The /wayfinder skill: a named methodology for planning agent work under uncertainty
-
-    **What it is:** Full Latent Space interview with Matt Pocock (creator of "AI Skills for Real Engineers," 220K GitHub stars) about /wayfinder, a planning skill for projects where "you can't quite decide everything right at the start" (the "fog of war"). It works by splitting planning into a persistent "map" (decisions already made) and per-session "tickets" (grilling/prototype/research/task types), each scoped precisely so a child session only gets what it needs. Pocock's broader point: skill design is really about finding precise, consistent terminology ("leading words") so agent and human share a "ubiquitous language" — he's separately building a full AI-coding-dictionary graph for this. Distinguished from his existing "grill me" skill: use grill-me when the whole task fits one session, wayfinder when it doesn't.
-
-    **Why it matters:** A concrete, well-explained methodology for a problem the wiki already tracks (agent skill design, context/session management) from a credible, widely-used practitioner — good candidate for `agent-skill-methodology` or `harness`.
-
-    **Sources:**
-      - `raw/newsletters/2026-08-20-the-wayfinder-skill-navigating-the-fog-of-war.md`
-
-    **Primary URL:** https://www.latent.space/p/wayfinder-skill
-    **Recommended:** full ingest
-
-- [x] **[models]** Poolside's $12B "reverse execuhire" to NVIDIA — employees leave, founders and mission stay
-
-    **What it is:** NVIDIA (previously an investor) is licensing Poolside's model-training "factory" and hiring 109 of its ~115 technical staff for a reported $12B, with founders keeping ~$1B and staying to pivot the company, while employees get ~$6B. The founders call it the inverse of a typical "execuhire" (Windsurf-Google, Character-Google, Scale-Meta): normally executives leave with a payout and staff stay: here staff leave and founders stay. Poolside's public rationale: after losing a 40,000-GPU cluster allocation over a funding gap, they argue future frontier training requires compute scale beyond reach for most independent labs, and that AI value increasingly splits between "intelligence-bound" problems (commoditized, low-margin) and "experiment-bound" problems requiring real-world feedback loops (where they now want to compete via their spun-out "Infraco").
-
-    **Why it matters:** A concrete, unusual case study in frontier-lab compute economics and consolidation — worth a note on the existing `laguna-s-2-1` (Poolside's model) page and possibly the compute-infrastructure trend.
-
-    **Sources:**
-      - `raw/newsletters/2026-08-21-ainews-poolside-gets-12b-reverse-execuhire-to-n.md`
-
-    **Primary URL:** https://www.latent.space/p/ainews-poolside-gets-12b-reverse
-    **Recommended:** full ingest
-
-- [x] **[training]** AT&T case study: hybrid open/closed routing already at 40% of usage, targeting 60-70%
-
-    **What it is:** AT&T's internal AI deployment routes 40% of employee AI usage to open models today, with an explicit target of 60-70%, reporting coding costs down 56% for only a ~2% quality drop at 45B tokens/day. Framed (via Twitter commentary) as a warning sign for OpenAI/Anthropic's enterprise moat, and as validation from Ollama for open-model adoption at scale.
-
-    **Why it matters:** A named Fortune-500 company with hard percentages is rarer and stronger evidence than the usual anecdotal cost-routing claims — strong fit for the existing cost-aware-routing training page, which already tracks Databricks/Every-style case studies.
-
-    **Sources:**
-      - `raw/newsletters/2026-08-21-ainews-poolside-gets-12b-reverse-execuhire-to-n.md`
-
-    **Primary URL:** none captured; recommend searching for AT&T's own statement or a direct writeup before drafting
-    **Recommended:** verify-first
-
-- [x] **[training]** A solo builder runs a "team" of specialist Codex agents, each with its own AGENTS.md, skills, and memory
-
-    **What it is:** Every profile of Naveen Naidu, the one-person team behind the Monologue dictation app, who now manages his product more like an engineering-team lead than a solo developer: distinct Codex-based agents for different engineering disciplines, a customer-support agent, and a growth-strategist agent, each configured as its own Codex project with a custom AGENTS.md, skills, memory, and codebase context. Example given: a customer review is handed by the support agent to the web-engineer agent, which adds it as a testimonial without Naveen doing the handoff himself. The captured email is a paywalled teaser showing only this one example — the rest of the article sits behind the primary URL.
-
-    **Why it matters:** A concrete, small-scale worked example of the "specialist sub-agents with persistent identity/context" pattern the wiki already tracks under delegation/enablement guidance.
-
-    **Sources:**
-      - `raw/newsletters/2026-08-19-an-engineering-team-for-the-cost-of-codex.md`
-
-    **Primary URL:** https://every.to/context-window/an-engineering-team-for-the-cost-of-codex
-    **Recommended:** verify-first (captured content is a paywalled teaser with one example only; fetch the full post before drafting)
-
-- [x] **[models]** Muse Spark 1.2 picks up further third-party benchmark wins
-
-    **What it is:** Incremental benchmark data beyond what's already on the `muse-spark` page: Agent Arena reports +2.1% net improvement (up from +0.9% in v1.1), with a notably strong Bash Recovery gain (+11.4%); DesignArena ranks it #1 for Video-to-Website, #2 for Image-to-HTML, and #3 for Image-to-Frontend, describing it as sitting on the price/quality Pareto frontier.
-
-    **Why it matters:** Small but citable update to an already-current wiki page rather than a new story.
-
-    **Sources:**
-      - `raw/newsletters/2026-08-21-ainews-poolside-gets-12b-reverse-execuhire-to-n.md`
-
-    **Primary URL:** https://www.latent.space/p/ainews-poolside-gets-12b-reverse
+    **Primary URL:** https://www.latent.space/p/ainews-10-worse-100x-cheaper-10000x
     **Recommended:** lightweight ingest
 
-- [x] **[models]** Gemini 3.7 Flash posts strong cost-adjusted reasoning numbers
+- [x] **[training]** Andrew Ng relaunches DeepLearning.AI around four "AI Engineering" skills
 
-    **What it is:** ARC-AGI Prize reports Gemini 3.7 Flash scoring 84.6% on ARC-AGI-2 at $0.25/task and 95.5% on ARC-AGI-1 at $0.12/task; Artificial Analysis separately places it #1 on its AA-AnalystAgent benchmark (spreadsheet/document-heavy quantitative tasks) at $0.54 average cost across 80 tasks.
+    **What it is:** Andrew Ng (Google Brain/Coursera cofounder) relaunched DeepLearning.AI's focus on "AI Engineering," based on analysis of 10,000+ job postings plus structured interviews with hiring managers and recruiters. He names four core skills: (1) building/deploying AI applications — LLMs, context engineering, RAG, agentic workflows, disciplined evals/error-analysis loops; (2) software engineering fundamentals — architecture/tradeoff judgment that separates good delegators from vibe-coders who don't know what context to give their agent; (3) using coding agents effectively — mental models for agent limits, when to write a spec vs skip one, multi-agent orchestration, guardrails against costly mistakes; (4) shaping the build — product sense, business context, knowing when to ship an MVP vs slow down.
 
-    **Why it matters:** Reinforces Gemini 3.7 Flash's positioning as the "cheap and strong" option in its tier — worth a line on the `gemini` tools page.
-
-    **Sources:**
-      - `raw/newsletters/2026-08-20-ainews-death-of-params-zai-ceo-jie-tang-on-glm.md`
-
-    **Primary URL:** https://www.latent.space/p/ainews-death-of-params-zai-ceo-jie
-    **Recommended:** lightweight ingest
-
-- [x] **[coding]** Cursor launches Origin, a first-party git-hosting platform
-
-    **What it is:** Cursor launched Origin, a repository-hosting product built directly into Cursor for repo management, PRs, review, and deploy integrations, with GitHub sync — landing in the middle of a major GitHub outage, which amplified discussion of Cursor absorbing more of the surrounding platform rather than just autocompleting against it.
-
-    **Why it matters:** Extends Cursor's move toward owning the full loop (repo, agent, review, deploy) — worth a line on the existing `cursor` tools page, which already tracks this direction.
+    **Why it matters:** A named, evidence-gathered (job-posting analysis) skills taxonomy from a well-known educator; no existing wiki page names this taxonomy directly, though it's adjacent to the wiki's `training/` guidance on delegation and evals.
 
     **Sources:**
-      - `raw/newsletters/2026-08-17-ainews-stripe-buys-openrouter-for-7b.md`
+      - `raw/newsletters/2026-08-25-ainews-andrew-ng-gets-into-ai-engineering.md`
 
-    **Primary URL:** none captured (Twitter-recap mention only); recommend finding Cursor's own Origin announcement before drafting
+    **Primary URL:** https://www.latent.space/p/ainews-andrew-ng-gets-into-ai-engineering
     **Recommended:** lightweight ingest
+
+- [x] **[training]** Cost-normalized benchmarks and open-weight adoption data both point the same way: intelligence is outpacing the need for it
+
+    **What it is:** Two data threads converge on a "diminishing returns on frontier intelligence for typical work" narrative. Cost-normalized agent benchmarks: Together AI found GLM-5.3 completes 5x more DeepSWE work than Fable 5 under a fixed $100 budget (~17 vs ~3 solved tasks) despite similar first-try quality; GPT-5.6 Sol Max scored 72.7% on DeepSWE v1.1 for $6.47/task vs Fable 5 Max's 69.7% for $21.63/task; Cline found Ox Alpha solved a real bugfix using ~3x fewer output tokens than Fable. Separately, Every's own data shows Fable — "the most capable model on the market" — is barely used: 6% of Anthropic tokens purchased and 11% of model spend a month after launch, largely because it lacks a zero-data-retention option many enterprises require; Every's head of tech consulting reports getting "no relative gain from Fable on 80 percent" of knowledge-work tasks. Meanwhile open-weight models' share of tokens routed through Vercel's AI Gateway rose from 11% to 29% in two months (per Ramp/Vercel data cited by Every), though still under 4% of spend — high-volume, low-stakes work is already migrating to cheaper models.
+
+    **Why it matters:** Directly extends [training/cost-aware-ai-task-routing.md](../../wiki/training/cost-aware-ai-task-routing.md) (routing decisions by cost/risk) and [trends/open-weight-momentum-broadens.md](../../wiki/trends/open-weight-momentum-broadens.md) (open-weight share growth), both recently updated in the prior digest.
+
+    **Sources:**
+      - `raw/newsletters/2026-08-25-ainews-andrew-ng-gets-into-ai-engineering.md` — cost-normalized DeepSWE/Cline data
+      - `raw/newsletters/2026-08-26-the-case-for-cloning-your-coworkers.md` — Fable adoption data, Vercel Gateway open-weight share
+
+    **Primary URL:** https://every.to/context-window/the-case-for-cloning-your-coworkers
+    **Recommended:** full ingest
+
+- [x] **[training]** "Benchmarks don't know your job": the case for task-specific evals over leaderboard-chasing
+
+    **What it is:** Mercor CEO Brendan Foody and Box CEO Aaron Levie argue companies spending tens of millions on AI without offline evals (a fixed set of real internal tasks used to compare models before they touch live work) are flying blind — public leaderboards say a model is more capable, not whether it caught the clause your lawyers care about or matched your house style. Every's own KateBench (an AI copyeditor trained on ~30,000 of its editor-in-chief's past edits, run inside Google Docs) illustrates the trap: it looks like an 85-90% acceptance rate, but that number was inflated by a silent cap that discarded suggestions past the 40th, and the acceptance rate itself is noisy run-to-run since the model doesn't produce identical edits twice. Two new benchmarks reinforce the caution: CentaurBench found the model best at solo task completion often isn't the best at improving a weaker model's first attempt (true on 5 of 7 tasks); Thinkingbox found the strongest coding model's 65% single-attempt pass rate fell to 25% when required to perform reliably across 20 consecutive attempts.
+
+    **Why it matters:** Concrete evidence and a worked example for [training/evals-for-agentic-work.md](../../wiki/training/evals-for-agentic-work.md) (task-specific metrics, pass^k reliability) and [concepts/agent-evals.md](../../wiki/concepts/agent-evals.md).
+
+    **Sources:**
+      - `raw/newsletters/2026-08-25-benchmarks-dont-know-your-job.md`
+
+    **Primary URL:** https://every.to/context-window/benchmarks-don-t-know-your-job
+    **Recommended:** full ingest
+
+- [x] **[training]** Self-improving agent skills as a personal workflow habit, not just a team process
+
+    **What it is:** Every's head of operations Arielle Shipper runs a "self-improve" Codex skill: whenever the agent makes a mistake, she feeds it feedback on what went wrong and what a better response would have looked like, then runs the skill, which reviews the failure and proposes a targeted edit to Codex's own instructions so the mistake is less likely to repeat (e.g. adding a rule to always re-read thread context before drafting a Slack message). This is the same compounding mechanism behind Every's KateBench/DanLens skills (Codex rewrites the skill based on which suggestions get accepted vs. rejected), but framed here as something one person runs on their own workflow rather than a team-wide skill library. The skill itself is published on GitHub.
+
+    **Why it matters:** A concrete "codify production failures as standing instructions" pattern (already principle #4 on [training/agent-skill-methodology.md](../../wiki/training/agent-skill-methodology.md)) turned into a reusable self-service loop — worth a line as a named proven pattern.
+
+    **Sources:**
+      - `raw/newsletters/2026-08-26-the-case-for-cloning-your-coworkers.md`
+
+    **Primary URL:** https://github.com/arielleshipper/every-thing/tree/main/skills/self-improve
+    **Recommended:** lightweight ingest
+
+- [x] **[agents]** Lovable pivots from app builder to "company brain": SaaS becomes agent-callable capabilities via MCP
+
+    **What it is:** Lovable (AI app-building platform, $13.3B valuation after a $400M Series C, >$500M ARR, 60M+ projects created) is repositioning around "capabilities" — discrete functions from a published app exposed as tools through a hosted MCP server, so an agent (from ChatGPT, Claude, or elsewhere) can call the function directly instead of a human opening the app. Credentials are held server-side by Lovable's connector gateway (never exposed to the generated app or its code) and each user's app-level permissions are preserved via short-lived scoped keys. Lovable CTO Fabian Hedin frames the end state as a single "company brain" agent per organization that orchestrates many such capabilities, deliberately avoiding the word "agent" for the whole because it implies an employee-replacement framing rather than a context/capability-connection one. Vercel (@𝚟) is building a similar internal-agent concept; Hedin argues Lovable's edge is being the best place to build the capabilities themselves, not the orchestration layer.
+
+    **Why it matters:** A concrete, funded example of the "MCP turns SaaS into agent-callable tools" pattern that [concepts/mcp.md](../../wiki/concepts/mcp.md) already tracks abstractly — this gives it a named, large-scale case study.
+
+    **Sources:**
+      - `raw/newsletters/2026-08-26-the-future-of-saas-is-apps-that-agents-can-use.md`
+
+    **Primary URL:** https://www.latent.space/p/lovable-future-of-saas
+    **Recommended:** lightweight ingest
+
+- [ ] **[misc]** Walleye Capital: mandatory AI fluency at a $10B hedge fund
+
+    **What it is:** Every's AI & I podcast revisits a conversation with Walleye Capital CEO/CIO Will England, who has made AI use mandatory for all 400 employees. England sent a firm-wide email opening with "I used ChatGPT to write this email, you should be using it too, and be proud of it," arguing results matter more than manual effort and that ignoring AI tools in 2026 is like refusing to use the internet in 1995.
+
+    **Why it matters:** A concrete, named "mandatory AI adoption" data point for [training/ai-delegation-management.md](../../wiki/training/ai-delegation-management.md)'s evidence-from-practice section.
+
+    **Sources:**
+      - `raw/newsletters/2026-08-26-the-case-for-cloning-your-coworkers.md`
+
+    **Primary URL:** https://every.to/on-every/introducing-ai-i
+    **Recommended:** lightweight ingest
+
+- [ ] **[?]** Deft: a writing-focused model built to fix "AI sameness" — mixed early results
+
+    **What it is:** New research lab Deft (cofounded by Justin Murphy and an AI researcher going by "Rosmine") released DFT v1, trained with a custom "distribution fine-tuning" method that compares batches of model output against batches of human writing (rather than grading one response at a time) to reduce repetitive AI phrasing patterns. Every's review found the output measurably less predictable/more "surprising" at the sentence level, but also denser, harder to parse, prone to inventing unrequested details even in "strict" mode, and with a limited API (sends jobs to Deft's system rather than allowing iterative collaboration). Verdict: a promising demonstration that AI-prose sameness is a tractable training problem, but not yet a usable writing tool.
+
+    **Why it matters:** Niche, single-source, unproven lab and product; no existing wiki page tracks AI-writing-quality tooling specifically.
+
+    **Sources:**
+      - `raw/newsletters/2026-08-24-i-tried-the-ai-model-built-to-fix-ai-writing.md`
+
+    **Primary URL:** https://every.to/working-overtime/i-tried-the-ai-model-built-to-fix-ai-writing
+    **Recommended:** skip — thin, single-source, no durable wiki fit
+
+- [ ] **[?]** Physics foundation models remain data-starved and resistant to token-scale approaches
+
+    **What it is:** Caltech's Anima Anandkumar discusses Neural Operators (combining data with physical laws to model functions across scales rather than fixed grids), used in her FourCastNet weather models (competitive with physics-based simulation, runs on consumer GPUs) and in fusion-plasma disruption prediction (a few thousand samples predict disruptions ~1,000,000x faster than simulation). Her argument: physical systems (weather, fusion, fluid/heat flow) resist the transformer/scaling playbook because required context length would run into the hundreds of billions to trillions of tokens — progress here comes from building in structure (inductive biases, physical priors), not more data or compute. Also covers TorchLean (formally verifying PyTorch-style networks inside the Lean proof assistant).
+
+    **Why it matters:** No existing wiki page tracks AI-for-physical-science; interesting but narrow research-lab content with no clear near-term reader action.
+
+    **Sources:**
+      - `raw/newsletters/2026-08-26-we-have-foundation-models-for-language-not-for.md`
+
+    **Primary URL:** https://www.latent.space/p/anima
+    **Recommended:** skip — niche research content, no clear wiki fit at present

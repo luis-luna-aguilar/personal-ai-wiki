@@ -3,8 +3,8 @@ title: Agent skill methodology
 type: training
 domains: [agents]
 tags: [perplexity, agentic]
-as_of: 2026-08-20
-sources: [perplexity-agent-skill-methodology-2026-05-12, agent-html-artifacts-2026-05-13, agent-skills-context-evals-2026-05-13, skill-engineering-impeccable-2026-07-02, vercel-agents-new-software-2026-07-03, autoresearch-agent-recipes-2026-07, powerpoint-agent-skill-failure-mode-2026-06, gpt-56-raising-concerns-2026-07-15, case-against-skills-2026-07-16, swe-skills-bench-2026-07, wayfinder-skill-2026-08-20]
+as_of: 2026-08-26
+sources: [perplexity-agent-skill-methodology-2026-05-12, agent-html-artifacts-2026-05-13, agent-skills-context-evals-2026-05-13, skill-engineering-impeccable-2026-07-02, vercel-agents-new-software-2026-07-03, autoresearch-agent-recipes-2026-07, powerpoint-agent-skill-failure-mode-2026-06, gpt-56-raising-concerns-2026-07-15, case-against-skills-2026-07-16, swe-skills-bench-2026-07, wayfinder-skill-2026-08-20, every-cloning-your-coworkers-2026-08-26]
 ---
 
 # Agent skill methodology
@@ -63,6 +63,10 @@ When a project's end state isn't fully knowable up front (Matt Pocock calls this
 - Precise, consistent terminology matters as much as the structure itself: Pocock calls this finding "leading words" so agent and human share a "ubiquitous language" — vague or inconsistently-used terms (calling everything a "ticket," or naming the same concept differently in different places) produce confused agent behavior.
 - (Matt Pocock, /wayfinder, Aug 2026)
 
+**10. Run a personal self-improve loop, not just a team skill library**
+Every's head of operations, Arielle Shipper, keeps a standing "self-improve" skill for her own Codex workflow: whenever the agent produces a wrong or off-tone result, she feeds it feedback on what went wrong and what a better response would have looked like, then runs the skill — which reviews the failure, interrogates the cause, and proposes a targeted edit to Codex's own operating instructions so the mistake is less likely to repeat (e.g. "always re-read prior thread messages before drafting a Slack reply"). This is the same compounding mechanism behind team-facing skills like Every's KateBench/DanLens (which rewrite themselves based on which suggestions get accepted or rejected), scaled down to something one person runs on their own workflow rather than infrastructure a team builds and maintains.
+- (Arielle Shipper, Every, Aug 2026 — skill published on GitHub)
+
 ## Failure modes
 
 - **Procedure rot:** detailed steps become wrong as policies, tools, or model behavior changes; principles last longer.
@@ -94,6 +98,7 @@ The SkillsBench harness is open-source, so a team can run these same comparisons
 
 ## Recent changes
 
+- [2026-08-26] Added a personal self-improve-skill pattern (Arielle Shipper, Every): feed the agent feedback on a mistake, then run a skill that proposes a targeted edit to the agent's own operating instructions — the same compounding mechanism as team-facing skills, run by one person on their own workflow.
 - [2026-08-20] Added /wayfinder: a map/persistent-decisions + per-session-ticket pattern for planning work under uncertainty, plus "leading words"/ubiquitous-language as a terminology-design principle (Matt Pocock).
 - [2026-07-16] Added SWE-Skills-Bench (distinct from SkillsBench): 49 skills tested against real repos, 39 with zero effect, average +1.2% gain, 7 real winners (up to +30%), 3 regressions (up to -10%) from version-mismatched guidance. Added a keep/retest/retire skill-audit pattern.
 - [2026-07-15] Added SkillsBench findings: self-written skills score worse than no skills; short skills beat exhaustive documentation; loading every available skill underperforms a few relevant ones; skill regressions are invisible without a head-to-head comparison ("polish hides the damage").
@@ -125,3 +130,4 @@ The SkillsBench harness is open-source, so a team can run these same comparisons
 - [The Case Against Skills](../sources/newsletters/case-against-skills-2026-07-16.md)
 - [SWE-Skills-Bench: Do Agent Skills Actually Help in Real-World Software Engineering?](../sources/papers/swe-skills-bench-2026-07.md)
 - [The /wayfinder Skill: Navigating the "Fog of War" of Planning](../sources/newsletters/wayfinder-skill-2026-08-20.md)
+- [Every — The Case for Cloning Your Coworkers](../sources/newsletters/every-cloning-your-coworkers-2026-08-26.md)

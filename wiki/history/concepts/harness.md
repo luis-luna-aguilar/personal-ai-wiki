@@ -2,6 +2,10 @@
 
 Older recent-change entries spilled from [Harness (agent)](../../concepts/harness.md).
 
+## Archived from current page on 2026-09-07 (2)
+
+- [2026-06-05] Added RL harness quality section: 8 failure modes taxonomy from Auriel W (Google Gemini RL team); "5% failure rate = harness problem, not model problem"
+
 ## Archived from current page on 2026-09-07
 
 - [2026-05-18] "Code as Agent Harness" survey (arXiv:2605.18747) frames code as the operational substrate for agent reasoning, planning, memory, tool use, and multi-agent coordination.
