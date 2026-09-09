@@ -66,7 +66,7 @@ AI cost discipline is becoming an operating function, not just a prompt-writing 
 
 - [AI work delegation modes](ai-work-delegation-modes.md) - task-shape framework for choosing autonomous delegation versus close collaboration.
 - [Flex processing](../workflows/flex-processing.md) - lower-cost asynchronous execution for non-urgent OpenAI workloads.
-- [Claude Fable 5](../models/claude-fable-5.md) - frontier model whose practical niche is ambiguous or premise-risky work, not every large task.
+- [Claude Fable 5.1 / Mythos 5.1](../models/claude-fable-5-1.md) - frontier model whose practical niche is ambiguous or premise-risky work, not every large task.
 - [OpenRouter](../tools/openrouter.md) - the model-routing/aggregation product this page's "Spiral" and "eval data is the moat" evidence bullets reference directly.
 - [Glean](../tools/glean.md) - an enterprise-side model-routing architecture (three-tier routing, a pre-model filtering layer) covered as a full tool page.
 

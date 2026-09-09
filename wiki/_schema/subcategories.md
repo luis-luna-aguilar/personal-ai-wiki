@@ -36,7 +36,7 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Parent domain(s):** models
 - **Applies to types:** model
 - **Definition:** General-purpose frontier models competing on broad capability rather than narrow specialization.
-- **Examples:** [Muse Spark](../models/muse-spark.md), [Claude Fable 5](../models/claude-fable-5.md), [GPT-5.5](../models/gpt-5-5.md)
+- **Examples:** [Muse Spark](../models/muse-spark.md), [Claude Fable 5.1 / Mythos 5.1](../models/claude-fable-5-1.md), [GPT-5.5](../models/gpt-5-5.md)
 
 ### open-weight-model
 - **Parent domain(s):** models

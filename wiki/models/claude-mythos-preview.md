@@ -5,12 +5,14 @@ domains: [models, cybersecurity, agents]
 subcategory: frontier-model
 tags: [anthropic, closed-source, beta]
 as_of: 2026-05-23
-sources: [glasswing, metr-long-horizon-2026-05-12, claude-mythos-m5-bypass-2026-05, cloudflare-glasswing-2026-05, anthropic-glasswing-10k-vulnerabilities]
+sources: [glasswing, metr-long-horizon-2026-05-12, claude-mythos-m5-bypass-2026-05, cloudflare-glasswing-2026-05, anthropic-glasswing-10k-vulnerabilities, ainews-fablemythos-51-2026-09-02]
 ---
 
 # Claude Mythos Preview
 
 Anthropic's restricted-preview frontier model, demonstrated through Project Glasswing. Not publicly available. Operates above the current Opus 4.7 tier in autonomous cybersecurity capability.
+
+**Note:** In September 2026, Anthropic separately launched a public, paired knowledge-work model also named Mythos (Mythos 5.1, alongside Fable 5.1) — see [Claude Fable 5.1 / Mythos 5.1](claude-fable-5-1.md). The two share a name but, per current sources, not an established lineage; this page's Mythos Preview remains the restricted-access Project Glasswing cybersecurity-research model.
 
 ## Current status (as of 2026-05-23)
 
@@ -67,6 +69,7 @@ Mythos Preview is the first public evidence of an Anthropic model operating auto
 
 ## Recent changes
 
+- [2026-09-01] Anthropic launched a distinct, publicly available Mythos 5.1 alongside Fable 5.1 — added a disambiguation note; no lineage established between the two.
 - [2026-05-23] Anthropic reported Project Glasswing and partners found 10,000+ high/critical-severity vulnerabilities in essential software within a month of launch — a program-wide figure, not just the Cloudflare result; AINews' recap adds that Anthropic framed it as an industry-wide volume-adaptation warning.
 - [2026-05-19] Cloudflare Project Glasswing detailed writeup: exploit chain construction, proof generation loop, inconsistent organic refusals, and 8-stage narrow-scope harness architecture confirmed
 - [2026-05-18] Apple M5 MIE bypass: Calif team + Mythos Preview defeated Memory Integrity Enforcement in <5 days — first public kernel memory corruption on M5; small team + frontier AI matches org-scale security research throughput

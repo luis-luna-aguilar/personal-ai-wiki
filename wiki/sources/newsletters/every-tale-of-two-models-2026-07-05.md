@@ -14,7 +14,7 @@ Every frames the week as Fable 5's return versus Sonnet 5's underwhelming positi
 
 ## Influenced pages
 
-- [Claude Fable 5](../../models/claude-fable-5.md) - relaunch signal
+- [Claude Fable 5](../../history/models/claude-fable-5.md) - relaunch signal
 - [Claude Sonnet 5](../../models/claude-sonnet-5.md) - Vibe Check synthesis
 - [Claude Science](../../tools/claude-science.md) - product and dogfooding strategy
 

@@ -3,8 +3,8 @@ title: State of Creative
 type: state-of
 domains: [creative]
 tags: []
-as_of: 2026-07-24
-sources: [legacy-ai-tools-roadmap-xlsx, seedance-2, luma-dream-machine, heygen-homepage, genspark-slides, stitch-google, claude-design-anthropic-labs, ai-music-commercialization-2026-05-01, claude-creative-tool-connectors-2026-04-29, video-agents-ethan-he-june-2026, ainews-cosmos-nemotron-june-2026, ainews-ideogram-june-2026, powerpoint-agent-skill-failure-mode-2026-06, open-creative-workflows-2026-06, meta-muse-image-video-2026-07, kimi-goal-mode-creative-agents-2026-06, google-io-agents-agents-agents, ainews-new-ai-infra-unicorns-2026-05-22, bfl-flux-3-2026-07-24]
+as_of: 2026-09-01
+sources: [legacy-ai-tools-roadmap-xlsx, seedance-2, luma-dream-machine, heygen-homepage, genspark-slides, stitch-google, claude-design-anthropic-labs, ai-music-commercialization-2026-05-01, claude-creative-tool-connectors-2026-04-29, video-agents-ethan-he-june-2026, ainews-cosmos-nemotron-june-2026, ainews-ideogram-june-2026, powerpoint-agent-skill-failure-mode-2026-06, open-creative-workflows-2026-06, meta-muse-image-video-2026-07, kimi-goal-mode-creative-agents-2026-06, google-io-agents-agents-agents, ainews-new-ai-infra-unicorns-2026-05-22, bfl-flux-3-2026-07-24, ainews-fal-h3-max-live-2026-09-01]
 ---
 
 # State of Creative
@@ -21,6 +21,7 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 - **Grok Imagine Agent** — xAI; early beta; first public video agent implementation: LLM plans and iterates using video generation as a tool, calling FFmpeg and editing tools for post-processing; long-form video as a sequence of planned, generated, and edited clips *(as of 2026-06-01)*
 - **OpenArt Director** — conversational "vibe directing" product for generating and editing clips up to five minutes with consistent characters, voiceover, music, and captions; current evidence is newsletter coverage pending primary-source fetch *(as of 2026-06-24)*
 - **Muse Video** — Meta Superintelligence Labs preview; paired with Muse Image and described in AINews as using agentic planning, tool use, code execution, and self-refinement before rendering *(as of 2026-07-08)*
+- **Fal H3 Max Live** — Fal post-trained MiniMax's H3 video model for cost/quality and optimized it 35x on its own inference engine, crossing faster-than-realtime, continuous video generation fast enough for a live, audience-steerable stream (LLM-generated, audience-upvoted prompts); also launched Reference-to-Video for MiniMax H3 Max at up to real-time factor 1 at 768p in early preview. Content quality is currently poor by the source's own framing; the milestone is the infrastructure, not the output *(as of 2026-09-01)*
 - **Palmier** — Mac-native video editor where Claude or Codex can generate, organize, and trim footage directly in-app; integrates leading video models such as Seedance 2.0, Kling V3, and Grok Imagine. Current evidence is newsletter coverage only *(as of 2026-06-19)*
 - **Runway Aleph 2.0 / Edit Studio** — Runway; lets users edit a single frame and propagate that edit through the rest of the video, which AINews frames as a practical productization of "reference-guided edit propagation." Current evidence is an AINews recap (linking Runway's launch post and a product-lead post); primary announcement not fetched *(as of 2026-05-22)*
 - [FLUX 3](../tools/flux-3.md) — Black Forest Labs; unified image/video/audio/action-prediction architecture ("Self Flow"); native audio generation, video-to-video character continuity, agentic multi-shot clip chaining; companion FLUX3-mimic extends it to robot control (testing with Audi); open-weights Dev version planned *(as of 2026-07-24)*
@@ -56,6 +57,7 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 
 ## Recent changes
 
+- [2026-09-01] Fal's H3 Max Live crosses faster-than-realtime video generation (35x inference speedup over MiniMax H3's official endpoint), enabling a continuous, audience-steerable live-video product; Fal also launched Reference-to-Video for MiniMax H3 Max at up to real-time factor 1.
 - [2026-07-24] Black Forest Labs launched FLUX 3: unified image/video/audio/action-prediction model, positioned against Seedance 2.0/Gemini Omni/Grok Imagine; companion FLUX3-mimic release extends it to robot control.
 - [2026-07-08] Meta launched Muse Image into Meta AI, Instagram Stories, and WhatsApp and previewed Muse Video; AINews describes an agentic generation loop with planning, tool use, code execution, and self-refinement.
 - [2026-06-29] Every's PowerPoint analysis adds a caution for slide agents: polished enterprise decks require supporting skills, scripts, references, and review loops.
@@ -65,7 +67,6 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 - [2026-06-02] NVIDIA Cosmos 3: Mixture-of-Transformers architecture; #1 open-weight Image-to-Video and Text-to-Image; full weights + data released via Cosmos Coalition with Runway
 - [2026-06-01] Video agents thesis: Ethan He (ex-NVIDIA Cosmos, ex-xAI) argues video model intelligence comes from LLMs not video training; Grok Imagine Agent beta is first public video agent; evolution mirrors coding → coding agents
 - [2026-05-22] Figma released a native in-canvas design agent (Gemini Flash + Claude Sonnet + Figma fine-tuned models; Every hands-on: good for first drafts, weak on detail fidelity) and Runway launched Aleph 2.0/Edit Studio for single-frame-edit propagation across video (AINews recap); both newsletter-sourced, no primary announcement fetched, no dedicated pages yet.
-- [2026-05-05] Claude creative tool connectors: Anthropic reported connectors for Adobe, Blender, Fusion, Ableton, Splice, SketchUp, Affinity, Resolume — Claude moving from artifact generation into creative-production tool integration (secondary coverage)
 
 ## Sources
 
@@ -84,3 +85,4 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 - [Google I/O: Agents, Agents, Agents (Every mini-review of Figma's design agent)](../sources/newsletters/google-io-agents-agents-agents.md)
 - [AINews — New AI Infra unicorns: Exa, Modal, TurboPuffer (Runway Aleph 2.0 recap)](../sources/newsletters/ainews-new-ai-infra-unicorns-2026-05-22.md)
 - [AINews — Black Forest Labs FLUX 3](../sources/newsletters/bfl-flux-3-2026-07-24.md)
+- [AINews — Fal's H3 Max Live breaks the infinite videogen barrier](../sources/newsletters/ainews-fal-h3-max-live-2026-09-01.md)

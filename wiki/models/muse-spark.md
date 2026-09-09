@@ -4,8 +4,8 @@ type: model
 domains: [models, creative]
 subcategory: frontier-model
 tags: [closed-source, agentic, meta]
-as_of: 2026-08-21
-sources: [muse-spark, open-creative-workflows-2026-06, meta-muse-image-video-2026-07, superhuman-chatgpt-work-muse-spark-2026-07, the-code-databricks-coding-benchmark-2026-07-10, ainews-gpt-56-rollout-not-much-happened-2026-07-11, amd-acquires-taalas-2026-08-07, anthropic-riemann-hypothesis-2026-08-11, ainews-poolside-nvidia-2026-08-21]
+as_of: 2026-09-03
+sources: [muse-spark, open-creative-workflows-2026-06, meta-muse-image-video-2026-07, superhuman-chatgpt-work-muse-spark-2026-07, the-code-databricks-coding-benchmark-2026-07-10, ainews-gpt-56-rollout-not-much-happened-2026-07-11, amd-acquires-taalas-2026-08-07, anthropic-riemann-hypothesis-2026-08-11, ainews-poolside-nvidia-2026-08-21, ainews-muse-spark-13-2026-09-03]
 ---
 
 # Muse Spark
@@ -56,8 +56,15 @@ Further third-party numbers followed on 2026-08-21: Agent Arena reported a +2.1%
 
 A smaller, architecturally distinct sibling, **Muse Glimmer** (30B dense, multimodal, Apache 2.0, designed for always-on local agents) shipped 2026-08-11 — see [Muse Glimmer](muse-glimmer.md). Alexandr Wang confirmed Muse Spark 1.2's own weights are coming "soon," a reversal from Spark 1.1's closed, metered-API-only launch.
 
+## Muse Spark 1.3 closes the gap with GPT-5.6 Sol and Opus 5 (as of 2026-09-03)
+
+Meta shipped Muse Spark 1.3, described by Meta's own team as the strongest model yet in the Spark line for agentic and coding work, with longer-horizon reliability and better complex-instruction compliance. Per Artificial Analysis Intelligence Index it now ranks #3 in the world, posting benchmark parity with GPT-5.6 Sol and Claude Opus 5 (not Fable) on several evals. Pricing discounts more than 90% for users who opt into allowing their data to be used for training.
+
+Reddit commenters flagged a striking long-context claim (MRCR 512k–1m at 98.1%) and speculated the model is trillion-parameter scale — community reaction to a benchmark screenshot, not a Meta-confirmed spec. Open weights are promised "coming soon" but had not shipped as of this source, extending the "soon" timeline first given for Muse Spark 1.2's weights.
+
 ## Recent changes
 
+- [2026-09-03] Muse Spark 1.3 launches: AA Intelligence Index #3 in the world, parity with GPT-5.6 Sol/Opus 5 on several evals, 90%+ pricing discount for training opt-in, open weights still promised "coming soon."
 - [2026-08-21] Additional third-party benchmarks: Agent Arena +2.1% net improvement (Bash Recovery +11.4%); DesignArena #1 Video-to-Website, #2 Image-to-HTML, #3 Image-to-Frontend.
 - [2026-08-11] Muse Glimmer ships as a smaller, open-weight (Apache 2.0) sibling model; Muse Spark 1.2's own weights promised "soon" — a reversal from Spark 1.1's closed API-only launch.
 - [2026-08-07] Muse Spark 1.2 breaks into frontier-tier benchmarks: Vals Index top 5 at $0.69/test, first model above 60% on Finance Agent v2, five STEM Olympiad gold-medal-level results under no-tool conditions.

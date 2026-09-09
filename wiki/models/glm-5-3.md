@@ -4,8 +4,8 @@ type: model
 domains: [models, coding]
 subcategory: coding-model
 tags: [open-weights, agentic]
-as_of: 2026-08-27
-sources: [ainews-death-of-params-glm-53-2026-08-20, ainews-nvidia-buys-huggingface-2026-08-27, ainews-openai-agi-bar-2026-08-28, ainews-openai-shuts-off-cursor-2026-08-29]
+as_of: 2026-09-01
+sources: [ainews-death-of-params-glm-53-2026-08-20, ainews-nvidia-buys-huggingface-2026-08-27, ainews-openai-agi-bar-2026-08-28, ainews-openai-shuts-off-cursor-2026-08-29, ainews-fal-h3-max-live-2026-09-01]
 ---
 
 # GLM-5.3
@@ -34,6 +34,10 @@ Z.ai revealed that "Ox Alpha" — a mystery model that had spent weeks impressin
 
 The full (non-Flash) GLM-5.3 also went open-weight in this window at its original 753B-total/40B-active footprint, with day-0 vLLM support.
 
+## Agent Arena and Vals benchmark placements (as of 2026-09-01)
+
+GLM-5.3-Flash placed #19 overall / #4 among open models on Agent Arena, with a +4.6% net improvement over 9,000+ real-world sessions, a $0.12 median cost/task, and no reported tool-hallucination issues (+15.3% Confirmed Success in the signal breakdown). Separately, Vals reported the broader GLM-5.3 family posting 95.4% on SWE-bench and 78.1% on Vibe Code Bench, alongside its existing 1M context window and a 128k max output token ceiling.
+
 ## Why it matters
 
 Z.ai co-founder and CEO Jie Tang argues parameter count alone is now a misleading capability proxy: "Parameter count is only meaningful alongside three others — how much data you have, where you intend to spend your compute, and who will run the model, under what conditions." He proposes model-family notation (e.g. "XA-YB" for MoE sparsity) to replace raw parameter counts, and argues advanced skills like vulnerability-finding require carrying long causal chains (20+ inference steps) that don't live in total parameter count once a baseline knowledge threshold is crossed — GLM-5.3's benchmark jump at an unchanged footprint is offered as the concrete evidence for that argument.
@@ -46,6 +50,7 @@ Z.ai co-founder and CEO Jie Tang argues parameter count alone is now a misleadin
 
 ## Recent changes
 
+- [2026-09-01] Agent Arena placement: GLM-5.3-Flash #19 overall / #4 among open models (+4.6% net improvement, $0.12 median cost/task); Vals reports full GLM-5.3 family at 95.4% SWE-bench, 78.1% Vibe Code Bench.
 - [2026-08-27] GLM-5.3-Flash launches, revealed as the mystery "Ox Alpha" model: 320B/18B MoE, MIT-licensed, claims Opus 4.8 parity on Z.ai's coding benchmark; full GLM-5.3 also goes open-weight with day-0 vLLM support.
 - [2026-08-20] Launched via API: same 753B/40B footprint and price as GLM-5.2, +246 GDPval-AA v2, ties Kimi K3 on AA Intelligence Index — gains attributed to post-training RL (SAO, sandbox training, on-policy distillation). Supersedes [GLM-5.2](../history/models/glm-5-2.md). Z.ai CEO Jie Tang argues parameter count alone now misleads on capability.
 

@@ -37,3 +37,7 @@
 
 - [2026-04-25] DeepSeek V4 release follow-through adds Pro/Flash specs, MIT license, pricing, Huawei Ascend compatibility, and independent benchmark placement to the earlier preview signal
 - [2026-04-24] DeepSeek V4 Preview strengthens the trend: open-weight competition now includes explicit architectural work for long-running agent traces, not just cheaper coding models
+
+## Archived from current page on 2026-09-09
+
+- [2026-07-28] NVIDIA launches the "Open Secure AI Alliance" (Adobe, Cisco, Cloudflare, Hugging Face, IBM, Microsoft, Red Hat, Salesforce, SAP, ServiceNow, Snowflake, SpaceX); Anthropic does not join — publishing its own position (chip controls, anti-distillation, safety testing, not a ban) instead; NYT reports both labs lobbying Washington against open models even as Altman publicly backs them

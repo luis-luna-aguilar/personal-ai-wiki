@@ -4,8 +4,8 @@ type: tool
 domains: [agents]
 subcategory: agent-framework
 tags: [agentic]
-as_of: 2026-08-15
-sources: [flue-2-react-for-agents-2026-08-15]
+as_of: 2026-09-01
+sources: [flue-2-react-for-agents-2026-08-15, latent-space-pr-not-welcome-2026-09-01]
 ---
 
 # Flue
@@ -31,10 +31,16 @@ Flue is Fred Schott's agent framework — Schott is the creator of the Astro web
 - Current source is interview coverage, not official docs — version specifics and adoption scale are unverified beyond Schott's own account.
 - Early-stage: Flue 2 is its first stable release; the file-routing-to-hooks pivot shows the design is still actively evolving.
 
+## Contribution policy (as of 2026-09-01)
+
+Flue auto-closes external pull requests and converts them into issues or discussions instead — Schott's contributor guide frames this as preventing "drive-by AI slop PRs" while still channeling community input through discussion. Once a direction is decided in the issue or discussion, agents are deployed for research, design, implementation, and initial review. A concrete instance of the "PRs closed by default" pattern — see [Agentic orchestration patterns](../workflows/agentic-orchestration-patterns.md).
+
 ## Recent changes
 
+- [2026-09-01] Contribution policy detailed: Flue auto-closes external PRs, converting them into issues/discussions instead; agents handle research, design, implementation, and initial review once a direction is chosen.
 - [2026-08-15] Flue 2 released — first stable release, introduces the Agent Hooks pattern (16 built-in hooks) built on Pi.
 
 ## Sources
 
 - [React for Agents: Astro Creator Brings Hooks to his Meta-Harness, Flue](../sources/newsletters/flue-2-react-for-agents-2026-08-15.md)
+- [PRs NOT Welcome — Latent Space](../sources/newsletters/latent-space-pr-not-welcome-2026-09-01.md)

@@ -79,3 +79,11 @@
 - [2026-05-13] Added merged `Real-time voice / interaction models` subcategory; TML-Interaction-Small (Thinking Machines Lab, 276B, 200ms audio, 0.4s response), GPT-Realtime-2, and Google Magic Pointer are first entries
 - [2026-05-13] "End of finetuning" debate: OpenAI deprecating finetuning APIs; consensus forming that long-context prompts suffice for ~80% of use cases; counterpoint from top tier (Cursor, Cognition $25B) is increased open-model RLFT, not decreased — weight specialization remains central to their custom-ASIC strategy
 - [2026-05-06] Secondary coverage says GPT-5.5 Instant became ChatGPT's new default model, replacing GPT-5.3 Instant; official verification still needed for exact rollout and hallucination claims.
+
+## Archived from current page on 2026-09-09
+
+- [2026-07-24] Claude Opus 5 launched, superseding Opus 4.8: Epoch Capabilities Index 159 (vs Fable 5's 161), SWE-ECI 161 tied with Fable 5; Arena #1 Frontend Code Arena/Text Arena; practitioner reports (Every) call it prickly and harder to manage day-to-day than Fable 5 or GPT-5.6 Sol despite strong benchmark placement.
+
+## Archived from current page on 2026-09-09 (2)
+
+- [2026-07-31] DeepSeek V4-Flash 0731: post-training-only update (same 284B/13B architecture) jumped Terminal-Bench to 82.7 and AA Intelligence Index to 50, now 1pt behind GPT-5.6 Luna; MIT-licensed, day-0 vLLM support; read as a direct response to OpenAI's price cuts the day before.

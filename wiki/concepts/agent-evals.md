@@ -3,8 +3,8 @@ title: Agent evals
 type: concept
 domains: [agents]
 tags: [agentic]
-as_of: 2026-07-14
-sources: [agents-evals-deep-research, cost-aware-agent-evaluation-2026-04-28, vending-bench-andon-june-2026, ainews-not-much-happened-2026-07-02, autoresearch-agent-recipes-2026-07, ai-code-review-eval-integrity-2026-06, dashbench-code-review-understanding-2026-07, effective-feedback-compute-harness-2026-05, cognitioncom-blog-ai-productivity, every-after-automation-2026-05]
+as_of: 2026-09-01
+sources: [agents-evals-deep-research, cost-aware-agent-evaluation-2026-04-28, vending-bench-andon-june-2026, ainews-not-much-happened-2026-07-02, autoresearch-agent-recipes-2026-07, ai-code-review-eval-integrity-2026-06, dashbench-code-review-understanding-2026-07, effective-feedback-compute-harness-2026-05, cognitioncom-blog-ai-productivity, every-after-automation-2026-05, ainews-fal-h3-max-live-2026-09-01]
 ---
 
 # Agent evals
@@ -64,6 +64,10 @@ A complementary approach to dollar-denominated evals: instead of scoring simulat
 
 The comparison suggests granular session data (full trace, user messages, codebase context) meaningfully outperforms text-only estimation, and that noisy individual predictions can still be useful in aggregate: errors are roughly unbiased across sessions, so per-session noise cancels out at deployment scale even though individual estimates can be off by 2-3x.
 
+## Multi-turn behavioral evals
+
+Transluce released an independent evaluation of 77 model variants across major labs, testing responses to mental-health crisis scenarios across multi-turn conversations rather than single-turn prompts. Several researchers treated it as a template for future agent evals: OpenAI's Wojciech Zaremba argued evals must increasingly simulate users, networks, and internet environments over long horizons rather than scoring isolated exchanges; others emphasized the need for ongoing audits rather than one-time predeployment checks, since sustained, escalating pressure can surface behavior a single prompt never would. This extends the trajectory-evaluation argument above (see "Why trajectory matters") from single-session tool-use paths to extended, adversarial-context conversations.
+
 ## How this changes eval design
 
 Because the harness, tools, and environment are part of what you are evaluating:
@@ -115,6 +119,7 @@ This complements the benchmark-leakage caveat below: leakage is a benchmark fail
 
 ## Recent changes
 
+- [2026-09-01] Added multi-turn behavioral evals: Transluce's 77-model-variant mental-health-crisis eval, framed by researchers as a template for long-horizon, user/environment-simulating agent evals.
 - [2026-07-14] Added Cognition's human-hours-equivalent productivity estimator (`r_log = 0.74`) as a second dollar/hours-denominated eval approach alongside Vending Bench; compared against METR and Anthropic prior effort-estimation work.
 - [2026-07-08] DashBench adds a historical-PR replay pattern for AI code review evals: measure whether the reviewer catches real past issues, not whether it sounds useful.
 - [2026-07-02] Added eval infrastructure layer: Agent Arena, AA-AgentPerf, WorldModelGym, and FLARE-AI show agent evaluation expanding into benchmarking, systems efficiency, world-model quality, and incident reporting.
@@ -135,3 +140,4 @@ This complements the benchmark-leakage caveat below: leakage is a benchmark fail
 - [Effective Feedback Compute and harness profiles](../sources/newsletters/effective-feedback-compute-harness-2026-05.md)
 - [Estimating the Productivity of an Autonomous AI Software Engineer](../sources/articles/cognitioncom-blog-ai-productivity.md)
 - [After Automation — Dan Shipper (Every)](../sources/articles/every-after-automation-2026-05.md)
+- [AINews — Fal's H3 Max Live breaks the infinite videogen barrier](../sources/newsletters/ainews-fal-h3-max-live-2026-09-01.md)

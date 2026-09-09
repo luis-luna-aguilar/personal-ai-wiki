@@ -32,7 +32,7 @@ Read-me-first dashboards per domain.
 
 Foundation models. One page per model family or generation.
 
-- [models/claude-fable-5](models/claude-fable-5.md) — Anthropic frontier model; re-enabled after June export-control suspension, with safety fallback routing and a practical niche for ambiguous premise-risky work *(as_of: 2026-07-07)*
+- [models/claude-fable-5-1](models/claude-fable-5-1.md) — Anthropic frontier model refresh; supersedes Fable 5; AA Intelligence Index 66, 75% cache-read price cut, same-weights/different-safety-routing debate with the paired Mythos 5.1 release *(as_of: 2026-09-02)*
 - [models/claude-sonnet-5](models/claude-sonnet-5.md) — Anthropic middle-tier Claude 5 model; official Claude Code/API availability plus early high-effort cost-per-task caveats *(as_of: 2026-08-11)*
 - [models/claude-mythos-preview](models/claude-mythos-preview.md) — Anthropic restricted-preview model for autonomous zero-day discovery, METR long-horizon tasks, and Cloudflare Project Glasswing security findings *(as_of: 2026-05-23)*
 - [models/claude-opus-5](models/claude-opus-5.md) — Anthropic current flagship, supersedes Opus 4.8; Epoch Capabilities Index 159, SWE-ECI 161 tied with Fable 5; prickly/over-verbose day-to-day per practitioner reports *(as_of: 2026-07-28)*

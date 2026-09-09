@@ -12,6 +12,8 @@ sources: [fable-ban-june-2026, ainews-fable5-june-2026, every-fable5-vibe-check,
 
 Anthropic's frontier model, launched June 9 2026 as the first generally available Mythos-class model. Described by Anthropic as "at least 2× the size of Opus." Reached #1 across nearly all major benchmarks at launch, was briefly suspended worldwide under US government export controls, and returned online July 2 with safety fallback routing.
 
+**Superseded by [Claude Fable 5.1 / Mythos 5.1](../../models/claude-fable-5-1.md), 2026-09-01.**
+
 ## Current status (as of 2026-07-02)
 
 - Re-enabled after the June 2026 suspension, with demand immediately returning across coding-tool vendors.
@@ -77,6 +79,7 @@ Every's July 2026 guidance sharpens Fable's practical niche: do not reserve it o
 
 ## Recent changes
 
+- [2026-09-01] Superseded by Claude Fable 5.1 / Mythos 5.1 — see [Claude Fable 5.1 / Mythos 5.1](../../models/claude-fable-5-1.md).
 - [2026-07-07] Every frames Fable's premium use case as finding unknowns and invalid premises before execution, then converting recurring work into cheaper-model instructions and scripts.
 - [2026-07-02] Fable 5 returned online; Anthropic added visible safety fallback routing to Opus 4.8 for some sensitive domains; major coding tools restored access.
 - [2026-06-30] Sonnet 5 launch cluster also confirmed Fable 5 access had returned with fallback routing still relevant.
@@ -84,10 +87,10 @@ Every's July 2026 guidance sharpens Fable's practical niche: do not reserve it o
 
 ## Sources
 
-- [AINews — Claude Fable 5 / Mythos 5 launch (June 10)](../sources/newsletters/ainews-fable5-june-2026.md)
-- [Every vibe check: Fable 5 (June 8)](../sources/articles/every-fable5-vibe-check.md)
-- [Claude Fable 5 / Mythos ban coverage](../sources/newsletters/fable-ban-june-2026.md)
-- [AINews - not much happened today](../sources/newsletters/ainews-not-much-happened-2026-07-02.md)
-- [Every - A Tale of Two Models](../sources/newsletters/every-tale-of-two-models-2026-07-05.md)
-- [Claude Sonnet 5 official launch](../sources/articles/claude-sonnet-5-official-2026-06-30.md)
-- [Fable for unknowns and cheaper specialists for settled work](../sources/newsletters/fable-unknowns-routing-2026-07.md)
+- [AINews — Claude Fable 5 / Mythos 5 launch (June 10)](../../sources/newsletters/ainews-fable5-june-2026.md)
+- [Every vibe check: Fable 5 (June 8)](../../sources/articles/every-fable5-vibe-check.md)
+- [Claude Fable 5 / Mythos ban coverage](../../sources/newsletters/fable-ban-june-2026.md)
+- [AINews - not much happened today](../../sources/newsletters/ainews-not-much-happened-2026-07-02.md)
+- [Every - A Tale of Two Models](../../sources/newsletters/every-tale-of-two-models-2026-07-05.md)
+- [Claude Sonnet 5 official launch](../../sources/articles/claude-sonnet-5-official-2026-06-30.md)
+- [Fable for unknowns and cheaper specialists for settled work](../../sources/newsletters/fable-unknowns-routing-2026-07.md)

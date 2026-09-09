@@ -16,7 +16,7 @@ Every argues that Fable is most worth using when the assignment itself may be in
 
 ## Influenced pages
 
-- [Claude Fable 5](../../models/claude-fable-5.md) - adds practical use-case niche.
+- [Claude Fable 5](../../history/models/claude-fable-5.md) - adds practical use-case niche.
 - [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) - adds uncertainty-based routing.
 
 ## Key claims extracted

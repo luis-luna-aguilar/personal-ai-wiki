@@ -4,8 +4,8 @@ type: tool
 domains: [agents]
 subcategory: agent-framework
 tags: [nousresearch, open-source, agentic]
-as_of: 2026-05-13
-sources: [ainews-2026-04-21, ainews-2026-04-22, hermes-openclaw-persistent-agents-2026-05-11]
+as_of: 2026-09-01
+sources: [ainews-2026-04-21, ainews-2026-04-22, hermes-openclaw-persistent-agents-2026-05-11, ainews-fal-h3-max-live-2026-09-01]
 ---
 
 # Hermes Agent
@@ -39,8 +39,13 @@ Hermes's local-first memory architecture is often cited as an advantage in this 
 
 Architectural framing remains: Hermes is a four-layer memory system with periodic consolidation vs OpenClaw's "context window + RAG" approach.
 
+## v0.21.0 release (as of 2026-09-01)
+
+Hermes Agent shipped a large feature release aimed at persistent, multi-agent workflows: Bots Mode, agent-to-agent communication, persistent multi-gateway connections, and subagent steering, plus broader connector access. A follow-up release note says the update also cut default context usage by roughly 50% — a concrete instance of context-efficiency becoming a first-class systems concern for the framework, alongside the broader [harness research cluster](../concepts/harness.md) from the same week.
+
 ## Recent changes
 
+- [2026-09-01] v0.21.0 ships Bots Mode, agent-to-agent comms, persistent multi-gateway connections, subagent steering, broader connector access; cuts default context usage ~50%.
 - [2026-05-13] Brain+muscle architecture documented: reasoning and execution separated into two distinct AI layers; Kanban dashboard and weekly automated skill pruning described
 - [2026-05-11] OpenClaw security incident: 341 malicious registry entries planted in coordinated supply chain attack; Microsoft enterprise warning issued
 - [2026-04-22] Recursive spawn depth support added; Scarf macOS GUI launched; Skillkit native support
@@ -51,3 +56,4 @@ Architectural framing remains: Hermes is a four-layer memory system with periodi
 - [AINews — Moonshot Kimi K2.6, Hermes Agent, Codex Chronicle (2026-04-21)](../sources/newsletters/ainews-2026-04-21.md)
 - [AINews — 2026-04-22 (GPT-Image-2, Hermes, Deep Research Max)](../sources/newsletters/ainews-2026-04-22.md)
 - [Persistent coding agents — Hermes architecture and OpenClaw security incident](../sources/newsletters/hermes-openclaw-persistent-agents-2026-05-11.md)
+- [AINews — Fal's H3 Max Live breaks the infinite videogen barrier](../sources/newsletters/ainews-fal-h3-max-live-2026-09-01.md)

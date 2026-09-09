@@ -14,7 +14,7 @@ Coverage spanned five newsletters (June 12–16). US government applied export c
 
 ## Influenced pages
 
-- [Claude Fable 5](../../models/claude-fable-5.md) — new model page
+- [Claude Fable 5](../../history/models/claude-fable-5.md) — new model page
 - [Restricted frontier deployment](../../trends/restricted-frontier-deployment.md) — export-control mechanism added
 - [State of Models](../../state-of/models.md) — Fable 5 added; Mythos entry updated
 - [State of Coding](../../state-of/coding.md) — DeepSWE benchmark context and ban note

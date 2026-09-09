@@ -14,7 +14,7 @@ AINews summarizes Fable 5's relaunch, tool-vendor restoration, GLM-5.2/ZCode mom
 
 ## Influenced pages
 
-- [Claude Fable 5](../../models/claude-fable-5.md) - relaunch and fallback routing
+- [Claude Fable 5](../../history/models/claude-fable-5.md) - relaunch and fallback routing
 - [GLM-5.2](../../history/models/glm-5-2.md) - ZCode and APEX-SWE updates
 - [Agent evals](../../concepts/agent-evals.md) - eval tooling and reporting layer
 

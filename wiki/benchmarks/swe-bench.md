@@ -31,7 +31,7 @@ Scores are % of issues resolved. Higher is better.
 
 | Model | Variant | Score | As of |
 |---|---|---|---|
-| [Claude Fable 5](../models/claude-fable-5.md) | Pro | 80.3% | 2026-07-02 |
+| [Claude Fable 5](../history/models/claude-fable-5.md) | Pro | 80.3% | 2026-07-02 |
 | [Claude Opus 4.8](../history/models/claude-opus-4-8.md) (historical, superseded by [Claude Opus 5](../models/claude-opus-5.md)) | Pro | 69.2% | 2026-06-04 |
 | [Qwen 3.6 27B](../models/qwen-3-6-27b.md) | Verified | 77.2% | 2026-05-01 |
 | [MiniMax M3](../models/minimax-m3.md) | Pro | 59.0% | 2026-06-02 |

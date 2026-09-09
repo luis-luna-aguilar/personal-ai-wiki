@@ -3,21 +3,22 @@ title: Muse Code
 type: tool
 domains: [coding, agents]
 subcategory: terminal-coding-agent
-tags: [meta, cli, agentic, beta]
-as_of: 2026-08-06
-sources: [codex-interview-onboarding-2026-08-06]
+tags: [meta, cli, agentic]
+as_of: 2026-09-01
+sources: [codex-interview-onboarding-2026-08-06, ainews-fal-h3-max-live-2026-09-01]
 ---
 
 # Muse Code
 
 Muse Code is Meta's first terminal coding agent, launched in beta on 2026-08-06 — Meta's answer to Claude Code and Codex. Mark Zuckerberg described it as able to tackle "complete software engineering tasks" (planning, writing, and validating code) across large repositories.
 
-## Current status (as of 2026-08-06)
+## Current status (as of 2026-09-01)
 
-- Launched in beta 2026-08-06, positioned directly against Claude Code and OpenAI Codex
-- Framed by Meta as capable of end-to-end tasks: planning, writing, and validating code across large repos
-- Arrives the same week as Google DeepMind's leadership reshuffle, widely read (per Every) as both Meta and DeepMind moving to close a coding-agent gap against OpenAI and Anthropic
-- No independent benchmark results are available yet in the captured source
+- Exited beta into general availability 2026-09-01, alongside a developer-preview SDK for embedding custom agents, connecting tools, streaming progress, and resuming sessions.
+- Ollama added day-0 support for the Muse Code harness.
+- Framed by Meta as capable of end-to-end tasks: planning, writing, and validating code across large repos.
+- Arrived the same week as Google DeepMind's leadership reshuffle, widely read (per Every) as both Meta and DeepMind moving to close a coding-agent gap against OpenAI and Anthropic.
+- No independent benchmark results are available yet in the captured sources.
 
 ## Why it matters
 
@@ -25,9 +26,14 @@ This is Meta's clearest entry into the terminal-coding-agent category, following
 
 ## Caveats
 
-- Beta product with no independent benchmarking captured yet — this page will need a follow-up update once real usage data or benchmarks appear
+- Launched in beta with no independent benchmarking; the GA relaunch (2026-09-01) still lacks independent benchmark results in captured sources.
 - The launch source is secondary commentary (Every), not a first-party Meta announcement or technical writeup
+
+## Recent changes
+
+- [2026-09-01] Exited beta into general availability; added a developer-preview SDK for embedding custom agents, tool connections, progress streaming, and session resumption; Ollama added day-0 harness support.
 
 ## Sources
 
 - [A Codex of One's Own — Every](../sources/newsletters/codex-interview-onboarding-2026-08-06.md)
+- [AINews — Fal's H3 Max Live breaks the infinite videogen barrier](../sources/newsletters/ainews-fal-h3-max-live-2026-09-01.md)

@@ -13,7 +13,7 @@ domains: [models, coding]
 AINews (Latent Space) full coverage of the Fable 5 / Mythos 5 release. Primary source for launch benchmarks, pricing, controversial policy terms, and community reaction.
 
 ## Influenced pages
-- [Claude Fable 5](../../models/claude-fable-5.md) — benchmark record, pricing, usage posture
+- [Claude Fable 5](../../history/models/claude-fable-5.md) — benchmark record, pricing, usage posture
 - [State of Models](../../state-of/models.md) — entry update
 - [Agents' Last Exam](../../benchmarks/agents-last-exam.md) — benchmark page created
 

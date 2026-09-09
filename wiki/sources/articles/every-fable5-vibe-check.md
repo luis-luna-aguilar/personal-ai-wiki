@@ -14,7 +14,7 @@ domains: [models, coding]
 Every's day-zero vibe check on Fable 5. Seven team members tested it across coding, writing, business strategy, data analysis, and growth for a week. Partially paywalled; key verdict and benchmarks accessible.
 
 ## Influenced pages
-- [Claude Fable 5](../../models/claude-fable-5.md) — Senior Engineer benchmark, usage verdict, one-shot examples
+- [Claude Fable 5](../../history/models/claude-fable-5.md) — Senior Engineer benchmark, usage verdict, one-shot examples
 
 ## Key claims extracted
 - Every Senior Engineer benchmark: Fable 5 91/100 vs Opus 4.8 63 vs GPT-5.5 62 — "near the range of human engineers who've taken it"

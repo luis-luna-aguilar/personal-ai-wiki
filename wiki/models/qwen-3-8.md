@@ -4,8 +4,8 @@ type: model
 domains: [models, coding]
 subcategory: frontier-model
 tags: [alibaba, open-weights]
-as_of: 2026-08-20
-sources: [alibaba-qwen38-preview-2026-07-20, ainews-china-policy-openweight-2026-07-21, ainews-qwen38-max-launch-2026-08-04, ainews-spacexai-grok-46-and-grok-bot-2026-08-13, ainews-memory-prices-openai-pause-2026-08-19, ainews-death-of-params-glm-53-2026-08-20]
+as_of: 2026-09-01
+sources: [alibaba-qwen38-preview-2026-07-20, ainews-china-policy-openweight-2026-07-21, ainews-qwen38-max-launch-2026-08-04, ainews-spacexai-grok-46-and-grok-bot-2026-08-13, ainews-memory-prices-openai-pause-2026-08-19, ainews-death-of-params-glm-53-2026-08-20, ainews-fablemythos-51-2026-09-02]
 ---
 
 # Qwen 3.8
@@ -21,6 +21,10 @@ Alibaba's flagship after Qwen 3.7. Entered live preview 2026-07-20, shipped as a
 - Vision Arena: #2 at 1,305, 13 points behind Claude Fable 5
 - Licensing: terms reportedly restrict use or download in the US, EU, UK, and Korea — a similar complaint was raised about MiniMax H3 the same week, raising the question of how "open" a geographically-restricted release really is for Western teams
 
+## Qwen3.8-Max-0902 refresh (as of 2026-09-01)
+
+Alibaba released Qwen3.8-Max-0902, a refreshed 2.4T-parameter build with 1M context, priced at $2/M input and $6/M output plus cache-hit discounts. Arena reported it debuting #1 on Code Arena: WebDev (1691 Elo), just ahead of Claude Opus 5 Max and Kimi K3 Max, and landing on the current best price/performance frontier.
+
 ## Why it matters
 
 Succeeds [Qwen 3.7](qwen-3-7.md) as Alibaba's flagship, moving from preview to a real open-weight-committed launch just over two weeks after Kimi K3. If the license restrictions hold as reported, this complicates the "open weights as sovereignty infrastructure" argument tracked on [Open-weight momentum broadens](../trends/open-weight-momentum-broadens.md) — the weights may not be legally usable by the Western teams that argument targets.
@@ -32,6 +36,7 @@ Succeeds [Qwen 3.7](qwen-3-7.md) as Alibaba's flagship, moving from preview to a
 
 ## Recent changes
 
+- [2026-09-01] Qwen3.8-Max-0902 refresh debuts #1 on Arena's Code Arena: WebDev (1691), ahead of Claude Opus 5 Max and Kimi K3 Max.
 - [2026-08-20] The promised Qwen3.8-27B sibling gained enough independent momentum (local-model rankings, benchmark parity claims, community builds) to get its own page — see [Qwen 3.8 27B](qwen-3-8-27b.md).
 - [2026-08-13] Open weights shipped for Qwen3.8-Max (2.4T/~95B active MoE) — text-only initial drop, no vision yet; day-0 vLLM support plus 4-bit checkpoints for NVIDIA B300/AMD MI355X; Together AI and Baseten also added support
 - [2026-08-04] Full launch as Qwen3.8-Max: 2.4T/~95B active, real benchmarks (Frontend Code Arena #4, SWE-bench 87.3%, Terminal-Bench 2.1 67.4), open weights promised "next week" alongside a Qwen3.8-27B sibling; license reportedly restricts use/download in US/EU/UK/Korea

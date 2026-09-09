@@ -17,7 +17,7 @@ Current state of foundation models — frontier and otherwise. Organized by subc
 
 General-purpose frontier models competing on broad capability rather than narrow specialization.
 
-- [Claude Fable 5](../models/claude-fable-5.md) — Anthropic; SWE-Bench Pro 80.3%, FrontierCode Diamond 29.3%, HLE 53%, Terminal-Bench 2.1 88.0%, AA Intelligence Index #1 (64.9); re-enabled with safety fallback routing to Opus 4.8 for some sensitive domains *(as of 2026-07-02)*
+- [Claude Fable 5.1 / Mythos 5.1](../models/claude-fable-5-1.md) — Anthropic; supersedes Fable 5; AA Intelligence Index 66, Terminal-Bench v2.1 91.4%, 75% cache-read price cut; same weights as Mythos 5.1 with different safety-classifier routing per community analysis *(as of 2026-09-02)*
 - [Claude Sonnet 5](../models/claude-sonnet-5.md) — Anthropic middle-tier default and most agentic Sonnet; available in Claude, Claude Code, and API, with early testing still flagging cost-per-task sensitivity at high effort *(as of 2026-07-02)*
 - [Claude Opus 5](../models/claude-opus-5.md) — Anthropic; current flagship after 4.8; Epoch Capabilities Index 159 (vs. Fable 5's 161), SWE-ECI 161 tied with Fable 5, roughly half Fable's price; Arena #1 Frontend Code Arena and Text Arena; practitioner reports call it prickly and over-verbose day-to-day versus GPT-5.6 Sol, though strong on hard coding/debugging grind *(as of 2026-07-28)*
 - [GPT-5.5](../models/gpt-5-5.md) — OpenAI; Arena (May 2026): strongest in math; area-specific leader on ARC-AGI-2, CyberGym, and BixBench; since overtaken on Terminal-Bench and GDPval by Claude Fable 5 *(as of 2026-05-13)*
@@ -26,7 +26,7 @@ General-purpose frontier models competing on broad capability rather than narrow
 - **Gemini 3.1 Pro** — Google; Arena (May 2026): close second overall; leads creative writing *(as of 2026-05-13)*
 - [Gemini 3.5 Flash](../tools/gemini.md) — Google; GA 2026-05-19 as the default AI Mode model and Google's agentic/coding Flash tier; 1M context, $1.50/$9.00 per 1M tokens; per AINews: Google-quoted Terminal-Bench 2.1 76.2% / MCP Atlas 83.6%, Artificial Analysis Intelligence Index 55 but 5.5x costlier than Gemini 3 Flash on AA's suite, Arena #9 text / #9 Code Arena: Frontend *(as of 2026-05-20)*
 - [Grok 4.6](../models/grok-4-6.md) — xAI/SpaceXAI; 1.5T MoE, longer supplemental training + regenerated SFT trajectories + agentic RL over coding/web/CAD/kernel-optimization; per Artificial Analysis Intelligence Index 61 (near GPT-5.6 Sol Max, behind Opus/Fable), 88.4% Terminal-Bench v2.1, GDPval-AA v2 Elo 1753; $2/$6 pricing unchanged from 4.5; powers new Grok Bot AI-teammate product (supersedes Grok 4.5) *(as of 2026-08-13)*
-- [Muse Spark](../models/muse-spark.md) — Meta's multimodal model; the original launch source emphasized scaling efficiency and claimed Llama 4 Maverick-level capability with over an order of magnitude less training compute; Meta Glasses shipped with Muse Spark built in (June 2026), and Muse Image/Muse Video launched across Meta AI, Instagram Stories, and WhatsApp with an agentic planning/tool-use/self-refinement generation loop *(as of 2026-07-08)*
+- [Muse Spark](../models/muse-spark.md) — Meta's multimodal model; Muse Spark 1.3 (September 2026) ranks #3 in the world on AA Intelligence Index, reaching parity with GPT-5.6 Sol/Opus 5 on several evals; open weights still promised "soon" *(as of 2026-09-03)*
 
 ### Coding models
 
@@ -102,6 +102,8 @@ Key economic signals that shape how frontier model access should be understood:
 
 ## Recent changes
 
+- [2026-09-03] Muse Spark 1.3 launched: AA Intelligence Index #3 in the world, parity with GPT-5.6 Sol/Opus 5 on several evals, open weights still pending.
+- [2026-09-01] Claude Fable 5.1 / Mythos 5.1 launched, superseding Fable 5: AA Intelligence Index 66 (was 62), 75% cache-read price cut, same-weights/different-safety-routing debate between the two paired model names.
 - [2026-08-20] GLM-5.3 launched, superseding GLM-5.2: same 753B/40B MoE footprint and price, +246 GDPval-AA v2, ties Kimi K3 on AA Intelligence Index — gains attributed to post-training RL rather than scale.
 - [2026-08-13] Grok 4.6 launched, superseding Grok 4.5: AA Intelligence Index 61, 88.4% Terminal-Bench v2.1, unchanged $2/$6 pricing; powers new Grok Bot AI-teammate product.
 - [2026-08-13] Qwen3.8-Max shipped open weights (2.4T/~95B active MoE), text-only initial drop; day-0 vLLM/Together/Baseten support.
@@ -110,5 +112,3 @@ Key economic signals that shape how frontier model access should be understood:
 - [2026-08-04] Qwen3.8-Max (Alibaba, 2.4T/~95B active) added to Open-weight models: #4 Frontend Code Arena, SWE-bench 87.3%, Terminal-Bench 2.1 67.4; open weights promised for Max + a 27B sibling; license reportedly restricts use in US/EU/UK/Korea.
 - [2026-07-31] Thinking Machines shipped Inkling-Small (276B/12B MoE, Intelligence Index 40), a near-flagship-capability sibling to Inkling at roughly a quarter the active footprint.
 - [2026-07-31] GPT-5.6: OpenAI cut Luna 80% and Terra 20%, added a Sol Fast tier, and disclosed using Sol to autonomously optimize its own serving kernels (-20% cost) and speculative decoder (+15% efficiency) — part of a broader trend putting GPT-5.4-equivalent intelligence at ~13x cheaper than four months ago.
-- [2026-07-31] DeepSeek V4-Flash 0731: post-training-only update (same 284B/13B architecture) jumped Terminal-Bench to 82.7 and AA Intelligence Index to 50, now 1pt behind GPT-5.6 Luna; MIT-licensed, day-0 vLLM support; read as a direct response to OpenAI's price cuts the day before.
-- [2026-07-24] Claude Opus 5 launched, superseding Opus 4.8: Epoch Capabilities Index 159 (vs Fable 5's 161), SWE-ECI 161 tied with Fable 5; Arena #1 Frontend Code Arena/Text Arena; practitioner reports (Every) call it prickly and harder to manage day-to-day than Fable 5 or GPT-5.6 Sol despite strong benchmark placement.
