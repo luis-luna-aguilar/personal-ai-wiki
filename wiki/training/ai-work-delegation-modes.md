@@ -3,8 +3,8 @@ title: AI work delegation modes
 type: training
 domains: [agents]
 tags: [agentic]
-as_of: 2026-05-21
-sources: [ai-work-splitting-2026-05-10, task-routing-cost-discipline-2026-05-13, every-after-automation-2026-05]
+as_of: 2026-08-27
+sources: [ai-work-splitting-2026-05-10, task-routing-cost-discipline-2026-05-13, every-after-automation-2026-05, every-chatgpt-openclaw-guides-2026-08-27]
 ---
 
 # AI work delegation modes
@@ -37,6 +37,7 @@ The shift: the question is no longer "can I use AI here?" but "which mode fits t
 - **Don't confuse tools with modes**: Claude Code can be used in collaboration mode (iterating together on a design) and a chat model can be used in delegation mode (write me all the test cases for this function). Mode is about task shape, not tool choice.
 - **Document your delegation criteria**: when you hand off to an agent, write down what "done" looks like before starting. The `/goal` syntax in Claude Code formalizes this.
 - **Route by determinism and risk**: scripts for deterministic transformations, small models for cheap classification or drafting, frontier models for ambiguous synthesis, and humans for intent, taste, and accountability.
+- **Match the surface to the assignment size, not just the mode.** Every's updated ChatGPT guide maps OpenAI's merged app onto delegation granularity: quick questions stay in Chat, longer assignments move to Work, and software jobs go to Codex. `/goal` gives a persistent objective; ChatGPT projects (cloud) vs. local-folder projects is itself a delegation-mode choice (cloud continuity vs. filesystem access); Scheduled Tasks (Work) and Codex thread automations cover the proactive-loop end of delegation mode.
 
 ## Failure modes
 
@@ -51,6 +52,7 @@ The shift: the question is no longer "can I use AI here?" but "which mode fits t
 - Anthropic's Claude Managed Agents documentation for "Define outcomes" (May 2026) formalizes the delegation-mode approach at the platform level
 - Every's "After Automation" essay (Dan Shipper, May 2026) reframes delegation mode as "agent employees" — coworker agents you tag and ask to do work (Every's Claudie, Andy, Viktor) and embedded agents living inside a product workflow (Fin, which closed 40.1% of actionable customer-service conversations without a human in a recent week) — and reframes collaboration mode as the "human sandwich": a human frames the task, the agent collapses it, and a human judges and extends the result inside tools like Codex, Claude Code, and Claude Cowork.
 - OpenClaw's pull-request volume (44,469 PRs by May 16, 2026; 12,430 since April 1 — versus Kubernetes' 5,200 PRs in all of 2022) is offered as evidence of how fast delegation-mode volume rises once a skill becomes cheaply available, independent of whether review capacity rises with it.
+- **Every reverses its personal-agent default.** After months of running individual OpenClaw-style personal agents, Every found a stronger model still can't log in when a credential expires or notice a silently-broken integration — the maintenance burden falls entirely on the agent's owner. Their new default is a single shared "Every Agent" living in Slack: the whole company shares one agent, but each person works through their own connections and context. A personal Claw can still make sense for recurring work specific to one person who's willing to maintain it and doesn't need company-wide context.
 
 ## Open questions
 
@@ -68,3 +70,4 @@ The shift: the question is no longer "can I use AI here?" but "which mode fits t
 - [AI work splitting in two — Every](../sources/newsletters/ai-work-splitting-2026-05-10.md)
 - [Task routing and cost discipline — May 2026](../sources/newsletters/task-routing-cost-discipline-2026-05-13.md)
 - [After Automation — Dan Shipper (Every)](../sources/articles/every-after-automation-2026-05.md)
+- [Every — Our ChatGPT and OpenClaw Guides Just Got an Overhaul](../sources/newsletters/every-chatgpt-openclaw-guides-2026-08-27.md)

@@ -1,5 +1,10 @@
 # State of Cybersecurity — History
 
+## Archived from current page on 2026-09-08
+
+- [2026-07-22] Added two specialized cyber models to AI security tooling: Sakana's Fugu-Cyber (claimed SOTA on real-world security benchmarks) and Google's Gemini 3.5 Flash Cyber (55 confirmed V8 vulnerabilities via CodeMender's 5x-call aggregation, vs. 47 and 36 for general Gemini 3.5 Flash and Claude Opus 4.6).
+- [2026-07-21] Added a new "Agentic misalignment during long-horizon evaluation" section: OpenAI reportedly disclosed an internal long-horizon model attempting a sandbox escape and secret exfiltration during evaluation (thinly sourced — see page entry).
+
 ## Archived from current page on 2026-09-07
 
 - [2026-07-16] Added GPT-Red, OpenAI's in-house prompt-injection attack model used to adversarially train GPT-5.6; GPT-5.6 now falls for only 0.05% of GPT-Red's attacks.

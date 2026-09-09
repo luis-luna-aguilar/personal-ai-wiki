@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents, cybersecurity]
 subcategory: terminal-coding-agent
 tags: [cognition]
-as_of: 2026-07-14
-sources: [devin-auto-triage-2026-05, the-code-devin-security-2026-07-02, ainews-not-much-happened-2026-07-02, devinai-blog-agentic-map-reduce, cognitioncom-blog-devin-fusion, cognitioncom-blog-ai-productivity, the-code-spacexai-drops-grok-45-2026-07-09, ainews-devin-fusion-router-moat-2026-07-14]
+as_of: 2026-07-21
+sources: [devin-auto-triage-2026-05, the-code-devin-security-2026-07-02, ainews-not-much-happened-2026-07-02, devinai-blog-agentic-map-reduce, cognitioncom-blog-devin-fusion, cognitioncom-blog-ai-productivity, the-code-spacexai-drops-grok-45-2026-07-09, ainews-devin-fusion-router-moat-2026-07-14, cognition-devin-outposts-2026-07-21]
 ---
 
 # Devin
@@ -28,6 +28,7 @@ Cognition's autonomous coding agent, initially positioned as one of the first "f
 - On **FrontierCode Extended** (a cost-aware coding benchmark tracking both score and average cost per task), Fusion matches frontier-model performance at **35% lower cost** than running Opus 4.8 or GPT-5.5 alone, and **41% lower cost** when paired with Fable 5 (measured before Fable 5's access was suspended); internally, **88%** of Cognition's own merged PRs were driven entirely by the automated Fusion router
 - **Session productivity estimator:** an automated system that reviews each completed Devin session, classifies whether it produced useful (typically merged) work, then estimates the equivalent human-engineering hours it saved; calibrated against 258 self-reported sessions from 126 users, reaching `r_log = 0.74` on held-out data, deliberately calibrated to underestimate rather than overestimate; now running in production with customers — Cognition frames this as the first automated system measuring AI engineering productivity in production
 - **SWE-1.7 (July 2026):** a budget frontier coding model for Devin, post-trained from Kimi K2.7 inside Devin's own agent harness; per The Code's recap, Cognition claims it matches GPT-5.5 within a point on FrontierCode at roughly $2/task with Opus 4.8 slightly ahead (secondhand — tier and numeric score unspecified, Cognition's blog post not yet read); can summarize its own progress and resume where it left off, enabling coding sessions up to six hours
+- **Devin Outposts (July 2026):** Devin's planning/inference loop continues running in Cognition's cloud, but command execution, file edits, and repository access can now run on infrastructure the customer controls — a Mac mini, a lab GPU box, a private-network VM, or a Kubernetes cluster. Launch-partner deployment guides ship with Cloudflare (isolated edge sandbox), Daytona (sub-90ms snapshot-started sandboxes), E2B (fast configurable cloud sandboxes reaching into a private cloud), Modal (same GPU infra used for training/serving, so Devin can reproduce failures on production hardware), and Namespace (M5-powered Mac with Xcode/computer use for Apple-platform apps).
 
 ## Why it matters
 
@@ -37,6 +38,7 @@ Security Swarm extends the same architecture into enterprise security work, and 
 
 ## Recent changes
 
+- [2026-07-21] Devin Outposts: command execution/file edits/repo access can run on customer-controlled infrastructure while planning stays in Cognition's cloud; launch-partner guides with Cloudflare, Daytona, E2B, Modal, and Namespace.
 - [2026-07-14] Cognition detailed Agentic MapReduce (Plan/Shard/Map/Reduce/Verify) as the architecture behind Security Swarm; reported 72% recall on a CVE-pinned benchmark vs. rival scanners.
 - [2026-07-14] Cognition's session-level productivity estimator (`r_log = 0.74`, human-hours-equivalent, calibrated conservative) is now running in production with customers.
 - [2026-07-14] Added the delegation-efficiency mechanism behind Devin Fusion's cost advantage on Fable 5: in 81% of sampled Fable-led runs, the lead model never edits code itself (per AINews, relaying an independent coding-agent index analysis).
@@ -55,3 +57,4 @@ Security Swarm extends the same architecture into enterprise security work, and 
 - [Estimating the Productivity of an Autonomous AI Software Engineer](../sources/articles/cognitioncom-blog-ai-productivity.md)
 - [The Code - SpaceXAI drops Grok 4.5](../sources/newsletters/the-code-spacexai-drops-grok-45-2026-07-09.md)
 - [AINews — Coding-agent cost/perf tradeoffs: Terra Max, Devin Fusion, and Fable-led delegation](../sources/newsletters/ainews-devin-fusion-router-moat-2026-07-14.md)
+- [Cognition — Introducing Devin Outposts](../sources/tweets/cognition-devin-outposts-2026-07-21.md)

@@ -1,5 +1,9 @@
 # Open-Weight Momentum Broadens — History
 
+## Archived from current page on 2026-09-08
+
+- [2026-07-28] Kimi K3's weights ship in full (104B active/896 experts, FlashKDA/MoonEP/AgentENV infra open-sourced); separately, Kratsios accuses Moonshot of covertly distilling Fable to build it, Treasury signals possible Entity List sanctions, critics call the timeline technically implausible
+
 ## Archived from current page on 2026-09-07 (2)
 
 - [2026-07-22] Poolside released Laguna S 2.1 (118B/8B-active MoE, OpenMDW-1.1 license): a new non-Chinese open-weight coding entrant, strong on agentic-coding benchmarks, more prone to fabrication under pressure than Qwen3.5-122B per one independent eval.

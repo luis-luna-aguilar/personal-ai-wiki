@@ -1,8 +1,8 @@
 ---
 title: AI Engineering skills
 type: training
-as_of: 2026-08-25
-sources: [ainews-andrew-ng-ai-engineering-2026-08-25]
+as_of: 2026-08-31
+sources: [ainews-andrew-ng-ai-engineering-2026-08-25, every-anthropic-certification-critique-2026-08-31]
 ---
 
 # AI Engineering skills
@@ -22,6 +22,10 @@ Four core skills, in Ng's framing:
 
 Ng frames the first two skills as adjacent to the traditional MLE and SWE tracks respectively, the third as newly critical since coding agents went mainstream, and the fourth — product/business judgment — as the dimension the original "AI Engineer" framing (2023) didn't fully anticipate.
 
+## Evidence from practice
+
+- **Every's review of Anthropic's certification program (August 2026):** roughly 10 Every staff completed Anthropic's new 4-course certification (Agent Skills, Claude API, MCP, Claude Code — 10-15 hours total). Conclusion: the courses mainly succeed at establishing shared vocabulary (what Anthropic means by "skill," "MCP," "API") rather than teaching workflow transformation, and Anthropic's own documentation is "the gold standard" for anyone who wants real depth. Weaknesses: content already stale in places (a deprecated Sonnet API model used in examples, no mention of Anthropic's own MCP-builder skill), and one-size-fits-all delivery with no role-based tailoring — reactions split sharply by role, from "largely unnecessary" to "should be part of onboarding."
+
 ## Open questions
 
 - How much of this taxonomy holds for non-technical roles (marketing, ops) using AI day to day, versus being specific to people building AI-powered software?
@@ -29,8 +33,10 @@ Ng frames the first two skills as adjacent to the traditional MLE and SWE tracks
 
 ## Recent changes
 
+- [2026-08-31] Added Every's practitioner review of Anthropic's certification program as a first "Evidence from practice" section: useful mainly for shared vocabulary, not workflow transformation; stale content and no role-based tailoring were the main weaknesses cited.
 - [2026-08-25] Page created from Andrew Ng's DeepLearning.AI relaunch around four AI Engineering skills, based on a 10,000+ job-posting analysis plus hiring-manager interviews.
 
 ## Sources
 
 - [AINews — Andrew Ng gets into AI Engineering](../sources/newsletters/ainews-andrew-ng-ai-engineering-2026-08-25.md)
+- [Every — What We Learned From 15 Hours of Anthropic Certification Training](../sources/newsletters/every-anthropic-certification-critique-2026-08-31.md)

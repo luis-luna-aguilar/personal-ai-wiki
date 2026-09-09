@@ -2,6 +2,18 @@
 
 Older recent-change entries spilled from [Harness (agent)](../../concepts/harness.md).
 
+## Archived from current page on 2026-09-08 (3)
+
+- [2026-07-01] Added agent recipes as a harness packaging pattern: model choices, evals, judges, human expertise, failure history, and signal processing bundled with the workflow.
+
+## Archived from current page on 2026-09-08 (2)
+
+- [2026-06-24] Claude Tag coverage adds org-embedded agent identity, permission scoping, and Slack-channel memory boundaries as harness concerns.
+
+## Archived from current page on 2026-09-08
+
+- [2026-06-22] Gray Swan security coverage adds prompt injection, exfiltration, identity, permissions, and automated red teaming as harness-boundary concerns for tool-using agents.
+
 ## Archived from current page on 2026-09-07 (2)
 
 - [2026-06-05] Added RL harness quality section: 8 failure modes taxonomy from Auriel W (Google Gemini RL team); "5% failure rate = harness problem, not model problem"

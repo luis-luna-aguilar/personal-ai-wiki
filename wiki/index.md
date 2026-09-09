@@ -197,6 +197,7 @@ Ideas and techniques.
 - [concepts/agent-improvement-loop](concepts/agent-improvement-loop.md) — workflow for improving AI agents through traces, evals, autoresearch loops, Better-Harness-style hill-climbing, trace-to-memory feedback, and production feedback *(as_of: 2026-07-07)*
 - [concepts/agent-memory](concepts/agent-memory.md) — long-term agent memory as a lifecycle system for extraction, dedupe, reconciliation, scoping, retrieval, and stale-fact handling *(as_of: 2026-07-07)*
 - [concepts/agentic-thinking](concepts/agentic-thinking.md) — proposed successor to reasoning thinking; models that reason in order to act *(as_of: 2026-04-10)*
+- [concepts/company-brain](concepts/company-brain.md) — per-organization agent system for persistent context, tools, and institutional memory; Lovable, Cloudflare OS, and a 9-implementation survey converge on the same four-function architecture *(as_of: 2026-09-07)*
 - [concepts/curiosity-driven-imagination](concepts/curiosity-driven-imagination.md) — agent recovery pattern: explore when stuck, learn new steps, and turn them into guided rewards *(as_of: 2025-03-06)*
 - [concepts/functional-emotions](concepts/functional-emotions.md) — emotion-concept representations in LLMs can causally shape behavior without implying subjective feeling *(as_of: 2026-04-02)*
 - [concepts/harness](concepts/harness.md) — scaffolding around an acting model: prompts, tools, recipes, orchestration, environment, evals, controls, security boundaries, managed-agent primitives, and live-run recovery *(as_of: 2026-07-08)*
@@ -218,8 +219,11 @@ Ideas and techniques.
 Things being watched that haven't solidified yet.
 
 - [trends/agent-native-compute](trends/agent-native-compute.md) — cloud infrastructure purpose-built for agent workloads (sandboxes, RL/eval spikes) as a category distinct from frontier training-compute scale *(as_of: 2026-07-08)*
+- [trends/agent-safety-and-alignment-research](trends/agent-safety-and-alignment-research.md) — automated alignment research, double-blind frontier evals, and agent-skill-library malware propagation as distinct agent-safety research areas *(as_of: 2026-08-29)*
 - [trends/agents-reshape-organizations](trends/agents-reshape-organizations.md) — leverage moves from individual to org as autonomous agents, FDE teams, and deployment services take coordination work *(as_of: 2026-07-01)*
+- [trends/agi-timeline-claims](trends/agi-timeline-claims.md) — dated, named AGI/major-capability-milestone claims from lab leadership (OpenAI's Astra/Pachocki, Altman's December 2026 estimate), distinct from restricted-deployment withholding *(as_of: 2026-08-28)*
 - [trends/ai-governance-and-policy](trends/ai-governance-and-policy.md) — pressure for governments to actively steer AI development (disclosure mandates, pre-release review, equity-stake proposals) rather than leaving it to labs and market forces *(as_of: 2026-07-14)*
+- [trends/ai-infrastructure-consolidation](trends/ai-infrastructure-consolidation.md) — open-model ecosystem infrastructure (hosting, distribution registries) consolidating under large buyers; NVIDIA's ~$13B Hugging Face acquisition and llama.cpp governance risk *(as_of: 2026-08-29)*
 - [trends/ai-in-science](trends/ai-in-science.md) — biology, drug discovery, self-driving labs, virtual-cell models, and Claude Science-style workflow platforms for reproducible scientific work *(as_of: 2026-08-11)*
 - [trends/ai-in-mathematics](trends/ai-in-mathematics.md) — pure-mathematics results from general-purpose reasoning models (OpenAI's Erdős disproof, Anthropic's Riemann Hypothesis bound), split out from AI in Science *(as_of: 2026-08-11)*
 - [trends/compute-infrastructure](trends/compute-infrastructure.md) — frontier compute scale plus inference-system efficiency as competitive moats *(as_of: 2026-07-08)*
@@ -273,9 +277,9 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 - tools: 86
 - benchmarks: 12
 - workflows: 6
-- concepts: 19
-- trends: 13
+- concepts: 20
+- trends: 16
 - training: 14
 - use-cases: 3
 
-**Total content pages: 190.**
+**Total content pages: 194.**

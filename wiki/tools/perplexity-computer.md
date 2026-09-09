@@ -4,24 +4,26 @@ type: tool
 domains: [computer-use, finance]
 subcategory: computer-use
 tags: [perplexity, closed-source]
-as_of: 2026-05-06
+as_of: 2026-08-29
 sources:
   - perplexity-computer-plaid
   - perplexity-personal-computer
   - finance-agent-workflows-2026-05-06
+  - ainews-openai-shuts-off-cursor-2026-08-29
 ---
 
 # Perplexity Computer
 
 Autonomous AI agent launched 2026-02-25 that orchestrates 19 different AI models to complete complex, multi-step workflows in the background. Rather than relying on a single model, Computer is an orchestration layer that routes each part of a task to the model best suited for that type of work.
 
-## Current status (as of 2026-05-06)
+## Current status (as of 2026-08-29)
 
 - Exclusively available on Perplexity Max ($200/month); 10,000 credits/month, consumption varies by task complexity
 - Enterprise tier at $325/seat/month with security controls and audit logs
 - Connects to 400+ applications (Slack, Gmail, GitHub, Notion) and 12,000+ financial institutions via Plaid
 - Personal Computer, launched 2026-03-11, frames the product as a persistent digital proxy: an always-on Mac mini environment with ongoing access to files, apps, and sessions that can still be remotely controlled from any device
 - Secondary May 2026 coverage describes a Professional Finance variant that combines licensed finance data with packaged workflows; verify against Perplexity primary materials before treating this as a mature product surface.
+- **Perplexity Search tops a new Artificial Analysis Search Index (August 2026):** Artificial Analysis launched a dedicated benchmark for search-as-a-subsystem (measured on action count, latency, and downstream token cost, not just answer quality); Perplexity Search placed #1 across all three tested context variants, with its medium tier scoring 80 against a prior-leader ceiling of 75, and the lowest per-task inference cost among tested providers due to smaller payloads.
 
 ## How it works
 
@@ -47,6 +49,7 @@ Autonomous AI agent launched 2026-02-25 that orchestrates 19 different AI models
 
 ## Recent changes
 
+- [2026-08-29] Perplexity Search took #1 on Artificial Analysis's new Search Index benchmark (score 80 vs. prior ceiling 75), with the lowest per-task inference cost among tested providers.
 - [2026-04-10] Plaid integration connects to 12,000+ financial institutions; users can build custom budgeting/tracking tools
 - [2026-03-11] Perplexity Personal Computer launched — local Mac Mini variant for on-device agent workloads
 - [2026-02-25] Perplexity Computer launched with 19-model orchestration, Max-tier exclusive
@@ -56,3 +59,4 @@ Autonomous AI agent launched 2026-02-25 that orchestrates 19 different AI models
 - [Perplexity Computer — Plaid financial integrations](../sources/newsletters/perplexity-computer-plaid.md)
 - [Perplexity Personal Computer](../sources/newsletters/perplexity-personal-computer.md)
 - [Finance agent workflow packaging - May 2026](../sources/newsletters/finance-agent-workflows-2026-05-06.md)
+- [AINews — OpenAI shuts off Cursor](../sources/newsletters/ainews-openai-shuts-off-cursor-2026-08-29.md)

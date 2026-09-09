@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents]
 subcategory: agentic-coding-workspace
 tags: [closed-source, agentic]
-as_of: 2026-07-13
-sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models, cursor-cloud-agents-march, cursor-cloud-agents-february, cursor-third-era, ai-security-scanners-2026-05-01, cursor-sdk-agent-runtime-2026-04-30, agent-first-ide-convergence-may-2026, cursor-composer-2-5-launch, spacex-cursor-june-2026, cursor-ios-mobile-app-2026-06, cursor-blog-grok-4-5-launch-2026-07, ainews-spacexai-grok-45-2026-07-09, the-code-eval-data-moat-2026-07-13]
+as_of: 2026-08-29
+sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models, cursor-cloud-agents-march, cursor-cloud-agents-february, cursor-third-era, ai-security-scanners-2026-05-01, cursor-sdk-agent-runtime-2026-04-30, agent-first-ide-convergence-may-2026, cursor-composer-2-5-launch, spacex-cursor-june-2026, cursor-ios-mobile-app-2026-06, cursor-blog-grok-4-5-launch-2026-07, ainews-spacexai-grok-45-2026-07-09, the-code-eval-data-moat-2026-07-13, ainews-openai-shuts-off-cursor-2026-08-29]
 ---
 
 # Cursor
@@ -98,9 +98,11 @@ SpaceX exercised a previously announced option to acquire Cursor in an all-stock
 - **Jointly trained model — Grok 4.5 (July 2026).** SpaceXAI and Cursor jointly trained Grok 4.5, a 1.5T-parameter MoE trained on trillions of tokens of Cursor codebase and developer-agent data plus broad STEM/knowledge-work data. Launched immediately across Cursor's desktop, web, iOS, CLI, and SDK surfaces with double usage for the first week; also available in Grok Build and via API. Composer 2.5 remains available as Cursor's separate, smaller-weight-class model. Pricing: $2/M input, $6/M output ($4/$18 fast variant). See [Grok 4.5](../history/models/grok-4-5.md) (superseded by [Grok 4.6](../models/grok-4-6.md)).
 - **Cursor Origin.** Launched alongside the acquisition news: a git/code hosting product built for agent workloads. Features merge conflict handling optimized for agent-generated commits, MCP/API extensibility, team-agent collaboration surfaces, and audit trails. Designed as the natural storage layer for autonomous agent work. The launch reportedly landed in the middle of a major GitHub outage, which amplified discussion of Cursor absorbing more of the surrounding platform rather than just autocompleting against it (AINews, August 2026).
 - **Vertical integration.** The combined stack is model (xAI jointly trained) + IDE (Cursor) + code hosting (Origin), competing with Claude Code + Anthropic (model + terminal agent) and Codex + OpenAI (model + cloud agent).
+- **OpenAI cuts model access (August 2026).** Following the close of Cursor's SpaceX acquisition, OpenAI cut Cursor's access to its models, citing "our experience with Elon Musk's companies violating contracts" — mirroring what Anthropic did to Windsurf during OpenAI's earlier acquisition interest there. Cursor's response was diplomatic (OpenAI is only ~5% of its traffic) but didn't accept the decision as final; Cursor now leans on Grok 4.6 via its SpaceX/xAI relationship, while GPT-5.6 remains a live OpenAI-side alternative and Claude models are still seen as the strongest coding option overall.
 
 ## Recent changes
 
+- [2026-08-29] OpenAI cuts Cursor's model access following the SpaceX acquisition close, citing contract-violation history with Musk's companies; Cursor leans on Grok 4.6 as a result.
 - [2026-07-13] Cursor 3.11 ships side chats (`/side` / `/btw`), transcript search, and cloud-agent hooks.
 - [2026-07-08] Grok 4.5 launched: jointly trained with SpaceXAI, 1.5T MoE, available across all Cursor surfaces with double usage for the first week; also available in Grok Build and via API.
 - [2026-06-30] Cursor for iOS public beta: launch always-on cloud agents, control desktop agents remotely, voice/slash commands, push notifications, Live Activities, diff review, follow-up, and PR merge from mobile.
@@ -128,3 +130,4 @@ SpaceX exercised a previously announced option to acquire Cursor in an all-stock
 - [Introducing Grok 4.5 (Cursor blog)](../sources/articles/cursor-blog-grok-4-5-launch-2026-07.md)
 - [AINews — SpaceXAI launches Grok 4.5](../sources/newsletters/ainews-spacexai-grok-45-2026-07-09.md)
 - [The Code — GPT-5.6 Sol wins over developers; Cursor drops side chat; eval data is the real moat](../sources/newsletters/the-code-eval-data-moat-2026-07-13.md)
+- [AINews — OpenAI shuts off Cursor](../sources/newsletters/ainews-openai-shuts-off-cursor-2026-08-29.md)

@@ -4,8 +4,8 @@ type: tool
 domains: [models, computer-use, agents]
 subcategory: ai-assistant
 tags: [google, closed-source]
-as_of: 2026-08-20
-sources: [gemini-browser-utility-updates, gemini-deep-research-max, ainews-2026-04-22, google-cloud-next-2026, gemini-downloadable-files-2026-04-30, gemini-computer-use-aside-2026-06, gemini-managed-agents-2026-07, google-io-2026-search-blog, ainews-google-io-2026, gemini-personal-agent-superhuman-2026-05, ainews-death-of-params-glm-53-2026-08-20]
+as_of: 2026-08-26
+sources: [gemini-browser-utility-updates, gemini-deep-research-max, ainews-2026-04-22, google-cloud-next-2026, gemini-downloadable-files-2026-04-30, gemini-computer-use-aside-2026-06, gemini-managed-agents-2026-07, google-io-2026-search-blog, ainews-google-io-2026, gemini-personal-agent-superhuman-2026-05, ainews-death-of-params-glm-53-2026-08-20, sundarpichai-gemini-35-transcribe-2026-08-26]
 ---
 
 # Gemini
@@ -77,6 +77,8 @@ Google added hosted-agent primitives to the Gemini API: MCP support for direct a
 
 **Gemini 3.7 Flash cost-efficiency (as of 2026-08-20):** ARC-AGI Prize reports 84.6% on ARC-AGI-2 at $0.25/task and 95.5% on ARC-AGI-1 at $0.12/task; Artificial Analysis separately places it #1 on its AA-AnalystAgent benchmark (spreadsheet/document-heavy quantitative tasks) at $0.54 average cost across 80 tasks — reinforcing its positioning as the "cheap and strong" option in its tier.
 
+**Gemini 3.5 Transcribe (August 2026):** a speech-understanding model with multi-speaker intent detection, automatic 85+ language detection, and custom vocabulary adaptation for specialized jargon; available now via the Gemini API in Google AI Studio and Gemini Enterprise.
+
 ## Strengths
 
 - Deep Google ecosystem integration
@@ -91,6 +93,7 @@ Google added hosted-agent primitives to the Gemini API: MCP support for direct a
 
 ## Recent changes
 
+- [2026-08-26] Gemini 3.5 Transcribe launched: multi-speaker intent detection, 85+ languages auto-detected, custom vocabulary adaptation for specialized jargon; available via the Gemini API in Google AI Studio and Gemini Enterprise.
 - [2026-08-20] Gemini 3.7 Flash posts strong cost-adjusted benchmarks: 84.6% ARC-AGI-2 at $0.25/task, 95.5% ARC-AGI-1 at $0.12/task, #1 on AA-AnalystAgent at $0.54/task average.
 - [2026-07-08] Gemini API managed agents add MCP support, background execution, custom function calling, and credential refresh; AINews frames Interactions API as Google's default stateful interface for models and agents.
 - [2026-06-25] Gemini 3.5 Flash adds built-in computer use for browser, desktop, and mobile with sensitive-action confirmations and prompt-injection shutdown behavior.
@@ -114,3 +117,4 @@ Google added hosted-agent primitives to the Gemini API: MCP support for direct a
 - [AINews — Google I/O 2026: Gemini 3.5 Flash, Omni, Spark, Antigravity](../sources/newsletters/ainews-google-io-2026.md)
 - [Superhuman — Gemini becomes your personal agent](../sources/newsletters/gemini-personal-agent-superhuman-2026-05.md)
 - [AINews — Death of Params: Z.ai CEO Jie Tang on GLM 5.3](../sources/newsletters/ainews-death-of-params-glm-53-2026-08-20.md)
+- [Sundar Pichai — Gemini 3.5 Transcribe](../sources/tweets/sundarpichai-gemini-35-transcribe-2026-08-26.md)
