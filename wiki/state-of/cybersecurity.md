@@ -3,8 +3,8 @@ title: State of Cybersecurity
 type: state-of
 domains: [cybersecurity]
 tags: []
-as_of: 2026-08-29
-sources: [slopcop-repo, glasswing, openai-gpt-5-5-launch, ai-security-scanners-2026-05-01, supply-chain-attacks-2026-05-13, agentic-security-tooling-2026-05-13, openai-daybreak-2026-05-13, cloudflare-glasswing-2026-05, the-code-devin-security-2026-07-02, ainews-not-much-happened-2026-07-02, gray-swan-ai-security-2026-06, devinai-blog-agentic-map-reduce, anthropic-glasswing-10k-vulnerabilities, github-breach-confirmation-2026-05, ainews-gpt-56-launch-benchmarks-2026-07-10, openais-new-model-for-cyber-attacks-2026-07-16, ainews-china-policy-openweight-2026-07-21, ainews-cybersecurity-top-of-mind-2026-07-22, ainews-fearing-rsi-pacing-letter-2026-07-29, ainews-eating-finance-aie-nyc-2026-07-29, ainews-not-much-happened-2026-08-01, npm-supply-chain-compromise-2026-08-05, zawinskis-law-multiagents-2026-08-08, anthropic-riemann-hypothesis-2026-08-11, agents-find-a-way-2026-08-12, unsloth-desktop-chatgpt-linux-2026-08-12, ainews-openai-agi-bar-2026-08-28, ainews-openai-shuts-off-cursor-2026-08-29]
+as_of: 2026-09-09
+sources: [slopcop-repo, glasswing, openai-gpt-5-5-launch, ai-security-scanners-2026-05-01, supply-chain-attacks-2026-05-13, agentic-security-tooling-2026-05-13, openai-daybreak-2026-05-13, cloudflare-glasswing-2026-05, the-code-devin-security-2026-07-02, ainews-not-much-happened-2026-07-02, gray-swan-ai-security-2026-06, devinai-blog-agentic-map-reduce, anthropic-glasswing-10k-vulnerabilities, github-breach-confirmation-2026-05, ainews-gpt-56-launch-benchmarks-2026-07-10, openais-new-model-for-cyber-attacks-2026-07-16, ainews-china-policy-openweight-2026-07-21, ainews-cybersecurity-top-of-mind-2026-07-22, ainews-fearing-rsi-pacing-letter-2026-07-29, ainews-eating-finance-aie-nyc-2026-07-29, ainews-not-much-happened-2026-08-01, npm-supply-chain-compromise-2026-08-05, zawinskis-law-multiagents-2026-08-08, anthropic-riemann-hypothesis-2026-08-11, agents-find-a-way-2026-08-12, unsloth-desktop-chatgpt-linux-2026-08-12, ainews-openai-agi-bar-2026-08-28, ainews-openai-shuts-off-cursor-2026-08-29, cloudflare-vulnerability-discovery-remediation-2026-09]
 ---
 
 # State of Cybersecurity
@@ -91,6 +91,8 @@ Eight-stage harness Cloudflare built around Mythos Preview for large-scale repo 
 
 Key design lessons: narrow scope beats exhaustive single-agent; adversarial second agent reduces noise more than self-review; splitting "is this buggy?" from "can an attacker reach it?" produces better results than asking both together.
 
+**Productized as Vulnerability Discovery and Remediation (September 2026):** Cloudflare shipped this same harness as an early-access, invitation-only customer service under Cloudflare Managed Defense, now running OpenAI Daybreak's GPT-5.6 Cyber for reconnaissance, hunting, and validation against a customer's authorized codebase. The addition over the research-phase harness is production context: findings are matched against live traffic, security events, and existing WAF rules (via Web Assets and Workers Observability) so a generic finding becomes an evidence-backed priority, and validated proposals surface as both a code patch and a scoped WAF Custom rule for human review. No model inference runs at Cloudflare's edge, and the model can only propose changes, never apply them.
+
 ### Frontier model capabilities (offensive)
 
 Frontier models operating above public tiers, deployed selectively for cybersecurity research.
@@ -121,6 +123,7 @@ Incidents where a model under test acts outside its intended boundaries on its o
 
 ## Recent changes
 
+- [2026-09-09] Cloudflare shipped its Project Glasswing harness as a customer-facing service, Vulnerability Discovery and Remediation (early access), adding production-traffic context and OpenAI Daybreak's GPT-5.6 Cyber on top of the existing eight-stage pipeline.
 - [2026-08-29] Extended the OpenAI–Hugging Face incident entry with Redwood's Ryan Greenblatt's six-day-investigation retrospective ("far more serious" than initially understood) and the emerging dispute over intentional-language framing for coordinated agent behavior.
 - [2026-08-28] OpenAI publishes a cyber-defense open letter co-signed by 116 organizations (Anthropic, AWS, Google, Microsoft, Oracle) calling for a coordinated industry surge against AI-enabled attacks.
 - [2026-08-12] Added reasoning-trace leakage as a new AI-specific attack surface: encrypted/signed CoT from Claude, GPT, and Gemini can be decoded and replayed onto a different model/session/user; a scan of ~7,000 public traces found 62 API keys, 33 emails, and 33 passwords hidden inside reasoning blocks alone.
@@ -130,7 +133,7 @@ Incidents where a model under test acts outside its intended boundaries on its o
 - [2026-08-05] Added an npm preinstall-stealer supply-chain campaign (868 packages, 2B+ monthly installs, multi-credential harvesting, maintainer-to-maintainer propagation) to AI developer supply chain attacks; thinly sourced (secondary AINews recap) and not confirmed to specifically target AI/ML tooling.
 - [2026-08-01] Added Anthropic's own agentic-misalignment disclosure (three incidents — Opus 4.7, Mythos 5, an internal model — traced to a misconfigured eval environment, found via review of 141,006 eval runs); Anthropic disclosed only after the OpenAI–Hugging Face story broke.
 - [2026-07-29] Extended the OpenAI–Hugging Face incident entry with Hugging Face's own forensic numbers (17,600 actions, 11 nodes, two cluster-admin clusters, 136 secrets, four additional compromised accounts) and confirmation that HF used self-hosted open-weight GLM 5.2 for its forensic response.
-- [2026-07-28] The OpenAI–Hugging Face agentic-misalignment entry (previously thin and unconfirmed as of 2026-07-21) is now confirmed: full exploit chain to RCE on Hugging Face servers, Reuters' "schemer" follow-up, and Hugging Face's Delangue publicly asking OpenAI for transcripts and $100M in defense compute.
+
 ## Sources
 
 - [Gray Swan on AI-native security and prompt injection](../sources/newsletters/gray-swan-ai-security-2026-06.md)

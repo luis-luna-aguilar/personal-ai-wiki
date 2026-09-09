@@ -4,8 +4,8 @@ type: model
 domains: [models, creative]
 subcategory: frontier-model
 tags: [closed-source, agentic, meta]
-as_of: 2026-09-03
-sources: [muse-spark, open-creative-workflows-2026-06, meta-muse-image-video-2026-07, superhuman-chatgpt-work-muse-spark-2026-07, the-code-databricks-coding-benchmark-2026-07-10, ainews-gpt-56-rollout-not-much-happened-2026-07-11, amd-acquires-taalas-2026-08-07, anthropic-riemann-hypothesis-2026-08-11, ainews-poolside-nvidia-2026-08-21, ainews-muse-spark-13-2026-09-03]
+as_of: 2026-09-08
+sources: [muse-spark, open-creative-workflows-2026-06, meta-muse-image-video-2026-07, superhuman-chatgpt-work-muse-spark-2026-07, the-code-databricks-coding-benchmark-2026-07-10, ainews-gpt-56-rollout-not-much-happened-2026-07-11, amd-acquires-taalas-2026-08-07, anthropic-riemann-hypothesis-2026-08-11, ainews-poolside-nvidia-2026-08-21, ainews-muse-spark-13-2026-09-03, ainews-navier-stokes-2026-09-09]
 ---
 
 # Muse Spark
@@ -64,6 +64,7 @@ Reddit commenters flagged a striking long-context claim (MRCR 512k–1m at 98.1%
 
 ## Recent changes
 
+- [2026-09-08] Muse Spark 1.3 now powers [Meta Muse](../tools/meta-muse.md), Meta's newly-launched consumer personal-agent product; day-one usage exceeded Meta's internal projections by 10x.
 - [2026-09-03] Muse Spark 1.3 launches: AA Intelligence Index #3 in the world, parity with GPT-5.6 Sol/Opus 5 on several evals, 90%+ pricing discount for training opt-in, open weights still promised "coming soon."
 - [2026-08-21] Additional third-party benchmarks: Agent Arena +2.1% net improvement (Bash Recovery +11.4%); DesignArena #1 Video-to-Website, #2 Image-to-HTML, #3 Image-to-Frontend.
 - [2026-08-11] Muse Glimmer ships as a smaller, open-weight (Apache 2.0) sibling model; Muse Spark 1.2's own weights promised "soon" — a reversal from Spark 1.1's closed API-only launch.
@@ -84,3 +85,4 @@ Reddit commenters flagged a striking long-context claim (MRCR 512k–1m at 98.1%
 - [AMD acquires Taalas](../sources/newsletters/amd-acquires-taalas-2026-08-07.md)
 - [AINews — Anthropic's Riemann Hypothesis bound improvement](../sources/newsletters/anthropic-riemann-hypothesis-2026-08-11.md)
 - [AINews — Poolside gets $12B reverse-execuhire to NVIDIA](../sources/newsletters/ainews-poolside-nvidia-2026-08-21.md)
+- [AINews — OpenAI reports Navier-Stokes singularity find](../sources/newsletters/ainews-navier-stokes-2026-09-09.md)

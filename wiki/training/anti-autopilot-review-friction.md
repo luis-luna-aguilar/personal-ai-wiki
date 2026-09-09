@@ -1,8 +1,8 @@
 ---
 title: Anti-autopilot review friction
 type: training
-as_of: 2026-06-29
-sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026, lennysan-simonw-interview, prof-devs-control, agents-evals-deep-research, agentic-devops-deep-research, agent-review-artifacts-2026-05-13, osmani-cognitive-debt-ai-learning-2026-05, claude-code-fast-mode-default-2026-05, powerpoint-agent-skill-failure-mode-2026-06, anthropic-ai-assistance-coding-skills-2026]
+as_of: 2026-09-08
+sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026, lennysan-simonw-interview, prof-devs-control, agents-evals-deep-research, agentic-devops-deep-research, agent-review-artifacts-2026-05-13, osmani-cognitive-debt-ai-learning-2026-05, claude-code-fast-mode-default-2026-05, powerpoint-agent-skill-failure-mode-2026-06, anthropic-ai-assistance-coding-skills-2026, every-read-the-code-2026-09-08]
 ---
 
 # Anti-autopilot review friction
@@ -40,6 +40,8 @@ As AI output gets more fluent and more often correct, people stop truly checking
   ```
 
   Reading the file once the task is finished tells you exactly which decisions were made and why before you dive into the code — converting invisible inference into a reviewable artifact. Source: Anthropic Claude Code engineer (@trq212, May 2026). See also [agent-generated HTML artifacts](../workflows/agent-generated-html-artifacts.md) for the broader rationale for HTML over Markdown in agent-produced outputs.
+- **Trace mechanics, not diffs.** When reviewing a change or investigating a failure, ask the agent to walk the real data/control flow end to end — where the process begins, what happens next, where information goes, which other systems touch it — rather than reading the diff itself. A map of the whole journey catches wrong-but-plausible fixes that a diff alone won't: one practitioner used this to reject two reasonable-sounding incident fixes in favor of the one that matched what had actually happened. *Source: Every, Kieran Klaassen (2026-09-08)*
+- **Quiz before merge.** After a long agent session, ask the model for a written explanation of the change plus a quiz on it, and don't merge until you score well. Tests decide whether the code can merge; the quiz decides what you still need to learn — keeping a running list of missed questions as your own syllabus. *Source: Thariq Shihipar, via Every (2026-09-08)*
 
 ## What works and what fails (empirical ratios)
 
@@ -79,6 +81,8 @@ Cognitive debt (Addy Osmani, May 2026): the accumulated deficit in comprehension
 - Re-derive by hand occasionally: recreate code the model wrote — calibration check for what you've quietly lost
 - Ask the model to teach: after it writes a clever function, ask what concepts it used and what you'd read to understand the design choice
 
+**A fourth data point, and an older name for the pattern:** a 2026 review by Margaret Mitchell, Avijit Ghosh, and Samir Passi (arXiv:2608.23642) documents that extended AI-agent use measurably erodes the vigilance, critical thinking, and domain skill human oversight depends on. The underlying dynamic isn't new — it's the "irony of automation," a term coined in 1983 by a safety researcher studying human operators of automated factories and power plants: the more capable the automation gets, the faster the human's own skill erodes. Agents just make it move faster. *Source: Every, Kieran Klaassen, "To Read—Or Not to Read the Code?" (2026-09-08)*
+
 ## Failure modes
 
 - Mistaking "I saw it" for "I reviewed it"
@@ -92,6 +96,7 @@ Cognitive debt (Addy Osmani, May 2026): the accumulated deficit in comprehension
 
 ## Recent changes
 
+- [2026-09-08] Added two proven patterns (trace mechanics not diffs; quiz before merge) and a fourth cited study on AI-agent-use skill erosion (Mitchell/Ghosh/Passi, arXiv:2608.23642), framed via the 1983 "irony of automation."
 - [2026-06-29] Added near-correct presentation decks as a review-friction failure mode: polished artifacts can hide subtle but costly defects.
 - [2026-05-19] Spec-drift logging pattern: append implementation-notes.html prompt to expose Claude's design decisions, deviations, and tradeoffs as a reviewable artifact (Anthropic engineer, @trq212)
 - [2026-05-18] Cognitive debt (Osmani): three empirical studies confirm AI-without-learning-intent erodes comprehension (Anthropic: 50% vs 67% quiz; MIT EEG: 83% couldn't quote own AI-written text; anchoring: AI at task start produces worse decisions); learning-posture remedies added
@@ -112,3 +117,4 @@ Cognitive debt (Addy Osmani, May 2026): the accumulated deficit in comprehension
 - [Claude Code Fast mode becomes default + spec-drift logging](../sources/newsletters/claude-code-fast-mode-default-2026-05.md)
 - [PowerPoint remains hard for agents](../sources/newsletters/powerpoint-agent-skill-failure-mode-2026-06.md)
 - [How AI assistance impacts the formation of coding skills](../sources/articles/anthropic-ai-assistance-coding-skills-2026.md)
+- [Every — To Read—Or Not to Read the Code?](../sources/newsletters/every-read-the-code-2026-09-08.md)

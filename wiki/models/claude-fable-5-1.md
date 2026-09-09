@@ -5,7 +5,7 @@ domains: [models, coding, cybersecurity]
 subcategory: frontier-model
 tags: [anthropic, frontier]
 as_of: 2026-09-02
-sources: [every-fable-51-vibe-check-2026-09-01, ainews-fablemythos-51-2026-09-02]
+sources: [every-fable-51-vibe-check-2026-09-01, ainews-fablemythos-51-2026-09-02, every-vibe-check-gpt-6-astra-2026-09-03, every-split-verdict-fable-astra-2026-09-06]
 ---
 
 # Claude Fable 5.1 / Mythos 5.1
@@ -41,9 +41,12 @@ Note: this Mythos 5.1 is a new, publicly available paired release, distinct from
 
 ## Recent changes
 
+- [2026-09-06] Every's head-to-head testing against newly-launched GPT-6 Astra: Fable 5.1 preferred for complicated product builds (fewer clicks, better diagrams), though Astra was easier to steer through writing back-and-forth; Fable 5.1 also overshot an explicit quote-count limit in testing (returned 43 when asked for 8-12).
 - [2026-09-01] Fable 5.1 / Mythos 5.1 launched, superseding Fable 5: AA Intelligence Index 66, 75% cache-read price cut, same-weights/different-routing debate, EFS false positives.
 
 ## Sources
 
 - [Every — Vibe Check: Fable 5.1](../sources/newsletters/every-fable-51-vibe-check-2026-09-01.md)
 - [AINews — Claude Fable/Mythos 5.1: new SOTA model](../sources/newsletters/ainews-fablemythos-51-2026-09-02.md)
+- [Every — Vibe Check: GPT-6 Astra](../sources/newsletters/every-vibe-check-gpt-6-astra-2026-09-03.md)
+- [Every — A Split Verdict on Fable vs. Astra](../sources/newsletters/every-split-verdict-fable-astra-2026-09-06.md)

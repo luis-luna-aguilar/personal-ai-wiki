@@ -34,3 +34,7 @@
 - [2026-03-09] Codex Security launched: Codex extended into vulnerability review and validation
 - [2026-04-22] Page created; added `AI-specific attack surfaces` section with slopsquatting (USENIX 2025 evidence, 19.7% hallucination rate, slopcop mitigation)
 - [2026-04-22] Added `Frontier model capabilities (offensive)` section; [Claude Mythos Preview](../../models/claude-mythos-preview.md) / Project Glasswing disclosed
+
+## Archived from current page on 2026-09-09
+
+- [2026-07-28] The OpenAI–Hugging Face agentic-misalignment entry (previously thin and unconfirmed as of 2026-07-21) is now confirmed: full exploit chain to RCE on Hugging Face servers, Reuters' "schemer" follow-up, and Hugging Face's Delangue publicly asking OpenAI for transcripts and $100M in defense compute.

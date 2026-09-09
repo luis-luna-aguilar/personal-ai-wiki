@@ -42,6 +42,7 @@ Foundation models. One page per model family or generation.
 - [models/grok-4-6](models/grok-4-6.md) — xAI/SpaceXAI; 1.5T MoE, supersedes Grok 4.5; AA Intelligence Index 61, 88.4% Terminal-Bench v2.1, unchanged $2/$6 pricing; powers new Grok Bot product *(as_of: 2026-08-13)*
 - [models/gpt-5-5](models/gpt-5-5.md) — OpenAI frontier model for coding, knowledge work, science, cyber tasks, Codex, and personal-finance agent workflows *(as_of: 2026-07-02)*
 - [models/gpt-5-6-sol](models/gpt-5-6-sol.md) — OpenAI flagship (Sol/Terra/Luna family); launched as a restricted preview, cleared for public rollout July 2026; METR predeployment eval found high detected cheating and uncertain time-horizon estimates *(as_of: 2026-07-09)*
+- [models/gpt-6-astra](models/gpt-6-astra.md) — OpenAI's new flagship, launched 2026-09-03; mixed third-party benchmark reception vs. Fable 5.1 but far more token-efficient; system card discloses a sharp CoT-monitorability decline *(as_of: 2026-09-08)*
 - [models/glm-5-3](models/glm-5-3.md) — Z.ai; supersedes GLM-5.2; same 753B/40B MoE footprint and price, large post-training-RL benchmark jump (+246 GDPval-AA v2, ties Kimi K3) *(as_of: 2026-08-20)*
 - [models/gpt-image-2](models/gpt-image-2.md) — OpenAI image generation model; #1 across image-arena categories by a wide Elo margin *(as_of: 2026-04-22)*
 - [models/cosmos-3](models/cosmos-3.md) — NVIDIA; Mixture-of-Transformers (autoregressive reasoner + diffusion generator); Nano 16B / Super 64B; #1 open-weight Text-to-Image and Image-to-Video *(as_of: 2026-06-02)*
@@ -73,7 +74,8 @@ Tools and products built on top of models. One page per tool.
 - [tools/claude-design](tools/claude-design.md) — Anthropic's research-preview artifact-generation surface for prototypes, slides, and one-pagers *(as_of: 2026-07-08)*
 - [tools/claude-science](tools/claude-science.md) — Anthropic public beta science app with reproducible artifacts, reviewer agents, persistent kernels, database/model integrations, and local/HPC compute *(as_of: 2026-07-06)*
 - [tools/claude-tag](tools/claude-tag.md) — Anthropic's Slack-native team agent product; Claude joins selected channels as a named participant with scoped channel/tool/data/codebase access and async thread work *(as_of: 2026-06-24)*
-- [tools/grok-bot](tools/grok-bot.md) — xAI/SpaceXAI's AI-teammate product, launched alongside Grok 4.6; persistent cloud compute per bot, tool/Slack/GitHub Actions monitoring, scheduled routines, bot-spawning *(as_of: 2026-08-13)*
+- [tools/grok-bot](tools/grok-bot.md) — xAI/SpaceXAI's AI-teammate product, launched alongside Grok 4.6; persistent cloud compute per bot, tool/Slack/GitHub Actions monitoring, scheduled routines, bot-spawning *(as_of: 2026-09-05)*
+- [tools/openclaw](tools/openclaw.md) — user-owned agent gateway platform; OpenClaw 2.0 adds Claude Code/Codex login reuse, native Codex runtime, one-click Hostinger managed deployment *(as_of: 2026-09-05)*
 - [tools/claude-managed-agents](tools/claude-managed-agents.md) — Anthropic's hosted long-horizon agent runtime; file-backed memory, Dreams, and same-day API feature parity reinforce the platform-service direction *(as_of: 2026-05-20)*
 - [tools/agentrial](tools/agentrial.md) — statistical multi-trial eval framework for agent reliability, trajectory attribution, and CI regression gates *(as_of: 2026-04-24)*
 - [tools/braintrust](tools/braintrust.md) — eval dataset management and trace-to-dataset conversion for agent pipelines *(as_of: 2026-04-23)*
@@ -127,6 +129,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/modal](tools/modal.md) — serverless AI cloud reframing from developer experience to "agent experience"; 100K-sandbox RL rollouts; $355M Series C *(as_of: 2026-07-08)*
 - [tools/multica](tools/multica.md) — open-source managed agents platform; treats coding agents (Claude Code, Codex, and 9 others) as project-board teammates with Squads routing and reusable skill compounding *(as_of: 2026-05-18)*
 - [tools/muse-code](tools/muse-code.md) — Meta's first terminal coding agent, launched in beta August 2026; Meta's answer to Claude Code and Codex *(as_of: 2026-08-06)*
+- [tools/meta-muse](tools/meta-muse.md) — Meta's consumer personal AI agent, launched 2026-09-08; isolated-VM/Sentinel security architecture, Stripe commerce, 10x day-one adoption *(as_of: 2026-09-08)*
 - [tools/paperclip](tools/paperclip.md) — open-source MIT agent management platform; org-chart metaphor with heartbeats, per-agent budgets, board-of-directors governance, and Kubernetes hosting; 69.9k stars *(as_of: 2026-06-10)*
 - [tools/notion](tools/notion.md) — Notion's External Agents API lets Claude Code, Cursor, Codex, Devin, Warp, Decagon act inside Notion workspaces as a shared agent-native document surface *(as_of: 2026-05-14)*
 - [tools/open-evidence](tools/open-evidence.md) — physician-oriented medical evidence and clinical-question tool *(as_of: 2026-04-22)*
@@ -143,6 +146,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/stagehand](tools/stagehand.md) — browser automation framework for AI agents and browser self-verification loops *(as_of: 2026-04-24)*
 - [tools/seedance-2](tools/seedance-2.md) — ByteDance Seed's multimodal audio-video generation product *(as_of: 2026-04-22)*
 - [tools/shopify-ai-toolkit](tools/shopify-ai-toolkit.md) — Shopify's plugin / skills / MCP integration layer for AI-assisted app development and agent-ready SaaS packaging *(as_of: 2026-06-29)*
+- [tools/ponytail](tools/ponytail.md) — open-source cross-agent "write only what the task needs" coding-discipline skill; agentic benchmark shows -54% LOC / -22% tokens / -20% cost / -27% time at 100% safety *(as_of: 2026-09-09)*
 - [tools/skyflo](tools/skyflo.md) — approval-gated AI control layer for Kubernetes and CI/CD operations *(as_of: 2026-04-24)*
 - [tools/spec-kit](tools/spec-kit.md) — GitHub's CLI SDD scaffolder with slash commands *(as_of: 2025-10-15)*
 - [tools/stitch](tools/stitch.md) — Google's UI-generation surface at the design-to-code boundary *(as_of: 2026-04-22)*
@@ -192,6 +196,7 @@ Reusable patterns and recipes.
 Ideas and techniques.
 
 - [concepts/a2a](concepts/a2a.md) — Google protocol for communication and delegation between agents across systems *(as_of: 2026-04-22)*
+- [concepts/agent-answer-engine-optimization](concepts/agent-answer-engine-optimization.md) — self-serving bias in which tools frontier models recommend, and source-citation behavior differences between labs *(as_of: 2026-09-07)*
 - [concepts/agent-labs-vs-model-labs](concepts/agent-labs-vs-model-labs.md) — Sarah Guo's competitive framing: Agent Labs win on untrainable workflow integration; Model Labs compete on trainable capability *(as_of: 2026-07-02)*
 - [concepts/agent-evals](concepts/agent-evals.md) — taxonomy of agent evaluation categories, trajectory-vs-result evaluation, historical replay, dollar-denominated evals, infrastructure evals, and cost/variance tracking *(as_of: 2026-07-14)*
 - [concepts/agent-improvement-loop](concepts/agent-improvement-loop.md) — workflow for improving AI agents through traces, evals, autoresearch loops, Better-Harness-style hill-climbing, trace-to-memory feedback, and production feedback *(as_of: 2026-07-07)*

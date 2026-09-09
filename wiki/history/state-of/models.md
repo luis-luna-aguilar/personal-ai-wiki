@@ -87,3 +87,7 @@
 ## Archived from current page on 2026-09-09 (2)
 
 - [2026-07-31] DeepSeek V4-Flash 0731: post-training-only update (same 284B/13B architecture) jumped Terminal-Bench to 82.7 and AA Intelligence Index to 50, now 1pt behind GPT-5.6 Luna; MIT-licensed, day-0 vLLM support; read as a direct response to OpenAI's price cuts the day before.
+
+## Archived from current page on 2026-09-09 (3)
+
+- [2026-07-31] GPT-5.6: OpenAI cut Luna 80% and Terra 20%, added a Sol Fast tier, and disclosed using Sol to autonomously optimize its own serving kernels (-20% cost) and speculative decoder (+15% efficiency) — part of a broader trend putting GPT-5.4-equivalent intelligence at ~13x cheaper than four months ago.

@@ -27,3 +27,7 @@ Older recent-change entries spilled from [Harness (agent)](../../concepts/harnes
 ## Archived from current page on 2026-09-09
 
 - [2026-07-03] Added control-layer framing from AI Engineer World Fair: permissions, cost ceilings, recovery, and review routing are part of the harness boundary.
+
+## Archived from current page on 2026-09-09 (2)
+
+- [2026-07-08] Gemini API managed agents add hosted harness primitives: MCP support, background execution, custom function calling, credential refresh, and stateful agent interactions.

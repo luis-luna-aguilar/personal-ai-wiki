@@ -4,8 +4,8 @@ type: model
 domains: [models]
 subcategory: image-generation-model
 tags: [openai, closed-source]
-as_of: 2026-04-22
-sources: [ainews-2026-04-22]
+as_of: 2026-09-08
+sources: [ainews-2026-04-22, ainews-navier-stokes-2026-09-09]
 ---
 
 # GPT-Image-2
@@ -19,6 +19,7 @@ OpenAI's image generation model, launched April 22, 2026 as "ChatGPT Images 2.0.
 - Capabilities: "thinking" mode (self-checks, generates multiple candidates before returning), web search integration for context, text rendering, multi-aspect-ratio layout, image editing, multilingual
 - Day-0 ecosystem integrations: Figma, Canva, Hermes Agent, fal
 - API access: `gpt-image-2` in the Images API; also surfaced inside Codex agent sessions
+- **GPT-Image-2.5 (2026-09-08):** up to 50% lower latency than Images 2.0, better realism, more consistent multi-edit results, comment-based localized changes, transparent backgrounds, and a new Sketch tool for guided generation. Two API variants: Flare (speed/quality) and Sunburst (higher-precision detail). Arena results claim #1/#2 across text-to-image, image-edit, and multi-image-edit, with the largest gains in multi-image editing. Same-day integrations on fal, Higgsfield, Manus, and Hermes Agent.
 
 ## Image as a coding-spec bridge
 
@@ -31,8 +32,10 @@ AINews's editorial framing: image generation is becoming a front end for coding 
 
 ## Recent changes
 
+- [2026-09-08] GPT-Image-2.5 released: up to 50% lower latency, Flare/Sunburst API variants, #1/#2 arena ranks, largest gains in multi-image editing.
 - [2026-04-22] Initial page — launched at #1 arena across all image categories
 
 ## Sources
 
 - [AINews — 2026-04-22 (GPT-Image-2, Hermes, Deep Research Max)](../sources/newsletters/ainews-2026-04-22.md)
+- [AINews — OpenAI reports Navier-Stokes singularity find](../sources/newsletters/ainews-navier-stokes-2026-09-09.md)

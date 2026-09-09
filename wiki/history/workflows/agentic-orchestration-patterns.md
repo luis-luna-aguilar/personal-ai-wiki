@@ -18,3 +18,7 @@
 ## Archived from current page on 2026-09-09
 
 - [2026-06-24] Token-tightening coverage adds AI FinOps controls: budgets, model routing, prompt caching, cheaper defaults, checkpoints, and outcome-based spend review.
+
+## Archived from current page on 2026-09-09 (2)
+
+- [2026-06-26] Added AI review standards and review-noise failure mode from code-review workflow coverage.

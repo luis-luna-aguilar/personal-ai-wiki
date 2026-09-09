@@ -6,7 +6,7 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
-Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`, `agent-sandbox-infra`
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`, `agent-sandbox-infra`, `coding-discipline-skill`
 
 ### spec-driven-development
 - **Parent domain(s):** coding
@@ -85,6 +85,12 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Applies to types:** tool
 - **Definition:** Toolkits that package a specific developer platform's docs, schemas, validation, and related capabilities for AI coding tools via plugins, skills, or MCP servers.
 - **Examples:** [Shopify AI Toolkit](../tools/shopify-ai-toolkit.md)
+
+### coding-discipline-skill
+- **Parent domain(s):** coding, agents
+- **Applies to types:** tool
+- **Definition:** Portable skill/rule packages that inject a coding discipline or behavioral ruleset into AI coding agents across multiple unrelated hosts (Claude Code, Codex, Copilot, Gemini, etc.) via plugins, hooks, or `AGENTS.md`-style instruction files — distinct from `agent-toolkits`, which packages a specific developer platform's docs, schemas, and validation rather than a general behavioral discipline.
+- **Examples:** [Ponytail](../tools/ponytail.md)
 
 ### agentic-orchestration-patterns
 - **Parent domain(s):** agents
