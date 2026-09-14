@@ -16,6 +16,7 @@ Every's Mike Taylor argues Microsoft Copilot Studio — a no-code agent builder 
 ## Influenced pages
 
 - [State of Coding](../../state-of/coding.md) — Codex user-growth figure, Claude Code market-share figure, Copilot Studio caveated note
+- [Claude Code](../../tools/claude-code.md) — 63% market-share figure from Pragmatic Engineer's survey
 
 ## Key claims extracted
 

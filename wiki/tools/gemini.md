@@ -14,7 +14,7 @@ Google's AI assistant product, built on the Gemini model family. Combines conver
 
 ## Current status (as of 2026-07-08)
 
-**Gemini Enterprise Agent Platform (Cloud Next '26):**
+### Gemini Enterprise Agent Platform (Cloud Next '26)
 
 Google is now using Gemini as the umbrella brand over both assistant and enterprise agent surfaces. On the enterprise side, Gemini Enterprise Agent Platform replaces Vertex AI as the unified platform for building, scaling, governing, and optimizing agents.
 
@@ -46,10 +46,11 @@ Google is now using Gemini as the umbrella brand over both assistant and enterpr
 - Color Health: screening eligibility and appointment scheduling
 - Payhawk: Financial Controller Agent with Memory Bank; 50%+ faster expense submission
 
-**Downloadable file generation (as of 2026-04-30):**
+### Downloadable file generation (as of 2026-04-30)
+
 Gemini now generates downloadable artifacts directly from chat: Google Docs, Sheets, Slides; Microsoft Word, Excel, PowerPoint; PDF, CSV, LaTeX, TXT, RTF, and Markdown. File generation requires no external integration — output downloads inline from the conversation.
 
-**Google I/O 2026 (as of 2026-05-19):**
+### Google I/O 2026 (as of 2026-05-19)
 
 Google used I/O 2026 to push Gemini toward "agents as the product." Key launches:
 
@@ -61,23 +62,23 @@ Google used I/O 2026 to push Gemini toward "agents as the product." Key launches
 
 Reception was mixed (per AINews): positive on agentic gains, serving speed, and product integration; Artificial Analysis and several posters flagged the Flash-tier pricing/performance tradeoff and some benchmark caveats.
 
-**Computer use (as of 2026-06-25):**
+### Computer use (as of 2026-06-25)
+
 Gemini 3.5 Flash now has computer use as a built-in developer capability across browser, desktop, and mobile workflows. Newsletter coverage describes it as a standardized action interface exposed through the Gemini API, with human confirmation for sensitive actions and automatic shutdown when prompt-injection behavior is detected.
 
 The significance is productization: Google is putting computer-use primitives into a mainstream Gemini model/API path rather than leaving them as a separate demo or bespoke agent environment.
 
-**Managed agents in Gemini API (as of 2026-07-08):**
+### Managed agents in Gemini API (as of 2026-07-08)
 
 Google added hosted-agent primitives to the Gemini API: MCP support for direct access to internal tools and databases, background execution for long-running tasks, custom function calling, and credential refresh across interactions. AINews also describes the Gemini Interactions API as GA and the new default interface for Gemini models and agents, combining models, agents, async execution, tool support, multimodal generation, and managed execution surfaces.
 
-**Other Gemini surfaces already tracked here:**
+### Other surfaces and recent capability additions
+
 - Deep Research and Deep Research Max available via the Gemini API — see [Gemini Deep Research](gemini-deep-research.md) for capabilities and benchmarks; see [Deep Research (concept)](../concepts/deep-research.md) for the category
 - Chrome Skills: reusable Gemini prompts that run as one-click browser workflows
 - Native Gemini Mac app
-
-**Gemini 3.7 Flash cost-efficiency (as of 2026-08-20):** ARC-AGI Prize reports 84.6% on ARC-AGI-2 at $0.25/task and 95.5% on ARC-AGI-1 at $0.12/task; Artificial Analysis separately places it #1 on its AA-AnalystAgent benchmark (spreadsheet/document-heavy quantitative tasks) at $0.54 average cost across 80 tasks — reinforcing its positioning as the "cheap and strong" option in its tier.
-
-**Gemini 3.5 Transcribe (August 2026):** a speech-understanding model with multi-speaker intent detection, automatic 85+ language detection, and custom vocabulary adaptation for specialized jargon; available now via the Gemini API in Google AI Studio and Gemini Enterprise.
+- **Gemini 3.7 Flash cost-efficiency (as of 2026-08-20):** ARC-AGI Prize reports 84.6% on ARC-AGI-2 at $0.25/task and 95.5% on ARC-AGI-1 at $0.12/task; Artificial Analysis separately places it #1 on its AA-AnalystAgent benchmark (spreadsheet/document-heavy quantitative tasks) at $0.54 average cost across 80 tasks
+- **Gemini 3.5 Transcribe (August 2026):** speech-understanding model with multi-speaker intent detection, automatic 85+ language detection, and custom vocabulary adaptation, available via the Gemini API in Google AI Studio and Gemini Enterprise
 
 ## Strengths
 

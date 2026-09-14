@@ -30,6 +30,7 @@ Valid values for the `tags:` field in frontmatter. Tags are for cross-cutting at
 - **`collaboration`** — flavor: designed for shared human/agent or multi-user workflows
 - **`cohere`** — vendor/org: Cohere
 - **`cognition`** — vendor/org: Cognition (Devin, Windsurf, FrontierCode)
+- **`knowledge-cluster`** — cluster: pages in the knowledge / memory / company-brain / ontology cluster, whose vocabulary is owned by the hub [Knowledge architectures](../concepts/knowledge-architectures.md)
 
 ## Conventions
 
@@ -46,6 +47,7 @@ As the wiki grows, tags tend to cluster into:
 - **Modality**: `text`, `voice`, `vision`, `multimodal`
 - **Flavor / capability**: `frontier`, `reasoning`, `agentic`, `long-context`
 - **Ecosystem**: `vscode-fork`, `cli`, `ide-extension`, `terminal`
+- **Cluster**: `knowledge-cluster` — one tag per concept cluster that has a hub page (see AGENTS.md → "Terminology discipline")
 
 ## Adding a new tag
 

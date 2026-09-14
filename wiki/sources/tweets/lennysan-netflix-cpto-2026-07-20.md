@@ -15,7 +15,7 @@ Eight-point thread summarizing a podcast conversation with Netflix CPTO Elizabet
 
 ## Influenced pages
 
-- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — Evidence-from-practice bullet
+- [AI adoption: evidence from practice](../../training/ai-adoption-evidence.md) — Netflix CPTO systems-thinking case study
 
 ## Key claims extracted
 

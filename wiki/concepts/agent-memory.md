@@ -2,16 +2,20 @@
 title: Agent memory
 type: concept
 domains: [agents]
-tags: [agentic]
+tags: [agentic, knowledge-cluster]
 as_of: 2026-07-07
 sources: [agent-memory-without-vector-db, memory-vs-context-rot-february, agent-memory-systems-layer-2026-06, minteval-paper-2026-05, ainews-erdos-benchmarks-cluster-2026-05-21]
 ---
 
 # Agent memory
 
-Agent memory is the problem of helping an AI system recover the right facts from past work after the live session window is gone. The core challenge is not only storing history, but retrieving the right parts of it in a form the model can actually use.
+Agent memory is the problem of helping an AI system recover the right facts from past work after the live session window is gone. The core challenge is not only storing history, but retrieving the right parts of it in a form the model can actually use. In the [Knowledge architectures](knowledge-architectures.md) matrix it is the per-agent store of *episodic facts* extracted from sessions, written by the agent itself under governed rules; it is not the shared compiled corpus (that is a [knowledge layer](knowledge-layer.md)) and not the organization-scope system (that is a [company brain](company-brain.md)).
 
-## Current status
+## Also called
+
+Memory layer, memory system, long-term agent memory. "Ghost memory" is not an alias but a named failure mode (see below).
+
+## Current status (as of 2026-07-07)
 
 - Memory is moving from "retrieve old facts" toward a lifecycle system: extract candidate memories, deduplicate them, reconcile conflicts, scope them to the right user/team/task, retrieve evidence, and expire or update stale facts.
 - Supermemory's ASMR system is described as using specialized agents to read conversation history, analyze it, and extract facts instead of embedding everything and querying by similarity.
@@ -31,17 +35,20 @@ Many agent systems fail not because they lack storage, but because they surface 
 - Treat memory writes as a governed operation, not automatic accumulation.
 - Store evidence and provenance with important memories so humans can debug why the agent believes something.
 - Add conflict detection and stale-fact handling before committing durable memories.
-- Separate private user memory, team memory, workflow memory, and source-of-truth knowledge layers.
+- Separate private user memory, team memory, workflow memory, and the shared [knowledge layer](knowledge-layer.md) that serves as source of truth.
 - Prefer memory structures humans can inspect and prune instead of silent accumulation
 
 ## Recent changes
 
+- [2026-09-09] Terminology reorganization: added the `## Also called` alias line, dated the Current-status stamp, and rewrote the Related lines to agree with the new [Knowledge architectures](knowledge-architectures.md) hub (this page previously described itself as "retrieval mechanics" on one page and as a "lifecycle system" on another).
 - [2026-07-07] AINews memory cluster updates agent memory from retrieval problem to systems layer: extraction, dedupe, reconciliation, scoping, lifecycle, and offline trace writeback.
 - [2026-05-19] MINTEval published: a dedicated benchmark for long-horizon memory under multi-target interference; 7 evaluated systems average 27.9% accuracy (best 33.4% per AINews' recap), giving independent confirmation that current memory systems are far from solved.
 
 ## Related
 
-- [Knowledge layer](knowledge-layer.md) — complementary concept: a compiled, maintained context surface that sits above raw sources; where agent-memory focuses on retrieval mechanics, the knowledge layer focuses on how content is structured and maintained
+- [Knowledge architectures](knowledge-architectures.md) — the hub that places this page against knowledge layers, company brains, and ontologies
+- [Knowledge layer](knowledge-layer.md) — the shared, human-legible compiled corpus; agent memory is what one agent learned from its own sessions, and the two usually coexist
+- [Company brain](company-brain.md) — the organization-scope system; its "remembering" and "dreaming & pruning" functions are agent-memory lifecycle mechanics applied at company scale
 
 ## Caveats
 

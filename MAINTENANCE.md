@@ -13,10 +13,11 @@ Scripts in `scripts/` cover mechanical hygiene. They are cheap — run them when
 | `orphans.py` | Report pages with no inbound internal links | "find orphan pages" |
 | `link_check.py` | Report broken Markdown links and editor-specific link syntax in wiki page bodies | "check links" |
 | `tag_compliance.py` | Report tags/domains/subcategories not in `_schema/` | "check tag compliance" |
-| `lint_all.py` | Chain orphans, link_check, and tag_compliance | "run lint", "lint the wiki" |
+| `page_length.py` | Report pages over their type's body-word ceiling, flat `##` sections with no `###` subheads, month-named "accretion" headings, and over-long state-of leader bullets (thresholds in `config.yml → page_length`) | "check page length", "split candidates" |
+| `lint_all.py` | Chain stale, orphans, link_check, tag_compliance, and page_length | "run lint", "lint the wiki" |
 | `index_check.py` | Report pages on disk not in `wiki/index.md`, and index entries with no matching file | "check index", "index check" |
 | `source_orphans.py` | Report source files not referenced by any wiki page frontmatter, and broken source refs | "check source orphans", "source orphans" |
-| `recent_changes_cap.py` | Report pages whose `## Recent changes` section exceeds the 5-entry cap; shows which entries need to be spilled | "check cap", "recent changes cap" |
+| `recent_changes_cap.py` | Report pages whose `## Recent changes` section exceeds the cap in `config.yml → history.recent_changes_cap` (currently 10); shows which entries need to be spilled | "check cap", "recent changes cap" |
 
 > **Note on `stale.py`:** Staleness is a query-time confidence signal, not a maintenance action. The script exists but is not part of the maintenance pass and not run automatically. Stale pages are never deleted or modified due to age alone — the wiki does not remove old data.
 
@@ -26,9 +27,9 @@ Run via `python scripts/<name>.py`. These are cheap — run them whenever asked.
 
 ## Recent-changes cap enforcement
 
-The `## Recent changes` section on every wiki page is capped at **5 entries** (`config.yml → history.recent_changes_cap`). When a page accumulates more than 5 entries, the oldest entries must be spilled to the corresponding file under `wiki/history/` and removed from the main page.
+The `## Recent changes` section on every wiki page is capped at the value of `config.yml → history.recent_changes_cap` (currently **10 entries**). When a page accumulates more entries than the cap, the oldest entries must be spilled to the corresponding file under `wiki/history/` and removed from the main page.
 
-**When to enforce:** during every maintenance pass via `python scripts/recent_changes_cap.py`. The script identifies violating pages and marks exactly which entries (oldest, past position 5) need to be spilled.
+**When to enforce:** during every maintenance pass via `python3 scripts/recent_changes_cap.py`. The script identifies violating pages and marks exactly which entries (oldest, past the cap) need to be spilled.
 
 **How to spill (after the script identifies violators):**
 
@@ -101,9 +102,10 @@ Steps, in order:
 1. Run `python scripts/lint_all.py` — mechanical hygiene (orphans, broken links, tag compliance)
 2. Run `python scripts/index_check.py` — index completeness
 3. Run `python scripts/source_orphans.py` — unreferenced source files and broken source refs
-4. Run `python scripts/recent_changes_cap.py` — list pages over the 5-entry cap and which entries need spilling
-5. Check the podcast block split (word counts, any block over 15K words?)
-6. Report all findings to the user
-7. Wait for user direction before making any changes
+4. Run `python scripts/recent_changes_cap.py` — list pages over the Recent-changes cap and which entries need spilling
+5. Run `python3 scripts/page_length.py` — list pages over their body ceiling and pages showing split triggers (flat sections, month-named headings, over-long state-of bullets); propose splits per AGENTS.md → "Page length and splitting", do not split unprompted
+6. Check the podcast block split (word counts, any block over 15K words?)
+7. Report all findings to the user
+8. Wait for user direction before making any changes
 
 Do not run semantic lint as part of a routine maintenance pass unless explicitly requested.

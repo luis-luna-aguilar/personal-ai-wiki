@@ -14,7 +14,8 @@ This source summary groups a small March cluster on practical AI adoption outsid
 
 ## Influenced pages
 
-- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — adds Main Street targeting, outcome-over-usage guidance, and a stronger trust/adoption caveat
+- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — adds Main Street targeting and outcome-over-usage guidance
+- [AI adoption: evidence from practice](../../training/ai-adoption-evidence.md) — the Boulton and Watt receptionist-pilot trust/adoption caveat
 
 ## Key claims extracted
 

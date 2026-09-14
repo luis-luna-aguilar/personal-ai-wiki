@@ -11,16 +11,11 @@ sources: [trace-agent-improvement-loop, langchain-better-harness, cursor-bugbot-
 
 A workflow for improving AI agents by studying **execution traces** and feedback signals: records of what the agent actually did during a run, eval results, human review, cost data, and recurring failure patterns. Autoresearch extends this into an outer loop where agents study and maintain the primary agent system itself. The loop is: collect traces, score or review them, identify recurring failure patterns, make targeted changes, validate those changes offline, then redeploy and repeat.
 
-## Current status (as of 2026-04-24)
+## Current status (as of 2026-07-29)
 
-- LangChain frames tracing as the foundation for systematic agent improvement, not just debugging
-- The loop spans both staging and production, with production traces treated as the most valuable source of real failures
-- Online evals, offline evals, and human review are complementary layers
-- The concept is broader than any one vendor, even though the source article is product-adjacent
-- LangChain's Better-Harness (open-sourced 2026-04-10) automates the loop: sources evals, splits optimization/holdout sets, iteratively diagnoses failures from traces, and proposes targeted harness changes with overfitting guards
-- Cursor's Bugbot provides a product example of the same pattern: reactions, replies, and reviewer comments become candidate rules that are promoted or disabled based on later production signal
+- LangChain frames tracing as the foundation for systematic agent improvement, not just debugging; the loop spans staging and production, with online evals, offline evals, and human review as complementary layers — see the dedicated sections below for LangChain's Better-Harness, Cursor's Bugbot, and LangSmith Engine as concrete implementations
 - Autoresearch treats the agent system itself as the research subject: agents inspect traces, failures, eval results, human feedback, and cost signals to propose improvements under governance controls
-- **Cross-product example (July 2026):** Cline reported that Kimi K3 (an external open-weight model, not Cline's own) spent 17 hours recursively improving Cline's own coding-agent harness — raising Terminal-Bench performance from 77.5% to 88.8% while cutting the run's cost from $79 to $49.8. A concrete instance of the autoresearch pattern applied by one product's agent to a different product's harness, not just self-improvement in isolation.
+- **Cross-product example (July 2026):** Cline reported that Kimi K3 (an external open-weight model, not Cline's own) spent 17 hours recursively improving Cline's own coding-agent harness — raising Terminal-Bench performance from 77.5% to 88.8% while cutting the run's cost from $79 to $49.8 — a concrete instance of the autoresearch pattern applied by one product's agent to a different product's harness
 
 ## The loop
 
@@ -74,7 +69,7 @@ LangChain's LangSmith Engine (launched May 2026 at Interrupt) shows the improvem
 
 The loop closes without requiring a human to manually review traces and hypothesize causes — the system surfaces the hypotheses automatically for human confirmation.
 
-SmithDB underpins this: a database built specifically for nested, long-running agent traces with large payloads. Built on Apache DataFusion and Vortex, it claims 12–15× faster access on key agent-trace workloads compared to general-purpose databases. The architectural bet is that agent traces are a different workload shape from application logs — nested structure, large payloads, and queries that follow the parent→child trace hierarchy rather than time-range scans.
+SmithDB underpins this: a database purpose-built for nested, long-running agent traces with large payloads (Apache DataFusion + Vortex), claiming 12–15× faster access than general-purpose databases on that workload shape — nested structure and parent→child queries rather than time-range scans.
 
 ## Trace-to-memory feedback
 
@@ -103,19 +98,12 @@ An eval suite that is not actively maintained will betray you. If you run the sa
 
 **Four practices that prevent eval rot:**
 
-**1. Continuous trace mining.** Once an agent is deployed, even in shadow mode, monitor production logs actively. When a user reports a bad response, or when the agent triggers an error, extract that execution trace, anonymize it, and convert it into a new test case. Production failures are more valuable than synthetic cases because they reflect real failure modes, not imagined ones.
+1. **Continuous trace mining.** Monitor production logs (even in shadow mode); when a user reports a bad response or the agent errors, extract, anonymize, and convert that trace into a new test case, with synthetic variations so the agent learns the underlying principle rather than the exact incident. Production failures beat synthetic cases because they reflect real failure modes.
+2. **Hidden holdout sets.** Keep a separate blind set the development team cannot see during normal work, tested periodically for an unbiased read on generalization — otherwise you're measuring memorization. Applies both ways: no holdout leakage into training data, and no peeking when writing new cases.
+3. **Periodic refresh.** APIs, policies, and ticket formats change; eval cases built against deprecated documentation falsely penalize a correct agent. Review weekly for fast-moving surfaces, monthly at minimum for stable ones.
+4. **Retiring stale tests.** A test at 100% pass rate across many updates is measuring something already mastered — archive it and redirect compute toward edge cases and new failure modes.
 
-When a production incident occurs, for example an agent approving an action that violated policy, that incident should yield a regression test. Generate synthetic variations of the failing interaction so the agent learns the underlying principle, not just the exact case.
-
-**2. Hidden holdout sets.** Maintain a separate set of eval cases that the development team cannot see during normal work. Periodically test against this blind holdout to get an unbiased measure of generalization. If you only test on cases developers have already seen, you are measuring memorization, not capability.
-
-This applies in both directions: do not let holdout cases leak into training data, and do not let eval designers inspect them when writing new cases.
-
-**3. Periodic refresh.** The environment changes. APIs update. Company policies change. Support ticket formats shift. Eval cases built against deprecated documentation will falsely penalize a correct agent. Review and update cases regularly: weekly for fast-moving agent surfaces, monthly at minimum for stable ones.
-
-**4. Retiring stale tests.** A test that achieves a 100% pass rate across many consecutive updates is no longer providing much signal. It is measuring something the agent has already mastered. Archive it and redirect compute toward edge cases and new failure modes instead.
-
-**The meta-rule:** treat the eval suite as a product, not a one-time artifact. It has a maintenance burden, it goes stale, and it needs active curation to stay useful.
+**The meta-rule:** treat the eval suite as a product, not a one-time artifact — it has a maintenance burden, it goes stale, and it needs active curation to stay useful.
 
 ## Caveats
 

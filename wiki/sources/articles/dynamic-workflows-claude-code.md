@@ -16,7 +16,7 @@ Anthropic announces dynamic workflows in Claude Code (research preview): Claude 
 ## Influenced pages
 - [Claude Code](../../tools/claude-code.md) — new `## Dynamic workflows` section, recent-change entry
 - [State of Coding](../../state-of/coding.md) — extended Claude Code leader line, recent-change entry
-- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — added to "Where these patterns surfaced"
+- [Multi-agent coordination](../../workflows/multi-agent-coordination.md) — added to "Where these patterns surfaced"
 
 ## Key claims extracted
 - Dynamic workflows: Claude dynamically writes orchestration scripts running tens-to-hundreds of parallel subagents in a single session → plan → split → parallel fan-out → verify before merge → iterate to convergence.

@@ -1,5 +1,9 @@
 # Agents Reshape Organizations — History
 
+## Archived from current page on 2026-09-09
+
+- [2026-03-04] OpenClaw cluster provided an early concrete signal of AI-native organizational behavior: named personal agents in shared channels, agent-to-agent coordination, and humans supervising many agents as if they were teammates
+
 ## Archived from current page on 2026-05-19
 
 - [2026-04-21] Added McKinsey (2026) as the strongest third-party signal yet: 80%+ no bottom-line ROI, workflow redesign named as the blocker, "above the loop" distinction introduced

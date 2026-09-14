@@ -16,7 +16,7 @@ Kieran Klaassen updates compound engineering from a four-step engineering loop i
 ## Influenced pages
 
 - [AI-native product building](../../training/ai-native-product-building.md) - updated loop and polish guidance
-- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) - compound engineering loop pattern
+- [Agent loop design](../../workflows/agent-loop-design.md) - compound engineering loop pattern
 
 ## Key claims extracted
 

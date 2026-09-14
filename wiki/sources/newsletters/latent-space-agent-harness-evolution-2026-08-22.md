@@ -15,7 +15,7 @@ A Latent Space essay arguing model and harness capability co-evolve in a train �
 
 ## Influenced pages
 
-- [Harness (agent)](../../concepts/harness.md) — new co-evolution section, "attention interface" thesis
+- [Harness vs model](../../concepts/harness-vs-model.md) — co-evolution section, "attention interface" thesis
 
 ## Key claims extracted
 

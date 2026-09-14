@@ -2,6 +2,11 @@
 
 Older recent-change entries spilled from [Claude Code](../../tools/claude-code.md).
 
+## Archived from current page on 2026-09-09
+
+- [2026-05-19] Paid plan limits doubled following the SpaceX/Colossus 1 compute deal (220K+ NVIDIA GPUs)
+- [2026-05-19] Claude Console added prompt cache diagnostics (hit/miss rates per session) for debugging context reuse and cost in multi-agent setups
+
 ## Archived from current page on 2026-09-07
 
 - [2026-05-18] Anthropic engineering best practices: context window as #1 constraint; verification-criteria pattern; explore-plan-code workflow (plan mode + Ctrl+G); Chrome extension for UI screenshot verification

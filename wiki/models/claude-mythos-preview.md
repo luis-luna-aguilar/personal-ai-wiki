@@ -22,7 +22,7 @@ Anthropic's restricted-preview frontier model, demonstrated through Project Glas
 - Substantially outperforms Claude Opus 4.6 on the CyberGym benchmark
 - **Program-wide results (May 2026):** Anthropic said Project Glasswing and its partners found more than 10,000 high- or critical-severity vulnerabilities in essential software within a month of the program's launch; per AINews' recap of the post, Anthropic framed this as a warning that the industry will need to adapt to the volume of findings a model at Mythos's capability level can produce.
 
-## METR long-horizon benchmark (May 2026)
+## METR long-horizon benchmark results
 
 METR's time-horizon task benchmark measures how reliably an AI model can complete tasks that METR rates by how long an equivalent task would take a human software engineer.
 
@@ -31,7 +31,7 @@ METR's time-horizon task benchmark measures how reliably an AI model can complet
 - **Nearest competitor: Gemini 3.1 Pro at ~1.5 human-hours** at the 80% threshold
 - **Duration is a difficulty proxy** — METR cautions that the "hours" metric measures task complexity, not literal wall-clock time; AI agents complete these tasks faster than the human baseline
 
-## Cloudflare Project Glasswing operational findings (May 2026)
+## Cloudflare Project Glasswing operational findings
 
 Cloudflare red-teamed 50+ of their own repositories with Mythos Preview. Key observations:
 
@@ -42,7 +42,7 @@ Cloudflare red-teamed 50+ of their own repositories with Mythos Preview. Key obs
 
 Cloudflare's architectural takeaway: "Patching faster is not the answer." Defenses-in-front, component isolation, and simultaneous rollout matter more than compressing the patch cycle.
 
-## Apple M5 MIE bypass (May 2026)
+## Apple M5 MIE bypass
 
 - Calif research team (Vietnam) used Mythos Preview to defeat Apple's Memory Integrity Enforcement (MIE) — Apple's strongest-ever hardware security layer, first shipped on M5
 - Timeline: under 5 days from start to first public kernel memory corruption exploit on M5 silicon

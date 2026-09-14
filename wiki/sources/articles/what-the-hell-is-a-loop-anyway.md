@@ -15,7 +15,7 @@ Aparna Dhinakaran, with Seldo, argues that AI engineering discourse is using "lo
 
 ## Influenced pages
 
-- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — adds a clearer loop taxonomy, Ralph task-loop pattern, oversight-loop framing, and pipeline-vs-loop distinction.
+- [Agent loop design](../../workflows/agent-loop-design.md) — adds a clearer loop taxonomy, Ralph task-loop pattern, oversight-loop framing, and pipeline-vs-loop distinction.
 
 ## Key claims extracted
 

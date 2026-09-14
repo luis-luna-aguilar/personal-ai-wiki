@@ -16,6 +16,7 @@ Andy Matuschak describes two agent-use modes that seem to make heavy users happi
 ## Influenced pages
 
 - [AI delegation management](../../training/ai-delegation-management.md) - adds loop tempo guidance.
+- [Agent loop design](../../workflows/agent-loop-design.md) - loop-tempo-selection pattern
 - [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) - adds partial-control loop failure mode.
 
 ## Key claims extracted

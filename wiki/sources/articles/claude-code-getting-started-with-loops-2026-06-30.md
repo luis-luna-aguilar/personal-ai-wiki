@@ -16,7 +16,8 @@ Anthropic's Claude Code team defines agentic loops as agents repeating cycles of
 ## Influenced pages
 
 - [Claude Code](../../tools/claude-code.md) - official loop taxonomy and token-management guidance
-- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) - loop taxonomy, stop criteria, and cost-aware loop primitives
+- [Agent loop design](../../workflows/agent-loop-design.md) - loop taxonomy and stop criteria
+- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) - cost-aware loop primitives
 - [State of Coding](../../state-of/coding.md) - recent-change note for Claude Code's loop taxonomy
 
 ## Key claims extracted

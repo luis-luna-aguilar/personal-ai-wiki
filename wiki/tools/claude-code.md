@@ -5,45 +5,21 @@ domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: [anthropic, cli, agentic]
 as_of: 2026-08-08
-sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, anthropic-claude-code-best-practices-2026-05, claude-code-fast-mode-default-2026-05, dynamic-workflows-claude-code, claude-code-getting-started-with-loops-2026-06-30, codex-general-work-agents-2026-07, ainews-opus-48-dynamic-workflows-2026-05, every-claude-dynamic-workflows-reliability-2026-06, claude-code-design-sync-2026-07, claude-sonnet-5-official-2026-06-30, every-urge-to-merge-2026-07-14, thecode-claude-code-effort-levels-2026-07-17, zawinskis-law-multiagents-2026-08-08]
+sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, anthropic-claude-code-best-practices-2026-05, claude-code-fast-mode-default-2026-05, dynamic-workflows-claude-code, claude-code-getting-started-with-loops-2026-06-30, codex-general-work-agents-2026-07, ainews-opus-48-dynamic-workflows-2026-05, every-claude-dynamic-workflows-reliability-2026-06, claude-code-design-sync-2026-07, claude-sonnet-5-official-2026-06-30, every-urge-to-merge-2026-07-14, thecode-claude-code-effort-levels-2026-07-17, zawinskis-law-multiagents-2026-08-08, every-copilot-studio-microsoft-2026-08-03]
 ---
 
 # Claude Code
 
 Anthropic's terminal-first AI coding agent. Runs in the shell, operates autonomously on files, shell commands, and tool calls, and is expanding toward supervised multi-session workflows; users increasingly treat it as a general-purpose agent harness for product, research, and operational work when those workflows can be represented as files, commands, skills, and review artifacts.
 
-## Current status (as of 2026-07-14)
+## Current status (as of 2026-08-08)
 
-- Terminal CLI agent with persistent project context via `CLAUDE.md`
-- Late-February expanded Claude Code's persistence story further: auto-memory writes project-local `MEMORY.md` plus topic files, while Boris Cherny previewed `/batch` and `/simplify` as built-in commands for parallel migrations and post-change cleanup
-- Auto-memory improved project-local recall, but the broader source cycle also introduced the counterpoint that persistent context can decay through stale preferences and contradictory accumulated instructions if it is not inspectable and prunable
-- Early March introduced two practical automation primitives before the later routines/platform push: local scheduled tasks on desktop and `/loop`, a recurring-prompt command that could keep watching PRs, Slack notifications, or other long-running work for up to three days
-- Supports subagents, hooks, and background/event-driven flows
-- March 2026 already hinted at the later supervision direction: Code Review introduced a managed multi-agent PR-review system on Anthropic infrastructure, while `/btw` enabled side-chain conversations during active work instead of forcing users to interrupt the main thread
-- Late-March rollout introduced cloud-following workflows from web/mobile sessions for PR auto-fix and comment-resolution tasks, a useful precursor to the later routines / multi-session-supervision story
-- Claude Code Channels extended that direction: existing sessions could be messaged from Telegram or Discord, making the coding agent reachable from the phone without turning it into a separate product
-- Monitor tool wakes the agent on external events instead of token-expensive polling
-- Recurring tasks, announced alongside Channels, reinforced the shift from one-off terminal loops toward repeatable delegated workflows
-- Routines let a workflow run on a schedule, from an API call, or in response to an event on Anthropic's infrastructure
-- One-time scheduling is now available from the CLI and Routines UI via `Schedule -> Once`, extending the existing recurring-work story into delayed single-run tasks
-- The early-April source leak made the product's underlying architecture more legible: layered memory, repo-state awareness, explicit permission modes, and cache-friendly subagent parallelism appear to be core design choices rather than implementation accidents
-- Desktop redesign pushes the product toward multi-session supervision rather than a single terminal loop
-- `/recap`: auto-generates a one-line summary of the last session after 3+ turns of inactivity — triggered only once per gap, never back-to-back, also available on demand via `/recap`
-- `/fewer-permission-prompts` skill (Boris Cherny): scans session history to identify safe bash and MCP commands that repeatedly trigger permission prompts, then produces an allowlist to approve them once permanently; best run after a few days of work so there's enough history to pull from
-
-- Paid plan limits doubled (May 2026) following SpaceX/Colossus 1 compute deal (220K+ NVIDIA GPUs)
-- Built-in `--worktree` flag: run `claude --worktree` to give each Claude Code session its own isolated git worktree, enabling multiple agents to work in parallel without interfering with each other's file changes; Boris Cherny (Claude Code creator) announced; Matt Pocock calls it "my new default"
-- `/autofix-pr` now triggerable from CLI: run `/autofix-pr` after finishing a PR, and it sends your session to the cloud so the PR autofixer has full context to address CI failures and reviewer comments
-- Remote Control: `claude remote-control` spawns a new local Claude Code session from the mobile app (available on Max, Team, and Enterprise plans at version ≥2.1.74); lets you kick off sessions from your phone
-- `/goal` command (May 2026, research preview): set a target (e.g. "pass all tests in this folder") and Claude loops autonomously until an evaluator model confirms it is met — analogous to the `/goals` command OpenAI added to Codex; the first native long-horizon success-criterion primitive in Claude Code
-- Fast mode (introduced May 2026 as an Opus 4.7 research preview) has moved with the platform's model lineup since Opus 4.7 was superseded: Claude Sonnet 5 (Anthropic's most agentic Sonnet model) became available in Claude Code and via the API on 2026-06-30, alongside Claude Fable 5 (restored 2026-07-02 after a brief export-control suspension, with some cyber/bio/chem requests routed to Opus 4.8) and Opus 4.8 itself
-- Claude Console prompt cache diagnostics (May 2026): developers can now see cache hit/miss rates for their Claude Code sessions in Claude Console; useful for debugging context reuse and cost efficiency in multi-agent setups
-- Agent View (research preview, Claude Code v2.1.139+): `claude agents` opens one terminal screen for dispatching and supervising background Claude Code sessions. Sessions are grouped by state, can be peeked/replied to without opening the full transcript, attached/detached for full conversation, and launched from Agent View, `/bg`, or `claude --bg`; editable background sessions are isolated in git worktrees under `.claude/worktrees/` when possible.
-- Every's product-management guide adds command-pack examples such as strategy interviews and product-pulse reviews, reinforcing Claude Code as a product workflow surface, not only a code editor.
-- **Countermoves during OpenAI's GPT-5.6/Codex launch week (July 2026):** Anthropic reset Claude's 5-hour and weekly usage allowances, extended Claude Fable 5's promotional access on paid plans three times in ten days (July 7 → 12 → 19) while keeping Claude Code's weekly limits 50% higher than standard throughout the extension, added an in-app browser to Claude Code desktop so it can pull up docs and designs without leaving the terminal, and merged Chat and Cowork into a single "home" tab.
-- `/code-review` now has configurable effort levels: low effort runs one fast pass suitable before every push, high effort spins up sub-agents that verify every individual finding; previously the command ran a single fixed prompt regardless of context. Anthropic says even the lowest tier outperforms rival review tools.
-- **Session-to-session messaging (Aug 2026):** one Claude Code session can hand off a compressed summary to another session running on a different machine, instead of transferring full files or transcript history.
-- **Auto mode becomes the default permission mode** for Pro/Max/Team users: a separate classifier screens shell commands and actions before they execute, reportedly catching 89% of dangerous commands versus 14% for manual approval alone. Bundled alongside: per-session token/cost budgets, automatic loading of repo-level skills at session start, and callable "advisor" models mid-session.
+- Terminal CLI agent with persistent project context via `CLAUDE.md` and project-local auto-memory (`MEMORY.md` plus topic files); most-used AI coding tool at 63% of respondents per Pragmatic Engineer's May 2025–Feb 2026 developer survey
+- Supports subagents, hooks, and background/event-driven flows; `--worktree` gives each session its own isolated git worktree for parallel work
+- Current model lineup: Claude Sonnet 5 and Claude Fable 5 (restored 2026-07-02) alongside Opus 4.8, selectable via fast mode
+- Remote Control (`claude remote-control`) and Agent View (`claude agents`) extend supervision to mobile and multi-session dispatch
+- Auto mode is now the default permission mode for Pro/Max/Team, backed by a classifier plus per-session budgets and mid-session advisor models (see Recent changes)
+- Dedicated subsystems below cover the rest: Monitor (event-driven wake), Routines (scheduled/hosted workflows), Dynamic workflows (parallel orchestration), and `/ultrareview` (cloud multi-agent review)
 
 ## Monitor tool
 
@@ -69,11 +45,10 @@ Dynamic workflows (research preview, announced 2026-05-28) let Claude **dynamica
 - **Higher cost** — consumes substantially more tokens than a typical session; the first time a workflow triggers, Claude Code shows what is about to run and asks for confirmation. Org admins can disable workflows via managed settings.
 - **Availability** — research preview in the Claude Code CLI, Desktop, and VS Code extension, and on the Claude API, Amazon Bedrock, Vertex AI, and Microsoft Foundry. On by default for Max and Team (and the API); off by default for Enterprise at launch (admin can enable in settings).
 
-- **Reliability pattern:** Every's June 18 case study frames Dynamic Workflows as the productized version of manually coordinating a lead agent plus reviewer subagents through local files. Instead of hoping a prompt will reliably create multiple reviewers, Claude writes an orchestration script that instantiates the subagents and verification steps each time.
-- **Design-to-code use case:** Every describes using Dynamic Workflows to split a large Figma redesign into 11 sections, assign dedicated subagents, extract assets/details, generate code, and compare outputs to the source design.
-- **Claude Design sync:** Claude Code and Claude Design now sync both directions through `/design-sync`: pull a design system into the repo, build against existing components, or push built work back into a Claude Design canvas.
+- **Reliability pattern:** Every's June 18 case study frames Dynamic Workflows as the productized version of manually coordinating a lead agent plus reviewer subagents — Claude writes an orchestration script that instantiates subagents and verification steps instead of hoping a prompt reproduces that structure. Every also used it to split a large Figma redesign into 11 sections across dedicated subagents (extract, generate, compare to source).
+- **Claude Design sync:** Claude Code and Claude Design now sync both directions through `/design-sync` — pull a design system into the repo, or push built work back into a Claude Design canvas.
 
-**Flagship example — Bun rewrite:** Jarred Sumner used dynamic workflows to port Bun from Zig to Rust — ~750,000 lines of Rust, 99.8% of the existing test suite passing, eleven days from first commit to merge. One workflow mapped the correct Rust lifetime for every struct field; the next wrote each `.rs` file as a behavior-identical port of its `.zig` counterpart (hundreds of agents in parallel, two reviewers per file); a fix loop drove the build and test suite until clean; an overnight workflow removed unnecessary data copies and opened a PR per fix for review. (Not yet in production.)
+**Flagship example — Bun rewrite:** Jarred Sumner used dynamic workflows to port Bun from Zig to Rust (~750,000 lines, 99.8% of the test suite passing, 11 days first-commit-to-merge): one workflow mapped Rust lifetimes per struct field, the next ported each file with hundreds of parallel agents and two reviewers each, then a fix loop and an overnight cleanup pass closed it out. (Not yet in production.)
 
 ## Loop taxonomy
 
@@ -90,7 +65,7 @@ The practical guidance is conservative: start with the simplest loop, define exp
 
 For code quality, Anthropic recommends encoding verification steps as skills, keeping project conventions clean, making docs easy to reach, and using a second agent or `/code-review` skill for review rather than letting the generator fully evaluate its own work.
 
-## Best practices (Anthropic engineering, May 2026)
+## Best practices (Anthropic engineering)
 
 **Context window management**
 - Context window is the #1 resource; performance degrades as it fills; the custom status line tracks context usage for exactly this reason
@@ -121,14 +96,7 @@ Cloud multi-agent code review, introduced in v2.1.86 as a research preview. Unli
 - Requires authentication with a Claude.ai account — not available with API key only, and not available on Amazon Bedrock, Google Cloud Vertex AI, or Microsoft Foundry
 - Not available to organizations with Zero Data Retention enabled
 
-**Pricing:**
-| Plan | Included free runs | After free runs |
-| --- | --- | --- |
-| Pro | 3 free through May 5, 2026 | billed as extra usage |
-| Max | 3 free through May 5, 2026 | billed as extra usage |
-| Team and Enterprise | none | billed as extra usage |
-
-Paid reviews typically cost $5–$20 depending on change size. Extra usage must be enabled on the account before launching a paid review; run `/extra-usage` to check or enable it. Use `/tasks` to monitor or stop a running review.
+**Pricing:** billed as extra usage, typically $5–$20 per run depending on change size; enable it via `/extra-usage`. Pro and Max got 3 free runs through May 5, 2026; Team and Enterprise never had a free tier. Use `/tasks` to monitor or stop a running review.
 
 Use `/review` for fast feedback while iterating. Use `/ultrareview` before merging a substantial change when you want a deeper pass with independent verification.
 
@@ -147,6 +115,7 @@ That matters because it shifts the product story away from "Anthropic has a stro
 
 ## Weaknesses / caveats
 
+- Persistent context (auto-memory, `CLAUDE.md`) can decay through stale preferences and contradictory accumulated instructions if it is not inspectable and prunable
 - Requires comfort with CLI workflows
 - Product surface is broadening beyond a single terminal loop, so the clearest long-term interaction model is still evolving
 - As Claude Code broadens into goals, background sessions, remote control, worktrees, and product-management workflows, the product is increasingly a workflow container; the risk is surface sprawl unless teams standardize commands, skills, and review habits.
@@ -193,3 +162,4 @@ That matters because it shifts the product story away from "Anthropic has a stro
 - [Every — The Urge to Merge (ChatGPT and Codex)](../sources/newsletters/every-urge-to-merge-2026-07-14.md)
 - [The Code — Moonshot drops Kimi K3, Claude Code ships effort levels for /code-review](../sources/newsletters/thecode-claude-code-effort-levels-2026-07-17.md)
 - [AINews — Zawinski's Law of MultiAgents](../sources/newsletters/zawinskis-law-multiagents-2026-08-08.md)
+- [Every — The Best AI Agent Builder Is Trapped Inside Microsoft](../sources/newsletters/every-copilot-studio-microsoft-2026-08-03.md)

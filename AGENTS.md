@@ -75,6 +75,17 @@ Four files in `wiki/_schema/` define the valid terms:
 - To add a new one, propose it explicitly in a proposal file: *"I'd like to add a new subcategory `terminal-coding-agent` — approve?"*. The user approves by checking the box; you then update the schema file as part of applying the proposal.
 - `scripts/tag_compliance.py` enforces this — run it when asked.
 
+### Terminology discipline (concept clusters)
+
+Sources coin terms faster than the field settles them, and several different things get the same name ("second brain", "company brain", "knowledge base", "world model"). The wiki does not record every coinage as a concept. Rules:
+
+- **Hub pages own the vocabulary of a cluster.** Where several concept pages describe overlapping ideas, one hub page holds the disambiguation: a matrix of the axes that separate the ideas, one canonical page per cell, and a table mapping every term seen in sources to its canonical page. The first hub is [`concepts/knowledge-architectures.md`](wiki/concepts/knowledge-architectures.md) for the knowledge, memory, brain, ontology, and semantic-layer cluster. Create a hub only when three or more concept pages overlap; propose it like any new page.
+- **Map before you create.** When a source uses a term in a cluster that has a hub, find the term in the hub's mapping table before proposing a page, tag, or subcategory. If the term is an alias, update the canonical page and add the alias to its `## Also called` line. If the term is a new cell in the matrix, the proposal must add the row to the hub in the same change. Never leave a term unmapped.
+- **`## Also called` is the alias list.** Canonical pages in a cluster carry a one-line `## Also called` section directly under the definition paragraph, listing the aliases sources use and, where an alias narrows scope, the scope in parentheses ("second brain (personal scope)"). Aliases never get their own page.
+- **Pairwise "this vs that" sentences are not a substitute for the hub.** A `## Related` line may say how two pages differ, but it must agree with the hub. When a Related line and the hub disagree, the hub wins and the Related line is fixed.
+- **Vendor framings are recorded as such.** When a vendor names its product with a term the wiki already uses for something else ("enterprise world model" for a knowledge graph), the tool page says "marketed as", the hub keeps the term pinned to its established sense, and the vendor sense is listed as a marketing alias, not a new meaning.
+- **One tag for the cluster.** Pages in a hub's cluster carry the cluster tag (`knowledge-cluster` for the first hub) so the cluster can be listed with one grep.
+
 ## Frontmatter schema
 
 Every wiki page has YAML frontmatter:
@@ -224,7 +235,29 @@ Training pages (`wiki/training/*.md`) capture practical guidance for helping tea
 
 ### Recent changes cap
 
-The "Recent changes" section is capped at `config.yml → history.recent_changes_cap` (default 5). When a 6th entry arrives, append the oldest one to the corresponding file under `wiki/history/` (create the file if it doesn't exist) and drop it from the main page.
+The "Recent changes" section is capped at `config.yml → history.recent_changes_cap` (currently 10). When an entry pushes the list past the cap, append the oldest one to the corresponding file under `wiki/history/` (create the file if it doesn't exist) and drop it from the main page.
+
+### Page length and splitting
+
+The word targets above (150–300 words for routine pages) are writing targets. `config.yml → page_length` holds the **ceilings** that `scripts/page_length.py` lints against. A page is not too long because of its total word count; it is too long when its length hides in one undifferentiated section. Any one of these triggers means the page should be proposed for a split or a restructure, not extended further:
+
+1. **A flat section.** One `##` section above `flat_section_max_words` (800) with no `###` subheads. First add subheads. If the subheads read as independent topics, each becomes its own page.
+2. **A heading that names a batch, not an idea.** A `##`/`###` heading containing a month-and-year ("(August 2026)") or the word "cluster" is an ingest bucket that was never merged into the page's structure. Fold its content into the right conceptual section, or split it out. The schema-mandated `(as of YYYY-MM-DD)` stamp is not a trigger.
+3. **Two Recent-changes streams.** When entries alternate between unrelated subjects, the page is two pages.
+4. **A state-of leader bullet longer than about two lines** (`state_of_bullet_max_chars`). Move the detail to the entity page and leave a one-line pointer.
+5. **The body ceiling for the page's type** (`body_word_ceiling`): concept/trend 1,200; tool/model/benchmark 1,500; workflow and state-of 2,000; training 2,500. Body words exclude frontmatter, Recent changes, Sources, Related, and See also.
+6. **A training page that covers more than one function or audience.** Cut along the "function-specific training guidance" page shape: one page per function or audience.
+
+**How to split (the procedure the two precedents settled on — `concepts/mcp` → `concepts/company-brain`, `trends/ai-in-science` → `trends/ai-in-mathematics`):**
+
+- Splits go through a proposal like any other wiki change, unless the user asks for the split directly.
+- The new page gets its own frontmatter, with `as_of` set to the newest source-backed claim that moved, and `sources:` limited to the sources that back the moved content.
+- The origin page keeps a one-paragraph pointer where the content used to be, recomputes its `as_of` from the content that remains, and gets a Recent-changes entry naming the split. Recent-changes entries about the moved content move with it (spill the origin page's cap from the live list afterwards, as usual).
+- Every source page whose Influenced-pages list named the origin page for the moved content is re-pointed to the new page.
+- `wiki/index.md` gains the new page and its count moves; state-of pages that listed the origin page are checked for lines that should now point at the new page.
+- Run `scripts/link_check.py` and `scripts/page_length.py` on both pages before reporting done.
+
+`"check page length"` / `"split candidates"` runs the lint. The script reports; it never splits. Splitting is a judgment call the user makes from the report or from a proposal's Open questions.
 
 ### Sources pages
 
@@ -668,6 +701,7 @@ All maintenance operations are defined in [`MAINTENANCE.md`](./MAINTENANCE.md). 
 - `"check index"` / `"index check"` → `python scripts/index_check.py`
 - `"check source orphans"` → `python scripts/source_orphans.py`
 - `"check cap"` / `"recent changes cap"` → `python scripts/recent_changes_cap.py`
+- `"check page length"` / `"split candidates"` → `python3 scripts/page_length.py`
 - `"build podcast files"` / `"rebuild podcast"` → `bash scripts/build_podcast.sh all`
 - `"run maintenance"` / `"do a maintenance pass"` → follow the full pass procedure in `MAINTENANCE.md`
 
@@ -718,6 +752,8 @@ Once out of bootstrap:
 4. **Never create a page per source.** Sources get a tiny summary in `wiki/sources/<type>/`. They drive updates to conceptual pages; they are not conceptual pages themselves.
 5. **Vocabulary is controlled.** Pick from `wiki/_schema/`. New tags/domains/subcategories require explicit approval in a proposal.
 6. **Subcategories can have multiple top players.** Do not force single winners.
+7. **Terms map to hubs before they become pages.** If the source's term belongs to a cluster with a hub page, look it up in the hub's mapping table first (see "Terminology discipline" above). Aliases update the canonical page; only a new cell in the hub's matrix justifies a new page.
+8. **Length is a split trigger, not a reason to summarize harder.** When an update would push a page past a trigger in "Page length and splitting", the proposal says so in Open questions and offers the split rather than compressing the new content to fit.
 
 ## Things you must NOT do
 

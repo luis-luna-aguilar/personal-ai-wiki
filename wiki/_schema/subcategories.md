@@ -6,7 +6,7 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
-Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`, `agent-sandbox-infra`, `coding-discipline-skill`
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`, `agent-sandbox-infra`, `coding-discipline-skill`, `knowledge-platform`
 
 ### spec-driven-development
 - **Parent domain(s):** coding
@@ -103,6 +103,12 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Applies to types:** tool
 - **Definition:** Document editors and shared writing surfaces built for humans and agents to draft, revise, comment, and maintain the same working artifacts.
 - **Examples:** [Proof](../tools/proof.md)
+
+### knowledge-platform
+- **Parent domain(s):** agents
+- **Applies to types:** tool
+- **Definition:** Products whose core job is to build, govern, or serve persistent knowledge or memory for agents and people: compiled knowledge layers and LLM wikis, agent memory stores, company-brain platforms, semantic layers over business data, and ontology or knowledge-graph engines. The tool page says which cell of the [Knowledge architectures](../concepts/knowledge-architectures.md) matrix the product occupies. Distinct from `agent-toolkits` (platform docs packaged for coding tools) and `agent-native-documents` (shared editing surfaces).
+- **Examples:** [OpenWiki](../tools/openwiki.md), [Utopia](../tools/utopia.md)
 
 ### autonomous-research-agent
 - **Parent domain(s):** agents

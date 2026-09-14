@@ -15,7 +15,8 @@ Three converging sources crystallized a design paradigm: the right unit of AI wo
 ## Influenced pages
 
 - [AI-native product building](../../training/ai-native-product-building.md) — Hoop case study, loop-first principle
-- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — loop-first, tool clarity, deploy-where-users-work patterns
+- [Agent loop design](../../workflows/agent-loop-design.md) — loop-first pattern
+- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — tool clarity, deploy-where-users-work patterns
 
 ## Key claims extracted
 

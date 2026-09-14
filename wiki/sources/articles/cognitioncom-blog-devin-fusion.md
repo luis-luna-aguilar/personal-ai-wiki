@@ -17,7 +17,7 @@ Cognition introduces Devin Fusion, a multi-model "sidekick" harness: a frontier 
 
 - [Devin](../../tools/devin.md) — Devin Fusion feature detail
 - [FrontierCode](../../benchmarks/frontiercode.md) — new FrontierCode Extended tier scores/costs
-- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — new Sidekick multi-model harness pattern
+- [Multi-agent coordination](../../workflows/multi-agent-coordination.md) — new Sidekick multi-model harness pattern
 - [Advisor strategy](../../workflows/advisor-strategy.md) — contrast with per-call cache-miss cost
 - [State of Coding](../../state-of/coding.md) — Devin added to Terminal coding agent subcategory
 

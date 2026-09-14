@@ -29,7 +29,7 @@ OpenAI's April 2026 frontier model, positioned as "our smartest and most intuiti
 - Scientific-use framing is no longer speculative: launch materials cite benchmark gains plus concrete research-use anecdotes
 - Writing and coding vibe check from Every suggests this is the first OpenAI release in about a year that materially pulls some users back from Claude for daily use
 
-## @Finances personal finance agent (May 2026)
+## @Finances personal finance agent
 
 - Activated with `@Finances` inside any ChatGPT conversation (US Pro only, preview)
 - Connects to 12,000+ financial providers; grounds answers in the user's actual income and spending data

@@ -44,6 +44,39 @@ history:
   recent_changes_cap: 10
 
 # ---------------------------------------------------------------------------
+# Page length and split triggers, used by scripts/page_length.py and by the
+# LLM when deciding whether a page should be split (see AGENTS.md → "Page
+# length and splitting"). These are lint CEILINGS, not writing targets — the
+# writing targets (150–300 words for routine pages) live in AGENTS.md.
+#
+# Body words exclude frontmatter and the sections listed in `exclude_sections`
+# so long source lists and Recent-changes lists do not trip the check.
+# ---------------------------------------------------------------------------
+page_length:
+  body_word_ceiling:
+    concept:   1200
+    trend:     1200
+    model:     1500
+    tool:      1500
+    benchmark: 1500
+    use-case:  1500
+    workflow:  2000
+    state-of:  2000
+    training:  2500
+    default:   1500
+  # A single `##` section above this many words with no `###` subheads is a
+  # flat section: the page's length is hiding in one undifferentiated list.
+  flat_section_max_words: 800
+  # Leader bullets on state-of pages should be one or two lines. Anything
+  # longer is entity detail that belongs on the tool/model page.
+  state_of_bullet_max_chars: 400
+  exclude_sections:
+    - Recent changes
+    - Sources
+    - Related
+    - See also
+
+# ---------------------------------------------------------------------------
 # Staleness script behaviour.
 # ---------------------------------------------------------------------------
 stale:

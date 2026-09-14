@@ -43,7 +43,7 @@ This applies to Agent Labs too: the moat is not just integration depth but the j
 
 The Fable 5 export-control ban (June 2026, resolved 2026-07-02 when Fable returned online) made model neutrality from a preference into a risk management requirement. Agent Labs that had built their harness to work with multiple models were less disrupted. This is Guo's thesis played out in practice: integration depth matters more than which underlying model you use.
 
-## Evidence the shift is accelerating (May 2026)
+## Evidence the shift is accelerating
 
 - OpenAI President Greg Brockman: "the model alone is no longer the product" — AINews calls this a big reversal from a stance held almost uniformly by "Team Big Model" veterans, Brockman included.
 - AI21 shuttered its model team and is pivoting to agents (per AINews).
@@ -59,7 +59,7 @@ The Fable 5 export-control ban (June 2026, resolved 2026-07-02 when Fable return
 
 - [Open-weight momentum broadens](../trends/open-weight-momentum-broadens.md) — carries the model-sovereignty argument (open weights as the practical escape hatch from single-vendor dependence) that this page's "model neutrality becomes rational" point connects to
 - [Harness (agent)](harness.md) — "model neutrality by design" as a concrete harness-architecture principle
-- [Agentic orchestration patterns](../workflows/agentic-orchestration-patterns.md) — where harness-level model routing shows up as an operating pattern
+- [Multi-agent coordination](../workflows/multi-agent-coordination.md) — where harness-level model routing (model-pool routing, the sidekick pattern) shows up as an operating pattern
 
 ## Sources
 

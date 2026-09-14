@@ -29,7 +29,7 @@ Vendor numbers, no independent replication yet.
 
 The Haiku-as-executor result is the most interesting data point: it opens a high-volume / bounded-intelligence niche that previously required a custom orchestrator.
 
-### External replication: Harvey (legal domain, June 2026)
+### External replication: Harvey (legal domain)
 
 Harvey benchmarked the hybrid pattern on legal task completion. Results are Harvey's own evals, not independent:
 
@@ -63,7 +63,7 @@ Harvey benchmarked the hybrid pattern on legal task completion. Results are Harv
 
 ## Contrast with the sidekick pattern (2026-06-29)
 
-Cognition's Devin Fusion critiques per-call escalation tools like this one: querying a second model per call means that model's context isn't shared in a cacheable way, so every advisor invocation pays a full, uncached price. The [sidekick pattern](../workflows/agentic-orchestration-patterns.md) avoids this by running both models as persistent, separately-cached agents for the whole session. The tradeoff: sidekick needs a harness built for two parallel long-running agents, while the advisor tool is a single API primitive addable to an existing single-agent loop.
+Cognition's Devin Fusion critiques per-call escalation tools like this one: querying a second model per call means that model's context isn't shared in a cacheable way, so every advisor invocation pays a full, uncached price. The [sidekick pattern](../workflows/multi-agent-coordination.md) avoids this by running both models as persistent, separately-cached agents for the whole session. The tradeoff: sidekick needs a harness built for two parallel long-running agents, while the advisor tool is a single API primitive addable to an existing single-agent loop.
 
 ## Related
 

@@ -20,7 +20,8 @@ AINews digest covering OpenAI cutting Cursor's model access post-SpaceX-acquisit
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Tencent Hy4-preview, Qwen3.8-Flash
 - [Physical AI deployment curve](../../trends/physical-ai-deployment.md) — Microduck sales figures, simulator design
 - [Harness (agent)](../../concepts/harness.md) — Google's "wiki" skill-evolution paper, agents.md/claude.md fine-tuning, AGY patterns, cloud-resident agent shift
-- [Agent safety and alignment research](../../trends/agent-safety-and-alignment-research.md) — Greenblatt's retrospective, Anthropic automated alignment research, EvoMal paper
+- [Agent safety and alignment research](../../trends/agent-safety-and-alignment-research.md) — Anthropic automated alignment research, EvoMal paper
+- [OpenAI–Hugging Face agentic cyber incident](../../trends/openai-huggingface-cyber-incident.md) — Greenblatt's six-day-investigation retrospective
 - [Perplexity Computer](../../tools/perplexity-computer.md) — Artificial Analysis Search Index, Perplexity Search #1
 
 ## Key claims extracted

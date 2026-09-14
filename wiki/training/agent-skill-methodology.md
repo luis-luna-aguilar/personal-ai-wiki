@@ -21,6 +21,8 @@ The core problem: skills written as long procedures become stale, redundant, or 
 
 ## Proven patterns
 
+### Authoring the skill
+
 **1. Write test cases before writing the skill**
 Write 5-10 test cases before writing the skill body. Include:
 - Positive cases: requests that should invoke this skill
@@ -42,12 +44,16 @@ The model usually knows how to draft, summarize, search, and ask follow-up quest
 When the agent fails in production, add the lesson directly to the skill file. This turns each failure into durable training material.
 - Example: "Do not offer account credits when the customer is asking for a legal or compliance exception. Escalate those cases."
 
+### Keeping it lean
+
 **5. Cut every line the agent would get right without it**
 Before shipping, delete every instruction the model would probably follow on its own. Extra lines add noise and make failures harder to diagnose.
 - Test: would a careful teammate reading this think "of course"? Cut it.
 
 **6. Use progressive disclosure for references**
 Keep the trigger and core principle small; link deeper references, examples, schemas, and tool docs so they load only when the skill is invoked.
+
+### Maintaining the library
 
 **7. Regression-test skills after model changes**
 When a team switches default models, run the skill's positive and negative cases again. A skill that helped one model may be redundant, harmful, or under-specified for the next.
@@ -57,6 +63,8 @@ When reviewing an existing skill library, sort every skill into one of three buc
 - **Keep** — skills that supply private context, custom tool access, personal taste, or a specific company workflow the model has no way to know on its own.
 - **Retest** — skills that exist to compensate for a general model weakness or quirk; these have a shelf life as models improve, and may already be doing nothing or actively hurting on the current model.
 - **Retire** — skills that don't demonstrably improve results when tested with and without them (a favorite AI agent can run the comparison directly).
+
+### Planning and personal workflows
 
 **9. Split planning into a persistent map and per-session tickets for open-ended work**
 When a project's end state isn't fully knowable up front (Matt Pocock calls this "the fog of war"), don't try to plan it in one session. Keep one persistent "map" document holding every decision made so far and a rough overview of what else is happening, and give each individual working session only its own scoped "ticket" — a grilling, prototype, research, or task ticket — so a child session isn't overloaded with irrelevant context. Use a single-session planning skill (e.g. "grill me") when the whole task fits in one sitting; switch to a map/ticket split once it doesn't.

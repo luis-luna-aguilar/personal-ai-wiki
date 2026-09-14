@@ -1,8 +1,8 @@
 ---
 title: AI enablement — software development
 type: training
-as_of: 2026-07-16
-sources: [ramp-ai-adoption-playbook, shopify-latent-space-april-2026, lennysan-simonw-interview, agentic-cognitive-overhead, garrytan-gstack-repo, the-code-2026-04-23, qa-tooling-for-software-agents-deep-research, agent-review-artifacts-2026-05-13, agentic-coding-trap-may-2026, ai-stack-fungibility-hashimoto-2026-05, shopify-claude-code-bessemer-2026-05, stanford-labor-june-2026, github-kyle-daigle-june-2026, ainews-june-05-2026, software-factories-fde-2026-07, dashbench-code-review-understanding-2026-07, cognitioncom-blog-ai-productivity, openais-new-model-for-cyber-attacks-2026-07-16, bun-rust-rewrite-2026-07-16]
+as_of: 2026-08-28
+sources: [ramp-ai-adoption-playbook, shopify-latent-space-april-2026, lennysan-simonw-interview, agentic-cognitive-overhead, garrytan-gstack-repo, the-code-2026-04-23, qa-tooling-for-software-agents-deep-research, agent-review-artifacts-2026-05-13, agentic-coding-trap-may-2026, ai-stack-fungibility-hashimoto-2026-05, shopify-claude-code-bessemer-2026-05, stanford-labor-june-2026, github-kyle-daigle-june-2026, ainews-june-05-2026, software-factories-fde-2026-07, dashbench-code-review-understanding-2026-07, cognitioncom-blog-ai-productivity, openais-new-model-for-cyber-attacks-2026-07-16, bun-rust-rewrite-2026-07-16, ubereng-software-factory-2026-08-28]
 ---
 
 # AI enablement — software development
@@ -37,6 +37,7 @@ AI adoption inside engineering teams has moved fastest, but the bottlenecks and 
 - **Explicit permission config as fleet policy.** Shopify deploys a standardized allow/deny list across all Claude Code instances: allow `read`, `write`, `test`, `lint`, `commit`; deny `push`, `deploy`, `drop`, `secrets`. This separates safe local work from risky external actions at the configuration layer, not per-session.
 - **Micro-skills over mega-skills.** GitHub's internal rollout (Kyle Daigle, Build 2026): atomic single-purpose tools beat monolithic "do everything" agents for non-technical employee adoption. Distributed via CLI to 200M+ users spanning engineering and non-engineering roles. The pattern generalizes: narrow tools with clear purpose get adopted faster than broad agents that require workflow understanding.
 - **Forward-deployed workflow engineering.** Agent deployment is workflow engineering, not only tool rollout. The hard work is mapping enterprise systems, permissions, SOPs, tone, release gates, incident paths, and customer-specific context into the agent loop.
+- **Uber's "Software Factory": scale usage by eliminating wasted tokens, not just cutting unit price.** Uber reports more than 70% of its pull requests now attributed to agents, 3,600+ engineer-built agent skills across the SDLC, and 30,000+ skill executions a day. From February to August 2026, weekly active agentic users grew 7x and weekly agentic requests grew 9.4x — while, holding model choice fixed, cost per 1,000 requests fell ~34% from its peak and cost per session fell ~52% from its June peak. Uber's framing: this required eliminating zero-value token consumption (context bloat, redundant tool-call overhead, ungrounded search) rather than just choosing cheaper models or downgrading tooling, and the core strategic lever is moving SDLC workloads from interactive developer sessions into fully managed agents, since managed environments grant complete control over model routing, execution harness, and spend. See [Cost-aware AI task routing](cost-aware-ai-task-routing.md) for the specific optimization levers behind these numbers.
 
 ## Failure modes
 
@@ -53,10 +54,14 @@ AI adoption inside engineering teams has moved fastest, but the bottlenecks and 
 
 ## Evidence from practice
 
+### Company-wide adoption case studies
+
 - Shopify (April 2026, Latent Space podcast, Mikhail Parakhin): near-100% daily active AI tool adoption, with a December 2025 inflection where small model-quality improvements compounded into a phase change rather than a gradual linear improvement. CLI-first tools (Claude Code, Codex, internal River agent) growing faster than IDE tools (Cursor, Copilot). 30% month-on-month PR merge growth has shifted the main bottleneck from code generation to CI/CD, test failures, and deployment rollback
 - Shopify built its own PR review tool because no external tool spends enough compute on expensive models during review — a signal that review quality is the next frontier
 - Shopify's internal systems: Tangle (content-addressed ML workflow engine, dev→prod in one click), Tangent (auto-research agent loop that democratizes ML experimentation to PMs), SimGym (customer simulation on historical data, targeting 0.7 correlation with add-to-cart events as a proxy eval for product changes)
 - Ramp: 84% of employees using coding agents weekly; 1,500+ apps shipped in six weeks by 800+ builders; non-engineers account for 12% of human-initiated PRs — `Dojo` skills marketplace is a key driver of the non-engineer coding adoption
+### Practitioner patterns and critiques
+
 - Garry Tan (YC CEO, April 2026): 3 production services + 40+ features shipped in 60 days part-time while running YC full-time. Measured at 810× his 2013 coding pace by "logical code change" (methodology and reproduction script published in the gstack repo). More than one-third of his PRs are from agents. Open-sourced his Claude Code configuration as [gstack](../tools/gstack.md): 23 slash commands that simulate a virtual team of specialist agents.
 - Simon Willison / Lenny interview (April 2026): November 2025 named as the reliability inflection point — GPT 5.1 and Claude Opus 4.5 crossed a threshold where coding agents went from "mostly works" to "almost always does what you want." Engineers who experimented over the holiday break realized the change. Cloudflare and Shopify each hired 1,000 interns because AI cut ramp-up time from a month to a week.
 - "Dark factory" at StrongDM: policy is nobody writes code, nobody reads code. A swarm of AI-simulated users (fake employees making real-system requests) runs 24/7 at ~$10,000/day in token costs. They built simulated versions of Slack, Jira, and Okta from API docs to test without rate limits. This is the most radical current example of AI-native software development.
@@ -64,11 +69,13 @@ AI adoption inside engineering teams has moved fastest, but the bottlenecks and 
 - "Hoarding things you know how to do": Simon maintains 193 small HTML/JS tools and a separate research repo of coding-agent experiments. When a new problem arrives, he points Claude Code at past projects and says "combine these two approaches." The knowledge base compounds.
 - Lars Faye (May 2026, viral essay): "Agentic Coding is a Trap" — cites an Anthropic study on debugging-skill atrophy (his 47% figure isn't in the actual published study; see [Anti-autopilot review friction](anti-autopilot-review-friction.md) for the verified 50%-vs-67% figure); Willison's "no mental map" confirmation; Faye's prescription: keep implementation, use AI for specs and ad-hoc tasks
 - Airbnb counter-pattern (May 2026): 64% of production PRs shipped with agents using a 15-minute playbook — high AI adoption without the orchestration-only model Faye critiques
+### Scale data and large-scale case studies
+
 - Stanford Digital Economy Lab (June 2026): 25,000-firm study; AI-exposed early-career (22-25) jobs declining 3.8%/yr since 2022; least-exposed jobs growing 2.0%; junior software devs and customer service hardest hit
 - Shopify (May 2026, Bessemer conference, @darkzodchi synthesis): LLM proxy, CLAUDE.md discipline, critique loop, permission config deployed fleet-wide across 23,000 engineers. Reported 20% productivity gain. Strategy-to-execution ratio flipped from 30%/70% (2024) to 70%/30% (2026). Q3 2026 target: 90% autonomous coding.
 - GitHub commit volume (June 2026): 275M AI-generated commits per week in April 2026, on pace for 14B in 2026 vs 1B in 2025. At this scale, CI/CD (GitHub Actions, specifically CPU capacity) is the bottleneck — not model capability or developer willingness.
 - Anthropic internal RSI data (June 2026): The strongest first-party self-reported numbers from a frontier lab. Claude writes 80%+ of Anthropic's merged code commits. Engineers report shipping 8x more code per quarter than pre-Claude. Internal automated task success rate improved from 26% -> 76% over 6 months of harness iteration. Mythos Preview achieved a 52x speedup on a training script optimization task vs. 3x for Claude Opus 4 on the same task. Mythos gave better "next step" suggestions than humans 64% of the time. Caveat: self-reported, no independent verification.
-- Cognition (Devin, July 2026): built an automated system estimating human-engineering-hours-equivalent per completed session, validated against 258 self-reported sessions from 126 users across enterprise customers, reaching `r_log = 0.74` on held-out data — stronger than Anthropic's ticket-text-only approach (0.46) though behind METR's smaller-sample internal study (0.83); deliberately calibrated to underestimate; now running in production with customers. See [Agent evals](../concepts/agent-evals.md) for the full methodology comparison.
+- Cognition (Devin, July 2026): built an automated system estimating human-engineering-hours-equivalent per completed session, validated against 258 self-reported sessions from 126 users across enterprise customers, reaching `r_log = 0.74` on held-out data — stronger than Anthropic's ticket-text-only approach (0.46) though behind METR's smaller-sample internal study (0.83); deliberately calibrated to underestimate; now running in production with customers. See [Economic agent evals](../concepts/economic-agent-evals.md) for the full methodology comparison.
 - Bun's Zig→Rust rewrite (Jarred Sumner, July 2026): a documented large-scale case study in adversarial-review-driven agentic refactoring. One Claude session implemented each change; two more, in fresh context windows with no visibility into the implementer's reasoning, reviewed the diff alone with the sole job of finding reasons it might fail — under a standing rule that a workaround needing a paragraph-long justifying comment is presumptively wrong. A shared porting guide and struct-lifetime table kept agents consistent across the 1,448-file codebase, which Sumner piloted on just 3 files before scaling up; Bun's own TypeScript test suite, unaffected by the underlying language, graded the port from the outside. Peak throughput ~1,300 lines/minute; total cost ~$165,000 in tokens.
 
 ## Hiring AI-native engineers
@@ -99,6 +106,7 @@ The hollow pipeline concern is now data-backed: if the entry-level disappears, t
 
 ## Recent changes
 
+- [2026-08-28] Added Uber's Software Factory adoption numbers (70%+ PRs agent-attributed, 3,600+ agent skills, 30K executions/day, 7x WAU growth) and its core strategic argument: eliminating wasted token consumption, not just cheaper unit prices, is what let usage scale 7x while unit costs fell.
 - [2026-07-16] Corrected the Bun Zig→Rust rewrite figures in the Stack-fungibility bullet (535,496 lines, 11 days, ~$165K in tokens) and added a full case study of its one-implementer/two-adversarial-reviewer methodology, plus a new "Adversarial review" pattern generalizing the technique.
 - [2026-07-14] Added Cognition's production session-productivity estimator (`r_log = 0.74`) as evidence that hours/dollar-denominated AI engineering ROI measurement is moving from research into deployed practice.
 - [2026-07-08] Added AI PR/code-review workflow as a first-class enablement concern: historical PR replay, local review standards, and understanding-preserving review artifacts.
@@ -108,7 +116,6 @@ The hollow pipeline concern is now data-backed: if the entry-level disappears, t
 - [2026-05-19] Shopify fleet patterns (Bessemer): LLM proxy, CLAUDE.md ~60-line cap, explicit allow/deny permission config; 20% productivity gain; strategy-to-execution ratio 70%/30% (was 30%/70%); Q3 target 90% autonomous coding
 - [2026-05-18] Stack fungibility pattern: tech stack choice is now a quarterly project (Bun Zig→Rust in days); "AI psychosis" failure mode: MTTR-only mindset erodes system comprehensibility (Hashimoto)
 - [2026-05-18] Karpathy failure modes: assumption runaway, over-engineering drift, orthogonal side-effects; success-criteria pattern: give agents verifiable done-conditions rather than step-by-step instructions
-- [2026-05-15] Skill atrophy / supervision paradox failure mode added; Airbnb counter-pattern evidence (Lars Faye essay, May 2026)
 
 ## See also
 
@@ -136,3 +143,4 @@ The hollow pipeline concern is now data-backed: if the entry-level disappears, t
 - [Estimating the Productivity of an Autonomous AI Software Engineer](../sources/articles/cognitioncom-blog-ai-productivity.md)
 - [OpenAI's new model for cyber attacks (newsletter digest)](../sources/newsletters/openais-new-model-for-cyber-attacks-2026-07-16.md)
 - [Rewriting Bun in Rust](../sources/articles/bun-rust-rewrite-2026-07-16.md)
+- [Uber Engineering — Running a Software Factory Efficiently at Uber Scale](../sources/tweets/ubereng-software-factory-2026-08-28.md)

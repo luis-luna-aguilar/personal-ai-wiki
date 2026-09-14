@@ -5,7 +5,7 @@ domains: [models, agents, coding]
 subcategory: frontier-model
 tags: [openai, agentic, closed-source]
 as_of: 2026-09-08
-sources: [every-vibe-check-gpt-6-astra-2026-09-03, latent-space-gpt-6-astra-ai-engineer-2026-09-03, ainews-gpt-6-astra-launch-2026-09-04, every-split-verdict-fable-astra-2026-09-06, ainews-navier-stokes-2026-09-09]
+sources: [zawinskis-law-multiagents-2026-08-08, every-vibe-check-gpt-6-astra-2026-09-03, latent-space-gpt-6-astra-ai-engineer-2026-09-03, ainews-gpt-6-astra-launch-2026-09-04, every-split-verdict-fable-astra-2026-09-06, ainews-navier-stokes-2026-09-09]
 ---
 
 # GPT-6 Astra
@@ -35,9 +35,11 @@ OpenAI's new flagship model, launched 2026-09-03 — the company's biggest launc
 
 - [2026-09-08] Reached full rollout to Plus/Pro/Business/Enterprise in Codex and ChatGPT Work.
 - [2026-09-03] Launched: benchmarks, pricing, mixed third-party reception, CoT-monitorability decline disclosed in system card.
+- [2026-08-08] Pre-launch, as "Astra": OpenAI said internal evaluations showed "significant advancements in agentic coding and cybersecurity" strong enough that it could not rule out the Critical capability level under its Preparedness Framework, pausing internal activities pending strengthened controls — a concern that led OpenAI to ship the narrower, defender-only GPT-5.6-Cyber (under Daybreak) three days later instead of the full model.
 
 ## Sources
 
+- [AINews — Zawinski's Law of MultiAgents](../sources/newsletters/zawinskis-law-multiagents-2026-08-08.md)
 - [Every — Vibe Check: GPT-6 Astra](../sources/newsletters/every-vibe-check-gpt-6-astra-2026-09-03.md)
 - [Latent Space — GPT-6 Astra: an automated AI Engineer](../sources/newsletters/latent-space-gpt-6-astra-ai-engineer-2026-09-03.md)
 - [AINews — GPT-6 Astra: OpenAI's biggest LLM launch](../sources/newsletters/ainews-gpt-6-astra-launch-2026-09-04.md)

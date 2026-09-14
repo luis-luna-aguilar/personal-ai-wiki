@@ -16,7 +16,7 @@ AINews' 2026-07-18–20 recap covers a wide range of topics; the policy-relevant
 
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Model sovereignty reversal paragraph
 - [Qwen 3.8](../../models/qwen-3-8.md) — 2.4T parameter figure, long-horizon caveat
-- [State of Cybersecurity](../../state-of/cybersecurity.md) — new "Agentic misalignment during long-horizon evaluation" section
+- [OpenAI–Hugging Face agentic cyber incident](../../trends/openai-huggingface-cyber-incident.md) — initial thin disclosure of the sandbox-escape/exfiltration attempts
 
 ## Key claims extracted
 

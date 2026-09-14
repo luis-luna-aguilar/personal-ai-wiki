@@ -12,39 +12,14 @@ sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-
 
 OpenAI's cloud-based agent surface, accessed via CLI, ChatGPT, and mobile. It started as a coding agent, but current product direction is expanding into a broader computer-work system that can operate across code, browser flows, documents, spreadsheets, inboxes, CRM cleanup, healthcare coordination, meeting notes, and repeatable knowledge-work tasks.
 
-## Current status (as of 2026-07-14)
+## Current status (as of 2026-08-12)
 
-- **Folded into a ChatGPT "superapp" (July 2026):** OpenAI merged the standalone Codex app into a new ChatGPT desktop app with three modes — Chat (questions), Work (longer cross-tool assignments), and Codex (developer workflows); the previous ChatGPT app was relabeled "ChatGPT Classic." The move drew immediate backlash from power users (Theo Browne called it a "generational fumble"; Reddit threads described "mayhem" — duplicate apps, buried chats and projects, broken plugins, unclear usage limits). OpenAI course-corrected publicly with multiple usage-limit resets and, per Codex lead Thibault Sottiaux, a rollback of the context limit from 372K back down to 272K after it caused billing/usage side effects. Despite the rocky rollout, usage grew fast: chaining Fidji Simo's March disclosure (2M Codex users, an estimated 550K-700K on January 1) with a July tweet reporting 6M users on July 12 and 7M roughly a day later, AINews estimates Codex has grown around 10x year-to-date — compared with Claude Code's last public figure of roughly 2M weekly users and $2.5B ARR from February.
-- 4M+ weekly active users; 5× messages/user growth; 1M+ app downloads in first week of launch
-- Ollama added Codex app support, enabling local/open-model launch paths alongside cloud Codex
-- MagicPath canvas now ships natively inside Codex for visual task planning
-- /goal command extracted into portable MCP/slash-command form by community (@secemp9) — now usable outside ChatGPT
-- Zed editor supports ChatGPT/Codex on existing ChatGPT subscription (same rate-limit model)
-- GitHub Copilot App: agent merge feature; terminal commands get AI-generated risk assessment badges with explanations
-- VS Code/Copilot team: "experience shaped by coding harness — context assembly, tool use, execution loops, memory — more than by the base model alone" — the harness-over-model thesis confirmed by a lab-adjacent team
-- Cloud coding agent accessible from ChatGPT and CLI
-- OpenAI's March 2026 best-practices guide made the intended operating model unusually explicit: give Codex a clear goal/context/constraints/done-when structure, move durable repo guidance into `AGENTS.md`, connect live external systems with MCP, turn repeated work into skills, and automate workflows only after they are stable manually
-- March 2026 also expanded Codex into security review: Codex Security is a research-preview application-security agent that builds repo context, finds vulnerabilities, validates them in sandboxes, and proposes fixes
-- OpenAI now frames Codex as broader than code editing: it can use Mac apps, connect to more tools, create images, learn from prior actions, remember work preferences, and take on repeatable tasks
-- Product direction increasingly overlaps with computer use and ongoing workflow automation, not just one-shot coding sessions
-- **Subagents in Codex:** parallel specialized agents can now be spun up inside Codex to keep the main context window clean, tackle independent task parts in parallel, and be steered independently as work unfolds
-- **Usage-based pricing** rolling out for ChatGPT Business and Enterprise plans — no fixed seat costs; teams pay for what they use; lowers the adoption barrier for organizations that want to test at scale before committing
-- **PR code review via ChatGPT subscription:** connect GitHub, enable Codex code review, then trigger with "@codex review this" on any PR; available on Plus and above
-- GPT-5.5 now powers Codex; OpenAI frames it as more capable while using fewer tokens than GPT-5.4 on the same Codex tasks
-- Codex now has a 400K context window on GPT-5.5, and OpenAI describes a Fast mode that trades higher cost for higher speed
-- OpenAI reports 85%+ of the company uses Codex weekly across software engineering, finance, communications, marketing, data science, and product work
-- Secondary coverage is now converging on the same interpretation OpenAI hinted at earlier in the week: Codex is becoming a broader computer-work agent spanning browser flows, documents, spreadsheets, presentations, and repeatable knowledge-work tasks
-- Every's Codex-for-knowledge-work positioning reinforces that the product is being taught and marketed for drafting, research, summarization, parallel task execution, and lightweight internal-tool building — not just code edits
-- May 2026 secondary coverage continues to frame Codex as a workflow surface beyond coding: browser-pane work, docs, sheets, inbox triage, product-management commands, and repeatable command packs.
-- OpenAI's Daybreak announcement explicitly places Codex inside cyber-defense infrastructure alongside frontier models and security partners; details are thin pending a fuller official source.
-- **Mobile preview** (May 2026): Codex accessible from the ChatGPT iOS/Android app; users can start tasks, review diffs, approve commands, and steer running sessions remotely while the agent continues on a laptop or devbox
-- Zoom plugin (May 2026): agents can receive meeting context directly from Zoom — handoff pattern for meeting → task delegation without manual copy-paste
-- "Keep Mac awake" support: longer-running Codex jobs continue without interruption when supervising from the phone app; prevents laptop sleep from terminating sessions
-- Remote SSH now generally available for managed remote environments
-- CI/CD hooks and scoped programmatic access tokens added for Business/Enterprise automation
-- Enterprise switch promo: 2 months free Codex for teams switching from competitors within 30 days (launched May 14)
-- nanoGPT speedrun (Prime Intellect, ~10K runs, ~14K H200 hours): both Opus 4.7 (2,930 steps) and GPT-5.5 (2,950) beat the human baseline (2,990); agents relied on existing human research and did not produce original ideas
-- Every's July 2026 coverage adds nontechnical examples: inbox zero, CRM enrichment from emails/transcripts, family healthcare coordination, writing/workspace setups, and personal folders synced from meetings and voice notes.
+- Cloud-based agent surface accessed via CLI, ChatGPT, and mobile; product direction has broadened from coding into general computer-work (browser, docs, sheets, inbox, CRM, meeting notes)
+- Folded into the ChatGPT desktop "superapp" since 2026-07-14 (Chat/Work/Codex modes); usage estimated at 6-7M+ users, roughly 10x year-to-date growth despite a rocky rollout (see Recent changes)
+- Powered by GPT-5.5 with a 400K context window and a Fast mode trading cost for speed; OpenAI reports 85%+ internal weekly usage
+- Supports subagents, usage-based pricing on Business/Enterprise, and PR code review via ChatGPT subscription ("@codex review this")
+- Mobile app, Remote SSH, CI/CD hooks, and scoped tokens extend it beyond interactive terminal sessions
+- Dedicated subsystems below: Workspace Agents (shareable team agents), Codex Chronicle (ambient screen memory), and ChatGPT Work's persistent microVM architecture
 
 ## Workspace Agents (as of 2026-04-23)
 
@@ -56,7 +31,7 @@ Workspace Agents are shareable, Codex-powered team agents that run in Slack and 
 - Scheduled and background execution push Codex beyond one-off interactive sessions
 - Launch promotion made the feature free through 2026-05-06 for the covered plan tiers
 
-## Usage patterns (jxnl, May 2026)
+## Usage patterns (jxnl)
 
 **Durable threads + compaction**
 Pinned threads compacted over months accumulate preferences, decisions, and history without recreation cost. Cmd+1–9 jumps to pinned threads. Trade-off: revisited threads are not in cache (higher cost), but continuity is worth it for high-value workstreams.

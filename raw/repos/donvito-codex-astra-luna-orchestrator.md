@@ -1,0 +1,243 @@
+---
+title: donvito/codex-astra-luna-orchestrator: Use Astra as orchestrator and Luna for subagents in Codex · GitHub
+type: source
+source_type: repo
+url: https://github.com/donvito/codex-astra-luna-orchestrator/
+fetched: 2026-09-09
+---
+
+# donvito/codex-astra-luna-orchestrator: Use Astra as orchestrator and Luna for subagents in Codex · GitHub
+
+# Codex Astra Orchestrator + Luna Subagents
+
+A configurable Codex setup where GPT-6 Astra is the root/orchestrator and reviewer, while GPT-5.6 Luna is the default and pinned model for execution subagents.
+
+The installer asks which Codex plan you are on. Pro installs the Astra root described above. Plus installs a variant where the root is GPT-5.6 Luna at max reasoning, which keeps orchestrated sessions within the Plus rate-limit windows. Subagent roles are identical on both plans, including the reviewer, which stays on GPT-6 Astra so the final review is always done by a different model than the one that wrote the code.
+
+```
+.
+├── .codex/
+│   ├── config.toml         (Pro: Astra root)
+│   ├── config.plus.toml    (Plus: Luna max root; installed as config.toml)
+│   └── agents/
+│       ├── explorer.toml
+│       ├── worker.toml
+│       ├── tester.toml
+│       ├── reviewer.toml
+│       └── researcher.toml
+├── .agents/
+│   └── skills/
+│       └── astra-orchestrator/
+│           └── SKILL.md
+├── guides/
+│   ├── fast-iteration.md
+│   ├── complex-repo-work.md
+│   ├── routine-coding.md
+│   ├── full-orchestration.md
+│   ├── plus-plan.md
+│   └── token-usage.md
+├── scripts/
+│   └── token_usage.py
+├── AGENTS.md
+├── setup.sh
+├── setup.ps1
+└── LICENSE
+```
+
+Edit `.codex/config.toml`:
+
+```
+model = "gpt-6-astra"
+model_reasoning_effort = "low"
+
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 4
+default_subagent_model = "gpt-5.6-luna"
+default_subagent_reasoning_effort = "medium"
+```
+
+`.codex/config.plus.toml` is the same file with a Luna root:
+
+```
+model = "gpt-5.6-luna"
+model_reasoning_effort = "max"
+```
+
+The installer writes whichever one matches your plan to `.codex/config.toml`
+in the target repository; `config.plus.toml` itself is never installed.
+
+Each role file is explicitly pinned to its intended model: Luna for explorer, worker, tester, and researcher; Astra for reviewer. This means changing only `default_subagent_model` will affect generic spawned agents, but not the named roles.
+
+If you want one knob to control all subagents, remove the `model` and `model_reasoning_effort` overrides from each `.codex/agents/*.toml` file.
+
+Then the named roles inherit the `[agents]` defaults.
+
+Clone this repository:
+
+```
+git clone https://github.com/donvito/codex-astra-luna-orchestrator.git
+cd codex-astra-luna-orchestrator
+```
+
+The target project must already exist and must be different from this setup
+repository.
+
+Run the shell installer:
+
+Run the PowerShell installer from Windows PowerShell:
+
+```
+powershell -ExecutionPolicy Bypass -File .\setup.ps1
+```
+
+With PowerShell 7, you can use:
+
+When asked for the target repository, enter its absolute or relative path. For
+example:
+
+```
+Target repository path: ../my-project
+```
+
+Next, choose your Codex plan:
+
+```
+Codex plan:
+  1) Pro  - GPT-6 Astra orchestrates, GPT-5.6 Luna executes, GPT-6 Astra reviews
+  2) Plus - GPT-5.6 Luna (max reasoning) orchestrates, GPT-5.6 Luna executes, GPT-6 Astra reviews
+Select plan [1/2] (default 1):
+```
+
+This only affects which root configuration is written to `.codex/config.toml`.
+Agent role files are the same on both plans: explorer, worker, tester, and
+researcher run on Luna; the reviewer runs on Astra on Plus as well.
+
+The installer then asks whether to install each component:
+
+* `.codex` contains the root configuration and agent role profiles.
+* `.agents` contains the `astra-orchestrator` skill.
+* `AGENTS.md` gives Codex the project-level orchestration instructions.
+
+Press Enter or answer `y` to install a component; answer `n` to skip it. All
+three components are selected by default.
+
+If a component already exists, the installer lists the exact paths that would
+be overwritten and asks again before making changes:
+
+```
+WARNING: the following existing files will be overwritten:
+  - .codex/config.toml
+Update .codex? New files will be added; only paths listed above will be replaced. [y/N]
+```
+
+Existing-file updates default to `n`. If approved, missing files are added and
+only the listed paths are replaced. Other files already present in the target
+component remain untouched.
+
+After setup, launch Codex from the target repository. Project-scoped `.codex`
+configuration is loaded only for trusted projects.
+
+See `guides/` for copy-paste model presets and the Astra + Luna topology. The
+guides are intentionally separate from the installers so you can review and
+adapt settings for your Codex version without changing a global config
+automatically.
+
+For agents, copy the TOML files to:
+
+For the skill, copy the skill folder to:
+
+```
+~/.agents/skills/astra-orchestrator/
+```
+
+Merge the settings from `.codex/config.toml` (Pro) or `.codex/config.plus.toml`
+(Plus) into your existing:
+
+Do not blindly overwrite your existing global config if you already have MCP servers, providers, permissions, or other settings.
+
+Codex may select the skill automatically when the task matches its description.
+
+You can also invoke it explicitly from Codex CLI or the IDE extension with:
+
+Example prompt:
+
+```
+$astra-orchestrator
+
+Implement the new invoice export endpoint.
+Have explorer map the existing invoice/export path first.
+Use workers for bounded implementation, tester for verification,
+and reviewer for an independent final review.
+```
+
+```
+                 GPT-6 Astra
+             root / orchestrator
+                      |
+      +---------------+---------------+
+      |               |               |
+   explorer          worker         researcher
+     Luna             Luna             Luna
+      |               |
+      +-------+-------+
+              |
+           tester
+            Luna
+              |
+          reviewer
+           Astra
+              |
+              v
+         GPT-6 Astra
+      integrate + verify
+```
+
+For cheaper/faster runs:
+
+* set Astra reasoning to `medium`
+* set Luna reasoning to `low` or `medium`
+* use 3-4 concurrent threads
+
+For larger codebases:
+
+* keep Astra at `high`
+* keep Luna at `medium`
+* use 6-8 concurrent threads, only when tasks are actually independent
+
+For strict parent/child separation:
+
+* keep explorer/reviewer/researcher read-only
+* keep worker/tester workspace-write
+* leave the root in workspace-write so it can integrate changes
+
+Orchestration is not free: the root stays in the loop for the whole task and
+every subagent carries its own context. Usage depends on repository size and
+task shape, so there is no single number. `scripts/token_usage.py` reads the
+rollout logs Codex already writes under `~/.codex/sessions` and reports usage
+per thread, role, and model, plus the change in your 5-hour and 7-day rate
+limit windows:
+
+```
+scripts/token_usage.py --list --date 2026-09-07
+scripts/token_usage.py --latest --date 2026-09-07
+```
+
+See [`guides/token-usage.md`](/donvito/codex-astra-luna-orchestrator/blob/main/guides/token-usage.md) for a measurement
+protocol, one sample run with real numbers, and tips for reducing usage.
+
+Plus users: the root thread is the largest line item, so running it on Luna
+saves the most. Selecting `Plus` in the installer does this for you; for a
+manual or global setup see [`guides/plus-plan.md`](/donvito/codex-astra-luna-orchestrator/blob/main/guides/plus-plan.md):
+
+```
+# Root
+model = "gpt-5.6-luna"
+model_reasoning_effort = "max"
+```
+
+Explicit model choices during a spawn override `[agents]` defaults. Custom agent files that specify `model` or `model_reasoning_effort` also take precedence over inherited defaults.
+
+The execution role files are pinned to Luna intentionally, while the reviewer is pinned to Astra for independent final review. Astra remains the orchestrator unless you deliberately change the role configuration.
+
+Licensed under the [Apache License 2.0](/donvito/codex-astra-luna-orchestrator/blob/main/LICENSE).

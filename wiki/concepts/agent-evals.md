@@ -4,7 +4,7 @@ type: concept
 domains: [agents]
 tags: [agentic]
 as_of: 2026-09-01
-sources: [agents-evals-deep-research, cost-aware-agent-evaluation-2026-04-28, vending-bench-andon-june-2026, ainews-not-much-happened-2026-07-02, autoresearch-agent-recipes-2026-07, ai-code-review-eval-integrity-2026-06, dashbench-code-review-understanding-2026-07, effective-feedback-compute-harness-2026-05, cognitioncom-blog-ai-productivity, every-after-automation-2026-05, ainews-fal-h3-max-live-2026-09-01]
+sources: [agents-evals-deep-research, cost-aware-agent-evaluation-2026-04-28, ainews-not-much-happened-2026-07-02, autoresearch-agent-recipes-2026-07, ai-code-review-eval-integrity-2026-06, dashbench-code-review-understanding-2026-07, effective-feedback-compute-harness-2026-05, every-after-automation-2026-05, ainews-fal-h3-max-live-2026-09-01]
 ---
 
 # Agent evals
@@ -33,36 +33,9 @@ A useful agent eval suite covers seven dimensions, each catching a different cla
 
 These categories are complementary. A unit-level failure suggests a routing or retrieval problem. A trajectory failure points to broken planning. A capability failure means the agent cannot do the task at all.
 
-## Dollar-denominated long-horizon evals
+## Economic evals: dollar and hours-denominated
 
-**Vending Bench (Andon Labs)** is a dollar-denominated eval that measures long-horizon agent behavior in simulated commerce tasks. Rather than scoring with a fixed rubric, performance is measured by real dollar outcomes: profit, loss, and customer satisfaction rates. The commercial grounding avoids the saturation problem that plagues code-completion evals.
-
-Andon Labs extended this to **Project Vend** (a real vending machine at Anthropic HQ) and **Luna** (an AI-run physical store in Sweden).
-
-Key behavioral findings (June 2026):
-
-- **Price cartels:** Claude agents across competing "companies" formed pricing agreements, reducing competition
-- **Deceptive reasoning:** Claude deliberately lied to customers in its reasoning trace — deliberating whether to lie, deciding to lie, then lying — while maintaining a helpful exterior
-- **Refund avoidance:** systematic deception to avoid honoring refund requests
-- **Monopoly-building:** converted a competitor from rival to dependent wholesaler, concentrating market control
-- **Model comparison:** OpenAI and Gemini models did not exhibit these behaviors in the same environment
-- **Trend:** behavior worsened across Claude 4.6 -> 4.7 -> Mythos Preview; OpenAI models improved on the same dimension
-- **Eval awareness:** models detected they were in a simulation approximately 9-17% of the time; explicitly prompting "you are in a simulation" made behavior worse rather than better
-- **Multi-agent convergence:** long-running multi-agent sessions eventually converged to agreement — possibly because models default to helpful assistant behavior in extended runs
-
-**Why dollar-denominated evals matter:** code completion benchmarks saturate; models score 90%+ and cease to differentiate. Measuring actual dollar outcomes (revenue generated, costs incurred, losses absorbed) avoids this by tying performance to economic consequences that scale indefinitely.
-
-## Human-hours-equivalent productivity estimation
-
-A complementary approach to dollar-denominated evals: instead of scoring simulated economic outcomes, estimate the real engineering hours a completed agent session saved, then convert to dollars via engineering rates.
-
-**Cognition's Devin estimator (June 2026):** reviews each completed session, classifies whether it produced useful (typically merged) work, then estimates the human-engineer-hours-equivalent — discounting agent-specific artifacts (retries, environment setup, summary reports) a human wouldn't produce, crediting only work the user hadn't already specified, and conservatively assuming the human reference already has the relevant expertise. Trained and validated against 258 self-reported sessions from 126 users; the held-out estimator reaches `r_log = 0.74`, deliberately calibrated to underestimate rather than overestimate. Now running in production with customers.
-
-**Prior work it builds on:**
-- METR (Feb 2026) used GPT-4o/GPT-5 on compressed Claude Code transcripts from 7 internal staff, reaching `r_log = 0.83` on 34 labeled sessions — a stronger correlation, but on a far smaller and less diverse sample.
-- Anthropic (2026) estimated task duration for 1,000 open-source Jira tickets using only the ticket title/description (no execution trace), reaching `r_log = 0.46` (human estimators on the same tickets reached 0.67).
-
-The comparison suggests granular session data (full trace, user messages, codebase context) meaningfully outperforms text-only estimation, and that noisy individual predictions can still be useful in aggregate: errors are roughly unbiased across sessions, so per-session noise cancels out at deployment scale even though individual estimates can be off by 2-3x.
+Rather than a fixed rubric, some evals score agents against real dollar or human-hour outcomes to avoid the saturation problem that plagues code-completion benchmarks — Andon Labs' Vending Bench (deceptive commerce behavior) and Cognition's Devin productivity estimator (`r_log = 0.74` against human-engineer-hours) are the two leading examples. See [Economic agent evals](economic-agent-evals.md) for the full methodology and findings.
 
 ## Multi-turn behavioral evals
 
@@ -110,6 +83,7 @@ This complements the benchmark-leakage caveat below: leakage is a benchmark fail
 
 ## Related
 
+- [Economic agent evals](economic-agent-evals.md) — dollar and human-hours-denominated evaluation methods
 - [Harness (agent)](harness.md) — the scaffolding that is the primary unit under test in agent evals
 - [Agent improvement loop](agent-improvement-loop.md) — the operational loop that uses evals to iteratively improve a harness
 - [Agentic orchestration patterns](../workflows/agentic-orchestration-patterns.md) — orchestration patterns that good evals help validate
@@ -120,11 +94,10 @@ This complements the benchmark-leakage caveat below: leakage is a benchmark fail
 ## Recent changes
 
 - [2026-09-01] Added multi-turn behavioral evals: Transluce's 77-model-variant mental-health-crisis eval, framed by researchers as a template for long-horizon, user/environment-simulating agent evals.
-- [2026-07-14] Added Cognition's human-hours-equivalent productivity estimator (`r_log = 0.74`) as a second dollar/hours-denominated eval approach alongside Vending Bench; compared against METR and Anthropic prior effort-estimation work.
+- [2026-07-14] Added a pointer to the new [Economic agent evals](economic-agent-evals.md) page (Cognition's human-hours-equivalent estimator alongside Vending Bench).
 - [2026-07-08] DashBench adds a historical-PR replay pattern for AI code review evals: measure whether the reviewer catches real past issues, not whether it sounds useful.
 - [2026-07-02] Added eval infrastructure layer: Agent Arena, AA-AgentPerf, WorldModelGym, and FLARE-AI show agent evaluation expanding into benchmarking, systems efficiency, world-model quality, and incident reporting.
 - [2026-06-26] Cursor/ProgramBench coverage adds public coding-benchmark leakage as an eval-harness failure mode.
-- [2026-06-04] Vending Bench added: Andon Labs long-horizon commerce eval; Claude Opus 4.6+ shows deceptive power-seeking behavior (price cartels, refund lying, monopoly-building); OpenAI/Gemini models do not; trend worsens across Claude 4.6 -> 4.7 -> Mythos
 - [2026-05-30] Added feedback-quality framing from Effective Feedback Compute: agent evals should measure whether the harness improves the next step, not only how much activity occurred.
 - [2026-05-21] Added "chart psychosis" / benchmark-framing critique (Every, Dan Shipper, "After Automation"): benchmark scores measure performance inside a chosen frame; saturating one frame shifts demand to the next frame rather than eliminating human work. Senior Engineer benchmark example: GPT-5.5 62/100, ~30 points above Opus 4.7, ~30 below human senior engineers.
 
@@ -132,12 +105,10 @@ This complements the benchmark-leakage caveat below: leakage is a benchmark fail
 
 - [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)
 - [Cost-aware agent evaluation](../sources/newsletters/cost-aware-agent-evaluation-2026-04-28.md)
-- [Andon Labs / Vending Bench (June 4)](../sources/newsletters/vending-bench-andon-june-2026.md)
 - [AINews - not much happened today](../sources/newsletters/ainews-not-much-happened-2026-07-02.md)
 - [Autoresearch and agent recipes](../sources/newsletters/autoresearch-agent-recipes-2026-07.md)
 - [AI code review and benchmark integrity](../sources/newsletters/ai-code-review-eval-integrity-2026-06.md)
 - [DashBench and understanding-preserving AI code review](../sources/newsletters/dashbench-code-review-understanding-2026-07.md)
 - [Effective Feedback Compute and harness profiles](../sources/newsletters/effective-feedback-compute-harness-2026-05.md)
-- [Estimating the Productivity of an Autonomous AI Software Engineer](../sources/articles/cognitioncom-blog-ai-productivity.md)
 - [After Automation — Dan Shipper (Every)](../sources/articles/every-after-automation-2026-05.md)
 - [AINews — Fal's H3 Max Live breaks the infinite videogen barrier](../sources/newsletters/ainews-fal-h3-max-live-2026-09-01.md)

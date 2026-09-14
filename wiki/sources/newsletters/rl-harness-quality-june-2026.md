@@ -14,7 +14,7 @@ Guest post from a member of the Google Gemini RL team, published through a pract
 
 ## Influenced pages
 
-- [Harness (agent)](../../concepts/harness.md) — RL harness quality section added
+- [RL harness quality](../../concepts/rl-harness-quality.md) — page created from this source
 
 ## Key claims extracted
 

@@ -17,7 +17,7 @@ Cognition names and details the architecture behind Devin Security Swarm: a Plan
 
 - [Devin](../../tools/devin.md) — Agentic MapReduce architecture detail, 72% recall benchmark
 - [State of Cybersecurity](../../state-of/cybersecurity.md) — updated Devin leader line
-- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — expanded Agentic MapReduce pattern entry
+- [Multi-agent coordination](../../workflows/multi-agent-coordination.md) — expanded Agentic MapReduce pattern entry
 - [State of Coding](../../state-of/coding.md) — Devin added to Terminal coding agent subcategory
 
 ## Key claims extracted

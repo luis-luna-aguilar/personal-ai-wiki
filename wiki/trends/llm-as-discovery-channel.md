@@ -11,7 +11,7 @@ sources: [ai-referred-shoppers-june-2026]
 
 The trend: users increasingly ask LLMs for product recommendations and buying guidance, and the referral traffic this generates is meaningfully different from — and higher-quality than — traditional search or social referrals.
 
-## Current signal (June 2026)
+## Current signal (as of 2026-06-15)
 
 Adobe Analytics tracked LLM-referred shopping sessions across US retail sites (ChatGPT, Gemini, and other LLMs as referral sources). Results vs non-AI-referred traffic:
 

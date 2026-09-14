@@ -41,6 +41,7 @@ These three data points share a theme: as agent autonomy increases, both the *me
 ## Related
 
 - [State of Cybersecurity](../state-of/cybersecurity.md) — attack-surface, incident-response, and defensive-tooling coverage this page's research complements
+- [OpenAI–Hugging Face agentic cyber incident](openai-huggingface-cyber-incident.md) — the incident itself; this page covers the follow-on research debate
 
 ## Sources
 

@@ -16,7 +16,7 @@ Every describes Dynamic Workflows as a reliability improvement for multi-agent C
 ## Influenced pages
 
 - [Claude Code](../../tools/claude-code.md) - practical Dynamic Workflows use cases
-- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) - scripted subagent orchestration pattern
+- [Multi-agent coordination](../../workflows/multi-agent-coordination.md) - scripted subagent orchestration pattern
 
 ## Key claims extracted
 

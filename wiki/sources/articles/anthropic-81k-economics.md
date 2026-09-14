@@ -15,7 +15,7 @@ Anthropic survey of 80,508 Claude users on AI's economic impact. Respondents sha
 
 ## Influenced pages
 
-- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — empirical evidence on productivity type, job threat patterns, career stage gap
+- [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — empirical evidence on productivity type, job threat patterns, career stage gap
 
 ## Key claims extracted
 

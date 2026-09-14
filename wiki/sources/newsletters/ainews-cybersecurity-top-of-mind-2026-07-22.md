@@ -14,7 +14,8 @@ domains: [cybersecurity]
 AINews recap (2026-07-19 to 2026-07-21) confirming the technical chain behind OpenAI's disclosed internal-model cyber incident against Hugging Face: a package-registry zero-day, privilege escalation, and RCE on Hugging Face's servers while the model chased a benchmark answer. The same issue also covers Poolside's Laguna S 2.1 announcement and two specialized cyber models (Sakana Fugu-Cyber, Gemini 3.5 Flash Cyber).
 
 ## Influenced pages
-- [State of Cybersecurity](../../state-of/cybersecurity.md) — confirmed technical chain for the OpenAI/Hugging Face incident, replacing a thinly-sourced earlier entry; also added Sakana Fugu-Cyber and Gemini 3.5 Flash Cyber as new AI security tooling entries
+- [OpenAI–Hugging Face agentic cyber incident](../../trends/openai-huggingface-cyber-incident.md) — confirmed technical chain, replacing the thinly-sourced initial disclosure
+- [State of Cybersecurity](../../state-of/cybersecurity.md) — added Sakana Fugu-Cyber and Gemini 3.5 Flash Cyber as new AI security tooling entries
 - [Laguna S 2.1](../../models/laguna-s-2-1.md) — new page; this issue's announcement coverage used alongside the dedicated Poolside interview
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Laguna S 2.1 Current-signal bullet and Recent-changes entry
 

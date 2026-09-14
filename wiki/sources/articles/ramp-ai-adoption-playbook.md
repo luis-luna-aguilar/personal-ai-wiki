@@ -15,6 +15,7 @@ Ramp publishes a detailed internal account of how it pushed AI adoption across t
 ## Influenced pages
 
 - [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — new practical page distilling the operating patterns for broad AI adoption
+- [AI adoption: evidence from practice](../../training/ai-adoption-evidence.md) — Ramp's Glass/Dojo adoption mechanism
 - [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — adds a concrete company data point showing non-engineers and distributed teams building through internal agents
 
 ## Key claims extracted

@@ -1,5 +1,11 @@
 # Codex — History
 
+## Archived from current page on 2026-09-09
+
+- [2026-05-13] OpenAI's Daybreak announcement placed Codex inside cyber-defense infrastructure alongside frontier models and security partners; details were thin pending a fuller official source
+- [2026-05-16] GitHub Copilot App added an agent-merge feature and AI-generated risk-assessment badges (with explanations) on terminal commands
+- [2026-05-16] nanoGPT speedrun (Prime Intellect, ~10K runs, ~14K H200 hours): Opus 4.7 (2,930 steps) and GPT-5.5 (2,950) both beat the human baseline (2,990); agents relied on existing human research rather than producing original ideas
+
 - [2026-04-10] Page created from OpenAI Pro tier pricing announcement
 - [2026-03-11] Best-practices guide codified the AGENTS.md + MCP + skills + automation workflow as the default way to get better Codex results
 

@@ -14,7 +14,8 @@ Cursor's engineering blog details its second-generation agent swarm (planner/wor
 
 ## Influenced pages
 
-- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — coordination failure-modes pattern, Field Guide, review lenses
+- [Multi-agent coordination](../../workflows/multi-agent-coordination.md) — coordination failure-modes pattern, Field Guide
+- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — review lenses
 - [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — $1,339 vs. $10,565 same-task cost comparison
 
 ## Key claims extracted
@@ -25,3 +26,6 @@ Cursor's engineering blog details its second-generation agent swarm (planner/wor
 - Field Guide: self-authored, agent-owned shared context folder, line-budget constrained
 - Review lenses: stacking multiple imperfect/decorrelated reviewers beats one "best" reviewer
 - Cost: $1,339 (Opus 4.8 planner + Composer 2.5 workers) vs. $10,565 (GPT-5.5 solo) for the same task
+- New custom VCS replaces Git for this generation of the swarm, raising throughput from the predecessor harness's ~1,000 commits/hour to ~1,000 commits/second
+- Solo Opus 4.8 run's codebase published: github.com/cursor/minisqlite
+- Context-efficiency explanation for why planner/worker splits scale (planner never implements, worker never plans), with an explicit analogy to Coase's "The Nature of the Firm" on coordination costs

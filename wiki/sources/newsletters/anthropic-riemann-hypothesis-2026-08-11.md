@@ -20,7 +20,7 @@ AINews recap of an Anthropic announcement: an unreleased internal research Claud
 - [state-of/cybersecurity](../../state-of/cybersecurity.md) — OpenAI Daybreak bullet extended with the GPT-5.6-Cyber launch
 - [trends/restricted-frontier-deployment](../../trends/restricted-frontier-deployment.md) — resolution of the Astra capability-threshold-gating section
 - [models/claude-sonnet-5](../../models/claude-sonnet-5.md) — pricing bullet updated to reflect permanent $2/$10 pricing
-- [concepts/harness](../../concepts/harness.md) — Composio DeepSeek V4 Flash four-harness bake-off
+- [concepts/harness-vs-model](../../concepts/harness-vs-model.md) — Composio DeepSeek V4 Flash four-harness bake-off
 - [models/muse-glimmer](../../models/muse-glimmer.md) — new page: full launch details and benchmarks
 - [models/muse-spark](../../models/muse-spark.md) — sibling-release pointer, Spark 1.2 open-weights promise
 - [trends/open-weight-momentum-broadens](../../trends/open-weight-momentum-broadens.md) — new Current-signal bullet and Recent-changes entry

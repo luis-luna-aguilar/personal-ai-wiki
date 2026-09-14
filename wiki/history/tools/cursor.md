@@ -1,5 +1,9 @@
 # Cursor — History
 
+## Archived from current page on 2026-09-09
+
+- [2026-04-22] Added Truell's third-era data: 35% of Cursor internal PRs from cloud agents; 2:1 agent-to-Tab user ratio; 15× agent usage growth YoY
+
 - [2026-04-02] Cursor 3 announced — rebuilt agent-first interface, multi-repo, local↔cloud handoff, Composer 2, plugin marketplace
 
 ## Archived from current page on 2026-05-19

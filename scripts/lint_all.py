@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Run every cheap maintenance script and print a combined report.
 
-Chains: stale.py, orphans.py, link_check.py, tag_compliance.py.
+Chains: stale.py, orphans.py, link_check.py, tag_compliance.py, page_length.py.
 
 Usage:
-    python scripts/lint_all.py
+    python3 scripts/lint_all.py
 """
 
 from __future__ import annotations
@@ -14,7 +14,13 @@ import sys
 from pathlib import Path
 
 SCRIPTS_DIR = Path(__file__).resolve().parent
-SCRIPTS = ["stale.py", "orphans.py", "link_check.py", "tag_compliance.py"]
+SCRIPTS = [
+    "stale.py",
+    "orphans.py",
+    "link_check.py",
+    "tag_compliance.py",
+    "page_length.py",
+]
 
 
 def main() -> int:

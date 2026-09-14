@@ -2,15 +2,15 @@
 title: OpenWiki
 type: tool
 domains: [agents, coding]
-subcategory: agent-toolkits
-tags: [open-source, agentic]
+subcategory: knowledge-platform
+tags: [open-source, agentic, knowledge-cluster]
 as_of: 2026-07-02
 sources: [ainews-not-much-happened-2026-07-02, the-code-devin-security-2026-07-02]
 ---
 
 # OpenWiki
 
-OpenWiki is a LangChain tool for generating and maintaining agent-consumable documentation for a codebase. It fits the emerging "wiki memory" pattern: agents need maintained, inspectable knowledge layers rather than only raw transcripts or retrieval over stale files.
+OpenWiki is a LangChain tool for generating and maintaining agent-consumable documentation for a codebase. It fits the emerging "wiki memory" pattern: agents need maintained, inspectable knowledge layers rather than only raw transcripts or retrieval over stale files. In the [Knowledge architectures](../concepts/knowledge-architectures.md) matrix it is a team-scope [knowledge layer](../concepts/knowledge-layer.md) for one codebase.
 
 ## Current status (as of 2026-07-02)
 
@@ -29,7 +29,12 @@ OpenWiki is a LangChain tool for generating and maintaining agent-consumable doc
 
 ## Recent changes
 
+- [2026-09-09] Re-filed from `agent-toolkits` to the new `knowledge-platform` subcategory as part of the knowledge-cluster terminology reorganization; no product change.
 - [2026-07-02] LangChain launched OpenWiki as an agent-readable codebase documentation tool.
+
+## Related
+
+- [Knowledge layer](../concepts/knowledge-layer.md) — the concept this tool implements for codebases
 
 ## Sources
 

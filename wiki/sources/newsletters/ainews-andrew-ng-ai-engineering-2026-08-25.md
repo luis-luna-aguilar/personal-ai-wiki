@@ -15,7 +15,8 @@ AINews issue leading with Andrew Ng's DeepLearning.AI relaunch around four "AI E
 
 ## Influenced pages
 
-- [Harness (agent)](../../concepts/harness.md) — Skill Lift, Headlong/exo, single-harness standardization, enterprise MCP auth bullets
+- [Harness (agent)](../../concepts/harness.md) — Skill Lift, Headlong/exo, single-harness standardization
+- [Model Context Protocol](../../concepts/mcp.md) — enterprise-managed MCP auth
 - [AI Engineering skills](../../training/ai-engineering-skills.md) — new page, primary source for the Andrew Ng skills taxonomy
 - [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — cost-normalized DeepSWE/Cline benchmark evidence
 

@@ -15,7 +15,7 @@ Transcript of Satya Nadella (Microsoft CEO) crossover interview at Build 2026. C
 ## Influenced pages
 
 - [Microsoft Copilot](../../tools/microsoft-copilot.md) — strategy and pricing context
-- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — consumption pricing framing
+- [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — consumption pricing framing
 
 ## Key claims extracted
 

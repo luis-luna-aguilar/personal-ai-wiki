@@ -13,8 +13,8 @@ This source summary groups a small cluster of adoption-oriented signals. The com
 
 ## Influenced pages
 
-- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — adds the management-not-procurement framing and a16z's adoption counter-signal
-- [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — adds a softer organizational signal around "everyone gets an agent"
+- [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — adds the management-not-procurement framing
+- [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — adds a softer organizational signal around "everyone gets an agent" and a16z's adoption counter-signal
 
 ## Key claims extracted
 

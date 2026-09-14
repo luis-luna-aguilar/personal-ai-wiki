@@ -17,7 +17,7 @@ AINews' self-deprecatingly titled issue covers DeepSeek's public-beta launch of 
 
 - [DeepSeek V4](../../models/deepseek-v4.md) — V4-Flash 0731 post-training update
 - [State of Models](../../state-of/models.md) — updated DeepSeek V4 leader lines, Recent-changes entry
-- [state-of/cybersecurity](../../state-of/cybersecurity.md) — new bullet for Anthropic's own agentic-misalignment incidents
+- [OpenAI–Hugging Face agentic cyber incident](../../trends/openai-huggingface-cyber-incident.md) — Anthropic's own agentic-misalignment incidents section
 
 ## Key claims extracted
 

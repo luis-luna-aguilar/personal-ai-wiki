@@ -14,7 +14,8 @@ AINews summarizes the AI Engineer World Fair debate over autonomous loops and so
 
 ## Influenced pages
 
-- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) - control-layer and loop discipline patterns
+- [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) - control-layer pattern
+- [Agent loop design](../../workflows/agent-loop-design.md) - loop discipline / stage-debate content
 - [Harness](../../concepts/harness.md) - control layer as harness concern
 
 ## Key claims extracted

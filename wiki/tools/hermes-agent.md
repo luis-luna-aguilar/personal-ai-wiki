@@ -5,7 +5,7 @@ domains: [agents]
 subcategory: agent-framework
 tags: [nousresearch, open-source, agentic]
 as_of: 2026-09-01
-sources: [ainews-2026-04-21, ainews-2026-04-22, hermes-openclaw-persistent-agents-2026-05-11, ainews-fal-h3-max-live-2026-09-01]
+sources: [ainews-2026-04-21, ainews-2026-04-22, hermes-openclaw-persistent-agents-2026-05-11, ainews-openai-agi-bar-2026-08-28, ainews-fal-h3-max-live-2026-09-01]
 ---
 
 # Hermes Agent
@@ -22,6 +22,7 @@ NousResearch's open-source autonomous agent framework. Reached 100K+ GitHub star
 - **Kanban supervision dashboard:** a visual project-management view showing active tasks, in-progress work, and completed items; designed for running multiple long-horizon workflows simultaneously
 - **Weekly automated skill pruning:** Hermes audits its own skill library on a weekly cadence, removing skills that were created but never called; prevents skill bloat in long-running deployments
 - **Who owns the agent's memory?** The newsletter frames this as the defining open question for the persistent-agent category: Hermes's local-first approach keeps memory in the user's environment
+- **Real-session browsing (August 2026):** Hermes Agent can browse using a managed copy of the user's real Chrome profile and logins — a notable usability escalation for browser-use agents that also collapses auth friction, raising the importance of scoped-permission design at the harness layer
 
 ## Key orchestration patterns
 
@@ -46,6 +47,7 @@ Hermes Agent shipped a large feature release aimed at persistent, multi-agent wo
 ## Recent changes
 
 - [2026-09-01] v0.21.0 ships Bots Mode, agent-to-agent comms, persistent multi-gateway connections, subagent steering, broader connector access; cuts default context usage ~50%.
+- [2026-08-29] Real-session browsing added: agent can browse using a managed copy of the user's real Chrome profile and logins.
 - [2026-05-13] Brain+muscle architecture documented: reasoning and execution separated into two distinct AI layers; Kanban dashboard and weekly automated skill pruning described
 - [2026-05-11] OpenClaw security incident: 341 malicious registry entries planted in coordinated supply chain attack; Microsoft enterprise warning issued
 - [2026-04-22] Recursive spawn depth support added; Scarf macOS GUI launched; Skillkit native support
@@ -56,4 +58,5 @@ Hermes Agent shipped a large feature release aimed at persistent, multi-agent wo
 - [AINews — Moonshot Kimi K2.6, Hermes Agent, Codex Chronicle (2026-04-21)](../sources/newsletters/ainews-2026-04-21.md)
 - [AINews — 2026-04-22 (GPT-Image-2, Hermes, Deep Research Max)](../sources/newsletters/ainews-2026-04-22.md)
 - [Persistent coding agents — Hermes architecture and OpenClaw security incident](../sources/newsletters/hermes-openclaw-persistent-agents-2026-05-11.md)
+- [AINews — OpenAI to reach AGI bar by end-2026](../sources/newsletters/ainews-openai-agi-bar-2026-08-28.md)
 - [AINews — Fal's H3 Max Live breaks the infinite videogen barrier](../sources/newsletters/ainews-fal-h3-max-live-2026-09-01.md)

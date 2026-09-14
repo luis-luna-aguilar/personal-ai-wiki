@@ -15,7 +15,8 @@ AINews recap covering two threads: OpenAI's Astra model, whose internal evaluati
 
 ## Influenced pages
 
-- [state-of/cybersecurity](../../state-of/cybersecurity.md) — Astra Critical-cyber bullet added; existing OpenAI–HF incident bullet extended with Black Hat detail
+- [GPT-6 Astra](../../models/gpt-6-astra.md) — pre-launch Critical-cyber-capability caveat and the GPT-5.6-Cyber substitution it drove
+- [OpenAI–Hugging Face agentic cyber incident](../../trends/openai-huggingface-cyber-incident.md) — Black Hat Artifactory/"Zawinski's Law" detail
 - [trends/restricted-frontier-deployment](../../trends/restricted-frontier-deployment.md) — new capability-threshold-gating section
 - [tools/claude-code](../../tools/claude-code.md) — cross-session messaging, auto-mode-by-default with classifier detection rate, session budgets, repo-skill auto-load, advisor models
 - [concepts/harness](../../concepts/harness.md) — SWE-bench Pro harness-swap data point
