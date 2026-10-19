@@ -15,6 +15,7 @@ AINews recap covering four distinct stories from 2026-09-07/08: OpenAI's dispute
 
 ## Influenced pages
 
+- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — deepagents primitives (moved from Harness)
 - [AI in mathematics](../../trends/ai-in-mathematics.md) — new Navier-Stokes headline entry, priority-dispute/governance dimension
 - [GPT-6 Astra](../../models/gpt-6-astra.md) — full-rollout date (2026-09-08)
 - [Meta Muse](../../tools/meta-muse.md) — launch, security architecture, adoption numbers

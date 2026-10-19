@@ -15,6 +15,7 @@ AINews digest covering OpenAI's Astra/AGI timeline claims (Pachocki, Altman), Mi
 
 ## Influenced pages
 
+- [Automated harness optimization](../../concepts/automated-harness-optimization.md) — JIT-Agent (moved from Harness)
 - [AGI timeline claims](../../trends/agi-timeline-claims.md) — Pachocki/Astra and Altman/TIME claims
 - [GLM-5.3](../../models/glm-5-3.md) — Flash quantization/local-serving reaction
 - [Physical AI deployment curve](../../trends/physical-ai-deployment.md) — Microduck launch, spec, early reaction

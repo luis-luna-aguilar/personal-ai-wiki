@@ -4,7 +4,7 @@ type: concept
 domains: [agents]
 tags: [agentic]
 as_of: 2026-10-09
-sources: [langchain-better-harness, self-improving-skills, ainews-andrew-ng-ai-engineering-2026-08-25, ainews-poolside-nvidia-2026-08-21, ainews-muse-spark-13-2026-09-03, harness2-recursive-harnessing-2026-10]
+sources: [langchain-better-harness, self-improving-skills, ainews-andrew-ng-ai-engineering-2026-08-25, ainews-poolside-nvidia-2026-08-21, ainews-muse-spark-13-2026-09-03, harness2-recursive-harnessing-2026-10, ainews-openai-agi-bar-2026-08-28, primeintellect-prime-agent-2026-08-05]
 ---
 
 # Automated harness optimization
@@ -60,6 +60,8 @@ This mirrors the Better-Harness pattern at the prompt level. The loop is based o
 ## Self-modifying persistent harnesses
 
 - **Self-modifying, persistent harnesses.** Two open-source projects push recursive self-improvement into the harness itself: Headlong stores agent trajectories as a DAG of jsonl files and runs a self-guided inner loop continuously rather than only on request (reported a 48-minute unattended self-debugging repair, at $1-2/hr background-thinking cost); exo adds an append-only event log, a swappable executor, and a snapshot/rollback-capable sandbox so an agent can rewrite its own prompts/tools/memory without corrupting durable state.
+- **JIT-Agent.** The model synthesizes its own harness over modules for memory, planning, action protocol, and tool orchestration at runtime, reporting gains over off-the-shelf agent scaffolds — a step further than a fixed harness the developer designs upfront.
+- **Prime Agent: context as a variable, self-modifiable harness.** Prime Intellect's open-source Prime Agent (built on "pi") gives the model a persistent IPython kernel as its only tool, so it programs over its own history and launches sub-agents (long sessions become a programming problem, not a context-window problem), plus persistent multi-agent orchestration and a self-modifiable "Continual Harness." Vendor-reported: 95.5% on ARC-AGI-3, above the cited human-expert baseline, and working SEGA Genesis and Game Boy Color emulators built from scratch in Rust on EmulatorBench.
 
 ## Harness continual learning
 
@@ -71,6 +73,7 @@ ByteDance Seed's HarnessDev has models build and then iteratively improve their 
 
 ## Recent changes
 
+- [2026-10-19] Added JIT-Agent (runtime-synthesized harness) and Prime Agent's self-modifiable Continual Harness, moved from [Harness (agent)](harness.md).
 - [2026-10-19] Page created, split out of [Agent improvement loop](agent-improvement-loop.md) (Better-Harness, self-improving skills) and [Harness (agent)](harness.md) (self-modifying harnesses, harness continual learning, HarnessDev).
 - [2026-10-09] Added Harness² (Google Cloud AI Research): label-free per-task harness refinement via propose-probe-compose, plus a lessons library carried across tasks; up to +11.5 points on WorkBuddy-Bench with frozen weights.
 - [2026-04-22] Added self-improving skills pattern: closed feedback loop for skill drift; meta-skill 5-step prompt optimization loop
@@ -91,3 +94,5 @@ ByteDance Seed's HarnessDev has models build and then iteratively improve their 
 - [AINews — Poolside / NVIDIA (August 21)](../sources/newsletters/ainews-poolside-nvidia-2026-08-21.md)
 - [AINews — Muse Spark 1.3 (September 3)](../sources/newsletters/ainews-muse-spark-13-2026-09-03.md)
 - [Harness²: Recursive Agent Harnessing for an Open World — Google Cloud AI Research](../sources/papers/harness2-recursive-harnessing-2026-10.md)
+- [[AINews] OpenAI to reach AGI bar by end-2026](../sources/newsletters/ainews-openai-agi-bar-2026-08-28.md)
+- [Prime Intellect on X: \"Introducing Prime Agent: A self-improving RLM harness\](../sources/tweets/primeintellect-prime-agent-2026-08-05.md)

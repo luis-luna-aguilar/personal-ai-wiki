@@ -15,6 +15,7 @@ OpenAI's product post turns the Agents SDK into a clearer statement about what p
 
 ## Influenced pages
 
+- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — harness/compute separation (moved from Harness)
 - [OpenAI Agents SDK](../../tools/openai-agents-sdk.md) — new tool page for the SDK's updated role in the agent-runtime stack
 - [Agents](../../state-of/agents.md) — adds OpenAI as another serious `agent-orchestration` entry beside Anthropic Managed Agents
 - [Harness (agent)](../../concepts/harness.md) — adds a concrete vendor example of the harness as memory + orchestration + filesystem + execution-boundary infrastructure

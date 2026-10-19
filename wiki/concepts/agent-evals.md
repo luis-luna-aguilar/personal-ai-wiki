@@ -4,7 +4,7 @@ type: concept
 domains: [agents]
 tags: [agentic]
 as_of: 2026-09-01
-sources: [agents-evals-deep-research, cost-aware-agent-evaluation-2026-04-28, ainews-not-much-happened-2026-07-02, autoresearch-agent-recipes-2026-07, ai-code-review-eval-integrity-2026-06, dashbench-code-review-understanding-2026-07, effective-feedback-compute-harness-2026-05, every-after-automation-2026-05, ainews-fal-h3-max-live-2026-09-01]
+sources: [agents-evals-deep-research, cost-aware-agent-evaluation-2026-04-28, ainews-not-much-happened-2026-07-02, autoresearch-agent-recipes-2026-07, ai-code-review-eval-integrity-2026-06, dashbench-code-review-understanding-2026-07, effective-feedback-compute-harness-2026-05, every-after-automation-2026-05, ainews-fal-h3-max-live-2026-09-01, ainews-openai-shuts-off-cursor-2026-08-29]
 ---
 
 # Agent evals
@@ -50,6 +50,7 @@ Because the harness, tools, and environment are part of what you are evaluating:
 - The eval suite needs to cover multiple layers: result quality, trajectory quality, and component quality.
 - Eval-driven development becomes a first-class practice: iterate on the harness using evals as the signal, separate from any model update. That is the premise of [Agent improvement loop](agent-improvement-loop.md).
 - Effective Feedback Compute is a useful direction because it evaluates the information value of feedback inside the loop. Long traces and many tool calls can still be low-value if they do not change the agent's trajectory toward success.
+- **Task-completion benchmarks as a harness-evaluation surface.** Alibaba Accio's open-sourced CommerceAgentBench (107 tasks spanning procurement, listings, operations, fulfillment, after-sales) checks what an agent actually changed, saved, or submitted rather than what it claims; the best observed run passed only 61.7% of tasks.
 
 ## Infrastructure layer (as of 2026-07-08)
 
@@ -85,6 +86,7 @@ Dan Shipper's "chart psychosis" critique (Every, May 2026) argues a benchmark sc
 
 ## Recent changes
 
+- [2026-10-19] Added CommerceAgentBench as an outcome-checking task benchmark, moved from [Harness (agent)](harness.md).
 - [2026-10-19] Split: the "chart psychosis" benchmark-framing critique moved to [AGI timeline claims](../trends/agi-timeline-claims.md); a one-paragraph pointer remains.
 - [2026-09-01] Added multi-turn behavioral evals: Transluce's 77-model-variant mental-health-crisis eval, framed by researchers as a template for long-horizon, user/environment-simulating agent evals.
 - [2026-07-14] Added a pointer to the new [Economic agent evals](economic-agent-evals.md) page (Cognition's human-hours-equivalent estimator alongside Vending Bench).
@@ -104,3 +106,4 @@ Dan Shipper's "chart psychosis" critique (Every, May 2026) argues a benchmark sc
 - [Effective Feedback Compute and harness profiles](../sources/newsletters/effective-feedback-compute-harness-2026-05.md)
 - [After Automation — Dan Shipper (Every)](../sources/articles/every-after-automation-2026-05.md)
 - [AINews — Fal's H3 Max Live breaks the infinite videogen barrier](../sources/newsletters/ainews-fal-h3-max-live-2026-09-01.md)
+- [[AINews] OpenAI shuts off Cursor](../sources/newsletters/ainews-openai-shuts-off-cursor-2026-08-29.md)

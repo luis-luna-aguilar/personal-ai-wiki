@@ -27,23 +27,7 @@ Company-wide AI enablement is the practical problem of getting a broad organizat
 
 ## AI adoption maturity model
 
-Every (Mike Taylor / Laura Entis, June 2026) published an 8-level framework for AI adoption maturity. Central insight: **higher level is not automatically better.** The right level depends on how much you trust the AI and how costly a mistake is.
-
-| Level | Name | What the AI does |
-|---|---|---|
-| 1 | Chatbot | You ask, it answers. Single turn. No memory. |
-| 2 | Conversational assistant | Multi-turn, context-aware. Still human-initiated every turn. |
-| 3 | Tool user | AI calls external tools (search, calculator, APIs) inside a conversation. |
-| 4 | Autonomous task executor | Completes multi-step tasks with minimal steering. Human reviews output. |
-| 5 | Background agent | Runs unsupervised; triggers on schedule or event; reports results. |
-| 6 | Goal-directed agent | Given an objective and constraints; plans and executes independently. |
-| 7 | Multi-tool orchestrator | Combines tools, agents, and APIs across a pipeline to complete complex work. |
-| 8 | Sub-agent orchestrator | Runs a team of specialized sub-agents under a master orchestrator. |
-
-**Practical rules from the framework:**
-- Match level to task risk and trust. High-stakes tasks with hard-to-verify outputs belong at lower levels with more human review.
-- The signal to move up: consistent performance at the current level with no meaningful error rate — not just enthusiasm or capability.
-- Levels 5-8 require investing in evals, verification, and guardrails before promotion.
+Every's 8-level AI adoption and fluency framework (chatbot → sub-agent orchestrator) and its promotion rules now live with the autonomy ladder on [Agent autonomy and governance](agent-autonomy-and-governance.md#ai-adoption-and-fluency-levels).
 
 **5-step executive implementation (Natalia Quintero, Every Consulting):**
 1. Identify a high-ROI anchor workflow (narrow scope, measurable output, high volume)
@@ -52,7 +36,7 @@ Every (Mike Taylor / Laura Entis, June 2026) published an 8-level framework for 
 4. Roll out with a visible social loop (demos, leaderboards, shared channels)
 5. Expand to second and third workflows only after the first is stable and the social loop is active
 
-Source: "AI Is Ready. Organizations Aren't." (Every, June 2026) — based on interviews with 100+ leadership teams.
+Source: "AI Is Ready. Organizations Aren't." (Every, June 2026), based on interviews with 100+ leadership teams.
 
 ## Proven patterns
 
@@ -126,6 +110,7 @@ Embedding provider engineers inside customer organizations (the FDE model, inclu
 
 ## Recent changes
 
+- [2026-10-19] Merged Every's 8-level adoption maturity model with the duplicate AI-fluency ladder on [Agent autonomy and governance](agent-autonomy-and-governance.md); the 5-step executive rollout stays here.
 - [2026-10-19] Split the FDE model out to [Forward-deployed engineering](forward-deployed-engineering.md); the autonomy ladder, humans-in/above-the-loop, and governance patterns out to [Agent autonomy and governance](agent-autonomy-and-governance.md); and the cost/model-routing patterns into [Cost-aware AI task routing](cost-aware-ai-task-routing.md).
 - [2026-09-09] Split macro adoption/labor statistics out to [Agents reshape organizations](../trends/agents-reshape-organizations.md) and practice-level case studies out to [AI adoption: evidence from practice](ai-adoption-evidence.md); regrouped "Proven patterns" under `###` subheads (platform/strategy, agent design, onboarding/culture, governance/autonomy, cost/routing).
 - [2026-09-04] Added process-re-engineering framing for AI adoption (Michael Hammer's 1990 BPR critique, touch-time-vs-elapsed-time, department-level mapping method, Deterministic/Agentic/HITL step-sorting).

@@ -4,7 +4,7 @@ type: concept
 domains: [agents]
 tags: [agentic]
 as_of: 2026-09-07
-sources: [thecode-april-22-2026, ainews-2026-04-22, shopify-claude-code-bessemer-2026-05, ainews-death-of-params-glm-53-2026-08-20, ainews-poolside-nvidia-2026-08-21, ainews-andrew-ng-ai-engineering-2026-08-25, gemini-managed-agents-2026-07, claude-managed-agents-updates-2026-05, ainews-openai-agi-bar-2026-08-28, ainews-openai-shuts-off-cursor-2026-08-29, cloudflare-computer-launch-2026-09-07, skills-and-plugin-packaging-late-march]
+sources: [thecode-april-22-2026, ainews-2026-04-22, shopify-claude-code-bessemer-2026-05, ainews-death-of-params-glm-53-2026-08-20, ainews-poolside-nvidia-2026-08-21, ainews-andrew-ng-ai-engineering-2026-08-25, gemini-managed-agents-2026-07, claude-managed-agents-updates-2026-05, ainews-openai-agi-bar-2026-08-28, ainews-openai-shuts-off-cursor-2026-08-29, cloudflare-computer-launch-2026-09-07, skills-and-plugin-packaging-late-march, openai-agents-sdk-evolution, agent-infrastructure-harness-2026-05-01, ainews-navier-stokes-2026-09-09, claude-tag-slack-agent-2026-06, ainews-fal-h3-max-live-2026-09-01]
 ---
 
 # Agent runtime platforms
@@ -23,14 +23,17 @@ The infrastructure layer underneath and around an agent [harness](harness.md): w
 - **Isolates over containers as the default agent-runtime primitive.** Cloudflare's open-source `@cloudflare/computer` argues container-per-agent doesn't scale to hundreds of millions of concurrent agents, and gives agents a durable shared filesystem across two swappable execution backends: fast, cheap isolates (Cloudflare Workers/Durable Objects) for file/git/data work, and full-Linux containers only when npm, native binaries, or a real toolchain are actually needed. Target: containers handle under 10% of an agent's work.
 - **Managed-agent platform primitives.** Hosted agent platforms are absorbing work that custom harnesses used to implement manually: tool connectivity through MCP, background execution, custom function calling, credential refresh, stateful interaction APIs, and sandboxed execution — a sign that "harness" is becoming product infrastructure, not only application code. Claude Managed Agents added self-hosted sandboxes and MCP tunnels in May 2026, and in August 2026 Claude Platform reached GA for computer use, the browser tool, the Skills API, and the Files API, plus an AG-UI adapter for Managed Agents.
 - **Open harnesses matching managed-agent quality at lower cost.** TrueFoundry's MIT-licensed, self-hostable TrueForge harness reportedly matched Claude Managed Agents on Opus 4.8 using ~30% fewer tokens on a 14-task enterprise benchmark, and cut cost ~75% on GLM-5.2 versus a frontier model — harness quality compensating for model cost.
-- **Plugin-native harness runtimes.** DeepSeek Harness (DSH) is an intentionally thin shell over a plugin system called Cordis, where even the agent loop itself is a plugin — beta users reportedly shipped 100+ community plugins and filed 400+ issues in under a week, illustrating how far extensibility can push down into a runtime's own control loop.
+- **Plugin-native harness runtimes.** DeepSeek Harness (DSH) is an intentionally thin shell over a plugin system called Cordis, where even the agent loop itself is a plugin — beta users reportedly shipped 100+ community plugins and filed 400+ issues in under a week, illustrating how far extensibility can push down into a runtime's own control loop. DeepSeek's harness later took on breaking plugin-contract changes.
 - **Real-session browsing.** [Hermes Agent](../tools/hermes-agent.md) can browse using a managed copy of the user's real Chrome profile and logins, collapsing auth friction — and raising the importance of scoped-permission design at the harness layer.
+- **Harness separate from compute.** OpenAI's April 15, 2026 Agents SDK post gives a concrete vendor example of the broad definition: configurable memory, sandbox-aware orchestration, Codex-like filesystem tools, MCP, skills, AGENTS.md, shell, and `apply_patch`. It keeps the harness separate from compute so credentials stay outside execution sandboxes and runs survive sandbox failure via snapshotting and rehydration.
 
 ## Fleet management and governance
 
 - **LLM proxy as the fleet management layer.** At org scale (Shopify, 23K engineers), routing all AI coding-tool traffic through a centralized LLM proxy creates a control plane for cost, model choice, and policy enforcement without requiring per-tool reconfiguration. The proxy sits above the individual tool harness and below the model.
 - **Enterprise-managed MCP auth.** Anthropic rolled out enterprise-managed authentication for MCP connectors, centralizing authorization through the org's identity provider so end users no longer perform per-tool OAuth for connectors like Asana, Atlassian, Figma, Notion, Slack, and Supabase — moving MCP connector auth from a per-user click-through into IT-governed infrastructure.
 - **Standardize on one harness, not bespoke orchestration graphs.** A position paper argues enterprises should pick a single reusable coding-agent harness rather than building bespoke orchestration per team, since harness choice can matter more for outcomes than model choice.
+- **Deployment manifests.** LangChain's `deepagents.toml` manifest packages sandboxing, auth, RBAC, credentials, and frontend config into one deployable artifact; Agent Collabs uses Hugging Face dataset buckets (shared storage) plus Spaces (isolated execution) so heterogeneous agents collaborate without sharing one mutable runtime. LangChain later added `deepagents` primitives for this layer: subagent forking that passes a supervisor's context down to its subagents, and managed connections that abstract OAuth/token/consent flows for either agent-owned or user-owned identities.
+- **Org-embedded identity and permissioning.** Slack-native and team-channel agents need a legible identity, scoped access to channels/tools/data, audit trails, and memory boundaries that match how the organization partitions work; otherwise the harness becomes an organizational risk surface (unclear accountability, prompt-injection exposure, budget opacity, channel noise).
 
 ## Tooling and distribution
 
@@ -45,6 +48,7 @@ Several practitioners describe local CLI agents giving way to cloud-resident "pe
 
 ## Recent changes
 
+- [2026-10-19] Added the OpenAI Agents SDK harness/compute separation, deployment-manifest implementations (deepagents.toml, Agent Collabs, deepagents primitives), and org-embedded agent identity, moved from [Harness (agent)](harness.md).
 - [2026-10-19] Page created, split out of [Harness (agent)](harness.md): its "Tooling, protocol, and fleet management" and "Managed platforms, distribution, and evaluation" subsections, the Cloudflare isolates bullet, the cloud-resident-agents paragraph, and the late-March packaging paragraph from "Why it matters", and the Claude Platform GA fact (previously only in Harness's Recent changes).
 - [2026-09-07] Added Cloudflare's `@cloudflare/computer`: isolates-over-containers as the default agent-runtime primitive, with a shared filesystem across two swappable execution backends.
 
@@ -69,3 +73,7 @@ Several practitioners describe local CLI agents giving way to cloud-resident "pe
 - [AINews — OpenAI to reach AGI bar by end-2026](../sources/newsletters/ainews-openai-agi-bar-2026-08-28.md)
 - [AINews — OpenAI shuts off Cursor](../sources/newsletters/ainews-openai-shuts-off-cursor-2026-08-29.md)
 - [Cloudflare — Your agent needs a computer, not a container](../sources/articles/cloudflare-computer-launch-2026-09-07.md)
+- [The next evolution of the Agents SDK](../sources/articles/openai-agents-sdk-evolution.md)
+- [Agent infrastructure, harness engineering, and collaborative agent systems](../sources/newsletters/agent-infrastructure-harness-2026-05-01.md)
+- [[AINews] OpenAI reports Navier-Stokes singularity find in 88 hours using Astra-next, roughly 10,000 agents and 130B tokens](../sources/newsletters/ainews-navier-stokes-2026-09-09.md)
+- [Claude Tag Slack-native agent launch](../sources/newsletters/claude-tag-slack-agent-2026-06.md)

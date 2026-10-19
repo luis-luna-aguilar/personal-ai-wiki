@@ -13,6 +13,7 @@ domains: []
 Every weekly digest that surfaced two practical guides: Mike Taylor's 8-level AI adoption framework (with sample prompts and level-up signals) and Natalia Quintero's 5-step 60-day executive implementation plan. Quintero heads Every Consulting and bases the guide on interviews with 100+ leadership teams.
 
 ## Influenced pages
+- [Agent autonomy and governance](../../training/agent-autonomy-and-governance.md) — 8-level maturity model (moved from Company-wide AI enablement)
 - [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — 8-level framework and 5-step plan added
 
 ## Key claims extracted

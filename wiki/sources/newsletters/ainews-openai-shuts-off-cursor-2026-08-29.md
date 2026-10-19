@@ -15,6 +15,7 @@ AINews digest covering OpenAI cutting Cursor's model access post-SpaceX-acquisit
 
 ## Influenced pages
 
+- [Agent evals](../../concepts/agent-evals.md) — CommerceAgentBench (moved from Harness)
 - [Cursor](../../tools/cursor.md) — OpenAI model-access cutoff
 - [GLM-5.3](../../models/glm-5-3.md) — full GLM-5.3 open-weighting, day-0 vLLM specs
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Tencent Hy4-preview, Qwen3.8-Flash

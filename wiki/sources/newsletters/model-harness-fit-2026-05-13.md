@@ -14,6 +14,7 @@ May 2026 newsletter coverage argues that coding-agent quality depends on model-s
 
 ## Influenced pages
 
+- [Harness vs model](../../concepts/harness-vs-model.md) — model-harness fit (moved from Harness)
 - [Harness](../../concepts/harness.md)
 - [State of Coding](../../state-of/coding.md)
 

@@ -15,6 +15,7 @@ AINews and related newsletter coverage summarize Anthropic's Claude Tag beta: Cl
 
 ## Influenced pages
 
+- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — org-embedded agent identity (moved from Harness)
 - [Claude Tag](../../tools/claude-tag.md) — creates separate Slack-native team-agent product page.
 - [State of Agents](../../state-of/agents.md) — updates Anthropic's agent orchestration position.
 - [Wiki index](../../index.md) — adds Claude Tag under tools.

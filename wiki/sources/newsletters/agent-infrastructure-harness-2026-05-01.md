@@ -14,6 +14,7 @@ AINews clusters several infrastructure signals: Cursor's active harness testing 
 
 ## Influenced pages
 
+- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — deployment manifests (moved from Harness)
 - [Harness](../../concepts/harness.md) — expanded scope: deployment manifests, auth, RBAC, credentials, collaboration surfaces
 - [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — two new patterns: config-driven deployment and artifact-backed collaboration
 - [State of Agents](../../state-of/agents.md) — recent-change note on harness scope shift

@@ -15,6 +15,7 @@ Launch thread for Prime Agent, an open-source RLM-native, self-modifiable coding
 
 ## Influenced pages
 
+- [Automated harness optimization](../../concepts/automated-harness-optimization.md) — Prime Agent's Continual Harness (moved from Harness)
 - [Harness (agent)](../../concepts/harness.md) — Prime Agent bullet
 
 ## Key claims extracted

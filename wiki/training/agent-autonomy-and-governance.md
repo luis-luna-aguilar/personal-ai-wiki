@@ -4,7 +4,7 @@ type: training
 domains: [agents]
 tags: [agentic]
 as_of: 2026-08-28
-sources: [agents-evals-deep-research, mckinsey-agentic-org, ramp-ai-adoption-playbook, ai-for-boring-businesses, token-tightening-ai-finops-2026-06, every-ai-sandwich-april-2026, every-cheap-competence-after-automation-2026-05, every-33-questions-executives-2026-08-28]
+sources: [agents-evals-deep-research, mckinsey-agentic-org, ramp-ai-adoption-playbook, ai-for-boring-businesses, token-tightening-ai-finops-2026-06, every-ai-sandwich-april-2026, every-cheap-competence-after-automation-2026-05, every-33-questions-executives-2026-08-28, every-ai-adoption-levels]
 ---
 
 # Agent autonomy and governance
@@ -29,6 +29,30 @@ A practical governance model for expanding what an agent is allowed to do: each 
 
 **The practical implication for enablement:** do not deploy a new agent at Level 3 or 4 because the vendor demo looked good. Start at Level 1, build an eval suite, and promote based on measured evidence. The enablement question becomes: what eval evidence would make us comfortable giving this agent more authority?
 
+## AI adoption and fluency levels
+
+Every (Mike Taylor / Laura Entis, June 2026) published an 8-level framework for AI adoption maturity, which its consulting practice also uses as an AI-fluency ladder. Central insight: **higher level is not automatically better.** The right level depends on how much you trust the AI and how costly a mistake is.
+
+| Level | Name | What the AI does |
+|---|---|---|
+| 1 | Chatbot | You ask, it answers. Single turn. No memory. |
+| 2 | Conversational assistant | Multi-turn, context-aware. Still human-initiated every turn. |
+| 3 | Tool user | AI calls external tools (search, calculator, APIs) inside a conversation. |
+| 4 | Autonomous task executor | Completes multi-step tasks with minimal steering. Human reviews output. |
+| 5 | Background agent | Runs unsupervised; triggers on schedule or event; reports results. |
+| 6 | Goal-directed agent | Given an objective and constraints; plans and executes independently. |
+| 7 | Multi-tool orchestrator | Combines tools, agents, and APIs across a pipeline to complete complex work. |
+| 8 | Sub-agent orchestrator | Runs a team of specialized sub-agents under a master orchestrator. |
+
+**Practical rules from the framework:**
+- Match level to task risk and trust. High-stakes tasks with hard-to-verify outputs belong at lower levels with more human review.
+- The signal to move up: consistent performance at the current level with no meaningful error rate — not just enthusiasm or capability.
+- Levels 5-8 require investing in evals, verification, and guardrails before promotion.
+
+**Where people sit (Every consulting, August 2026):** most people are at levels 1–2 (chatbot use, co-working with AI in Docs or Excel). The level knowledge workers are actively moving to is "agentic" work (Codex, Claude Cowork, Claude Code, adopting skills and running several tasks at once). Everything above that is still largely experimental, up to level 8, where a manager AI orchestrates other AIs. Use the ladder to calibrate expectations rather than pushing every team toward the top.
+
+This ladder measures how people and teams use AI; the autonomy ladder above measures how much an individual agent is trusted to act alone.
+
 ## Humans in the loop vs. above the loop
 
 A useful distinction for planning workflow redesign:
@@ -47,7 +71,6 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - **Reward outcomes, not AI usage.** Teams stall or drift when "used AI" becomes the goal; quality and throughput improvements are the only metrics that matter.
 - **Trust battery with judge agent.** Grant autonomy incrementally, tied to demonstrated reliability rather than elapsed time — see [AI adoption: evidence from practice](ai-adoption-evidence.md) for the concrete Claudie mechanism (nightly judge agent, starting trust percentage, self-updating memory).
 - **Keep humans at the judgment boundary.** As AI fills in the middle of workflows, employees need stronger habits for framing, taste, coordination, and review rather than only faster execution tactics.
-- **An explicit AI-fluency ladder.** Every's consulting practice uses an 8-level fluency framework: most people sit at levels 1-2 (chatbot use, co-working with AI in Docs/Excel); level 3, agentic, is where knowledge workers are actively moving (Codex, Claude Cowork, Claude Code, adopting skills and running multiple tasks at once); above that is largely experimental, up to level 8 where a manager AI orchestrates other AIs. Use this to calibrate expectations rather than pushing every team toward the highest level.
 - **Split governance ownership explicitly.** A central AI team should own standards, security and vendor decisions, shared infrastructure, and the first few working examples; individual business teams should own their own workflows. Centralizing everything creates a bottleneck; leaving every team to build alone creates sprawl.
 - **Measure at the workflow level, never by a single metric.** Track cycle time, output quality, error/rework rate, user satisfaction (e.g. NPS), and traditional cost-benefit business impact — and track reuse of shared skills as a leading indicator. Establish a pre-AI baseline (time, quality standard, cost, common mistakes) before claiming a workflow improved.
 
@@ -57,6 +80,7 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 
 ## Recent changes
 
+- [2026-10-19] Added Every's 8-level adoption maturity model from [Company-wide AI enablement](company-wide-ai-enablement.md), merged with the AI-fluency ladder that described the same framework.
 - [2026-10-19] Page created, split out of [Company-wide AI enablement](company-wide-ai-enablement.md): its "Autonomy ladder" and "Humans in the loop vs. above the loop" sections and the "Governance, autonomy, and reliability" proven-patterns group.
 
 ## Related
@@ -77,3 +101,4 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - [Every — "You're the Bread in the AI Sandwich" (April 2026)](../sources/newsletters/every-ai-sandwich-april-2026.md)
 - [Every - Cheap competence and after automation](../sources/newsletters/every-cheap-competence-after-automation-2026-05.md)
 - [Every — 33 Questions Executives Ask About AI—Answered](../sources/newsletters/every-33-questions-executives-2026-08-28.md)
+- [AI Is Ready. Organizations Aren''t." — Every (June 7)](../sources/newsletters/every-ai-adoption-levels.md)

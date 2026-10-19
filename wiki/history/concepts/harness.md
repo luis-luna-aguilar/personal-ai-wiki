@@ -35,3 +35,7 @@ Older recent-change entries spilled from [Harness (agent)](../../concepts/harnes
 ## Archived from current page on 2026-10-19
 
 - [2026-07-14] Added the Lilian Weng 2023-vs-2026 essay contrast and Anthropic's "grown, not designed" framing, from AI Engineer World's Fair 2026 coverage.
+
+## Archived from current page on 2026-10-19
+
+- [2026-08-05] Added Prime Intellect's open-source Prime Agent: RLM-native programmatic tool calling (context as a variable), persistent multi-agent orchestration, self-modifiable Continual Harness; reported 95.5% ARC-AGI-3 (vendor-claimed).
