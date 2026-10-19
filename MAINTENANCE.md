@@ -13,7 +13,7 @@ Scripts in `scripts/` cover mechanical hygiene. They are cheap — run them when
 | `orphans.py` | Report pages with no inbound internal links | "find orphan pages" |
 | `link_check.py` | Report broken Markdown links and editor-specific link syntax in wiki page bodies | "check links" |
 | `tag_compliance.py` | Report tags/domains/subcategories not in `_schema/` | "check tag compliance" |
-| `page_length.py` | Report pages over their type's body-word ceiling, flat `##` sections with no `###` subheads, month-named "accretion" headings, and over-long state-of leader bullets (thresholds in `config.yml → page_length`) | "check page length", "split candidates" |
+| `page_length.py` | Report pages over their type's body-word ceiling (warning within 110%, "split required" above 150%), flat `##` sections with no `###` subheads, month-named "accretion" headings, and over-long state-of leader bullets (thresholds in `config.yml → page_length`) | "check page length", "split candidates" |
 | `lint_all.py` | Chain stale, orphans, link_check, tag_compliance, and page_length | "run lint", "lint the wiki" |
 | `index_check.py` | Report pages on disk not in `wiki/index.md`, and index entries with no matching file | "check index", "index check" |
 | `source_orphans.py` | Report source files not referenced by any wiki page frontmatter, and broken source refs | "check source orphans", "source orphans" |

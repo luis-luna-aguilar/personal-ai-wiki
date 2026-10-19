@@ -245,8 +245,10 @@ The word targets above (150–300 words for routine pages) are writing targets. 
 2. **A heading that names a batch, not an idea.** A `##`/`###` heading containing a month-and-year ("(August 2026)") or the word "cluster" is an ingest bucket that was never merged into the page's structure. Fold its content into the right conceptual section, or split it out. The schema-mandated `(as of YYYY-MM-DD)` stamp is not a trigger.
 3. **Two Recent-changes streams.** When entries alternate between unrelated subjects, the page is two pages.
 4. **A state-of leader bullet longer than about two lines** (`state_of_bullet_max_chars`). Move the detail to the entity page and leave a one-line pointer.
-5. **The body ceiling for the page's type** (`body_word_ceiling`): concept/trend 1,200; tool/model/benchmark 1,500; workflow and state-of 2,000; training 2,500. Body words exclude frontmatter, Recent changes, Sources, Related, and See also.
-6. **A training page that covers more than one function or audience.** Cut along the "function-specific training guidance" page shape: one page per function or audience.
+5. **The body ceiling for the page's type** (`body_word_ceiling`): concept/trend 1,200; tool/model/benchmark 1,500; workflow and state-of 2,000; training 2,500. Body words exclude frontmatter, Recent changes, Sources, Related, and See also. Up to `warn_tolerance` (110%) of the ceiling is only a warning and needs no split. Above it, the page is a split candidate. Past `split_required_ratio` (150%), the split is required (see below).
+6. **A training page that covers more than one function or audience.** Cut along the "function-specific training guidance" page shape: one page per function or audience. This rule comes before the word ceiling. A training page over its ceiling is split by audience first. A proposal must not add a second function's or audience's guidance to a training page; it creates or updates that audience's page instead.
+
+**Required splits.** When a proposal would leave a page above 150% of its body ceiling (whether it pushes the page past that point or the page is already past it), the split is not an open question. It is its own checkbox in `## Intended changes`, `- [ ] **Split** wiki/<origin>.md → wiki/<new>.md`, with full drafts of the new page and the origin page's pointer under `## Page drafts`, following the procedure below. Approve-all includes it; the reviewer can still decline it by approving items individually. Pages above 110% but at or under 150% keep the old behaviour: the proposal offers the split in Open questions. The same applies to a training page that covers more than one audience: its audience split is a required Split item.
 
 **How to split (the procedure the two precedents settled on — `concepts/mcp` → `concepts/company-brain`, `trends/ai-in-science` → `trends/ai-in-mathematics`):**
 
@@ -257,7 +259,7 @@ The word targets above (150–300 words for routine pages) are writing targets. 
 - `wiki/index.md` gains the new page and its count moves; state-of pages that listed the origin page are checked for lines that should now point at the new page.
 - Run `scripts/link_check.py` and `scripts/page_length.py` on both pages before reporting done.
 
-`"check page length"` / `"split candidates"` runs the lint. The script reports; it never splits. Splitting is a judgment call the user makes from the report or from a proposal's Open questions.
+`"check page length"` / `"split candidates"` runs the lint. The script reports; it never splits. Findings are marked `[warn]` (within 110%), plain (split candidate), or `split required` (above 150%). Only non-warning findings make the script exit 1. Splitting below 150% is a judgment call the user makes from the report or from a proposal's Open questions. Above 150%, the next proposal that touches the page must include the split as a checkbox item.
 
 ### Sources pages
 
@@ -512,8 +514,13 @@ created: 2026-04-09
 
 ## Summary
 
+### In short
+One paragraph (70–110 words) that lets the reviewer reject quickly or decide to read on. Open with the source's critical takeaway(s), the "so what" a reader should remember, stated as a claim, not as a topic ("rebuilding infrastructure is now cheaper than patching it", not "a post about CI scaling"). Then give the one or two facts that back it, which pages it touches, and the strongest reason to hesitate (overlap with what the wiki already says, a page pushed past its length limit, a schema addition, a partial or paywalled source), or "no red flags" if there is none.
+
+End with one separate line, linked to the section, saying only whether there are open questions: `[[#Open questions|Open questions: 2 to answer.]]` or `[[#Open questions|Open questions: none.]]`. Do not restate the questions.
+
 ### The source
-One or two prose paragraphs telling the story of the source for a reader who has not read it and does not carry the wiki in their head. Who, when, what happened or was argued, the key numbers, and the caveats the source itself admits.
+One to three prose paragraphs telling the story of the source for a reader who has not read it and does not carry the wiki in their head. Who, when, what happened or was argued, the key numbers, and the caveats the source itself admits.
 
 ### What changes
 One or two sentences on what the wiki said before on this topic (the only place prior state appears — keep it short). Then one bullet per page or natural group of pages, in plain language: what the page gains, what is removed or replaced, and its new date.
@@ -524,7 +531,7 @@ One or two sentences on what the wiki said before on this topic (the only place 
 - One new source page for the launch post.
 
 ### What to weigh
-One paragraph, honest, listing only the judgment calls the reviewer must make (thin or secondary sourcing, inferred dates, scope choices, schema approvals, collisions with other open proposals). If nothing: "Nothing beyond the sourcing noted above."
+One paragraph, honest, listing only the judgment calls the reviewer must make (inferred dates, scope choices, schema approvals, length splits, partial sources). If nothing: "Nothing to weigh."
 
 ## Intended changes
 
@@ -574,11 +581,14 @@ One paragraph, honest, listing only the judgment calls the reviewer must make (t
 
 **Rules for the `## Summary` section (the reviewer's decision surface):**
 - The user decides from the summary alone whether to accept the whole proposal or open the drafts. Write it as a **story, not an expert report**: consistent prose that carries its own context, because the reader does not hold the wiki in their head.
-- Exactly three `###` subsections: `The source`, `What changes`, `What to weigh`. Target 350–450 words; up to ~480 when the proposal touches five or more pages; ~250–350 for a single-page proposal.
+- Exactly four `###` subsections, in order: `In short`, `The source`, `What changes`, `What to weigh`.
+- `In short` is the quick-reject gate: one plain-prose paragraph of 70–110 words, no bullets, readable without anything below it. Its first sentence states the source's critical takeaway(s). A paragraph that only describes what happened, without saying what it means, fails this rule. It must also say what the proposal would add and give the reviewer one honest reason to hesitate (or say there is none). It is the only subsection allowed to repeat facts from the other three. Its last line is the open-questions line, separate from the paragraph and not counted in the word range. It links to `## Open questions` with an Obsidian heading link, gives the count or "none", and never restates the questions.
+- The other three subsections target 350–450 words together; up to ~550 when the proposal touches five or more pages or the source needs the room; ~250–350 for a single-page proposal. `The source` takes most of any extra length.
 - `The source` is narrative prose. No bullet dumps of facts. Define jargon inline. If several raw files feed the proposal, weave them into one story.
 - `What changes` leads with the incoming changes. Prior wiki state gets one or two sentences of context at the top and nowhere else. One bullet per page or natural group of pages; bold page names in natural language (**State of Models**, **Cursor**), code paths only for pages being created. Every leader-line swap, deletion, history spill and schema addition is named explicitly but briefly. Say "page date moves to 8 July", not "`as_of` bumped".
-- `What to weigh` is one paragraph of genuine judgment items only — thin or secondary-only sourcing, inferred publication dates, scope choices, schema approvals. Mechanical defects (ordering, caps, missing links, date mismatches) are fixed in the drafts, never listed here. **Never mention other pending proposals**: overlap between proposals is resolved by sequential rebase at apply time (Workflow 5), not by the reviewer.
-- Never repeat a fact across the three subsections. Numbers appear only where they change the decision.
+- `What to weigh` is one paragraph of genuine judgment items only — inferred publication dates, scope choices, schema approvals, length splits, sources read only in part (paywall, unread appendix), or a claim taken from a secondary summary when the primary wasn't read. Mechanical defects (ordering, caps, missing links, date mismatches) are fixed in the drafts, never listed here. **Never mention other pending proposals**: overlap between proposals is resolved by sequential rebase at apply time (Workflow 5), not by the reviewer.
+- **Self-reporting is not a reason to hesitate.** This wiki tracks a field where almost every claim is self-reported: vendor benchmarks, company data about itself, single-author essays, preprints. That is the normal state of the evidence, not a red flag (see operating principle 4). Never cite self-reported, vendor-reported, first-party, single-source, unreplicated, or preprint status as a reason to hesitate in `In short` or as an item in `What to weigh`. Where it helps, `The source` can say who ran a measurement, as plain fact.
+- Never repeat a fact across `The source`, `What changes`, and `What to weigh`. Numbers appear only where they change the decision.
 - Every statement in the summary must be traceable to the drafts under `## Page drafts` or the source summary — the summary describes the proposal as written, not the source in general.
 
 **Rules for proposals:**
@@ -753,7 +763,7 @@ Once out of bootstrap:
 5. **Vocabulary is controlled.** Pick from `wiki/_schema/`. New tags/domains/subcategories require explicit approval in a proposal.
 6. **Subcategories can have multiple top players.** Do not force single winners.
 7. **Terms map to hubs before they become pages.** If the source's term belongs to a cluster with a hub page, look it up in the hub's mapping table first (see "Terminology discipline" above). Aliases update the canonical page; only a new cell in the hub's matrix justifies a new page.
-8. **Length is a split trigger, not a reason to summarize harder.** When an update would push a page past a trigger in "Page length and splitting", the proposal says so in Open questions and offers the split rather than compressing the new content to fit.
+8. **Length is a split trigger, not a reason to summarize harder.** When an update would push a page past a trigger in "Page length and splitting", the proposal offers the split rather than compressing the new content to fit. Below 150% of the ceiling, the offer goes in Open questions. Above 150%, or for a training page that covers more than one audience, the split is a required `**Split**` checkbox item with full drafts.
 
 ## Things you must NOT do
 

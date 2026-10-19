@@ -7,7 +7,9 @@ page_length.py — find wiki pages that have outgrown their type's body-word
 Checks, all configured in config.yml → page_length:
 
   1. body ceiling      body words (excluding frontmatter and the sections in
-                       `exclude_sections`) above `body_word_ceiling.<type>`
+                       `exclude_sections`) above `body_word_ceiling.<type>`;
+                       within `warn_tolerance` it is a warning only, above
+                       `split_required_ratio` it is marked "split required"
   2. flat section      a single `##` section above `flat_section_max_words`
                        with no `###` subheads
   3. dated heading     a `##`/`###` heading that names a month-and-year
@@ -21,7 +23,7 @@ Usage:
     python3 scripts/page_length.py           # human report
     python3 scripts/page_length.py --json    # machine-readable
 
-Exit code 1 if any finding.
+Exit code 1 if any finding other than a warning.
 """
 
 from __future__ import annotations
@@ -84,10 +86,15 @@ def check_page(page, cfg: dict) -> list[dict]:
         _words(text) for heading, text in sections if heading.lower() not in excluded
     )
     if body_words > ceiling:
+        ratio = body_words / ceiling
+        detail = f"{body_words} body words > {ceiling} ceiling for type {ptype} ({ratio:.0%})"
+        if ratio > float(cfg["split_required_ratio"]):
+            detail += " — split required"
         findings.append(
             {
                 "check": "body-ceiling",
-                "detail": f"{body_words} body words > {ceiling} ceiling for type {ptype}",
+                "detail": detail,
+                "warn": ratio <= float(cfg["warn_tolerance"]),
             }
         )
 
@@ -142,6 +149,8 @@ def main() -> int:
         "flat_section_max_words",
         "state_of_bullet_max_chars",
         "exclude_sections",
+        "warn_tolerance",
+        "split_required_ratio",
     ):
         require_config({"page_length": cfg}, f"page_length.{key}")
 
@@ -159,7 +168,7 @@ def main() -> int:
     if args.json:
         json.dump(results, sys.stdout, indent=2)
         print()
-        return 1 if results else 0
+        return 1 if failing(results) else 0
 
     print("Page length and split triggers")
     print(f"pages scanned: {len(pages)}")
@@ -170,13 +179,19 @@ def main() -> int:
         print(rel)
         for f in findings:
             by_check[f["check"]] = by_check.get(f["check"], 0) + 1
-            print(f"  [{f['check']}] {f['detail']}")
+            tag = f"warn: {f['check']}" if f.get("warn") else f["check"]
+            print(f"  [{tag}] {f['detail']}")
         print()
     if by_check:
         print("by check: " + ", ".join(f"{k}={v}" for k, v in sorted(by_check.items())))
     else:
         print("No page exceeds its ceiling or shows a split trigger.")
-    return 1 if results else 0
+    return 1 if failing(results) else 0
+
+
+def failing(results: dict[str, list[dict]]) -> bool:
+    """Warnings (body within warn_tolerance) never fail the lint."""
+    return any(not f.get("warn") for fs in results.values() for f in fs)
 
 
 if __name__ == "__main__":

@@ -64,6 +64,11 @@ page_length:
     state-of:  2000
     training:  2500
     default:   1500
+  # Body words up to ceiling × warn_tolerance are a warning only (no split).
+  warn_tolerance: 1.10
+  # Above ceiling × split_required_ratio, the next proposal touching the page
+  # must include the split as a checkbox item (AGENTS.md → Required splits).
+  split_required_ratio: 1.5
   # A single `##` section above this many words with no `###` subheads is a
   # flat section: the page's length is hiding in one undifferentiated list.
   flat_section_max_words: 800
