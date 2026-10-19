@@ -315,7 +315,7 @@ Triggered when the user gives you a URL and says **"ingest"** or **"fetch and in
 
 **Steps:**
 1. Run `python scripts/fetch_url.py --type <article|tweet|paper|repo> --url <URL>`. This uses a real browser (Playwright/Chromium) to avoid bot blocks.
-2. The script saves the markdown to the appropriate `raw/` subfolder and prints the path.
+2. The script saves the markdown to the appropriate `raw/` subfolder and prints the path. If the page is a bot check, login wall, 404, or nearly empty, it saves nothing and exits with code 3; treat that as a failed fetch.
 3. Proceed as with file ingest, starting from step 2.
 
 **If fetch fails:** retry once using the `aside-browser` skill to open the URL in a real, logged-in browser and read the rendered content — this is essential for X/Twitter links and any other site that blocks or degrades headless fetches (`fetch_url.py` reliably returns empty/"Untitled" content for x.com). Invoke the skill directly (`Skill({skill: "aside-browser", ...})`), then run `aside guide` first to load its real instructions. Switch to the user's personal account before browsing anything social/personal — `aside account use u0` (the default active account, e.g. `u3`, may not have the right login session or may be out of credits on a different backing model). If that also fails, tell the user and suggest they paste the content or use Obsidian Web Clipper. Do not fall back to `WebFetch`.
@@ -641,7 +641,7 @@ Triggered by **"apply this proposal"** / **"apply proposals/xxx.md"**.
 - **Frontmatter `sources:` and body `## Sources`:** merge — append the proposal's new ids/links to whatever is live; never replace the list.
 - **`as_of` and `## Current status (as of …)`:** set to the newer of the live value and the proposal's value — never move a date backwards.
 - **New pages:** if the page already exists at apply time (created by an earlier proposal), treat the Create as an Update and merge section by section using the rules above.
-- **Source pages — one per raw file:** before creating `wiki/sources/<type>/<slug>.md`, `grep -rl "source_file: <raw path>" wiki/sources/`. If a page for that raw file exists under any slug, do **not** create a second one: append the new Influenced-pages and Key-claims lines to the existing page and use its slug (id and link) everywhere the proposal's drafts referenced the new one.
+- **Source pages — one per raw file, except newsletters:** a newsletter or digest covers several unrelated stories, so it may have one source page per story it feeds (each with the same `source_file:`, a story-specific slug and title, and only that story's Influenced pages and Key claims). If a source page for the same story already exists, append to it instead. Every other raw file gets exactly one source page. For a non-newsletter source, before creating `wiki/sources/<type>/<slug>.md`, `grep -rl "source_file: <raw path>" wiki/sources/`. If a page for that raw file exists under any slug, do **not** create a second one: append the new Influenced-pages and Key-claims lines to the existing page and use its slug (id and link) everywhere the proposal's drafts referenced the new one.
 - **Stop and ask** only when the rebase is semantic, not mechanical: the section the draft edits no longer exists, a leader line now names a different tool/model than the draft assumes, or two claims directly contradict and neither is clearly newer.
 
 **Batch apply — "apply all approved proposals":** process every file in `proposals/*.md` that has `Approve all` checked or at least one individually checked item, **one at a time, oldest first** (by `created`, then filename). Each proposal is rebased onto the wiki as left by the previous one. Finish steps 1–7 for one before opening the next. Skip unchecked items and files with no checked boxes; report per-proposal results at the end.
@@ -712,6 +712,7 @@ All maintenance operations are defined in [`MAINTENANCE.md`](./MAINTENANCE.md). 
 - `"check source orphans"` → `python scripts/source_orphans.py`
 - `"check cap"` / `"recent changes cap"` → `python scripts/recent_changes_cap.py`
 - `"check page length"` / `"split candidates"` → `python3 scripts/page_length.py`
+- `"check raw orphans"` / `"untriaged sources"` → `python3 scripts/raw_orphans.py` (every raw file must trace to a triage, proposal, or source page)
 - `"build podcast files"` / `"rebuild podcast"` → `bash scripts/build_podcast.sh all`
 - `"run maintenance"` / `"do a maintenance pass"` → follow the full pass procedure in `MAINTENANCE.md`
 

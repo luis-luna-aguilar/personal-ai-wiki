@@ -40,9 +40,10 @@ def collect_referenced_slugs() -> set[str]:
     inline_source_re = re.compile(r"[\w-]+")
 
     for path in WIKI_ROOT.rglob("*.md"):
-        # Skip source pages themselves and history
+        # Skip source pages themselves. History counts: a superseded model or
+        # tool page archived there still cites the sources it was built from.
         rel = path.relative_to(WIKI_ROOT)
-        if rel.parts[0] in ("sources", "history", "_schema"):
+        if rel.parts[0] in ("sources", "_schema"):
             continue
 
         text = path.read_text(encoding="utf-8")

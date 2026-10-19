@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Run every cheap maintenance script and print a combined report.
 
-Chains: stale.py, orphans.py, link_check.py, tag_compliance.py, page_length.py.
+Chains: stale.py, orphans.py, link_check.py, tag_compliance.py, page_length.py, raw_orphans.py.
 
 Usage:
     python3 scripts/lint_all.py
@@ -20,6 +20,7 @@ SCRIPTS = [
     "link_check.py",
     "tag_compliance.py",
     "page_length.py",
+    "raw_orphans.py",
 ]
 
 

@@ -251,6 +251,35 @@ def fetch_with_playwright(
 # ---------------------------------------------------------------------------
 
 
+BLOCK_MARKERS = (
+    "access denied",
+    "javascript is not available",
+    "page not found",
+    "people on x are the first to know",
+    "enable javascript",
+    "are you a robot",
+    "just a moment",
+)
+
+
+def looks_blocked(title: str, body_md: str, min_words: int = 80) -> str | None:
+    """Return why the fetch looks like a block page or empty shell, else None.
+
+    These pages used to be saved as raw sources and then sat untriaged, since
+    there was nothing in them to ingest.
+    """
+    words = len(body_md.split())
+    if words >= 300:
+        return None
+    text = f"{title}\n{body_md}".lower()
+    for marker in BLOCK_MARKERS:
+        if marker in text:
+            return f"block/login page ('{marker}', {words} words)"
+    if words < min_words:
+        return f"only {words} words of content"
+    return None
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -316,6 +345,13 @@ def main() -> int:
     )
     if not title:
         title = page_title or "Untitled"
+
+    reason = looks_blocked(title, body_md)
+    if reason:
+        # Nothing worth keeping: exit non-zero so the caller falls back to the
+        # aside-browser skill instead of ingesting an empty shell.
+        print(f"error: fetch looks failed: {reason}; nothing saved", file=sys.stderr)
+        return 3
 
     slug = args.slug or default_slug_for_url(args.url, args.type)
     filename = build_filename(args.type, slug)

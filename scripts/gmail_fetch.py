@@ -385,7 +385,15 @@ def generate_digest_manifest(
         label = f"{start.isoformat()} to {end.isoformat()}"
         slug = f"{start.isoformat()}-to-{end.isoformat()}-{account}-digest"
 
-    manifest_path = unique_path(TRIAGE_DIR / f"{slug}.md")
+    # Applied triages keep their filename, so a name free in TRIAGE_DIR may
+    # already exist in applied/; reusing it would overwrite that record later.
+    counter = 0
+    while True:
+        name = f"{slug}.md" if counter == 0 else f"{slug}-{counter}.md"
+        if not any((d / name).exists() for d in (TRIAGE_DIR, TRIAGE_DIR / "applied")):
+            break
+        counter += 1
+    manifest_path = TRIAGE_DIR / name
 
     sources_block = "\n".join(
         f"  - {p.relative_to(VAULT_ROOT)}" for p, _, _ in saved_files
