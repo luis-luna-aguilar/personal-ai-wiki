@@ -59,7 +59,7 @@ Coordinated attacks targeting Python and npm packages used by AI developers, dis
 Coding agents extended into security review and vulnerability validation.
 
 - [Codex](../tools/codex.md) — Codex Security feature expands the coding agent into vulnerability review and validation work beyond code generation *(as of 2026-03-09)*
-- **Claude Security** — Anthropic; now confirmed in public beta for Claude Enterprise via Anthropic's own product page (previously only reported via secondary coverage): scans with Claude Mythos 5.1, runs an adversarial self-verification pass on findings before they surface, and proposes a reviewable patch for each one; a separate Claude Code plugin running the same pipeline locally is also in beta *(as of 2026-09-09)*
+- **Claude Security** — Anthropic; public beta for Claude Enterprise, scanning with Claude Mythos 5.1, self-verifying findings and proposing patches; Claude Code plugin in beta — details on [Claude Code](../tools/claude-code.md) *(as of 2026-09-09)*
 - **Cursor Security Review** — Cursor; reported always-on PR review plus scheduled codebase scans; source is AINews secondary coverage *(as of 2026-05-01)*
 - **Vercel DeepSec** — secondary May 2026 coverage describes security scanning/review for agent-built applications; pending primary verification *(as of 2026-05-04)*
 - [Devin](../tools/devin.md) — Cognition; Security Swarm now documented as Agentic MapReduce, benchmarked at 72% recall on a CVE-pinned ground-truth set vs. rival scanners *(as of 2026-07-14)*

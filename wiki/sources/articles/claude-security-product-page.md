@@ -14,6 +14,7 @@ Anthropic's product page confirms Claude Security is now in public beta for Clau
 
 ## Influenced pages
 - [State of Cybersecurity](../../state-of/cybersecurity.md) — upgraded the Claude Security bullet from thinly-sourced (AINews secondary coverage, reported use of Opus 4.7) to primary-source-confirmed public beta on Claude Mythos 5.1, with the adversarial-verification and patch-suggestion detail and the separate Claude Code plugin beta
+- [Claude Code](../../tools/claude-code.md) — Claude Security section: public beta detail and Claude Code plugin (moved from State of Cybersecurity)
 
 ## Key claims extracted
 - Claude Security is in public beta for Claude Enterprise (previously only reported via secondary coverage)

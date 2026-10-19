@@ -1,5 +1,5 @@
 ---
-title: "End of finetuning" debate — OpenAI API deprecation and top-tier RLFT counter-trend
+title: '"End of finetuning" debate — OpenAI API deprecation and top-tier RLFT counter-trend'
 type: source
 source_type: newsletter
 source_file: raw/newsletters/2026-05-13-ainews-the-end-of-finetuning.md

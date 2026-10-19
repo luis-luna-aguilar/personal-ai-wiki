@@ -10,7 +10,7 @@ sources: [superhuman-ai-governance-economists-2026-07, ainews-fearing-rsi-pacing
 
 The trend: as frontier models grow more capable, pressure is building — from economists, the public, labs themselves, and now lab employees directly — for governments to take a more active role in steering AI development, rather than leaving it to market competition and voluntary lab commitments alone.
 
-## Current signal (as of 2026-07-14)
+## Current signal (as of 2026-09-06)
 
 Over 200 economists, including 16 Nobel laureates, signed "We Must Act Now," a public statement urging governments to steer AI development toward broad societal benefit. A companion Verasight survey found real public appetite for intervention: 60% of respondents are anxious about AI's rise, 89% want frontier labs required to publicly disclose safety-testing results, and 81% want government authority to block potentially dangerous models before release. A notable specific proposal — requiring AI firms to hand over equity stakes into a fund that redistributes AI's gains broadly — draws support from 69% of respondents and echoes OpenAI's own earlier offer of a 5% US government stake in the company. Separately, the US government has already reviewed both Anthropic's and OpenAI's most powerful models prior to release, so some of this oversight is already happening in practice, ahead of any formal policy.
 
@@ -20,7 +20,7 @@ On 2026-07-29, 1,171 employees across OpenAI, Anthropic, Google DeepMind, Meta, 
 
 Reaction split sharply. Critics (Adam Thierer, Sarah Hooker, and others) called it a vague, unenforceable ask that functions as regulatory capture — burdening rivals and open-weight labs without binding commitments or thresholds, and unlikely to meaningfully constrain competitors such as China. Some signatories publicly qualified their own support, arguing coordination tools make sense in principle but any RSI-based policy needs far better quantification of labs' actual internal capabilities before it should bind anyone.
 
-## OpenAI reiterates its own mandatory-disclosure call (September 2026)
+## Labs calling for mandatory progress disclosure
 
 OpenAI's September 6 research-acceleration report repeats a position from its "frontier policy blueprint": that it and other AI companies should be *required* to publicly track their progress toward recursive self-improvement (RSI), not just do so voluntarily. It's a lab explicitly asking to be regulated on this specific point — aligning with the 89%-of-surveyed-public support for mandated safety-testing disclosure already tracked above, and with the US government's existing informal practice of reviewing frontier models pre-release.
 
@@ -40,6 +40,11 @@ This is a distinct thread from [restricted frontier deployment](restricted-front
 - [2026-09-06] OpenAI's research-acceleration report reiterates its "frontier policy blueprint" position that it and other companies should be required to publicly track progress toward recursive self-improvement (RSI) — an explicit mandatory-disclosure ask from a lab itself, aligning with the 89%-of-surveyed-public support for mandated safety-testing disclosure already tracked above.
 - [2026-07-29] 1,171 frontier-lab employees (OpenAI, Anthropic, Google DeepMind, Meta, Thinking Machines) cosigned a letter asking the US government to support pacing mechanisms for frontier AI development; Amodei and Altman backed it publicly; critics call it vague regulatory capture.
 - [2026-07-14] Initial page: 200+ economists' "We Must Act Now" statement and the Verasight survey on public appetite for AI regulation
+
+## Related
+
+- [Restricted frontier deployment](restricted-frontier-deployment.md) — labs and governments gating already-built models
+- [Model sovereignty](model-sovereignty.md) — government pressure on open-weight models, the reported pre-release review window, and the open-weight-lab side of the regulatory-capture critique
 
 ## Sources
 

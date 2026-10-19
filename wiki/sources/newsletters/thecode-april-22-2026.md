@@ -16,6 +16,7 @@ The Code newsletter for April 22, 2026. Lead story: SpaceX option to acquire Cur
 
 - [Claude Code](../../tools/claude-code.md) — /recap and /fewer-permission-prompts skill
 - [Harness (agent)](../../concepts/harness.md) — agent-friendly CLI design principle
+- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — agent-friendly CLI design (moved from Harness (agent))
 
 ## Key claims extracted
 

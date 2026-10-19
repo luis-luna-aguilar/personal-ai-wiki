@@ -17,6 +17,7 @@ AINews digest covering two separate stories: Poolside's Laguna S 2.1 model relea
 
 - [Kimi K3](../../models/kimi-k3.md) — distillation-accusation caveat
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Model-sovereignty paragraph on the sanctions threat
+- [Model sovereignty](../../trends/model-sovereignty.md) — Kratsios distillation accusation / sanctions threat (moved from Open-weight momentum broadens)
 
 ## Key claims extracted
 

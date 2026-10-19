@@ -11,7 +11,7 @@ sources: [anthropic-mcp, legacy-ai-tools-roadmap-xlsx, anthropic-mcp-deployment-
 
 Model Context Protocol, usually shortened to MCP, is an open protocol for exposing tools, resources, and prompts to AI hosts and agents through a standard interface. Anthropic introduced it, but the practical significance is broader: MCP turns many bespoke agent integrations into a reusable connector layer.
 
-## Current status (as of 2026-06-29)
+## Current status (as of 2026-09-09)
 
 - Originated by Anthropic as an open standard for connecting assistants to external systems
 - Increasingly treated as shared infrastructure rather than a vendor-specific feature

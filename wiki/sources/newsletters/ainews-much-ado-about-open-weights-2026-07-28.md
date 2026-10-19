@@ -17,6 +17,7 @@ AINews digest covering the day's open-weight news: Kimi K3's full weight release
 
 - [Kimi K3](../../models/kimi-k3.md) — weights ship, real architecture specs, independent Opus-4.8-beating confirmation
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Recent-changes entries for the K3 ship date and the NVIDIA Open Secure AI Alliance / Anthropic-position / lobbying-report paragraph
+- [Model sovereignty](../../trends/model-sovereignty.md) — NVIDIA Open Secure AI Alliance, Anthropic position, lobbying report (moved from Open-weight momentum broadens)
 
 ## Key claims extracted
 

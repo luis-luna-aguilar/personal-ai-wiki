@@ -63,7 +63,7 @@ The shift: the question is no longer "can I use AI here?" but "which mode fits t
 
 - [Agent evals](../concepts/agent-evals.md) — the benchmark-framing half of Every's "After Automation" argument; this page covers the task-delegation half
 - [AI-native product building](ai-native-product-building.md) — the "AI sandwich" pattern applied specifically to product-building work
-- [Agents reshape organizations](../trends/agents-reshape-organizations.md) — the same framing applied at org-design scale
+- [AI adoption: evidence from practice](ai-adoption-evidence.md) — the AI-sandwich framing applied at org-design scale (Every's Dan Shipper)
 
 ## Sources
 

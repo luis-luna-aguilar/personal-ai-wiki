@@ -12,7 +12,7 @@ sources: [grok-build-may-2026, spacex-cursor-june-2026, ainews-spacexai-grok-45-
 
 xAI's CLI coding agent. Early beta, available to SuperGrok Heavy subscribers via a curl install. Designed for "high-level professional work."
 
-## Current status (as of 2026-07-08)
+## Current status (as of 2026-07-16)
 
 - Early beta; install via `curl` command; SuperGrok Heavy subscribers only
 - **Plan mode**: review and adjust each step before diffs are applied — prevents runaway changes on large tasks

@@ -4,7 +4,7 @@ type: training
 domains: [agents, models]
 tags: [agentic]
 as_of: 2026-09-07
-sources: [task-routing-cost-discipline-2026-05-13, thinking-machines-financial-expert-judgment-2026-07-02, superhuman-bridgewater-thinking-machines-2026-07-02, local-ai-infrastructure-2026-06, token-tightening-ai-finops-2026-06, efficiencymaxxing-model-routing-2026-07, fable-unknowns-routing-2026-07, the-code-databricks-coding-benchmark-2026-07-10, databricks-benchmarking-coding-agents-2026-07, the-code-eval-data-moat-2026-07-13, ainews-devin-fusion-router-moat-2026-07-14, arkadium-game-lab-small-model-economics-2026-07-19, zawinskis-law-multiagents-2026-08-08, ai-cost-spike-token-budgets-2026-08-17, ainews-stripe-openrouter-2026-08-17, glean-model-routing-2026-08-18, ainews-poolside-nvidia-2026-08-21, ainews-andrew-ng-ai-engineering-2026-08-25, every-cloning-your-coworkers-2026-08-26, cursor-agent-swarm-economics-2026-09-07, ubereng-software-factory-2026-08-28]
+sources: [task-routing-cost-discipline-2026-05-13, thinking-machines-financial-expert-judgment-2026-07-02, superhuman-bridgewater-thinking-machines-2026-07-02, local-ai-infrastructure-2026-06, token-tightening-ai-finops-2026-06, efficiencymaxxing-model-routing-2026-07, fable-unknowns-routing-2026-07, the-code-databricks-coding-benchmark-2026-07-10, databricks-benchmarking-coding-agents-2026-07, the-code-eval-data-moat-2026-07-13, ainews-devin-fusion-router-moat-2026-07-14, arkadium-game-lab-small-model-economics-2026-07-19, zawinskis-law-multiagents-2026-08-08, ai-cost-spike-token-budgets-2026-08-17, ainews-stripe-openrouter-2026-08-17, glean-model-routing-2026-08-18, ainews-poolside-nvidia-2026-08-21, ainews-andrew-ng-ai-engineering-2026-08-25, every-cloning-your-coworkers-2026-08-26, cursor-agent-swarm-economics-2026-09-07, ubereng-software-factory-2026-08-28, ainews-2026-04-23, every-33-questions-executives-2026-08-28]
 ---
 
 # Cost-aware AI task routing
@@ -19,6 +19,8 @@ AI cost discipline is moving from token counting to routing work to the cheapest
 - Use humans for intent, taste, accountability, exceptions, and final review on consequential work.
 - When a task has repeated domain-specific judgment and stable evaluation examples, compare three routes before defaulting to frontier models: expert prompt on a frontier model, expert prompt on a cheaper strong model, and fine-tuned/open-weight model with task-specific examples.
 - Route by uncertainty, not only by task size. Use frontier models like Fable when the prompt, standard, or premise may be wrong; route settled, repeatable work to cheaper models, scripts, or task-specific fine-tunes.
+- Route by task novelty. For a brand-new, high-stakes, or one-off task, use the best available model — it's often cheaper overall because it avoids costly mistakes and self-correction cycles. Only once a task becomes recurring and well-understood should it move to a smaller model via a framework like DSPy or prompt optimization.
+- **Tasteful tokenmaxxing: depth over breadth.** The emerging leadership consensus (AIE Miami, April 2026) is not "burn more tokens" or "burn fewer tokens" but *how* you burn them. Shopify CTO Mikhail Parakhin: prefer serial autoresearch loops (depth) over kicking off 5, 10, 50 parallel LLM runs (breadth). Reid Hoffman's middle ground: track how people use AI, not just how much — team-wide experimentation plus regular check-ins to surface what's actually working. Dex Horthy (coiner of "Context Engineering") publicly retracted his earlier vibe-coding-only stance and encouraged engineers to read the code. The practical signal: measure the *quality* of token use, not the quantity.
 - Treat "efficiencymaxxing" as routing discipline, not blanket cost cutting: decompose a workflow, decide which steps actually need frontier reasoning, and move stable low-risk steps to cheaper models, scripts, or fine-tuned specialists.
 - Run token audits by stage for repeated agent workflows. Ask what each stage used, why it was necessary, and whether the difficulty of the step justifies the spend.
 - Change one variable at a time: trim context, rewrite skill instructions, split a step into a subagent, or route a stage to a cheaper model, then rerun and compare quality plus cost.
@@ -50,7 +52,7 @@ AI cost discipline is moving from token counting to routing work to the cheapest
 
 AI cost discipline is becoming an operating function, not just a prompt-writing habit. Practical controls include:
 
-- Set token budgets by role, team, workflow, or risk tier.
+- Treat access to expensive models as an allocation decision (token allocation as governance): set token budgets by role, team, workflow, or risk tier, route routine work to cheaper tools, and grant higher-cost access to workflows that can show returns in quality, speed, scope, or revenue impact.
 - Reserve frontier or heavy-reasoning models for work where cheaper models, scripts, or humans are not sufficient.
 - Require opt-in approval for long-running or high-effort agent modes.
 - Track cache hit rates, prompt reuse, context length, and cost per successful task.
@@ -73,7 +75,15 @@ AI cost discipline is becoming an operating function, not just a prompt-writing 
 - Calling a workflow "optimized" after reducing token spend without rechecking output quality, human review time, or failure-recovery cost.
 - Letting the agent self-assess its own token inefficiency without human review; Every notes models are still poor judges of when their own spend is disproportionate.
 
+## Recent changes
+
+- [2026-10-19] Merged the "Cost and model routing" proven-patterns group from [Company-wide AI enablement](company-wide-ai-enablement.md): tasteful tokenmaxxing (depth over breadth), route by task novelty, and token allocation as governance (folded into AI FinOps controls); its efficiencymaxxing bullet duplicated this page's Current guidance and was not repeated.
+- [2026-07-08] Added efficiencymaxxing: stage-level model routing, token audits, and one-variable reruns as a company-wide AI cost-control practice.
+
 ## Related
+
+- [Company-wide AI enablement](company-wide-ai-enablement.md) - the broader adoption playbook; its tokenmaxxing and spend-shock failure modes are the problems this page's routing answers.
+- [Agent autonomy and governance](agent-autonomy-and-governance.md) - "exploration budget, then governance" sequencing for when token allocation should start.
 
 - [AI work delegation modes](ai-work-delegation-modes.md) - task-shape framework for choosing autonomous delegation versus close collaboration.
 - [Flex processing](../workflows/flex-processing.md) - lower-cost asynchronous execution for non-urgent OpenAI workloads.
@@ -104,3 +114,5 @@ AI cost discipline is becoming an operating function, not just a prompt-writing 
 - [Every — The Case for Cloning Your Coworkers](../sources/newsletters/every-cloning-your-coworkers-2026-08-26.md)
 - [Cursor — Agent swarms and the new model economics](../sources/articles/cursor-agent-swarm-economics-2026-09-07.md)
 - [Uber Engineering — Running a Software Factory Efficiently at Uber Scale](../sources/tweets/ubereng-software-factory-2026-08-28.md)
+- [AINews — Tasteful Tokenmaxxing](../sources/newsletters/ainews-2026-04-23.md)
+- [Every — 33 Questions Executives Ask About AI—Answered](../sources/newsletters/every-33-questions-executives-2026-08-28.md)

@@ -16,6 +16,7 @@ Jarred Sumner's own account of rewriting Bun's 535,496-line Zig codebase to Rust
 ## Influenced pages
 
 - [Training — AI enablement (software development)](../../training/ai-enablement-software-development.md) — full case study: adversarial-review methodology, pilot-then-scale approach, cost/throughput figures
+- [Engineering AI adoption: evidence from practice](../../training/engineering-ai-adoption-evidence.md) — full Bun case study (adversarial review, pilot-then-scale, cost/throughput figures) (moved from AI enablement — software development)
 
 ## Key claims extracted
 

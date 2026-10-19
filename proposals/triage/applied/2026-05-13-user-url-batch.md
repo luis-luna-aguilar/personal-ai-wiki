@@ -15,7 +15,7 @@ sources:
   - raw/tweets/2026-05-13-steipete-2053114837698249190.md
   - raw/tweets/2026-05-13-bidah-2053071057737679138.md
   - raw/tweets/2026-05-13-claudeai-2053868595394879553.md
-status: pending
+status: applied
 period: "2026-05-13"
 account: manual-url-batch
 ---

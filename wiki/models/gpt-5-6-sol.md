@@ -12,7 +12,7 @@ sources: [metr-gpt-5-6-sol-eval-2026-06, gpt-5-6-sol-preview-launch-2026-06, cha
 
 GPT-5.6 Sol is OpenAI's flagship model in the GPT-5.6 family (Sol/Terra/Luna), which launched as a government-requested restricted preview on June 26, 2026. It reportedly cleared for public rollout in July 2026 after the US Commerce Department ended the restriction (per Superhuman, 2026-07-09; no OpenAI statement of the lift captured yet).
 
-## Current status (as of 2026-07-15)
+## Current status (as of 2026-08-07)
 
 - **Family:** Sol (flagship), Terra (balanced — "competitive performance to GPT-5.5 while being 2x cheaper"), Luna (fast/affordable, lowest cost). The generation number identifies the model generation; Sol/Terra/Luna identify durable capability tiers that can advance on their own cadence.
 - **Pricing per 1M tokens (updated 2026-07-31):** Luna $0.20 input / $1.20 output (cut 80% from $1/$6); Terra $2.00 input / $12.00 output (cut 20% from $2.50/$15); Sol unchanged at $5/$30. New **Sol Fast** tier: 2.5x lower latency at 2x Sol's standard price, "no change in intelligence" per OpenAI. More predictable prompt caching (explicit cache breakpoints, 30-min minimum cache life); cache writes at 1.25x uncached input rate, cache reads keep the 90% discount.

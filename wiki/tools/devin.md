@@ -12,7 +12,7 @@ sources: [devin-auto-triage-2026-05, the-code-devin-security-2026-07-02, ainews-
 
 Cognition's autonomous coding agent, initially positioned as one of the first "fully autonomous software engineer" agents. Now expanding into persistent operational roles: Auto-Triage (May 2026) is the first always-on production deployment, monitoring Slack channels and triaging bugs without human initiation. Cognition valued at $25B (May 2026).
 
-## Current status (as of 2026-07-14)
+## Current status (as of 2026-07-21)
 
 - **Auto-Triage:** always-on persistent Devin monitors Slack channels for bug reports, alerts, and incidents
 - Parent Devin filters noise and dispatches focused sub-sessions to find root causes, post diagnoses, and tag code owners

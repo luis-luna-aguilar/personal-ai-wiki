@@ -26,7 +26,7 @@ sources:
   - raw/tweets/2026-05-26-xcom-kushalbyatnalstatus20592783222.md
   - raw/tweets/2026-05-26-xcom-koylanaistatus2059113412278227.md
   - raw/newsletters/2026-05-24-cheap-competence-new-frontier.md
-status: pending
+status: applied
 period: "latest 25 unprocessed as of 2026-07-08"
 account: ai
 ---

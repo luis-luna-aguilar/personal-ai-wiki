@@ -12,7 +12,7 @@ sources: [gpt-live-launch-2026-07, bfl-flux-3-2026-07-24, chatgpt-voice-mode-vib
 
 GPT-Live is OpenAI's full-duplex voice model family for natural human-AI interaction. It powers the new ChatGPT Voice experience and is designed to listen and speak at the same time instead of forcing rigid turn-taking.
 
-## Current status (as of 2026-07-22)
+## Current status (as of 2026-08-05)
 
 - Desktop app rollout (2026-07-22) adds computer-control and cross-app coordination across ChatGPT Work and Codex, alongside the existing mobile/web full-duplex experience.
 - Rolling out globally to ChatGPT on iOS, Android, and ChatGPT.com.

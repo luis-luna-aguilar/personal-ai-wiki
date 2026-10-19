@@ -252,7 +252,7 @@ The word targets above (150–300 words for routine pages) are writing targets. 
 
 **How to split (the procedure the two precedents settled on — `concepts/mcp` → `concepts/company-brain`, `trends/ai-in-science` → `trends/ai-in-mathematics`):**
 
-- Splits go through a proposal like any other wiki change, unless the user asks for the split directly.
+- **Proposals are for new source content. Refactors of existing content are not.** Splits, restructures, trims, heading fixes, and moving existing material between pages are applied directly when the user asks for them ("split them", "fix the long pages"), with no proposal. Log each one as `- [YYYY-MM-DD] **lint** | refactor <page> | <what moved where>`. The only time a split appears inside a proposal is the required-split rule above: new content would push a page past 150%.
 - The new page gets its own frontmatter, with `as_of` set to the newest source-backed claim that moved, and `sources:` limited to the sources that back the moved content.
 - The origin page keeps a one-paragraph pointer where the content used to be, recomputes its `as_of` from the content that remains, and gets a Recent-changes entry naming the split. Recent-changes entries about the moved content move with it (spill the origin page's cap from the live list afterwards, as usual).
 - Every source page whose Influenced-pages list named the origin page for the moved content is re-pointed to the new page.

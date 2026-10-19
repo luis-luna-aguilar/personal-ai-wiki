@@ -12,7 +12,7 @@ sources: [gemini-browser-utility-updates, gemini-deep-research-max, ainews-2026-
 
 Google's AI assistant product, built on the Gemini model family. Combines conversational AI, search, productivity features, and increasingly agentic research and workflow utilities across browser, desktop, API, and media-generation surfaces.
 
-## Current status (as of 2026-07-08)
+## Current status (as of 2026-08-26)
 
 ### Gemini Enterprise Agent Platform (Cloud Next '26)
 

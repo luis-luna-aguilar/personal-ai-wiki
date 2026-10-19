@@ -12,7 +12,7 @@ sources: [ainews-death-of-params-glm-53-2026-08-20, ainews-nvidia-buys-huggingfa
 
 Z.ai's August 2026 open-weight frontier model, superseding [GLM-5.2](../history/models/glm-5-2.md). Same 753B total / 40B active MoE architecture and 1M context as its predecessor, at the same API price — this generation's gains come entirely from post-training reinforcement learning rather than a larger base model.
 
-## Current status (as of 2026-08-20)
+## Current status (as of 2026-09-01)
 
 - 753B total / 40B active MoE; 1M context window; MIT license once weights land (not yet shipped at time of writing)
 - GDPval-AA v2: +246 points over GLM-5.2 (to 1770 Elo)

@@ -12,7 +12,7 @@ sources: [ainews-kimi-k3-2026-07-17, ainews-much-ado-about-open-weights-2026-07-
 
 Moonshot AI's flagship, now shipped in full: weights, tech report, and supporting infrastructure released 2026-07-28 under a "kimi-k3" license. Supersedes [Kimi K2.7-Code](../history/models/kimi-k2-7-code.md) as Moonshot's current flagship; broader in scope than its coding-specialist predecessor.
 
-## Current status (as of 2026-07-28)
+## Current status (as of 2026-07-29)
 
 - 2.8T total parameters, 104B active per token across 896 experts (16 active per token); 1M-token context; native text+image multimodal input
 - Open-sourced alongside three companion projects: FlashKDA (Kimi Delta Attention kernels), MoonEP (MoE communication library), AgentENV (distributed agent-environment infrastructure) — a fairly complete recipe for large-scale agentic post-training, not just a checkpoint

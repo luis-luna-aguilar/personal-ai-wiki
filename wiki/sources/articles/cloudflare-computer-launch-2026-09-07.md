@@ -15,6 +15,7 @@ Cloudflare open-sources an early-preview package giving agents a durable shared 
 ## Influenced pages
 
 - [Harness (agent)](../../concepts/harness.md) — isolates-over-containers architecture bullet
+- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — isolates-over-containers architecture bullet (moved from Harness (agent))
 - [Agent-native compute infrastructure](../../trends/agent-native-compute.md) — fourth infra-vendor data point for the trend
 
 ## Key claims extracted

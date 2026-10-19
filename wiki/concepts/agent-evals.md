@@ -63,17 +63,9 @@ Agent evaluation is splitting into several infrastructure problems:
 
 The pattern: evals are no longer only pass/fail task scores. They are becoming observability, incident intake, cost accounting, historical replay, and system-capacity infrastructure.
 
-## Benchmarks measure work inside a frame ("chart psychosis")
+## Benchmarks measure work inside a frame
 
-Every's Dan Shipper ("After Automation," May 2026) argues that reading benchmark trend lines in isolation produces "chart psychosis" — scary intuitions about imminent job replacement that don't survive a look at how the benchmark itself is built.
-
-- Every benchmark needs a prompt, and a prompt is a frame: it freezes an open-ended situation into a fixed, measurable target. A score describes how well a model performs inside that frame, not some frame-independent measure of "the model itself."
-- **Case study — Every's in-house Senior Engineer benchmark** (rewrite a vibe-coded production codebase from first principles): GPT-5.5 scored 62/100, about 30 points above Claude Opus 4.7, while human senior engineers score in the high 80s to low 90s on the same task. Changing the prompt's specificity — removing hints like "structural rewrite" and "invariants" lowers the score; replacing the prompt with "solve all of the errors that keep popping up" drops it to near zero — moves the score dramatically without changing the model.
-- **Case study — OpenAI's GDPval**: high pass rates against human professionals rely on tasks whose prompts already encode a large amount of "smuggled intelligence" (which sample-size formula, which risk-weighted entities, which confidence interval) supplied by a human expert before the model ever ran. The benchmark measures performance on an already-expert-framed problem, not the ability to frame the problem in the first place.
-- Once a frame saturates, the fix is not "the model has replaced the expert." The now-cheap capability inside that frame gets adopted broadly, produces a flood of undifferentiated output ("slop"), and shifts the scarce, valuable work to the next frame up — deciding whether a rewrite is even needed, what to preserve, who reviews the result. The cycle repeats at the next level rather than terminating.
-- This holds even under a strong operational definition of AGI (a system worth running continuously): the model can select and re-select frames, but only in service of a goal supplied by a human "framer." The frame is not the framer, so demand for the human who decides what's worth optimizing does not disappear — it moves up a level.
-
-This complements the benchmark-leakage caveat below: leakage is a benchmark failing to measure what it claims to measure; frame-relativity is a benchmark validly measuring a moving target that keeps being redefined as it saturates.
+Dan Shipper's "chart psychosis" critique (Every, May 2026) argues a benchmark score measures performance inside the frame its prompt sets, not the model in general; the full argument now lives on [AGI timeline claims](../trends/agi-timeline-claims.md). It complements the benchmark-leakage caveat below: leakage is a benchmark failing to measure what it claims to measure; frame-relativity is a benchmark validly measuring a moving target that keeps being redefined as it saturates.
 
 ## Caveats
 
@@ -88,18 +80,18 @@ This complements the benchmark-leakage caveat below: leakage is a benchmark fail
 - [Agent improvement loop](agent-improvement-loop.md) — the operational loop that uses evals to iteratively improve a harness
 - [Agentic orchestration patterns](../workflows/agentic-orchestration-patterns.md) — orchestration patterns that good evals help validate
 - [AI PR and code review](../workflows/ai-pr-code-review.md) — dedicated workflow for historical PR replay and understanding-preserving code review
-- [AI enablement — software development](../training/ai-enablement-software-development.md) — production evidence of this estimator in use
+- [Engineering AI adoption: evidence from practice](../training/engineering-ai-adoption-evidence.md) — production evidence of this estimator in use
 - [AI work delegation modes](../training/ai-work-delegation-modes.md) — the delegation/collaboration mode split that the benchmark-framing critique complements
 
 ## Recent changes
 
+- [2026-10-19] Split: the "chart psychosis" benchmark-framing critique moved to [AGI timeline claims](../trends/agi-timeline-claims.md); a one-paragraph pointer remains.
 - [2026-09-01] Added multi-turn behavioral evals: Transluce's 77-model-variant mental-health-crisis eval, framed by researchers as a template for long-horizon, user/environment-simulating agent evals.
 - [2026-07-14] Added a pointer to the new [Economic agent evals](economic-agent-evals.md) page (Cognition's human-hours-equivalent estimator alongside Vending Bench).
 - [2026-07-08] DashBench adds a historical-PR replay pattern for AI code review evals: measure whether the reviewer catches real past issues, not whether it sounds useful.
 - [2026-07-02] Added eval infrastructure layer: Agent Arena, AA-AgentPerf, WorldModelGym, and FLARE-AI show agent evaluation expanding into benchmarking, systems efficiency, world-model quality, and incident reporting.
 - [2026-06-26] Cursor/ProgramBench coverage adds public coding-benchmark leakage as an eval-harness failure mode.
 - [2026-05-30] Added feedback-quality framing from Effective Feedback Compute: agent evals should measure whether the harness improves the next step, not only how much activity occurred.
-- [2026-05-21] Added "chart psychosis" / benchmark-framing critique (Every, Dan Shipper, "After Automation"): benchmark scores measure performance inside a chosen frame; saturating one frame shifts demand to the next frame rather than eliminating human work. Senior Engineer benchmark example: GPT-5.5 62/100, ~30 points above Opus 4.7, ~30 below human senior engineers.
 
 ## Sources
 

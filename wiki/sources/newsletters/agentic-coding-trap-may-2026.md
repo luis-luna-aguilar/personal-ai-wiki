@@ -15,6 +15,7 @@ The Code newsletter covered Lars Faye's Hacker News #1 essay arguing that the "h
 ## Influenced pages
 
 - [AI enablement — software development](../../training/ai-enablement-software-development.md) — skill atrophy failure mode added; evidence updated
+- [Engineering AI adoption: evidence from practice](../../training/engineering-ai-adoption-evidence.md) — Lars Faye and Airbnb evidence (moved from AI enablement — software development)
 
 ## Key claims extracted
 

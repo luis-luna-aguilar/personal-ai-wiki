@@ -19,6 +19,7 @@ AINews's 2026-08-20 issue covers Z.ai CEO Jie Tang's argument that parameter cou
 - [Qwen 3.8 27B](../../models/qwen-3-8-27b.md) — new page
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Current-signal bullet
 - [Harness (agent)](../../concepts/harness.md) — DSH/TrueForge bullet
+- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — DSH/Cordis and TrueForge (moved from Harness (agent))
 - [Gemini](../../tools/gemini.md) — Gemini 3.7 Flash cost-efficiency bullet
 - [State of Models](../../state-of/models.md) — GLM leader-line swap
 

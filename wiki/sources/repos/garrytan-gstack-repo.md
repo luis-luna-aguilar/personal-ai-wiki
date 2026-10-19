@@ -17,6 +17,7 @@ GitHub repo README for gstack: 23 slash commands simulating specialist agent rol
 
 - [gstack](../../tools/gstack.md) — new page created
 - [AI enablement — software development](../../training/ai-enablement-software-development.md) — Garry Tan productivity evidence added
+- [Engineering AI adoption: evidence from practice](../../training/engineering-ai-adoption-evidence.md) — Garry Tan productivity evidence (moved from AI enablement — software development)
 
 ## Key claims extracted
 

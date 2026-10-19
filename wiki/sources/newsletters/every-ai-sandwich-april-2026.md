@@ -16,7 +16,9 @@ Every's Context Window newsletter from Dan Shipper. Introduces the AI sandwich o
 ## Influenced pages
 
 - [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — trust battery, AI sandwich, org architecture prediction
+- [AI adoption: evidence from practice](../../training/ai-adoption-evidence.md) — trust battery, AI sandwich, org architecture prediction (moved from Agents reshape organizations)
 - [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — trust battery as proven pattern; tokenmaxxing failure mode
+- [Agent autonomy and governance](../../training/agent-autonomy-and-governance.md) — trust-battery governance pattern (moved from Company-wide AI enablement)
 
 ## Key claims extracted
 

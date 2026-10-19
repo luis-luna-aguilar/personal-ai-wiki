@@ -52,8 +52,8 @@ AI products specialized for extracting, structuring, querying, or reasoning over
 - [2026-08-13] Added Google's ResidencyRL — RL training over simulated telehealth encounters lifted diagnostic accuracy under adversarial conditions from 81% to 88% (secondary source; no primary writeup).
 - [2026-07-22] Health in ChatGPT rolled out in the U.S. — connects Apple Health and medical records, with encryption and training/ad-targeting exclusions for connected health data.
 - [2026-06-18] Midjourney Medical Scanner added as a speculative imaging-infrastructure signal with strong validation and regulatory caveats.
-- [2026-05-31] Doctronic prescription-renewal pilot and patient-side AI self-triage added as healthcare workflow signals.
 - [2026-06-16] Added "Patient-side AI" subcategory — frontier models documented to match/exceed PCP visits for ambiguous symptoms (Amy Deng, MetaLearn)
+- [2026-05-31] Doctronic prescription-renewal pilot and patient-side AI self-triage added as healthcare workflow signals.
 - [2026-04-22] Created the `healthcare` domain and added initial pages for clinical voice, medical knowledge, patient-access, and healthcare operations tools from the legacy workbook exception
 
 ## Sources

@@ -11,7 +11,7 @@ sources:
   - raw/newsletters/2026-08-26-we-have-foundation-models-for-language-not-for.md
   - raw/newsletters/2026-08-26-the-future-of-saas-is-apps-that-agents-can-use.md
   - raw/newsletters/2026-08-26-the-case-for-cloning-your-coworkers.md
-status: pending
+status: applied
 period: "oldest 20 unprocessed as of 2026-09-07"
 account: ai
 ---

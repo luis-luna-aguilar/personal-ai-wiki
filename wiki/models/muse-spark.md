@@ -12,7 +12,7 @@ sources: [muse-spark, open-creative-workflows-2026-06, meta-muse-image-video-202
 
 Muse Spark is a new multimodal model from Meta's Superintelligence Labs effort. In the source captured here, Meta frames it less as a product with a detailed public surface and more as a scaling result: a model whose capability improves efficiently across pretraining, reinforcement learning, and test-time reasoning.
 
-## Current status (as of 2026-04-10)
+## Current status (as of 2026-09-08)
 
 - Meta positions Muse Spark as part of its push toward "personal superintelligence"
 - The captured source says Muse Spark's capabilities scale along three axes: pretraining, reinforcement learning, and test-time reasoning

@@ -12,7 +12,7 @@ sources: [alibaba-qwen38-preview-2026-07-20, ainews-china-policy-openweight-2026
 
 Alibaba's flagship after Qwen 3.7. Entered live preview 2026-07-20, shipped as a full launch on 2026-08-04 as Qwen3.8-Max, and shipped open weights for Max on 2026-08-13 (text-only initial drop, no vision yet). The promised Qwen3.8-27B sibling gained enough independent momentum in the following week to warrant its own page — see [Qwen 3.8 27B](qwen-3-8-27b.md).
 
-## Current status (as of 2026-08-13)
+## Current status (as of 2026-09-01)
 
 - Qwen3.8-Max: 2.4T total parameters, ~95B active per token (third-party estimate, ~4% activation ratio); 1M context; API priced at $2/M input, $6/M output, $0.25/M cached tokens
 - Open weights shipped 2026-08-13 for Qwen3.8-Max (text-only initial drop, no vision); day-0 vLLM support plus vendor-specific 4-bit checkpoints for NVIDIA B300 and AMD MI355X; Together AI and Baseten also announced immediate support
@@ -27,7 +27,7 @@ Alibaba released Qwen3.8-Max-0902, a refreshed 2.4T-parameter build with 1M cont
 
 ## Why it matters
 
-Succeeds [Qwen 3.7](qwen-3-7.md) as Alibaba's flagship, moving from preview to a real open-weight-committed launch just over two weeks after Kimi K3. If the license restrictions hold as reported, this complicates the "open weights as sovereignty infrastructure" argument tracked on [Open-weight momentum broadens](../trends/open-weight-momentum-broadens.md) — the weights may not be legally usable by the Western teams that argument targets.
+Succeeds [Qwen 3.7](qwen-3-7.md) as Alibaba's flagship, moving from preview to a real open-weight-committed launch just over two weeks after Kimi K3. If the license restrictions hold as reported, this complicates the "open weights as sovereignty infrastructure" argument tracked on [Model sovereignty](../trends/model-sovereignty.md) — the weights may not be legally usable by the Western teams that argument targets.
 
 ## Caveats
 

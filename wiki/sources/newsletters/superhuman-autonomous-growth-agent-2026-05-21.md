@@ -19,6 +19,7 @@ Unfetched primaries linked from the newsletter (Tempo story):
 
 ## Influenced pages
 - [Agents reshape organizations](../../trends/agents-reshape-organizations.md) — Tempo added as a concrete, thinly-sourced non-engineering agent-employee example
+- [AI adoption: evidence from practice](../../training/ai-adoption-evidence.md) — Tempo agent-employee example (moved from Agents reshape organizations)
 - [Agent-native compute infrastructure](../../trends/agent-native-compute.md) — one supporting data point in the funding-wave/compute-commitment cluster (OpenAI Guaranteed Capacity)
 
 ## Key claims extracted

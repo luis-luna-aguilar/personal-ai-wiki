@@ -12,7 +12,7 @@ sources: [flue-2-react-for-agents-2026-08-15, latent-space-pr-not-welcome-2026-0
 
 Flue is Fred Schott's agent framework — Schott is the creator of the Astro web framework, acquired into Cloudflare in January 2026. Flue 2, its first stable release, is built around React-style "Agent Hooks": an agent is a JS/TS function that re-renders on every turn (before every model call), managing its own state and dynamically attaching tools, skills, and capabilities as a conversation progresses.
 
-## Current status (as of 2026-08-15)
+## Current status (as of 2026-09-01)
 
 - Flue 2 ships 16 built-in hooks (`useSkill()`, `useTool()`, `useSubagent()`, plus custom hooks), authored in TypeScript.
 - Built on top of Pi, an open-source minimal harness — Schott treats Pi's role as analogous to Vite underneath Astro: a foundational, unopinionated layer Flue adds developer-facing opinions on top of.
@@ -33,7 +33,7 @@ Flue is Fred Schott's agent framework — Schott is the creator of the Astro web
 
 ## Contribution policy (as of 2026-09-01)
 
-Flue auto-closes external pull requests and converts them into issues or discussions instead — Schott's contributor guide frames this as preventing "drive-by AI slop PRs" while still channeling community input through discussion. Once a direction is decided in the issue or discussion, agents are deployed for research, design, implementation, and initial review. A concrete instance of the "PRs closed by default" pattern — see [Agentic orchestration patterns](../workflows/agentic-orchestration-patterns.md).
+Flue auto-closes external pull requests and converts them into issues or discussions instead — Schott's contributor guide frames this as preventing "drive-by AI slop PRs" while still channeling community input through discussion. Once a direction is decided in the issue or discussion, agents are deployed for research, design, implementation, and initial review. A concrete instance of the "PRs closed by default" pattern — see [Software factory](../workflows/software-factory.md).
 
 ## Recent changes
 

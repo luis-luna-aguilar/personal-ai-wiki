@@ -1,6 +1,7 @@
 ---
 title: Shopify Claude Code fleet patterns — Bessemer conference synthesis
 type: source
+source_file: raw/tweets/2026-05-19-zodchiii-2056319284641460626.md
 source_type: article
 url: https://x.com/zodchiii/status/2056319284641460626
 published: 2026-05-19
@@ -18,6 +19,8 @@ Note: primary source was a tweet pointing to the Bessemer writeup; content was n
 
 - [AI enablement — software development](../../training/ai-enablement-software-development.md) — new Shopify patterns, productivity data, strategy-to-execution ratio
 - [Harness (concept)](../../concepts/harness.md) — LLM proxy as fleet management layer
+- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — LLM proxy as fleet management layer (moved from Harness (agent))
+- [Engineering AI adoption: evidence from practice](../../training/engineering-ai-adoption-evidence.md) — Shopify fleet productivity data and strategy-to-execution ratio (moved from AI enablement — software development)
 
 ## Key claims extracted
 

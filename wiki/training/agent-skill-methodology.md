@@ -3,8 +3,8 @@ title: Agent skill methodology
 type: training
 domains: [agents]
 tags: [perplexity, agentic]
-as_of: 2026-08-26
-sources: [perplexity-agent-skill-methodology-2026-05-12, agent-html-artifacts-2026-05-13, agent-skills-context-evals-2026-05-13, skill-engineering-impeccable-2026-07-02, vercel-agents-new-software-2026-07-03, autoresearch-agent-recipes-2026-07, powerpoint-agent-skill-failure-mode-2026-06, gpt-56-raising-concerns-2026-07-15, case-against-skills-2026-07-16, swe-skills-bench-2026-07, wayfinder-skill-2026-08-20, every-cloning-your-coworkers-2026-08-26]
+as_of: 2026-09-03
+sources: [perplexity-agent-skill-methodology-2026-05-12, agent-html-artifacts-2026-05-13, agent-skills-context-evals-2026-05-13, skill-engineering-impeccable-2026-07-02, vercel-agents-new-software-2026-07-03, autoresearch-agent-recipes-2026-07, powerpoint-agent-skill-failure-mode-2026-06, gpt-56-raising-concerns-2026-07-15, case-against-skills-2026-07-16, swe-skills-bench-2026-07, wayfinder-skill-2026-08-20, every-cloning-your-coworkers-2026-08-26, skills-and-plugin-packaging-late-march, harness-engineering-early-april, googlecloudtech-adk-2-orchestration-patterns, ainews-andrew-ng-ai-engineering-2026-08-25, ainews-openai-shuts-off-cursor-2026-08-29, ainews-muse-spark-13-2026-09-03]
 ---
 
 # Agent skill methodology
@@ -18,6 +18,8 @@ The core problem: skills written as long procedures become stale, redundant, or 
 - Treat skills and recipes as portable operating knowledge, not only prompt snippets. Durable agent behavior should carry instructions, references, eval cases, failure history, and audit-friendly change history rather than living only in a chat transcript. Vercel uses skills to forward-correct stale model knowledge about deprecated products, while Impeccable-style design skills encode domain vocabulary and levels of control.
 - Good skills name the decision language the agent should use: quality adjectives, acceptable ranges, examples, anti-examples, and what "do not auto-fix" means in that domain.
 - Cross-harness skills should avoid tool-specific assumptions unless the skill is explicitly packaged for one runtime.
+- Share skills, not just code: reusable skills package the fuzzy operating judgment that teams want many agents to inherit. The architecture that follows is "thin harness, fat skills, fat code" — fuzzy human-like judgment goes into reusable skills, deterministic work into code, and the harness itself stays small and legible.
+- "Skill" does not mean the same thing everywhere: some ecosystems package reference-heavy technical instructions, others package more open-ended problem-solving approaches. Say which kind a skill is.
 
 ## Proven patterns
 
@@ -51,7 +53,7 @@ Before shipping, delete every instruction the model would probably follow on its
 - Test: would a careful teammate reading this think "of course"? Cut it.
 
 **6. Use progressive disclosure for references**
-Keep the trigger and core principle small; link deeper references, examples, schemas, and tool docs so they load only when the skill is invoked.
+Keep the trigger and core principle small; link deeper references, examples, schemas, and tool docs so they load only when the skill is invoked. Skills work best as small, composable units with clear interfaces, which lets an agent carry a broad capability surface without always paying its token cost.
 
 ### Maintaining the library
 
@@ -90,6 +92,7 @@ Every's head of operations, Arielle Shipper, keeps a standing "self-improve" ski
 - The 5-step cycle (test cases, triggers, principles, failure codification, pruning) is documented in a public Perplexity research post and summarized in Every's May 12 newsletter.
 - Vercel's eve interview frames skills as a way to keep agents current when model training data contains stale product knowledge.
 - Impeccable coverage shows the same pattern applied to design agents: encode design vocabulary and constraints as reusable skills rather than relying on one-shot taste prompts.
+- The instruction layer is a real quality lever: a T3 Code team reported that fine-tuning its `agents.md`/`claude.md` instruction files measurably improved pull-request quality, with the largest gain coming from better PR names and descriptions rather than the underlying code generation (late August 2026).
 
 ## What the benchmarks say
 
@@ -102,10 +105,14 @@ The methodology above was practitioner-sourced until SkillsBench and a companion
 
 The SkillsBench harness is open-source, so a team can run these same comparisons on its own skills rather than trusting the published numbers alone.
 
+- **Measure Skill Lift, not skill structure.** NVIDIA argues static checks on a skill barely predict usefulness (Spearman ρ=0.14 against judged quality); the better metric is Skill Lift — run the same task with and without the skill under identical conditions and score the delta in completed work. This is the with/without comparison above, named as a metric.
+- **Aggregate lift can hide harm where retrieval fires.** A "Retrieval-Invoked Actual-Use Effect" paper (17 LLMs, coding and math) found that skill/tool retrieval can raise aggregate scores while having a negative effect on the very tasks where it actually fires. Measure the tasks that invoke a skill, not only the overall average.
+
 - **A second, independent benchmark points the same direction — with a caution.** SWE-Skills-Bench (arXiv 2603.15401, March 2026) is a distinct study from SkillsBench above, despite the similar name. It pairs 49 public software-engineering skills with real GitHub repos and requirement documents carrying explicit, execution-tested acceptance criteria — about 565 task instances across six SE subdomains. Result: 39 of 49 skills produced zero measurable pass-rate improvement, and the average gain across all 49 was only +1.2%. Token overhead ran as high as +451% independent of any accuracy gain. Only 7 skills helped (up to +30%) — all supplying specialized knowledge the model couldn't otherwise have. Three actively hurt performance (up to -10%), specifically because their guidance was mismatched to the project's actual code version — a concrete, named failure mode for the "procedure rot" entry above.
 
 ## Recent changes
 
+- [2026-10-19] Merged in skill material from two over-long pages: from [Agentic orchestration patterns](../workflows/agentic-orchestration-patterns.md), "share skills, not just code", "thin harness, fat skills, fat code", composable progressive disclosure, and the note that "skill" means different things across ecosystems; from [Harness (agent)](../concepts/harness.md), NVIDIA's Skill Lift metric, the Retrieval-Invoked Actual-Use Effect paper, and T3 Code's instruction-file fine-tuning result.
 - [2026-08-26] Added a personal self-improve-skill pattern (Arielle Shipper, Every): feed the agent feedback on a mistake, then run a skill that proposes a targeted edit to the agent's own operating instructions — the same compounding mechanism as team-facing skills, run by one person on their own workflow.
 - [2026-08-20] Added /wayfinder: a map/persistent-decisions + per-session-ticket pattern for planning work under uncertainty, plus "leading words"/ubiquitous-language as a terminology-design principle (Matt Pocock).
 - [2026-07-16] Added SWE-Skills-Bench (distinct from SkillsBench): 49 skills tested against real repos, 39 with zero effect, average +1.2% gain, 7 real winners (up to +30%), 3 regressions (up to -10%) from version-mismatched guidance. Added a keep/retest/retire skill-audit pattern.
@@ -123,7 +130,8 @@ The SkillsBench harness is open-source, so a team can run these same comparisons
 ## Related
 
 - [Skillify — Agent Reliability Pattern](../workflows/skillify-agent-reliability.md) — the 10-step checklist for turning a specific production failure into a tested skill; this page covers the general authoring method
-- [Agentic orchestration patterns](../workflows/agentic-orchestration-patterns.md) — where "share skills, not just code" and progressive disclosure show up as operating patterns
+- [Agentic orchestration patterns](../workflows/agentic-orchestration-patterns.md) — the wider operating-pattern catalog that skills plug into (packaging, hooks, tool design)
+- [Harness (agent)](../concepts/harness.md) — skills as one of the reusable operating modules inside a harness
 
 ## Sources
 
@@ -139,3 +147,9 @@ The SkillsBench harness is open-source, so a team can run these same comparisons
 - [SWE-Skills-Bench: Do Agent Skills Actually Help in Real-World Software Engineering?](../sources/papers/swe-skills-bench-2026-07.md)
 - [The /wayfinder Skill: Navigating the "Fog of War" of Planning](../sources/newsletters/wayfinder-skill-2026-08-20.md)
 - [Every — The Case for Cloning Your Coworkers](../sources/newsletters/every-cloning-your-coworkers-2026-08-26.md)
+- [Skills and plugin packaging in late March](../sources/newsletters/skills-and-plugin-packaging-late-march.md)
+- [Harness engineering in early April](../sources/newsletters/harness-engineering-early-april.md)
+- [Google Cloud's ADK 2.0 orchestration patterns](../sources/tweets/googlecloudtech-adk-2-orchestration-patterns.md)
+- [AINews — Andrew Ng gets into AI Engineering](../sources/newsletters/ainews-andrew-ng-ai-engineering-2026-08-25.md)
+- [AINews — OpenAI shuts off Cursor](../sources/newsletters/ainews-openai-shuts-off-cursor-2026-08-29.md)
+- [AINews — Muse Spark 1.3 matches GPT-5.6-Sol](../sources/newsletters/ainews-muse-spark-13-2026-09-03.md)

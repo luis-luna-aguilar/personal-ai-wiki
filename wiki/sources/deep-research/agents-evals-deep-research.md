@@ -25,8 +25,10 @@ Deep-research synthesis covering eval design for coding agents and general workf
 - [ToolBench](../../benchmarks/toolbench.md) — benchmark page for large-scale API-chaining and tool-use evaluation
 - [Terminal-Bench](../../benchmarks/terminal-bench.md) — benchmark page for real CLI and system-administration tasks
 - [Evals for agentic software development](../../training/evals-for-agentic-software-development.md) — main synthesis source for coding-agent eval patterns
+- [AI PR and code review](../../workflows/ai-pr-code-review.md) — judge calibration: rubrics, reference answers, human audits (moved from Evals for agentic software development)
 - [Evals for workflow and task agents](../../training/evals-for-agentic-work.md) — main synthesis source for workflow-agent eval patterns
 - [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — adds an autonomy ladder for eval-gated permission expansion across organization-wide agents
+- [Agent autonomy and governance](../../training/agent-autonomy-and-governance.md) — eval-gated autonomy ladder (moved from Company-wide AI enablement)
 - [Anti-autopilot review friction](../../training/anti-autopilot-review-friction.md) — adds escalation evals as a design-time forcing function for human handoff boundaries
 - [Braintrust](../../tools/braintrust.md) — lightweight tool page seeded from the report's trace-to-dataset workflow coverage
 - [Promptfoo](../../tools/promptfoo.md) — lightweight tool page seeded from the report's assertion-based eval examples

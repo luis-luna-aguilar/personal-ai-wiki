@@ -3,8 +3,8 @@ title: Agent memory
 type: concept
 domains: [agents]
 tags: [agentic, knowledge-cluster]
-as_of: 2026-07-07
-sources: [agent-memory-without-vector-db, memory-vs-context-rot-february, agent-memory-systems-layer-2026-06, minteval-paper-2026-05, ainews-erdos-benchmarks-cluster-2026-05-21]
+as_of: 2026-09-01
+sources: [agent-memory-without-vector-db, memory-vs-context-rot-february, agent-memory-systems-layer-2026-06, minteval-paper-2026-05, ainews-erdos-benchmarks-cluster-2026-05-21, ainews-openai-shuts-off-cursor-2026-08-29, ainews-fal-h3-max-live-2026-09-01]
 ---
 
 # Agent memory
@@ -15,7 +15,7 @@ Agent memory is the problem of helping an AI system recover the right facts from
 
 Memory layer, memory system, long-term agent memory. "Ghost memory" is not an alias but a named failure mode (see below).
 
-## Current status (as of 2026-07-07)
+## Current status (as of 2026-09-01)
 
 - Memory is moving from "retrieve old facts" toward a lifecycle system: extract candidate memories, deduplicate them, reconcile conflicts, scope them to the right user/team/task, retrieve evidence, and expire or update stale facts.
 - Supermemory's ASMR system is described as using specialized agents to read conversation history, analyze it, and extract facts instead of embedding everything and querying by similarity.
@@ -27,6 +27,14 @@ Memory layer, memory system, long-term agent memory. "Ghost memory" is not an al
 ## Why it matters
 
 Many agent systems fail not because they lack storage, but because they surface the wrong fragment at the wrong time. A memory architecture that can re-read history, synthesize the relevant facts, and expose them cleanly may matter more than squeezing better recall out of a generic vector-search stack.
+
+## Context editing and persistent state
+
+Late-August 2026 research moves memory inside the agent's working loop rather than leaving it as an external store:
+
+- **Mutable state instead of growing transcripts.** WikiSkill / SKILL.state (Google DeepMind and collaborators) replaces ever-growing conversation histories with explicit mutable state plus persistent skill knowledge, reporting better long-horizon accuracy at lower cumulative token use.
+- **Training agents to edit their own context.** Tencent's ContextPilot assigns RL reward at the level of specific context edits rather than final task outcome — a more targeted credit-assignment scheme for long-horizon tasks.
+- **A persistent knowledge store carries much of the gain.** Google DeepMind researchers separated three layers: raw execution traces, a persistent accumulated-knowledge store (a "wiki"), and executable skills distilled from it. In ablation the store itself carried much of the measured gain, and the distilled skills transferred across model families, sometimes beating skills a model evolved for itself. That supports portable knowledge and skills over fine-tunes, which often fail to amortize when open base models change this fast. In the [Knowledge architectures](knowledge-architectures.md) vocabulary this store is closer to a [knowledge layer](knowledge-layer.md) than to per-agent episodic memory, though here the agent compiles it from its own traces.
 
 ## Practical implications
 
@@ -40,6 +48,7 @@ Many agent systems fail not because they lack storage, but because they surface 
 
 ## Recent changes
 
+- [2026-10-19] Added a "Context editing and persistent state" section (WikiSkill/SKILL.state, ContextPilot, Google's trace → knowledge-store → skill ablation), moved from [Harness (agent)](harness.md).
 - [2026-09-09] Terminology reorganization: added the `## Also called` alias line, dated the Current-status stamp, and rewrote the Related lines to agree with the new [Knowledge architectures](knowledge-architectures.md) hub (this page previously described itself as "retrieval mechanics" on one page and as a "lifecycle system" on another).
 - [2026-07-07] AINews memory cluster updates agent memory from retrieval problem to systems layer: extraction, dedupe, reconciliation, scoping, lifecycle, and offline trace writeback.
 - [2026-05-19] MINTEval published: a dedicated benchmark for long-horizon memory under multi-target interference; 7 evaluated systems average 27.9% accuracy (best 33.4% per AINews' recap), giving independent confirmation that current memory systems are far from solved.
@@ -63,3 +72,5 @@ Many agent systems fail not because they lack storage, but because they surface 
 - [Agent memory becomes a systems layer](../sources/newsletters/agent-memory-systems-layer-2026-06.md)
 - [MINTEval (arXiv paper)](../sources/papers/minteval-paper-2026-05.md)
 - [AINews — agent-benchmark cluster (InferenceBench, Terminal-Bench Science, MINTEval)](../sources/newsletters/ainews-erdos-benchmarks-cluster-2026-05-21.md)
+- [AINews — OpenAI shuts off Cursor](../sources/newsletters/ainews-openai-shuts-off-cursor-2026-08-29.md)
+- [AINews — Fal's H3 Max Live breaks the infinite videogen barrier](../sources/newsletters/ainews-fal-h3-max-live-2026-09-01.md)

@@ -17,6 +17,7 @@ Cognition built an automated system that reviews each completed Devin session, c
 - [Devin](../../tools/devin.md) — productivity estimator feature
 - [Economic agent evals](../../concepts/economic-agent-evals.md) — new Human-hours-equivalent productivity estimation section
 - [AI enablement — software development](../../training/ai-enablement-software-development.md) — evidence from practice
+- [Engineering AI adoption: evidence from practice](../../training/engineering-ai-adoption-evidence.md) — productivity-estimator evidence (moved from AI enablement — software development)
 
 ## Key claims extracted
 

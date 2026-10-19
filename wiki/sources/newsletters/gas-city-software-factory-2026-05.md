@@ -17,6 +17,7 @@ Every (Mike Taylor) attended a Gas City workshop and wrote a detailed Vibe Check
 
 - [Harness (concept)](../../concepts/harness.md) — dark/light factory, mayor/polecats, multi-model review as named primitives
 - [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — two new named patterns
+- [Software factory](../../workflows/software-factory.md) — dark/light factory (moved from Agentic orchestration patterns)
 
 ## Key claims extracted
 

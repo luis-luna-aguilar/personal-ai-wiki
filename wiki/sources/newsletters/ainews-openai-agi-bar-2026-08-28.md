@@ -19,6 +19,8 @@ AINews digest covering OpenAI's Astra/AGI timeline claims (Pachocki, Altman), Mi
 - [GLM-5.3](../../models/glm-5-3.md) — Flash quantization/local-serving reaction
 - [Physical AI deployment curve](../../trends/physical-ai-deployment.md) — Microduck launch, spec, early reaction
 - [Harness (agent)](../../concepts/harness.md) — JIT-Agent
+- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — Claude Managed Agents cookbook, Hermes real-Chrome-profile browsing (moved from Harness (agent))
+- [Harness vs model](../../concepts/harness-vs-model.md) — FSM induction from agent traces (moved from Harness (agent))
 - [Claude Managed Agents](../../tools/claude-managed-agents.md) — Vercel Chat SDK cookbook
 - [Hermes Agent](../../tools/hermes-agent.md) — real-Chrome-profile browsing
 - [Agent safety and alignment research](../../trends/agent-safety-and-alignment-research.md) — cyber-defense coalition, double-blind evals pilot, incident analysis continuing

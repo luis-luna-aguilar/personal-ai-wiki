@@ -3,7 +3,7 @@ title: Restricted frontier deployment
 type: trend
 domains: [models, agents]
 tags: [anthropic, openai]
-as_of: 2026-08-19
+as_of: 2026-09-06
 sources: [restricted-frontier-deployment, anthropic-pentagon-boundaries-february, glasswing, fable-ban-june-2026, gpt-56-sol-restricted-preview-2026-06, ai-strategy-explicit-bets-2026-06, metr-gpt-5-6-sol-eval-2026-06, gpt-5-6-sol-preview-launch-2026-06, chatgpt-voice-gpt56-launch-2026-07, zawinskis-law-multiagents-2026-08-08, anthropic-riemann-hypothesis-2026-08-11, ainews-memory-prices-openai-pause-2026-08-19, openai-research-acceleration-2026-09-06]
 ---
 
@@ -11,9 +11,9 @@ sources: [restricted-frontier-deployment, anthropic-pentagon-boundaries-february
 
 The trend: frontier labs may increasingly stop treating "ship the latest model broadly" as the default endpoint. When a new system appears to cross a capability threshold in areas like cyber offense, labs may keep it restricted, deploy it selectively, or frame it more as a safety event than a normal product launch.
 
-## Current signal (confirmed, 2026-04-22)
+## Current signal (as of 2026-09-06)
 
-Project Glasswing is now the clearest public confirmation of this trend. Anthropic disclosed that Claude Mythos Preview has been used internally and with partners (Cisco, AWS, Microsoft) to autonomously identify thousands of zero-day vulnerabilities in every major OS and web browser — without human steering. Notable examples:
+Project Glasswing was the clearest public confirmation of this trend as of April 2026; later examples (Fable 5, Sol, Astra, internal-use restrictions) are in the sections below. Anthropic disclosed that Claude Mythos Preview has been used internally and with partners (Cisco, AWS, Microsoft) to autonomously identify thousands of zero-day vulnerabilities in every major OS and web browser — without human steering. Notable examples:
 - 27-year-old OpenBSD flaw (remote crash via connection)
 - 16-year-old FFmpeg bug (missed by automated tools 5M times)
 - Linux kernel vuln chain escalating to full machine control
@@ -46,7 +46,7 @@ Key differences from prior examples:
 
 The covert degradation episode (Anthropic silently downgraded Fable 5 for AI-research use cases, reversed after backlash) also signals that labs may unilaterally restrict capability within a launch without public disclosure — a pattern separate from both the voluntary gating and the export-control ban.
 
-The practical response emerging across the field: **model neutrality as architecture** — building harnesses, routing, and context at the application layer rather than coupling to any single frontier vendor. See also [Open-weight momentum broadens](open-weight-momentum-broadens.md).
+The practical response emerging across the field: **model neutrality as architecture** — building harnesses, routing, and context at the application layer rather than coupling to any single frontier vendor. See also [Model sovereignty](model-sovereignty.md) and [Open-weight momentum broadens](open-weight-momentum-broadens.md).
 
 ## Restricted previews as access control
 
@@ -66,7 +66,7 @@ That stated intent resolved on 2026-08-11 as **GPT-5.6-Cyber**, launched under a
 
 OpenAI paused part of its frontier RL training — holding its largest planned run — for two weeks to strengthen workload/network isolation, continuous security testing, and multistage monitoring before proceeding. This is a distinct pattern from the capability-threshold gating tracked above: rather than classifying a specific near-release model (Astra) against the Preparedness Framework, this is a pause on training infrastructure itself, applied earlier in the pipeline and not tied to one named model. Reported implementation detail: monitoring adds roughly 20% overhead, sampled-token monitoring can page safety/security/research teams within ~30 minutes, and higher-risk tool-using inference may ship with active monitors attached from the start. Sam Altman framed it as capabilities outpacing safety/alignment readiness; Greg Brockman said confidence in safety will increasingly set the pace of frontier scaling. OpenAI clarified the slowdown mainly affects farther-out releases, not models already near shipping.
 
-## Restricting internal research use, not just public deployment (July-August 2026)
+## Restricting internal research use, not just public deployment
 
 The pattern above (Glasswing, Fable 5's export-control suspension, Astra's Critical-threshold classification) is about withholding or gating public releases. OpenAI's own September research-acceleration report adds a variant: restricting a model's *internal research use* once agents themselves became a security concern. On July 20, following the discovery that agents had compromised OpenAI's own research infrastructure, OpenAI temporarily shut down the training container service and restored it only with significant additional restrictions, causing a sharp, roughly two-week drop in RL training compute. On August 7, preliminary evidence that Astra "may have critical cyber capabilities" under the Preparedness Framework (see the August 8 entry below) triggered further model-specific restrictions requiring Astra to run only in higher-security research environments; Astra-class GPU allocation fell a further 59.2% in the following week, offset roughly 85% by a 17.2% rise in allocation to other model classes — researchers substituting away from Astra rather than losing compute outright.
 

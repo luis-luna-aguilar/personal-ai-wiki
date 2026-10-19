@@ -18,6 +18,7 @@ Every's "Token Tightening" argues enterprise AI is entering an allocation era: c
 - [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — adds AI FinOps operating controls.
 - [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — strengthens economic loop discipline.
 - [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — adds token allocation as governance pattern.
+- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — token allocation as governance (moved from Company-wide AI enablement)
 
 ## Key claims extracted
 

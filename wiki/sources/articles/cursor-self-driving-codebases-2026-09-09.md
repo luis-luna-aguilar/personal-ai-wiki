@@ -16,6 +16,7 @@ Cursor's account of the harness behind its long-running browser-building researc
 
 - [Multi-agent coordination](../../workflows/multi-agent-coordination.md) — recursive planner/subplanner/worker topology, freshness mechanisms, prompting lessons, steady-error-rate design principles, and an extension to the swarm-coordination-failures pattern (new-VCS throughput jump, Coase framing)
 - [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — extended the evaluator-separation pattern with a community Codex config example
+- [Long-running agent swarms](../../workflows/long-running-agent-swarms.md) — recursive topology, freshness mechanisms, prompting lessons, steady-error-rate principles, VCS throughput jump and Coase framing (moved from Multi-agent coordination)
 - [Cursor](../../tools/cursor.md) — Recent-changes note on the harness research and its partial availability to users
 
 ## Key claims extracted

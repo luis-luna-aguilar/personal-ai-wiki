@@ -15,6 +15,7 @@ Superhuman's 2026-07-17 issue leads with Moonshot AI's Kimi K3 launch (see the s
 ## Influenced pages
 
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Model sovereignty section (World AI Cooperation Organization founding members)
+- [Model sovereignty](../../trends/model-sovereignty.md) — World AI Cooperation Organization founding members (moved from Open-weight momentum broadens)
 
 ## Key claims extracted
 

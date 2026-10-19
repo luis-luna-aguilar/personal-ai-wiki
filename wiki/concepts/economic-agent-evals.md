@@ -49,7 +49,7 @@ The comparison suggests granular session data (full trace, user messages, codeba
 
 - [Agent evals](agent-evals.md) — the broader eval taxonomy this page's methods sit inside
 - [Devin](../tools/devin.md) — production deployment of the human-hours-equivalent estimator
-- [AI enablement — software development](../training/ai-enablement-software-development.md) — production evidence of the estimator in use
+- [Engineering AI adoption: evidence from practice](../training/engineering-ai-adoption-evidence.md) — production evidence of the estimator in use
 
 ## Sources
 

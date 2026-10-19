@@ -15,6 +15,7 @@ The Code and Superhuman newsletters covered simultaneous FDE (forward-deployed e
 ## Influenced pages
 
 - [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — FDE model added as enterprise deployment pattern
+- [Forward-deployed engineering](../../training/forward-deployed-engineering.md) — FDE model and frontier-lab hiring race (moved from Company-wide AI enablement)
 
 ## Key claims extracted
 

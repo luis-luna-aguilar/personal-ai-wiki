@@ -35,8 +35,8 @@ Claude Science is Anthropic's public beta app for scientific workflows. It is no
 ## Recent changes
 
 - [2026-07-06] Anthropic product page confirms Claude Science public beta, reproducible artifacts, persistent kernels, 60+ scientific databases, and scientific-tool/compute integrations.
-- [2026-07-01] Official announcement adds beta plan availability, reviewer agents, scientific artifact rendering, BioNeMo/Boltz/OpenFold integrations, and case studies.
 - [2026-07-05] Every reports Claude Science launch and Anthropic internal preclinical drug-program dogfooding.
+- [2026-07-01] Official announcement adds beta plan availability, reviewer agents, scientific artifact rendering, BioNeMo/Boltz/OpenFold integrations, and case studies.
 
 ## Sources
 

@@ -20,6 +20,7 @@ AINews recap covering four distinct stories from 2026-09-07/08: OpenAI's dispute
 - [Meta Muse](../../tools/meta-muse.md) — launch, security architecture, adoption numbers
 - [Muse Spark](../../models/muse-spark.md) — day-one third-party exposure note
 - [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) / [Harness (agent)](../../concepts/harness.md) — RLM harness (Harvey + Baseten), LangChain deepagents subagent forking
+- [Harness vs model](../../concepts/harness-vs-model.md) — Harvey + Baseten RLM harness numbers (moved from Harness (agent))
 - [GPT-Image-2](../../models/gpt-image-2.md) — GPT-Image-2.5 version bump
 
 ## Key claims extracted

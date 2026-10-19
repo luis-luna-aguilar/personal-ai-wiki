@@ -16,6 +16,7 @@ Superhuman's 2026-07-20 issue leads with Alibaba putting Qwen3.8 into live previ
 
 - [Qwen 3.8](../../models/qwen-3-8.md) — new preview page
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Model sovereignty section, Current signal bullet
+- [Model sovereignty](../../trends/model-sovereignty.md) — Xi Jinping World AI Conference pledge (moved from Open-weight momentum broadens)
 
 ## Key claims extracted
 

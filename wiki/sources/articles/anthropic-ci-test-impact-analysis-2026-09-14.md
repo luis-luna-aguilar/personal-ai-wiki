@@ -15,6 +15,7 @@ An Anthropic engineering blog post on scaling its test-impact-analysis (test-sel
 ## Influenced pages
 
 - [AI enablement — software development](../../training/ai-enablement-software-development.md) — new Proven-patterns bullet (plan for exponential CI growth) and Evidence-from-practice case study
+- [Engineering AI adoption: evidence from practice](../../training/engineering-ai-adoption-evidence.md) — CI test-impact-analysis case study (moved from AI enablement — software development)
 
 ## Key claims extracted
 

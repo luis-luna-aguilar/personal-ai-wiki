@@ -15,6 +15,7 @@ Every CEO Dan Shipper argues AI progress increases, not decreases, demand for hu
 
 ## Influenced pages
 - [Agent evals](../../concepts/agent-evals.md) — added the benchmark-framing / "chart psychosis" critique section
+- [AGI timeline claims](../../trends/agi-timeline-claims.md) — benchmark-framing / "chart psychosis" critique section (moved from Agent evals)
 - [AI work delegation modes](../../training/ai-work-delegation-modes.md) — added the agent-employee taxonomy (coworker/embedded) and human-sandwich pattern as concrete evidence, plus a personal-agent-staleness failure mode
 
 ## Key claims extracted

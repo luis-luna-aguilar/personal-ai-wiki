@@ -18,6 +18,8 @@ AINews' AI Twitter recap for 8/22–8/24/2026 (published with a lag). Lead story
 - [Muse Spark](../../models/muse-spark.md) — Muse Spark 1.3 launch coverage
 - [State of Models](../../state-of/models.md) — leader-line refresh
 - [Harness](../../concepts/harness.md) — HarnessDev, Retrieval-Invoked Actual-Use Effect, openJiuwen, Miles RL framework
+- [Agent skill methodology](../../training/agent-skill-methodology.md) — Retrieval-Invoked Actual-Use Effect (moved from Harness (agent))
+- [Harness vs model](../../concepts/harness-vs-model.md) — openJiuwen fixed-model result (moved from Harness (agent))
 - [Automated harness optimization](../../concepts/automated-harness-optimization.md) — HarnessDev self-evolved-harness finding (moved from Harness)
 - [AGI timeline claims](../../trends/agi-timeline-claims.md) — @rasbt's Astra architecture rebuttal
 - [Agent safety and alignment research](../../trends/agent-safety-and-alignment-research.md) — Astra recurrent-depth/monitorability context

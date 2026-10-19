@@ -12,7 +12,7 @@ sources: [ainews-2026-04-23, the-code-2026-04-23, qwen-3-6-27b-aa-2026-05-01]
 
 Alibaba's dense 27B open-weight coding model. Despite being 14× smaller than the previous 397B-param Qwen 3.6 MoE flagship, it outperforms it on every major coding benchmark — the clearest current signal that dense architecture plus better training can beat raw parameter count.
 
-## Current status (as of 2026-04-23)
+## Current status (as of 2026-05-01)
 
 - 27B-parameter dense architecture (not MoE); Apache 2.0 license
 - Unified thinking / non-thinking modes; native multimodal reasoning over images and video

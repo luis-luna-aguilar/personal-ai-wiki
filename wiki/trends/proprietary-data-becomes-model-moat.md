@@ -13,7 +13,7 @@ The trend: as frontier model quality converges, more of the advantage may come f
 
 This is not only about selling data to labs. The same company can license its data externally, fine-tune an internal model with it, or do both. The strongest position is a flywheel: production work generates proprietary traces, those traces become training/eval data, and the resulting model becomes cheaper or better for that company's own use case.
 
-## Current status (as of 2026-04-21)
+## Current status (as of 2026-06-30)
 
 - AI labs and intermediaries are actively seeking non-public operational data, not just public web corpora
 - The highest-value datasets tend to be both **high quality** and **continuously growing**

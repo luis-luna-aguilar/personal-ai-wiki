@@ -12,7 +12,7 @@ sources:
   - raw/newsletters/2026-08-15-react-for-agents-astro-creator-brings-hooks-to-hi.md
   - raw/newsletters/2026-08-16-the-next-era-of-great-work.md
   - raw/newsletters/2026-08-17-our-ai-costs-jumped-230-percent-im-not-setting-t.md
-status: pending
+status: applied
 period: "oldest 20 unprocessed as of 2026-09-07"
 account: ai
 ---

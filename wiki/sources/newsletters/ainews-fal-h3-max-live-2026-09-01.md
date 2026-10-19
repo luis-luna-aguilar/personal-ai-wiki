@@ -19,6 +19,7 @@ AINews' AI Twitter recap for 8/29–8/31/2026. Lead story: Fal's faster-than-rea
 - [Muse Spark](../../models/muse-spark.md) — Muse Code GA context
 - [State of Models](../../state-of/models.md) — Muse Spark leader-line refresh
 - [Harness](../../concepts/harness.md) — WikiSkill/SKILL.state, ContextPilot, DeepSeek Harness breaking changes, "harness engineering" framing
+- [Agent memory](../../concepts/agent-memory.md) — WikiSkill/SKILL.state, ContextPilot (moved from Harness (agent))
 - [Hermes Agent](../../tools/hermes-agent.md) — v0.21.0 release
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — GLM-5.3-Flash, Qwen3.8-Flash-Next Agent Arena results, Tencent Hy4 Preview
 - [GLM-5.3](../../models/glm-5-3.md) — Agent Arena placement

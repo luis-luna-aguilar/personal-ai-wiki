@@ -14,6 +14,7 @@ AIEWF and Latent Space coverage describes software factories as lifecycle-level 
 
 ## Influenced pages
 - [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — software factory loop pattern
+- [Software factory](../../workflows/software-factory.md) — software factory loop (moved from Agentic orchestration patterns)
 - [AI enablement for software development](../../training/ai-enablement-software-development.md) — FDE/agent-engineer rollout guidance
 - [Agents reshape organizations](../../trends/agents-reshape-organizations.md) — organizational signal
 

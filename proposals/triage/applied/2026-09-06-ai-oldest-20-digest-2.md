@@ -14,7 +14,7 @@ sources:
   - raw/newsletters/2026-07-28-ainews-much-ado-about-open-weights.md
   - raw/newsletters/2026-07-28-codex-from-0-to-10m-users-building-chatgpt-work.md
   - raw/newsletters/2026-07-28-taming-opus-5.md
-status: pending
+status: applied
 period: "oldest 20 unprocessed as of 2026-09-06"
 account: ai
 ---

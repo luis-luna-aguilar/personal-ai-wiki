@@ -12,7 +12,7 @@ sources: [ainews-2026-04-22, ainews-navier-stokes-2026-09-09]
 
 OpenAI's image generation model, launched April 22, 2026 as "ChatGPT Images 2.0." Available simultaneously in ChatGPT, the Codex CLI, and the public API as `gpt-image-2`. First-day #1 in all three Chatbot Arena image categories by a wide margin.
 
-## Current status (as of 2026-04-22)
+## Current status (as of 2026-09-08)
 
 - #1 Elo in all image arena categories: 1512 text-to-image, 1513 single-image edit, 1464 multi-image edit
 - +242 Elo gap over next competitor on text-to-image — displaces Gemini's Nano Banana 2 (Imagen)

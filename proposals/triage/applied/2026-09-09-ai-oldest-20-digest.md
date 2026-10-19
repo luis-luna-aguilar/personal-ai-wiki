@@ -9,7 +9,7 @@ sources:
   - raw/newsletters/2026-09-02-compound-writing-how-i-turned-my-process-into-a-p.md
   - raw/newsletters/2026-09-03-ainews-muse-spark-13-matches-gpt-56-sol-confi.md
   - raw/tweets/2026-09-09-github-2094891879959539773.md
-status: pending
+status: applied
 period: "oldest 20 unprocessed as of 2026-09-09"
 account: ai
 ---

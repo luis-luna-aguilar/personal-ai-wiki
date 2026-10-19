@@ -15,6 +15,7 @@ This source summary groups a cluster of early-April signals about operational ag
 
 - [Harness (agent)](../../concepts/harness.md) — expands the definition of the harness to include skills, hooks, and maintained knowledge layers
 - [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — adds practical orchestration patterns seen in real coding-agent workflows
+- [Agent skill methodology](../../training/agent-skill-methodology.md) — thin harness, fat skills, fat code (moved from Agentic orchestration patterns)
 
 ## Key claims extracted
 

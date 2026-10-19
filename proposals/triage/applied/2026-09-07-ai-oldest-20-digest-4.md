@@ -9,7 +9,7 @@ sources:
   - raw/newsletters/2026-08-29-ainews-openai-shuts-off-cursor.md
   - raw/newsletters/2026-08-30-our-agents-ourselves.md
   - raw/newsletters/2026-08-31-what-we-learned-from-15-hours-of-anthropic-certifi.md
-status: pending
+status: applied
 period: "oldest 20 unprocessed as of 2026-09-07"
 account: ai
 ---

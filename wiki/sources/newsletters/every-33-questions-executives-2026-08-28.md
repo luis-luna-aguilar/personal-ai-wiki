@@ -16,6 +16,8 @@ Every's consulting team (Natalia Quintero, Mike Taylor) publishes detailed answe
 ## Influenced pages
 
 - [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — 5 new Proven-patterns bullets
+- [Agent autonomy and governance](../../training/agent-autonomy-and-governance.md) — AI-fluency ladder, governance ownership split, workflow-level measurement (moved from Company-wide AI enablement)
+- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — route-by-task-novelty guidance (moved from Company-wide AI enablement)
 
 ## Key claims extracted
 

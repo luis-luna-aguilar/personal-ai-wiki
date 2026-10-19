@@ -67,8 +67,8 @@ From the Fowler review:
 
 ## Recent changes
 
-- [2025-10-15] Page created from Fowler's "Understanding Spec-Driven Development: Kiro, spec-kit, and Tessl"
 - [2026-04-22] Added ecosystem convergence signal: Spec-Kit 77k stars, OpenAI Symphony, The Ralph Loop, and plan mode as built-in SDD step
+- [2025-10-15] Page created from Fowler's "Understanding Spec-Driven Development: Kiro, spec-kit, and Tessl"
 
 ## Sources
 

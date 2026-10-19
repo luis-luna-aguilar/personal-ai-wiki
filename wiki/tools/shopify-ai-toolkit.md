@@ -12,7 +12,7 @@ sources: [shopify-ai-toolkit, agent-ready-saas-mcp-2026-06]
 
 Shopify AI Toolkit is Shopify's integration layer for connecting general-purpose AI coding tools to the Shopify platform. It is also an example of agent-ready SaaS: Shopify packages docs, schemas, validation, skills, and MCP access so external agents can operate inside the product ecosystem. Rather than shipping its own coding agent, Shopify packages platform knowledge and actions into formats existing tools already understand: a plugin where supported, installable agent skills, or a local Dev MCP server.
 
-## Current status (as of 2026-04-10)
+## Current status (as of 2026-06-29)
 
 - Supports Claude Code, Codex, Cursor, Gemini CLI, and Visual Studio Code
 - Recommended install path is a plugin when the host tool supports plugins

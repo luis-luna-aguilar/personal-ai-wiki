@@ -21,7 +21,7 @@ sources:
   - raw/newsletters/2026-07-14-5-trends-that-defined-ai-engineering-at-worlds-fa.md
   - raw/newsletters/2026-07-14-ainews-not-much-happened-today.md
   - raw/newsletters/2026-07-15-gpt-56-is-raising-concerns.md
-status: pending
+status: applied
 period: "oldest 20 unprocessed as of 2026-09-05"
 account: ai
 ---

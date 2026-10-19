@@ -19,7 +19,7 @@ sources:
   - raw/newsletters/2026-07-21-ainews-not-much-happened-today.md
   - raw/newsletters/2026-07-21-drowning-in-demos-heres-a-better-way-to-prototyp.md
   - raw/newsletters/2026-07-21-causal-models-need-causal-data-xairas-x-cell-mo.md
-status: pending
+status: applied
 period: "oldest 20 unprocessed as of 2026-09-06"
 account: ai
 ---

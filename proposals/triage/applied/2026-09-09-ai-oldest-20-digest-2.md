@@ -13,7 +13,7 @@ sources:
   - raw/newsletters/2026-09-08-to-reador-not-to-read-the-code.md
   - raw/newsletters/2026-09-09-ainews-openai-reports-navier-stokes-singularity.md
   - raw/repos/dietrichgebert-ponytail.md
-status: pending
+status: applied
 period: "oldest 20 unprocessed as of 2026-09-09"
 account: ai
 ---

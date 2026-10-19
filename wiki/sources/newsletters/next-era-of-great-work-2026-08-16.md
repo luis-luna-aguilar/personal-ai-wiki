@@ -1,5 +1,5 @@
 ---
-title: "The Next Era of Great Work" (Every weekly digest)
+title: '"The Next Era of Great Work" (Every weekly digest)'
 type: source
 source_type: newsletter
 source_file: raw/newsletters/2026-08-16-the-next-era-of-great-work.md

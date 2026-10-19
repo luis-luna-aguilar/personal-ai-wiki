@@ -37,10 +37,10 @@ Claude Sonnet 5 is Anthropic's middle-tier Claude 5 model, positioned as a defau
 
 ## Recent changes
 
-- [2026-06-30] Official Anthropic launch details added: Claude Code/API availability, `claude-sonnet-5` API name, promotional pricing, effort-level framing, and safety notes.
-- [2026-07-02] Every and The Code reported early testing: capable but not clearly best-in-class; cost per task depends heavily on effort and tokenizer behavior.
-- [2026-08-11] Introductory $2/M input, $10/M output pricing made permanent; the scheduled step-up to $3/M input, $15/M output was cancelled.
 - [2026-08-13] Added note on Claude's rollout of imperceptible text watermarking and C2PA file-provenance metadata for models launched on/after 2026-08-02.
+- [2026-08-11] Introductory $2/M input, $10/M output pricing made permanent; the scheduled step-up to $3/M input, $15/M output was cancelled.
+- [2026-07-02] Every and The Code reported early testing: capable but not clearly best-in-class; cost per task depends heavily on effort and tokenizer behavior.
+- [2026-06-30] Official Anthropic launch details added: Claude Code/API availability, `claude-sonnet-5` API name, promotional pricing, effort-level framing, and safety notes.
 
 ## Sources
 

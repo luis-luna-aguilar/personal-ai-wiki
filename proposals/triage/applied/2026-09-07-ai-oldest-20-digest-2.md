@@ -12,7 +12,7 @@ sources:
   - raw/newsletters/2026-08-09-your-ai-is-a-mirror-of-how-you-think.md
   - raw/newsletters/2026-08-10-i-vibe-coded-a-security-risk.md
   - raw/newsletters/2026-08-11-ainews-muse-glimmer-and-spark-open-weights-retu.md
-status: pending
+status: applied
 period: "oldest 20 unprocessed as of 2026-09-07"
 account: ai
 ---

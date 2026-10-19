@@ -16,6 +16,7 @@ Anthropic's official Claude Managed Agents blog post announcing two features unv
 ## Influenced pages
 - [Claude Managed Agents](../../tools/claude-managed-agents.md) — added self-hosted sandboxes and MCP tunnels to current status
 - [Harness (agent)](../../concepts/harness.md) — extended the managed-agent-platform-primitives pattern with this example
+- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — managed-agent platform primitives (moved from Harness (agent))
 
 ## Key claims extracted
 - Self-hosted sandboxes: public beta; MCP tunnels: research preview (request access via a Claude form)

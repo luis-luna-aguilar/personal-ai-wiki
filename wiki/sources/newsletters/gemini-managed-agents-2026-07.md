@@ -19,6 +19,7 @@ The Code reports that Google added four production-oriented upgrades to hosted a
 - [Gemini](../../tools/gemini.md) - adds managed-agent API status.
 - [State of Agents](../../state-of/agents.md) - adds Gemini managed agents under frameworks/platforms.
 - [Harness](../../concepts/harness.md) - adds managed-agent platform primitives.
+- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — managed-agent platform primitives (moved from Harness (agent))
 
 ## Key claims extracted
 

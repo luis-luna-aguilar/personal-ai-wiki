@@ -4,7 +4,7 @@ type: trend
 domains: [models]
 tags: [openai]
 as_of: 2026-09-06
-sources: [ainews-openai-agi-bar-2026-08-28, ainews-fablemythos-51-2026-09-02, ainews-gpt-6-astra-launch-2026-09-04, openai-research-acceleration-2026-09-06]
+sources: [ainews-openai-agi-bar-2026-08-28, ainews-fablemythos-51-2026-09-02, ainews-gpt-6-astra-launch-2026-09-04, openai-research-acceleration-2026-09-06, every-after-automation-2026-05]
 ---
 
 # AGI timeline claims
@@ -23,6 +23,18 @@ The trend: as frontier labs approach what they consider AGI-level capability, so
 
 Dated, named claims from lab leadership are a different kind of signal than marketing copy or a product launch post — they're falsifiable in a way that lets the wiki track whether they hold up. If OpenAI (or another lab) does declare AGI internally on roughly this timeline, or conspicuously misses it, that's a significant milestone for how the rest of the wiki's model and trend pages should be read.
 
+## Reading benchmark trend lines: the framing critique
+
+Dated AGI claims are often read off benchmark trend lines. Every's Dan Shipper ("After Automation," May 2026) argues that reading those lines in isolation produces "chart psychosis" — scary intuitions about imminent job replacement that don't survive a look at how the benchmark itself is built.
+
+- Every benchmark needs a prompt, and a prompt is a frame: it freezes an open-ended situation into a fixed, measurable target. A score describes how well a model performs inside that frame, not some frame-independent measure of "the model itself."
+- **Case study — Every's in-house Senior Engineer benchmark** (rewrite a vibe-coded production codebase from first principles): GPT-5.5 scored 62/100, about 30 points above Claude Opus 4.7, while human senior engineers score in the high 80s to low 90s on the same task. Changing the prompt's specificity — removing hints like "structural rewrite" and "invariants" lowers the score; replacing the prompt with "solve all of the errors that keep popping up" drops it to near zero — moves the score dramatically without changing the model.
+- **Case study — OpenAI's GDPval**: high pass rates against human professionals rely on tasks whose prompts already encode a large amount of "smuggled intelligence" (which sample-size formula, which risk-weighted entities, which confidence interval) supplied by a human expert before the model ever ran. The benchmark measures performance on an already-expert-framed problem, not the ability to frame the problem in the first place.
+- Once a frame saturates, the fix is not "the model has replaced the expert." The now-cheap capability inside that frame gets adopted broadly, produces a flood of undifferentiated output ("slop"), and shifts the scarce, valuable work to the next frame up — deciding whether a rewrite is even needed, what to preserve, who reviews the result. The cycle repeats at the next level rather than terminating.
+- This holds even under a strong operational definition of AGI (a system worth running continuously): the model can select and re-select frames, but only in service of a goal supplied by a human "framer." The frame is not the framer, so demand for the human who decides what's worth optimizing does not disappear — it moves up a level.
+
+For eval design this complements the benchmark-leakage caveat on [Agent evals](../concepts/agent-evals.md): leakage is a benchmark failing to measure what it claims to measure; frame-relativity is a benchmark validly measuring a moving target that keeps being redefined as it saturates.
+
 ## What to watch
 
 - Whether OpenAI's Astra ships, and whether its capabilities match the "Automated AI Research Intern" framing
@@ -31,13 +43,17 @@ Dated, named claims from lab leadership are a different kind of signal than mark
 
 ## Recent changes
 
+- [2026-10-19] Merged the "chart psychosis" benchmark-framing critique (Every, Dan Shipper) from [Agent evals](../concepts/agent-evals.md) as a lens for reading benchmark-based AGI claims.
 - [2026-09-06] OpenAI's own research-acceleration report confirms the "automated research intern" milestone reached and names a new March 2028 target for a full automated AI researcher, backed by internal adoption data (3.1 agent-workdays per human workday since June 2026; 90th-percentile researcher spending $7,000+/day on inference) alongside a caveat that over half of successful 4-8hr tasks still need human intervention.
 - [2026-09-03] GPT-6 Astra launches close to Pachocki's named timeline; reaction fragments into "genuine leap" / "mixed benchmarks" / "the monitorability decline is the real story" camps rather than converging on one read.
 - [2026-09-02] OpenAI's Astra reaches the "Critical" cyber-capability threshold under OpenAI's own Preparedness Framework — testing reportedly found V8 zero-days, chained exploits, and sandbox escapes; Altman says safety work is slowing deployment pacing generally.
 - [2026-08-28] OpenAI's Jakub Pachocki frames the unreleased Astra model as meeting his named "Automated AI Research Intern" milestone; Sam Altman estimates OpenAI will declare AGI achieved internally by December 2026 (TIME interview).
+- [2026-05-21] Added "chart psychosis" / benchmark-framing critique (Every, Dan Shipper, "After Automation"): benchmark scores measure performance inside a chosen frame; saturating one frame shifts demand to the next frame rather than eliminating human work. Senior Engineer benchmark example: GPT-5.5 62/100, ~30 points above Opus 4.7, ~30 below human senior engineers.
 
 ## Related
 
+- [Agent evals](../concepts/agent-evals.md) — how agent benchmarks are built, including the benchmark-leakage caveat the framing critique complements
+- [AI work delegation modes](../training/ai-work-delegation-modes.md) — the human-sandwich and delegation patterns the framing critique implies
 - [Restricted frontier deployment](restricted-frontier-deployment.md) — the inverse pattern: labs withholding or gating capability once a threshold is crossed, rather than declaring one reached
 
 ## Sources
@@ -46,3 +62,4 @@ Dated, named claims from lab leadership are a different kind of signal than mark
 - [AINews — Claude Fable/Mythos 5.1: new SOTA model](../sources/newsletters/ainews-fablemythos-51-2026-09-02.md)
 - [AINews — GPT-6 Astra: OpenAI's biggest LLM launch](../sources/newsletters/ainews-gpt-6-astra-launch-2026-09-04.md)
 - [Research acceleration: The view inside OpenAI](../sources/articles/openai-research-acceleration-2026-09-06.md)
+- [After Automation — Dan Shipper (Every)](../sources/articles/every-after-automation-2026-05.md)

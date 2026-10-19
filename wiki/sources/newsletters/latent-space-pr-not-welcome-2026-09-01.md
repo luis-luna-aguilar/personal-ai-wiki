@@ -16,6 +16,7 @@ Latent Space reports that Vercel's AI SDK, Astro/Flue (Fred Schott), and tldraw 
 ## Influenced pages
 
 - [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — new "PRs closed by default" pattern
+- [Software factory](../../workflows/software-factory.md) — "PRs closed by default" pattern (moved from Agentic orchestration patterns)
 - [Flue](../../tools/flue.md) — contribution-policy update
 
 ## Key claims extracted

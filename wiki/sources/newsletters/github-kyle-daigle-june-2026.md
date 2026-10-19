@@ -16,6 +16,7 @@ Latent Space podcast with Kyle Daigle (GitHub COO/CMO) recorded at Microsoft Bui
 
 - [Agents reshape organizations](../../trends/agents-reshape-organizations.md) — 14x commit growth data
 - [AI enablement — software development](../../training/ai-enablement-software-development.md) — micro-skills pattern, commit volume evidence
+- [Engineering AI adoption: evidence from practice](../../training/engineering-ai-adoption-evidence.md) — commit volume evidence (moved from AI enablement — software development)
 
 ## Key claims extracted
 

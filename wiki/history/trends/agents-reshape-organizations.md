@@ -1,5 +1,12 @@
 # Agents Reshape Organizations — History
 
+## Archived from current page on 2026-10-19
+
+Organizational-design signal bullets from the March 2026 OpenClaw reporting, removed from the live page as stale:
+
+- **Messaging-native personal agents are an early precursor.** The March OpenClaw cluster showed agents living in WhatsApp, Telegram, Discord, and similar channels, with agent-to-agent interaction inside group conversations and humans supervising them as if they were named teammates.
+- **Onboarding for personal agents is becoming productized.** By early March, OpenClaw reporting was already shifting from "look what this weird agent can do" toward "here is how to set up your first persistent personal agent and make it useful at work".
+
 ## Archived from current page on 2026-09-09
 
 - [2026-03-04] OpenClaw cluster provided an early concrete signal of AI-native organizational behavior: named personal agents in shared channels, agent-to-agent coordination, and humans supervising many agents as if they were teammates

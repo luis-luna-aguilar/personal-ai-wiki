@@ -15,6 +15,7 @@ An Eng Leadership newsletter interview with Colin Jarvis, OpenAI's Global Head o
 ## Influenced pages
 
 - [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — concrete OpenAI FDE paragraph added to the existing FDE-model section
+- [Forward-deployed engineering](../../training/forward-deployed-engineering.md) — OpenAI FDE org paragraph (moved from Company-wide AI enablement)
 
 ## Key claims extracted
 

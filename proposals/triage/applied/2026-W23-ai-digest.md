@@ -22,7 +22,7 @@ sources:
   - raw/newsletters/2026-06-01-why-video-agent-models-are-next-ethan-he-xai-gr.md
   - raw/articles/2026-06-01-nessielabscom-untitled.md
   - raw/tweets/2026-06-01-xcom-dotcsvstatus206116178504731852.md
-status: pending
+status: applied
 period: "2026-06-01 to 2026-06-07"
 account: ai
 ---

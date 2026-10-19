@@ -15,6 +15,7 @@ AINews' 2026-07-18–20 recap covers a wide range of topics; the policy-relevant
 ## Influenced pages
 
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Model sovereignty reversal paragraph
+- [Model sovereignty](../../trends/model-sovereignty.md) — reverse restriction-pressure paragraph (moved from Open-weight momentum broadens)
 - [Qwen 3.8](../../models/qwen-3-8.md) — 2.4T parameter figure, long-horizon caveat
 - [OpenAI–Hugging Face agentic cyber incident](../../trends/openai-huggingface-cyber-incident.md) — initial thin disclosure of the sandbox-escape/exfiltration attempts
 

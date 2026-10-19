@@ -18,6 +18,7 @@ Eight-point summary of a Lenny Rachitsky interview with Simon Willison (prolific
 - [AI enablement — software development](../../training/ai-enablement-software-development.md) — inflection point, mid-career risk, dark factory, TDD pattern added
 - [AI-native hiring and the junior talent pipeline](../../training/ai-native-hiring-and-junior-talent.md) — mid-career risk (moved from AI enablement — software development)
 - [Anti-autopilot review friction](../../training/anti-autopilot-review-friction.md) — lethal trifecta failure mode added
+- [Engineering AI adoption: evidence from practice](../../training/engineering-ai-adoption-evidence.md) — inflection point, dark factory, red/green TDD, hoarding evidence (moved from AI enablement — software development)
 
 ## Key claims extracted
 

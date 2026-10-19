@@ -18,6 +18,7 @@ Ramp publishes a detailed internal account of how it pushed AI adoption across t
 - [AI adoption: evidence from practice](../../training/ai-adoption-evidence.md) — Ramp's Glass/Dojo adoption mechanism
 - [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — adds a concrete company data point showing non-engineers and distributed teams building through internal agents
 - [AI labor-market effects](../../trends/ai-labor-market-effects.md) — Ramp's headline adoption numbers (moved from Agents reshape organizations)
+- [Engineering AI adoption: evidence from practice](../../training/engineering-ai-adoption-evidence.md) — Ramp coding-agent adoption numbers (moved from AI enablement — software development)
 
 ## Key claims extracted
 

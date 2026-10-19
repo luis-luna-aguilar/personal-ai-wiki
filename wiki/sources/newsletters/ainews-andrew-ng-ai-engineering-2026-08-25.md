@@ -16,6 +16,8 @@ AINews issue leading with Andrew Ng's DeepLearning.AI relaunch around four "AI E
 ## Influenced pages
 
 - [Harness (agent)](../../concepts/harness.md) — Skill Lift, Headlong/exo, single-harness standardization
+- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — single-harness standardization, enterprise-managed MCP auth (moved from Harness (agent))
+- [Agent skill methodology](../../training/agent-skill-methodology.md) — Skill Lift metric (moved from Harness (agent))
 - [Automated harness optimization](../../concepts/automated-harness-optimization.md) — Headlong/exo self-modifying harnesses (moved from Harness)
 - [Model Context Protocol](../../concepts/mcp.md) — enterprise-managed MCP auth
 - [AI Engineering skills](../../training/ai-engineering-skills.md) — new page, primary source for the Andrew Ng skills taxonomy

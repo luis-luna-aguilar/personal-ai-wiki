@@ -21,7 +21,7 @@ sources:
   - raw/newsletters/2026-06-24-ainews-claude-tag-multiplayer-proactive-persi.md
   - raw/tweets/2026-06-23-xcom-bchernystatus20694746817497542.md
   - raw/tweets/2026-07-07-bcherny-2069474681749754272.md
-status: pending
+status: applied
 period: "latest 20 unprocessed as of 2026-07-07"
 account: ai
 ---

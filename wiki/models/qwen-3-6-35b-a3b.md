@@ -12,7 +12,7 @@ sources: [vectorlab-qwen-3-6-local-threshold, qwen-3-5-medium-february, ainews-2
 
 Alibaba's open-weight MoE coding model. The practical local-agent framing has been partly superseded by the April 2026 release of [Qwen 3.6 27B](qwen-3-6-27b.md), a 27B dense sibling that beats the 397B MoE on all major coding benchmarks. The 35B-A3B remains a strong MoE option for 24GB-class hardware, with a better active-parameter efficiency profile for deployment environments that suit MoE.
 
-## Current status (as of 2026-04-22)
+## Current status (as of 2026-05-13)
 
 - 35B-parameter A3B mixture-of-experts model viable on roughly 24GB-class local hardware
 - The "practical local-agent threshold" framing started in the late-February Qwen 3.5 medium release cycle and sharpened further by the 3.6 framing

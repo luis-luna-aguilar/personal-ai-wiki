@@ -39,8 +39,8 @@ This does not mean agents are not impactful — it means the impact is concentra
 
 ## Recent changes
 
-- [2026-06-06] US occupational taxonomy mapping detail confirmed from June 6 AINews; design goal: ALE scores predict labor displacement risk, not just coding ability
 - [2026-06-10] Launched; top agent score: 2.6% on hardest tier; 1,500+ tasks, 55 occupations
+- [2026-06-06] US occupational taxonomy mapping detail confirmed from June 6 AINews; design goal: ALE scores predict labor displacement risk, not just coding ability
 
 ## Sources
 

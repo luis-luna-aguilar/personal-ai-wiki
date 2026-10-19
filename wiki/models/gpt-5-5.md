@@ -12,7 +12,7 @@ sources: [openai-gpt-5-5-launch, danshipper-gpt-5-5-vibe-check, gpt-5-5-instant-
 
 OpenAI's April 2026 frontier model, positioned as "our smartest and most intuitive to use model yet." The launch framing is strongest on terminal/command-line coding, broad knowledge work, math, abstract reasoning, cybersecurity, and early scientific-research use cases. At launch, Claude Opus 4.7 still held some important edges, especially on SWE-Bench Pro, MCP Atlas, FinanceAgent, and practitioner-reported plan quality.
 
-## Current status (as of 2026-05-06)
+## Current status (as of 2026-07-02)
 
 - Released April 23, 2026; rolling out across ChatGPT and Codex, with API access described as coming soon
 - Two variants: GPT-5.5 and GPT-5.5 Pro; OpenAI also frames GPT-5.5 Thinking as the ChatGPT mode for harder tasks

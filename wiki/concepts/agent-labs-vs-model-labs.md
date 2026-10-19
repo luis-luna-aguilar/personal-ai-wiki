@@ -57,7 +57,7 @@ The Fable 5 export-control ban (June 2026, resolved 2026-07-02 when Fable return
 
 ## Related
 
-- [Open-weight momentum broadens](../trends/open-weight-momentum-broadens.md) — carries the model-sovereignty argument (open weights as the practical escape hatch from single-vendor dependence) that this page's "model neutrality becomes rational" point connects to
+- [Model sovereignty](../trends/model-sovereignty.md) — carries the model-sovereignty argument (open weights as the practical escape hatch from single-vendor dependence) that this page's "model neutrality becomes rational" point connects to
 - [Harness (agent)](harness.md) — "model neutrality by design" as a concrete harness-architecture principle
 - [Multi-agent coordination](../workflows/multi-agent-coordination.md) — where harness-level model routing (model-pool routing, the sidekick pattern) shows up as an operating pattern
 

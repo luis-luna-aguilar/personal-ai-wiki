@@ -18,6 +18,7 @@ AINews recap covering 1,171 frontier-lab employees (nearly every major lab excep
 - [trends/ai-governance-and-policy](../../trends/ai-governance-and-policy.md) — new "pacing" letter section
 - [OpenAI–Hugging Face agentic cyber incident](../../trends/openai-huggingface-cyber-incident.md) — Hugging Face's forensic postmortem detail
 - [trends/open-weight-momentum-broadens](../../trends/open-weight-momentum-broadens.md) — corrects the Open Secure AI Alliance membership claim (OpenAI declined to join, not signed); Kimi K3 deployment-economics Recent-changes entry
+- [Model sovereignty](../../trends/model-sovereignty.md) — Open Secure AI Alliance membership correction (OpenAI declined) (moved from Open-weight momentum broadens)
 - [Kimi K3](../../models/kimi-k3.md) — MI355X/GPU deployment-cost estimate
 
 ## Key claims extracted

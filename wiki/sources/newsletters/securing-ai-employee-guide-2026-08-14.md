@@ -1,5 +1,5 @@
 ---
-title: "How to Secure an AI Employee" (Every guide announcement)
+title: '"How to Secure an AI Employee" (Every guide announcement)'
 type: source
 source_type: newsletter
 source_file: raw/newsletters/2026-08-14-how-to-secure-an-ai-employee.md

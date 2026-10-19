@@ -17,6 +17,7 @@ Every's "Welcome to Efficiencymaxxing" argues that teams should route work to th
 
 - [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) - adds efficiencymaxxing playbook and Spiral/OpenRouter example.
 - [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) - adds model-routing operating pattern.
+- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) - efficiencymaxxing operating pattern (moved from Company-wide AI enablement; already covered here)
 
 ## Key claims extracted
 

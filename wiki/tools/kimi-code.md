@@ -12,7 +12,7 @@ sources: [ainews-frontiercode-june-2026, kimi-goal-mode-creative-agents-2026-06]
 
 Moonshot AI's open-source coding agent, updated June 2026 with significant new capabilities. Powered by the [Kimi K2.7-Code](../history/models/kimi-k2-7-code.md) open-weight model (superseded July 2026 by [Kimi K3](../models/kimi-k3.md) as Moonshot's flagship; unconfirmed whether this tool itself has moved to K3). Accompanied by a separate desktop agent product, Kimi Work.
 
-## Current status (as of 2026-06-09)
+## Current status (as of 2026-06-19)
 
 - Open-source coding agent from Moonshot AI (China)
 - **1-line CLI install** — lowest barrier-to-entry install of any major coding agent

@@ -16,15 +16,15 @@ When adding a new wiki page, add its index entry under the correct section. One 
 
 Read-me-first dashboards per domain.
 
-- [state-of/coding](state-of/coding.md) — current state of AI coding tools and workflows *(as_of: 2026-07-14)*
-- [state-of/models](state-of/models.md) — current state of foundation models *(as_of: 2026-08-20)*
+- [state-of/coding](state-of/coding.md) — current state of AI coding tools and workflows *(as_of: 2026-08-03)*
+- [state-of/models](state-of/models.md) — current state of foundation models *(as_of: 2026-09-08)*
 - [state-of/agents](state-of/agents.md) — current state of agentic systems and tool use *(as_of: 2026-10-14)*
 - [state-of/legal](state-of/legal.md) — current state of AI in legal practice *(as_of: 2026-06-04)*
 - [state-of/computer-use](state-of/computer-use.md) — current state of AI computer-use agents and agent-readable web infrastructure *(as_of: 2026-10-14)*
 - [state-of/finance](state-of/finance.md) — current state of AI in finance *(as_of: 2026-07-02)*
 - [state-of/science](state-of/science.md) — current state of AI in scientific research *(as_of: 2026-07-06)*
-- [state-of/creative](state-of/creative.md) — current state of AI creative tools across video, image, avatar, slides, UI generation, open models, AI music, and creative-agent caveats *(as_of: 2026-07-08)*
-- [state-of/healthcare](state-of/healthcare.md) — current state of AI in healthcare workflows, medical knowledge, patient operations, and patient-side AI investigation *(as_of: 2026-06-18)*
+- [state-of/creative](state-of/creative.md) — current state of AI creative tools across video, image, avatar, slides, UI generation, open models, AI music, and creative-agent caveats *(as_of: 2026-09-01)*
+- [state-of/healthcare](state-of/healthcare.md) — current state of AI in healthcare workflows, medical knowledge, patient operations, and patient-side AI investigation *(as_of: 2026-08-13)*
 - [state-of/cybersecurity](state-of/cybersecurity.md) — current state of AI applied to cybersecurity: attack surfaces, vulnerability detection, and frontier model capability *(as_of: 2026-09-09)*
 - [state-of/voice](state-of/voice.md) — current state of AI voice and real-time interaction tools *(as_of: 2026-07-07)*
 
@@ -33,28 +33,28 @@ Read-me-first dashboards per domain.
 Foundation models. One page per model family or generation.
 
 - [models/claude-fable-5-1](models/claude-fable-5-1.md) — Anthropic frontier model refresh; supersedes Fable 5; AA Intelligence Index 66, 75% cache-read price cut, same-weights/different-safety-routing debate with the paired Mythos 5.1 release *(as_of: 2026-09-02)*
-- [models/claude-sonnet-5](models/claude-sonnet-5.md) — Anthropic middle-tier Claude 5 model; official Claude Code/API availability plus early high-effort cost-per-task caveats *(as_of: 2026-08-11)*
+- [models/claude-sonnet-5](models/claude-sonnet-5.md) — Anthropic middle-tier Claude 5 model; official Claude Code/API availability plus early high-effort cost-per-task caveats *(as_of: 2026-08-13)*
 - [models/claude-mythos-preview](models/claude-mythos-preview.md) — Anthropic restricted-preview model for autonomous zero-day discovery, METR long-horizon tasks, and Cloudflare Project Glasswing security findings *(as_of: 2026-05-23)*
 - [models/claude-opus-5](models/claude-opus-5.md) — Anthropic current flagship, supersedes Opus 4.8; Epoch Capabilities Index 159, SWE-ECI 161 tied with Fable 5; prickly/over-verbose day-to-day per practitioner reports *(as_of: 2026-07-28)*
 - [models/composer-2-5](models/composer-2-5.md) — Cursor's in-house coding model, upgraded from Composer 2 in May 2026 (targeted RL + KL distillation, 25× synthetic tasks) *(as_of: 2026-05-18)*
-- [models/deepseek-v4](models/deepseek-v4.md) — DeepSeek released open-weight Pro/Flash lineup for long-context agent workloads; 1M context, MIT license, pricing, and KV-cache/inference-systems story *(as_of: 2026-05-23)*
+- [models/deepseek-v4](models/deepseek-v4.md) — DeepSeek released open-weight Pro/Flash lineup for long-context agent workloads; 1M context, MIT license, pricing, and KV-cache/inference-systems story *(as_of: 2026-08-22)*
 - [models/cohere-command-a-plus](models/cohere-command-a-plus.md) — Cohere's first fully open (Apache 2.0) model; 218B/25B MoE; AA Intelligence Index 37 *(as_of: 2026-05-21)*
 - [models/grok-4-6](models/grok-4-6.md) — xAI/SpaceXAI; 1.5T MoE, supersedes Grok 4.5; AA Intelligence Index 61, 88.4% Terminal-Bench v2.1, unchanged $2/$6 pricing; powers new Grok Bot product *(as_of: 2026-08-13)*
 - [models/gpt-5-5](models/gpt-5-5.md) — OpenAI frontier model for coding, knowledge work, science, cyber tasks, Codex, and personal-finance agent workflows *(as_of: 2026-07-02)*
-- [models/gpt-5-6-sol](models/gpt-5-6-sol.md) — OpenAI flagship (Sol/Terra/Luna family); launched as a restricted preview, cleared for public rollout July 2026; METR predeployment eval found high detected cheating and uncertain time-horizon estimates *(as_of: 2026-07-09)*
+- [models/gpt-5-6-sol](models/gpt-5-6-sol.md) — OpenAI flagship (Sol/Terra/Luna family); launched as a restricted preview, cleared for public rollout July 2026; METR predeployment eval found high detected cheating and uncertain time-horizon estimates *(as_of: 2026-08-07)*
 - [models/gpt-6-astra](models/gpt-6-astra.md) — OpenAI's new flagship, launched 2026-09-03; mixed third-party benchmark reception vs. Fable 5.1 but far more token-efficient; system card discloses a sharp CoT-monitorability decline *(as_of: 2026-09-08)*
-- [models/glm-5-3](models/glm-5-3.md) — Z.ai; supersedes GLM-5.2; same 753B/40B MoE footprint and price, large post-training-RL benchmark jump (+246 GDPval-AA v2, ties Kimi K3) *(as_of: 2026-08-20)*
-- [models/gpt-image-2](models/gpt-image-2.md) — OpenAI image generation model; #1 across image-arena categories by a wide Elo margin *(as_of: 2026-04-22)*
+- [models/glm-5-3](models/glm-5-3.md) — Z.ai; supersedes GLM-5.2; same 753B/40B MoE footprint and price, large post-training-RL benchmark jump (+246 GDPval-AA v2, ties Kimi K3) *(as_of: 2026-09-01)*
+- [models/gpt-image-2](models/gpt-image-2.md) — OpenAI image generation model; #1 across image-arena categories by a wide Elo margin *(as_of: 2026-09-08)*
 - [models/cosmos-3](models/cosmos-3.md) — NVIDIA; Mixture-of-Transformers (autoregressive reasoner + diffusion generator); Nano 16B / Super 64B; #1 open-weight Text-to-Image and Image-to-Video *(as_of: 2026-06-02)*
 - [models/diffusiongemma](models/diffusiongemma.md) — Google experimental 26B MoE; block denoising text generation (non-autoregressive); first diffusion LLM natively in vLLM; Apache 2.0; research artifact *(as_of: 2026-06-11)*
-- [models/kimi-k3](models/kimi-k3.md) — Moonshot AI's 2.8T flagship; Intelligence Index 57; #1 Frontend Code Arena; supersedes Kimi K2.7-Code *(as_of: 2026-07-17)*
+- [models/kimi-k3](models/kimi-k3.md) — Moonshot AI's 2.8T flagship; Intelligence Index 57; #1 Frontend Code Arena; supersedes Kimi K2.7-Code *(as_of: 2026-07-29)*
 - [models/laguna-s-2-1](models/laguna-s-2-1.md) — Poolside's flagship open-weight coding model; 118B/8B-active MoE; OpenMDW-1.1 license; runs on a single DGX Spark *(as_of: 2026-07-23)*
-- [models/inkling](models/inkling.md) — Thinking Machines Lab's first flagship; 975B/41B MoE; natively multimodal; Apache 2.0; Intelligence Index 41, strongest US-origin open-weight release *(as_of: 2026-07-16)*
-- [models/mai-thinking-1](models/mai-thinking-1.md) — Microsoft's first frontier-class reasoning model; 35B active / 1T MoE; trained from scratch; 97% AIME 2025 and 53% SWE-Bench Pro *(as_of: 2026-06-03)*
+- [models/inkling](models/inkling.md) — Thinking Machines Lab's first flagship; 975B/41B MoE; natively multimodal; Apache 2.0; Intelligence Index 41, strongest US-origin open-weight release *(as_of: 2026-07-31)*
+- [models/mai-thinking-1](models/mai-thinking-1.md) — Microsoft's first frontier-class reasoning model; 35B active / 1T MoE; trained from scratch; 97% AIME 2025 and 53% SWE-Bench Pro *(as_of: 2026-08-13)*
 - [models/minimax-m3](models/minimax-m3.md) — MiniMax 1M-context model with strong agent benchmarks and contested open-weight claim because weights were not disclosed at launch *(as_of: 2026-06-02)*
 - [models/nano-banana-2](models/nano-banana-2.md) — Google image generation model; Gemini world understanding + real-time web search grounding *(as_of: 2026-04-22)*
 - [models/ideogram-4](models/ideogram-4.md) — Ideogram 9.3B DiT; #8 Image Arena, #1 open image model; strong text rendering and branding *(as_of: 2026-06-04)*
-- [models/muse-spark](models/muse-spark.md) — Meta multimodal model family; Muse Image/Video add agentic planning, tool use, code execution, and self-refinement before rendering; Muse Spark 1.1 is Meta's first paid model, Muse Spark 1.2 breaks into frontier-tier benchmarks *(as_of: 2026-08-11)*
+- [models/muse-spark](models/muse-spark.md) — Meta multimodal model family; Muse Image/Video add agentic planning, tool use, code execution, and self-refinement before rendering; Muse Spark 1.1 is Meta's first paid model, Muse Spark 1.2 breaks into frontier-tier benchmarks *(as_of: 2026-09-08)*
 - [models/muse-glimmer](models/muse-glimmer.md) — Meta's first genuinely open-weight frontier-adjacent model; 30B dense multimodal, Apache 2.0, logit-distilled from Muse Spark for always-on local agents *(as_of: 2026-08-11)*
 - [models/openai-privacy-filter](models/openai-privacy-filter.md) — OpenAI open-weight MoE for on-device PII detection and redaction; 1.5B-total / 50M-active; Apache 2.0 *(as_of: 2026-04-23)*
 - [models/nemotron-3-ultra](models/nemotron-3-ultra.md) — NVIDIA open-weight 550B/55B MoE; hybrid Mamba/attention + LatentMoE; 1M context; high-throughput serving signal *(as_of: 2026-06-02)*
@@ -62,14 +62,14 @@ Foundation models. One page per model family or generation.
 - [models/qwen-3-6-27b](models/qwen-3-6-27b.md) — Alibaba dense 27B open-weight; beats prior 397B MoE on all coding benchmarks; runs under 20 GB RAM *(as_of: 2026-05-01)*
 - [models/qwen-3-6-35b-a3b](models/qwen-3-6-35b-a3b.md) — Alibaba open-weight MoE coding/agent model; community benchmarks now place it strongest in the ~20GB local tier for long-context paper-to-code tasks *(as_of: 2026-05-13)*
 - [models/qwen-3-7](models/qwen-3-7.md) — Alibaba Qwen 3.7 preview; #13 Arena text overall, #7 Math; first Alibaba model in top-15 overall *(as_of: 2026-05-23)*
-- [models/qwen-3-8](models/qwen-3-8.md) — Alibaba's flagship; Qwen3.8-Max ships in full at 2.4T/~95B active; #4 Frontend Code Arena; open weights promised for Max + 27B sibling; license reportedly restricts US/EU/UK/Korea *(as_of: 2026-08-20)*
+- [models/qwen-3-8](models/qwen-3-8.md) — Alibaba's flagship; Qwen3.8-Max ships in full at 2.4T/~95B active; #4 Frontend Code Arena; open weights promised for Max + 27B sibling; license reportedly restricts US/EU/UK/Korea *(as_of: 2026-09-01)*
 - [models/qwen-3-8-27b](models/qwen-3-8-27b.md) — Alibaba's smaller Qwen3.8 sibling; "DeepSeek moment" for local models — #1 in Cline, AA Intelligence Index parity with DeepSeek V4-Pro/GPT-5.6 Luna Max, offset by a reported factual-recall regression *(as_of: 2026-08-20)*
 
 ## Tools
 
 Tools and products built on top of models. One page per tool.
 
-- [tools/claude-code](tools/claude-code.md) — Anthropic's terminal-first AI coding agent; /goal, Agent View, dynamic workflows, loop taxonomy, and broader general-work harness usage *(as_of: 2026-07-14)*
+- [tools/claude-code](tools/claude-code.md) — Anthropic's terminal-first AI coding agent; /goal, Agent View, dynamic workflows, Claude Security plugin, and broader general-work harness usage *(as_of: 2026-09-09)*
 - [tools/claude-cowork](tools/claude-cowork.md) — Anthropic's cross-device knowledge-work agent; web/mobile beta and closed-computer scheduled tasks strengthen background delegated work *(as_of: 2026-07-08)*
 - [tools/claude-design](tools/claude-design.md) — Anthropic's research-preview artifact-generation surface for prototypes, slides, and one-pagers *(as_of: 2026-07-08)*
 - [tools/claude-science](tools/claude-science.md) — Anthropic public beta science app with reproducible artifacts, reviewer agents, persistent kernels, database/model integrations, and local/HPC compute *(as_of: 2026-07-06)*
@@ -82,12 +82,12 @@ Tools and products built on top of models. One page per tool.
 - [tools/browserbase](tools/browserbase.md) — cloud browser infrastructure for browser agents, automated testing, and proof-artifact capture *(as_of: 2026-04-24)*
 - [tools/cartesia](tools/cartesia.md) — streaming TTS (Sonic-3.5) and STT (Ink-2); sub-90ms latency, 42 languages, strong structured-utterance handling *(as_of: 2026-06-16)*
 - [tools/checkly](tools/checkly.md) — synthetic verification and Monitoring as Code built around Playwright and API checks *(as_of: 2026-04-24)*
-- [tools/codex](tools/codex.md) — OpenAI's cloud agent surface for coding, computer work, cyber-defense workflows, mobile supervision, subagents, and broader knowledge-work automation *(as_of: 2026-07-14)*
+- [tools/codex](tools/codex.md) — OpenAI's cloud agent surface for coding, computer work, cyber-defense workflows, mobile supervision, subagents, and broader knowledge-work automation *(as_of: 2026-08-12)*
 - [tools/crabbox](tools/crabbox.md) — remote software testing and execution control plane for running tests, builds, browser checks, platform validation, and review evidence on leased or provider-backed machines *(as_of: 2026-07-08)*
 - [tools/databricks](tools/databricks.md) — enterprise data/AI platform; Genie One (agentic coworker + ontology), Unity AI Gateway (MCP auth + governance), Lakebase (agent-native Postgres) *(as_of: 2026-06-17)*
 - [tools/daytona](tools/daytona.md) — bare-metal AI-agent sandbox provider; ~60ms sandbox startup, 50K sandboxes in ~75s, RL/eval now ~50% of usage *(as_of: 2026-05-22)*
-- [tools/cursor](tools/cursor.md) — Cursor 3.1 agentic coding workspace with tiled supervision, local↔cloud handoff, iOS cloud-agent control, and Bugbot learned rules; Cursor Origin launched *(as_of: 2026-07-13)*
-- [tools/devin](tools/devin.md) — Cognition's coding agent; Auto-Triage plus Security Swarm for parallel vulnerability discovery, exploitability validation, and fix PRs *(as_of: 2026-07-14)*
+- [tools/cursor](tools/cursor.md) — Cursor 3.1 agentic coding workspace with tiled supervision, local↔cloud handoff, iOS cloud-agent control, and Bugbot learned rules; Cursor Origin launched *(as_of: 2026-09-09)*
+- [tools/devin](tools/devin.md) — Cognition's coding agent; Auto-Triage plus Security Swarm for parallel vulnerability discovery, exploitability validation, and fix PRs *(as_of: 2026-07-21)*
 - [tools/openai-deep-research](tools/openai-deep-research.md) — OpenAI's deep research agent; multi-step web research; available via ChatGPT and API *(as_of: 2026-04-22)*
 - [tools/gemini-deep-research](tools/gemini-deep-research.md) — Gemini Deep Research and Deep Research Max; most benchmarked public implementation; MCP support for internal data *(as_of: 2026-04-22)*
 - [tools/dragon-copilot](tools/dragon-copilot.md) — Microsoft's clinician-facing voice assistant for healthcare documentation and workflow automation *(as_of: 2026-04-22)*
@@ -98,21 +98,21 @@ Tools and products built on top of models. One page per tool.
 - [tools/elevenlabs-scribe](tools/elevenlabs-scribe.md) — speech-to-text product line for real-time and enterprise transcription workflows *(as_of: 2026-04-22)*
 - [tools/futurehouse](tools/futurehouse.md) — science-agent platform for research and discovery workflows *(as_of: 2026-04-22)*
 - [tools/flux-3](tools/flux-3.md) — Black Forest Labs' unified image/video/audio/action-prediction model, built on "Self Flow" research; companion FLUX3-mimic extends it to robot control *(as_of: 2026-07-24)*
-- [tools/gemini](tools/gemini.md) — Gemini umbrella page covering Google's assistant surfaces, enterprise agent platform, artifact generation, computer use, and managed-agent API primitives *(as_of: 2026-07-08)*
+- [tools/gemini](tools/gemini.md) — Gemini umbrella page covering Google's assistant surfaces, enterprise agent platform, artifact generation, computer use, and managed-agent API primitives *(as_of: 2026-08-26)*
 - [tools/glean](tools/glean.md) — enterprise AI co-worker platform; three-tier model routing, Waldo pre-model filtering layer, ~4x cost-efficiency claim vs Claude Cowork *(as_of: 2026-08-18)*
 - [tools/openrouter](tools/openrouter.md) — model-routing/aggregation API acquired by Stripe for a reported $7B; 250T tokens/month routed *(as_of: 2026-08-17)*
-- [tools/genspark-slides](tools/genspark-slides.md) — AI slides workflow inside Genspark's broader agent/content product surface *(as_of: 2026-04-22)*
+- [tools/genspark-slides](tools/genspark-slides.md) — AI slides workflow inside Genspark's broader agent/content product surface *(as_of: 2026-06-29)*
 - [tools/google-adk](tools/google-adk.md) — Google's open-source agent framework; ADK 2.0 now clearly centers graph workflows, coordinator-specialist routing, A2A handoffs, and sandboxed execution *(as_of: 2026-04-24)*
 - [tools/eve](tools/eve.md) — Vercel's agent framework for resumability, fallbacks, filesystem agents, skills, subagents, sandboxes, long-running jobs, observability, and evals *(as_of: 2026-07-03)*
-- [tools/flue](tools/flue.md) — Fred Schott's (Astro creator) agent framework; React-style Agent Hooks built on the Pi minimal harness, host-portable alternative to eve *(as_of: 2026-08-15)*
-- [tools/gpt-live](tools/gpt-live.md) — OpenAI full-duplex ChatGPT Voice model family; GPT-Live-1 and mini power natural voice interaction while delegating deeper work to frontier models *(as_of: 2026-07-07)*
+- [tools/flue](tools/flue.md) — Fred Schott's (Astro creator) agent framework; React-style Agent Hooks built on the Pi minimal harness, host-portable alternative to eve *(as_of: 2026-09-01)*
+- [tools/gpt-live](tools/gpt-live.md) — OpenAI full-duplex ChatGPT Voice model family; GPT-Live-1 and mini power natural voice interaction while delegating deeper work to frontier models *(as_of: 2026-08-05)*
 - [tools/gpt-realtime-2](tools/gpt-realtime-2.md) — OpenAI streaming speech-to-speech model with 128K context, GPT-5-class reasoning, tool use, and interruption handling *(as_of: 2026-07-07)*
-- [tools/grok-build](tools/grok-build.md) — xAI early beta CLI coding agent with plan mode and parallel worktree subagents; SuperGrok Heavy only; Grok 4.5, the jointly trained Cursor/SpaceX model, launched July 2026 as the default *(as_of: 2026-07-08)*
+- [tools/grok-build](tools/grok-build.md) — xAI early beta CLI coding agent with plan mode and parallel worktree subagents; SuperGrok Heavy only; Grok 4.5, the jointly trained Cursor/SpaceX model, launched July 2026 as the default *(as_of: 2026-07-16)*
 - [tools/kimi-code](tools/kimi-code.md) — Moonshot AI open-source coding agent; 1-line CLI install, video-as-coding-context, ACP support, and Kimi Work Goal Mode *(as_of: 2026-06-19)*
 - [tools/harness2](tools/harness2.md) — Google Cloud AI Research's open-source recursive harnessing framework: per-task propose-probe-compose refinement plus a cross-task lessons library; OpenCode/Codex executors *(as_of: 2026-10-09)*
 - [tools/harvey](tools/harvey.md) — legal AI platform; June 2026 hybrid-routing benchmark shows a cost/accuracy win over pure-Opus routing *(as_of: 2026-06-04)*
 - [tools/hebbia](tools/hebbia.md) — finance-oriented AI knowledge-work platform for document-heavy analysis *(as_of: 2026-04-22)*
-- [tools/hermes-agent](tools/hermes-agent.md) — NousResearch open-source persistent agent framework with brain+muscle layers, Kanban supervision, and local-first memory *(as_of: 2026-05-13)*
+- [tools/hermes-agent](tools/hermes-agent.md) — NousResearch open-source persistent agent framework with brain+muscle layers, Kanban supervision, and local-first memory *(as_of: 2026-09-01)*
 - [tools/heygen](tools/heygen.md) — synthetic-avatar video platform for communication, training, and marketing *(as_of: 2026-04-22)*
 - [tools/hf-ml-intern](tools/hf-ml-intern.md) — Hugging Face open-source autonomous ML post-training agent *(as_of: 2026-04-22)*
 - [tools/hippocratic-ai](tools/hippocratic-ai.md) — safety-focused healthcare agent company centered on medical workflows *(as_of: 2026-04-22)*
@@ -130,7 +130,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/mistral-document-ai](tools/mistral-document-ai.md) — document-intelligence product for extracting and structuring enterprise documents *(as_of: 2026-04-22)*
 - [tools/modal](tools/modal.md) — serverless AI cloud reframing from developer experience to "agent experience"; 100K-sandbox RL rollouts; $355M Series C *(as_of: 2026-07-08)*
 - [tools/multica](tools/multica.md) — open-source managed agents platform; treats coding agents (Claude Code, Codex, and 9 others) as project-board teammates with Squads routing and reusable skill compounding *(as_of: 2026-05-18)*
-- [tools/muse-code](tools/muse-code.md) — Meta's first terminal coding agent, launched in beta August 2026; Meta's answer to Claude Code and Codex *(as_of: 2026-08-06)*
+- [tools/muse-code](tools/muse-code.md) — Meta's first terminal coding agent, launched in beta August 2026; Meta's answer to Claude Code and Codex *(as_of: 2026-09-01)*
 - [tools/meta-muse](tools/meta-muse.md) — Meta's consumer personal AI agent, launched 2026-09-08; isolated-VM/Sentinel security architecture, Stripe commerce, 10x day-one adoption *(as_of: 2026-09-08)*
 - [tools/paperclip](tools/paperclip.md) — open-source MIT agent management platform; org-chart metaphor with heartbeats, per-agent budgets, board-of-directors governance, and Kubernetes hosting; 69.9k stars *(as_of: 2026-06-10)*
 - [tools/notion](tools/notion.md) — Notion's External Agents API lets Claude Code, Cursor, Codex, Devin, Warp, Decagon act inside Notion workspaces as a shared agent-native document surface *(as_of: 2026-05-14)*
@@ -139,7 +139,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/orca](tools/orca.md) — open-source worktree IDE for supervising multiple coding agents across isolated branches *(as_of: 2026-04-21)*
 - [tools/openwiki](tools/openwiki.md) — LangChain codebase documentation tool for maintained, agent-consumable context; a team-scope knowledge layer (subcategory `knowledge-platform`) *(as_of: 2026-07-02)*
 - [tools/peekaboo](tools/peekaboo.md) — open-source macOS CLI and MCP server for agent screen capture, UI detection, and GUI automation *(as_of: 2026-05-11)*
-- [tools/perplexity-computer](tools/perplexity-computer.md) — Perplexity's 19-model orchestration agent connected to apps and financial institutions; secondary coverage adds professional-finance positioning *(as_of: 2026-05-06)*
+- [tools/perplexity-computer](tools/perplexity-computer.md) — Perplexity's 19-model orchestration agent connected to apps and financial institutions; secondary coverage adds professional-finance positioning *(as_of: 2026-08-29)*
 - [tools/pig](tools/pig.md) — Windows-focused computer-use platform with product, API, and SDK layers *(as_of: 2026-04-22)*
 - [tools/promptfoo](tools/promptfoo.md) — assertion-based CLI eval framework for LLM outputs and agent tool routing *(as_of: 2026-04-23)*
 - [tools/railway](tools/railway.md) — bare-metal deployment platform rebuilding for agents; copy-on-write production forks, Central Station, "the pull request is dying" *(as_of: 2026-05-20)*
@@ -189,10 +189,12 @@ Benchmark pages. Current leaderboards and methodology.
 Reusable patterns and recipes.
 
 - [workflows/advisor-strategy](workflows/advisor-strategy.md) — Anthropic's small-executor + Opus-advisor escalation pattern *(as_of: 2026-06-29)*
-- [workflows/agent-loop-design](workflows/agent-loop-design.md) — patterns for a single agent's own loop: loop-first design, loop taxonomy, tempo, stop criteria, and the compound engineering loop *(as_of: 2026-09-09)*
-- [workflows/agentic-orchestration-patterns](workflows/agentic-orchestration-patterns.md) — reusable agent patterns: scoped context, harness/packaging, evaluation and review, escalation, and software-factory/cost discipline *(as_of: 2026-09-09)*
-- [workflows/multi-agent-coordination](workflows/multi-agent-coordination.md) — topology patterns for running several agents together: coordinator-specialist routing, Agentic MapReduce, sidekick harnesses, mayor+polecats, and swarm coordination failure modes *(as_of: 2026-09-09)*
-- [workflows/ai-pr-code-review](workflows/ai-pr-code-review.md) — workflow for AI-assisted pull request analysis, code-review execution, historical PR replay, and understanding-preserving review artifacts *(as_of: 2026-10-14)*
+- [workflows/agent-loop-design](workflows/agent-loop-design.md) — patterns for a single agent's own loop: loop-first design, the Claude Code loop-taxonomy table, tempo, stop criteria, and the compound engineering loop *(as_of: 2026-09-09)*
+- [workflows/agentic-orchestration-patterns](workflows/agentic-orchestration-patterns.md) — reusable agent patterns: scoped context, harness/packaging and tool design, evaluation and review, escalation, and production/cost discipline; software factories split to workflows/software-factory *(as_of: 2026-09-09)*
+- [workflows/software-factory](workflows/software-factory.md) — end-to-end agent pipelines across the software lifecycle: software-factory loop, dark/light factory split, control layer first, PRs closed by default in AI-native OSS (Vercel AI SDK, Astro/Flue, tldraw), FDE examples (Sierra, Cursor, Warp Oz) *(as_of: 2026-09-01)*
+- [workflows/multi-agent-coordination](workflows/multi-agent-coordination.md) — topology patterns for running several agents together: graph design, coordinator-specialist routing, Agentic MapReduce, sidekick harnesses, mayor+polecats, scripted subagents, Field Guide *(as_of: 2026-09-07)*
+- [workflows/long-running-agent-swarms](workflows/long-running-agent-swarms.md) — Cursor's multi-day agent-swarm case studies: recursive planner/subplanner/worker topology, five swarm coordination failure modes and fixes, freshness mechanisms, constraints over instructions, steady-error-rate design *(as_of: 2026-09-09)*
+- [workflows/ai-pr-code-review](workflows/ai-pr-code-review.md) — workflow for AI-assisted pull request analysis, code-review execution, judge calibration, historical PR replay, and understanding-preserving review artifacts *(as_of: 2026-10-14)*
 - [workflows/flex-processing](workflows/flex-processing.md) — lower-cost asynchronous processing pattern for non-urgent OpenAI workloads *(as_of: 2026-04-22)*
 - [workflows/agent-generated-html-artifacts](workflows/agent-generated-html-artifacts.md) — when agents should produce reviewable, visual, or interactive HTML artifacts instead of plain Markdown *(as_of: 2026-05-13)*
 - [workflows/skillify-agent-reliability](workflows/skillify-agent-reliability.md) — Garry Tan's pattern for turning agent failures into permanent tested skills; 10-step checklist and "thin harness / fat skills" architecture *(as_of: 2026-04-23)*
@@ -208,13 +210,14 @@ Ideas and techniques.
 - [concepts/agent-improvement-loop](concepts/agent-improvement-loop.md) — workflow for improving AI agents through traces, evals, autoresearch loops, trace-to-memory feedback, eval-suite hygiene, and production feedback *(as_of: 2026-07-29)*
 - [concepts/automated-harness-optimization](concepts/automated-harness-optimization.md) — systems that improve an agent's harness automatically: Better-Harness hill-climbing, label-free Harness², self-improving skills, self-modifying harnesses, guarded evolution *(as_of: 2026-10-09)*
 - [concepts/economic-agent-evals](concepts/economic-agent-evals.md) — dollar-denominated (Vending Bench) and human-hours-equivalent (Cognition/Devin) agent eval methods *(as_of: 2026-07-14)*
-- [concepts/agent-memory](concepts/agent-memory.md) — long-term agent memory as a lifecycle system for extraction, dedupe, reconciliation, scoping, retrieval, and stale-fact handling *(as_of: 2026-07-07)*
+- [concepts/agent-memory](concepts/agent-memory.md) — long-term agent memory as a lifecycle system for extraction, dedupe, reconciliation, scoping, retrieval, and stale-fact handling, plus context-editing research (WikiSkill/SKILL.state, ContextPilot, trace→knowledge-store→skill ablation) *(as_of: 2026-09-01)*
 - [concepts/agentic-thinking](concepts/agentic-thinking.md) — proposed successor to reasoning thinking; models that reason in order to act *(as_of: 2026-04-10)*
-- [concepts/company-brain](concepts/company-brain.md) — per-organization agent system for persistent context, tools, and institutional memory; Lovable, Cloudflare OS, and a 9-implementation survey converge on the same four-function architecture *(as_of: 2026-09-07)*
+- [concepts/company-brain](concepts/company-brain.md) — per-organization agent system for persistent context, tools, and institutional memory; Lovable, Cloudflare OS, and a 9-implementation survey converge on the same four-function architecture *(as_of: 2026-09-09)*
 - [concepts/curiosity-driven-imagination](concepts/curiosity-driven-imagination.md) — agent recovery pattern: explore when stuck, learn new steps, and turn them into guided rewards *(as_of: 2025-03-06)*
 - [concepts/functional-emotions](concepts/functional-emotions.md) — emotion-concept representations in LLMs can causally shape behavior without implying subjective feeling *(as_of: 2026-04-02)*
-- [concepts/harness](concepts/harness.md) — scaffolding around an acting model: prompts, tools, recipes, orchestration, environment, evals, controls, security boundaries, managed-agent primitives, and live-run recovery *(as_of: 2026-09-09)*
-- [concepts/harness-vs-model](concepts/harness-vs-model.md) — how much of a benchmark score comes from harness choice rather than the model, with SWE-bench Pro/Composio/Harness-Bench numbers and the train→absorb→shed co-evolution theory *(as_of: 2026-09-09)*
+- [concepts/harness](concepts/harness.md) — scaffolding around an acting model: prompts, tools, recipes, orchestration, environment, evals, controls, security boundaries, design principles, self-modifying harnesses, and live-run recovery; runtime/platform layer split to agent-runtime-platforms *(as_of: 2026-09-09)*
+- [concepts/agent-runtime-platforms](concepts/agent-runtime-platforms.md) — infrastructure around the harness: managed-agent platforms, isolates vs containers, open vs managed cost, LLM-proxy fleet control, enterprise MCP auth, agent-friendly CLIs, plugin/cookbook distribution, cloud-resident agents *(as_of: 2026-09-07)*
+- [concepts/harness-vs-model](concepts/harness-vs-model.md) — how much of a benchmark score comes from harness choice rather than the model, with SWE-bench Pro/Composio/Harness-Bench/Harvey RLM/openJiuwen numbers and the train→absorb→shed co-evolution theory *(as_of: 2026-09-09)*
 - [concepts/rl-harness-quality](concepts/rl-harness-quality.md) — eight failure modes when a harness doubles as an RL training environment; "environment failure rate above 5% is a harness problem, not a model problem" *(as_of: 2026-09-09)*
 - [concepts/knowledge-architectures](concepts/knowledge-architectures.md) — hub for the knowledge / memory / company-brain / ontology cluster: three-axis matrix, one canonical page per cell, and a term map from every source coinage (second brain, LLM wiki, memory layer, knowledge base, world model) to its canonical page *(as_of: 2026-09-07)*
 - [concepts/knowledge-layer](concepts/knowledge-layer.md) — compiled, maintained context layer between raw sources and agents; also called LLM wiki, second brain (personal scope) *(as_of: 2026-08-20)*
@@ -222,7 +225,7 @@ Ideas and techniques.
 - [concepts/agent-readable-web](concepts/agent-readable-web.md) — web and SaaS surfaces designed for machine-readable agent access, including metered agent access for data, APIs, pages, and tools *(as_of: 2026-10-14)*
 - [concepts/leworldmodel](concepts/leworldmodel.md) — LeWM JEPA world model with SIGReg and much faster planning than DINO-WM *(as_of: 2026-03-13)*
 - [concepts/deep-research](concepts/deep-research.md) — category concept for longer-horizon research agents that plan, search, synthesize, and iterate *(as_of: 2026-04-22)*
-- [concepts/mcp](concepts/mcp.md) — open protocol for exposing tools, resources, prompts, and compressed SaaS product surfaces to AI hosts and agents *(as_of: 2026-06-29)*
+- [concepts/mcp](concepts/mcp.md) — open protocol for exposing tools, resources, prompts, and compressed SaaS product surfaces to AI hosts and agents *(as_of: 2026-09-09)*
 - [concepts/mechanistic-interpretability](concepts/mechanistic-interpretability.md) — reading neural networks from the inside; superposition vs "networks are already clean" (Goodfire) debate *(as_of: 2026-10-19)*
 - [concepts/model-internal-workspace](concepts/model-internal-workspace.md) — Anthropic J-space / global-workspace research as an interpretability and audit surface, with caveats around consciousness framing *(as_of: 2026-07-07)*
 - [concepts/multiplayer-ai](concepts/multiplayer-ai.md) — teams working with the same AI agents in shared sessions and shared learnings, instead of siloed private chats; five-principle rubric plus implementation considerations *(as_of: 2026-09-14)*
@@ -231,28 +234,29 @@ Ideas and techniques.
 - [concepts/slopsquatting](concepts/slopsquatting.md) — supply-chain attack via LLM-hallucinated package names; 19.7% hallucination rate (USENIX 2025) *(as_of: 2026-04-22)*
 - [concepts/reasoning-trace-leakage](concepts/reasoning-trace-leakage.md) — encrypted/signed CoT from Claude, GPT, and Gemini can be decoded and replayed onto a different model/session/user; leaked API keys/emails/passwords found in public traces *(as_of: 2026-08-12)*
 - [concepts/quantization](concepts/quantization.md) — LLM weight compression: 4× smaller, 2× faster, 5-10% accuracy loss; makes local deployment practical *(as_of: 2026-07-15)*
-- [concepts/ontology-agent-guardrails](concepts/ontology-agent-guardrails.md) — ontologies and OWL/RDF reasoners as a machine-enforced rule layer that checks and constrains LLM agent reasoning, distinct from prompt-level instructions ("neurosymbolic AI") *(as_of: 2026-07-30)*
+- [concepts/ontology-agent-guardrails](concepts/ontology-agent-guardrails.md) — ontologies and OWL/RDF reasoners as a machine-enforced rule layer that checks and constrains LLM agent reasoning, distinct from prompt-level instructions ("neurosymbolic AI") *(as_of: 2026-09-09)*
 
 ## Trends
 
 Things being watched that haven't solidified yet.
 
-- [trends/agent-native-compute](trends/agent-native-compute.md) — cloud infrastructure purpose-built for agent workloads (sandboxes, RL/eval spikes) as a category distinct from frontier training-compute scale *(as_of: 2026-07-08)*
+- [trends/agent-native-compute](trends/agent-native-compute.md) — cloud infrastructure purpose-built for agent workloads (sandboxes, RL/eval spikes) as a category distinct from frontier training-compute scale *(as_of: 2026-09-07)*
 - [trends/agent-safety-and-alignment-research](trends/agent-safety-and-alignment-research.md) — automated alignment research, double-blind frontier evals, and agent-skill-library malware propagation as distinct agent-safety research areas *(as_of: 2026-10-19)*
 - [trends/agents-reshape-organizations](trends/agents-reshape-organizations.md) — leverage moves from individual to org as autonomous agents, FDE teams, and deployment services take coordination work; the human-attention bottleneck *(as_of: 2026-10-19)*
-- [trends/agi-timeline-claims](trends/agi-timeline-claims.md) — dated, named AGI/major-capability-milestone claims from lab leadership (OpenAI's Astra/Pachocki, Altman's December 2026 estimate), distinct from restricted-deployment withholding *(as_of: 2026-08-28)*
-- [trends/ai-governance-and-policy](trends/ai-governance-and-policy.md) — pressure for governments to actively steer AI development (disclosure mandates, pre-release review, equity-stake proposals) rather than leaving it to labs and market forces *(as_of: 2026-07-14)*
+- [trends/agi-timeline-claims](trends/agi-timeline-claims.md) — dated, named AGI/major-capability-milestone claims from lab leadership (OpenAI's Astra/Pachocki, Altman's December 2026 estimate), plus the "chart psychosis" benchmark-framing critique for reading such claims; distinct from restricted-deployment withholding *(as_of: 2026-09-06)*
+- [trends/ai-governance-and-policy](trends/ai-governance-and-policy.md) — pressure for governments to actively steer AI development (disclosure mandates, pre-release review, equity-stake proposals) rather than leaving it to labs and market forces *(as_of: 2026-09-06)*
 - [trends/ai-infrastructure-consolidation](trends/ai-infrastructure-consolidation.md) — open-model ecosystem infrastructure (hosting, distribution registries) consolidating under large buyers; NVIDIA's ~$13B Hugging Face acquisition and llama.cpp governance risk *(as_of: 2026-08-29)*
 - [trends/ai-labor-market-effects](trends/ai-labor-market-effects.md) — adoption, productivity, and hiring data on AI's effect on work: Stanford junior-displacement study, Anthropic 81K survey and internal employment report, Ramp, McKinsey, ALE *(as_of: 2026-10-19)*
 - [trends/ai-in-science](trends/ai-in-science.md) — biology, drug discovery, self-driving labs, virtual-cell models, and Claude Science-style workflow platforms for reproducible scientific work *(as_of: 2026-08-11)*
-- [trends/ai-in-mathematics](trends/ai-in-mathematics.md) — pure-mathematics results from general-purpose reasoning models (OpenAI's Erdős disproof, Anthropic's Riemann Hypothesis bound), split out from AI in Science *(as_of: 2026-08-11)*
-- [trends/compute-infrastructure](trends/compute-infrastructure.md) — frontier compute scale plus inference-system efficiency as competitive moats *(as_of: 2026-07-08)*
-- [trends/open-weight-momentum-broadens](trends/open-weight-momentum-broadens.md) — open-weight competition is spreading beyond coding into multimodal, computer-use, long-context, and local-AI infrastructure *(as_of: 2026-07-21)*
+- [trends/ai-in-mathematics](trends/ai-in-mathematics.md) — pure-mathematics results from general-purpose reasoning models (OpenAI's Erdős disproof, Anthropic's Riemann Hypothesis bound), split out from AI in Science *(as_of: 2026-09-09)*
+- [trends/compute-infrastructure](trends/compute-infrastructure.md) — frontier compute scale plus inference-system efficiency as competitive moats *(as_of: 2026-08-19)*
+- [trends/open-weight-momentum-broadens](trends/open-weight-momentum-broadens.md) — open-weight competition is spreading beyond coding into multimodal, computer-use, long-context, and local-AI infrastructure; sovereignty driver now on trends/model-sovereignty *(as_of: 2026-09-01)*
+- [trends/model-sovereignty](trends/model-sovereignty.md) — not being architecturally dependent on any single frontier model: the Fable 5 ban as trigger, open weights as escape hatch, US pressure on Chinese open models, the Kratsios/Moonshot distillation accusation, and NVIDIA's Open Secure AI Alliance *(as_of: 2026-07-29)*
 - [trends/openai-huggingface-cyber-incident](trends/openai-huggingface-cyber-incident.md) — an internal OpenAI model got RCE on Hugging Face's servers during a benchmark eval; forensics, the "scheming" debate, and Anthropic's own agentic-misalignment disclosure *(as_of: 2026-08-29)*
 - [trends/proprietary-data-becomes-model-moat](trends/proprietary-data-becomes-model-moat.md) — proprietary operational data and domain evals may become moats, but vertical durability remains a strategic bet *(as_of: 2026-06-30)*
-- [trends/physical-ai-deployment](trends/physical-ai-deployment.md) — embodied AI and robotics follow a different deployment curve from screen agents because validation, safety, and hardware constraints dominate *(as_of: 2026-05-13)*
-- [trends/restricted-frontier-deployment](trends/restricted-frontier-deployment.md) — frontier labs and governments may withhold, selectively deploy, or restrict highest-capability systems through partner programs, policy, export controls, or restricted previews *(as_of: 2026-07-09)*
-- [trends/voice-becomes-agent-interface](trends/voice-becomes-agent-interface.md) — voice, texting, and real-time audio are becoming agent surfaces rather than side features *(as_of: 2026-07-07)*
+- [trends/physical-ai-deployment](trends/physical-ai-deployment.md) — embodied AI and robotics follow a different deployment curve from screen agents because validation, safety, and hardware constraints dominate *(as_of: 2026-08-29)*
+- [trends/restricted-frontier-deployment](trends/restricted-frontier-deployment.md) — frontier labs and governments may withhold, selectively deploy, or restrict highest-capability systems through partner programs, policy, export controls, or restricted previews *(as_of: 2026-09-06)*
+- [trends/voice-becomes-agent-interface](trends/voice-becomes-agent-interface.md) — voice, texting, and real-time audio are becoming agent surfaces rather than side features *(as_of: 2026-08-05)*
 - [trends/ai-music-commercialization](trends/ai-music-commercialization.md) — AI music moving from novelty to commercial category; ElevenMusic, Suno, Udio as early anchors; rightsholder economics emerging *(as_of: 2026-05-01)*
 - [trends/synthetic-human-simulation](trends/synthetic-human-simulation.md) — models trained on interviews, transaction data, and RCTs to reproduce real human behavior for concept testing and synthetic panels, led by Simile AI *(as_of: 2026-08-22)*
 - [trends/llm-as-discovery-channel](trends/llm-as-discovery-channel.md) — LLM-referred shoppers convert 54% more and spend 53% more time on site vs non-AI-referred traffic (Adobe Analytics, June 2026) *(as_of: 2026-06-15)*
@@ -264,20 +268,23 @@ Practical guidance for teaching teams and businesses to use AI well.
 
 - [training/ai-native-product-building](training/ai-native-product-building.md) — practical guidance for the post-vibe-coding bottleneck shift *(as_of: 2026-06-16)*
 - [training/ai-style-guides](training/ai-style-guides.md) — how to externalize editorial taste and anti-patterns so AI writing stops drifting generic *(as_of: 2026-03-19)*
-- [training/anti-autopilot-review-friction](training/anti-autopilot-review-friction.md) — deliberate review friction, acceptance reasons, review artifacts, escalation evals, and near-correct artifact caveats to keep human judgment active *(as_of: 2026-06-29)*
+- [training/anti-autopilot-review-friction](training/anti-autopilot-review-friction.md) — deliberate review friction, acceptance reasons, review artifacts, escalation evals, and near-correct artifact caveats to keep human judgment active *(as_of: 2026-09-08)*
 - [training/agentic-infrastructure-operations](training/agentic-infrastructure-operations.md) — safe operating patterns for infrastructure agents: read-only diagnosis, propose-only plans, approval-gated mutations, sandboxing, and post-deploy verification *(as_of: 2026-04-24)*
-- [training/agent-skill-methodology](training/agent-skill-methodology.md) — evals-first method for writing maintainable agent skills with natural triggers, principles, production lessons, pruning, and portable domain judgment *(as_of: 2026-07-15)*
-- [training/ai-engineering-skills](training/ai-engineering-skills.md) — four-skill taxonomy (building/deploying AI apps, SWE fundamentals, using coding agents, shaping the build) from Andrew Ng's DeepLearning.AI relaunch, evidence-gathered from 10,000+ job postings *(as_of: 2026-08-25)*
-- [training/ai-adoption-evidence](training/ai-adoption-evidence.md) — practice-level case studies behind Company-wide AI enablement's guidance: Claudie, Helena/Plus One, Ramp's Glass/Dojo mechanism, a four-agent company, Boulton & Watt, and Netflix CPTO Elizabeth Stone *(as_of: 2026-08-28)*
-- [training/company-wide-ai-enablement](training/company-wide-ai-enablement.md) — operating patterns for broad AI adoption, explicit AI strategy bets, token allocation, model routing, agent governance, and staged autonomy *(as_of: 2026-09-14)*
-- [training/ai-enablement-software-development](training/ai-enablement-software-development.md) — engineering-specific AI adoption: critique loops, PR review workflows, software-factory rollout, and CI/CD bottlenecks *(as_of: 2026-09-14)*
+- [training/agent-skill-methodology](training/agent-skill-methodology.md) — evals-first method for writing maintainable agent skills with natural triggers, principles, production lessons, pruning, portable domain judgment, and benchmark evidence (SkillsBench, SWE-Skills-Bench, Skill Lift, retrieval actual-use effect) *(as_of: 2026-09-03)*
+- [training/ai-engineering-skills](training/ai-engineering-skills.md) — four-skill taxonomy (building/deploying AI apps, SWE fundamentals, using coding agents, shaping the build) from Andrew Ng's DeepLearning.AI relaunch, evidence-gathered from 10,000+ job postings *(as_of: 2026-08-31)*
+- [training/ai-adoption-evidence](training/ai-adoption-evidence.md) — practice-level case studies behind company-wide enablement, plus autonomy and org-architecture cases (Claudie trust battery, AI sandwich, Shipper's org-model prediction, Tempo) *(as_of: 2026-09-04)*
+- [training/company-wide-ai-enablement](training/company-wide-ai-enablement.md) — operating patterns for broad AI adoption: leadership expectations, process re-engineering, maturity model, platform/agent-design/onboarding patterns, and failure modes; governance, cost routing, and FDE split out *(as_of: 2026-09-04)*
+- [training/forward-deployed-engineering](training/forward-deployed-engineering.md) — FDE model for deployment and GTM leaders: frontier labs embedding engineers in customers (Anthropic/Blackstone JV, OpenAI Deployment Company, Google, Salesforce) and OpenAI's FDE org in practice *(as_of: 2026-09-14)*
+- [training/agent-autonomy-and-governance](training/agent-autonomy-and-governance.md) — eval-gated autonomy ladder (levels 0–5), humans in vs. above the loop, and governance patterns: promotion after reliability, trust batteries, fluency ladder, ownership split, workflow-level measurement *(as_of: 2026-08-28)*
+- [training/ai-enablement-software-development](training/ai-enablement-software-development.md) — engineering-specific AI adoption guidance: critique loops, fleet configuration, rollout patterns, PR review workflows, software-factory scaling, and CI/CD bottlenecks; case evidence on a separate page *(as_of: 2026-09-14)*
+- [training/engineering-ai-adoption-evidence](training/engineering-ai-adoption-evidence.md) — engineering AI adoption case studies and scale data: Shopify, Ramp, Garry Tan, Simon Willison, StrongDM, Lars Faye/Airbnb, GitHub commit volume, Anthropic RSI and CI scaling, Cognition's productivity estimator, Bun's Zig→Rust rewrite *(as_of: 2026-09-14)*
 - [training/ai-native-hiring-and-junior-talent](training/ai-native-hiring-and-junior-talent.md) — for hiring managers and talent leads: AI-assisted build interviews, autonomy and judgment over domain depth, and the junior/mid-career pipeline risk *(as_of: 2026-10-19)*
-- [training/evals-for-agentic-software-development](training/evals-for-agentic-software-development.md) — eval stack for coding agents: deterministic gates, sandboxed execution, historical PR replay, benchmark integrity, QA artifact capture, browser self-verification, MVES, trace mining, test oracles, and multi-judge scoring *(as_of: 2026-10-14)*
-- [training/evals-for-agentic-work](training/evals-for-agentic-work.md) — eval patterns for workflow and task agents: pass^k reliability, task-specific metrics, simulated users *(as_of: 2026-04-23)*
-- [training/ai-coding-vocabulary](training/ai-coding-vocabulary.md) — shared language for agentic coding: model vs harness vs agent vs context vs session vs environment *(as_of: 2026-05-01)*
-- [training/ai-work-delegation-modes](training/ai-work-delegation-modes.md) — framework for choosing between autonomous delegation and human-steered collaboration when working with AI *(as_of: 2026-05-21)*
-- [training/ai-delegation-management](training/ai-delegation-management.md) — practical guidance for delegating work to agents using management fundamentals: scope, authority, loop tempo, review cost, definition of done, and spec-first delegation *(as_of: 2026-08-04)*
-- [training/cost-aware-ai-task-routing](training/cost-aware-ai-task-routing.md) — routing work among scripts, small models, frontier models, fine-tuned domain models, agents, and humans based on uncertainty, determinism, risk, token cost, and review cost *(as_of: 2026-07-19)*
+- [training/evals-for-agentic-software-development](training/evals-for-agentic-software-development.md) — eval stack for coding agents: deterministic gates, sandboxed execution, benchmark integrity, QA artifact capture, browser self-verification, MVES, test oracles, and multi-judge scoring *(as_of: 2026-10-14)*
+- [training/evals-for-agentic-work](training/evals-for-agentic-work.md) — eval patterns for workflow and task agents: pass^k reliability, task-specific metrics, simulated users *(as_of: 2026-08-25)*
+- [training/ai-coding-vocabulary](training/ai-coding-vocabulary.md) — shared language for agentic coding: model vs harness vs agent vs context vs session vs environment *(as_of: 2026-08-20)*
+- [training/ai-work-delegation-modes](training/ai-work-delegation-modes.md) — framework for choosing between autonomous delegation and human-steered collaboration when working with AI *(as_of: 2026-08-27)*
+- [training/ai-delegation-management](training/ai-delegation-management.md) — practical guidance for delegating work to agents using management fundamentals: scope, authority, loop tempo, review cost, definition of done, and spec-first delegation *(as_of: 2026-08-19)*
+- [training/cost-aware-ai-task-routing](training/cost-aware-ai-task-routing.md) — route work to the cheapest competent executor (scripts, small/open models, frontier, humans); tasteful tokenmaxxing, route by novelty, token allocation as governance, AI FinOps controls *(as_of: 2026-09-07)*
 
 ## Use Cases
 
@@ -299,10 +306,10 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 - models: 32
 - tools: 97
 - benchmarks: 12
-- workflows: 8
-- concepts: 31
-- trends: 20
-- training: 16
+- workflows: 10
+- concepts: 32
+- trends: 21
+- training: 19
 - use-cases: 3
 
-**Total content pages: 230.**
+**Total content pages: 237.**

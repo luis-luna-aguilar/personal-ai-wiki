@@ -15,6 +15,7 @@ Cursor's engineering blog details its second-generation agent swarm (planner/wor
 ## Influenced pages
 
 - [Multi-agent coordination](../../workflows/multi-agent-coordination.md) — coordination failure-modes pattern, Field Guide
+- [Long-running agent swarms](../../workflows/long-running-agent-swarms.md) — coordination failure modes and fixes (moved from Multi-agent coordination)
 - [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — review lenses
 - [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — $1,339 vs. $10,565 same-task cost comparison
 

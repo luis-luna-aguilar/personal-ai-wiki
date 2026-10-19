@@ -17,6 +17,7 @@ Long-form Google Cloud Tech thread explaining how Google wants teams to structur
 - [Google ADK](../../tools/google-adk.md) — ADK 2.0 orchestration model and runtime details
 - [Multi-agent coordination](../../workflows/multi-agent-coordination.md) — graph-control orchestration pattern
 - [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — handoff, skill composition, protocolized delegation, and sandboxed execution patterns
+- [Agent skill methodology](../../training/agent-skill-methodology.md) — composable skills with progressive disclosure (moved from Agentic orchestration patterns)
 
 ## Key claims extracted
 

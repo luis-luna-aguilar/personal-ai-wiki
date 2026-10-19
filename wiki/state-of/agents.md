@@ -106,8 +106,8 @@ Platforms built to support literature-driven or discovery-oriented scientific wo
 
 ## Recent changes
 
-- [2026-10-09] Added [Harness²](../tools/harness2.md) to Agent frameworks: Google's open-source recursive harnessing framework, frozen weights, up to +11.5 points on WorkBuddy-Bench.
 - [2026-10-14] Added `Agent web data extraction` subcategory with [Expand Fetch](../tools/expand-fetch.md): agent-oriented fetch API with trained Markdown (Iris) and hidden-JSON (X-Ray) models; vendor-run MDBench 74.1% vs Exa 55.3%, Firecrawl 27.2%.
+- [2026-10-09] Added [Harness²](../tools/harness2.md) to Agent frameworks: Google's open-source recursive harnessing framework, frozen weights, up to +11.5 points on WorkBuddy-Bench.
 - [2026-09-09] Utopia (DeepLethe) added under Knowledge platforms: open-source bitemporal knowledge graph / ontology engine with an agent harness over MCP.
 - [2026-09-09] Added Mastra to Agent frameworks: YC-backed open-source TypeScript framework combining an agent abstraction with an explicit graph-based workflow engine, human-in-the-loop suspend/resume, and Observational Memory.
 - [2026-09-09] Added a `Knowledge platforms` subcategory (new `knowledge-platform` schema entry) and moved [OpenWiki](../tools/openwiki.md) into it from Agent frameworks, as part of the knowledge-cluster terminology reorganization anchored on [Knowledge architectures](../concepts/knowledge-architectures.md).

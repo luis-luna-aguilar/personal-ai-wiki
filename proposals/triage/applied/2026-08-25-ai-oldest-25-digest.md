@@ -25,7 +25,7 @@ sources:
   - raw/newsletters/2026-07-09-ainews-spacexai-launches-grok-45-first-opus-cl.md
   - raw/newsletters/2026-07-09-chatgpt-voice-gets-more-human-like.md
   - raw/newsletters/2026-07-09-spacexai-drops-grok-45.md
-status: pending
+status: applied
 period: "oldest 25 unprocessed as of 2026-08-25"
 account: ai
 ---

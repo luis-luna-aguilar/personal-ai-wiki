@@ -14,7 +14,7 @@ A multi-model agentic pattern: a cheap *executor* (Sonnet or Haiku) runs the tas
 
 Inverts the common sub-agent pattern where a large orchestrator decomposes work and delegates to smaller workers. Here the cheap model drives and frontier reasoning fires only at escalation points, keeping steady-state cost at executor level.
 
-## Current status (as of 2026-04-09)
+## Current status (as of 2026-06-29)
 
 Shipped by Anthropic as `advisor_20260301`, a server-side tool on the Claude API — the first time a major lab has made escalation-on-demand a first-class API primitive rather than a pattern callers must build themselves. Declared in the `tools` array of a Messages request; handoff happens inside a single `/v1/messages` call with no extra round-trips. Executor and advisor tokens are billed at their respective rates and reported separately in `usage`. `max_uses` caps advisor calls per request. Works alongside other server-side tools (web search, code execution) in the same loop.
 

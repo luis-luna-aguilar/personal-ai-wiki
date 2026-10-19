@@ -14,7 +14,7 @@ Cursor is an AI coding product from Anysphere. It started life as a VS Code fork
 
 The strongest interpretive signal from the early-April reaction cycle is that Cursor 3 was not just a feature release. It was a bet about interface shape: the editor becomes secondary, while dispatching, monitoring, and reviewing agent work becomes the primary experience. That looks increasingly prescient as the broader category moves toward supervision surfaces, but the same sources also emphasize the risk that orchestration UX may outrun what mainstream users actually need today.
 
-## Current status (as of 2026-08-29)
+## Current status (as of 2026-09-09)
 
 - **Cursor 3** is the current shipped version: agent-first workspace with legacy IDE mode still available (see intro)
 - Inherently multi-workspace — humans and agents work across multiple repos simultaneously; plugin marketplace ("Cursor Marketplace") supports MCPs, skills, and subagents with private team marketplaces

@@ -18,6 +18,7 @@ swyx's post-conference synthesis of AI Engineer World's Fair 2026, organized aro
 - [Harness (agent)](../../concepts/harness.md) — added the Weng essay contrast and Anthropic's "grown, not designed" framing
 - [Agent loop design](../../workflows/agent-loop-design.md) — added named quotes reinforcing the loop-engineering pattern
 - [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — added named quotes reinforcing the software-factory/FDE pattern
+- [Software factory](../../workflows/software-factory.md) — World's Fair FDE/software-factory examples (moved from Agentic orchestration patterns)
 
 ## Key claims extracted
 

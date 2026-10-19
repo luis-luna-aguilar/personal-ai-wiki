@@ -12,7 +12,7 @@ sources: [claude-design-anthropic-labs, claude-creative-tool-connectors-2026-04-
 
 Anthropic Labs' collaborative visual design and prototyping tool. Powered by Claude Opus 4.7, it lets users build polished designs, prototypes, slides, one-pagers, and marketing assets through conversation and direct editing — without requiring a design background.
 
-## Current status (as of 2026-04-22)
+## Current status (as of 2026-07-08)
 
 - Research preview launched 2026-04-22 via Anthropic Labs; rolling out gradually to Pro, Max, Team, and Enterprise subscribers
 - Powered by Claude Opus 4.7 (Anthropic's most capable vision model)

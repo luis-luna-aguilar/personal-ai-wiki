@@ -1,8 +1,8 @@
 ---
 title: Company-wide AI enablement
 type: training
-as_of: 2026-09-14
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13, fde-race-may-2026, every-ai-adoption-levels, enterprise-spend-metered-june-2026, ai-strategy-explicit-bets-2026-06, codex-general-work-agents-2026-07, token-tightening-ai-finops-2026-06, efficiencymaxxing-model-routing-2026-07, every-cheap-competence-after-automation-2026-05, slack-agent-native-os-2026-07-29, codex-interview-onboarding-2026-08-06, agents-for-hire-2026-08-11, every-33-questions-executives-2026-08-28, vasuman-applied-ai-doesnt-work-2026-09-04, eng-leadership-openai-fde-2026-09-14]
+as_of: 2026-09-04
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13, every-ai-adoption-levels, enterprise-spend-metered-june-2026, ai-strategy-explicit-bets-2026-06, codex-general-work-agents-2026-07, token-tightening-ai-finops-2026-06, efficiencymaxxing-model-routing-2026-07, every-cheap-competence-after-automation-2026-05, slack-agent-native-os-2026-07-29, codex-interview-onboarding-2026-08-06, agents-for-hire-2026-08-11, every-33-questions-executives-2026-08-28, vasuman-applied-ai-doesnt-work-2026-09-04]
 ---
 
 # Company-wide AI enablement
@@ -90,23 +90,9 @@ Source: "AI Is Ready. Organizations Aren't." (Every, June 2026) — based on int
 - **Concrete example promotion.** A single visible example of someone using AI to rethink the work itself can unlock broader adoption better than generic encouragement to "use AI more"
 - **Interview-driven agent-workspace onboarding.** Rather than copying someone else's agent setup, have the agent interview the new user first — about their work, their needs, and which decisions they want to keep making themselves — then let it propose a workspace structure (pinned threads, file/desktop organization) from those answers. Every's Katie Parrott used this pattern with Codex, then handed the same approach to a colleague to run for herself. The reason it matters: two Every staffers who compared their own hand-built Codex setups found them almost nothing alike — one built on minimal process and reminders, the other on detailed planning and supervision — because a workable setup mirrors how the individual actually works, not a template borrowed from someone else.
 
-### Governance, autonomy, and reliability
+### Governance and cost routing
 
-- **Promotion only after reliability.** Expand an agent from one bounded workflow to broader responsibility only after it is stable in the narrower role
-- **Exploration budget, then governance.** Removing token caps and access restrictions gives people room to discover high-leverage use cases before ROI is obvious — treat this as the deliberate first phase, with token allocation as governance (below) as the second phase once a workflow's value is established, not a contradiction to resolve.
-- **Reward outcomes, not AI usage.** Teams stall or drift when "used AI" becomes the goal; quality and throughput improvements are the only metrics that matter
-- **Trust battery with judge agent.** Grant autonomy incrementally, tied to demonstrated reliability rather than elapsed time — see [Agents reshape organizations](../trends/agents-reshape-organizations.md) for the concrete Claudie mechanism (nightly judge agent, starting trust percentage, self-updating memory).
-- **Keep humans at the judgment boundary.** As AI fills in the middle of workflows, employees need stronger habits for framing, taste, coordination, and review rather than only faster execution tactics.
-- **An explicit AI-fluency ladder.** Every's consulting practice uses an 8-level fluency framework: most people sit at levels 1-2 (chatbot use, co-working with AI in Docs/Excel); level 3, agentic, is where knowledge workers are actively moving (Codex, Claude Cowork, Claude Code, adopting skills and running multiple tasks at once); above that is largely experimental, up to level 8 where a manager AI orchestrates other AIs. Use this to calibrate expectations rather than pushing every team toward the highest level.
-- **Split governance ownership explicitly.** A central AI team should own standards, security and vendor decisions, shared infrastructure, and the first few working examples; individual business teams should own their own workflows. Centralizing everything creates a bottleneck; leaving every team to build alone creates sprawl.
-- **Measure at the workflow level, never by a single metric.** Track cycle time, output quality, error/rework rate, user satisfaction (e.g. NPS), and traditional cost-benefit business impact — and track reuse of shared skills as a leading indicator. Establish a pre-AI baseline (time, quality standard, cost, common mistakes) before claiming a workflow improved.
-
-### Cost and model routing
-
-- **Tasteful tokenmaxxing: depth over breadth.** The emerging leadership consensus (AIE Miami, April 2026) is not "burn more tokens" or "burn fewer tokens" but *how* you burn them. Shopify CTO Mikhail Parakhin: prefer serial autoresearch loops (depth) over kicking off 5, 10, 50 parallel LLM runs (breadth). Reid Hoffman's middle ground: track how people use AI, not just how much — team-wide experimentation plus regular check-ins to surface what's actually working. Dex Horthy (coiner of "Context Engineering") publicly retracted his earlier vibe-coding-only stance and encouraged engineers to read the code. The practical signal: measure the *quality* of token use, not the quantity.
-- **Token allocation as governance.** As enterprise AI costs rise, access to expensive models should be treated like an allocation decision: define budgets, route routine work to cheaper tools, and grant higher-cost access to workflows that can show returns in quality, speed, scope, or revenue impact.
-- **Efficiencymaxxing as model-routing practice.** Treat model selection like an operating system for work: use evals to identify which workflow stages can move to cheaper models, audit token use by step, and keep frontier access for ambiguous or high-risk stages. This is the practical middle ground between tokenmaxxing and blanket restriction. See [Cost-aware AI task routing](cost-aware-ai-task-routing.md) for the routing mechanics and FinOps controls this practice depends on.
-- **Route by task novelty, not just task size.** For a brand-new, high-stakes, or one-off task, use the best available model — it's often cheaper overall because it avoids costly mistakes and self-correction cycles. Only once a task becomes recurring and well-understood should it move to a smaller model via a framework like DSPy or prompt optimization.
+Governance patterns (promotion after reliability, trust batteries, the AI-fluency ladder, ownership split, workflow-level measurement) now live on [Agent autonomy and governance](agent-autonomy-and-governance.md); cost and model-routing patterns live on [Cost-aware AI task routing](cost-aware-ai-task-routing.md).
 
 ## Failure modes
 
@@ -121,70 +107,32 @@ Source: "AI Is Ready. Organizations Aren't." (Every, June 2026) — based on int
 - **AI work intensification.** Early workplace reporting suggests AI often expands task scope, blurs work/life boundaries, and encourages many parallel threads rather than simply reducing workload
 - **Compulsive "one more prompt" loops.** Teams can become more productive in bursts while also degrading attention, recovery time, and judgment unless managers design explicit stopping points and protected focus windows
 - **False-completion behavior.** Always-on agents often sound confident before any real action has started; teams need explicit instructions that status updates require proof
-- **Tokenmaxxing — measuring token spend as a productivity proxy.** Meta's internal "Claudeonomics" leaderboard ranked 85,000 employees by AI token usage; within weeks employees were leaving agents idle to climb the rankings. One OpenAI engineer processed 210 billion tokens in a single week (enough to fill Wikipedia 33 times). Dubbed "tokenmaxxing," this mirrors the early 2000s lines-of-code mistake exactly. Reasoning models compound the problem by generating inner-monologue tokens as a function of architecture, not work done. Jensen Huang publicly said he'd be "deeply alarmed" if engineers weren't burning tokens worth half their annual salary — amplifying the leaderboard pressure. Reward outcomes and quality; token spend is a cost center, not a productivity signal. (See also: "Tasteful tokenmaxxing" in Proven patterns for the emerging middle-ground guidance.)
+- **Tokenmaxxing — measuring token spend as a productivity proxy.** Meta's internal "Claudeonomics" leaderboard ranked 85,000 employees by AI token usage; within weeks employees were leaving agents idle to climb the rankings. One OpenAI engineer processed 210 billion tokens in a single week (enough to fill Wikipedia 33 times). Dubbed "tokenmaxxing," this mirrors the early 2000s lines-of-code mistake exactly. Reasoning models compound the problem by generating inner-monologue tokens as a function of architecture, not work done. Jensen Huang publicly said he'd be "deeply alarmed" if engineers weren't burning tokens worth half their annual salary — amplifying the leaderboard pressure. Reward outcomes and quality; token spend is a cost center, not a productivity signal. (See also: "Tasteful tokenmaxxing" on [Cost-aware AI task routing](cost-aware-ai-task-routing.md) for the emerging middle-ground guidance.)
 - **AI spend shock on per-token billing.** GitHub Copilot's move from flat $39/month to per-token billing caught teams unprepared — some individual bills hit $3,000+/month. Uber's response: hard cap at $1,500/month per engineer. Cloudflare AI Gateway added model-level and user-level budget enforcement with automatic fallbacks to cheaper models. The pattern: enterprises need spend controls as a first-class operational concern, not an afterthought. (June 2026)
 - **Overcorrecting from tokenmaxxing to blanket token restriction.** The goal is not less AI use; it is better-routed AI use with visible ROI.
 - **Automation without reframing.** Teams speed up existing tasks but never redesign the workflow or ask what new work becomes possible once competent execution is cheap.
 
-## Autonomy ladder
+## Autonomy and humans above the loop
 
-A practical governance model for expanding what an agent is allowed to do: treat autonomy not as a binary switch but as a staged ladder where each step up requires eval evidence that the agent can handle the broader authority safely.
-
-**Five levels:**
-
-| Level | Name | What the agent can do |
-|---|---|---|
-| 0 | Read-only assistant | Synthesizes, proposes, retrieves. Human executes everything. |
-| 1 | Human-mediated actions | Drafts artifacts such as emails, code, and notes. Human reviews and executes. |
-| 2 | Guarded actions | Executes low-risk actions autonomously. High-risk actions require explicit human approval. |
-| 3 | Conditional autonomy | Manages multi-step workflows autonomously but pauses at predefined high-risk checkpoints. |
-| 4/5 | High to full autonomy | Executes end to end within strict policy boundaries. Reports to humans only on completion or unresolvable anomaly. |
-
-**Promoting between levels requires eval evidence, not just elapsed time.** To move an agent from Level 1 to Level 2, the eval suite must prove the agent reliably adheres to role-based access controls and policy boundaries. To move to Level 3, the agent must pass escalation evals: inject adversarial and out-of-scope queries into the test suite and measure whether the agent triggers a human handoff rather than hallucinating an action. The failure mode being tested is simple: does the agent know what it does not know?
-
-**Practical permission controls:** transitions should be enforced mechanically, not by judgment alone. Common mechanisms include pass-rate thresholds over a rolling window of consecutive traces, cost-based throttling that freezes spending when a runaway loop is detected, and tracking how often the agent escalates cases that humans later approve unchanged. Specific thresholds should be calibrated per organization; the values cited in the research report are directional, not universal.
-
-**The practical implication for enablement:** do not deploy a new agent at Level 3 or 4 because the vendor demo looked good. Start at Level 1, build an eval suite, and promote based on measured evidence. The enablement question becomes: what eval evidence would make us comfortable giving this agent more authority?
-
-## Humans in the loop vs. above the loop
-
-A useful distinction for planning workflow redesign:
-
-- **In the loop**: agents do parts of the process, then hand off to a human who does other parts. The human is a step in the workflow.
-- **Above the loop**: agents do most or all of the core process; the human's role is judgment on top — reviewing the output, making the call, catching edge cases. The human supervises the workflow.
-
-Both will coexist. "Above the loop" represents the higher-value state for most knowledge work: not eliminating human judgment, but elevating what humans are doing to where judgment actually matters.
-
-**Example (American Arbitration Association):** Agents trained on closed case files to build timelines, review fact bases, examine both sides of an argument, and produce summary decisions — in some cases doing it better than the traditional manual process. A human reviews and approves. The judgment layer remains critical, but the execution work is done end-to-end by agents.
+The five-level autonomy ladder (promotion gated on eval evidence) and the humans-in-the-loop vs. above-the-loop distinction now live on [Agent autonomy and governance](agent-autonomy-and-governance.md).
 
 ## Evidence from practice
 
 Macro adoption and labor-market statistics (a16z, Ramp's headline numbers, McKinsey, the Anthropic 81K-person survey, consumption pricing) now live on [AI labor-market effects](../trends/ai-labor-market-effects.md) and [Agents reshape organizations](../trends/agents-reshape-organizations.md), which track the trend-level evidence this page's guidance responds to. What follows is practice-level case evidence specific to company-wide enablement; see [AI adoption: evidence from practice](ai-adoption-evidence.md) for the fuller set of case studies (Claudie, Helena/Plus One, Ramp's Glass/Dojo mechanism, Every's four-agent company, Boulton & Watt, Nityesh Agarwal's Slack loop, and Netflix CPTO Elizabeth Stone).
 
-## Forward-deployed engineer (FDE) model
+## Forward-deployed engineers
 
-As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have simultaneous hiring or JV programs for embedding engineers directly inside customer organizations. The model was pioneered by Palantir ("Deltas"): FDEs work on-site for months, writing production code in the customer's environment — part engineer, part consultant, bridging the gap between AI provider capability and customer domain knowledge.
-
-**OpenAI's FDE org in practice (Colin Jarvis, Global Head of Forward Deployed Engineering, September 2026):** OpenAI's internal FDE org grew from 2 people to roughly 140, sitting between GTM and product/research as a two-way link; it spun out a separate ~200-person OpenAI Deployment Company specifically to scale customer integration work while keeping the internal FDE org itself small and insight-focused. OpenAI's definition of the role is outcome-focused, not code-focused: the goal is to make yourself unneeded, and being needed again on the same problem means it wasn't actually solved. Teams deliberately mix domain experts with engineers who lack that domain background, on the theory that outsiders are more likely to challenge the status quo. Concrete example: a Japan-based legacy-system migration (COBOL-to-Java, underlying systems worth hundreds of millions of dollars) where an FDE spends one day with the customer's payments team, the next building tests based on that day's insights, and another writing the actual migration code — with a disciplined feedback loop back to OpenAI's research team that converts a specific customer failure into a generalizable training-data request ("the model struggles with these types of COBOL-to-Java tasks") rather than just relaying the raw complaint. On-site time norms: roughly 50% on average, rising to ~80% in UAE and Japan engagements.
-
-**Why it matters for enablement:**
-- FDE integration transforms AI tools into critical infrastructure that is nearly impossible to remove, securing multi-year enterprise revenue
-- Deloitte State of AI 2026: the share of companies with 40%+ of AI projects in production is set to double in six months; the "AI skills gap" is the #1 reported barrier to integration
-- Salesforce: committed to 1,000 FDEs. Anthropic: $1.5B joint venture with Blackstone and Goldman Sachs for mid-sized firms. OpenAI: Deployment Company. Google: hiring hundreds of FDEs.
-- Software development job postings linked to AI were up 14% YoY in April 2026 (Indeed Hiring Lab)
-
-**Pattern implication:** deep AI deployment at enterprise scale still requires human embedding — AI tools alone don't self-integrate into customer workflows, data, and compliance constraints.
+Embedding provider engineers inside customer organizations (the FDE model, including OpenAI's FDE org and the frontier-lab FDE hiring race) now lives on [Forward-deployed engineering](forward-deployed-engineering.md).
 
 ## Recent changes
 
-- [2026-09-14] Added OpenAI's FDE org in practice (Colin Jarvis interview): 2->140 headcount growth, the ~200-person OpenAI Deployment Company spinout, the outcome-focused/domain-expert-mixing staffing philosophy, a Japan COBOL-to-Java migration example, and the specific customer-failure-to-training-data feedback loop.
+- [2026-10-19] Split the FDE model out to [Forward-deployed engineering](forward-deployed-engineering.md); the autonomy ladder, humans-in/above-the-loop, and governance patterns out to [Agent autonomy and governance](agent-autonomy-and-governance.md); and the cost/model-routing patterns into [Cost-aware AI task routing](cost-aware-ai-task-routing.md).
 - [2026-09-09] Split macro adoption/labor statistics out to [Agents reshape organizations](../trends/agents-reshape-organizations.md) and practice-level case studies out to [AI adoption: evidence from practice](ai-adoption-evidence.md); regrouped "Proven patterns" under `###` subheads (platform/strategy, agent design, onboarding/culture, governance/autonomy, cost/routing).
 - [2026-09-04] Added process-re-engineering framing for AI adoption (Michael Hammer's 1990 BPR critique, touch-time-vs-elapsed-time, department-level mapping method, Deterministic/Agentic/HITL step-sorting).
 - [2026-08-28] Added Every's 33-Questions guidance: an explicit 8-level AI-fluency ladder, "pick one platform" as the tool-switching default, route-by-task-novelty token economics, an explicit governance ownership split, and workflow-level (not single-metric) measurement.
 - [2026-08-11] Added buy/build/rent framing for company-wide agents: build in-house, rent the machinery, or buy an agent already living in an existing tool (River, Kai, Every Agent as named examples).
 - [2026-08-06] Added interview-driven agent-workspace onboarding pattern: have the agent interview the new user before proposing a workspace structure, rather than copying someone else's setup.
 - [2026-07-29] Added thread-per-task chat orchestration pattern: chat channels/threads mapped directly onto agent session lifecycle; two independent implementations (Every's Claude Home Base, Block's Buzz) converged on the same shape in the same week.
-- [2026-07-08] Added efficiencymaxxing: stage-level model routing, token audits, and one-variable reruns as a company-wide AI cost-control practice.
 - [2026-07-01] Codex/Claude Code coverage expands terminal/workspace agents beyond engineering into inbox, CRM, healthcare coordination, writing, and knowledge-work workflows.
 - [2026-06-30] Added explicit-bets strategy exercise: name token, lock-in, wrapper, vertical, data-moat, regulation, and switching-cost assumptions before committing AI strategy.
 
@@ -193,15 +141,16 @@ As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have
 - [Agents reshape organizations](../trends/agents-reshape-organizations.md) — the trend-level organizational evidence (GitHub commit growth, background agents, org redesign) that this page's guidance responds to
 - [AI labor-market effects](../trends/ai-labor-market-effects.md) — macro adoption and labor evidence (Stanford labor data, Ramp's headline numbers, the Anthropic 81K-person survey and internal employment report)
 - [AI adoption: evidence from practice](ai-adoption-evidence.md) — the practice-level case studies behind this page's proven patterns
-- [AI enablement — software development](ai-enablement-software-development.md) — engineering-specific patterns: critique loops, CI/CD as bottleneck, Shopify evidence, junior talent pipeline
+- [AI enablement — software development](ai-enablement-software-development.md) — engineering-specific patterns: critique loops, fleet configuration, CI/CD as bottleneck; case evidence on [Engineering AI adoption: evidence from practice](engineering-ai-adoption-evidence.md) and hiring on [AI-native hiring and the junior talent pipeline](ai-native-hiring-and-junior-talent.md)
 - [Agentic infrastructure operations](agentic-infrastructure-operations.md) — practical guidance for safe agent use around production infrastructure, deployment safety, and post-action verification
 - [Evals for workflow and task agents](evals-for-agentic-work.md) — eval patterns for workflow and task agents: reliability metrics, task-specific patterns, simulated users
-- [Cost-aware AI task routing](cost-aware-ai-task-routing.md) — the mechanics behind the token-allocation and efficiencymaxxing guidance above
+- [Cost-aware AI task routing](cost-aware-ai-task-routing.md) — cost and model-routing patterns: tasteful tokenmaxxing, token allocation as governance, efficiencymaxxing, route by task novelty
+- [Agent autonomy and governance](agent-autonomy-and-governance.md) — autonomy ladder, humans above the loop, and governance ownership and measurement patterns
+- [Forward-deployed engineering](forward-deployed-engineering.md) — embedding provider engineers inside customer organizations (OpenAI, Anthropic, Google, Salesforce)
 
 ## Open questions
 
 - Which parts of the Ramp/McKinsey playbook generalize outside high-velocity tech companies with strong internal engineering capacity?
-- When does "above the loop" become viable for a given workflow? What's the minimum agent reliability threshold before removing humans from execution entirely?
 - How do you evaluate and develop junior employees when the output-producing work is done by agents?
 - What is the minimum viable internal platform needed before this pattern works outside companies that can build their own agent layer?
 
@@ -217,10 +166,8 @@ As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have
 - [AI for boring businesses](../sources/newsletters/ai-for-boring-businesses.md)
 - [Every — "You're the Bread in the AI Sandwich" (April 2026)](../sources/newsletters/every-ai-sandwich-april-2026.md)
 - [How We Run a 25-person Company on Four AI Agents](../sources/articles/every-four-agents.md)
-- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)
 - [Agentic infrastructure and operations](../sources/deep-research/agentic-devops-deep-research.md)
 - [AI-native organizations as operating model](../sources/newsletters/ai-native-organizations-operating-model-2026-05-13.md)
-- [FDE hiring race — Anthropic, OpenAI, Google (May 2026)](../sources/newsletters/fde-race-may-2026.md)
 - [How Microsoft is building for a world of metered intelligence — Every (June 5)](../sources/newsletters/enterprise-spend-metered-june-2026.md)
 - [AI strategy as explicit bets](../sources/newsletters/ai-strategy-explicit-bets-2026-06.md)
 - [Codex and Claude Code as general-purpose work agents](../sources/newsletters/codex-general-work-agents-2026-07.md)
@@ -231,4 +178,3 @@ As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have
 - [A Codex of One's Own — Every](../sources/newsletters/codex-interview-onboarding-2026-08-06.md)
 - ["Agents for Hire" — Every](../sources/newsletters/agents-for-hire-2026-08-11.md)
 - [Every — 33 Questions Executives Ask About AI—Answered](../sources/newsletters/every-33-questions-executives-2026-08-28.md)
-- [Inside OpenAI's Forward Deployed Engineer Role — Eng Leadership](../sources/newsletters/eng-leadership-openai-fde-2026-09-14.md)

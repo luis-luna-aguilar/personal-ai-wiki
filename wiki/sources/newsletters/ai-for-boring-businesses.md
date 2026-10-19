@@ -15,6 +15,7 @@ This source summary groups a small March cluster on practical AI adoption outsid
 ## Influenced pages
 
 - [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — adds Main Street targeting and outcome-over-usage guidance
+- [Agent autonomy and governance](../../training/agent-autonomy-and-governance.md) — reward-outcomes-not-usage pattern (moved from Company-wide AI enablement)
 - [AI adoption: evidence from practice](../../training/ai-adoption-evidence.md) — the Boulton and Watt receptionist-pilot trust/adoption caveat
 
 ## Key claims extracted

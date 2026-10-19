@@ -40,8 +40,8 @@ Microsoft's cross-application assistant surface inside Microsoft 365. The April 
 
 ## Recent changes
 
-- [2026-06-03] Build 2026: MAI-Code-1-Flash in Copilot/VS Code; Microsoft Autopilot hosted agent runtime; Scout (always-on personal agent across M365)
 - [2026-06-17] Copilot Cowork GA: available to all Microsoft 365 users; model choice, usage-based billing; Microsoft claims 30-40% cheaper per prompt than Claude Cowork; DeepSeek backend option reportedly under consideration
+- [2026-06-03] Build 2026: MAI-Code-1-Flash in Copilot/VS Code; Microsoft Autopilot hosted agent runtime; Scout (always-on personal agent across M365)
 - [2026-05-01] Microsoft Word Legal Agent added in Frontier: domain-specific contract-review and redlining agent inside Word with deterministic document-edit resolution
 - [2026-04-22] Agentic mode in Word, Excel, and PowerPoint becomes generally available and the default experience
 

@@ -12,7 +12,7 @@ sources: [ainews-thinkys-inkling-2026-07-16, ainews-gpt-56-price-cut-2026-07-31]
 
 Thinking Machines Lab's first publicly-released flagship model. A 975B-total / 41B-active mixture-of-experts model, natively multimodal across text, image, and audio, released under Apache 2.0.
 
-## Current status (as of 2026-07-16)
+## Current status (as of 2026-07-31)
 
 - 975B total / 41B active MoE, trained on 45T tokens
 - Natively multimodal: text, image, and audio in one model

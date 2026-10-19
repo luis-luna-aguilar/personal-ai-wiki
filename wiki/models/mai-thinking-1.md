@@ -12,7 +12,7 @@ sources: [ainews-mai-build-june-2026, satya-nadella-no-priors-june-2026, ainews-
 
 Microsoft's first frontier-class reasoning model, launched at Build 2026. The headline claim: trained from scratch with no synthetic data and no distillation, producing blind human preference over Claude Sonnet 4.6 and 97% AIME 2025. Signals a strategic shift — Microsoft as a model lab, not only a distributor of OpenAI models.
 
-## Current status (as of 2026-06-03)
+## Current status (as of 2026-08-13)
 
 - **Architecture:** 35B active / 1T total MoE (Mixture of Experts); 256K context window
 - **Pretraining:** 30T tokens; 8,192 NVIDIA GB200 GPUs; no synthetic data, no distillation from other models

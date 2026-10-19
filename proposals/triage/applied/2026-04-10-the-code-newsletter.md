@@ -1,7 +1,7 @@
 ---
 type: triage
 source: raw/newsletters/2026-04-10-codenewsletterai-p-anthropic-drops-monitor-tool-openai-rolls.md
-status: pending
+status: applied
 ---
 
 # Triage: The Code Newsletter — 2026-04-10

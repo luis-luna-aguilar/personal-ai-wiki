@@ -1,5 +1,5 @@
 ---
-title: "Agents for Hire" — Every
+title: '"Agents for Hire" — Every'
 type: source
 source_type: newsletter
 source_file: raw/newsletters/2026-08-11-agents-for-hire.md

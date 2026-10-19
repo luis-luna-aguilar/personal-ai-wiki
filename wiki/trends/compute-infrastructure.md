@@ -11,7 +11,7 @@ sources: [ainews-2026-04-21, runtime-improvements-improve-agent-economics, googl
 
 Frontier AI labs are securing compute capacity at a scale that creates structural competitive advantages beyond what algorithm quality alone can overcome — but by mid-2026 the page's own evidence carries as many counterforces to that moat (open-weight models competing with far less disclosed infrastructure, runtime and inference-systems efficiency gains, hybrid local/cloud routing, and the "outputmaxxing" argument that utilization matters as much as cluster size) as signals reinforcing it. As of 2026, access to multi-gigawatt compute is diverging rapidly between labs with strategic infrastructure partnerships and those without, but the compute-moat thesis should be read alongside its limits, not in isolation.
 
-## Current status (as of 2026-08-07)
+## Current status (as of 2026-08-19)
 
 - Google TPU v8 announced at Cloud Next '26: split into 8t for training and 8i for inference; Google claims ~3× compute per pod vs Ironwood for 8t, 1,152 TPUs per pod for 8i, and up to 1 million TPUs in a single 8t cluster
 - Anthropic secured up to 5 GW of compute with Amazon alongside a $5B investment, with up to $20B more available

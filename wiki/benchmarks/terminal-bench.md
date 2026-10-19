@@ -11,7 +11,7 @@ sources: [agents-evals-deep-research, terminal-bench-science-announcement, ainew
 
 Terminal-Bench evaluates agents on real-world multi-step tasks in isolated container environments, focusing on CLI-based system administration, compilation workflows, and debugging. It tests capabilities that are invisible in text-only benchmarks: navigating a real terminal, managing system state, and debugging through command-line tools.
 
-## Current status (as of 2026-05-21)
+## Current status (as of 2026-07-09)
 
 - 89 hard, real-world multi-step tasks in isolated container environments
 - Tasks cover system administration, compilation, and CLI-based debugging

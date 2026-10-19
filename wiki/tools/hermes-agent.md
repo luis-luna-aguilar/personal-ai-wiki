@@ -14,7 +14,7 @@ NousResearch's open-source autonomous agent framework. Reached 100K+ GitHub star
 
 **GitHub:** [NousResearch/hermes-agent](https://github.com/nousresearch/hermes-agent)
 
-## Current status (as of 2026-05-13)
+## Current status (as of 2026-09-01)
 
 - v0.10.0 baseline: 118 bundled skills, multi-layer memory, six messaging integrations (Telegram, Discord, Slack, WhatsApp, Signal, CLI)
 - 100K+ GitHub stars; Hermes Workspace V2, Browser Use integrations, Scarf macOS GUI
@@ -42,7 +42,7 @@ Architectural framing remains: Hermes is a four-layer memory system with periodi
 
 ## v0.21.0 release (as of 2026-09-01)
 
-Hermes Agent shipped a large feature release aimed at persistent, multi-agent workflows: Bots Mode, agent-to-agent communication, persistent multi-gateway connections, and subagent steering, plus broader connector access. A follow-up release note says the update also cut default context usage by roughly 50% — a concrete instance of context-efficiency becoming a first-class systems concern for the framework, alongside the broader [harness research cluster](../concepts/harness.md) from the same week.
+Hermes Agent shipped a large feature release aimed at persistent, multi-agent workflows: Bots Mode, agent-to-agent communication, persistent multi-gateway connections, and subagent steering, plus broader connector access. A follow-up release note says the update also cut default context usage by roughly 50% — a concrete instance of context-efficiency becoming a first-class systems concern for the framework, alongside the [context-editing research](../concepts/agent-memory.md) (WikiSkill/SKILL.state, ContextPilot) from the same week.
 
 ## Recent changes
 

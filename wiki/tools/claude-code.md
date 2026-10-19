@@ -4,15 +4,15 @@ type: tool
 domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: [anthropic, cli, agentic]
-as_of: 2026-08-08
-sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, anthropic-claude-code-best-practices-2026-05, claude-code-fast-mode-default-2026-05, dynamic-workflows-claude-code, claude-code-getting-started-with-loops-2026-06-30, codex-general-work-agents-2026-07, ainews-opus-48-dynamic-workflows-2026-05, every-claude-dynamic-workflows-reliability-2026-06, claude-code-design-sync-2026-07, claude-sonnet-5-official-2026-06-30, every-urge-to-merge-2026-07-14, thecode-claude-code-effort-levels-2026-07-17, zawinskis-law-multiagents-2026-08-08, every-copilot-studio-microsoft-2026-08-03]
+as_of: 2026-09-09
+sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, anthropic-claude-code-best-practices-2026-05, claude-code-fast-mode-default-2026-05, dynamic-workflows-claude-code, claude-code-getting-started-with-loops-2026-06-30, codex-general-work-agents-2026-07, ainews-opus-48-dynamic-workflows-2026-05, every-claude-dynamic-workflows-reliability-2026-06, claude-code-design-sync-2026-07, claude-sonnet-5-official-2026-06-30, every-urge-to-merge-2026-07-14, thecode-claude-code-effort-levels-2026-07-17, zawinskis-law-multiagents-2026-08-08, every-copilot-studio-microsoft-2026-08-03, claude-security-product-page]
 ---
 
 # Claude Code
 
 Anthropic's terminal-first AI coding agent. Runs in the shell, operates autonomously on files, shell commands, and tool calls, and is expanding toward supervised multi-session workflows; users increasingly treat it as a general-purpose agent harness for product, research, and operational work when those workflows can be represented as files, commands, skills, and review artifacts.
 
-## Current status (as of 2026-08-08)
+## Current status (as of 2026-09-09)
 
 - Terminal CLI agent with persistent project context via `CLAUDE.md` and project-local auto-memory (`MEMORY.md` plus topic files); most-used AI coding tool at 63% of respondents per Pragmatic Engineer's May 2025–Feb 2026 developer survey
 - Supports subagents, hooks, and background/event-driven flows; `--worktree` gives each session its own isolated git worktree for parallel work
@@ -52,18 +52,7 @@ Dynamic workflows (research preview, announced 2026-05-28) let Claude **dynamica
 
 ## Loop taxonomy
 
-Anthropic's June 30, 2026 "Getting started with loops" post defines a loop as an agent repeating cycles of work until a stop condition is met. The Claude Code team frames four levels:
-
-| Loop type | Trigger | Stop condition | Claude Code primitive | Best fit |
-| --- | --- | --- | --- | --- |
-| Turn-based | User prompt | Claude judges the task done or asks for context | Normal prompt + verification skills | Short exploratory tasks |
-| Goal-based | Manual prompt in real time | Goal achieved or turn cap hit | `/goal` | Tasks with deterministic exit criteria |
-| Time-based | Interval or schedule | Cancelled, or external work completes | `/loop`, `/schedule` | Recurring checks, PR/CI monitoring, scheduled summaries |
-| Proactive | Event or schedule, no human present | Each task exits when its goal is met; routine keeps running | `/schedule`, `/goal`, skills, dynamic workflows, auto mode | Recurring streams of well-defined work such as bug reports, triage, migrations, dependency upgrades |
-
-The practical guidance is conservative: start with the simplest loop, define explicit success and stop criteria, pilot before large dynamic-workflow runs, use scripts for deterministic work, and review `/usage`, `/goal`, and `/workflows` token breakdowns to manage cost.
-
-For code quality, Anthropic recommends encoding verification steps as skills, keeping project conventions clean, making docs easy to reach, and using a second agent or `/code-review` skill for review rather than letting the generator fully evaluate its own work.
+Anthropic's turn-based / goal-based / time-based / proactive loop taxonomy maps onto Claude Code primitives (normal prompts, `/goal`, `/loop`, `/schedule`, routines); the table and guidance live on [Agent loop design](../workflows/agent-loop-design.md).
 
 ## Best practices (Anthropic engineering)
 
@@ -100,6 +89,10 @@ Cloud multi-agent code review, introduced in v2.1.86 as a research preview. Unli
 
 Use `/review` for fast feedback while iterating. Use `/ultrareview` before merging a substantial change when you want a deeper pass with independent verification.
 
+## Claude Security
+
+Anthropic's security-review product, in public beta for Claude Enterprise per Anthropic's product page: it scans a codebase with Claude Mythos 5.1 (not Opus 4.7, as earlier secondary coverage reported), traces data flows across files, adversarially self-verifies each finding, and proposes a reviewable patch per finding. A Claude Code plugin, also in beta, runs the same pipeline locally. *(as of 2026-09-09)*
+
 ## Architecture lessons from the leak
 
 The April 1, 2026 Claude Code leak clarified what Anthropic had already decided mattered in frontier coding agents. The repeated takeaways across technical summaries were consistent: durable context is layered instead of dumped into one giant prompt; repo state and recent work are treated as first-class context; permission boundaries are explicit; and subagents are structured to reuse context efficiently instead of re-paying setup cost from scratch.
@@ -122,12 +115,12 @@ That matters because it shifts the product story away from "Anthropic has a stro
 
 ## Recent changes
 
+- [2026-10-19] Split: the loop-taxonomy table and loop guidance moved to [Agent loop design](../workflows/agent-loop-design.md) (one-line pointer remains); Claude Security detail (Enterprise public beta on Mythos 5.1, adversarial self-verification, per-finding patches, Claude Code plugin beta, as of 2026-09-09) moved here from the [State of Cybersecurity](../state-of/cybersecurity.md) leader line.
 - [2026-08-08] Cross-session messaging shipped (one session summarizes to another on a different machine); auto mode becomes the default permission mode for Pro/Max/Team, gated by a classifier Anthropic says caught 89% of dangerous commands vs. 14% for manual approval; also added session budgets, automatic repo-skill loading, and mid-session advisor models.
 - [2026-07-17] `/code-review` gains configurable effort levels (low: fast single pass; high: sub-agents verify every finding), replacing the previous single fixed prompt.
 - [2026-07-14] Anthropic countered OpenAI's Codex/ChatGPT merge week with a Claude Code in-app browser, a third extension of Fable 5's promotional access (through July 19) with 50%-higher Claude Code limits, and a Chat+Cowork "home" tab merge.
 - [2026-07-08] Claude Code and Claude Design add bidirectional `/design-sync` between repo work and Claude Design canvases.
 - [2026-07-01] Every frames Claude Code alongside Codex as a general-purpose agent harness spilling beyond software work when tasks can be represented as files, tools, and review artifacts.
-- [2026-06-30] Anthropic published the official Claude Code loop taxonomy: turn-based, goal-based, time-based, and proactive loops, with guidance on matching loop primitive to task type and controlling token usage.
 - [2026-06-30] Claude Sonnet 5 became available in Claude Code and via the API as `claude-sonnet-5`, alongside Claude Fable 5's return two days later — Claude Code's model lineup moved from a single fast-mode tier to multiple concurrently available models.
 - [2026-06-18] Every case studies show Dynamic Workflows replacing manual subagent coordination for reviewer agents and large Figma-to-code work.
 - [2026-05-28] Dynamic workflows added (research preview): the `ultracode` effort setting (xhigh) lets Claude write orchestration scripts running tens-to-hundreds of parallel subagents that plan, verify (with adversarial agents), and iterate to convergence on hours-to-days work; runs checkpoint and resume. On by default for Max/Team/API, admin-enabled for Enterprise; uses substantially more tokens.
@@ -163,3 +156,4 @@ That matters because it shifts the product story away from "Anthropic has a stro
 - [The Code — Moonshot drops Kimi K3, Claude Code ships effort levels for /code-review](../sources/newsletters/thecode-claude-code-effort-levels-2026-07-17.md)
 - [AINews — Zawinski's Law of MultiAgents](../sources/newsletters/zawinskis-law-multiagents-2026-08-08.md)
 - [Every — The Best AI Agent Builder Is Trapped Inside Microsoft](../sources/newsletters/every-copilot-studio-microsoft-2026-08-03.md)
+- [Claude Security product page](../sources/articles/claude-security-product-page.md)

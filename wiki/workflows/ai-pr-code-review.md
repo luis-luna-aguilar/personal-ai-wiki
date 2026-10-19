@@ -5,7 +5,7 @@ domains: [coding, agents]
 subcategory: agentic-orchestration-patterns
 tags: [agentic]
 as_of: 2026-10-14
-sources: [ai-code-review-eval-integrity-2026-06, agent-review-artifacts-2026-05-13, dashbench-code-review-understanding-2026-07, crabbox-remote-execution-2026-07, cognition-async-agents-testing-2026-05, lavaee-verification-pyramid-2026-10]
+sources: [ai-code-review-eval-integrity-2026-06, agent-review-artifacts-2026-05-13, dashbench-code-review-understanding-2026-07, crabbox-remote-execution-2026-07, cognition-async-agents-testing-2026-05, lavaee-verification-pyramid-2026-10, agents-evals-deep-research]
 ---
 
 # AI PR and code review
@@ -39,6 +39,16 @@ A practical AI PR review stack is layered:
 8. **Eval capture** - record accepted comments, rejected comments, missed issues, and post-merge failures as future review eval data.
 
 The review agent should have access to the task brief, diff, relevant files, tests, local instructions, and prior review standards. It should not be asked to infer the team's norms from the patch alone.
+
+## Judge calibration
+
+When a capable secondary model grades agent-written code for qualitative signals unit tests cannot catch (readability, architectural coherence, security anti-patterns), it drifts unless pinned down:
+
+- **Calibrated rubrics** — instead of "is this code good?", specify: "Score 1 if the PR modifies only files within the stated feature scope. Score 0 if it touches unrelated modules."
+- **Reference answers** — when a golden solution exists, give the judge the known-correct version to compare against.
+- **Human audits** — periodically sample 5–10% of LLM-judged reviews for manual review; measure Inter-Rater Agreement (IRA) to detect when the judge has drifted.
+
+For combining several judges into one score (mean plus veto, and why unanimity backfires), see [Evals for agentic software development](../training/evals-for-agentic-software-development.md).
 
 ## Historical PR replay
 
@@ -107,13 +117,14 @@ Artifacts should make review faster and more accurate. They should not become de
 
 ## Related
 
-- [Evals for agentic software development](../training/evals-for-agentic-software-development.md) - broader eval stack for coding agents
+- [Evals for agentic software development](../training/evals-for-agentic-software-development.md) - broader eval stack for coding agents, including multi-judge scoring
 - [AI enablement - software development](../training/ai-enablement-software-development.md) - broader engineering adoption and supervision guidance
 - [Agent evals](../concepts/agent-evals.md) - why historical replay and trajectory analysis matter
 - [Agentic orchestration patterns](agentic-orchestration-patterns.md) - where review artifacts fit in agent loops
 
 ## Recent changes
 
+- [2026-10-19] Added Judge calibration (calibrated rubrics, reference answers, 5–10% human audits with inter-rater agreement), moved from [Evals for agentic software development](../training/evals-for-agentic-software-development.md)'s "LLM-as-judge for code review" section.
 - [2026-10-14] Added fresh-session review guidance: criteria-first checks, P0–P2 findings, coded two-reviewer approval, capped review rounds, and change-to-criterion mapping.
 - [2026-07-08] Added remote execution and proof artifacts as first-class PR-review infrastructure for agent-authored work.
 - [2026-07-08] Created dedicated AI PR/code-review workflow from DashBench and understanding-preserving review coverage.
@@ -126,3 +137,4 @@ Artifacts should make review faster and more accurate. They should not become de
 - [Crabbox remote execution docs](../sources/articles/crabbox-remote-execution-2026-07.md)
 - [Cognition async agents and testing proof](../sources/newsletters/cognition-async-agents-testing-2026-05.md)
 - [Agents Write the Code. Your System Has to Prove It. — Alex Lavaee](../sources/tweets/lavaee-verification-pyramid-2026-10.md)
+- [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)

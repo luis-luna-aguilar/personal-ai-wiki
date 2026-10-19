@@ -14,6 +14,8 @@ This source cluster adds a useful refinement to the broader harness story. The f
 ## Influenced pages
 
 - [Harness (agent)](../../concepts/harness.md) — adds the packaging/distribution layer more explicitly
+- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — packaging/distribution layer (moved from Harness (agent))
+- [Agent skill methodology](../../training/agent-skill-methodology.md) — share skills, not just code; "skill" means different things across ecosystems (moved from Agentic orchestration patterns)
 - [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — clarifies that teams increasingly package reusable workflow judgment, not only tool access
 - [Coding](../../state-of/coding.md) — supports a current-state note that this abstraction layer is solidifying across ecosystems
 
