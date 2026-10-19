@@ -16,6 +16,7 @@ Full Latent Space podcast episode with Shopify CTO Mikhail Parakhin. Richest rea
 ## Influenced pages
 
 - [AI enablement — software development](../../training/ai-enablement-software-development.md) — evidence, critique-loop pattern, CI/CD failure mode, junior talent section
+- [AI-native hiring and the junior talent pipeline](../../training/ai-native-hiring-and-junior-talent.md) — junior ramp-up data (moved from AI enablement — software development)
 - [Harness (agent)](../../concepts/harness.md) — critique-loop orchestration pattern, CI/CD scope
 
 ## Key claims extracted

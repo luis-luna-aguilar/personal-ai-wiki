@@ -18,9 +18,9 @@ Read-me-first dashboards per domain.
 
 - [state-of/coding](state-of/coding.md) — current state of AI coding tools and workflows *(as_of: 2026-07-14)*
 - [state-of/models](state-of/models.md) — current state of foundation models *(as_of: 2026-08-20)*
-- [state-of/agents](state-of/agents.md) — current state of agentic systems and tool use *(as_of: 2026-07-08)*
+- [state-of/agents](state-of/agents.md) — current state of agentic systems and tool use *(as_of: 2026-10-14)*
 - [state-of/legal](state-of/legal.md) — current state of AI in legal practice *(as_of: 2026-06-04)*
-- [state-of/computer-use](state-of/computer-use.md) — current state of AI computer-use agents and agent-readable web infrastructure *(as_of: 2026-07-08)*
+- [state-of/computer-use](state-of/computer-use.md) — current state of AI computer-use agents and agent-readable web infrastructure *(as_of: 2026-10-14)*
 - [state-of/finance](state-of/finance.md) — current state of AI in finance *(as_of: 2026-07-02)*
 - [state-of/science](state-of/science.md) — current state of AI in scientific research *(as_of: 2026-07-06)*
 - [state-of/creative](state-of/creative.md) — current state of AI creative tools across video, image, avatar, slides, UI generation, open models, AI music, and creative-agent caveats *(as_of: 2026-07-08)*
@@ -93,6 +93,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/dragon-copilot](tools/dragon-copilot.md) — Microsoft's clinician-facing voice assistant for healthcare documentation and workflow automation *(as_of: 2026-04-22)*
 - [tools/dream-machine](tools/dream-machine.md) — Luma's generative-video surface for creation and editing workflows *(as_of: 2026-04-22)*
 - [tools/e2b](tools/e2b.md) — isolated sandbox runtime for agent code execution, tests, and verification loops *(as_of: 2026-04-24)*
+- [tools/expand-fetch](tools/expand-fetch.md) — Expand's agent web-fetch API: trained Markdown (Iris) and hidden-JSON (X-Ray) models, citable snapshots, Highlights, Crawl, WebSync *(as_of: 2026-10-14)*
 - [tools/eleven-v3](tools/eleven-v3.md) — expressive text-to-speech model optimized for high-control generated voice output *(as_of: 2026-04-22)*
 - [tools/elevenlabs-scribe](tools/elevenlabs-scribe.md) — speech-to-text product line for real-time and enterprise transcription workflows *(as_of: 2026-04-22)*
 - [tools/futurehouse](tools/futurehouse.md) — science-agent platform for research and discovery workflows *(as_of: 2026-04-22)*
@@ -108,6 +109,7 @@ Tools and products built on top of models. One page per tool.
 - [tools/gpt-realtime-2](tools/gpt-realtime-2.md) — OpenAI streaming speech-to-speech model with 128K context, GPT-5-class reasoning, tool use, and interruption handling *(as_of: 2026-07-07)*
 - [tools/grok-build](tools/grok-build.md) — xAI early beta CLI coding agent with plan mode and parallel worktree subagents; SuperGrok Heavy only; Grok 4.5, the jointly trained Cursor/SpaceX model, launched July 2026 as the default *(as_of: 2026-07-08)*
 - [tools/kimi-code](tools/kimi-code.md) — Moonshot AI open-source coding agent; 1-line CLI install, video-as-coding-context, ACP support, and Kimi Work Goal Mode *(as_of: 2026-06-19)*
+- [tools/harness2](tools/harness2.md) — Google Cloud AI Research's open-source recursive harnessing framework: per-task propose-probe-compose refinement plus a cross-task lessons library; OpenCode/Codex executors *(as_of: 2026-10-09)*
 - [tools/harvey](tools/harvey.md) — legal AI platform; June 2026 hybrid-routing benchmark shows a cost/accuracy win over pure-Opus routing *(as_of: 2026-06-04)*
 - [tools/hebbia](tools/hebbia.md) — finance-oriented AI knowledge-work platform for document-heavy analysis *(as_of: 2026-04-22)*
 - [tools/hermes-agent](tools/hermes-agent.md) — NousResearch open-source persistent agent framework with brain+muscle layers, Kanban supervision, and local-first memory *(as_of: 2026-05-13)*
@@ -190,7 +192,7 @@ Reusable patterns and recipes.
 - [workflows/agent-loop-design](workflows/agent-loop-design.md) — patterns for a single agent's own loop: loop-first design, loop taxonomy, tempo, stop criteria, and the compound engineering loop *(as_of: 2026-09-09)*
 - [workflows/agentic-orchestration-patterns](workflows/agentic-orchestration-patterns.md) — reusable agent patterns: scoped context, harness/packaging, evaluation and review, escalation, and software-factory/cost discipline *(as_of: 2026-09-09)*
 - [workflows/multi-agent-coordination](workflows/multi-agent-coordination.md) — topology patterns for running several agents together: coordinator-specialist routing, Agentic MapReduce, sidekick harnesses, mayor+polecats, and swarm coordination failure modes *(as_of: 2026-09-09)*
-- [workflows/ai-pr-code-review](workflows/ai-pr-code-review.md) — workflow for AI-assisted pull request analysis, code-review execution, historical PR replay, and understanding-preserving review artifacts *(as_of: 2026-07-08)*
+- [workflows/ai-pr-code-review](workflows/ai-pr-code-review.md) — workflow for AI-assisted pull request analysis, code-review execution, historical PR replay, and understanding-preserving review artifacts *(as_of: 2026-10-14)*
 - [workflows/flex-processing](workflows/flex-processing.md) — lower-cost asynchronous processing pattern for non-urgent OpenAI workloads *(as_of: 2026-04-22)*
 - [workflows/agent-generated-html-artifacts](workflows/agent-generated-html-artifacts.md) — when agents should produce reviewable, visual, or interactive HTML artifacts instead of plain Markdown *(as_of: 2026-05-13)*
 - [workflows/skillify-agent-reliability](workflows/skillify-agent-reliability.md) — Garry Tan's pattern for turning agent failures into permanent tested skills; 10-step checklist and "thin harness / fat skills" architecture *(as_of: 2026-04-23)*
@@ -203,7 +205,8 @@ Ideas and techniques.
 - [concepts/agent-answer-engine-optimization](concepts/agent-answer-engine-optimization.md) — self-serving bias in which tools frontier models recommend, and source-citation behavior differences between labs *(as_of: 2026-09-07)*
 - [concepts/agent-labs-vs-model-labs](concepts/agent-labs-vs-model-labs.md) — Sarah Guo's competitive framing: Agent Labs win on untrainable workflow integration; Model Labs compete on trainable capability *(as_of: 2026-07-02)*
 - [concepts/agent-evals](concepts/agent-evals.md) — taxonomy of agent evaluation categories, trajectory-vs-result evaluation, historical replay, infrastructure evals, and cost/variance tracking *(as_of: 2026-09-01)*
-- [concepts/agent-improvement-loop](concepts/agent-improvement-loop.md) — workflow for improving AI agents through traces, evals, autoresearch loops, Better-Harness-style hill-climbing, trace-to-memory feedback, and production feedback *(as_of: 2026-07-07)*
+- [concepts/agent-improvement-loop](concepts/agent-improvement-loop.md) — workflow for improving AI agents through traces, evals, autoresearch loops, trace-to-memory feedback, eval-suite hygiene, and production feedback *(as_of: 2026-07-29)*
+- [concepts/automated-harness-optimization](concepts/automated-harness-optimization.md) — systems that improve an agent's harness automatically: Better-Harness hill-climbing, label-free Harness², self-improving skills, self-modifying harnesses, guarded evolution *(as_of: 2026-10-09)*
 - [concepts/economic-agent-evals](concepts/economic-agent-evals.md) — dollar-denominated (Vending Bench) and human-hours-equivalent (Cognition/Devin) agent eval methods *(as_of: 2026-07-14)*
 - [concepts/agent-memory](concepts/agent-memory.md) — long-term agent memory as a lifecycle system for extraction, dedupe, reconciliation, scoping, retrieval, and stale-fact handling *(as_of: 2026-07-07)*
 - [concepts/agentic-thinking](concepts/agentic-thinking.md) — proposed successor to reasoning thinking; models that reason in order to act *(as_of: 2026-04-10)*
@@ -216,11 +219,13 @@ Ideas and techniques.
 - [concepts/knowledge-architectures](concepts/knowledge-architectures.md) — hub for the knowledge / memory / company-brain / ontology cluster: three-axis matrix, one canonical page per cell, and a term map from every source coinage (second brain, LLM wiki, memory layer, knowledge base, world model) to its canonical page *(as_of: 2026-09-07)*
 - [concepts/knowledge-layer](concepts/knowledge-layer.md) — compiled, maintained context layer between raw sources and agents; also called LLM wiki, second brain (personal scope) *(as_of: 2026-08-20)*
 - [concepts/semantic-layer](concepts/semantic-layer.md) — governed catalog of metric and data-source definitions agents and humans both read from, sitting on top of an existing warehouse without copying data; also called metrics layer *(as_of: 2026-08-21)*
-- [concepts/agent-readable-web](concepts/agent-readable-web.md) — web and SaaS surfaces designed for machine-readable agent access, including metered agent access for data, APIs, pages, and tools *(as_of: 2026-07-08)*
+- [concepts/agent-readable-web](concepts/agent-readable-web.md) — web and SaaS surfaces designed for machine-readable agent access, including metered agent access for data, APIs, pages, and tools *(as_of: 2026-10-14)*
 - [concepts/leworldmodel](concepts/leworldmodel.md) — LeWM JEPA world model with SIGReg and much faster planning than DINO-WM *(as_of: 2026-03-13)*
 - [concepts/deep-research](concepts/deep-research.md) — category concept for longer-horizon research agents that plan, search, synthesize, and iterate *(as_of: 2026-04-22)*
 - [concepts/mcp](concepts/mcp.md) — open protocol for exposing tools, resources, prompts, and compressed SaaS product surfaces to AI hosts and agents *(as_of: 2026-06-29)*
+- [concepts/mechanistic-interpretability](concepts/mechanistic-interpretability.md) — reading neural networks from the inside; superposition vs "networks are already clean" (Goodfire) debate *(as_of: 2026-10-19)*
 - [concepts/model-internal-workspace](concepts/model-internal-workspace.md) — Anthropic J-space / global-workspace research as an interpretability and audit surface, with caveats around consciousness framing *(as_of: 2026-07-07)*
+- [concepts/multiplayer-ai](concepts/multiplayer-ai.md) — teams working with the same AI agents in shared sessions and shared learnings, instead of siloed private chats; five-principle rubric plus implementation considerations *(as_of: 2026-09-14)*
 - [concepts/spec-driven-development](concepts/spec-driven-development.md) — SDD concept, three-level taxonomy, and critiques *(as_of: 2026-04-22)*
 - [concepts/prompt-injection](concepts/prompt-injection.md) — AI-specific attack where untrusted content steers a model or agent, especially dangerous when agents combine private context, tools, and action authority *(as_of: 2026-06-22)*
 - [concepts/slopsquatting](concepts/slopsquatting.md) — supply-chain attack via LLM-hallucinated package names; 19.7% hallucination rate (USENIX 2025) *(as_of: 2026-04-22)*
@@ -233,11 +238,12 @@ Ideas and techniques.
 Things being watched that haven't solidified yet.
 
 - [trends/agent-native-compute](trends/agent-native-compute.md) — cloud infrastructure purpose-built for agent workloads (sandboxes, RL/eval spikes) as a category distinct from frontier training-compute scale *(as_of: 2026-07-08)*
-- [trends/agent-safety-and-alignment-research](trends/agent-safety-and-alignment-research.md) — automated alignment research, double-blind frontier evals, and agent-skill-library malware propagation as distinct agent-safety research areas *(as_of: 2026-08-29)*
-- [trends/agents-reshape-organizations](trends/agents-reshape-organizations.md) — leverage moves from individual to org as autonomous agents, FDE teams, and deployment services take coordination work *(as_of: 2026-07-01)*
+- [trends/agent-safety-and-alignment-research](trends/agent-safety-and-alignment-research.md) — automated alignment research, double-blind frontier evals, and agent-skill-library malware propagation as distinct agent-safety research areas *(as_of: 2026-10-19)*
+- [trends/agents-reshape-organizations](trends/agents-reshape-organizations.md) — leverage moves from individual to org as autonomous agents, FDE teams, and deployment services take coordination work; the human-attention bottleneck *(as_of: 2026-10-19)*
 - [trends/agi-timeline-claims](trends/agi-timeline-claims.md) — dated, named AGI/major-capability-milestone claims from lab leadership (OpenAI's Astra/Pachocki, Altman's December 2026 estimate), distinct from restricted-deployment withholding *(as_of: 2026-08-28)*
 - [trends/ai-governance-and-policy](trends/ai-governance-and-policy.md) — pressure for governments to actively steer AI development (disclosure mandates, pre-release review, equity-stake proposals) rather than leaving it to labs and market forces *(as_of: 2026-07-14)*
 - [trends/ai-infrastructure-consolidation](trends/ai-infrastructure-consolidation.md) — open-model ecosystem infrastructure (hosting, distribution registries) consolidating under large buyers; NVIDIA's ~$13B Hugging Face acquisition and llama.cpp governance risk *(as_of: 2026-08-29)*
+- [trends/ai-labor-market-effects](trends/ai-labor-market-effects.md) — adoption, productivity, and hiring data on AI's effect on work: Stanford junior-displacement study, Anthropic 81K survey and internal employment report, Ramp, McKinsey, ALE *(as_of: 2026-10-19)*
 - [trends/ai-in-science](trends/ai-in-science.md) — biology, drug discovery, self-driving labs, virtual-cell models, and Claude Science-style workflow platforms for reproducible scientific work *(as_of: 2026-08-11)*
 - [trends/ai-in-mathematics](trends/ai-in-mathematics.md) — pure-mathematics results from general-purpose reasoning models (OpenAI's Erdős disproof, Anthropic's Riemann Hypothesis bound), split out from AI in Science *(as_of: 2026-08-11)*
 - [trends/compute-infrastructure](trends/compute-infrastructure.md) — frontier compute scale plus inference-system efficiency as competitive moats *(as_of: 2026-07-08)*
@@ -263,9 +269,10 @@ Practical guidance for teaching teams and businesses to use AI well.
 - [training/agent-skill-methodology](training/agent-skill-methodology.md) — evals-first method for writing maintainable agent skills with natural triggers, principles, production lessons, pruning, and portable domain judgment *(as_of: 2026-07-15)*
 - [training/ai-engineering-skills](training/ai-engineering-skills.md) — four-skill taxonomy (building/deploying AI apps, SWE fundamentals, using coding agents, shaping the build) from Andrew Ng's DeepLearning.AI relaunch, evidence-gathered from 10,000+ job postings *(as_of: 2026-08-25)*
 - [training/ai-adoption-evidence](training/ai-adoption-evidence.md) — practice-level case studies behind Company-wide AI enablement's guidance: Claudie, Helena/Plus One, Ramp's Glass/Dojo mechanism, a four-agent company, Boulton & Watt, and Netflix CPTO Elizabeth Stone *(as_of: 2026-08-28)*
-- [training/company-wide-ai-enablement](training/company-wide-ai-enablement.md) — operating patterns for broad AI adoption, explicit AI strategy bets, token allocation, model routing, agent governance, and staged autonomy *(as_of: 2026-09-09)*
-- [training/ai-enablement-software-development](training/ai-enablement-software-development.md) — engineering-specific AI adoption: critique loops, AI-native hiring, PR review workflows, software-factory rollout, CI/CD bottlenecks, and junior talent pipeline risk *(as_of: 2026-07-16)*
-- [training/evals-for-agentic-software-development](training/evals-for-agentic-software-development.md) — eval stack for coding agents: deterministic gates, sandboxed execution, historical PR replay, benchmark integrity, QA artifact capture, browser self-verification, MVES, and trace mining *(as_of: 2026-07-08)*
+- [training/company-wide-ai-enablement](training/company-wide-ai-enablement.md) — operating patterns for broad AI adoption, explicit AI strategy bets, token allocation, model routing, agent governance, and staged autonomy *(as_of: 2026-09-14)*
+- [training/ai-enablement-software-development](training/ai-enablement-software-development.md) — engineering-specific AI adoption: critique loops, PR review workflows, software-factory rollout, and CI/CD bottlenecks *(as_of: 2026-09-14)*
+- [training/ai-native-hiring-and-junior-talent](training/ai-native-hiring-and-junior-talent.md) — for hiring managers and talent leads: AI-assisted build interviews, autonomy and judgment over domain depth, and the junior/mid-career pipeline risk *(as_of: 2026-10-19)*
+- [training/evals-for-agentic-software-development](training/evals-for-agentic-software-development.md) — eval stack for coding agents: deterministic gates, sandboxed execution, historical PR replay, benchmark integrity, QA artifact capture, browser self-verification, MVES, trace mining, test oracles, and multi-judge scoring *(as_of: 2026-10-14)*
 - [training/evals-for-agentic-work](training/evals-for-agentic-work.md) — eval patterns for workflow and task agents: pass^k reliability, task-specific metrics, simulated users *(as_of: 2026-04-23)*
 - [training/ai-coding-vocabulary](training/ai-coding-vocabulary.md) — shared language for agentic coding: model vs harness vs agent vs context vs session vs environment *(as_of: 2026-05-01)*
 - [training/ai-work-delegation-modes](training/ai-work-delegation-modes.md) — framework for choosing between autonomous delegation and human-steered collaboration when working with AI *(as_of: 2026-05-21)*
@@ -290,12 +297,12 @@ See `wiki/sources/` — source summaries are not indexed here. Use `grep` or Glo
 
 - state-of: 11
 - models: 32
-- tools: 95
+- tools: 97
 - benchmarks: 12
 - workflows: 8
-- concepts: 28
-- trends: 19
-- training: 15
+- concepts: 31
+- trends: 20
+- training: 16
 - use-cases: 3
 
-**Total content pages: 223.**
+**Total content pages: 230.**

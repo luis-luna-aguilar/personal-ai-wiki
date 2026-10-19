@@ -65,3 +65,11 @@
 ## Archived from current page on 2026-09-09
 
 - [2026-06-06] New benchmarks: SWE-Marathon (1B-token budget, long-horizon software projects); Meta-Agent Challenge (anti-reward-hacking); Princeton ICML 2026: top models still unreliable on repeated identical tasks
+
+## Archived from current page on 2026-10-19
+
+- [2026-07-02] OpenWiki and wiki memory reinforce maintained codebase documentation as an agent context layer.
+
+## Archived from current page on 2026-10-19
+
+- [2026-07-02] Devin Security Swarm showed Agentic MapReduce applied to enterprise security: fan out bounded agents, aggregate findings, validate exploitability, and hand humans reviewable PRs.

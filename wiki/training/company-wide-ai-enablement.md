@@ -1,8 +1,8 @@
 ---
 title: Company-wide AI enablement
 type: training
-as_of: 2026-09-09
-sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13, fde-race-may-2026, every-ai-adoption-levels, enterprise-spend-metered-june-2026, ai-strategy-explicit-bets-2026-06, codex-general-work-agents-2026-07, token-tightening-ai-finops-2026-06, efficiencymaxxing-model-routing-2026-07, every-cheap-competence-after-automation-2026-05, slack-agent-native-os-2026-07-29, codex-interview-onboarding-2026-08-06, agents-for-hire-2026-08-11, every-33-questions-executives-2026-08-28, vasuman-applied-ai-doesnt-work-2026-09-04]
+as_of: 2026-09-14
+sources: [ramp-ai-adoption-playbook, mckinsey-agentic-org, every-ai-autopilot, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, ai-native-product-building-lessons-late-march, ai-for-boring-businesses, openclaw-operating-pattern-march, ai-work-intensification-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, every-four-agents, ainews-2026-04-23, superhuman-2026-04-23, agents-evals-deep-research, agentic-devops-deep-research, claude-code-product-management-2026-05-01, ai-native-organizations-operating-model-2026-05-13, fde-race-may-2026, every-ai-adoption-levels, enterprise-spend-metered-june-2026, ai-strategy-explicit-bets-2026-06, codex-general-work-agents-2026-07, token-tightening-ai-finops-2026-06, efficiencymaxxing-model-routing-2026-07, every-cheap-competence-after-automation-2026-05, slack-agent-native-os-2026-07-29, codex-interview-onboarding-2026-08-06, agents-for-hire-2026-08-11, every-33-questions-executives-2026-08-28, vasuman-applied-ai-doesnt-work-2026-09-04, eng-leadership-openai-fde-2026-09-14]
 ---
 
 # Company-wide AI enablement
@@ -159,11 +159,13 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 
 ## Evidence from practice
 
-Macro adoption and labor-market statistics (a16z, Ramp's headline numbers, McKinsey, the Anthropic 81K-person survey, consumption pricing) now live on [Agents reshape organizations](../trends/agents-reshape-organizations.md), which tracks the trend-level evidence this page's guidance responds to. What follows is practice-level case evidence specific to company-wide enablement; see [AI adoption: evidence from practice](ai-adoption-evidence.md) for the fuller set of case studies (Claudie, Helena/Plus One, Ramp's Glass/Dojo mechanism, Every's four-agent company, Boulton & Watt, Nityesh Agarwal's Slack loop, and Netflix CPTO Elizabeth Stone).
+Macro adoption and labor-market statistics (a16z, Ramp's headline numbers, McKinsey, the Anthropic 81K-person survey, consumption pricing) now live on [AI labor-market effects](../trends/ai-labor-market-effects.md) and [Agents reshape organizations](../trends/agents-reshape-organizations.md), which track the trend-level evidence this page's guidance responds to. What follows is practice-level case evidence specific to company-wide enablement; see [AI adoption: evidence from practice](ai-adoption-evidence.md) for the fuller set of case studies (Claudie, Helena/Plus One, Ramp's Glass/Dojo mechanism, Every's four-agent company, Boulton & Watt, Nityesh Agarwal's Slack loop, and Netflix CPTO Elizabeth Stone).
 
 ## Forward-deployed engineer (FDE) model
 
 As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have simultaneous hiring or JV programs for embedding engineers directly inside customer organizations. The model was pioneered by Palantir ("Deltas"): FDEs work on-site for months, writing production code in the customer's environment — part engineer, part consultant, bridging the gap between AI provider capability and customer domain knowledge.
+
+**OpenAI's FDE org in practice (Colin Jarvis, Global Head of Forward Deployed Engineering, September 2026):** OpenAI's internal FDE org grew from 2 people to roughly 140, sitting between GTM and product/research as a two-way link; it spun out a separate ~200-person OpenAI Deployment Company specifically to scale customer integration work while keeping the internal FDE org itself small and insight-focused. OpenAI's definition of the role is outcome-focused, not code-focused: the goal is to make yourself unneeded, and being needed again on the same problem means it wasn't actually solved. Teams deliberately mix domain experts with engineers who lack that domain background, on the theory that outsiders are more likely to challenge the status quo. Concrete example: a Japan-based legacy-system migration (COBOL-to-Java, underlying systems worth hundreds of millions of dollars) where an FDE spends one day with the customer's payments team, the next building tests based on that day's insights, and another writing the actual migration code — with a disciplined feedback loop back to OpenAI's research team that converts a specific customer failure into a generalizable training-data request ("the model struggles with these types of COBOL-to-Java tasks") rather than just relaying the raw complaint. On-site time norms: roughly 50% on average, rising to ~80% in UAE and Japan engagements.
 
 **Why it matters for enablement:**
 - FDE integration transforms AI tools into critical infrastructure that is nearly impossible to remove, securing multi-year enterprise revenue
@@ -175,6 +177,7 @@ As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have
 
 ## Recent changes
 
+- [2026-09-14] Added OpenAI's FDE org in practice (Colin Jarvis interview): 2->140 headcount growth, the ~200-person OpenAI Deployment Company spinout, the outcome-focused/domain-expert-mixing staffing philosophy, a Japan COBOL-to-Java migration example, and the specific customer-failure-to-training-data feedback loop.
 - [2026-09-09] Split macro adoption/labor statistics out to [Agents reshape organizations](../trends/agents-reshape-organizations.md) and practice-level case studies out to [AI adoption: evidence from practice](ai-adoption-evidence.md); regrouped "Proven patterns" under `###` subheads (platform/strategy, agent design, onboarding/culture, governance/autonomy, cost/routing).
 - [2026-09-04] Added process-re-engineering framing for AI adoption (Michael Hammer's 1990 BPR critique, touch-time-vs-elapsed-time, department-level mapping method, Deterministic/Agentic/HITL step-sorting).
 - [2026-08-28] Added Every's 33-Questions guidance: an explicit 8-level AI-fluency ladder, "pick one platform" as the tool-switching default, route-by-task-novelty token economics, an explicit governance ownership split, and workflow-level (not single-metric) measurement.
@@ -183,12 +186,12 @@ As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have
 - [2026-07-29] Added thread-per-task chat orchestration pattern: chat channels/threads mapped directly onto agent session lifecycle; two independent implementations (Every's Claude Home Base, Block's Buzz) converged on the same shape in the same week.
 - [2026-07-08] Added efficiencymaxxing: stage-level model routing, token audits, and one-variable reruns as a company-wide AI cost-control practice.
 - [2026-07-01] Codex/Claude Code coverage expands terminal/workspace agents beyond engineering into inbox, CRM, healthcare coordination, writing, and knowledge-work workflows.
-- [2026-06-24] Token tightening adds allocation-style AI governance: budgets, routing, and higher-cost access tied to visible ROI.
 - [2026-06-30] Added explicit-bets strategy exercise: name token, lock-in, wrapper, vertical, data-moat, regulation, and switching-cost assumptions before committing AI strategy.
 
 ## See also
 
-- [Agents reshape organizations](../trends/agents-reshape-organizations.md) — the trend-level and macro adoption/labor evidence (GitHub commit growth, Stanford labor data, Ramp's headline numbers, the Anthropic 81K-person survey) that this page's guidance responds to
+- [Agents reshape organizations](../trends/agents-reshape-organizations.md) — the trend-level organizational evidence (GitHub commit growth, background agents, org redesign) that this page's guidance responds to
+- [AI labor-market effects](../trends/ai-labor-market-effects.md) — macro adoption and labor evidence (Stanford labor data, Ramp's headline numbers, the Anthropic 81K-person survey and internal employment report)
 - [AI adoption: evidence from practice](ai-adoption-evidence.md) — the practice-level case studies behind this page's proven patterns
 - [AI enablement — software development](ai-enablement-software-development.md) — engineering-specific patterns: critique loops, CI/CD as bottleneck, Shopify evidence, junior talent pipeline
 - [Agentic infrastructure operations](agentic-infrastructure-operations.md) — practical guidance for safe agent use around production infrastructure, deployment safety, and post-action verification
@@ -228,3 +231,4 @@ As of May 2026, all three leading frontier labs (Anthropic, OpenAI, Google) have
 - [A Codex of One's Own — Every](../sources/newsletters/codex-interview-onboarding-2026-08-06.md)
 - ["Agents for Hire" — Every](../sources/newsletters/agents-for-hire-2026-08-11.md)
 - [Every — 33 Questions Executives Ask About AI—Answered](../sources/newsletters/every-33-questions-executives-2026-08-28.md)
+- [Inside OpenAI's Forward Deployed Engineer Role — Eng Leadership](../sources/newsletters/eng-leadership-openai-fde-2026-09-14.md)

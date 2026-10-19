@@ -3,8 +3,8 @@ title: State of Computer Use
 type: state-of
 domains: [computer-use]
 tags: []
-as_of: 2026-07-08
-sources: [perplexity-computer-plaid, open-weight-momentum-early-april, claude-computer-use-late-march, perplexity-personal-computer, desktop-mobile-computer-use-february, pig-homepage, legacy-ai-tools-roadmap-xlsx, codex-for-work-2026-05-01, amazon-quick-work-context-assistant-2026-04-29, gemini-downloadable-files-2026-04-30, knowledge-work-os-agent-apps-2026-04-28, peekaboo-repo-2026-05-13, website-future-agent-readable-2026-07-02, vercel-agents-new-software-2026-07-03, codex-general-work-agents-2026-07, agent-ready-saas-mcp-2026-06, gemini-computer-use-aside-2026-06, cloudflare-agent-internet-monetization-2026-07]
+as_of: 2026-10-14
+sources: [perplexity-computer-plaid, open-weight-momentum-early-april, claude-computer-use-late-march, perplexity-personal-computer, desktop-mobile-computer-use-february, pig-homepage, legacy-ai-tools-roadmap-xlsx, codex-for-work-2026-05-01, amazon-quick-work-context-assistant-2026-04-29, gemini-downloadable-files-2026-04-30, knowledge-work-os-agent-apps-2026-04-28, peekaboo-repo-2026-05-13, website-future-agent-readable-2026-07-02, vercel-agents-new-software-2026-07-03, codex-general-work-agents-2026-07, agent-ready-saas-mcp-2026-06, gemini-computer-use-aside-2026-06, cloudflare-agent-internet-monetization-2026-07, expand-fetch-launch-2026-10]
 ---
 
 # State of Computer Use
@@ -38,8 +38,15 @@ Web surfaces optimized for agents rather than only for humans.
 - **Cloudflare Monetization Gateway** — usage-based paywall for agent-accessed resources such as web pages, proprietary datasets, APIs, and MCP tools; early signal that the agent internet may monetize machine traffic differently from human pageviews *(as of 2026-07-08)*
 - **Agent-ready SaaS** — products expose parseable docs, APIs, authentication, and MCP servers so user-chosen agents can operate against the product instead of being forced through weaker in-app assistants *(as of 2026-06-29)*
 
+### Agent web data extraction
+
+The reader side of the agent-readable web: APIs that fetch and clean arbitrary pages for agents.
+
+- [Expand Fetch](../tools/expand-fetch.md) — renders the page like a browser, keeps tables and icons as Markdown, extracts hidden JSON, and snapshots every fetch for citation *(as of 2026-10-14)*
+
 ## Recent changes
 
+- [2026-10-14] Added `Agent web data extraction` with [Expand Fetch](../tools/expand-fetch.md), the reader-side counterpart to sites serving agent-native Markdown.
 - [2026-07-08] Cloudflare Monetization Gateway adds an agent-internet monetization signal: metered access for pages, datasets, APIs, and MCP tools.
 - [2026-07-03] Added agent-readable web concept: Vercel reports serving Markdown directly to detected agent requests, signaling a split between human and machine website experiences.
 - [2026-06-25] Gemini 3.5 Flash computer use moves browser/desktop/mobile action into a mainstream Gemini API tool; Aside launches as a browser-native computer-use product.
@@ -49,7 +56,6 @@ Web surfaces optimized for agents rather than only for humans.
 - [2026-05-05] Added knowledge-work OS framing: left-sidebar desktop app + agentic terminal is emerging as a universal knowledge-work interface pattern; sticky workflow state creates switching costs
 - [2026-05-05] Gemini now generates downloadable files from chat: Google Docs/Sheets/Slides, Microsoft Office formats, PDF, CSV, LaTeX, TXT, RTF, Markdown — artifact-producing assistant behavior
 - [2026-05-05] Amazon Quick (caveated): desktop work-context assistant building personal knowledge graph from files/calendar/Slack, integrating with Kiro CLI and Claude Code; secondary coverage only — pending primary Amazon verification
-- [2026-05-01] Added [Codex](../tools/codex.md) under `Computer use` as a horizontal computer-work contender; secondary newsletter coverage frames it as targeting docs, sheets, slides, browser flows, and connected workplace apps
 
 ## Sources
 
@@ -64,3 +70,4 @@ Web surfaces optimized for agents rather than only for humans.
 - [Agent-ready SaaS and MCP surfaces](../sources/newsletters/agent-ready-saas-mcp-2026-06.md)
 - [Gemini computer use and Aside agentic browser](../sources/newsletters/gemini-computer-use-aside-2026-06.md)
 - [Cloudflare Monetization Gateway and agent internet monetization](../sources/newsletters/cloudflare-agent-internet-monetization-2026-07.md)
+- [Announcing Expand Fetch](../sources/articles/expand-fetch-launch-2026-10.md)

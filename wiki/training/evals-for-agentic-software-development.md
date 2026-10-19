@@ -1,8 +1,8 @@
 ---
 title: Evals for agentic software development
 type: training
-as_of: 2026-07-08
-sources: [agents-evals-deep-research, qa-tooling-for-software-agents-deep-research, cost-aware-agent-evaluation-2026-04-28, opus-4-7-tokenizer-economics-2026-04-30, agentic-security-tooling-2026-05-13, ai-code-review-eval-integrity-2026-06, dashbench-code-review-understanding-2026-07, crabbox-remote-execution-2026-07, cognition-async-agents-testing-2026-05]
+as_of: 2026-10-14
+sources: [agents-evals-deep-research, qa-tooling-for-software-agents-deep-research, cost-aware-agent-evaluation-2026-04-28, opus-4-7-tokenizer-economics-2026-04-30, agentic-security-tooling-2026-05-13, ai-code-review-eval-integrity-2026-06, dashbench-code-review-understanding-2026-07, crabbox-remote-execution-2026-07, cognition-async-agents-testing-2026-05, lavaee-verification-pyramid-2026-10]
 ---
 
 # Evals for agentic software development
@@ -24,6 +24,10 @@ Coding agents produce output that looks correct before it compiles, runs, or lan
 - For detailed AI PR-review execution patterns, use [AI PR and code review](../workflows/ai-pr-code-review.md); this page keeps the broader eval-stack framing.
 - Set cost and latency thresholds as hard limits to catch runaway recursive loops before they damage production.
 - Security checks should be treated as agent eval gates where possible: dependency freshness, known vulnerability scans, secret scans, supply-chain policy checks, and post-fix validation should produce artifacts the agent and reviewer can inspect.
+- Write the acceptance contract before the code: who acts, the starting state, the action, the checkable result on screen and in stored state, a numeric threshold where one applies, the oracle that checks it, and which dependencies must be real. A person reviews it before the agent starts.
+- Take expected values from the criteria or a reference, never from running the new code. LLM-written tests tend to encode what the code does rather than what it should do, so a test whose expectation came from the implementation agrees with the bug.
+- Read the test diff before the implementation diff. A weakened assertion, deleted case, or newly mocked dependency makes a green check meaningless.
+- Block fixes that edit, skip, or delete a failing test with a hook or CI check, not a prompt rule, so "green" can't come from moving the goalposts.
 
 ## Layered eval stack
 
@@ -35,6 +39,20 @@ Qualitative and trajectory-based evals that run only after Layer 1 passes. What 
 
 **Layer 3 — Online monitoring:**
 Asynchronous scoring of production traces to detect drift, cost spikes, or trajectory degradation in live deployments. This feeds the trace mining loop (see Proven patterns).
+
+## Oracles agents can't game
+
+An oracle is whatever decides pass/fail against something trusted. Fixed example asserts are the easiest for an agent to satisfy without being right. Harder to game:
+
+- **Property-based tests** check an invariant over thousands of generated inputs ("output is always sorted").
+- **Metamorphic tests** compare related runs (same inputs at 30 and 120 FPS must give the same outcome).
+- **Differential tests** run old vs new, or yours vs a reference, on the same input.
+- **Mutation tests** plant small faults; if tests still pass, they aren't testing what you think.
+- **Approved snapshots** change only when a person approves the new snapshot.
+- **Invariants and contracts** check pre/post-conditions on every run.
+- **Seeded replays** re-run a recorded session deterministically.
+
+The agent can write property tests; a person decides which matter. Treat coverage as a record of what ran, not of what was checked.
 
 ## Tooling layer
 
@@ -130,6 +148,8 @@ For qualitative review signals (readability, architectural coherence, security a
 
 Observability platforms (Braintrust, Promptfoo, Langfuse) support trace ingestion and assertion-based grading. A concrete example: a `skill-used` assertion in Promptfoo can verify that the agent routed a query to the SQL tool rather than hallucinating data from its weights — grading internal reasoning, not just the final output.
 
+**Combining several judges.** Use the judge only for what code can't check, after deterministic gates. Give it a checklist with defined score meanings (e.g. 1 = broken, 20 = proven with evidence), and a fresh judge per item so a strong item can't lift a weak one. Average the scores but let any single confident "broken" veto the result. Unanimity sounds stricter but backfires: if each of K judges wrongly rejects a good change 10% of the time, a correct change is bounced 1 − 0.9^K of the time, about 41% at K = 5. Each extra judge is more model calls, so K is a budget choice. Before adding a judge, ask whether a test could check the thing instead.
+
 ## AI code review
 
 AI code review is now large enough to warrant its own page. See [AI PR and code review](../workflows/ai-pr-code-review.md) for review execution, historical PR replay, model-combo benchmarking, review artifacts, and understanding-preserving review.
@@ -156,6 +176,8 @@ Proof artifacts matter for two reasons:
 
 Proof artifacts should identify where they ran, not only what they showed. For coding-agent PRs, a useful artifact includes the command, environment, runner identity, stdout/stderr, screenshots or video when relevant, and whether the runner was released or retained for debugging.
 
+Write the user scenario in plain steps before the agent starts (log in → open settings → change X → see Y); that scenario is the test. Drive a real browser through it (e.g. Vercel Labs' agent-browser), assert against DOM and network requests rather than pixels alone, use a real test account, and rerun the same scenario after every repair. Performance claims need the same discipline: set the budget before the change (e.g. LCP under 2.5s on mobile), measure Core Web Vitals over several runs on main and on the branch, compare medians, and include a mobile viewport.
+
 ## Proven patterns
 
 - **Deterministic gates first, always.** AI-specific evals are expensive and noisy. Let cheap deterministic checks filter obvious failures before any LLM-as-judge or trajectory eval runs.
@@ -171,6 +193,8 @@ Proof artifacts should identify where they ran, not only what they showed. For c
 - Running AI-specific evals before deterministic gates — wastes compute and produces noisy signal
 - Shadow mode without a feedback loop — shadow proposals that don't convert into training data or eval cases add cost without compounding value
 - Running AI review on large PRs with generic standards — creates noisy comments that humans learn to ignore
+- Making an LLM verifier the foundation instead of the top layer — judges drift toward longer answers and whatever they read first, so checks get missed and regressions slip through
+- Prompt-only guards on test integrity — an instruction not to suppress failing tests is not a runtime check; enforce it with a hook or CI step
 
 ## Evidence from practice
 
@@ -186,6 +210,7 @@ Proof artifacts should identify where they ran, not only what they showed. For c
 
 ## Recent changes
 
+- [2026-10-14] Added Lavaee's verification-pyramid guidance: acceptance contract first, oracles agents can't game, test-diff-first review, multi-judge mean-plus-veto scoring, and scenario-driven browser and performance checks.
 - [2026-07-08] Added remote execution control planes as part of the coding-agent eval/proof-artifact stack.
 - [2026-07-08] Moved detailed AI PR/code-review execution guidance into a dedicated workflow and added DashBench historical PR replay as the review-eval pattern.
 - [2026-06-26] Added AI review workflow guidance and public-benchmark leakage caveat from The Code / AINews coverage.
@@ -203,3 +228,4 @@ Proof artifacts should identify where they ran, not only what they showed. For c
 - [DashBench and understanding-preserving AI code review](../sources/newsletters/dashbench-code-review-understanding-2026-07.md)
 - [Crabbox remote execution docs](../sources/articles/crabbox-remote-execution-2026-07.md)
 - [Cognition async agents and testing proof](../sources/newsletters/cognition-async-agents-testing-2026-05.md)
+- [Agents Write the Code. Your System Has to Prove It. — Alex Lavaee](../sources/tweets/lavaee-verification-pyramid-2026-10.md)

@@ -6,7 +6,7 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
-Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`, `agent-sandbox-infra`, `coding-discipline-skill`, `knowledge-platform`
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`, `agent-sandbox-infra`, `coding-discipline-skill`, `knowledge-platform`, `web-data-extraction`
 
 ### spec-driven-development
 - **Parent domain(s):** coding
@@ -217,6 +217,12 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Applies to types:** tool
 - **Definition:** Tools for generating, editing, or publishing music and songs from prompts, reference audio, lyrics, or other AI-assisted composition workflows.
 - **Examples:** Suno, Udio, ElevenMusic
+
+### web-data-extraction
+- **Parent domain(s):** agents, computer-use
+- **Applies to types:** tool
+- **Definition:** APIs and services that fetch, render, clean, and extract web pages or whole sites into agent-usable formats (Markdown, structured data, snapshots), including crawling and change tracking. Distinct from `computer-use` (operating UIs) and `document-intelligence` (PDFs, forms, files).
+- **Examples:** [Expand Fetch](../tools/expand-fetch.md)
 
 ### Format
 

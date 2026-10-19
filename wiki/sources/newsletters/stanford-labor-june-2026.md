@@ -14,8 +14,8 @@ Stanford's Digital Economy Lab labor market analysis covering AI's impact on ear
 
 ## Influenced pages
 
-- [AI enablement — software development](../../training/ai-enablement-software-development.md) — junior talent problem section
-- [Agents reshape organizations](../../trends/agents-reshape-organizations.md) — concrete signals section
+- [AI-native hiring and the junior talent pipeline](../../training/ai-native-hiring-and-junior-talent.md) — junior talent problem section (moved from AI enablement — software development)
+- [AI labor-market effects](../../trends/ai-labor-market-effects.md) — labor-market evidence (moved from Agents reshape organizations)
 
 ## Key claims extracted
 

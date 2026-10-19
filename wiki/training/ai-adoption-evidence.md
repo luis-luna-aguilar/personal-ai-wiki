@@ -30,7 +30,7 @@ Practice-level case studies behind [Company-wide AI enablement](company-wide-ai-
 ## See also
 
 - [Company-wide AI enablement](company-wide-ai-enablement.md) — the operating guidance this evidence supports
-- [Agents reshape organizations](../trends/agents-reshape-organizations.md) — macro adoption and labor-market statistics
+- [AI labor-market effects](../trends/ai-labor-market-effects.md) — macro adoption and labor-market statistics
 
 ## Sources
 

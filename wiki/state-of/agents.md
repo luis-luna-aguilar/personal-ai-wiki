@@ -3,8 +3,8 @@ title: State of Agents
 type: state-of
 domains: [agents]
 tags: []
-as_of: 2026-09-09
-sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, ainews-2026-04-22, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents, cursor-cloud-agents-march, cursor-cloud-agents-february, google-adk, openai-deep-research, gemini-deep-research-max, futurehouse-homepage, uipath-maestro-introduction, anthropic-mcp, google-a2a, legacy-ai-tools-roadmap-xlsx, microsoft-foundry-agents-2026, google-cloud-next-2026, superhuman-2026-04-23, awsai-cowork-bedrock-2026-04-23, microsoft-copilot-agent-mode-office, claude-managed-agents-memory, agentic-devops-deep-research, agent-infrastructure-harness-2026-05-01, codex-for-work-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, inference-inflection-agent-runtime-2026-04-30, persistent-cloud-computers-agents-2026-05-01, production-agent-orchestration-2026-04-29, hermes-openclaw-persistent-agents-2026-05-11, metr-long-horizon-2026-05-12, thinking-machines-interaction-2026-05-12, frontier-labs-deployment-services-2026-05-13, multica-repo, notion-external-agents-api-may-2026, langchain-interrupt-may-2026, devin-auto-triage-2026-05, papercliping, ainews-june-06-2026, vercel-agents-new-software-2026-07-03, ainews-not-much-happened-2026-07-02, the-code-devin-security-2026-07-02, claude-tag-slack-agent-2026-06, claude-cowork-mobile-2026-07, gemini-managed-agents-2026-07, kimi-goal-mode-creative-agents-2026-06, railway-agent-native-cloud-2026-05-20, daytona-giving-agents-computers-2026-05-21, modal-agent-experience-2026-07-08, ainews-new-ai-infra-unicorns-2026-05-22, chatgpt-work-launch-2026-08-04, ainews-spacexai-grok-46-and-grok-bot-2026-08-13, mastra-ai-mastra-2026-09-09, deeplethe-utopia-2026-09-09]
+as_of: 2026-10-14
+sources: [cursor-3-launch, advisor-strategy, stripe-cli, managed-agents, agentic-thinking-lin, curiosity-driven-imagination, openai-agents-sdk-evolution, ainews-2026-04-21, ainews-2026-04-22, claude-cowork-launch, every-managed-agents-vibe-check, claude-design-launch, orca-homepage, anthropic-platform-expansion-april-2026, coding-agent-control-planes, claude-productivity-surfaces, open-agent-orchestration-late-march, proof-agent-native-documents, cursor-cloud-agents-march, cursor-cloud-agents-february, google-adk, openai-deep-research, gemini-deep-research-max, futurehouse-homepage, uipath-maestro-introduction, anthropic-mcp, google-a2a, legacy-ai-tools-roadmap-xlsx, microsoft-foundry-agents-2026, google-cloud-next-2026, superhuman-2026-04-23, awsai-cowork-bedrock-2026-04-23, microsoft-copilot-agent-mode-office, claude-managed-agents-memory, agentic-devops-deep-research, agent-infrastructure-harness-2026-05-01, codex-for-work-2026-05-01, ai-managed-orchestration-local-browser-agents-2026-04-28, inference-inflection-agent-runtime-2026-04-30, persistent-cloud-computers-agents-2026-05-01, production-agent-orchestration-2026-04-29, hermes-openclaw-persistent-agents-2026-05-11, metr-long-horizon-2026-05-12, thinking-machines-interaction-2026-05-12, frontier-labs-deployment-services-2026-05-13, multica-repo, notion-external-agents-api-may-2026, langchain-interrupt-may-2026, devin-auto-triage-2026-05, papercliping, ainews-june-06-2026, vercel-agents-new-software-2026-07-03, ainews-not-much-happened-2026-07-02, the-code-devin-security-2026-07-02, claude-tag-slack-agent-2026-06, claude-cowork-mobile-2026-07, gemini-managed-agents-2026-07, kimi-goal-mode-creative-agents-2026-06, railway-agent-native-cloud-2026-05-20, daytona-giving-agents-computers-2026-05-21, modal-agent-experience-2026-07-08, ainews-new-ai-infra-unicorns-2026-05-22, chatgpt-work-launch-2026-08-04, ainews-spacexai-grok-46-and-grok-bot-2026-08-13, mastra-ai-mastra-2026-09-09, deeplethe-utopia-2026-09-09, expand-fetch-launch-2026-10, harness2-recursive-harnessing-2026-10]
 ---
 
 # State of Agents
@@ -46,6 +46,7 @@ SDKs and development kits for building custom agents with tools, multi-agent pat
 - [OpenAI Agents SDK](../tools/openai-agents-sdk.md) — model-native harness with native sandbox execution, durable checkpoint / rehydration, and provider-neutral manifests *(as of 2026-04-15)*
 - **OpenClaw** — viral open-source framework (345K stars); deep messaging-app integrations; **security advisory (May 2026):** 341 malicious registry entries planted in coordinated attack; Microsoft recommends enterprise customers avoid on work machines *(as of 2026-05-13)*
 - [Mastra](../tools/mastra.md) — YC-backed open-source TypeScript agent framework; model routing across 40+ providers, graph-based workflow engine alongside the agent abstraction, human-in-the-loop suspend/resume, Observational Memory, MCP server authoring *(as of 2026-09-09)*
+- [Harness²](../tools/harness2.md) — Google Cloud AI Research; open-source research framework that refines an agent's harness per task without an answer key and keeps a cross-task lessons library *(as of 2026-10-09)*
 
 ### Deep research tools
 
@@ -53,6 +54,12 @@ Longer-horizon research agents that plan, search, read, synthesize, and return m
 
 - [OpenAI Deep Research](../tools/openai-deep-research.md) — OpenAI's productized deep research agent; available via ChatGPT and API *(as of 2026-04-22)*
 - [Gemini Deep Research](../tools/gemini-deep-research.md) — Gemini Deep Research and Deep Research Max; most fully benchmarked public implementation (93.3% DeepSearchQA, 85.9% BrowseComp on Max tier); MCP support for internal data *(as of 2026-04-22)*
+
+### Agent web data extraction
+
+APIs that fetch, clean, and extract web pages for agents, so agents read sites that don't serve agent-native formats. See [Agent-readable web](../concepts/agent-readable-web.md) for the publisher side.
+
+- [Expand Fetch](../tools/expand-fetch.md) — URL → Markdown via a trained page-reading model (Iris), plus hidden-JSON extraction, citable snapshots, Crawl and WebSync; vendor-run benchmark puts it ahead of Exa and Firecrawl *(as of 2026-10-14)*
 
 ### Agentic DevOps
 
@@ -99,6 +106,8 @@ Platforms built to support literature-driven or discovery-oriented scientific wo
 
 ## Recent changes
 
+- [2026-10-09] Added [Harness²](../tools/harness2.md) to Agent frameworks: Google's open-source recursive harnessing framework, frozen weights, up to +11.5 points on WorkBuddy-Bench.
+- [2026-10-14] Added `Agent web data extraction` subcategory with [Expand Fetch](../tools/expand-fetch.md): agent-oriented fetch API with trained Markdown (Iris) and hidden-JSON (X-Ray) models; vendor-run MDBench 74.1% vs Exa 55.3%, Firecrawl 27.2%.
 - [2026-09-09] Utopia (DeepLethe) added under Knowledge platforms: open-source bitemporal knowledge graph / ontology engine with an agent harness over MCP.
 - [2026-09-09] Added Mastra to Agent frameworks: YC-backed open-source TypeScript framework combining an agent abstraction with an explicit graph-based workflow engine, human-in-the-loop suspend/resume, and Observational Memory.
 - [2026-09-09] Added a `Knowledge platforms` subcategory (new `knowledge-platform` schema entry) and moved [OpenWiki](../tools/openwiki.md) into it from Agent frameworks, as part of the knowledge-cluster terminology reorganization anchored on [Knowledge architectures](../concepts/knowledge-architectures.md).
@@ -107,5 +116,3 @@ Platforms built to support literature-driven or discovery-oriented scientific wo
 - [2026-07-08] Claude Cowork beta expands to web/mobile and strengthens scheduled background work, making Cowork a cross-device agent surface rather than only a desktop app.
 - [2026-07-08] Google managed agents in the Gemini API add MCP support, background execution, custom function calling, and credential refresh, making hosted agent runtime features first-party Gemini primitives.
 - [2026-07-03] Vercel eve interview adds an agent-framework signal: agents as a new software category needing resumability, long-running jobs, skills, sandboxes, observability, and evals.
-- [2026-07-02] Devin Security Swarm showed Agentic MapReduce applied to enterprise security: fan out bounded agents, aggregate findings, validate exploitability, and hand humans reviewable PRs.
-- [2026-07-02] OpenWiki and wiki memory reinforce maintained codebase documentation as an agent context layer.

@@ -15,7 +15,7 @@ Anthropic survey of 80,508 Claude users on AI's economic impact. Respondents sha
 
 ## Influenced pages
 
-- [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — empirical evidence on productivity type, job threat patterns, career stage gap
+- [AI labor-market effects](../../trends/ai-labor-market-effects.md) — empirical evidence on productivity type, job threat patterns, career stage gap (moved from Agents reshape organizations)
 
 ## Key claims extracted
 

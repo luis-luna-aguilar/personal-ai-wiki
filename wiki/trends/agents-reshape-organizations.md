@@ -3,8 +3,8 @@ title: Agents reshape organizations (leverage moves from individual to org)
 type: trend
 domains: [agents, coding]
 tags: [agentic]
-as_of: 2026-09-09
-sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, openclaw-operating-pattern-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, cursor-third-era, knowledge-work-os-agent-apps-2026-04-28, frontier-labs-deployment-services-2026-05-13, ai-native-organizations-operating-model-2026-05-13, stanford-labor-june-2026, ainews-fable5-june-2026, github-kyle-daigle-june-2026, software-factories-fde-2026-07, superhuman-autonomous-growth-agent-2026-05-21, anthropic-81k-economics, satya-nadella-no-priors-june-2026]
+as_of: 2026-10-19
+sources: [harvey-legal-is-next, ramp-ai-adoption-playbook, postman-ai-org-chart, mckinsey-agentic-org, ai-adoption-is-management, agent-native-organizations-early-april, agent-coworkers-operating-pattern, openclaw-operating-pattern-march, openclaw-operating-pattern-february, every-ai-sandwich-april-2026, cursor-third-era, knowledge-work-os-agent-apps-2026-04-28, frontier-labs-deployment-services-2026-05-13, ai-native-organizations-operating-model-2026-05-13, stanford-labor-june-2026, ainews-fable5-june-2026, github-kyle-daigle-june-2026, software-factories-fde-2026-07, superhuman-autonomous-growth-agent-2026-05-21, anthropic-81k-economics, satya-nadella-no-priors-june-2026, anthropic-employment-report-2026-10]
 ---
 
 # Agents reshape organizations (leverage moves from individual to org)
@@ -32,19 +32,7 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 
 ### Adoption, labor, and economic evidence
 
-- **Enterprise AI spend is already real, not just experimentation.** a16z reports nearly 30% of the Fortune 500 and roughly 20% of the Global 2000 are already live, paying customers of leading AI startups — a useful counterweight to blanket "AI pilots are failing" narratives.
-- **Ramp publishes concrete internal adoption numbers.** Ramp reports AI usage up 6,300% YoY, 99.5% of employees active on AI tools, 84% using coding agents weekly, 1,500+ apps shipped in six weeks by 800+ builders, and non-engineers accounting for 12% of human-initiated PRs on the production codebase.
-- **McKinsey names the bottleneck: workflow redesign, not technology.** "AI is Everywhere. The Agentic Organization Isn't Yet" (McKinsey, 2026) reports that 80%+ of companies are not seeing bottom-line impact from AI investments despite large spending, that 75% of roles need fundamental reshaping right now, and that nearly half of leaders report skill gaps in their organization — see [Company-wide AI enablement](../training/company-wide-ai-enablement.md) for the full in-loop/above-the-loop framing and a worked example.
-- **First rigorous labor-market data on junior displacement.** Stanford's Digital Economy Lab (25,000 firms, June 2026): early-career workers aged 22-25 in AI-exposed occupations are declining at 3.8%/yr since 2022; least-exposed roles are growing at 2.0%. Junior software developers and customer service workers are the hardest-hit groups. Stanford labels these "early signals from a fixed sample," but the concern is not mass unemployment — it's a "hollow pipeline": if entry-level AI-exposed work disappears, the senior talent pipeline weakens roughly 5-10 years later.
-- **Anthropic's 81K-person economics survey (April 2026).** The largest direct survey of Claude users on AI's economic impact (80,508 respondents):
-  - Scope, not speed, is the primary productivity driver: 48% of users who described productivity gains cited expanded scope (doing new or previously impossible tasks); 40% cited speed. The common "AI makes you faster" framing understates the more significant "AI makes you capable of new things" effect.
-  - Mean self-reported productivity: 5.1/7 ("substantially more productive"). ~3% reported negative or neutral impact.
-  - Job threat correlates with observed AI exposure: people in occupations where Claude does the highest share of tasks worry about displacement 3× more often than those in low-exposure roles.
-  - U-shaped threat relationship with speedup: both those *slowed down* by AI (creative workers who find it stifling) and those experiencing the *largest speedups* express the most job displacement concern; the moderate-speedup middle group is least worried.
-  - Benefits flow to workers more than employers: most respondents who named a beneficiary cited themselves; only 10% said employers were extracting more work.
-  - Early-career workers are worse positioned: 60% of early-career respondents personally benefited from AI vs 80% of senior professionals, alongside significantly higher job-displacement concern.
-  - Wage-productivity relationship is U-shaped: highest-paid workers (software developers, management) report the largest gains, but some lowest-wage workers also report large gains, often for side projects or new capabilities; mid-tier scientific and legal professionals are the least enthusiastic.
-- **Agents' Last Exam (ALE, 2026):** Labor-market-aligned benchmark across 1,500+ tasks and 55 occupations. Top agents score 2.6% on the hardest tier. Provides a grounded counterpoint to displacement narratives: agents can do some professional tasks autonomously, but the hardest tier of real occupation-scoped work remains largely out of reach.
+Adoption, labor-market, and productivity statistics (a16z, Ramp, McKinsey, Stanford's 25,000-firm study, Anthropic's 81K-person survey and its internal employment report, ALE) now live on [AI labor-market effects](ai-labor-market-effects.md). This page keeps the organizational consequences.
 
 ### Organizational design signals
 
@@ -65,6 +53,7 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - **Org architecture prediction: two models will coexist, one will lose.** Dan Shipper's forecast: (a) personal AI assistants with rich, maintained relationships will work well for high-trust, customizable tasks; (b) company-wide super-agents with department plugins will win for low-maintenance, lower-customization use cases. A third model — fleets of single-purpose agents — is predicted to lose because they require high maintenance without the relationship depth that makes personal assistants valuable.
 - **Consumption pricing shift (Satya Nadella, Build 2026).** Per-seat licensing is giving way to per-token/consumption models as the dominant enterprise AI pricing structure. Anthropic doubled Claude Cowork usage limits in the same week Copilot token billing caused bill shock — opposite directions from the two leading providers.
 - **Tempo's "AI head of growth" agent (per Superhuman, 2026-05-21).** Superhuman's newsletter reports that Tempo launched an unprompted, always-on growth agent that builds and deploys a weekly growth plan by pulling from a company's ad accounts, reviews, and e-commerce platform, using seven distinct agent roles with decisions tracked live on a canvas; Superhuman puts the launch video at 1.5M+ views. Thinly sourced (single newsletter blurb, no primary product fetch, no independent coverage), but it is a named example of a single-purpose "agent employee" operating in a non-engineering business-ops function — the kind of foothold outside engineering this trend predicts but has had few named examples of so far.
+- **The attention bottleneck, measured (Anthropic, October 2026).** By August, employee-directed agents worked 6 hours for every human hour; about 80% of interactive session time is agents idle, waiting on a person; reading all agent output would take over half the work week even for non-technical staff. Employees respond with meta-work (specs for multi-agent runs, agent-reviews-agent loops, pipeline monitors), which rose from 10% to 22% of sessions; standing agent instructions grew from a few hundred to 8,500 in a year. Agents added to human Slack threads rather than replacing them; meeting time rose 16% even for technical ICs; unlogged decisions are discouraged because agents can't see them. Hiring managers shifted from domain expertise toward autonomy and judgment.
 
 ## What to watch
 
@@ -86,10 +75,10 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 
 ## Recent changes
 
+- [2026-10-19] Added Anthropic's first-party measurement of the human-attention bottleneck: 6:1 agent-to-human hours, ~80% agent idle time waiting on people, meta-work 10% → 22% of sessions, 8,500 standing agent instructions.
+- [2026-10-19] Split adoption, labor-market, and productivity statistics out to [AI labor-market effects](ai-labor-market-effects.md); this page keeps the organizational consequences.
 - [2026-09-09] Consolidated macro adoption/labor statistics onto this page from [Company-wide AI enablement](../training/company-wide-ai-enablement.md), which kept only practice-level case studies: added a16z's Fortune-500/Global-2000 adoption counter-signal, Anthropic's 81K-person economics survey in full, the consumption-pricing shift (Satya Nadella), and extended the McKinsey and Ramp bullets with figures that page had duplicated. Regrouped "Concrete signals" under `###` subheads (scale/infrastructure, adoption/labor/economics, organizational design, autonomy/trust/architecture).
 - [2026-07-01] AIEWF/Latent Space coverage connects software factories to FDE and agent-engineer teams that bind agents into customer systems, SOPs, release paths, and change management.
-- [2026-06-16] Stanford 25,000-firm study: AI-exposed early-career workers (22-25) declining 3.8%/yr since 2022; junior software devs and customer service hardest hit; hollow pipeline concern is now data-backed
-- [2026-06-10] Added ALE benchmark: 1,500+ tasks, 55 occupations, 300+ domain experts; top agents 2.6% on hardest tier — measurement of the gap between benchmark coding performance and real occupational task performance
 - [2026-06-02] GitHub 14x commit growth: 275M AI agent commits/week (April 2026), pace for 14B in 2026 vs 1B in 2025; infrastructure breaking: MySQL One permissioning, Actions CPU, monorepo systems; 200M+ users with "developer" being redefined
 - [2026-05-21] Added Tempo's autonomous "AI head of growth" as a concrete non-engineering agent-employee example (seven agent roles, canvas-tracked decisions), per Superhuman's newsletter; single secondary blurb, flagged for follow-up if a primary source appears.
 - [2026-05-13] Added frontier-lab deployment-services framing and AI-native operating-model signal: the bottleneck is increasingly workflow design, context, permissions, evals, handoffs, and human attention allocation.
@@ -110,8 +99,8 @@ This is a knowledge-work trend, not a legal-specific one. Engineering is the fir
 - [Agent desktop apps as the new OS for knowledge work](../sources/newsletters/knowledge-work-os-agent-apps-2026-04-28.md)
 - [Frontier labs as deployment-service firms](../sources/newsletters/frontier-labs-deployment-services-2026-05-13.md)
 - [AI-native organizations as operating model](../sources/newsletters/ai-native-organizations-operating-model-2026-05-13.md)
-- [Stanford AI labor market data — June 2026](../sources/newsletters/stanford-labor-june-2026.md)
 - [AINews — Fable 5 / Mythos 5 launch (June 10)](../sources/newsletters/ainews-fable5-june-2026.md)
 - ["GitHub's Plan for Agents" — Kyle Daigle on Latent Space (June 2)](../sources/newsletters/github-kyle-daigle-june-2026.md)
 - [Software factories and forward-deployed agent engineering](../sources/newsletters/software-factories-fde-2026-07.md)
 - [Meet the autonomous growth agent (Superhuman)](../sources/newsletters/superhuman-autonomous-growth-agent-2026-05-21.md)
+- [How employment is changing at Anthropic (Anthropic Institute)](../sources/articles/anthropic-employment-report-2026-10.md)

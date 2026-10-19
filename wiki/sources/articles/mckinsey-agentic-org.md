@@ -30,3 +30,4 @@ McKinsey Podcast transcript with Senior Partner Alexis Krivkovich. Argues that c
 
 - [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — major additions: pilot mode failure mode, above-the-loop distinction, McKinsey evidence, junior talent problem
 - [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — McKinsey as strongest third-party signal for org redesign thesis
+- [AI labor-market effects](../../trends/ai-labor-market-effects.md) — McKinsey's 80%-no-bottom-line-impact and role-reshaping figures (moved from Agents reshape organizations)

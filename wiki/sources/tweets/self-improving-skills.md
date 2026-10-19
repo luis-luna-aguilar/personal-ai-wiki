@@ -16,6 +16,7 @@ Two sources. (1) tricalt article: skills are static but environments drift; trea
 ## Influenced pages
 
 - [Agent improvement loop](../../concepts/agent-improvement-loop.md) — self-improving skills section added
+- [Automated harness optimization](../../concepts/automated-harness-optimization.md) — self-improving skills section (moved from Agent improvement loop)
 
 ## Key claims extracted
 

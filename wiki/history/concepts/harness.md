@@ -31,3 +31,7 @@ Older recent-change entries spilled from [Harness (agent)](../../concepts/harnes
 ## Archived from current page on 2026-09-09 (2)
 
 - [2026-07-08] Gemini API managed agents add hosted harness primitives: MCP support, background execution, custom function calling, credential refresh, and stateful agent interactions.
+
+## Archived from current page on 2026-10-19
+
+- [2026-07-14] Added the Lilian Weng 2023-vs-2026 essay contrast and Anthropic's "grown, not designed" framing, from AI Engineer World's Fair 2026 coverage.

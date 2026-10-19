@@ -16,6 +16,7 @@ AINews (Latent Space) full coverage of the Fable 5 / Mythos 5 release. Primary s
 - [Claude Fable 5](../../history/models/claude-fable-5.md) — benchmark record, pricing, usage posture
 - [State of Models](../../state-of/models.md) — entry update
 - [Agents' Last Exam](../../benchmarks/agents-last-exam.md) — benchmark page created
+- [AI labor-market effects](../../trends/ai-labor-market-effects.md) — ALE as a labor-market-aligned counterpoint
 
 ## Key claims extracted
 - Fable 5 and Mythos 5 share the same underlying model; Fable has added safeguards

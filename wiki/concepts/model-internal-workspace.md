@@ -23,6 +23,10 @@ A model internal workspace is a privileged internal representation that appears 
 - This should not be read as proof of model consciousness. The safer interpretation is mechanistic: a possible internal workspace that helps explain and audit behavior.
 - The strongest current source is newsletter synthesis of Anthropic's research and reactions; the primary paper/page should be fetched before adding deeper technical claims.
 
+## Related
+
+- [Mechanistic interpretability](mechanistic-interpretability.md) — the broader field of reading model internals, including the superposition debate
+
 ## Sources
 
 - [Anthropic J-space / global workspace research](../sources/newsletters/anthropic-jspace-global-workspace-2026-07.md)

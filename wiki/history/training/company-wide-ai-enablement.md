@@ -9,3 +9,7 @@ Older recent-change entries spilled from [Company-wide AI enablement](../../trai
 ## Archived from current page on 2026-09-08
 
 - [2026-06-05] Enterprise spend controls: Uber $1,500/mo cap; GitHub Copilot token billing shock ($39 -> $3,000+); Cloudflare AI Gateway budget enforcement; Satya Nadella: consumption pricing is the new model
+
+## Archived from current page on 2026-10-19
+
+- [2026-06-24] Token tightening adds allocation-style AI governance: budgets, routing, and higher-cost access tied to visible ROI.

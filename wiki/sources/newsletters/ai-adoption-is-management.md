@@ -15,6 +15,7 @@ This source summary groups a small cluster of adoption-oriented signals. The com
 
 - [Company-wide AI enablement](../../training/company-wide-ai-enablement.md) — adds the management-not-procurement framing
 - [Agents reshape organizations (leverage moves from individual to org)](../../trends/agents-reshape-organizations.md) — adds a softer organizational signal around "everyone gets an agent" and a16z's adoption counter-signal
+- [AI labor-market effects](../../trends/ai-labor-market-effects.md) — a16z enterprise-adoption counter-signal (moved from Agents reshape organizations)
 
 ## Key claims extracted
 

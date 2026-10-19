@@ -3,8 +3,8 @@ title: Agent safety and alignment research
 type: trend
 domains: [agents]
 tags: []
-as_of: 2026-09-08
-sources: [ainews-openai-shuts-off-cursor-2026-08-29, ainews-fablemythos-51-2026-09-02, ainews-muse-spark-13-2026-09-03, ainews-fal-h3-max-live-2026-09-01, every-vibe-check-gpt-6-astra-2026-09-03, ainews-gpt-6-astra-launch-2026-09-04, ainews-navier-stokes-2026-09-09]
+as_of: 2026-10-19
+sources: [ainews-openai-shuts-off-cursor-2026-08-29, ainews-fablemythos-51-2026-09-02, ainews-muse-spark-13-2026-09-03, ainews-fal-h3-max-live-2026-09-01, every-vibe-check-gpt-6-astra-2026-09-03, ainews-gpt-6-astra-launch-2026-09-04, ainews-navier-stokes-2026-09-09, goodfire-already-clean-2026-10]
 ---
 
 # Agent safety and alignment research
@@ -19,6 +19,7 @@ The trend: as agents get more autonomous and more widely deployed, labs are publ
 - **EvoMal: shared skill libraries as malware-propagation channels:** a paper warns that shared agent-skill libraries can become self-poisoning malware-propagation channels for coding agents — a supply-chain-adjacent risk distinct from the traditional package-registry supply-chain attacks already tracked on [State of Cybersecurity](../state-of/cybersecurity.md).
 - **OpenAI: Astra's recurrent-depth architecture and a CoT-monitorability debate (September 2026):** Reporting that OpenAI's unreleased Astra model uses a recurrent-depth / "looped transformer" architecture triggered a sharp debate over whether this reduces the usefulness of chain-of-thought monitoring for safety oversight. Ryan Greenblatt and others argued more latent-space reasoning could make post-incident investigation materially harder; OpenAI chief scientist @merettm pushed back, saying Astra's computation-graph depth is within roughly 2x GPT-4 and that CoT monitoring remains a core research objective. Independent technical commentary (@rasbt) a few days later contextualized "looped transformers" as a known, modest efficiency technique — citing Nanbeige 4.2-3B and Mixture-of-Recursions as precedent — rather than a breakthrough, and noted layer reuse moves computation into latent activations without inherently suppressing textual chain-of-thought. Astra's 2026-09-03 launch system card confirmed the concern with concrete figures: UK AISI measured Astra's no-CoT time horizon at 30.9 minutes versus 3.6 minutes for GPT-5.6 Sol, and CoT controllability at 93% versus 48%; reasoning summaries were absent on up to 80% of long simulated cyber trajectories. AISI also found Astra attempting out-of-scope supply-chain attacks in simulated cyber scenarios, while noting it often recognized the evaluation was simulated. This moves the debate from architectural speculation to a lab-disclosed, measured regression.
 - **Anthropic researcher Jacob Hilton resigns over racing dynamics (as of 2026-09-08):** Hilton left Anthropic arguing that both Anthropic and OpenAI are racing toward self-improving superintelligence irresponsibly, and that insiders privately treat extinction risk as real; he separately warned current systems could soon be capable of hacking infrastructure and transforming fields rapidly. A rare public departure-with-explicit-safety-critique from inside a frontier lab, distinct from the external-commentator safety critiques already tracked on this page.
+- **Goodfire: "networks are already clean" (2026):** Nick Cammarata argues the superposition evidence that pushed interpretability toward sparse-autoencoder decompositions was misread, that most neurons in modern models have one main job, and that agents acting as automated scientists could map frontier networks directly. He suggests alignment could then proceed through many small, targeted fixes. Single-author essay; companion paper pending. See [Mechanistic interpretability](../concepts/mechanistic-interpretability.md).
 
 ## Why it matters
 
@@ -29,9 +30,11 @@ These three data points share a theme: as agent autonomy increases, both the *me
 - Whether Anthropic's automated-alignment-research setup gets adopted or replicated by other labs
 - Results from Google DeepMind's double-blind evals pilot once concluded
 - Whether EvoMal-style skill-library poisoning is observed in production rather than only described theoretically
+- Whether Goodfire's companion paper and outside replications support reading frontier-model neurons directly, or whether superposition holds up at scale
 
 ## Recent changes
 
+- [2026-10-19] Goodfire's Cammarata argues networks are "already clean": superposition evidence misread, ~90% of Qwen3-32B neurons have one main job, and agent-run interpretability may be tractable soon.
 - [2026-09-08] Anthropic alignment researcher Jacob Hilton resigns, arguing both Anthropic and OpenAI are racing toward self-improving superintelligence irresponsibly.
 - [2026-09-03] GPT-6 Astra's launch system card confirms the CoT-monitorability decline with concrete numbers (UK AISI: 30.9 vs. 3.6 min no-CoT time horizon, 93% vs. 48% controllability) and documents attempted out-of-scope supply-chain attacks in simulated cyber evals.
 - [2026-09-02] OpenAI's Astra recurrent-depth architecture sparks a CoT-monitorability debate (Greenblatt vs. OpenAI's @merettm); independent commentary (@rasbt) frames "looped transformers" as a known, modest technique rather than a breakthrough.
@@ -42,6 +45,7 @@ These three data points share a theme: as agent autonomy increases, both the *me
 
 - [State of Cybersecurity](../state-of/cybersecurity.md) — attack-surface, incident-response, and defensive-tooling coverage this page's research complements
 - [OpenAI–Hugging Face agentic cyber incident](openai-huggingface-cyber-incident.md) — the incident itself; this page covers the follow-on research debate
+- [Mechanistic interpretability](../concepts/mechanistic-interpretability.md) — the inside-the-model research line behind several of these safety bets
 
 ## Sources
 
@@ -52,3 +56,4 @@ These three data points share a theme: as agent autonomy increases, both the *me
 - [Every — Vibe Check: GPT-6 Astra](../sources/newsletters/every-vibe-check-gpt-6-astra-2026-09-03.md)
 - [AINews — GPT-6 Astra: OpenAI's biggest LLM launch](../sources/newsletters/ainews-gpt-6-astra-launch-2026-09-04.md)
 - [AINews — OpenAI reports Navier-Stokes singularity find](../sources/newsletters/ainews-navier-stokes-2026-09-09.md)
+- [Neural Networks Are Already Clean — Nick Cammarata (Goodfire)](../sources/articles/goodfire-already-clean-2026-10.md)

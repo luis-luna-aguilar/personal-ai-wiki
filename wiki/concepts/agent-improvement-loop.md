@@ -13,7 +13,7 @@ A workflow for improving AI agents by studying **execution traces** and feedback
 
 ## Current status (as of 2026-07-29)
 
-- LangChain frames tracing as the foundation for systematic agent improvement, not just debugging; the loop spans staging and production, with online evals, offline evals, and human review as complementary layers — see the dedicated sections below for LangChain's Better-Harness, Cursor's Bugbot, and LangSmith Engine as concrete implementations
+- LangChain frames tracing as the foundation for systematic agent improvement, not just debugging; the loop spans staging and production, with online evals, offline evals, and human review as complementary layers — see the sections below for Cursor's Bugbot and LangSmith Engine as concrete implementations, and [Automated harness optimization](automated-harness-optimization.md) for Better-Harness and Harness²
 - Autoresearch treats the agent system itself as the research subject: agents inspect traces, failures, eval results, human feedback, and cost signals to propose improvements under governance controls
 - **Cross-product example (July 2026):** Cline reported that Kimi K3 (an external open-weight model, not Cline's own) spent 17 hours recursively improving Cline's own coding-agent harness — raising Terminal-Bench performance from 77.5% to 88.8% while cutting the run's cost from $79 to $49.8 — a concrete instance of the autoresearch pattern applied by one product's agent to a different product's harness
 
@@ -41,18 +41,9 @@ The practical pattern is: use online signals to discover failure modes, then enc
 
 Human review still matters when correctness depends on domain judgment or nuance that an automated grader may miss. Reviewers can also create ground-truth outputs, calibrate evaluators, and leave comments that make failure patterns easier to cluster later.
 
-## Better-Harness: autonomous harness hill-climbing
+## Automated harness optimization
 
-LangChain's Better-Harness is a prototype that formalizes the improvement loop as:
-
-1. **Source and tag evals** — hand-curated, mined from production traces, adapted from external datasets
-2. **Split** into optimization and holdout sets per behavioral category
-3. **Baseline** — run the current harness against both sets
-4. **Optimize** — iteratively diagnose errors from traces, propose one scoped harness change at a time (prompt edits, tool descriptions, tool additions)
-5. **Validate** — check that changes pass new evals without regressing passing ones; holdout set guards against overfitting
-6. **Human review** — manual gate catches overfit instructions and token waste
-
-Tested with Claude Sonnet 4.6 and GLM-5. Results showed near-full generalization to holdout sets on tool_selection and followup_quality categories. The analogy is explicit: `harness + evals + harness engineering → better agent`, mirroring `model + training data + gradient descent → better model`.
+Loops that change the harness itself automatically (LangChain's Better-Harness hill-climbing, Google's label-free Harness², self-improving skills, self-modifying harnesses) now live on [Automated harness optimization](automated-harness-optimization.md).
 
 ## Product example: Bugbot learned rules
 
@@ -77,21 +68,6 @@ Production traces can improve an agent by changing its memory, not only its prom
 
 The risk is memory pollution. A trace-derived memory should not become durable just because it appeared in a run; it needs evidence, conflict checks, and a clear owner/scope.
 
-## Self-improving skills
-
-A variation of the improvement loop applied at the *skill/prompt* level rather than the full agent harness. The problem: skills in a Claude Code skills folder are static, but the environment around them isn't. A skill that worked last month may quietly start failing when the codebase changes, the model updates, or user request patterns shift. The failures are often invisible until someone notices degraded output.
-
-**The closed loop approach (tricalt, April 2026):** Treat skills as living components, not fixed prompt files. Diagnose which component is failing (routing? individual instructions? tool call?). Close the feedback loop by automatically scoring outputs and proposing targeted changes.
-
-**The meta-skill approach (Ole Lehmann, April 2026):** A single meta-skill that improves any other skill automatically:
-1. Run the target skill and score the output
-2. Find what's failing in the score
-3. Make one small change to the skill prompt
-4. Run it again to see if the score went up
-5. Keep the change if it improved; discard if not
-
-This mirrors the Better-Harness pattern at the prompt level. The loop is based on Karpathy's "autoresearch" method applied to prompt optimization. Can run on autopilot; the meta-skill improves the target skill without human intervention.
-
 ## Eval suite hygiene
 
 An eval suite that is not actively maintained will betray you. If you run the same 50 hand-authored test cases indefinitely, the agent optimizes for passing those exact cases and starts failing on the real failure modes that did not exist when the cases were written. The suite needs to evolve as fast as the agent and the environment do.
@@ -113,14 +89,13 @@ An eval suite that is not actively maintained will betray you. If you run the sa
 
 ## Recent changes
 
+- [2026-10-19] Split the harness-optimization sections (Better-Harness, self-improving skills) out to [Automated harness optimization](automated-harness-optimization.md), which also takes the new Harness² material.
 - [2026-07-29] Added a cross-product autoresearch example: Kimi K3 recursively improved Cline's own harness over 17 hours, Terminal-Bench 77.5%→88.8%, cost $79→$49.8
 - [2026-07-07] Added trace-to-memory feedback: offline trace analysis can write back maintained memories, but needs dedupe, scope, and conflict checks.
 - [2026-07-01] Added autoresearch as an outer-loop pattern: agents study and improve the primary agent system using traces, evals, human signals, and cost data.
 - [2026-05-15] LangSmith Engine added: actively clusters trace failures and proposes fixes/evals — observability as improvement loop, not passive logging. SmithDB: purpose-built agent-trace database, 12-15× faster, Apache DataFusion + Vortex
 - [2026-04-24] Added eval suite hygiene section: holdout sets, trace mining, periodic refresh, and retiring stale tests
-- [2026-04-22] Added self-improving skills pattern: closed feedback loop for skill drift; meta-skill 5-step prompt optimization loop
 - [2026-04-10] Added Cursor Bugbot as a production example of live feedback turning into agent rules
-- [2026-04-10] Added Better-Harness section — LangChain's autonomous harness hill-climbing system
 
 ## Related
 
@@ -128,6 +103,7 @@ An eval suite that is not actively maintained will betray you. If you run the sa
 - [Skillify — Agent Reliability Pattern](../workflows/skillify-agent-reliability.md) — complementary pattern: encodes failures as permanent skills rather than harness-level prompt changes; works at the skill/script layer instead of the orchestration layer
 - [Evals for agentic software development](../training/evals-for-agentic-software-development.md) — coding-agent eval patterns for deterministic gates, shadow mode, and trace-derived regression suites
 - [Evals for workflow and task agents](../training/evals-for-agentic-work.md) — workflow-agent eval patterns for reliability, simulation, and production-safe evaluation
+- [Automated harness optimization](automated-harness-optimization.md) — the improvement loop applied to the harness itself: Better-Harness, Harness², self-improving skills, self-modifying harnesses
 
 ## Sources
 
