@@ -5,7 +5,7 @@ sources:
   - raw/newsletters/2026-04-17-meta-pivots-from-open-weights-big-pharma-bets-on.md
   - raw/tweets/2026-05-18-shannholmberg-2055335043904492011.md
   - raw/tweets/2026-09-09-undefinedki-2095876609689498067.md
-status: pending
+status: processed
 ---
 
 # Triage: raw files that were never triaged (sweep, 2026-10-19)
@@ -14,7 +14,7 @@ status: pending
 
 ## Signals
 
-- [ ] **[coding]** Cursor's "Scaling long-running autonomous coding": the first-generation agent-swarm post
+- [x] **[coding]** Cursor's "Scaling long-running autonomous coding": the first-generation agent-swarm post
 
     **What it is:** Cursor's account of running hundreds of concurrent agents on one project for weeks, writing over a million lines of code: why self-coordination through shared files failed, how the planner/worker split emerged, and what kept long runs on track. It is the first-generation post that the later "self-driving codebases" article builds on.
 
@@ -26,7 +26,7 @@ status: pending
     **Primary URL:** https://cursor.com/blog/scaling-agents
     **Recommended:** lightweight ingest (add as a source of Long-running agent swarms, fill gaps only)
 
-- [ ] **[models]** The Batch, 17 April 2026: Meta's closed model, Big Pharma AI bets, US state AI laws, simulated human cohorts
+- [x] **[models]** The Batch, 17 April 2026: Meta's closed model, Big Pharma AI bets, US state AI laws, simulated human cohorts
 
     **What it is:** A DeepLearning.AI newsletter with four stories: Meta pivoting from open weights to a closed model (Muse Spark: text, image, and speech input up to 262K tokens, three reasoning modes, architecture undisclosed); large pharma companies committing to AI drug discovery; US states moving ahead with their own AI laws; and a method that generates 25 diverse personas per context for simulating human cohorts.
 
@@ -38,7 +38,7 @@ status: pending
     **Primary URL:** (newsletter email)
     **Recommended:** lightweight ingest, or skip as dated
 
-- [ ] **[agents]** "How to Become a Hermes Agent Operator" — Shann Holmberg
+- [x] **[agents]** "How to Become a Hermes Agent Operator" — Shann Holmberg
 
     **What it is:** A long X Article (4,610 words, May 2026) on running [Hermes Agent](../../wiki/tools/hermes-agent.md) as a one-person marketing operation on a single VPS: an "agent control room" template, specialist agents per function, cron-scheduled workflows, and growing from one agent to a team.
 
@@ -50,7 +50,7 @@ status: pending
     **Primary URL:** https://x.com/shannholmberg/status/2055335043904492011
     **Recommended:** lightweight ingest
 
-- [ ] **[training]** "How to turn AI into a whole team that runs your business" — Yarchi, sponsored by Viktor
+- [x] **[training]** "How to turn AI into a whole team that runs your business" — Yarchi, sponsored by Viktor
 
     **What it is:** An X Article (4 September 2026, marked as a paid partnership with Viktor.com) on running a small business with AI agents: split the business into lanes, write shared context once, draw an approval line for what needs a person, brief each lane (five copyable briefs), and put the lanes on a schedule. The author says the setup took an afternoon and was run against real files.
 

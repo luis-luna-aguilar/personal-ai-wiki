@@ -1,0 +1,68 @@
+---
+title: "Vibe Check: GPT-6 Sol vs. Opus 5.5"
+type: newsletter
+sender: "Every <hello@every.to>"
+received: 2026-09-22
+gmail_id: 1a0cb0997971fcbd
+---
+
+# Vibe Check: GPT-6 Sol vs. Opus 5.5
+
+**From:** Every <hello@every.to>
+**Date:** 2026-09-22
+
+Two models, one clear tradeoff.  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiVmliZSBDaGVjazogR1BULTYgU29sIHZzLiBPcHVzIDUuNSIsInBvc3RfaWQiOjQ0OTEsInBvc3RfdHlwZSI6InByb21vIiwidXJsIjoiaHR0cHM6Ly9ldmVyeS50by8iLCJwb3NpdGlvbiI6MCwidXRtX3NvdXJjZSI6ImVtYWlsIiwidXRtX21lZGl1bSI6InByb21vIiwidXRtX2NhbXBhaWduIjoiNDQ5MSIsInV0bV90ZXJtIjoidW5rbm93bl8yMDI2LTA5LTIyIiwiZXZfZW1haWxfaWQiOiJwb3N0XzQ0OTFfcHJvbW9fNDFjNDAzYWY1MzQ3IiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0OTEiLCJldl9lbWFpbF90eXBlIjoicHJvbW8iLCJldl9zZW5kX2RhdGUiOiIyMDI2LTA5LTIyIiwidXRtX2NvbnRlbnQiOiJsaW5rXzAiLCJldl9saW5rX2lkIjoicG9zdF80NDkxX3Byb21vXzQxYzQwM2FmNTM0N19saW5rXzAifQ==?ev_audience=free
+
+Vibe Check
+
+https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiVmliZSBDaGVjazogR1BULTYgU29sIHZzLiBPcHVzIDUuNSIsInBvc3RfaWQiOjQ0OTEsInBvc3RfdHlwZSI6InByb21vIiwidXJsIjoiaHR0cHM6Ly9ldmVyeS50by92aWJlLWNoZWNrIiwicG9zaXRpb24iOjEsInV0bV9zb3VyY2UiOiJlbWFpbCIsInV0bV9tZWRpdW0iOiJwcm9tbyIsInV0bV9jYW1wYWlnbiI6IjQ0OTEiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0yMiIsImV2X2VtYWlsX2lkIjoicG9zdF80NDkxX3Byb21vXzQxYzQwM2FmNTM0NyIsImV2X2F1ZGllbmNlIjoidW5rbm93biIsImV2X3Bvc3RfaWQiOiI0NDkxIiwiZXZfZW1haWxfdHlwZSI6InByb21vIiwiZXZfc2VuZF9kYXRlIjoiMjAyNi0wOS0yMiIsInV0bV9jb250ZW50IjoibGlua18xIiwiZXZfbGlua19pZCI6InBvc3RfNDQ5MV9wcm9tb180MWM0MDNhZjUzNDdfbGlua18xIn0=?ev_audience=free
+
+
+VIBE CHECK: GPT-6 SOL VS. OPUS 5.5 https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiVmliZSBDaGVjazogR1BULTYgU29sIHZzLiBPcHVzIDUuNSIsInBvc3RfaWQiOjQ0OTEsInBvc3RfdHlwZSI6InByb21vIiwidXJsIjoiaHR0cHM6Ly9ldmVyeS50by92aWJlLWNoZWNrL3ZpYmUtY2hlY2stZ3B0LTYtc29sLXZzLW9wdXMtNS01IiwicG9zaXRpb24iOjIsInV0bV9zb3VyY2UiOiJlbWFpbCIsInV0bV9tZWRpdW0iOiJwcm9tbyIsInV0bV9jYW1wYWlnbiI6IjQ0OTEiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0yMiIsImV2X2VtYWlsX2lkIjoicG9zdF80NDkxX3Byb21vXzQxYzQwM2FmNTM0NyIsImV2X2F1ZGllbmNlIjoidW5rbm93biIsImV2X3Bvc3RfaWQiOiI0NDkxIiwiZXZfZW1haWxfdHlwZSI6InByb21vIiwiZXZfc2VuZF9kYXRlIjoiMjAyNi0wOS0yMiIsInV0bV9jb250ZW50IjoibGlua18yIiwiZXZfbGlua19pZCI6InBvc3RfNDQ5MV9wcm9tb180MWM0MDNhZjUzNDdfbGlua18yIn0=?ev_audience=free
+
+
+TWO MODELS, ONE CLEAR TRADEOFF. https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiVmliZSBDaGVjazogR1BULTYgU29sIHZzLiBPcHVzIDUuNSIsInBvc3RfaWQiOjQ0OTEsInBvc3RfdHlwZSI6InByb21vIiwidXJsIjoiaHR0cHM6Ly9ldmVyeS50by92aWJlLWNoZWNrL3ZpYmUtY2hlY2stZ3B0LTYtc29sLXZzLW9wdXMtNS01IiwicG9zaXRpb24iOjMsInV0bV9zb3VyY2UiOiJlbWFpbCIsInV0bV9tZWRpdW0iOiJwcm9tbyIsInV0bV9jYW1wYWlnbiI6IjQ0OTEiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0yMiIsImV2X2VtYWlsX2lkIjoicG9zdF80NDkxX3Byb21vXzQxYzQwM2FmNTM0NyIsImV2X2F1ZGllbmNlIjoidW5rbm93biIsImV2X3Bvc3RfaWQiOiI0NDkxIiwiZXZfZW1haWxfdHlwZSI6InByb21vIiwiZXZfc2VuZF9kYXRlIjoiMjAyNi0wOS0yMiIsInV0bV9jb250ZW50IjoibGlua18zIiwiZXZfbGlua19pZCI6InBvc3RfNDQ5MV9wcm9tb180MWM0MDNhZjUzNDdfbGlua18zIn0=?ev_audience=free
+
+by Dan Shipper https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiVmliZSBDaGVjazogR1BULTYgU29sIHZzLiBPcHVzIDUuNSIsInBvc3RfaWQiOjQ0OTEsInBvc3RfdHlwZSI6InByb21vIiwidXJsIjoiaHR0cHM6Ly9ldmVyeS50by9AZGFuc2hpcHBlciIsInBvc2l0aW9uIjo0LCJ1dG1fc291cmNlIjoiZW1haWwiLCJ1dG1fbWVkaXVtIjoicHJvbW8iLCJ1dG1fY2FtcGFpZ24iOiI0NDkxIiwidXRtX3Rlcm0iOiJ1bmtub3duXzIwMjYtMDktMjIiLCJldl9lbWFpbF9pZCI6InBvc3RfNDQ5MV9wcm9tb180MWM0MDNhZjUzNDciLCJldl9hdWRpZW5jZSI6InVua25vd24iLCJldl9wb3N0X2lkIjoiNDQ5MSIsImV2X2VtYWlsX3R5cGUiOiJwcm9tbyIsImV2X3NlbmRfZGF0ZSI6IjIwMjYtMDktMjIiLCJ1dG1fY29udGVudCI6ImxpbmtfNCIsImV2X2xpbmtfaWQiOiJwb3N0XzQ0OTFfcHJvbW9fNDFjNDAzYWY1MzQ3X2xpbmtfNCJ9?ev_audience=free
+
+Midjourney/Every illustration.
+
+This is a free preview of a subscribers-only post.
+
+Was this newsletter forwarded to you? Sign up https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiVmliZSBDaGVjazogR1BULTYgU29sIHZzLiBPcHVzIDUuNSIsInBvc3RfaWQiOjQ0OTEsInBvc3RfdHlwZSI6InByb21vIiwidXJsIjoiaHR0cHM6Ly9ldmVyeS50by9hY2NvdW50IiwicG9zaXRpb24iOjUsInV0bV9zb3VyY2UiOiJlbWFpbCIsInV0bV9tZWRpdW0iOiJwcm9tbyIsInV0bV9jYW1wYWlnbiI6IjQ0OTEiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0yMiIsImV2X2VtYWlsX2lkIjoicG9zdF80NDkxX3Byb21vXzQxYzQwM2FmNTM0NyIsImV2X2F1ZGllbmNlIjoidW5rbm93biIsImV2X3Bvc3RfaWQiOiI0NDkxIiwiZXZfZW1haWxfdHlwZSI6InByb21vIiwiZXZfc2VuZF9kYXRlIjoiMjAyNi0wOS0yMiIsInV0bV9jb250ZW50IjoibGlua181IiwiZXZfbGlua19pZCI6InBvc3RfNDQ5MV9wcm9tb180MWM0MDNhZjUzNDdfbGlua181In0=?ev_audience=free to get it in your inbox.
+
+
+
+----------------------------------------
+
+
+
+Two big models dropped today: OpenAI’s GPT-6 Sol and Anthropic’s Claude Opus 5.5 https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiVmliZSBDaGVjazogR1BULTYgU29sIHZzLiBPcHVzIDUuNSIsInBvc3RfaWQiOjQ0OTEsInBvc3RfdHlwZSI6InByb21vIiwidXJsIjoiaHR0cHM6Ly9ldmVyeS50by92aWJlLWNoZWNrL3ZpYmUtY2hlY2stb3B1cy01LTUtaXMtcHVsbGluZy1vdXItY29kZXgtY29udmVydHMtYmFjay10by1jbGF1ZGUiLCJwb3NpdGlvbiI6NiwidXRtX3NvdXJjZSI6ImVtYWlsIiwidXRtX21lZGl1bSI6InByb21vIiwidXRtX2NhbXBhaWduIjoiNDQ5MSIsInV0bV90ZXJtIjoidW5rbm93bl8yMDI2LTA5LTIyIiwiZXZfZW1haWxfaWQiOiJwb3N0XzQ0OTFfcHJvbW9fNDFjNDAzYWY1MzQ3IiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0OTEiLCJldl9lbWFpbF90eXBlIjoicHJvbW8iLCJldl9zZW5kX2RhdGUiOiIyMDI2LTA5LTIyIiwidXRtX2NvbnRlbnQiOiJsaW5rXzYiLCJldl9saW5rX2lkIjoicG9zdF80NDkxX3Byb21vXzQxYzQwM2FmNTM0N19saW5rXzYifQ==?ev_audience=free.
+
+We had a separate Vibe Check prepared for Sol, but with both arriving today, you’re probably wondering: Should I use Sol 6 or Opus 5.5? So here’s a short Vibe Check to help you answer exactly that question, based on our experience and evals testing both models extensively on the work we do every day.
+
+https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiVmliZSBDaGVjazogR1BULTYgU29sIHZzLiBPcHVzIDUuNSIsInBvc3RfaWQiOjQ0OTEsInBvc3RfdHlwZSI6InByb21vIiwidXJsIjoiaHR0cHM6Ly9ldmVyeS50by9wcm9kdWN0cz91dG1fY3RhX3NvdXJjZT1lbWFpbF9wb3N0X3BheXdhbGxcdTAwMjZwbGFjZW1lbnQ9cGF5d2FsbF9oZWFkZXIiLCJwb3NpdGlvbiI6NywidXRtX3NvdXJjZSI6ImVtYWlsIiwidXRtX21lZGl1bSI6InByb21vIiwidXRtX2NhbXBhaWduIjoiNDQ5MSIsInV0bV90ZXJtIjoidW5rbm93bl8yMDI2LTA5LTIyIiwiZXZfZW1haWxfaWQiOiJwb3N0XzQ0OTFfcHJvbW9fNDFjNDAzYWY1MzQ3IiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0OTEiLCJldl9lbWFpbF90eXBlIjoicHJvbW8iLCJldl9zZW5kX2RhdGUiOiIyMDI2LTA5LTIyIiwidXRtX2NvbnRlbnQiOiJsaW5rXzciLCJldl9saW5rX2lkIjoicG9zdF80NDkxX3Byb21vXzQxYzQwM2FmNTM0N19saW5rXzcifQ==?ev_audience=free
+Start free trial https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiVmliZSBDaGVjazogR1BULTYgU29sIHZzLiBPcHVzIDUuNSIsInBvc3RfaWQiOjQ0OTEsInBvc3RfdHlwZSI6InByb21vIiwidXJsIjoiaHR0cHM6Ly9ldmVyeS50by9zdWJzY3JpYmU_aGFzaD0lcmVjaXBpZW50Lmhhc2glXHUwMDI2cHVibGljYXRpb249dmliZS1jaGVja1x1MDAyNnV0bV9jdGFfc291cmNlPWVtYWlsX3Bvc3RfcGF5d2FsbCIsInBvc2l0aW9uIjo4LCJ1dG1fc291cmNlIjoiZW1haWwiLCJ1dG1fbWVkaXVtIjoicHJvbW8iLCJ1dG1fY2FtcGFpZ24iOiI0NDkxIiwidXRtX3Rlcm0iOiJ1bmtub3duXzIwMjYtMDktMjIiLCJldl9lbWFpbF9pZCI6InBvc3RfNDQ5MV9wcm9tb180MWM0MDNhZjUzNDciLCJldl9hdWRpZW5jZSI6InVua25vd24iLCJldl9wb3N0X2lkIjoiNDQ5MSIsImV2X2VtYWlsX3R5cGUiOiJwcm9tbyIsImV2X3NlbmRfZGF0ZSI6IjIwMjYtMDktMjIiLCJ1dG1fY29udGVudCI6ImxpbmtfOCIsImV2X2xpbmtfaWQiOiJwb3N0XzQ0OTFfcHJvbW9fNDFjNDAzYWY1MzQ3X2xpbmtfOCJ9?ev_audience=free
+
+
+
+WHAT IS INCLUDED IN A SUBSCRIPTION?
+
+Daily insights from AI pioneers + early access to powerful AI tools
+
+https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiVmliZSBDaGVjazogR1BULTYgU29sIHZzLiBPcHVzIDUuNSIsInBvc3RfaWQiOjQ0OTEsInBvc3RfdHlwZSI6InByb21vIiwidXJsIjoiaHR0cHM6Ly9ldmVyeS50by9wcm9kdWN0cz91dG1fY3RhX3NvdXJjZT1lbWFpbF9wb3N0X3BheXdhbGxcdTAwMjZwbGFjZW1lbnQ9cGF5d2FsbF9naWYiLCJwb3NpdGlvbiI6OSwidXRtX3NvdXJjZSI6ImVtYWlsIiwidXRtX21lZGl1bSI6InByb21vIiwidXRtX2NhbXBhaWduIjoiNDQ5MSIsInV0bV90ZXJtIjoidW5rbm93bl8yMDI2LTA5LTIyIiwiZXZfZW1haWxfaWQiOiJwb3N0XzQ0OTFfcHJvbW9fNDFjNDAzYWY1MzQ3IiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0OTEiLCJldl9lbWFpbF90eXBlIjoicHJvbW8iLCJldl9zZW5kX2RhdGUiOiIyMDI2LTA5LTIyIiwidXRtX2NvbnRlbnQiOiJsaW5rXzkiLCJldl9saW5rX2lkIjoicG9zdF80NDkxX3Byb21vXzQxYzQwM2FmNTM0N19saW5rXzkifQ==?ev_audience=free
+Front-row access to the future of AI
+In-depth reviews of new models on release day
+Playbooks and guides for putting AI to work
+Prompts and use cases for builders
+
+Bundle of AI software
+Sparkle: Organize your Mac with AI
+Cora: The most human way to do email
+Spiral: Repurpose your content endlessly
+Monologue: Effortless voice dictation for your Mac
+
+You received this email because you signed up for emails from Every https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiVmliZSBDaGVjazogR1BULTYgU29sIHZzLiBPcHVzIDUuNSIsInBvc3RfaWQiOjQ0OTEsInBvc3RfdHlwZSI6InByb21vIiwidXJsIjoiaHR0cHM6Ly9ldmVyeS50byIsInBvc2l0aW9uIjoxMCwidXRtX3NvdXJjZSI6ImVtYWlsIiwidXRtX21lZGl1bSI6InByb21vIiwidXRtX2NhbXBhaWduIjoiNDQ5MSIsInV0bV90ZXJtIjoidW5rbm93bl8yMDI2LTA5LTIyIiwiZXZfZW1haWxfaWQiOiJwb3N0XzQ0OTFfcHJvbW9fNDFjNDAzYWY1MzQ3IiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0OTEiLCJldl9lbWFpbF90eXBlIjoicHJvbW8iLCJldl9zZW5kX2RhdGUiOiIyMDI2LTA5LTIyIiwidXRtX2NvbnRlbnQiOiJsaW5rXzEwIiwiZXZfbGlua19pZCI6InBvc3RfNDQ5MV9wcm9tb180MWM0MDNhZjUzNDdfbGlua18xMCJ9?ev_audience=free. Need help? Visit our help center https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiVmliZSBDaGVjazogR1BULTYgU29sIHZzLiBPcHVzIDUuNSIsInBvc3RfaWQiOjQ0OTEsInBvc3RfdHlwZSI6InByb21vIiwidXJsIjoiaHR0cHM6Ly9oZWxwLmV2ZXJ5LnRvIiwicG9zaXRpb24iOjExLCJ1dG1fc291cmNlIjoiZW1haWwiLCJ1dG1fbWVkaXVtIjoicHJvbW8iLCJ1dG1fY2FtcGFpZ24iOiI0NDkxIiwidXRtX3Rlcm0iOiJ1bmtub3duXzIwMjYtMDktMjIiLCJldl9lbWFpbF9pZCI6InBvc3RfNDQ5MV9wcm9tb180MWM0MDNhZjUzNDciLCJldl9hdWRpZW5jZSI6InVua25vd24iLCJldl9wb3N0X2lkIjoiNDQ5MSIsImV2X2VtYWlsX3R5cGUiOiJwcm9tbyIsImV2X3NlbmRfZGF0ZSI6IjIwMjYtMDktMjIiLCJ1dG1fY29udGVudCI6ImxpbmtfMTEiLCJldl9saW5rX2lkIjoicG9zdF80NDkxX3Byb21vXzQxYzQwM2FmNTM0N19saW5rXzExIn0=?ev_audience=free. No longer interested in receiving emails from us? Click here to unsubscribe https://every.to/unsubscribe?post=vibe-check-gpt-6-sol-vs-opus-5-5&hash=136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e.
+
+221 Canal St 5th floor, New York, NY 10013
