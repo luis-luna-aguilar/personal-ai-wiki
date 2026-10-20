@@ -14,11 +14,11 @@ Muse Spark is a new multimodal model from Meta's Superintelligence Labs effort. 
 
 ## Current status (as of 2026-09-08)
 
-- Meta positions Muse Spark as part of its push toward "personal superintelligence"
-- The captured source says Muse Spark's capabilities scale along three axes: pretraining, reinforcement learning, and test-time reasoning
-- Meta says the rebuilt pretraining stack improved architecture, optimization, and data curation over the prior nine months
-- Vendor claim: Muse Spark can reach prior Llama 4 Maverick-level capability with over an order of magnitude less training compute
-- The source describes Muse Spark as acquiring multimodal understanding, reasoning, and coding ability during pretraining
+- **Muse Spark 1.3 (2026-09-03) is the current version:** Meta's strongest Spark model for agentic and coding work; #3 in the world on the Artificial Analysis Intelligence Index, with benchmark parity with GPT-5.6 Sol and Claude Opus 5 (not Fable) on several evals
+- Powers [Meta Muse](../tools/meta-muse.md), Meta's consumer personal-agent product launched 2026-09-08
+- Sold through the metered Meta Model API since Muse Spark 1.1 (2026-07-09, $1.25 / $4.25 per 1M input/output tokens at that release); 1.3 discounts pricing by more than 90% for users who opt into training on their data
+- Open weights promised "coming soon" since 1.2 but not shipped as of 1.3; the smaller open-weight sibling [Muse Glimmer](muse-glimmer.md) shipped 2026-08-11
+- Original framing (April 2026): part of Meta's "personal superintelligence" push, with capability scaling across pretraining, RL, and test-time reasoning, and a vendor claim of Llama 4 Maverick-level capability at over an order of magnitude less training compute
 
 ## Why it matters
 
@@ -27,7 +27,7 @@ The strongest signal in this source is not a benchmark table. It is Meta claimin
 ## Weaknesses / caveats
 
 - The captured source is brief and mostly about scaling philosophy, not full product documentation
-- No public pricing, API details, weights, model sizes, or broader benchmark sweep are captured here
+- The April introduction post gave no pricing, API details, weights, or model sizes; pricing and API access arrived with 1.1, but weights and an official parameter count are still unconfirmed (the trillion-parameter estimate for 1.3 is community speculation)
 - The efficiency claim is Meta-reported and presented relative to its prior model
 
 ## Muse Image / Muse Video (as of 2026-07-08)

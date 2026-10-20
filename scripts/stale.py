@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Report wiki pages whose `as_of` date has exceeded the staleness threshold.
 
+Informational only: pages go stale when no new source arrives, which is
+normal. Query answers already carry the confidence caveat. The only failure is
+a page missing `as_of`, since confidence cannot be computed for it.
+
 Thresholds per page type live in config.yml under `stale_thresholds_days`.
 Include/exclude paths live in config.yml under `stale`.
 
@@ -103,7 +107,7 @@ def main() -> int:
     print()
 
     if stale_rows:
-        print("STALE (age > 2x threshold — verify before trusting)")
+        print("OLDER THAN 2x THRESHOLD (info: queries will report low confidence)")
         for r in stale_rows:
             print(
                 f"  {r['path']:<55} "
@@ -113,7 +117,7 @@ def main() -> int:
         print()
 
     if aging_rows:
-        print("AGING (age > threshold — may be outdated)")
+        print("OLDER THAN THRESHOLD (info: queries will report medium confidence)")
         for r in aging_rows:
             print(
                 f"  {r['path']:<55} "
@@ -131,7 +135,8 @@ def main() -> int:
     if not stale_rows and not aging_rows and not missing_rows:
         print("All scanned pages are fresh.")
 
-    return 0 if not stale_rows else 1
+    # Age alone is not a defect; only a missing as_of fails the lint.
+    return 1 if missing_rows else 0
 
 
 if __name__ == "__main__":

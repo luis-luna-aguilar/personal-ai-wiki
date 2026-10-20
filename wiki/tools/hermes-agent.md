@@ -16,7 +16,7 @@ NousResearch's open-source autonomous agent framework. Reached 100K+ GitHub star
 
 ## Current status (as of 2026-09-01)
 
-- v0.10.0 baseline: 118 bundled skills, multi-layer memory, six messaging integrations (Telegram, Discord, Slack, WhatsApp, Signal, CLI)
+- **v0.21.0 (2026-09-01) is the latest release noted:** Bots Mode, agent-to-agent communication, persistent multi-gateway connections, subagent steering, and roughly 50% lower default context usage (see section below); builds on the v0.10.0 baseline of 118 bundled skills, multi-layer memory, and six messaging integrations (Telegram, Discord, Slack, WhatsApp, Signal, CLI)
 - 100K+ GitHub stars; Hermes Workspace V2, Browser Use integrations, Scarf macOS GUI
 - **Brain + muscle architecture:** Hermes separates reasoning ("brain") from execution ("muscle") into two distinct AI layers — the brain plans and delegates; the muscle executes actions — rather than a single monolithic agent loop
 - **Kanban supervision dashboard:** a visual project-management view showing active tasks, in-progress work, and completed items; designed for running multiple long-horizon workflows simultaneously

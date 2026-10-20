@@ -16,7 +16,7 @@ Microsoft's first frontier-class reasoning model, launched at Build 2026. The he
 
 - **Architecture:** 35B active / 1T total MoE (Mixture of Experts); 256K context window
 - **Pretraining:** 30T tokens; 8,192 NVIDIA GB200 GPUs; no synthetic data, no distillation from other models
-- **Technical transparency:** 109-page technical report
+- **Availability:** generally available in Azure AI Foundry since 2026-08-13 (launched at Build on 2026-06-03), with Microsoft asking for feedback on tool-use behavior; 109-page technical report
 - **Benchmarks:** 97% AIME 2025; 53% SWE-Bench Pro; blind human preference over Claude Sonnet 4.6 in side-by-side eval
 - **Frontier Tuning:** RL environments for workflow-specific fine-tuning; internal Excel-tuned model reportedly reaches GPT-5.4-level at 10x efficiency
 - **MAIA 200 silicon:** companion inference chip with 30% better performance/dollar vs NVIDIA GB200

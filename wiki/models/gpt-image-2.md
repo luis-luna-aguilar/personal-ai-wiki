@@ -14,12 +14,11 @@ OpenAI's image generation model, launched April 22, 2026 as "ChatGPT Images 2.0.
 
 ## Current status (as of 2026-09-08)
 
-- #1 Elo in all image arena categories: 1512 text-to-image, 1513 single-image edit, 1464 multi-image edit
-- +242 Elo gap over next competitor on text-to-image — displaces Gemini's Nano Banana 2 (Imagen)
+- **GPT-Image-2.5 (2026-09-08) is the latest release:** up to 50% lower latency than Images 2.0, better realism, more consistent multi-edit results, comment-based localized changes, transparent backgrounds, and a new Sketch tool for guided generation. Two API variants: Flare (speed/quality) and Sunburst (higher-precision detail). Arena results claim #1/#2 across text-to-image, image-edit, and multi-image-edit, with the largest gains in multi-image editing. Same-day integrations on fal, Higgsfield, Manus, and Hermes Agent.
+- At its April launch, GPT-Image-2 took #1 Elo in all image arena categories (1512 text-to-image, 1513 single-image edit, 1464 multi-image edit), with a +242 Elo gap on text-to-image that displaced Gemini's Nano Banana 2 (Imagen)
 - Capabilities: "thinking" mode (self-checks, generates multiple candidates before returning), web search integration for context, text rendering, multi-aspect-ratio layout, image editing, multilingual
-- Day-0 ecosystem integrations: Figma, Canva, Hermes Agent, fal
+- Day-0 ecosystem integrations at launch: Figma, Canva, Hermes Agent, fal
 - API access: `gpt-image-2` in the Images API; also surfaced inside Codex agent sessions
-- **GPT-Image-2.5 (2026-09-08):** up to 50% lower latency than Images 2.0, better realism, more consistent multi-edit results, comment-based localized changes, transparent backgrounds, and a new Sketch tool for guided generation. Two API variants: Flare (speed/quality) and Sunburst (higher-precision detail). Arena results claim #1/#2 across text-to-image, image-edit, and multi-image-edit, with the largest gains in multi-image editing. Same-day integrations on fal, Higgsfield, Manus, and Hermes Agent.
 
 ## Image as a coding-spec bridge
 

@@ -48,7 +48,7 @@ Terminal-Bench Science (TB-Science) extends the Terminal-Bench franchise from so
 ## Caveats
 
 - The benchmark is relatively new and has a small task set (89 tasks); statistical noise may affect individual model comparisons
-- Specific scores are from a research synthesis report (April 2026); verify against the Terminal-Bench site or paper
+- Leaderboard scores are vendor-reported via the linked model/tool pages, not independently run; verify against the Terminal-Bench site or paper
 - Container environments may differ from real production environments in ways that affect generalization
 
 ## Open questions

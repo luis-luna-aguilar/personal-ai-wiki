@@ -1,6 +1,7 @@
 ---
 title: Peekaboo GitHub repo
 type: source
+source_file: raw/repos/openclaw-peekaboo.md
 source_type: repo
 url: https://github.com/openclaw/Peekaboo
 published: 2026-05-11
@@ -9,6 +10,8 @@ domains: [computer-use, agents]
 ---
 
 # Peekaboo GitHub repo
+
+*Raw snapshot `raw/repos/openclaw-peekaboo.md` was fetched on 2026-10-19, after this summary was written. The live page may have changed since the summary.*
 
 Peekaboo is an open-source macOS CLI and optional MCP server for agent computer use. The repo describes high-fidelity screen capture, AI analysis, and GUI automation, with v3 adding native agent flows and multi-screen automation across CLI and MCP.
 

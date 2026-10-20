@@ -15,7 +15,7 @@ Scripts in `scripts/` cover mechanical hygiene. They are cheap — run them when
 | `tag_compliance.py` | Report tags/domains/subcategories not in `_schema/` | "check tag compliance" |
 | `page_length.py` | Report pages over their type's body-word ceiling (warning within 110%, "split required" above 150%), flat `##` sections with no `###` subheads, month-named "accretion" headings, and over-long state-of leader bullets (thresholds in `config.yml → page_length`) | "check page length", "split candidates" |
 | `raw_orphans.py` | Report raw files that no triage, proposal, or source page accounts for (duplicates listed separately) | "check raw orphans", "untriaged sources" |
-| `lint_all.py` | Chain stale, orphans, link_check, tag_compliance, page_length, and raw_orphans | "run lint", "lint the wiki" |
+| `lint_all.py` | Chain orphans, link_check, tag_compliance, page_length, and raw_orphans | "run lint", "lint the wiki" |
 | `index_check.py` | Report pages on disk not in `wiki/index.md`, and index entries with no matching file | "check index", "index check" |
 | `source_orphans.py` | Report source files not referenced by any wiki page frontmatter, and broken source refs | "check source orphans", "source orphans" |
 | `recent_changes_cap.py` | Report pages whose `## Recent changes` section exceeds the cap in `config.yml → history.recent_changes_cap` (currently 10); shows which entries need to be spilled | "check cap", "recent changes cap" |

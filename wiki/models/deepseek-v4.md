@@ -14,12 +14,12 @@ DeepSeek's April 2026 open-weight release for long-context agent workloads. The 
 
 ## Current status (as of 2026-08-22)
 
-- Released as **V4 Pro** (1.6T total / 49B active) and **V4 Flash** (284B total / 13B active), with base and instruct variants, 1M-token context, and MIT licensing
-- V4 Pro is now positioned near the top of open weights, but still below GPT-5.x / Claude Opus 4.7 / Gemini 3.1 Pro in aggregate closed-frontier comparisons
-- Independent benchmark synthesis in AINews places V4 Pro as a leading open model for agentic real-world work, while also noting very high token usage in some evaluations
-- First-party API pricing reported in the AINews issue: V4 Pro at `$1.74 / $3.48` per 1M input/output tokens, V4 Flash at `$0.14 / $0.28`
+- Two tiers, both 1M-token context and MIT-licensed: **V4 Pro** (1.6T total / 49B active) and **V4 Flash** (284B total / 13B active)
+- **V4 Pro reached general availability on 2026-08-13** after the April preview, with a reported 15.8% Terminal-Bench gain over the preview; reception was mixed, solid but not clearly ahead of Kimi/Flash on all tasks
+- **V4 Flash's current builds:** the post-training-only 0731 update (Terminal-Bench 82.7, AA Intelligence Index 50, one point behind GPT-5.6 Luna; open weights with day-0 vLLM) and the API-only V4-Flash-Vision-Exp (2026-08-22), which adds text+image input and reports 83.9 Terminal-Bench 2.1; Vision-Exp weights not yet found on Hugging Face
+- **Pricing:** V4 Pro $0.435 / $0.87 per 1M input/output tokens (the 75% discount made permanent in May, confirmed at GA; Cline puts it ~57x cheaper than Claude Fable 5), replacing the launch price of $1.74 / $3.48; V4 Flash $0.14 / $0.28. **Caveat:** DeepSeek's own pricing page, as fetched 2026-08-25, shows a peak/off-peak, cache-hit/cache-miss structure whose figures do not match these numbers; current pricing needs its own dated ingest
+- Still behind the strongest closed frontier systems overall, and very high token usage in some evaluations means cheap per-token pricing does not guarantee cheap tasks
 - Huawei Ascend compatibility and rapid vLLM / third-party support make the release part of a broader inference-substrate story, not just a checkpoint drop
-- **Permanent price cut (as of 2026-05-23):** DeepSeek made its previously-temporary 75% V4-Pro discount permanent (via AINews). Artificial Analysis (via AINews) quantifies first-party pricing at $0.435/M input, $0.87/M output, $0.0036/M cached input — a blended ~$0.18/M — and estimates running AA's Intelligence Index on V4-Pro costs ~3x less than Gemini 3.1 Pro Preview, ~12x less than GPT-5.5, and ~19x less than Claude Opus 4.7. **Caveat:** DeepSeek's own pricing page (`api-docs.deepseek.com/quick_start/pricing`), as fetched 2026-08-25, lists `deepseek-v4-pro` with a peak/off-peak, cache-hit/cache-miss structure whose figures no longer match the May numbers — treat the figures above as a May 2026 snapshot, not current pricing; current pricing needs its own dated ingest.
 
 ## V4-Flash 0731 update (as of 2026-07-31)
 

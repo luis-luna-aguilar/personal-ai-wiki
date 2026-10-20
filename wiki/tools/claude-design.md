@@ -16,11 +16,10 @@ Anthropic Labs' collaborative visual design and prototyping tool. Powered by Cla
 
 - Research preview launched 2026-04-22 via Anthropic Labs; rolling out gradually to Pro, Max, Team, and Enterprise subscribers
 - Powered by Claude Opus 4.7 (Anthropic's most capable vision model)
-- Brand onboarding: Claude reads your codebase and design files to build a team design system automatically; projects use your colors, typography, and components by default
-- Import from: text prompt, images, DOCX/PPTX/XLSX, codebase, or web capture tool (scrapes your live site)
+- Brand onboarding: Claude reads your codebase and design files to build a team design system automatically; projects use your colors, typography, and components by default. Import from text prompt, images, DOCX/PPTX/XLSX, codebase, or web capture tool (scrapes your live site)
 - Refinement via inline comments on specific elements, direct text edits, and adjustment knobs (spacing, color, layout live)
-- Org-scoped sharing: private, view-link, or collaborative edit with group conversation + Claude
-- Export: PPTX and Canva
+- Org-scoped sharing (private, view-link, or collaborative edit with group conversation + Claude); export to PPTX and Canva
+- Syncs with Claude Code in both directions through `/design-sync` (2026-07-08): design systems can be pulled into a repo for implementation work, and built work can be pushed back into the Claude Design canvas
 
 ## Use cases
 
@@ -51,10 +50,6 @@ Anthropic added Claude connectors for professional creative production tools —
 - **Resolume** (VJ/AV performance)
 
 This extends Claude beyond artifact generation into direct integration with creative-production software workflows.
-
-## Current status (as of 2026-07-08)
-
-- Claude Design now syncs with Claude Code in both directions through `/design-sync`: design systems can be pulled into a repo for implementation work, and built work can be pushed back into the Claude Design canvas.
 
 ## Recent changes
 

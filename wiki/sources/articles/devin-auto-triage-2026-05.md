@@ -1,6 +1,7 @@
 ---
 title: Devin Auto-Triage launch
 type: source
+source_file: raw/tweets/2026-10-19-cognition-2056396941181727210.md
 source_type: article
 url: https://x.com/cognition/status/2056396941181727210
 published: 2026-05-19
@@ -9,6 +10,8 @@ domains: [agents, coding]
 ---
 
 # Devin Auto-Triage launch
+
+*Raw snapshot `raw/tweets/2026-10-19-cognition-2056396941181727210.md` was fetched on 2026-10-19, after this summary was written. The live page may have changed since the summary.*
 
 Cognition launched Auto-Triage, a persistent Devin agent that operates in Slack as an always-on first responder for bugs, alerts, and incidents. A manager Devin filters noise; focused sub-sessions find root causes, post diagnoses, and tag code owners. Shared long-term memory deduplicates repeat reports. Early adopter Modal called it more useful than typical homegrown triage automations.
 

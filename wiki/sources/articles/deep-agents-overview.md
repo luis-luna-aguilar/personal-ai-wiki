@@ -1,6 +1,7 @@
 ---
 title: Deep Agents overview
 type: source
+source_file: raw/articles/2026-10-19-docslangchaincom-oss-python-deepagents-overview.md
 source_type: article
 url: https://docs.langchain.com/oss/python/deepagents/overview
 ingested: 2026-04-23
@@ -8,6 +9,8 @@ domains: [agents]
 ---
 
 # Deep Agents overview
+
+*Raw snapshot `raw/articles/2026-10-19-docslangchaincom-oss-python-deepagents-overview.md` was fetched on 2026-10-19, after this summary was written. The live page may have changed since the summary.*
 
 LangChain's overview page for Deep Agents. The key framing is that Deep Agents is explicitly an agent harness: a tool-calling loop with planning, filesystem context management, subagents, permissions, memory, and skills packaged into one reusable layer.
 

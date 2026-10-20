@@ -1,6 +1,7 @@
 ---
 title: Claude Code Agent View docs
 type: source
+source_file: raw/articles/2026-10-19-codeclaudecom-docs-en-agent-view.md
 source_type: article
 url: https://code.claude.com/docs/en/agent-view
 published: 2026-05-13
@@ -9,6 +10,8 @@ domains: [coding, agents]
 ---
 
 # Claude Code Agent View docs
+
+*Raw snapshot `raw/articles/2026-10-19-codeclaudecom-docs-en-agent-view.md` was fetched on 2026-10-19, after this summary was written. The live page may have changed since the summary.*
 
 Claude Code's official docs describe Agent View as a terminal screen for dispatching and managing many background Claude Code sessions. It opens with `claude agents`, groups sessions by state, lets users peek and reply without opening the full transcript, and supports attaching to a session when full interaction is needed.
 

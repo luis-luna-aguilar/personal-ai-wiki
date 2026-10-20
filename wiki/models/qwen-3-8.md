@@ -16,7 +16,7 @@ Alibaba's flagship after Qwen 3.7. Entered live preview 2026-07-20, shipped as a
 
 - Qwen3.8-Max: 2.4T total parameters, ~95B active per token (third-party estimate, ~4% activation ratio); 1M context; API priced at $2/M input, $6/M output, $0.25/M cached tokens
 - Open weights shipped 2026-08-13 for Qwen3.8-Max (text-only initial drop, no vision); day-0 vLLM support plus vendor-specific 4-bit checkpoints for NVIDIA B300 and AMD MI355X; Together AI and Baseten also announced immediate support
-- Frontend Code Arena: #4 overall at 1,668 Elo, behind only Claude Opus 5 (1,705) and Kimi K3 (1,676)
+- Arena: the refreshed **Qwen3.8-Max-0902** build (2026-09-01, same 2.4T / 1M-context / $2-$6 spec) debuted #1 on Code Arena: WebDev at 1,691 Elo, ahead of Claude Opus 5 Max and Kimi K3 Max; the original August launch placed #4 on Frontend Code Arena at 1,668 Elo, behind Claude Opus 5 (1,705) and Kimi K3 (1,676)
 - Vals AI Index: 66.1, matching Claude Opus 4.7 at roughly 2.3x lower cost per test; SWE-bench 87.3% (ahead of GPT-5.5 and GLM-5.2, behind Claude Opus 4.8's 89.2%); Terminal-Bench 2.1 at 67.4, up from 57.5 for Qwen 3.7 Max about two and a half months earlier
 - Vision Arena: #2 at 1,305, 13 points behind Claude Fable 5
 - Licensing: terms reportedly restrict use or download in the US, EU, UK, and Korea — a similar complaint was raised about MiniMax H3 the same week, raising the question of how "open" a geographically-restricted release really is for Western teams

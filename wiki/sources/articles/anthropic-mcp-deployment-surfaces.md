@@ -1,6 +1,7 @@
 ---
 title: Anthropic MCP deployment surfaces
 type: source
+source_file: raw/articles/2026-10-19-supportclaudecom-en-articles-10949351-getting-started-with-l.md
 source_type: article
 url: https://support.claude.com/en/articles/10949351-getting-started-with-local-mcp-servers-on-claude-desktop
 ingested: 2026-04-23
@@ -8,6 +9,8 @@ domains: [agents]
 ---
 
 # Anthropic MCP deployment surfaces
+
+*Raw snapshot `raw/articles/2026-10-19-supportclaudecom-en-articles-10949351-getting-started-with-l.md` was fetched on 2026-10-19, after this summary was written. The live page may have changed since the summary.*
 
 Anthropic's MCP help material now clearly distinguishes local MCP in Claude Desktop from remote MCP connectors configured through the Claude account. That distinction matters because both paths use MCP, but they have different network and deployment assumptions.
 

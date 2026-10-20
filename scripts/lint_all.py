@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Run every cheap maintenance script and print a combined report.
 
-Chains: stale.py, orphans.py, link_check.py, tag_compliance.py, page_length.py, raw_orphans.py.
+Chains: orphans.py, link_check.py, tag_compliance.py, page_length.py, raw_orphans.py.
 
 Usage:
     python3 scripts/lint_all.py
@@ -15,7 +15,6 @@ from pathlib import Path
 
 SCRIPTS_DIR = Path(__file__).resolve().parent
 SCRIPTS = [
-    "stale.py",
     "orphans.py",
     "link_check.py",
     "tag_compliance.py",

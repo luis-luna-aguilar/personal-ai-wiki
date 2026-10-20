@@ -1,6 +1,7 @@
 ---
 title: OpenAI and ChatGPT MCP surfaces
 type: source
+source_file: raw/articles/2026-10-19-developersopenaicom-api-docs-guides-tools-connectors-mcp.md
 source_type: article
 url: https://developers.openai.com/api/docs/guides/tools-connectors-mcp
 ingested: 2026-04-23
@@ -8,6 +9,8 @@ domains: [agents]
 ---
 
 # OpenAI and ChatGPT MCP surfaces
+
+*Raw snapshot `raw/articles/2026-10-19-developersopenaicom-api-docs-guides-tools-connectors-mcp.md` was fetched on 2026-10-19, after this summary was written. The live page may have changed since the summary.*
 
 OpenAI's current MCP documentation emphasizes remote MCP servers and connectors, while ChatGPT's help docs describe user-built integrations as apps/connectors built with MCP. The current shape is remote-first rather than localhost-desktop-first.
 

@@ -14,7 +14,8 @@ Z.ai's August 2026 open-weight frontier model, superseding [GLM-5.2](../history/
 
 ## Current status (as of 2026-09-01)
 
-- 753B total / 40B active MoE; 1M context window; MIT license once weights land (not yet shipped at time of writing)
+- 753B total / 40B active MoE; 1M context window; launched API-only on 2026-08-20, then went open-weight (MIT) with day-0 vLLM support around 2026-08-27
+- Smaller sibling **GLM-5.3-Flash** (320B / 18B active, MIT, AA Intelligence Index 57) shipped the same week; Vals reports the GLM-5.3 family at 95.4% SWE-bench and 78.1% Vibe Code Bench (see sections below)
 - GDPval-AA v2: +246 points over GLM-5.2 (to 1770 Elo)
 - Artificial Analysis Intelligence Index: 60, tying Kimi K3
 - Reported training mechanism (via a Zhihu summary relayed through AINews, not a Z.ai primary report): SAO (single-rollout asynchronous optimization), executable sandbox training on production-like long-horizon workflows — some tasks representing several days of an experienced engineer's work — and on-policy distillation to prevent catastrophic forgetting during RL
