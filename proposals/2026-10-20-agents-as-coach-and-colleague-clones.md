@@ -19,6 +19,8 @@ An agent that can read your work history is a good coach, but a cloned colleague
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 Two Every essays from early October 2026 use agents to model human judgment. On 2 October Arielle Shipper, Every's head of operations, described how she learned to use AI by asking AI. She gave Codex Every's eight-levels-of-adoption article and asked where she stood based on their past sessions; it placed her at 5.5. She then asked it to redo finished projects at the next level, for example splitting a Stripe sales-tax analysis across an extractor, a verifier and a spreadsheet builder, and to explain those setups without jargon. A weekly Friday task now grades her against the levels, cites the sessions behind the score and proposes next week's experiments; over four months her score went from 5.5 to 7.9. Her "/self improve" skill, already in the wiki from August, now has a published prompt: diagnose the failure, describe what good looks like, propose the smallest durable instruction change, and show it before saving.
 
@@ -36,8 +38,6 @@ The wiki holds Every's eight-level ladder on the autonomy-and-governance page, t
 Shipper's article names level 5 "building workflows that make an agent's output consistent" and level 6 "an agent that works proactively in the background", while the wiki's table calls level 5 "background agent" and level 6 "goal-directed agent". The draft quotes only her numeric scores and leaves the table alone; whether the table needs checking against Every's original is an open question.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/training/agent-autonomy-and-governance.md` — self-assessment paragraph in "AI adoption and fluency levels"; adds one Recent-changes entry dated 2026-10-02 (4 → 5, no spill); append source
 

@@ -22,6 +22,8 @@ A coding agent that keeps working in the cloud after you close the laptop, and h
 
 [[#Open questions|Open questions: 2 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 
 The main source is a long Latent Space interview (29 September) with Thariq Shihipar, who teaches people how to use Claude Code at Anthropic. He says the harness is splitting into a "cloud brain" that reasons, "hands" that work in a cloud sandbox or on your computer when it is online, and artifacts (hosted pages with their own database) as the screen. **Projects** is the first step for individual users: you message one Claude, and it supervises subagents the way Claude Tag does in Slack, without Tag's admin setup. **Claude Mods** customise the harness itself. Ordinary hooks run a script when an event fires. A mod runs inside the harness, so it can see the messages and token counts, start a cheap "forked" subagent that reuses the prompt cache, change the interface, and register modes other mods use. His examples are an end-of-turn quiz, an assumption register and a model router. He also expects CLAUDE.md to fade away, because failure-mode lists are specific to one model and over-constrain the next.
@@ -43,8 +45,6 @@ The wiki's Claude Code page stops at the August auto-mode default, and its runti
 Claude Code already sits at its 1,500-word ceiling, so even this compact section takes it to about 1,690 words. A split is offered below rather than forced. Mods have no ship date in the sources, so they carry the interview date. The Codex fact is a single newsletter line. I used it only on the runtime page and left the Codex page alone. The interview's effort-level advice, its security half and its Claude Tag usage examples are not ingested here, so the Claude Tag page is left alone.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/tools/claude-code.md` — extend the Remote Control current-status bullet; insert new `## Mods, Projects, and cloud sessions` section after `## Loop taxonomy`; adds two Recent-changes entries dated 2026-09-29 and 2026-09-23 below the 2026-10-19 entry (list at cap of 10); append 3 source ids to frontmatter and 3 links to `## Sources`; `as_of` 2026-09-09 → 2026-09-29
 - [ ] **Spill** `wiki/tools/claude-code.md` → `wiki/history/tools/claude-code.md` — spills the two oldest Recent-changes entries (2026-05-28 dynamic workflows, 2026-05-19 fast mode default) under a new archive header

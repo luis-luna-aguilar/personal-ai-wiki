@@ -18,6 +18,8 @@ Open RL environments, not just open weights, are becoming the thing open labs co
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 Xiaomi, the Chinese phone maker that is not usually counted among China's leading AI labs, released the MiMo-V2.6 series around 21 September 2026: MiMo-V2.6-Pro, its most capable model, MiMo-V2.6-Flash, a cheaper balanced tier, and a Pro-UltraSpeed variant that Xiaomi says produces output up to 20 times faster at the same quality. Both models are "natively omnimodal", meaning one model takes in text, images, audio and video, and both ship with weights under the permissive MIT license. AINews' 22 September issue led with it. Artificial Analysis, the independent benchmarking firm, put Pro at the top of open-weight models on its Intelligence Index with a score of 46, at $0.435 per million input tokens and $0.87 per million output.
 
@@ -38,8 +40,6 @@ The wiki has no MiMo page. Its open-weight section lists DeepSeek V4, whose Flas
 The "top open-weights model" claim is Artificial Analysis's, but the wiki's older index numbers look like a different scale: GPT-5.6 Sol is 47 in this source and 59 on the wiki's Sol line, so MiMo's 46 and DeepSeek V4-Flash 0731's 50 should not be compared directly. The drafts state the score without crowning MiMo as the open-weight leader. Flash and UltraSpeed get only a mention, because the source gives no numbers for them.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Create** `wiki/models/mimo-v2-6.md` — new model page; index entry under Models: `- [models/mimo-v2-6](models/mimo-v2-6.md) — Xiaomi's 1T/42B-active omnimodal open-weight model (MIT); AA Intelligence Index 46 at $0.13/task; RL environments and training code open-sourced *(as_of: 2026-09-25)*`
 

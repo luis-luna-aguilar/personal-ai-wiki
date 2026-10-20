@@ -19,6 +19,8 @@ AI mathematics has moved from single headline proofs to bulk output, and checkin
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 OpenAI's post "Sharing AI progress in mathematics" (6 October 2026) is short. It says an internal frontier model produced "a broad range of new mathematical results", published in a GitHub repository with protocols for revisions and citations, with Lean formalizations (computer-checked proofs) for many of them, ten summaries of the model's reasoning, and statistics on attempted problems. It says OpenAI consulted the Institute for Advanced Study's independent advisory group on how to release them. An update dated 15 October adds $5 million to a new Simons Foundation initiative to help mathematicians examine and build on AI-produced results. The model remains unreleased.
 
@@ -35,8 +37,6 @@ The wiki's AI in mathematics page tracks single results (Erdős, Riemann bound, 
 The specific results (quasi-Riemann, n log n multiplication, the 1994 inverse problem) and the 722/372/4,000 counts come from AINews' summary of commentators and the repository. OpenAI's post doesn't list them, and the repository itself wasn't read. The page length is the other call: the addition is kept short, but the page goes from 101% to about 112% of its ceiling, so a split is offered below.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/trends/ai-in-mathematics.md` — new Claimed-results bullet, one Why-it-matters sentence, Current status heading date; adds two Recent-changes entries dated 2026-10-15 and 2026-10-06 (7 → 9, under cap); `as_of` → 2026-10-15; appends three source ids and links
 

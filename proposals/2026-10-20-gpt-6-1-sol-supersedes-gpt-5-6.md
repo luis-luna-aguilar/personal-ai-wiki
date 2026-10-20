@@ -21,6 +21,8 @@ OpenAI's mid-price tier is now the value pick at the frontier: GPT-6.1 Sol lands
 
 [[#Open questions|Open questions: 2 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 OpenAI shipped two releases a week apart. On 22 September, about an hour after Anthropic's Claude Opus 5.5, it released GPT-6 Sol ($2/$10 per million input/output tokens) and GPT-6 Luna ($0.10/$0.50). OpenAI described both as cheaper models built on GPT-6 Astra's advances, each about half the price of its GPT-5.6 predecessor, and added deeper cache discounts plus a dashboard for finding prompts that miss the cache. AINews' launch-day roundup gave Anthropic the quality headline and OpenAI the price headline. Every's weekly recap made Sol Dan Shipper's daily driver because it is fast and cheap and leads with the main idea, and kept Opus 5.5 for ambitious coding and visual work.
 
@@ -41,8 +43,6 @@ The wiki still lists GPT-5.6 Sol (dated 7 August) as OpenAI's current mid-tier m
 Folding GPT-6 Sol and Luna into the 6.1 Sol page follows how the GPT-5.6 page covered its whole family, and it avoids a GPT-6 Sol page that would go straight to history. The cost is that Luna has no page of its own. Three thin raw files from the triage are not given source pages: Every's paywalled Sol-vs-Opus preview, a Luna Code Arena note, and a second AINews issue that repeats AA's cost figures. The cost-routing page is already at 104% of its ceiling and will sit near 107% after this change.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Create** `wiki/models/gpt-6-1-sol.md` — current Sol page covering GPT-6.1 Sol, GPT-6 Luna and the GPT-6 Sol predecessor
 

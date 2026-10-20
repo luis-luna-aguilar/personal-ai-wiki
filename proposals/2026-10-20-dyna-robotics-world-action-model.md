@@ -15,6 +15,8 @@ General-purpose robots are starting to cross from pilots into repeat, multi-site
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 On 13 October 2026 Latent Space published a podcast episode, with a full transcript, in which swyx and Vibhu interview Jason Ma, co-founder and chief scientist of Dyna Robotics. The month before, Dyna had announced Dyna-2, which it calls a "world-action model": instead of only predicting the robot's next movements, it predicts future video of the scene together with the actions. Ma's argument is that a vision-language-action model (a chat-style vision model adapted to output robot commands) bakes in human choices about what matters, while predicting the raw camera future removes that bias. Dyna-2 was pre-trained on more than a million hours of mostly first-person human video, and Dyna claims scaling laws for transfer from human footage to robots across four orders of magnitude.
 
@@ -30,8 +32,6 @@ The Physical AI deployment curve page tracks robotics through Gemini Robotics 2 
 Scope is the only call. The episode is detailed enough to justify a `tools/` or `models/` page for Dyna, but the wiki tracks robotics at trend level and has no robotics model pages, so this proposal keeps Dyna as a trend bullet. The broader "world models for agents" thread (Runway, World Labs, LeWorldModel) is also not unified here.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/trends/physical-ai-deployment.md` — add Dyna status bullet, add one Recent-changes entry dated 2026-10-13 (list goes from 2 to 3, no spill), append source `latent-space-dyna-robotics-2026-10-13` to frontmatter and `## Sources`, `as_of` 2026-08-29 → 2026-10-13
     > See draft below

@@ -14,6 +14,8 @@ created: 2026-10-20
 Computer use stopped being a screenshot-and-click loop: agents now read accessibility trees and the DOM, write code that performs many actions at once, and recover from their own errors, which makes them faster than the average person on many tasks. OpenAI's computer-use lead says GPT-6.1 Sol costs about a seventh of Astra for this work, and that the most useful application is agents testing the software they just built. The proposal updates State of Computer Use, Codex and Harness vs model, and adds one source page. One scope choice to note: only the computer-use half of the episode is ingested.
 [[#Open questions|Open questions: none.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 On 2026-09-30, at OpenAI DevDay, Latent Space interviewed Ari Weinstein, the Sky co-founder who now leads computer use at OpenAI, in response to Dwarkesh Patel's claim that computer use had stalled. Weinstein says it is now "180 degrees different". A year ago, agents could start a task reliably but stalled when something went wrong. Now they debug, retry and check what is and isn't working. Agents also no longer look only at pixels. They combine screenshots, the accessibility tree (the structured description of an interface that screen readers use), the page's DOM and Playwright. In Codex they often write JavaScript that performs several actions in a single step, so they no longer have to scroll and re-screenshot over and over. App Shots, triggered by pressing Command twice, send an app's full accessibility representation into Codex or ChatGPT instead of an image.
 
@@ -31,8 +33,6 @@ The wiki's Codex leader line on the computer-use dashboard still relies on July 
 Scope: the second half of this episode (Nikunj Handa on the Decisions API, async tool calling and compaction) is left out. The source page is limited to the computer-use story, so a later proposal can create a separate page for the API half from the same newsletter. Muse for Mac computer use, also mentioned in the triage signal, belongs with the Meta Connect story and is not covered here.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/state-of/computer-use.md` — rewrite the Codex leader line; adds one Recent-changes entry dated 2026-09-30; adds source id and Sources link; `as_of` stays 2026-10-14
     > **Before:** `- [Codex](../tools/codex.md) — OpenAI; increasingly positioned as a horizontal computer-work agent for documents, spreadsheets, slides, browser flows, research, planning, inbox/CRM cleanup, meeting-note workflows, and connected workplace apps; current evidence remains newsletter synthesis *(as of 2026-07-01)*`

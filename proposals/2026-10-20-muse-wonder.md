@@ -20,6 +20,8 @@ Meta is now a frontier lab: 14 months after Meta Superintelligence Labs was foun
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 On 12 October 2026 Meta Superintelligence Labs (MSL), Meta's AI lab founded about 14 months earlier, launched Muse Wonder, its second model family after Muse Spark. It comes in two tiers. Wonder is the fast model, sold through the Meta Model API at $4 / $20 per million input/output tokens with a 1M-token context and text, image, video and audio input. Wonder Full, the maximum-reasoning tier, is only available inside Muse Code, Meta's terminal coding agent, to subscribers, with no token price. Meta pitches both for "personal and professional agentic work", with Active Memory (context across days and months), Active Focus (persisting through blockers) and finance and legal expertise. Wonder will also power Meta's Muse personal agent. Meta later said it trained Wonder on Prometheus, a gigawatt-scale cluster.
 
@@ -42,8 +44,6 @@ The wiki tracks Meta through Muse Spark 1.3, Muse Code's general release on 1 Se
 Wonder gets its own page rather than going on the Spark page, because Meta presents it as a separate, larger family next to Spark and Glimmer. Meta's own benchmark table (SWE-Marathon, Harvey LAB, MemoryBench) is kept to one labeled line.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Create** `wiki/models/muse-wonder.md` — index entry under Models: `- [models/muse-wonder](models/muse-wonder.md) — Meta's second model family (Wonder, Wonder Full); AA Intelligence Index 56 (Full), Coding Agents Index 68 in Muse Code; Full is Muse Code-only with no token price *(as_of: 2026-10-20)*`
 

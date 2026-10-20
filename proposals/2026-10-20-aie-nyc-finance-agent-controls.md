@@ -15,6 +15,8 @@ In regulated finance, safe agent autonomy comes from where controls and human ju
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 Latent Space's write-up of the finance keynotes at AI Engineer New York, published 14 October 2026, argues one thesis: safe autonomy depends on where you put controls and human judgment, not on how many restrictions you impose. Joseph Kim, who heads ChatGPT for Financial Services at OpenAI, described a "threshold of usefulness", the point where a model is capable and reliable enough to save an analyst time, and predicted that in 2027 agents will handle investment idea generation and trading. He treats traceability (checking where a number came from) as part of the product and frames when a human stays in the loop as a product-design question: what must the user still control, review or approve?
 
@@ -31,8 +33,6 @@ The governance page already has an autonomy ladder and Nadella's six external-co
 Claude for Financial Advisors is mentioned only in passing (announced "last month"), so its line is thin. The AINews issue the triage cited adds only that the keynotes happened, so it gets no source page here.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/training/agent-autonomy-and-governance.md` — new `###` subsection under `## Governance patterns`, placed before "Treat the model as an insider risk"; adds one Recent-changes entry dated 2026-10-14 (5 of 10, no spill); merge source; `as_of` 2026-10-11 → 2026-10-14.
 

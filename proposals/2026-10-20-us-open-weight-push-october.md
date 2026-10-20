@@ -22,6 +22,8 @@ US labs are finally shipping big open weights, but they still trail the Chinese 
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 AINews tracked the wave across five issues. On 6 October it covered Reflection, a US lab that had stayed in stealth for over a year, announcing Beam: a text-only mixture-of-experts model (only 23B of its 501B parameters active per token) trained from scratch in the US on 23.8T tokens, with RL on about 10,500 GB300 GPUs. Reflection claimed 80.9 on SWE-bench Verified; observers placed it around GLM-5.2 and below DeepSeek's newer Flash. Beam 1.0 shipped around 16 October under Apache 2.0 with the Mirror CLI harness it was trained in and a safety report. Artificial Analysis scored it 30, the #2 US open model, with 48.5% on AutomationBench but 3.0% on Terminal-Bench 4.0 and a 47% hallucination rate.
 
@@ -43,8 +45,6 @@ The wiki's open-weight trend stops at 1 September and Muse Spark's pages still s
 Mistral Large 4, Kolibri, Ling, Step 5 and EmbeddingGemma 2 stay as trend mentions without pages until their weights ship or they show staying power. Spark Open goes on the existing Muse Spark page, not a page of its own.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Create** `wiki/models/reflection-beam.md` — index entry under Models: `- [models/reflection-beam](models/reflection-beam.md) — Reflection's first model; 501B/23B-active text MoE trained from scratch in the US; Apache 2.0; AA Intelligence Index 30, #2 US open model *(as_of: 2026-10-17)*`
 

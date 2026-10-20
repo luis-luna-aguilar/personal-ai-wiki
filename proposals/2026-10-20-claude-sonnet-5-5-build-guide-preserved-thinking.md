@@ -22,6 +22,8 @@ Moving to Sonnet 5.5 is a code migration, not a model-ID swap, and harnesses tha
 
 [[#Open questions|Open questions: none.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 
 Anthropic released Claude Sonnet 5.5 on 28 September 2026, six days after Opus 5.5 and the day before OpenAI's DevDay. Alongside it came "Building with Claude Sonnet 5.5," a developer guide with the details the launch post leaves out. Thinking is now always on. A request that sets thinking to "disabled" fails with a 400 error, and callers who want less upfront reasoning use a new `between_tools` mode, which works only up to high effort. Forcing a specific tool also fails. Default effort is high on the API and medium in Claude Code. The minimum cacheable prompt drops to 512 tokens. Images use a high-resolution tier that costs about 2.5 times the tokens Sonnet 4.6 charged.
@@ -44,8 +46,6 @@ The Sonnet 5.5 page was written today from Anthropic's undated launch post. It h
 Moving `as_of` backwards breaks the usual rule. It is justified only because the original date was the ingest date. The page's existing cache-read entry (dated 19 October) also carries a fetch date rather than an announcement date; it is left as it is here. The Every review is a paywalled preview.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/models/claude-sonnet-5-5.md` — launch date, "Building with it" and "Preserved thinking" sections, independent evals, Every verdict; `as_of` 2026-10-20 → 2026-09-30 (fallback-date correction: newest claim from this proposal's sources; never below a later-dated claim already on the live page); sources merged. Recent changes: replaces the placeholder entry dated 2026-10-20 with a launch entry dated 2026-09-28, adds one entry dated 2026-09-29; the live 2026-10-19 entry is kept (3 entries, no spill).
     > See draft below

@@ -20,6 +20,8 @@ The agent harness is being pulled apart so it can run as server infrastructure: 
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 On 2 October 2026 AINews led with Pi, the open-source minimal coding harness (now part of the company Earendil), shipping version 1.0 and a sibling called Pi Durable. Pi 1.0 adds a "code mode" with native MCP, Jev and image-model support, deferred tool loading, prompt-cache warming for Anthropic models, and system messages that can change mid-conversation. Pi Durable is a rewrite of Pi in about 15,000 lines of TypeScript around a small task-based workflow engine. Every step is a checkpoint, so agents and subagents pick up where they stopped after a crash. Storage is pluggable (memory, SQLite, JSONL), it runs on Bun or Cloudflare Durable Objects, one harness can hold several parallel conversation branches, app state sits next to the transcript so several people or UIs can watch and steer one agent. The 6 October issue adds that control is separated from execution and that the authors skipped the Effect.ts library because it offers no durability.
 
@@ -41,8 +43,6 @@ Today Pi appears only in passing, as the base of Flue and Prime Agent and as the
 Whether Pi earns a tool page or should stay a mention; the case for one is that six pages already cite it. Mecatl gets no page, since one interview is thin. The runtime page ends near 1,250 body words, about 104% of its ceiling, inside the warning band. Pi 1.0's own release post was not fetched; its features come from AINews.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Create** `wiki/tools/pi.md` — new tool page (subcategory `agent-framework`)
     > See draft below

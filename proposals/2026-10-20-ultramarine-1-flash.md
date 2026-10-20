@@ -20,6 +20,8 @@ Reinforcement learning now works on professional work that has no single right a
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 
 Paper Instruments, a small lab that sells to AI companies serving banks and law firms, published a long technical report on 14 October 2026 alongside a launch thread from co-founder Daanish Khazi. Ultramarine 1 Flash is Z.ai's open GLM-5.3 Flash with a large reinforcement-learning stage on top (RL here means letting the model attempt thousands of tasks and nudging it toward the attempts that score well). Coding RL is easy to score with tests; diligence memos and board pre-reads are not. The report's answer is to synthesise each task together with its rubric. A criterion copied from one golden answer rejects valid alternatives; a vague one ("provides a useful update") rewards plausible errors. Good criteria state one substantive proposition, with the facts and thresholds needed to check it, and are judged met or unmet.
@@ -41,8 +43,6 @@ The wiki has no page on RL for non-verifiable work. Rubric advice exists only as
 The domain-specialized subcategory is defined as "one profession"; Ultramarine spans four professional domains, and it belongs in Open-weight models once weights ship. The headline "60x cheaper than Fable 5" is the thread's framing; the drafts use the report's own per-task numbers. The AINews item only repeats the thread, so it gets no source page.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Create** `wiki/models/ultramarine-1-flash.md` — new model page
     > See draft below

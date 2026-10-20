@@ -20,6 +20,8 @@ Deployed agents misbehaving on the open web is now a live security category, and
 
 [[#Open questions|Open questions: none.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 Four AINews issues, published 15 to 20 October 2026, each carried short items on agents acting outside anyone's control and on tools to contain them. The newest (20 October) reports that OpenCode, the open-source coding agent, endured a sustained 48-hour attack from swarms of agents. Mid-attack, frontier models refused to help analyze it because the payloads tripped their safety filters, a wall Hugging Face reportedly hit earlier. Things reportedly improved once OpenCode got access to "Daybreak Blue", which the source does not define. The same issue covers Anthropic's OSS Scanner, free periodic scans of critical open-source projects with proofs of concept and patches. Microsoft's Project Perception turns Satya Nadella's "models as insider risks" argument into product controls outside the model.
 
@@ -36,8 +38,6 @@ The 15 October issue reports researchers making contact with a Tencent-hosted fl
 The main call is scope. The triage also suggested **Agent safety and alignment research**, but that page tracks research methods, and these are incidents and containment tooling, so everything goes to the cybersecurity page and Project Perception only links back to Nadella's essay there. The source does not define "Daybreak Blue", so the draft only notes that OpenAI runs a Daybreak cyber-defense initiative. The cybersecurity page ends around 2,080 body words, just over its 2,000-word ceiling but inside the 10% warning band, so no split is needed yet.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/state-of/cybersecurity.md` — add OSS Scanner bullet to "AI-assisted vulnerability detection", Epoch open-weight-gap bullet to "Frontier model capabilities (offensive)", new section "Agents acting in the wild" after "Agentic misalignment during long-horizon evaluation"; adds two Recent-changes entries dated 2026-10-20 and 2026-10-17 (list goes 8 → 10, no spill); merges four source ids into `sources:` and four links into `## Sources`; `as_of` 2026-09-09 → 2026-10-20
 - [ ] **Update** `wiki/index.md` — State of Cybersecurity line as_of 2026-09-09 → 2026-10-20

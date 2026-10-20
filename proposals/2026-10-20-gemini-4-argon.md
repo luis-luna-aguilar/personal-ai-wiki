@@ -23,6 +23,8 @@ Google is back at the frontier, but on cost and breadth rather than as a clear w
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 Google DeepMind announced Gemini 4 Argon on 30 September 2026, its first model above the Flash tier since Gemini 3.1 Pro in February, aimed at coding, enterprise knowledge work and cyber defense. Access first went to government users and about 650 vetted defenders in Google's Fairwind Program; on 13 October Argon went generally available in the Gemini API, the Gemini app, AI Mode in Search, AI Studio and Antigravity, Google's agentic coding app. It also shipped in Cursor, Devin and GitHub Copilot. List price is $4 / $20 per million input/output tokens, halved until 30 November. A new API feature, Long Decode Continuation, pauses a long answer and resumes it across calls, so one response can run to 1M tokens.
 
@@ -44,8 +46,6 @@ The wiki has no Gemini 4 page. State of Models still lists Gemini 3.1 Pro from a
 Every's review is paywalled, so its verdict comes from the free preview and Every's 18 October recap. Four of the eleven triage files are left out: one repeats the hallucination number, one is a generic pretraining note, one covers the Minecraft demo, and one reports a Gemini 4 Carbon rumor. Argon goes into the cybersecurity page under defensive access, not offensive capability, because the sources report a gated rollout and one proof-of-concept score.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Create** `wiki/models/gemini-4-argon.md` — new model page; index entry under Models: `- [models/gemini-4-argon](models/gemini-4-argon.md) — Google DeepMind's frontier model; GA 2026-10-13; AA Intelligence Index level with GPT-6 Astra at ~60% of its cost per task; 1M-token output; weak monitorability profile *(as_of: 2026-10-16)*`
 

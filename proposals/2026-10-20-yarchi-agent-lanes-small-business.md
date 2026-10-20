@@ -15,6 +15,8 @@ Agents can run a small business's recurring work only after the owner does the n
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 On 4 September 2026 the X writer Yarchi (@undefinedKi) published a long X Article, marked as a paid partnership with Viktor.com, a product that joins Slack or Teams as an "AI employee". The piece is a setup guide for a one-person services business that wants the work it never gets to (client status, lead research, invoices, reporting) to happen without the owner starting it each time.
 
@@ -30,8 +32,6 @@ The delegation page already covers spec-first delegation, layered access control
 The rulings file is a concrete form of the existing "turn recurring corrections into reusable instructions" bullet, and one-lane-per-job overlaps the specialist-roster bullet. The draft keeps them as one setup sequence rather than folding each step into an older bullet, because the order of the steps is the point. The scope choice is the delegation page rather than Multiplayer AI: the setup is one owner running agents, not a team sharing sessions, even though Viktor is one of the platforms the multiplayer manifesto names.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/training/ai-delegation-management.md` — insert a new `## Running standing agent lanes` section between `## Proven patterns` and `## Raising the ambition of a delegation`; adds one Recent-changes entry dated 2026-09-04 (live list has 5, cap 10, no spill); append source id `yarchi-ai-team-runs-business-2026-09` to frontmatter `sources:` and one link to `## Sources`; `as_of` stays 2026-10-19
     > See draft below

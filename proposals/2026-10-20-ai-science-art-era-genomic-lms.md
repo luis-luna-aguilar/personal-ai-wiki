@@ -21,6 +21,8 @@ Agent swarms can now originate a biological discovery, not just assist one, but 
 
 [[#Open questions|Open questions: 2 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 In late September Anthropic announced a new life-sciences research group with its own Bay Area lab (low biosafety levels only, all bench work done by humans). Its first result: given one high-level prompt, roughly 950 Claude agents spent 21 hours and 210 million tokens combing a DNA database for reverse transcriptases, enzymes that copy RNA into DNA. They gathered over 200,000, nominated 3,500 candidate systems and wrote reports on 20. One agent noticed, next to an already-known enzyme in a jumbo bacteriophage (a large virus that infects bacteria), a long array of evenly spaced DNA repeats and an extra gene. The layout resembles a CRISPR array, the feature that makes CRISPR programmable. Anthropic named it ART (array-associated reverse transcriptases). Human-run experiments showed the array is transcribed into distinct short RNAs, but its function is unknown. Anthropic says so plainly, Dario Amodei called it PhD-worthy but of unclear significance, commenters stressed it is nowhere near AlphaFold or CRISPR scale, and a Stanford team independently described a related system. The post also says the lab now studies which agent reports scientists choose to test, and feeds that "taste" back into Claude's instructions.
 
@@ -37,8 +39,6 @@ AI in Science currently runs to 11 August and covers drug design, virtual cells 
 The Anthropic post carries no date. The proposal dates it 23 September, the last day covered by the AINews issue that reported it, although the linked bioRxiv preprint ID carries 5 October. The Nguyen source is a short episode teaser that describes the aptamer result only in a quote, so it stays one paragraph.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/trends/ai-in-science.md` — two status bullets, three new sections (ART, ERA, genomic language models), frontmatter sources merged, `as_of` 2026-08-11 → 2026-09-24; Recent changes adds three entries dated 2026-09-24, 2026-09-23 and 2026-09-22
     > See draft below

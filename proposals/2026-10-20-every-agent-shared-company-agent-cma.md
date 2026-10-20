@@ -22,6 +22,8 @@ One agent shared by the whole company beats an agent per employee, and most of t
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 Every, the media and software company, launched the Every Agent on 6 October 2026: a single Slack agent, tagged as @Every, that the whole company shares. Dan Shipper's launch post argues that most AI use is invisible, so a good workflow found by one person never spreads; when the work happens in a public Slack thread, colleagues see the request and the corrections and copy them. Successful workflows are saved as skills anyone can run. It replaced Plus One, the March experiment that gave each employee their own OpenClaw agent. Those agents were "high-maintenance pets": dozens of cloud machines to watch, expiring sign-ins, and bots nobody remembered the purpose of.
 
@@ -44,8 +46,6 @@ The wiki already says Every reversed its personal-agent default and lists the Ev
 The main judgment is the term mapping. "Company agent" could be read as an alias for Company brain, since @Every keeps memory and skills, but Every describes a shared coworker, not a knowledge system, so the draft maps it to Multiplayer AI and notes the memory part. Two raw files (the launch promo email and the 11 October recap) add nothing new and get no source page.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/tools/claude-managed-agents.md` — adds an Every Agent production bullet to Current status, replaces the "no pricing captured" caveat, adds two caveats, adds one Recent-changes entry dated 2026-10-08 (7 → 8 entries, no spill), appends two sources; `as_of` 2026-08-28 → 2026-10-08
 - [ ] **Update** `wiki/training/cost-aware-ai-task-routing.md` — adds one bullet to Evidence from practice → Routing as infrastructure, adds one Recent-changes entry dated 2026-10-07 (5 → 6, no spill), appends one source; `as_of` stays 2026-10-19

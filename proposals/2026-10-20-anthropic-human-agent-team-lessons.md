@@ -15,6 +15,8 @@ Shared team agents fail on norms more than on technology: Anthropic says its hum
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 Kristen Swanson of Anthropic's Education team wrote this Claude blog post, which reached the wiki through an early-October forward. It describes "multiplayer agents": agents with their own credentials, memory and skills that work with many people at once inside Slack, through Anthropic's Claude Tag product, instead of one person chatting with one agent.
 
@@ -32,8 +34,6 @@ The wiki has a Multiplayer AI concept built from one outside manifesto, a Claude
 The raw file has no publication date. It arrived in the 1–10 October digest, so the drafts use 10 October as an upper bound rather than the 20 October fetch date. The governance bullet sits next to the existing "promotion only after reliability" and "trust battery" bullets; the draft keeps it separate because it adds per-task-type scoping and the attention rules, which neither covers.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/concepts/multiplayer-ai.md` — add one bullet at the end of `## Current status`, rename that heading to `(as of 2026-10-10)`; adds one Recent-changes entry dated 2026-10-10 (live list has 1, no spill); add one `## Related` line; append source id and link; `as_of` 2026-09-14 → 2026-10-10
     > See draft below

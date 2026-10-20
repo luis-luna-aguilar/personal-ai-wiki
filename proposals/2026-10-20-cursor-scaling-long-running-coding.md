@@ -15,6 +15,8 @@ Flat agent swarms fail even when the concurrency mechanics work: Cursor's first-
 
 [[#Open questions|Open questions: none.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 "Scaling long-running autonomous coding" is Cursor's first post on running hundreds of coding agents on one project for weeks; the later "Towards self-driving codebases", already in the wiki, builds on it.
 
@@ -32,8 +34,6 @@ Long-running agent swarms already has the lock failure, the planner/worker topol
 The post shows no date. It predates the later post, which the wiki dated by its 9 September fetch, so the Recent-changes entry uses that date and the page date is not freshened with older material. The model names are superseded, so that bullet is framed as a lesson about choosing models per role.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/workflows/long-running-agent-swarms.md` — extend the intro paragraph and the Topology bullet; add one sentence at the end of the freshness bullet; add one bullet under `## Design principles`; adds one Recent-changes entry dated 2026-09-09 (live list has 3, no spill); append source id and link; `as_of` stays 2026-09-09
     > See draft below

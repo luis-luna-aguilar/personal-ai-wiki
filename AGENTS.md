@@ -519,6 +519,10 @@ One paragraph (70–110 words) that lets the reviewer reject quickly or decide t
 
 End with one separate line, linked to the section, saying only whether there are open questions: `[[#Open questions|Open questions: 2 to answer.]]` or `[[#Open questions|Open questions: none.]]`. Do not restate the questions.
 
+Then, on its own line, the Approve-all checkbox, so the reviewer can approve straight from the summary:
+
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 One to three prose paragraphs telling the story of the source for a reader who has not read it and does not carry the wiki in their head. Who, when, what happened or was argued, the key numbers, and the caveats the source itself admits.
 
@@ -534,8 +538,6 @@ One or two sentences on what the wiki said before on this topic (the only place 
 One paragraph, honest, listing only the judgment calls the reviewer must make (inferred dates, scope choices, schema approvals, length splits, partial sources). If nothing: "Nothing to weigh."
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/state-of/coding.md` — bump Cursor line, update as_of
     > **Before:** `- [Cursor](../tools/cursor.md) — Leads SWE-bench at 68% (as of 2026-03-22)`
@@ -582,7 +584,7 @@ One paragraph, honest, listing only the judgment calls the reviewer must make (i
 **Rules for the `## Summary` section (the reviewer's decision surface):**
 - The user decides from the summary alone whether to accept the whole proposal or open the drafts. Write it as a **story, not an expert report**: consistent prose that carries its own context, because the reader does not hold the wiki in their head.
 - Exactly four `###` subsections, in order: `In short`, `The source`, `What changes`, `What to weigh`.
-- `In short` is the quick-reject gate: one plain-prose paragraph of 70–110 words, no bullets, readable without anything below it. Its first sentence states the source's critical takeaway(s). A paragraph that only describes what happened, without saying what it means, fails this rule. It must also say what the proposal would add and give the reviewer one honest reason to hesitate (or say there is none). It is the only subsection allowed to repeat facts from the other three. Its last line is the open-questions line, separate from the paragraph and not counted in the word range. It links to `## Open questions` with an Obsidian heading link, gives the count or "none", and never restates the questions.
+- `In short` is the quick-reject gate: one plain-prose paragraph of 70–110 words, no bullets, readable without anything below it. Its first sentence states the source's critical takeaway(s). A paragraph that only describes what happened, without saying what it means, fails this rule. It must also say what the proposal would add and give the reviewer one honest reason to hesitate (or say there is none). It is the only subsection allowed to repeat facts from the other three. After the paragraph comes the open-questions line, separate from the paragraph and not counted in the word range. It links to `## Open questions` with an Obsidian heading link, gives the count or "none", and never restates the questions. The Approve-all checkbox is the last line of `In short`.
 - The other three subsections target 350–450 words together; up to ~550 when the proposal touches five or more pages or the source needs the room; ~250–350 for a single-page proposal. `The source` takes most of any extra length.
 - `The source` is narrative prose. No bullet dumps of facts. Define jargon inline. If several raw files feed the proposal, weave them into one story.
 - `What changes` leads with the incoming changes. Prior wiki state gets one or two sentences of context at the top and nowhere else. One bullet per page or natural group of pages; bold page names in natural language (**State of Models**, **Cursor**), code paths only for pages being created. Every leader-line swap, deletion, history spill and schema addition is named explicitly but briefly. Say "page date moves to 8 July", not "`as_of` bumped".
@@ -593,7 +595,7 @@ One paragraph, honest, listing only the judgment calls the reviewer must make (i
 
 **Rules for proposals:**
 - Every intended change is a checkbox. **All boxes are written unchecked** (`- [ ]`). Checking a box is the user's act of approval; never pre-check one, and never treat an inline answer in `## Open questions` as a substitute for a checked box.
-- The first item under `## Intended changes` is a single `- [ ] **Approve all**` checkbox. When it is checked, every item under `## Intended changes` and `## Schema / vocabulary additions` counts as checked, whether or not the individual boxes are. When it is unchecked, only individually checked items apply. Approve-all is the normal path; individual boxes exist for partial approval.
+- The proposal has a single `- [ ] **Approve all**` checkbox, placed as the last line of `### In short` (after the open-questions line) so the reviewer can approve from the summary alone. `## Intended changes` does not repeat it. When it is checked, every item under `## Intended changes` and `## Schema / vocabulary additions` counts as checked, whether or not the individual boxes are. When it is unchecked, only individually checked items apply. Approve-all is the normal path; individual boxes exist for partial approval.
 - Each proposal is written against the wiki as it is on its `created` date and is self-contained. Do not reference, coordinate with, or warn about other pending proposals; the apply step rebases each one onto the live wiki in sequence. Drafts for list-like sections (Recent changes, Sources) must make the *delta* explicit in `## Intended changes` ("adds one entry dated …", "spills the oldest entry") so the apply step can re-derive them from the live page.
 - Every draft appears **in full** inside the proposal's `## Page drafts` section, in a fenced code block. The user may edit drafts directly in the file before applying.
 - If a draft contains fenced code examples, wrap the full draft in a longer fence such as ````md ... ```` so inner ```text blocks do not break proposal formatting.
@@ -626,7 +628,7 @@ Triggered by **"apply this proposal"** / **"apply proposals/xxx.md"**.
 
 **Steps:**
 1. Re-read the proposal file **from disk, as it is now, immediately before applying** (the user may have edited it externally).
-2. Determine the approved set: if the `**Approve all**` box at the top is checked, every item under `## Intended changes` and `## Schema / vocabulary additions` is approved; otherwise only the individually checked items are. For each approved item, read the **live** target page from `wiki/` now, then apply the draft **as it now appears in the file** using the rebase rules below.
+2. Determine the approved set: if the `**Approve all**` box (at the end of `In short`) is checked, every item under `## Intended changes` and `## Schema / vocabulary additions` is approved; otherwise only the individually checked items are. For each approved item, read the **live** target page from `wiki/` now, then apply the draft **as it now appears in the file** using the rebase rules below.
 3. Update `wiki/index.md` with any new pages.
 4. Update `wiki/_schema/` files for any approved vocabulary additions.
 5. Append a log entry: `- [YYYY-MM-DD] **ingest** | <source title> | <N> pages updated, <M> created`.

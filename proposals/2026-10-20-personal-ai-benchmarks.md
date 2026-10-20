@@ -20,6 +20,8 @@ Knowing which model suits your job now takes a small private benchmark built fro
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 On 21 September 2026 Mike Taylor, who runs evaluations at Every, published "How to Create Your Own Personal AI Benchmark". His point: trivia and competition-math benchmarks say little about whether a model helps with your job. His method has three levels. First, collect failures: ask your coding or desktop agent to search the past month of session history for about ten tasks that needed heavy back-and-forth or were abandoned, run them on several models in parallel, and have the agent build a side-by-side viewer. Second, turn taste into tests: dictate what you liked and disliked, have a model convert that into yes-or-no checks, and let a second model grade outputs against them. Taylor warns against 100-point scores, because model ratings cluster around 70/100 and imply precision they lack. Third, scale up: turn each task into a skill that files every brief, output and piece of feedback until each task has 20 or more cases with a gold example and an eval script.
 
@@ -39,8 +41,6 @@ The wiki covers evals for coding agents and for deployed workflow agents, with E
 The main call is scope. The triage suggested folding Taylor's method into the workflow-agent evals page, but that page is written for teams evaluating agents they deploy, and Taylor writes for one person picking a model, so the proposal gives individuals their own page. The other stories in the 24 September newsletter (a Grok 4.7 vibe check, a video workflow, Slack agents) and the Copilot product news in the 25 September piece are left out.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Create** `wiki/training/personal-ai-benchmarks.md` — new training page for individual knowledge workers
 

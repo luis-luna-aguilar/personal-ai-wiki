@@ -27,6 +27,8 @@ A new model class now sits beside chat models: decision models, which return a c
 
 [[#Open questions|Open questions: 2 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 
 On 15 September TypeSafe, a lab that had spent two years in stealth, released Jev. CEO Diogo Almeida, an InstructGPT co-author, explained it in a long Latent Space interview. Jev does not generate text. You describe a situation and ask one of three kinds of question: a "Noulli" (the probability that something is true), a "Choice" (which of several options applies) or a "Score" (where it sits on a scale). It is trained to give honest probabilities rather than answers human raters like, and TypeSafe publishes no benchmark scores.
@@ -50,8 +52,6 @@ Today the wiki mentions Jev only in passing, as a point of comparison on the Sca
 The new subcategory is the main call. None of the existing ones fits a general-purpose model that decides rather than generates: `utility-model` covers single-task pipeline models and `domain-specialized-model` covers one profession. Of the twenty raw files in the triage signal, ten feed this proposal. The other ten repeat these claims or add single launches (Command Code Agr, Decision 3.0, vLLM's `/v1/systemone` endpoint, ScaleDown's "Constrained Decoding Models" rebrand), so they stay traced through the triage file only. The routing page ends at about 108% of its length ceiling, under the 110% warning line.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Create** `wiki/concepts/decision-models.md` — category page
 - [ ] **Create** `wiki/models/jev.md` — model page (subcategory `decision-model`)

@@ -19,6 +19,8 @@ When AI multiplies the volume of code changes, the quality risk sits in the deli
 
 [[#Open questions|Open questions: none.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 Spotify Engineering's post "AI Changed How Spotify Builds", dated September 2026 by its URL and widely shared on 14 October, reviews quality during the company's AI ramp-up. Spotify runs nearly 3,000 production services for 777 million monthly users, and the post opens by saying "AI slop" was not the problem. Four areas strained at once: a content-processing pipeline whose failures could go unnoticed for hours; fleet-wide automated changes, where an agent-driven dependency upgrade passed every check and still broke production; compute scarcity, which the industry's AI demand worsened and which made previously invisible regional failovers noticeable to users; and mobile releases, where each release looked healthy while small regressions piled up.
 
@@ -36,8 +38,6 @@ The wiki already tracks agent-scale change volume through Anthropic's CI and sou
 The article's only date is the "2026/9" in its URL, so its source page and Recent-changes entries use 30 September. The tweet that pointed to the article adds nothing, so it gets no source page. The evals page reaches about 97% of its length ceiling.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/training/engineering-ai-adoption-evidence.md` — new Spotify bullet under `### Adoption and volume data`; one sentence appended to the Anthropic RSI bullet; adds two Recent-changes entries dated 2026-10-17 and 2026-09-30 (9 of 10 after insert, no spill); merge two source ids; `as_of` stays 2026-10-19.
 

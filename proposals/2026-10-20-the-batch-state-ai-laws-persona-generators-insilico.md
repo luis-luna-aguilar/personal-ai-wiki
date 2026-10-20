@@ -15,6 +15,8 @@ US AI regulation is being written state by state while the federal government tr
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 The Batch is DeepLearning.AI's weekly newsletter. Its 17 April 2026 issue ran four stories. The lead, Meta moving from open weights to the closed Muse Spark, is already on the wiki's Muse Spark page and is left out here.
 
@@ -34,8 +36,6 @@ The governance page covers economists' calls, the lab-employee pacing letter and
 Whether six-month-old material is still worth adding. The state laws and the federal order describe a contest that has surely moved since April, so the section is dated so readers can see its age. AI in Science lands at about 107% of its length ceiling after this, which is under the point where a split is needed.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/trends/ai-governance-and-policy.md` — new section "US states regulate while Washington pushes preemption (as of 2026-04-17)"; one What-to-watch bullet; adds one Recent-changes entry dated 2026-04-17 at the bottom (3 → 4, under cap); appends one source id and link; `as_of` unchanged (2026-09-06)
 

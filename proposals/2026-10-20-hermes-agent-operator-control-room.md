@@ -15,6 +15,8 @@ Running a team of persistent agents is mostly an operations problem, and the fix
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 Shann Holmberg, an AI marketer rather than a developer, published this long X Article on 18 May 2026 after a few weeks of running his marketing work on Hermes Agent, Nous Research's open-source persistent agent. Each agent is a folder: a brain (`MEMORY.md` for business facts and `USER.md` for facts about the user, injected at session start), a personality file (`SOUL.md`), and a skills library the agent grows itself. His fleet of specialists (SEO, outbound, content, a routing-only orchestrator) runs as separate Docker containers on one VPS.
 
@@ -30,8 +32,6 @@ The Hermes Agent page covers releases and architecture but not how a practitione
 The article is five months older than the page's newest claims, so its figures (150,000 stars, 123 skills) are stated as of May and its superseded model picks are left out.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/tools/hermes-agent.md` — insert a new `## Operating a Hermes fleet` section between `## Key orchestration patterns` and `## Compared to OpenClaw`; adds one Recent-changes entry dated 2026-05-18 between the 2026-08-29 and 2026-05-13 entries (live list has 6, no spill); append source id and link; `as_of` stays 2026-09-01
     > See draft below

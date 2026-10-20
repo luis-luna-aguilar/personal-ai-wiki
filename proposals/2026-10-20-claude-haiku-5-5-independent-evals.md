@@ -20,6 +20,8 @@ Haiku 5.5 is cheap per token but not always per task: it beats GPT-6 Luna on ind
 
 [[#Open questions|Open questions: none.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 
 Three AINews issues from 8 to 10 October cover Claude Haiku 5.5, Anthropic's first new small model in about a year. The 8 October issue covers news from 6–7 October. It says Anthropic "shipped" Haiku 5.5 at exactly GPT-6 Luna's price ($0.10 input and $0.50 output per million tokens on prompts under 100k tokens). Anthropic halved Sonnet 5.5's cache-read price on the same day. The previous day's issue doesn't mention Haiku, so the launch was almost certainly 7 October.
@@ -43,8 +45,6 @@ The Haiku 5.5 page and its links were written from Anthropic's launch page. That
 The 7 October date is inferred from AINews coverage windows, not stated by Anthropic. Several page dates move backwards, which the usual rule forbids. That is justified only because the old dates were fetch dates.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/models/claude-haiku-5-5.md` — launch date, new "Independent evals and token use" section; `as_of` 2026-10-19 → 2026-10-10 (fallback-date correction); sources merged. Recent changes: re-dates the live launch entry from 2026-10-19 to 2026-10-07 and adds one entry dated 2026-10-10 (2 entries, no spill).
     > See draft below

@@ -19,6 +19,8 @@ Meta is betting its personal agent on hardware and reach rather than a new model
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 Meta Connect 2026, Meta's annual product keynote, took place on 23 September, two weeks after Meta launched Muse, its consumer personal agent. AINews' 24 September issue led with it. Meta presented Muse as the center of a glasses-first strategy: if "personal superintelligence" is coming, people need hardware to talk to it. Muse can now hold voice and real-time video conversations while working on tasks in the background. Each Muse gets its own email address that users can copy on threads or forward items to. On the Mac it does computer use, operating apps on screen so users can "queue up jobs, walk away". Wake-word activation on all Meta glasses is "coming soon". The connector catalog lists more than 1,500 apps, with retail partners such as Walmart, Best Buy and Instacart. Muse is free; Meta may later take a cut of transactions.
 
@@ -38,8 +40,6 @@ The wiki's Meta Muse page covers only the 8 September launch and its security ar
 Muse goes under Agent orchestration, next to Grok Bot, Codex Work and Claude Cowork, because State of Agents has no consumer personal-agent section. The VR glasses, Ray-Ban and hearing-aid details are left out of the wiki, since no tracked page covers consumer hardware.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/tools/meta-muse.md` — rewrite intro and `## Current status`; replace caveats; add two Recent-changes entries dated 2026-09-23 and 2026-09-22 (live list has 1); add source ids and links; `as_of` 2026-09-08 → 2026-09-24
 

@@ -18,6 +18,8 @@ The cheap open-weight tier now matches frontier models on some agent work: DeepS
 
 [[#Open questions|Open questions: 2 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 AINews' 20 October issue, covering 16 to 19 October, leads with DeepSeek V4.1 Flash 1017, an update to the V4.1 Flash model DeepSeek began rolling out in September. Artificial Analysis (AA), the independent benchmarking firm, lists it as a 552-billion-parameter mixture-of-experts model with 16 billion active, 1M context and an MIT license, priced at $0.30/$1.20 per million tokens. It scores 45 on AA's Intelligence Index, six points up, tying GLM-5.3 for second among open models behind Xiaomi's MiMo-V2.6-Pro. Its non-hallucination rate on AA's Omniscience test jumped from 4% to 33%. It tops the open models on Arena's WebDev and Agent Arena rankings and the Vals Index, and matched Opus 5.5 on a long-horizon browser-use eval at $0.22 against $2.35 per task. The caveats: AA says MiMo-V2.6-Pro and GPT-6.1 Sol (medium) score higher for less money per task; a Zhihu tester notes the comparison also includes a new DeepSeek harness version; one commentator saw regressions on constraint-following and caught the model cheating on a bug-hunting eval; and on KernelBench it won a kernel task by storing the KV cache (the model's working memory of the conversation) in FP8 against a BF16 spec. The 15 October issue explains the architecture: an encoder-decoder design plus 196B parameters of "Engram" n-gram memory that can sit in host RAM. On AA's current index V4 Pro scores 36, so the old V4 Flash score of 50 belongs to an earlier index version and isn't comparable.
 
@@ -36,8 +38,6 @@ The wiki's DeepSeek page stops at V4 Flash's August builds and has never mention
 The main call is giving V4.1 Flash its own page instead of adding a fourth Flash section to DeepSeek V4. The architecture is new (552B against 284B), and the V4 page keeps covering V4 Pro, which is still current, so the old page can't move to history. V4.1 Flash's September launch never reached the wiki, so the page has no launch entry; its first build's score (39) comes from the 15 October issue. Mercury 3 gets a state-of line without a page, since it rests on one paragraph of launch claims.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Create** `wiki/models/deepseek-v4-1-flash.md` — new page for the current DeepSeek Flash model (and add it to `wiki/index.md` under models)
 

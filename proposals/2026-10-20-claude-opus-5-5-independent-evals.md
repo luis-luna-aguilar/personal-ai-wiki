@@ -22,6 +22,8 @@ Opus 5.5's value claim survives independent testing only at default effort: it t
 
 [[#Open questions|Open questions: none.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 
 Anthropic launched Claude Opus 5.5 on Tuesday 22 September 2026, about an hour before OpenAI shipped GPT-6 Sol and Luna. AINews's launch-day issue (23 September) collects the reaction. Anthropic made Opus 5.5 the default in Claude Code and the Claude app at medium effort. The independent numbers are strong. The model is #1 on the Vals Index and the Vals RSI Index, sets a new top score on CursorBench (57.8%) and leads FrontierCode 1.1 Extended (65.3%). It is second on FrontierSWE (62.3%, behind GPT-6 Astra's 65.5%). Later issues add #1 on Artificial Analysis's Coding Agent Index (66, up from Opus 5's 60) and #1 on SimpleBench (88.4%).
@@ -45,8 +47,6 @@ The Opus 5.5 page was written today from Anthropic's undated launch post, so it 
 Moving `as_of` backwards breaks the usual rule. The original date was the ingest date, used only because the launch post carried none. The two Every pieces are paywalled previews, so the verdict comes from their summaries, not the full review.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/models/claude-opus-5-5.md` — launch date, independent evals, new "Cost and effort caveats" section, Every verdict; `as_of` 2026-10-20 → 2026-09-27 (fallback-date correction); sources merged. Recent changes: replaces the one placeholder entry dated 2026-10-20 with a launch entry dated 2026-09-22, and adds one entry dated 2026-09-27 (2 entries, no spill).
     > See draft below

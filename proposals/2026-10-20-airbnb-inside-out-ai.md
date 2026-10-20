@@ -15,6 +15,8 @@ A large incumbent can get most of its code from AI and still ship faster, but on
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 Latent Space published an interview with Ahmad Al-Dahle on 2 October 2026. He ran generative AI and the Llama launches at Meta before joining Airbnb as CTO in January; his brief is to make Airbnb "AI-native" from the inside out: use AI internally to speed up product development first, then put the same capabilities into the guest experience. His headline numbers are 60% of code AI-authored, nearly 80% more features and improvements shipped year over year, and PR throughput per engineer up about 1.6x. The main process change is that product, design and engineering skip the handoff chain of requirements document, Figma file and implementation, and work straight from prototypes, so "the code is the artifact we reason upon."
 
@@ -33,8 +35,6 @@ The wiki holds only a May 2026 Airbnb line (64% of production PRs shipped with a
 The support and org-design material goes to the company-wide evidence page, not the engineering one, to keep each training page to one audience; the cost is that one interview is split across two pages. Mapping Everest to Company brain is an inference: the interview describes a codebase-wide context graph plus an MCP-connected internal agent, not the four-function refresh loop the page describes. The hub page lands at about 103% of its ceiling.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/training/engineering-ai-adoption-evidence.md` — add one Airbnb case bullet under "Company-wide adoption case studies"; adds one Recent-changes entry dated 2026-10-02 (8 of 10 after insert, no spill); merge source id into `sources:` and `## Sources`; `as_of` stays 2026-10-19.
 

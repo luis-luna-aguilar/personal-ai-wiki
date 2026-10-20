@@ -15,6 +15,8 @@ Microsoft's bet for workplace agents is that existing enterprise permissions mak
 
 [[#Open questions|Open questions: none.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 Ryan Sloan, a Seattle data scientist who writes about AI measurement, reported for Every from Microsoft's Redmond launch on Wednesday 23 September 2026; the piece went out on 25 September. Microsoft replaced its separate consumer and work chat apps with one Copilot app. Home puts chat, delegated tasks and Word, Excel and PowerPoint in one place with shared context. Code lets non-developers build small apps and share them inside secure environments. Autopilot is a persistent agent you give a goal and leave running. It draws on the last 30 days of your work, your place in the org chart and your calendar, keeps private memories of your preferences, and works under a name you choose, such as "Dot (Ryan's Autopilot)", which colleagues can tag in Teams. It can run Routines such as a daily briefing. Autopilot is off by default, billed in usage credits, and features roll out in previews over the coming months.
 
@@ -32,8 +34,6 @@ The wiki's Copilot page dates from June and describes Autopilot only as the host
 The launch date (23 September) comes from "on Wednesday" in a piece emailed 25 September; the wiki uses the publication date. Autopilot was already named on the Copilot page as Build's hosted runtime; this proposal treats the September Autopilot as the same product line now exposed as a user-facing tab, not a separate product, and does not create a page for it. The update to Evals for workflow and task agents is a scope addition beyond the pages the triage named; decline that item if the article's eval practice is too thin to carry there.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/tools/microsoft-copilot.md` — relaunch, Autopilot rewrite, caveats, adds one Recent-changes entry dated 2026-09-25 (list goes 4 → 5, under cap), merges source id, `as_of` → 2026-09-25
 

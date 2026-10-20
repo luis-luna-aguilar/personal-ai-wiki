@@ -19,6 +19,8 @@ Effort is a verification dial, not an intelligence dial: raising it makes Claude
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 On 25 September 2026 Thariq Shihipar, who works on Claude Code at Anthropic, published "Spending your effort" on claude.dev (an X Article carried the same text). Effort is the setting that tells the model roughly how much compute to spend. His answer to "which level when" comes from two kinds of evidence: his own runs of the same tasks at several levels, and a pass through every Terminal-Bench 3.0 result, a community benchmark of about 70 hard terminal tasks.
 
@@ -37,8 +39,6 @@ The wiki has one generic FinOps line telling teams to default effort to a middle
 The routing page sits at 104% of its training-page ceiling; with these additions it reaches about 111%, just past the warning band. The proposal adds the content instead of compressing it and offers a split as an open question. The X Article version gets no source page of its own because the claude.dev post is the fuller copy of the same text; the tweet file is listed only in this proposal's frontmatter.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/training/cost-aware-ai-task-routing.md` — extend the middle-tier effort FinOps bullet; add one evidence bullet under "Model and harness selection wins"; add one Recent-changes entry dated 2026-09-25 (list goes 5 → 6, no spill); append source id and link
     > **Before:** `- Default reasoning effort to a middle tier (e.g. Medium) rather than maximum, since reasoning/output tokens bill at a multiple of input-token rates and a large share of tasks don't need top-tier reasoning to hit a good cost/quality balance.`

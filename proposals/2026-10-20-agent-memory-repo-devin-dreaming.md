@@ -18,6 +18,8 @@ Agent memory is converging on plain git and markdown: Cognition stores a user's 
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 In early October 2026 Cognition, the company behind the Devin coding agent, launched Devin "Dreaming", an overnight job that prunes and links Devin's memory graph, and said it is open-sourcing the storage format behind it as Agent Memory Repo. The AINews newsletter of 6 October carries the launch in one line; the format itself is published as a page at cognition.com.
 
@@ -38,8 +40,6 @@ The wiki treats agent memory as a governed lifecycle (extract, dedupe, reconcile
 The spec page carries no date, so the proposal dates everything to the 6 October newsletter that announced the launch. The hub mapping is a judgment call: the repo's `MEMORY.md` index and linked pages look like a knowledge layer, but agents write it from their own sessions with one sourced fact per line, so it goes on the Agent memory row with a note explaining why. The hub ends near 1,290 body words, about 107% of its ceiling, inside the warning band.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/concepts/agent-memory.md` — add one Current-status bullet; Current-status stamp and `as_of` move to 2026-10-06; adds one Recent-changes entry dated 2026-10-06 (live list has 4, no spill); append two source ids and two `## Sources` links
     > See draft below

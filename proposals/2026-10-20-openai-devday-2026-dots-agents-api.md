@@ -25,6 +25,8 @@ OpenAI now sells the always-on agent with its own computer as ChatGPT's main mod
 
 [[#Open questions|Open questions: 2 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 
 OpenAI's DevDay on 29 September 2026 shipped 22 products and features; AINews's same-day roundup led with dots. A dot is an always-on agent, powered by GPT-6 Astra, that gets its own Linux virtual computer in the cloud. It reaches 4,000+ apps plus Slack and Teams, and the user writes three lists: what it may do alone, what needs approval, and what it must never do. Dots ship to Pro, Business Premium and Enterprise. The main dot's own work does not count against plan usage, but Codex tasks it spawns do. Companion launches were Space and Pages, shared documents, slides and spreadsheets where humans and agents edit together and a dot can be tagged in a comment.
@@ -48,8 +50,6 @@ The wiki covers Grok Bot and Claude Tag as "agents with their own computer" but 
 Scope is the main call. GPT-6.1 Sol, the Decisions API and the computer-use half of the Latent Space interview are covered by other triage signals, so this proposal touches them only in passing. GPT-6 Intelligent UI (8 October) and ChatGPT Sites hosting MCP servers are left out because no wiki page fits them. The Every Dots vibe check is paywalled, so its verdict comes from Every's own summaries.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Create** `wiki/tools/chatgpt-dots.md` — new tool page for OpenAI's always-on agents, with Space/Pages
 - [ ] **Update** `wiki/tools/codex.md` — new Current-status bullet and heading date; replace `## Pricing (as of 2026-04-21)` with `## Plans and capacity (as of 2026-10-06)`; adds three Recent-changes entries dated 2026-10-09, 2026-10-05 and 2026-09-29; appends six source ids and links

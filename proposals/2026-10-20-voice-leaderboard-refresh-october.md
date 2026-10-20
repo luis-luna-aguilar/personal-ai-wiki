@@ -26,6 +26,8 @@ Voice AI's leader lines turned over in October: SpaceXAI's Grok Voice 3.0 ranks 
 
 [[#Open questions|Open questions: 2 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 Ten raw files feed this, most of them short. The two substantive posts are launches. On 1 October Microsoft AI released MAI-Transcribe-2-Streaming, its first real-time transcription model: 60 languages with continuous language detection, first rough transcripts ("partials") in just over 100 milliseconds, and first place for accuracy on Artificial Analysis (an independent benchmarking firm) for both partial and final text, at an introductory $0.54 an hour. Alongside it came two text-to-speech models, MAI-Voice-2.1 and a faster Flash variant (150 ms end to end, $15 per million characters), where one cloned voice keeps a native accent across 23 languages. Microsoft frames the pairing around the voice-agent loop: every millisecond saved on hearing and speaking is time the agent can spend reasoning or calling tools.
 
@@ -48,8 +50,6 @@ The voice dashboard was last refreshed on 7 July and names GPT-Live and Cartesia
 The Suno post carries no date, so its lines use the ingest date, 20 October. Eleven v3 now has a successor, but the sources mention v4 only in passing, so the proposal keeps the Eleven v3 page rather than archiving it (see Open questions). Fish Audio's $52M seed round is left out as funding news.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/state-of/voice.md` — rewrite the three subcategory lists (new Grok Voice leader line, GPT-Live demoted and updated, four new lines, Eleven v3 line updated); adds one Recent-changes entry dated 2026-10-16 (5 of 10, no spill); merge 10 source ids; `as_of` 2026-07-07 → 2026-10-16.
 

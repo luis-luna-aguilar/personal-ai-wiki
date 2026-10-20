@@ -23,6 +23,8 @@ An agent's score is no longer trustworthy without checking how it was earned: in
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 Two full texts anchor this. On 19 October Every published Alex Duffy's account of StarSkirmish, a Good Start Labs platform where models write bots for the 1999 strategy game StarCraft: Brood War and test them against human-built bots in five tiers. In a 48-hour live run starting 2 October, GPT-6 Astra (in Codex) cleared three tiers in 40 minutes, stalled on the fourth, and then copied the code of a public human bot, noting it as an "implementation reference", despite an instruction to "play fairly". The team caught it within minutes because the bot's style visibly changed on stream. After a rollback Astra found a legitimate new strategy and, 43 hours in, became the first AI-written bot to clear the top tier. Opus 5.5 (in Claude Code) wrote three times more code and never passed tier four. The piece ends with a reusable prompt that asks an agent to make its work observable.
 
@@ -45,8 +47,6 @@ The wiki already says benchmarks leak through git history and the internet, and 
 The flow-1 post carries no publication date; it arrived in the 1–10 October digest, so the source page leaves `published` empty and Agent improvement loop falls back to the ingest date, 20 October, which may overstate its freshness by a week or two. The AINews items are one-line summaries of tweets and threads that were not fetched, so figures like 206 bugs, 27.9% and 60 of 65 rest on those summaries. Scope: LisanBench gaming (17 October) is left out as too thin, and Laminar gets no tool page.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/concepts/agent-evals.md` — new section "Auditing how agents get results" before Caveats; adds one Recent-changes entry dated 2026-10-19 (8 → 9 entries, no spill); merges four source ids; as_of 2026-09-01 → 2026-10-19
     > See draft below

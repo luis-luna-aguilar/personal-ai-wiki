@@ -18,6 +18,8 @@ Video models are turning into real-time, steerable simulators, and their main bu
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 Latent Space's 25 September article interviews Runway's CTO Kamil Sindi and research scientist Robin Kahlow about GWM Worlds 2, a research preview released earlier that month, with extra comments from co-CEO Anastasis Germanidis from a podcast whose transcript is attached. GWM Worlds 2 streams interactive worlds as continuous 720p video at 24 frames per second with 48kHz audio. Its new input format, WorldPrompt, fixes parts of the world, including the first frame, and then lists timestamped events that can also be typed in live; it is a prompt, not a scripting language, so there is no game state to program. Runway built it by fine-tuning its base audio-video model on that format, retraining it to generate a few frames at a time instead of a whole clip, and then distilling it for speed, for example from about 50 denoising steps to four. The team names three open problems: small errors pile up as generated frames feed back in, the model has no reliable long-term memory, and training video over-represents successes (more goals than misses), so different actions do not yet produce equally realistic outcomes. Competitors named are Google DeepMind's Genie 3, Odyssey-2 Pro and World Labs' RTFM.
 
@@ -37,8 +39,6 @@ The wiki mentions Runway only for its Aleph 2.0 editor and as a Cosmos 3 partner
 Neither Runway's world models nor World Labs gets a page; both stay as lines until there is more than one source each. The AMD story is a short excerpt from the acquisition post, and the $8.2B figure comes only from the newsletter's headline. The triage also listed Odyssey's Agora-2 multi-agent world model from a third newsletter; it is left out as a one-line mention.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/state-of/creative.md` — adds a Runway GWM Worlds 2 bullet under AI video generation; adds one Recent-changes entry dated 2026-09-25; `as_of` → 2026-09-25; appends one source id and link
 

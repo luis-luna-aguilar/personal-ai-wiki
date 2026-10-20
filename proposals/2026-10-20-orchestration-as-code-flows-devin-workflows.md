@@ -21,6 +21,8 @@ Letting the lead agent write the orchestration program is now a cross-vendor pat
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 On Friday 9 October Anthropic put dynamic workflows for Claude Managed Agents, its hosted agent API, into public beta: a lead agent writes a phased plan, fans it out to as many as 1,000 agents in one run and merges the results, and Anthropic warns users to start small because token use can be high. On 12 October, at the AI Engineer conference in New York, Anthropic's CJ Avilla and Harrison Stall explained the design. Claude writes an orchestration program (a "flow") that launches agents, collects their results and manages what each one sees. This replaces the developer-configured coordinator and fixed roster of subagents. In the Q&A they said the model does not know its budget while running, but developers can cap a session; subagents share a filesystem but cannot message each other; the Console graphs every payload the lead passes to a subagent; Anthropic's "dreaming" feature can tidy the memory store so repeated flows get cheaper; and a flow costs "much more" than one agent but found more in their stock-scanner demo.
 
@@ -42,8 +44,6 @@ The wiki covers dynamic workflows only as a Claude Code feature, and Managed Age
 Managed Agents ends near 1,580 body words (105%) and Cost-aware routing near 2,690 (108%), both in the warning band. The Devin announcement tweet only points to the docs, so it gets no source page; it supplies the 13 October date. Claude Code's own page is not touched, since it is at 99% of its ceiling.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/workflows/multi-agent-coordination.md` — replace the "Scripted subagent orchestration" bullet; add two bullets at the end of `## Where these patterns surfaced`; `as_of` moves to 2026-10-13; adds one Recent-changes entry dated 2026-10-13 (live list has 6, no spill); append four source ids and links
     > See draft below

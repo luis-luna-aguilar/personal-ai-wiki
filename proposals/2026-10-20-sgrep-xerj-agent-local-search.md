@@ -21,6 +21,8 @@ Plain grep is no longer the only sensible default for agent code search: ranking
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 On 13 October 2026 two small open-source search tools launched on the same day, both pitched at coding agents. Context.dev released sgrep, a Rust command-line tool that sits beside ripgrep (the fast exact-text search most agents already call). Ripgrep finds every match but has no sense of which match matters, so an agent either floods its context with junk or never sees the one passage it needed. sgrep reranks candidates by meaning using "static embeddings": one small stored vector per token, averaged, with no neural network run at search time, so it works on a laptop CPU with no account or server. Its README is unusually candid: use ripgrep for known names, sgrep for intent queries ("when does a failed scrape consume credits"), and it concedes that the rival tool CK beats it on snippet retrieval. In its own SWE-bench Verified run with GPT-6 Luna, piping ripgrep output through sgrep spent 21.3% less on the LLM and solved 70 of 100 attempts against 68.
 
@@ -36,8 +38,6 @@ The wiki has no material on agent code-search tooling; the nearest pattern is Ub
 The xerj.org homepage carries no date, so its source page uses the launch tweet's 13 October date. The two launch tweets get no source pages because the README and homepage hold everything they say, except XERJ's "Corpus Hub" name for public shared corpora, which the bullet leaves out. The scope choice is a single bullet rather than tool pages; it leaves the orchestration page at about 106% of its ceiling, which needs no split.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/workflows/agentic-orchestration-patterns.md` — add one bullet at the end of `### Harness, packaging, and tool design`; adds one Recent-changes entry dated 2026-10-13 (list goes 8 → 9, no spill); appends three ids to frontmatter `sources:` and three links to `## Sources`; `as_of` 2026-09-09 → 2026-10-13
 - [ ] **Create** `wiki/sources/repos/context-dot-dev-sgrep.md` — source summary

@@ -20,6 +20,8 @@ More instructions can make AI worse: when a context grows, the concrete, checkab
 
 [[#Open questions|Open questions: 1 to answer.]]
 
+- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+
 ### The source
 Two essays from Every, eleven days apart, make the same argument for non-engineers. On 5 October 2026 staff writer Katie Parrott described how she broke a working setup. Each column she writes had its own folder with a short voice guide, a short style guide and sample drafts, read by the agent through an AGENTS.md file. In September she made three changes: log every experiment and turn any note given twice into a checklist item, link 385 files across folders in Zettelkasten style, and codify every pattern she noticed. One style guide grew to 3,855 words with eight approved openings. Drafts got worse after each correction; one essay took 127 drafts and over a million words. A review by GPT-5.6 Sol in Codex found the cause: "the concrete rules are easier to verify, so they can overwhelm the subtler ones while every checklist still passes." She archived everything and rebuilt in about 20 minutes. The new guides total 513 words, against 6,109 before, and treat drafts and notes as "evidence, never new instructions".
 
@@ -37,8 +39,6 @@ The wiki mentions context rot only for coding agents, and its AI style guides pa
 The wiki's vocabulary hub assigns "context engineering" to the Harness concept page, which is already over its length warning, so this practical guidance goes to a training page instead of a concept page. The two essays address different readers: Parrott's is about writing guides, Taylor's about chat threads in general. They are therefore split across two pages rather than merged into one.
 
 ## Intended changes
-
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 - [ ] **Update** `wiki/training/ai-style-guides.md` — one Current-guidance bullet, new "Instruction bloat" section, one failure mode, new Recent-changes section with one entry dated 2026-10-05, Related line, as_of 2026-03-19 → 2026-10-05, append source
 
