@@ -14,7 +14,7 @@ Every tested Claude Sonnet 5 across coding, writing, knowledge work, and agent b
 
 ## Influenced pages
 
-- [Claude Sonnet 5](../../models/claude-sonnet-5.md) - positioning and caveats
+- [Claude Sonnet 5](../../history/models/claude-sonnet-5.md) - positioning and caveats
 - [State of Models](../../state-of/models.md) - middle-tier Claude model note
 
 ## Key claims extracted

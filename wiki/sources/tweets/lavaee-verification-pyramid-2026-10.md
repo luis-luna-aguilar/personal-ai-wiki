@@ -14,7 +14,8 @@ domains: [coding, agents]
 X Article (also on alexlavaee.me) by the builder of Atomic, an open-source coding-agent runtime. Argues that an agent saying "done" is a claim, and done means checks the agent didn't write and can't change show the acceptance criteria are met, with the output saved. Lays out a verification pyramid: human-reviewed acceptance contract at the base, then types/lint, unit, integration against real services, end-to-end, and a thin model judge on top. Covers hard-to-game oracles, root-cause-first debugging, fresh-session review, multi-judge scoring, scenario-driven browser and performance checks, and small-blast-radius testing against real services. The author says verification at scale is still unsolved.
 
 ## Influenced pages
-- [Evals for agentic software development](../../training/evals-for-agentic-software-development.md) — contract-first guidance, oracles section, multi-judge scoring, browser/performance checks
+- [Acceptance contracts and test oracles](../../training/acceptance-contracts-and-test-oracles.md) — contract-first guidance, test-diff-first review, oracles section
+- [Evals for agentic software development](../../training/evals-for-agentic-software-development.md) — multi-judge scoring, browser/performance checks
 - [AI PR and code review](../../workflows/ai-pr-code-review.md) — fresh-session review, self-review failure mode
 
 ## Key claims extracted

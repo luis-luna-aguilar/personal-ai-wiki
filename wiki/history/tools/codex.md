@@ -18,3 +18,7 @@
 - [2026-03-09] Codex Security launched in research preview, extending Codex into vulnerability review and validation workflows
 - [2026-04-21] OpenAI reframes Codex around app use, memory/preferences, image creation, and repeatable tasks
 - [2026-04-21] Codex Chronicle research preview — ambient screen memory; macOS Pro rollout
+
+## Archived from current page on 2026-10-19
+
+- [2026-04-28] OpenAI Symphony: described as an open-source Codex orchestration spec for defining, invoking, and coordinating Codex subagents; issue-tracker integration as the primary input surface; secondary coverage from The Code newsletter — verify spec details against primary OpenAI documentation

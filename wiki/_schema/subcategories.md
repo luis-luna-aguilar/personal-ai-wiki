@@ -6,7 +6,7 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
-Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`, `agent-sandbox-infra`, `coding-discipline-skill`, `knowledge-platform`, `web-data-extraction`
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`, `agent-sandbox-infra`, `coding-discipline-skill`, `knowledge-platform`, `web-data-extraction`, `domain-specialized-model`, `small-model`, `ai-e2e-testing`
 
 ### spec-driven-development
 - **Parent domain(s):** coding
@@ -212,6 +212,12 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Definition:** Small, narrow-purpose models built to solve a specific infrastructure or pipeline task (e.g. PII redaction, classification, embedding) rather than general-purpose generation or reasoning.
 - **Examples:** [OpenAI Privacy Filter](../models/openai-privacy-filter.md)
 
+### small-model
+- **Parent domain(s):** models
+- **Applies to types:** model
+- **Definition:** Small, fast, low-cost general-purpose models positioned for high-volume work, subagent roles, and context compaction rather than top-end capability; distinct from `utility-model` (narrow single-task models) and `frontier-model`.
+- **Examples:** [Claude Haiku 5.5](../models/claude-haiku-5-5.md), Gemini 3.5 Flash
+
 ### ai-music-generation
 - **Parent domain(s):** creative
 - **Applies to types:** tool
@@ -223,6 +229,18 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Applies to types:** tool
 - **Definition:** APIs and services that fetch, render, clean, and extract web pages or whole sites into agent-usable formats (Markdown, structured data, snapshots), including crawling and change tracking. Distinct from `computer-use` (operating UIs) and `document-intelligence` (PDFs, forms, files).
 - **Examples:** [Expand Fetch](../tools/expand-fetch.md)
+
+### domain-specialized-model
+- **Parent domain(s):** models, healthcare
+- **Applies to types:** model
+- **Definition:** Models fine-tuned for one profession's decisions or knowledge (clinical, legal, financial) and evaluated on that domain's tasks rather than general benchmarks; distinct from `utility-model`, which covers small models for a generic pipeline task such as PII redaction or embedding.
+- **Examples:** [MedDecider-27B](../models/meddecider-27b.md)
+
+### ai-e2e-testing
+- **Parent domain(s):** coding
+- **Applies to types:** tool
+- **Definition:** End-to-end testing frameworks in which an AI agent drives a web or mobile app through natural-language steps while deterministic assertions check the result; distinct from `agent-eval-tooling` (tools that evaluate agents) and `agentic-devops` (infrastructure provisioning, operation, and post-deploy verification).
+- **Examples:** [TesterArmy e2e](../tools/tester-army-e2e.md)
 
 ### Format
 

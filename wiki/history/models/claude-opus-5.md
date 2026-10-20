@@ -10,7 +10,9 @@ sources: [ainews-claude-opus-5-launch-2026-07-25, every-vibe-check-opus-5-2026-0
 
 # Claude Opus 5
 
-Anthropic's new flagship, launched 2026-07-24, superseding [Claude Opus 4.8](../history/models/claude-opus-4-8.md). Epoch's Capabilities Index puts it just behind Fable 5 (159 vs. 161) while tying Fable exactly on software-engineering capability (SWE-ECI 161 for both), at roughly half Fable's price. Practitioner reports are more divided than the benchmarks suggest: strong on hard coding and debugging grind, but harder to manage day-to-day than either Fable 5 or GPT-5.6 Sol.
+Anthropic's new flagship, launched 2026-07-24, superseding [Claude Opus 4.8](claude-opus-4-8.md). Epoch's Capabilities Index puts it just behind Fable 5 (159 vs. 161) while tying Fable exactly on software-engineering capability (SWE-ECI 161 for both), at roughly half Fable's price. Practitioner reports are more divided than the benchmarks suggest: strong on hard coding and debugging grind, but harder to manage day-to-day than either Fable 5 or GPT-5.6 Sol.
+
+**Superseded by [Claude Opus 5.5](../../models/claude-opus-5-5.md), October 2026.**
 
 ## Current status (as of 2026-07-28)
 
@@ -34,11 +36,12 @@ Anthropic's new flagship, launched 2026-07-24, superseding [Claude Opus 4.8](../
 
 ## Recent changes
 
+- [2026-10-20] Archived after Claude Opus 5.5 superseded it — see [Claude Opus 5.5](../../models/claude-opus-5-5.md).
 - [2026-07-28] Practitioner reception update: Every's team-wide testing confirms the model's unruliness but converges on a fix — give it a complete upfront brief, let it run, then evaluate the finished artifact rather than its narration
 - [2026-07-24] Launched: ECI 159, SWE-ECI 161 (tied with Fable 5), roughly half Fable 5's price; supersedes Claude Opus 4.8
 
 ## Sources
 
-- [AINews — Claude Opus 5: Fable-level performance at Opus price](../sources/newsletters/ainews-claude-opus-5-launch-2026-07-25.md)
-- [Every — Vibe Check: Claude Opus 5 is brilliant in flashes, frustrating in practice](../sources/newsletters/every-vibe-check-opus-5-2026-07-24.md)
-- [Every — Taming Opus 5](../sources/newsletters/every-taming-opus-5-2026-07-28.md)
+- [AINews — Claude Opus 5: Fable-level performance at Opus price](../../sources/newsletters/ainews-claude-opus-5-launch-2026-07-25.md)
+- [Every — Vibe Check: Claude Opus 5 is brilliant in flashes, frustrating in practice](../../sources/newsletters/every-vibe-check-opus-5-2026-07-24.md)
+- [Every — Taming Opus 5](../../sources/newsletters/every-taming-opus-5-2026-07-28.md)

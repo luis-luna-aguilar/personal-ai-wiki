@@ -22,7 +22,7 @@ AINews daily digest for 2026-08-13, covering "Frontier Model Day" — a same-day
 - [State of Models](../../state-of/models.md) — leader-line and Recent-changes updates
 - [State of Agents](../../state-of/agents.md) — Grok Bot added to Agent orchestration
 - [AI in Mathematics](../../trends/ai-in-mathematics.md) — added a caveated Recent-changes entry noting the unconfirmed claim
-- [Claude Sonnet 5](../../models/claude-sonnet-5.md) — added a note on Claude's text-watermarking/file-provenance rollout
+- [Claude Sonnet 5](../../history/models/claude-sonnet-5.md) — added a note on Claude's text-watermarking/file-provenance rollout
 - [State of Healthcare](../../state-of/healthcare.md) — new Google ResidencyRL bullet under Healthcare triage and patient operations
 
 ## Key claims extracted

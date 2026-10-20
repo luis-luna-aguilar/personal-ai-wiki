@@ -1,8 +1,8 @@
 ---
 title: Evals for workflow and task agents
 type: training
-as_of: 2026-08-25
-sources: [agents-evals-deep-research, every-benchmarks-dont-know-your-job-2026-08-25]
+as_of: 2026-10-17
+sources: [agents-evals-deep-research, every-benchmarks-dont-know-your-job-2026-08-25, leeknowlton-verifiable-work-2026-10-17]
 ---
 
 # Evals for workflow and task agents
@@ -81,6 +81,8 @@ Use simulation for:
 
 ## LLM-as-judge for qualitative dimensions
 
+A judge is also what decides whether a task can be delegated at all. Work an AI can verify can be scaled with little human attention; work that might be verifiable becomes delegable only once an AI judge has been shown, through its own evals, to grade it competently. Some judges are easy to build and some are hard enough not to be worth the effort, so estimate that cost before committing (Lee Knowlton, Oct 2026). See [AI work delegation modes](ai-work-delegation-modes.md).
+
 For dimensions like tone, helpfulness, and policy adherence — where there's no single correct answer — a capable secondary model can grade the primary agent's outputs at scale. Key safeguards:
 
 - **Calibrated rubrics:** specific, scored criteria rather than general quality questions. "Score 1 if the agent explicitly acknowledged the customer's complaint before proposing a resolution. Score 0 if it jumped directly to a solution." Specificity is the reliability mechanism.
@@ -111,9 +113,11 @@ Observability platforms (Braintrust, Langfuse) support trace ingestion and score
 
 ## Recent changes
 
+- [2026-10-17] Framed LLM-as-judge as the gate on delegation: a judge proven with evals turns maybe-verifiable work into delegable work (Lee Knowlton).
 - [2026-08-25] Added Evidence from practice: Mercor/Box CEO case for task-specific offline evals over leaderboard-chasing; KateBench's inflated acceptance rate (silent 40-suggestion cap, run-to-run noise); CentaurBench (best solo model ≠ best helper model, 5/7 tasks); Thinkingbox (65% single-attempt pass rate falls to 25% across 20 consecutive attempts).
 
 ## Sources
 
 - [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)
 - [Every — Benchmarks Don't Know Your Job](../sources/newsletters/every-benchmarks-dont-know-your-job-2026-08-25.md)
+- [Lee Knowlton — notes on using AI productively](../sources/tweets/leeknowlton-verifiable-work-2026-10-17.md)

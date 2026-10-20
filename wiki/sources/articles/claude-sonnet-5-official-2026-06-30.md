@@ -14,7 +14,7 @@ domains: [models, coding, agents]
 Anthropic launched Claude Sonnet 5 as its most agentic Sonnet model, emphasizing stronger planning, browser and terminal tool use, coding, reasoning, and knowledge-work performance. The model is available across Claude plans, Claude Code, and the Claude API as `claude-sonnet-5`; promotional pricing is $2/M input and $10/M output through 2026-08-31 before moving to $3/M input and $15/M output.
 
 ## Influenced pages
-- [Claude Sonnet 5](../../models/claude-sonnet-5.md) — official availability, pricing, API name, safety notes, and effort-level detail
+- [Claude Sonnet 5](../../history/models/claude-sonnet-5.md) — official availability, pricing, API name, safety notes, and effort-level detail
 - [State of Models](../../state-of/models.md) — Sonnet 5 status refresh
 - [State of Coding](../../state-of/coding.md) — Claude Code availability and agentic coding note
 

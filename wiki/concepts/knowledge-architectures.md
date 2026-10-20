@@ -3,8 +3,8 @@ title: Knowledge architectures
 type: concept
 domains: [agents]
 tags: [knowledge-cluster]
-as_of: 2026-09-07
-sources: [knowledge-layer-architecture, llm-wikis-paperwiki-2026-07-06, agent-memory-systems-layer-2026-06, femke-plantinga-company-brains-2026-08-27, ontologies-agentic-systems-2026-07-30, dhravyashah-supermemory-company-brain-2026-07-28, posthog-semantic-layer-2026-08-21, deeplethe-utopia-2026-09-09]
+as_of: 2026-10-19
+sources: [knowledge-layer-architecture, llm-wikis-paperwiki-2026-07-06, agent-memory-systems-layer-2026-06, femke-plantinga-company-brains-2026-08-27, ontologies-agentic-systems-2026-07-30, dhravyashah-supermemory-company-brain-2026-07-28, posthog-semantic-layer-2026-08-21, deeplethe-utopia-2026-09-09, helixdb-helix-foundry-2026-10-19]
 ---
 
 # Knowledge architectures
@@ -27,9 +27,10 @@ Every system in this cluster can be placed by asking three questions:
 | [Agent memory](agent-memory.md) | one agent, or one user's agents | episodic facts, preferences, and outcomes extracted from past sessions, managed as a lifecycle (extract, dedupe, reconcile, scope, expire) | the agent, under governed write rules | Supermemory, Engram, mem0, Letta (no tool pages yet) |
 | [Company brain](company-brain.md) | the organization | a *system*, not one store: a knowledge layer plus agent memory plus tool access plus a refresh loop that pulls signals, prunes, and answers | hybrid; agents draft, humans gate rule changes | GBrain, Slite Agent, Gorgias Cortex, Lovable capabilities, Cloudflare OS, Supermemory Company Brain |
 | [Semantic layer](semantic-layer.md) | the organization's data | definitions only: what each metric means, which tables to trust, how sources join, on top of an existing warehouse with no data copied | agents propose, humans approve; edits reset approval | PostHog semantic layer |
+| [Semantic layer](semantic-layer.md), local data-workspace variant | one person, over the organization's data | copied snapshots of the organization's records, matched across sources into one graph of objects and relationships, queried with SQL | an agent proposes the matching model and changes; the user confirms | [Helix Foundry](../tools/helix-foundry.md) |
 | [Ontologies as agent guardrails](ontology-agent-guardrails.md) | a domain | classes, relations, and axioms used as machine-checked rules that validate or constrain what an agent asserts or does | human-authored packs (schema.org, OWL, FOAF); agent-maintained upkeep is proposed, not proven | Neo4j's three-layer ontology stack, [Utopia](../tools/utopia.md) |
 
-The rows are not rivals. A company brain typically contains a knowledge layer and agent memory; a semantic layer or an ontology can sit under any of them as the governed definitions or rules the others read from.
+The data-workspace row is a variant of the semantic layer: both give agents one governed view of an organization's data to answer from, but the workspace copies the records and matches them across sources instead of only defining metrics over a warehouse that stays in place. The rows are not rivals. A company brain typically contains a knowledge layer and agent memory; a semantic layer or an ontology can sit under any of them as the governed definitions or rules the others read from.
 
 ## Term map
 
@@ -49,7 +50,8 @@ Look a term up here before proposing a page, tag, or subcategory. Aliases update
 | metrics layer, governed metric catalog | Semantic layer | aliases |
 | ontology, neurosymbolic AI, OWL/RDF guardrails | Ontologies as agent guardrails | the formal rule layer |
 | Neo4j's "semantic layer" | Ontologies as agent guardrails | Emil Eifrem uses "semantic layer" for a shared ontology substrate that agents consume. It is not the metric-definition [semantic layer](semantic-layer.md) above; the collision is noted on both pages |
-| knowledge graph | a data structure, not a concept | used by company brains (Zep/Graphiti), by ontology engines ([Utopia](../tools/utopia.md)), and by personal assistants ([Amazon Quick](../tools/amazon-quick.md)). Link to the page whose system uses it |
+| knowledge graph | a data structure, not a concept | used by company brains (Zep/Graphiti), by ontology engines ([Utopia](../tools/utopia.md)), by personal assistants ([Amazon Quick](../tools/amazon-quick.md)), and by local data workspaces ([Helix Foundry](../tools/helix-foundry.md)). Link to the page whose system uses it |
+| "one ontology" over company data, local-first data workspace | Semantic layer, local data-workspace variant | Helix Foundry's marketing term for the model it suggests by matching the same customers and records across connected sources. It has no axioms or machine-checked rules, so it is not the ontology row's sense; it is the matrix's data-workspace variant of the semantic layer. See [Helix Foundry](../tools/helix-foundry.md) |
 | context engineering | [Harness](harness.md) | the practice of assembling what goes into a model's context window; a technique, not a store |
 | RAG, vector store | a retrieval mechanism, not an architecture | Agent memory and Knowledge layer both contrast themselves with retrieval-only designs |
 | world model | the physical or video-prediction sense | canonical on [LeWorldModel](leworldmodel.md), [Cosmos 3](../models/cosmos-3.md), and [Physical AI deployment](../trends/physical-ai-deployment.md). DeepLethe markets [Utopia](../tools/utopia.md) as an "enterprise world model"; that is a marketing alias for an ontology-backed bitemporal knowledge graph and maps to the ontology row, not to this sense |
@@ -67,6 +69,7 @@ Look a term up here before proposing a page, tag, or subcategory. Aliases update
 
 ## Recent changes
 
+- [2026-10-19] Added a local data-workspace variant row under the semantic layer (one person, copied and matched organization records, SQL answers) with Helix Foundry as its example; mapped Helix Foundry's "one ontology" to that row rather than to the ontology row, and added it to the knowledge-graph row.
 - [2026-09-09] Utopia added as an ontology-row example and as the first recorded "world model" marketing alias, which the term map keeps on the ontology row.
 - [2026-09-09] Page created as the vocabulary hub for the knowledge, memory, company-brain, and ontology cluster, after the four existing pages had drifted into contradictory "this vs that" descriptions of each other.
 - [2026-08-21] Added the semantic-layer row (governed metric and data-source definitions over an existing warehouse) from PostHog's account, plus "context warehouse" and "metrics layer" term-map rows.
@@ -82,3 +85,4 @@ Look a term up here before proposing a page, tag, or subcategory. Aliases update
 - [Dhravya Shah on X — How to Build Your Company Brain in 5 Minutes](../sources/tweets/dhravyashah-supermemory-company-brain-2026-07-28.md)
 - [PostHog — Building a semantic layer](../sources/tweets/posthog-semantic-layer-2026-08-21.md)
 - [deeplethe/utopia (GitHub)](../sources/repos/deeplethe-utopia-2026-09-09.md)
+- [HelixDB/helix-foundry (GitHub)](../sources/repos/helixdb-helix-foundry-2026-10-19.md)

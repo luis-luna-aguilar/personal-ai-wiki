@@ -4,7 +4,7 @@ type: trend
 domains: [agents, coding]
 tags: [agentic]
 as_of: 2026-10-19
-sources: [ai-adoption-is-management, ramp-ai-adoption-playbook, mckinsey-agentic-org, stanford-labor-june-2026, anthropic-81k-economics, ainews-fable5-june-2026, anthropic-employment-report-2026-10]
+sources: [ai-adoption-is-management, ramp-ai-adoption-playbook, mckinsey-agentic-org, stanford-labor-june-2026, anthropic-81k-economics, ainews-fable5-june-2026, anthropic-employment-report-2026-10, karpathy-capability-funnel-2026-10-11, mckinsey-workforce-in-motion-2026-09]
 ---
 
 # AI labor-market effects
@@ -27,6 +27,17 @@ What adoption, productivity, and hiring data say about AI's effect on work: how 
   - Wage-productivity relationship is U-shaped: highest-paid workers (software developers, management) report the largest gains, but some lowest-wage workers also report large gains, often for side projects or new capabilities; mid-tier scientific and legal professionals are the least enthusiastic.
 - **[Agents' Last Exam](../benchmarks/agents-last-exam.md) (ALE, 2026):** Labor-market-aligned benchmark across 1,500+ tasks and 55 occupations. Top agents score 2.6% on the hardest tier. Provides a grounded counterpoint to displacement narratives: agents can do some professional tasks autonomously, but the hardest tier of real occupation-scoped work remains largely out of reach.
 - **Anthropic's internal employment report (October 2026).** The Anthropic Institute's study of its own workforce: juniors fell from 21% to 14% of technical headcount since early 2025 and from 27% to 9% of technical hires; roughly a third of ML and a fifth of SWE managers report hiring less due to AI. Following 192 engineers who adopted coding agents against 74 who didn't, code output rose sharply after adoption with no difference in deletion or revert rates between agent-written and human-written code; sales reps closed more deals after adopting agents (the authors flag possible selection). Revenue per employee runs 2–4× Meta's and Google's at the same company age. Administrative functions stayed small as the company tripled in size, and non-technical staff went from 2 to 90 coding-agent sessions a month.
+- **Exposure is a steep funnel, not a split (Karpathy, October 2026).** Andrej Karpathy's estimate: about 6B people (~75%) have barely touched LLMs; 1–2B (~20%) are casual free-tier users who treat them as a better search or writing aid, including many professionals outside math and code; about 20M (~0.2%) use frontier agents professionally in math and code and see weeks of work finished from a prompt; about 5,000 have internal access to unreleased systems. He traces the spread to problem ambition, capability that peaks in verifiable, commercially valuable domains, and access tier, and says the gap is widening.
+
+## Projected reallocation to 2035
+
+McKinsey Global Institute's "Workforce in motion" report (September 2026) is a ten-year US forecast rather than observed data. Its headline: the coming problem is mobility, not job scarcity.
+
+- **More jobs than automation removes, but different jobs.** Base case: automation absorbs or augments about 54% of current US work hours by 2035. Overwork relief, productivity-driven demand (the Jevons effect), new review and oversight tasks, and barriers to displacement offset about 60% of that, leaving a net 21% cut in labor demand, about 36 million jobs. Demographics, rising living standards, construction, energy, and the tech economy add about 41 million, including 0.5–2 million in occupations that do not exist yet.
+- **About 11 million workers (range 6–16 million) must change occupation.** That is roughly 770,000 moves a year across occupational groups, 3.6× the historical rate, sustained for a decade. Over three-quarters come from office and administrative support, retail and sales, and transportation and logistics. Lower-wage workers are 7.6× as likely to need to move as higher-wage workers; younger workers 1.6× as likely as prime-age workers.
+- **Exposure is not transition risk.** Risk is highest where demand falls and routes to growing work are weak, not where automation is highest. More than 70% of workers face some reinvention (over 15% of task time reallocated) whether their occupation grows, shrinks, or holds.
+- **Pathway quality is the constraint.** 14% of transitions are direct (strong skill overlap, no wage loss, under six months of training), 41% winding (under two years), 45% unpaved. Credentials are the largest barrier: 85% of growing jobs call for one, 38% by law, and 47% only because employers prefer it.
+- **Empowering skills are surging.** From 2022 to 2026, job-posting demand for AI fluency rose about 11×, adaptability about 5×, and willingness to learn, resilience, and curiosity about 3×. MGI sorts skills into essential (widely required, widen options), enabling (decision-making, critical thinking; unlock higher pay), and empowering (keep adapting).
 
 ## Related
 
@@ -38,6 +49,8 @@ What adoption, productivity, and hiring data say about AI's effect on work: how 
 
 - [2026-10-19] Page created, split out of [Agents reshape organizations](agents-reshape-organizations.md)'s "Adoption, labor, and economic evidence" subsection, which had grown into its own topic.
 - [2026-10-19] Added Anthropic's internal employment report: junior technical hiring share 27% → 9%, within-person productivity gains from coding-agent adoption with no measured quality drop.
+- [2026-10-11] Added Karpathy's capability funnel: ~75% barely touched LLMs, ~20% casual free-tier, ~0.2% professional frontier-agent users, ~5,000 with internal access.
+- [2026-09-29] Added McKinsey Global Institute's 2035 US reallocation forecast: ~11M occupation changes, 14% direct pathways, credentials on 85% of growing jobs, AI-fluency demand up ~11× since 2022.
 - [2026-06-16] Stanford 25,000-firm study: AI-exposed early-career workers (22-25) declining 3.8%/yr since 2022; junior software devs and customer service hardest hit; hollow pipeline concern is now data-backed
 - [2026-06-10] Added ALE benchmark: 1,500+ tasks, 55 occupations, 300+ domain experts; top agents 2.6% on hardest tier — measurement of the gap between benchmark coding performance and real occupational task performance
 
@@ -50,3 +63,5 @@ What adoption, productivity, and hiring data say about AI's effect on work: how 
 - [Anthropic 81K-person economics survey](../sources/articles/anthropic-81k-economics.md)
 - [AINews — Fable 5 / Mythos 5 launch (June 10)](../sources/newsletters/ainews-fable5-june-2026.md)
 - [How employment is changing at Anthropic (Anthropic Institute)](../sources/articles/anthropic-employment-report-2026-10.md)
+- [Andrej Karpathy on X — the LLM capability funnel](../sources/tweets/karpathy-capability-funnel-2026-10-11.md)
+- [McKinsey Global Institute — "Workforce in motion: Skills and pathways to future jobs in the United States"](../sources/articles/mckinsey-workforce-in-motion-2026-09.md)

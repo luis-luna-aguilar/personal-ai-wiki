@@ -3,8 +3,8 @@ title: AI work delegation modes
 type: training
 domains: [agents]
 tags: [agentic]
-as_of: 2026-08-27
-sources: [ai-work-splitting-2026-05-10, task-routing-cost-discipline-2026-05-13, every-after-automation-2026-05, every-chatgpt-openclaw-guides-2026-08-27]
+as_of: 2026-10-19
+sources: [ai-work-splitting-2026-05-10, task-routing-cost-discipline-2026-05-13, every-after-automation-2026-05, every-chatgpt-openclaw-guides-2026-08-27, leeknowlton-verifiable-work-2026-10-17, rieseberg-how-to-be-more-ambitious]
 ---
 
 # AI work delegation modes
@@ -38,6 +38,8 @@ The shift: the question is no longer "can I use AI here?" but "which mode fits t
 - **Document your delegation criteria**: when you hand off to an agent, write down what "done" looks like before starting. The `/goal` syntax in Claude Code formalizes this.
 - **Route by determinism and risk**: scripts for deterministic transformations, small models for cheap classification or drafting, frontier models for ambiguous synthesis, and humans for intent, taste, and accountability.
 - **Match the surface to the assignment size, not just the mode.** Every's updated ChatGPT guide maps OpenAI's merged app onto delegation granularity: quick questions stay in Chat, longer assignments move to Work, and software jobs go to Codex. `/goal` gives a persistent objective; ChatGPT projects (cloud) vs. local-folder projects is itself a delegation-mode choice (cloud continuity vs. filesystem access); Scheduled Tasks (Work) and Codex thread automations cover the proactive-loop end of delegation mode.
+- **Sort by AI-verifiability, and treat verifiability as something you can build.** The deciding question is whether an AI can independently tell if the work it just completed is good. If yes, design a verifier (or a set of them) and scale up freely: the human is no longer the bottleneck, so more tasks cost no more attention. If maybe, build an AI judge and test it with evals before trusting it; a judge that passes moves the work into delegation mode, but some judges are too hard to be worth building. If no, a human stays the judge: work one or two tasks at a time, avoid context switching, protect focus. Inside large unverifiable jobs, carve out the verifiable sub-tasks and delegate those, which is one practical answer to tasks that move between modes. (Lee Knowlton, Oct 2026)
+- **Delegate the outcome, not the task, and build the plumbing first.** The most durable delegation-mode workflows come from handing over the goal behind a stream of tasks, so the human stops feeding the agent one task at a time. Felix Rieseberg moved from asking Claude to fix individual crashes to asking it to keep his apps crash-free; that only worked after he gave it crash reports, a mapping from app versions to git commits, and Windows, macOS, and Linux machines on which to reproduce and verify fixes itself. Outcome-level delegation usually means changing the workflow so the agent can observe and check results on its own. (Oct 2026)
 
 ## Failure modes
 
@@ -59,6 +61,11 @@ The shift: the question is no longer "can I use AI here?" but "which mode fits t
 - How do you handle tasks that start as collaboration but transition to delegation mid-work (e.g., once the approach is agreed on)?
 - Does team size change the optimal split? (Small teams tend toward collaboration; larger orgs toward structured delegation)
 
+## Recent changes
+
+- [2026-10-19] Added the outcome-level delegation pattern (delegate the goal, then give the agent the data and machines to verify it), from Felix Rieseberg's crash-free example.
+- [2026-10-17] Added the verifiability sort: verifier for verifiable work, eval-tested AI judge for maybe-verifiable work, focused one-or-two-task human work otherwise, and carving out verifiable sub-tasks (Lee Knowlton).
+
 ## Related
 
 - [Agent evals](../concepts/agent-evals.md) — the benchmark-framing half of Every's "After Automation" argument; this page covers the task-delegation half
@@ -71,3 +78,5 @@ The shift: the question is no longer "can I use AI here?" but "which mode fits t
 - [Task routing and cost discipline — May 2026](../sources/newsletters/task-routing-cost-discipline-2026-05-13.md)
 - [After Automation — Dan Shipper (Every)](../sources/articles/every-after-automation-2026-05.md)
 - [Every — Our ChatGPT and OpenClaw Guides Just Got an Overhaul](../sources/newsletters/every-chatgpt-openclaw-guides-2026-08-27.md)
+- [Lee Knowlton — notes on using AI productively](../sources/tweets/leeknowlton-verifiable-work-2026-10-17.md)
+- [How to be more ambitious: a tutorial for humans with models — Felix Rieseberg](../sources/articles/rieseberg-how-to-be-more-ambitious.md)

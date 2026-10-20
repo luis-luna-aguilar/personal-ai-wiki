@@ -91,3 +91,17 @@
 ## Archived from current page on 2026-09-09 (3)
 
 - [2026-07-31] GPT-5.6: OpenAI cut Luna 80% and Terra 20%, added a Sol Fast tier, and disclosed using Sol to autonomously optimize its own serving kernels (-20% cost) and speculative decoder (+15% efficiency) — part of a broader trend putting GPT-5.4-equivalent intelligence at ~13x cheaper than four months ago.
+
+## Archived from current page on 2026-10-19 (1)
+
+- [2026-07-31] Thinking Machines shipped Inkling-Small (276B/12B MoE, Intelligence Index 40), a near-flagship-capability sibling to Inkling at roughly a quarter the active footprint.
+
+## Archived from current page on 2026-10-19 (2)
+
+- [2026-08-04] Qwen3.8-Max (Alibaba, 2.4T/~95B active) added to Open-weight models: #4 Frontend Code Arena, SWE-bench 87.3%, Terminal-Bench 2.1 67.4; open weights promised for Max + a 27B sibling; license reportedly restricts use in US/EU/UK/Korea.
+
+## Archived from current page on 2026-10-20
+
+- [2026-08-13] Qwen3.8-Max shipped open weights (2.4T/~95B active MoE), text-only initial drop; day-0 vLLM/Together/Baseten support.
+- [2026-08-13] DeepSeek V4 Pro reached general availability at $0.435/$0.87 pricing, +15.8% Terminal-Bench over preview; capability reception mixed versus Kimi/Flash.
+- [2026-08-12] Nemotron 3.5 Lightning (NVIDIA, 31.6B/3.6B active) added to Open-weight models: AA Intelligence Index 24, strong per-size agentic benchmarks, Harvey's Legal Agent Bench post-training result beating Opus 4.6 and Nemotron 3 Ultra.

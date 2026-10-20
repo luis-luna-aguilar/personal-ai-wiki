@@ -15,7 +15,7 @@ Follow-up to Every's Vibe Check, covering the wider team's weekend experience wi
 
 ## Influenced pages
 
-- [Claude Opus 5](../../models/claude-opus-5.md) — prompting guidance, practitioner-reception Recent-changes entry
+- [Claude Opus 5](../../history/models/claude-opus-5.md) — prompting guidance, practitioner-reception Recent-changes entry
 
 ## Key claims extracted
 

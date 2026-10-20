@@ -15,7 +15,7 @@ Paywalled-preview email announcing Every's full Opus 5 review. The free teaser: 
 
 ## Influenced pages
 
-- [Claude Opus 5](../../models/claude-opus-5.md) — practitioner-quirks framing, team verdict vs. Fable 5 and GPT-5.6 Sol
+- [Claude Opus 5](../../history/models/claude-opus-5.md) — practitioner-quirks framing, team verdict vs. Fable 5 and GPT-5.6 Sol
 
 ## Key claims extracted
 

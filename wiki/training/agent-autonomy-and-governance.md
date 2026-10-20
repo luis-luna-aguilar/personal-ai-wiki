@@ -3,8 +3,8 @@ title: Agent autonomy and governance
 type: training
 domains: [agents]
 tags: [agentic]
-as_of: 2026-08-28
-sources: [agents-evals-deep-research, mckinsey-agentic-org, ramp-ai-adoption-playbook, ai-for-boring-businesses, token-tightening-ai-finops-2026-06, every-ai-sandwich-april-2026, every-cheap-competence-after-automation-2026-05, every-33-questions-executives-2026-08-28, every-ai-adoption-levels]
+as_of: 2026-10-11
+sources: [agents-evals-deep-research, mckinsey-agentic-org, ramp-ai-adoption-playbook, ai-for-boring-businesses, token-tightening-ai-finops-2026-06, every-ai-sandwich-april-2026, every-cheap-competence-after-automation-2026-05, every-33-questions-executives-2026-08-28, every-ai-adoption-levels, karpathy-capability-funnel-2026-10-11, satyanadella-models-as-insider-risks-2026-10-10]
 ---
 
 # Agent autonomy and governance
@@ -51,6 +51,8 @@ Every (Mike Taylor / Laura Entis, June 2026) published an 8-level framework for 
 
 **Where people sit (Every consulting, August 2026):** most people are at levels 1–2 (chatbot use, co-working with AI in Docs or Excel). The level knowledge workers are actively moving to is "agentic" work (Codex, Claude Cowork, Claude Code, adopting skills and running several tasks at once). Everything above that is still largely experimental, up to level 8, where a manager AI orchestrates other AIs. Use the ladder to calibrate expectations rather than pushing every team toward the top.
 
+**The population-scale view (Andrej Karpathy, October 2026).** Karpathy describes the same spread across everyone as a funnel: about 75% of people have barely used an LLM, about 20% are casual free-tier users (including many professionals outside math and code, and executives who know the shift mostly second-hand), about 0.2% use frontier agents professionally in math and code, and a few thousand people see unreleased systems inside the labs. His three drivers double as enablement levers. Impact scales with the size and horizon of the problems people bring, so a team needs real, large problems to see the upside. Capability is jagged, peaking where work is digital, checkable and commercially valuable, so functions outside engineering should expect smaller gains. And access tier caps what anyone can see: views formed on last year's free chatbot understate what current paid agents do.
+
 This ladder measures how people and teams use AI; the autonomy ladder above measures how much an individual agent is trusted to act alone.
 
 ## Humans in the loop vs. above the loop
@@ -74,6 +76,19 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - **Split governance ownership explicitly.** A central AI team should own standards, security and vendor decisions, shared infrastructure, and the first few working examples; individual business teams should own their own workflows. Centralizing everything creates a bottleneck; leaving every team to build alone creates sprawl.
 - **Measure at the workflow level, never by a single metric.** Track cycle time, output quality, error/rework rate, user satisfaction (e.g. NPS), and traditional cost-benefit business impact — and track reuse of shared skills as a leading indicator. Establish a pre-AI baseline (time, quality standard, cost, common mistakes) before claiming a workflow improved.
 
+### Treat the model as an insider risk
+
+Satya Nadella (October 2026) argues agent governance should reuse the enterprise playbook for powerful insiders: establish identity, limit privileges, log activity, draw containment boundaries. Models are not assumed malicious, but any capable actor with access to important systems can err or be compromised. The central rule: the controls that decide what a model can access and do sit outside the model, separate from the [harness](../concepts/harness.md) that orchestrates it and from its action space (the set of actions it is allowed to take).
+
+- **Model diversity.** No single model is the sole dependency for an important outcome, or verifies its own work.
+- **Observe everything.** Every meaningful action leaves tamper-proof, human-readable evidence, so an outcome can be reproduced without the model attesting to it.
+- **Verifiability.** Test the whole system continuously, including failures, attacks, edge cases, and system changes, not only successful tasks.
+- **Independent controls and audit.** The organization sets access and permitted actions itself; validation is independent of the model being validated.
+- **Containment.** Assume compromise from the start; an authorized person can always pause or stop a model mid-task.
+- **Incident disclosure.** Failures are disclosed to those affected, with what failed and which controls broke, and lessons are shared across the industry.
+
+This complements the autonomy ladder above: the ladder decides how much authority an agent has earned; these controls make sure that authority is enforced and observable from outside the model. Nadella's summary: the most trustworthy system is the one that lets you trust the model least.
+
 ## Open questions
 
 - When does "above the loop" become viable for a given workflow? What's the minimum agent reliability threshold before removing humans from execution entirely?
@@ -82,6 +97,8 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 
 - [2026-10-19] Added Every's 8-level adoption maturity model from [Company-wide AI enablement](company-wide-ai-enablement.md), merged with the AI-fluency ladder that described the same framework.
 - [2026-10-19] Page created, split out of [Company-wide AI enablement](company-wide-ai-enablement.md): its "Autonomy ladder" and "Humans in the loop vs. above the loop" sections and the "Governance, autonomy, and reliability" proven-patterns group.
+- [2026-10-11] Added Karpathy's capability funnel (≈75% barely touched LLMs, ≈20% casual free-tier, ≈0.2% professional frontier-agent users) and its three drivers as the population-scale counterpart to Every's "where people sit".
+- [2026-10-10] Added "Treat the model as an insider risk": Satya Nadella's external-control principles (model diversity, observe everything, verifiability, independent controls and audit, containment, incident disclosure).
 
 ## Related
 
@@ -102,3 +119,5 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - [Every - Cheap competence and after automation](../sources/newsletters/every-cheap-competence-after-automation-2026-05.md)
 - [Every — 33 Questions Executives Ask About AI—Answered](../sources/newsletters/every-33-questions-executives-2026-08-28.md)
 - [AI Is Ready. Organizations Aren''t." — Every (June 7)](../sources/newsletters/every-ai-adoption-levels.md)
+- [Andrej Karpathy on X — the LLM capability funnel](../sources/tweets/karpathy-capability-funnel-2026-10-11.md)
+- [Satya Nadella — Models as Insider Risks in the Super Intelligence Era](../sources/tweets/satyanadella-models-as-insider-risks-2026-10-10.md)

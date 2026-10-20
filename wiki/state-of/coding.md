@@ -3,8 +3,8 @@ title: State of Coding
 type: state-of
 domains: [coding]
 tags: []
-as_of: 2026-08-03
-sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit, cursor-bugbot-learning, claude-code-routines, openai-codex-ongoing-tasks, orca-homepage, coding-agent-control-planes, claude-code-leak-architecture, cursor-3-orchestration-bet, skills-and-plugin-packaging-late-march, cursor-cloud-agents-march, claude-code-scheduled-tasks-march, codex-security-march, agentic-devops-deep-research, cursor-sdk-agent-runtime-2026-04-30, symphony-devin-terminal-orchestration-2026-04-28, end-of-finetuning-debate-2026-05-13, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, model-harness-fit-2026-05-13, agent-first-ide-convergence-may-2026, dynamic-workflows-claude-code, fable-ban-june-2026, spacex-cursor-june-2026, ainews-frontiercode-june-2026, ainews-not-much-happened-2026-07-02, every-sonnet-5-vibe-check-2026-07-02, the-code-devin-security-2026-07-02, every-tale-of-two-models-2026-07-05, claude-code-getting-started-with-loops-2026-06-30, claude-sonnet-5-official-2026-06-30, cursor-ios-mobile-app-2026-06, devinai-blog-windsurf-adaptive, devinai-blog-agentic-map-reduce, cognitioncom-blog-devin-fusion, every-copilot-studio-microsoft-2026-08-03]
+as_of: 2026-10-19
+sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit, cursor-bugbot-learning, claude-code-routines, openai-codex-ongoing-tasks, orca-homepage, coding-agent-control-planes, claude-code-leak-architecture, cursor-3-orchestration-bet, skills-and-plugin-packaging-late-march, cursor-cloud-agents-march, claude-code-scheduled-tasks-march, codex-security-march, agentic-devops-deep-research, cursor-sdk-agent-runtime-2026-04-30, symphony-devin-terminal-orchestration-2026-04-28, end-of-finetuning-debate-2026-05-13, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, model-harness-fit-2026-05-13, agent-first-ide-convergence-may-2026, dynamic-workflows-claude-code, fable-ban-june-2026, spacex-cursor-june-2026, ainews-frontiercode-june-2026, ainews-not-much-happened-2026-07-02, every-sonnet-5-vibe-check-2026-07-02, the-code-devin-security-2026-07-02, every-tale-of-two-models-2026-07-05, claude-code-getting-started-with-loops-2026-06-30, claude-sonnet-5-official-2026-06-30, cursor-ios-mobile-app-2026-06, devinai-blog-windsurf-adaptive, devinai-blog-agentic-map-reduce, cognitioncom-blog-devin-fusion, every-copilot-studio-microsoft-2026-08-03, dietrichgebert-ponytail, rauchg-gdp-ts-2026-10, tester-army-e2e]
 ---
 
 # State of Coding
@@ -57,8 +57,23 @@ Toolkits that package a developer platform's docs, schemas, validation, and rela
 
 - [Shopify AI Toolkit](../tools/shopify-ai-toolkit.md) — Shopify packages platform docs, API schemas, and validation for Claude Code, Codex, Cursor, Gemini CLI, and VS Code via plugin, skills, or local Dev MCP; Codex support is skills/MCP only; reframed as an example of "agent-ready SaaS" — product context and actions packaged for user-chosen external agents *(as of 2026-06-29)*
 
+### Coding discipline skills
+
+Packages that make coding agents follow a discipline across hosts, through a skill plus enforcement such as lint rules or types, rather than packaging one platform's docs.
+
+- [Ponytail](../tools/ponytail.md) — cross-agent "write only what the task needs" skill; maintainer's agentic benchmark reports -54% LOC and -20% cost at 100% safety *(as of 2026-09-09)*
+- [gdp-ts](../tools/gdp-ts.md) — TypeScript library, lint preset, and agent skill that make skipped or mismatched authorization checks a compile error *(as of 2026-10-19)*
+
+### AI end-to-end testing
+
+Testing frameworks in which an agent drives a web or mobile app through natural-language steps while deterministic assertions check the result.
+
+- [TesterArmy e2e](../tools/tester-army-e2e.md) — open-source; natural-language agent steps plus deterministic assertions for web and mobile apps, with verified agent steps replayed without model calls *(as of 2026-10-19)*
+
 ## Recent changes
 
+- [2026-10-19] New "AI end-to-end testing" section (new `ai-e2e-testing` subcategory) with TesterArmy e2e: agent-driven end-to-end tests for web and mobile that record verified agent steps and replay them without model calls.
+- [2026-10-19] New "Coding discipline skills" section: gdp-ts (compile-time authorization proofs for TypeScript, with an agent skill) joins Ponytail.
 - [2026-08-03] Codex usage reportedly grew from ~6-7M to ~10M users within a week of the GPT-5.6 Sol launch; Pragmatic Engineer's May 2025-Feb 2026 survey found Claude Code the most-used AI coding tool at 63% of respondents, with GitHub Copilot losing the category lead it held since inventing it in 2021; separately, an Every hands-on account described Microsoft's Copilot Studio (no-code agent builder, distinct from the consumer Copilot app and GitHub Copilot) as capable but confusingly onboarded — secondary account, mostly paywalled.
 - [2026-07-14] OpenAI folded Codex into a ChatGPT "superapp" (Chat/Work/Codex modes), drawing power-user backlash but reaching an estimated 6-7M users, ~10x growth year-to-date; Anthropic countered with a Claude Code browser, a third Fable 5 access extension, and higher Claude Code limits; Cursor 3.11 added side chats.
 - [2026-07-14] Windsurf (Cognition) shipped Adaptive model router, transparent per-token pricing in the model picker, and removed daily quota limits for Max users.
@@ -67,5 +82,3 @@ Toolkits that package a developer platform's docs, schemas, validation, and rela
 - [2026-06-30] Cursor iOS beta adds mobile launch/control for always-on cloud agents and desktop agents.
 - [2026-06-30] Official Sonnet 5 launch confirms Claude Code availability and `claude-sonnet-5` API access.
 - [2026-06-30] Anthropic published a Claude Code loop taxonomy tying task type to primitives: turn-based prompts, `/goal`, `/loop` or `/schedule`, and proactive routines composed with skills, dynamic workflows, and auto mode.
-- [2026-06-29] Devin Fusion (preview): multi-model "sidekick" harness matches frontier performance at 35% lower cost on FrontierCode Extended; Devin added to the Terminal coding agent subcategory alongside the newly documented Agentic MapReduce architecture.
-- [2026-06-17] SpaceX acquires Cursor ($60B all-stock); Cursor Origin launched (agent-native git/code hosting); jointly trained xAI model coming to both Cursor and Grok Build — completes a model + IDE + hosting vertical stack

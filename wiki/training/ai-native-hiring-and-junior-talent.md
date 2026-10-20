@@ -3,7 +3,7 @@ title: AI-native hiring and the junior talent pipeline
 type: training
 domains: [coding]
 as_of: 2026-10-19
-sources: [the-code-2026-04-23, shopify-latent-space-april-2026, lennysan-simonw-interview, mckinsey-agentic-org, stanford-labor-june-2026, anthropic-employment-report-2026-10]
+sources: [the-code-2026-04-23, shopify-latent-space-april-2026, lennysan-simonw-interview, mckinsey-agentic-org, stanford-labor-june-2026, anthropic-employment-report-2026-10, mckinsey-workforce-in-motion-2026-09]
 ---
 
 # AI-native hiring and the junior talent pipeline
@@ -18,6 +18,7 @@ Traditional coding interviews became obsolete once Claude Code and Codex started
 - **Evaluate product taste and architectural judgment.** The signal shifts from "did they remember the API?" to "what did they build, what tradeoffs did they make, and why?"
 - **Calibration gets harder.** Open-ended interviews are more subjective and require stronger debrief discipline, but they also surface standout strengths that leetcode-style filters miss.
 - **Autonomy and judgment over domain depth.** Anthropic's analysis of its own interviewer scorecards (October 2026) finds the biggest gains in comments on candidates' autonomy and judgment, while domain expertise shrank as a share of assessment. Mentions of a candidate's AI-tooling track record tripled for technical roles and quadrupled for non-technical roles between 2024 and 2026, from ~5–7% of assessments. One manager: "I expect models to continue to be jagged, so for my team I want them to be fungible across domains."
+- **Screen on demonstrated skills, not proxies.** McKinsey Global Institute (September 2026) finds that 47% of growing US jobs carry a credential employers prefer but the law does not require, and that candidates with transferable skills are often screened out by subjective signals. Its remedy fits the build-interview approach: consistent interview criteria, practical assessments, explicit skill definitions, and resetting degree requirements.
 
 Practical implication: interview loops now need to test whether a candidate can direct AI well, make coherent architectural calls, and produce something that feels product-ready, not whether they can outperform a coding agent at syntax recall.
 
@@ -44,6 +45,8 @@ The hollow pipeline concern is now data-backed: if the entry-level disappears, t
 - Junior employment slowed most in jobs where Claude handles the most complex tasks
 - The authors note that internal redeployment protects incumbents but does nothing for juniors who are never hired
 
+**McKinsey Global Institute (September 2026):** software-developer job postings have risen about 15% since early 2025, after falling from their 2022 peak, but the openings are concentrated in senior and AI-oriented roles. Economy-wide, younger workers are about 1.6× as likely as prime-age workers to need to change occupation by 2035 (see [AI labor-market effects](../trends/ai-labor-market-effects.md)).
+
 ## Related
 
 - [AI enablement — software development](ai-enablement-software-development.md) — broader engineering adoption patterns
@@ -53,6 +56,7 @@ The hollow pipeline concern is now data-backed: if the entry-level disappears, t
 
 - [2026-10-19] Page created, split out of [AI enablement — software development](ai-enablement-software-development.md)'s "Hiring AI-native engineers" and "The junior talent problem" sections.
 - [2026-10-19] Added Anthropic's internal employment data: junior technical hires 27% → 9%, managers hiring less due to AI, and scorecards shifting from domain expertise to autonomy and judgment.
+- [2026-09-29] Added McKinsey Global Institute data: 47% of growing jobs have employer-preferred credentials (case for skills-based screening); developer postings up ~15% since early 2025, concentrated in senior and AI-oriented roles.
 
 ## Sources
 
@@ -62,3 +66,4 @@ The hollow pipeline concern is now data-backed: if the entry-level disappears, t
 - [McKinsey — "AI is Everywhere. The Agentic Organization Isn't Yet."](../sources/articles/mckinsey-agentic-org.md)
 - [Stanford AI labor market data — June 2026](../sources/newsletters/stanford-labor-june-2026.md)
 - [How employment is changing at Anthropic (Anthropic Institute)](../sources/articles/anthropic-employment-report-2026-10.md)
+- [McKinsey Global Institute — "Workforce in motion: Skills and pathways to future jobs in the United States"](../sources/articles/mckinsey-workforce-in-motion-2026-09.md)

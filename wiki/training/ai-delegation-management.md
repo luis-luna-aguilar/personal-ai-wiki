@@ -3,8 +3,8 @@ title: AI delegation management
 type: training
 domains: [agents, training]
 tags: [agentic]
-as_of: 2026-08-19
-sources: [management-as-ai-superpower-2026-07, andy-matuschak-agent-loop-tempo-2026-07, design-layer-framework-2026-08-04, vibe-coded-security-risk-2026-08-10, securing-ai-employee-guide-2026-08-14, next-era-of-great-work-2026-08-16, engineering-team-cost-of-codex-2026-08-19]
+as_of: 2026-10-19
+sources: [management-as-ai-superpower-2026-07, andy-matuschak-agent-loop-tempo-2026-07, design-layer-framework-2026-08-04, vibe-coded-security-risk-2026-08-10, securing-ai-employee-guide-2026-08-14, next-era-of-great-work-2026-08-16, engineering-team-cost-of-codex-2026-08-19, rieseberg-how-to-be-more-ambitious]
 ---
 
 # AI delegation management
@@ -32,6 +32,21 @@ Working with agents is increasingly a management skill: define the job, explain 
 
 - **Run a roster of named specialist agents, not one generalist.** Every profiled Naveen Naidu, the one-person team behind the Monologue app, who manages distinct Codex-project "agents" — engineer agents by discipline, a customer-support agent, a growth-strategist agent — each configured with its own `AGENTS.md`, skills, memory, and codebase context that turns it into a specialist. GPT-5.6 let him move from manually copying context between projects to instructing one agent to hand context directly to another and kick off a task there — the agent equivalent of a direct report passing an assignment to a coworker. Worked example: his support agent (reading live tickets from Fin) handled a bug report by opening a separate worktree, fixing the issue, and opening a PR, without Naveen relaying anything by hand. **Dispatch-desk triage recipe:** keep one thread per project to handle incoming tasks (don't spin up a new thread per ticket); decide upfront what the agent can resolve itself versus route elsewhere; when a request needs another specialist, tell the current agent which project should take it and what's needed back, using a short handoff template ("Review this issue, create a new worktree in [project] to [complete the task], and [produce the deliverable]"). (Naveen Naidu / Every, Aug 2026)
 
+## Raising the ambition of a delegation
+
+Delegating the same task faster is the default use of a model. Felix Rieseberg (Oct 2026) names three other directions, each with a different question to ask before handing work off:
+
+- **Altitude: delegate the outcome behind the task.** Ask "what do you want to happen next?" and hand that over instead: not "fix this crash" but "keep the app crash-free". Fits work aimed at an outcome (a good sign is that it would otherwise generate meetings); fits creative work less well. See [AI work delegation modes](ai-work-delegation-modes.md) for the plumbing it needs.
+- **Depth: demand the expert's method, not the expert's vocabulary.** Insist on the instruments specialists use (a database and a statistical model, not a markdown table); set targets that look unreasonable (200 ms, not 5 s) and say they are reachable; have the model re-test the team's own beliefs against raw data ("we believe churn is an onboarding problem; try to reproduce that"); then ask for something new, such as an early signal that predicts on held-out data.
+- **Range: bring in fields the task would not normally touch.** Restate the deliverable as verbs (a quarterly review is "getting busy people to believe a story about cause and effect and decide under uncertainty in 30 minutes"), then ask which disciplines a dream team would include, adversarial ones too (a short seller, a forensic accountant).
+- **Use an outside judge.** Depth only pays off if something other than the model confirms the result, ideally a check the model can run itself.
+
+A reusable prompt for depth:
+
+> I want a deeper version of this task, not a bigger one. Before rewriting it: (1) say what a top professional in this field would do here that I'm not asking for; (2) name the rawest material they would start from instead of what has already been digested for me; (3) name the specific methods and tools they would use; (4) say what, other than you or me, would show the result is right. Then rewrite my prompt to ask for exactly that.
+
+All three directions assume the agent has a computer, can install software, and can reach the relevant data.
+
 ## Failure modes
 
 - Delegating vague work where the desired output is specific but unstated.
@@ -39,9 +54,11 @@ Working with agents is increasingly a management skill: define the job, explain 
 - Treating speed as success when review and correction consume the saved time.
 - **Constraint drift.** AI output quality drifts as models, inputs, and context change; a setup that works well on day one can quietly degrade by month three with no obvious trigger unless someone deliberately re-checks output against the original spec on a schedule.
 - **Happy-path-only testing plus the illusion of explanatory depth.** A non-expert who tests only the intended-use path, then reads an agent's fluent, followable reasoning and mistakes "I can follow this" for "the right questions were asked," ships work whose adversarial cases were never checked. Case in point: a writer built and shipped an MCP connector for a small app with Claude's help, tested that it worked, and only learned it had a public, unauthenticated registration route when a second model reviewed the same code cold weeks later. Mitigation: learn the field's basics before delegating consequential work, get a human expert review, and don't let the same system's self-assessment be the only evidence a feature is safe.
+- **Role play instead of method, and self-grading.** Asking a model to "write like a short seller" changes the transcript, not the outcome; ask it to do what a short seller does to research a position. Likewise, a model asked to judge its own work is not evidence the work is right; insist on an outside check.
 
 ## Recent changes
 
+- [2026-10-19] Added "Raising the ambition of a delegation": Felix Rieseberg's altitude, depth, and range directions, a reusable "deeper, not bigger" prompt, and a failure mode for role play and self-grading.
 - [2026-08-19] Added the specialist-agent-roster pattern and dispatch-desk triage recipe from a solo builder running several named Codex "team members," each with its own AGENTS.md, skills, and memory.
 - [2026-08-14] Added Every's four-layer access-control framework for always-on agents (least access, programmatic controls, prompt-based controls, observability), via the Claudie chief-of-staff case study.
 - [2026-08-10] Added a failure-mode case study on happy-path-only testing plus the illusion of explanatory depth (a vibe-coded MCP connector security hole).
@@ -61,3 +78,4 @@ Working with agents is increasingly a management skill: define the job, explain 
 - ["How to Secure an AI Employee" (Every guide announcement)](../sources/newsletters/securing-ai-employee-guide-2026-08-14.md)
 - ["The Next Era of Great Work" (Every weekly digest)](../sources/newsletters/next-era-of-great-work-2026-08-16.md)
 - [An Engineering Team for the Cost of Codex](../sources/articles/engineering-team-cost-of-codex-2026-08-19.md)
+- [How to be more ambitious: a tutorial for humans with models — Felix Rieseberg](../sources/articles/rieseberg-how-to-be-more-ambitious.md)

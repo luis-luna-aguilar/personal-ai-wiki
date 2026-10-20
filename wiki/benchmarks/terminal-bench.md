@@ -32,7 +32,7 @@ Terminal-Bench has multiple non-comparable variants (2.0, 2.1, Hard); scores bel
 | [GPT-5.5](../models/gpt-5-5.md) | 2.0 | 82.7% | 2026-05-06 |
 | [Qwen 3.6 27B](../models/qwen-3-6-27b.md) | 2.0 | 59.3% | 2026-05-01 |
 | [Composer 2](../history/models/composer-2.md) (historical) | 2.0 | 61.7% | 2026-03-23 |
-| [Claude Opus 4.8](../history/models/claude-opus-4-8.md) (historical, superseded by [Claude Opus 5](../models/claude-opus-5.md)) | Hard | gains reported; no exact score published | 2026-06-04 |
+| [Claude Opus 4.8](../history/models/claude-opus-4-8.md) (historical, superseded by [Claude Opus 5](../history/models/claude-opus-5.md), itself since superseded by [Claude Opus 5.5](../models/claude-opus-5-5.md)) | Hard | gains reported; no exact score published | 2026-06-04 |
 | [Cohere Command A+](../models/cohere-command-a-plus.md) | Hard | 3% → 25% (vs. Command A Reasoning) | 2026-05-21 |
 
 ## Why it matters

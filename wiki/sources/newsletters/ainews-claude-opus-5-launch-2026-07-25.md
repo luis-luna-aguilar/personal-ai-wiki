@@ -15,7 +15,7 @@ AINews's launch-day recap of Claude Opus 5, aggregating Twitter/Reddit reaction.
 
 ## Influenced pages
 
-- [Claude Opus 5](../../models/claude-opus-5.md) — new page; launch benchmark numbers
+- [Claude Opus 5](../../history/models/claude-opus-5.md) — new page; launch benchmark numbers
 - [State of Models](../../state-of/models.md) — leader-line swap from Opus 4.8
 
 ## Key claims extracted

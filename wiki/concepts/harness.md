@@ -107,6 +107,7 @@ Context-editing research lives on [Agent memory](agent-memory.md) and skill-retr
 - [Ontologies as agent guardrails](ontology-agent-guardrails.md) — a distinct, formally rule-based control mechanism that sits inside the harness's control/evaluation layer alongside prompts, evals, and permission logic
 - [Agent runtime platforms](agent-runtime-platforms.md) — managed platforms, execution runtimes, fleet governance, and distribution around the harness
 - [Automated harness optimization](automated-harness-optimization.md) — systems that improve the harness automatically: hill-climbing with evals, per-task refinement, self-modifying harnesses
+- [Agent autonomy and governance](../training/agent-autonomy-and-governance.md) — governance layer around the harness, including Nadella's rule that access and action controls sit outside both the model and the harness
 
 ## Sources
 

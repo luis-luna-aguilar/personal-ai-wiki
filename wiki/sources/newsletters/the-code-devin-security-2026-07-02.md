@@ -14,7 +14,7 @@ The Code covers Devin Security Swarm, ZCode for GLM-5.2, Sonnet 5 cost-per-task 
 
 ## Influenced pages
 
-- [Claude Sonnet 5](../../models/claude-sonnet-5.md) - cost-per-task caveat
+- [Claude Sonnet 5](../../history/models/claude-sonnet-5.md) - cost-per-task caveat
 - [Devin](../../tools/devin.md) - Security Swarm
 - [GLM-5.2](../../history/models/glm-5-2.md) - ZCode ecosystem
 

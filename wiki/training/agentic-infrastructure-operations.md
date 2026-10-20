@@ -2,8 +2,8 @@
 title: Agentic infrastructure operations
 type: training
 domains: [agents, coding]
-as_of: 2026-04-24
-sources: [agentic-devops-deep-research]
+as_of: 2026-10-19
+sources: [agentic-devops-deep-research, devinai-blog-introducing-devin-oncall]
 ---
 
 # Agentic infrastructure operations
@@ -62,6 +62,10 @@ Verification should continue after the action. A safe infra loop is:
 4. execute in a controlled runtime
 5. verify outcome against the original intent
 
+## Evidence from practice
+
+- **Devin Oncall (Cognition, October 2026)** is the first production-scale case on this page. Cognition's account of why earlier agents failed at production debugging matches the ladder above: they declared answers too early, explored too narrowly, and reached for large code changes instead of simple mitigations such as rollbacks and scale-ups. Its fixes are structural rather than prompt-only: a second review agent checks whether conclusions follow from the evidence (a recent deploy is a lead, not a cause); a parent agent deduplicates the alert stream so each investigation starts with fresh context; and per-org memory and generated skills cache environment knowledge, so context is configured upfront and shared rather than supplied by each engineer. Autonomy is graduated in practice: at Reducto, Devin often remediates medium-severity issues, or opens and tests a PR, before paging an engineer for review; at AngelList it handles half of incidents end-to-end. See [Devin](../tools/devin.md).
+
 ## Failure modes
 
 - Treating diagnosis success as proof that mutation is safe
@@ -69,6 +73,7 @@ Verification should continue after the action. A safe infra loop is:
 - Letting agents execute generated scripts on shared hosts
 - Using custom wrappers everywhere and losing auditability and portability
 - Treating infrastructure changes as complete when the command returned 0 instead of when the system state is actually verified
+- Accepting the first plausible root cause; without a separate reviewer challenging the investigation, an engineer ends up having to say "dig deeper"
 
 ## Open questions
 
@@ -76,6 +81,11 @@ Verification should continue after the action. A safe infra loop is:
 - What evidence is sufficient to promote an infrastructure agent toward narrower pockets of bounded autonomy?
 - Where should policy enforcement live: tool wrapper, runtime, cluster policy layer, or all three?
 
+## Recent changes
+
+- [2026-10-19] Added Devin Oncall as the first production evidence: review agent against premature conclusions, alert-stream deduplication, shared org memory, severity-graduated autonomy; new failure mode on stopping at the first plausible root cause.
+
 ## Sources
 
 - [Agentic infrastructure and operations](../sources/deep-research/agentic-devops-deep-research.md)
+- [Cognition — Introducing Devin Oncall](../sources/articles/devinai-blog-introducing-devin-oncall.md)

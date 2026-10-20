@@ -4,7 +4,7 @@ type: concept
 domains: [agents]
 tags: [agentic, knowledge-cluster]
 as_of: 2026-08-21
-sources: [posthog-semantic-layer-2026-08-21]
+sources: [posthog-semantic-layer-2026-08-21, helixdb-helix-foundry-2026-10-19]
 ---
 
 # Semantic layer
@@ -33,11 +33,14 @@ Agent hallucination on business metrics is a governance problem, not a model-cap
 - [Knowledge layer](knowledge-layer.md) — compiles raw documents into LLM-maintained pages for reading; a semantic layer governs metric and data-source *definitions* over an existing warehouse and copies no data
 - [Ontologies as agent guardrails](ontology-agent-guardrails.md) — another governed-ground-truth mechanism, formalized as classes and axioms rather than a metrics catalog
 - [Company brain](company-brain.md) — the organization-scope system a semantic layer can sit under as the definitions its agents read from
+- [Helix Foundry](../tools/helix-foundry.md) — the hub's local data-workspace variant: one person's workspace that copies the organization's records into snapshots and matches them across sources, rather than defining metrics over a warehouse in place
 
 ## Recent changes
 
+- [2026-10-19] Linked the local data-workspace variant (Helix Foundry) now recorded under this row on the Knowledge architectures hub.
 - [2026-08-21] Page created from PostHog's account of building a semantic layer into its context warehouse.
 
 ## Sources
 
 - [PostHog — Building a semantic layer](../sources/tweets/posthog-semantic-layer-2026-08-21.md)
+- [HelixDB/helix-foundry (GitHub)](../sources/repos/helixdb-helix-foundry-2026-10-19.md)

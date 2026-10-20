@@ -3,8 +3,8 @@ title: State of Healthcare
 type: state-of
 domains: [healthcare]
 tags: []
-as_of: 2026-08-13
-sources: [legacy-ai-tools-roadmap-xlsx, dragon-copilot-launch, hippocratic-ai-homepage, tempus-homepage, zocdoc-zo, open-evidence-homepage, konko-kora-homepage, elevenlabs-scribe, 2026-06-16-metalearn-mystery-fatigue-ai, midjourney-medical-scanner-2026-06, ai-healthcare-triage-doctronic-2026-05, mistral-document-ai, bfl-flux-3-2026-07-24, ainews-spacexai-grok-46-and-grok-bot-2026-08-13]
+as_of: 2026-10-19
+sources: [legacy-ai-tools-roadmap-xlsx, dragon-copilot-launch, hippocratic-ai-homepage, tempus-homepage, zocdoc-zo, open-evidence-homepage, konko-kora-homepage, elevenlabs-scribe, 2026-06-16-metalearn-mystery-fatigue-ai, midjourney-medical-scanner-2026-06, ai-healthcare-triage-doctronic-2026-05, mistral-document-ai, bfl-flux-3-2026-07-24, ainews-spacexai-grok-46-and-grok-bot-2026-08-13, lion-ai-meddecider-27b, maziyarpanahi-openmed]
 ---
 
 # State of Healthcare
@@ -30,6 +30,11 @@ Current state of AI in healthcare — clinical documentation, medical knowledge 
 - [Zo](../tools/zo.md) — Zocdoc's patient-access and scheduling phone assistant *(as of 2026-04-22)*
 - [OpenEvidence](../tools/open-evidence.md) — physician-oriented evidence and medical-answer layer *(as of 2026-04-22)*
 - [Kora](../tools/kora.md) — healthcare operations assistant for scheduling and patient-service workflows *(as of 2026-04-22)*
+- [OpenMed](../tools/openmed.md) — open-source, local-first SDK for clinical NER and PII de-identification on laptops, phones, browsers, and self-hosted services; Apache-2.0 *(as of 2026-10-19)*
+
+### Domain-specialized models
+
+- [MedDecider-27B](../models/meddecider-27b.md) — open-weight medical decision model returning calibrated probabilities for note checks, trial eligibility, and exam questions; passes every Polish medical licensing exam session 2008–2026; research use, CC BY-NC *(as of 2026-10-19)*
 
 ### Document intelligence
 
@@ -49,6 +54,8 @@ AI products specialized for extracting, structuring, querying, or reasoning over
 
 ## Recent changes
 
+- [2026-10-19] Added MedDecider-27B, the first medical-specialized model on the dashboard: calibrated per-option probabilities for clinical decisions, strongest on robustness and planted-instruction resistance.
+- [2026-10-19] Added OpenMed, the first open-source, on-device entry: clinical NER and de-identification across Python, Apple, Android, browser, and REST runtimes.
 - [2026-08-13] Added Google's ResidencyRL — RL training over simulated telehealth encounters lifted diagnostic accuracy under adversarial conditions from 81% to 88% (secondary source; no primary writeup).
 - [2026-07-22] Health in ChatGPT rolled out in the U.S. — connects Apple Health and medical records, with encryption and training/ad-targeting exclusions for connected health data.
 - [2026-06-18] Midjourney Medical Scanner added as a speculative imaging-infrastructure signal with strong validation and regulatory caveats.
@@ -67,4 +74,5 @@ AI products specialized for extracting, structuring, querying, or reasoning over
 - [Konko Kora official page](../sources/articles/konko-kora-homepage.md)
 - [ElevenLabs Scribe speech-to-text page](../sources/articles/elevenlabs-scribe.md)
 - [AINews — SpaceXAI Grok 4.6 and Grok Bot (Google ResidencyRL)](../sources/newsletters/ainews-spacexai-grok-46-and-grok-bot-2026-08-13.md)
-
+- [MedDecider-27B model card](../sources/repos/lion-ai-meddecider-27b.md)
+- [OpenMed GitHub repository](../sources/repos/maziyarpanahi-openmed.md)
