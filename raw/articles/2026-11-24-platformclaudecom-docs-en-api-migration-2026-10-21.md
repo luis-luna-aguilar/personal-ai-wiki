@@ -1,0 +1,213 @@
+---
+title: Migrating to API version 2026-10-21
+type: source
+source_type: article
+url: https://platform.claude.com/docs/en/api/migration-2026-10-21
+fetched: 2026-11-24
+---
+
+# Migrating to API version 2026-10-21
+
+This guide lists the code changes for moving from API version `2023-06-01` to `2026-10-21`. The [upgrade steps](#migration-checklist) say what to do, in order.
+
+Claude Code
+
+The easiest way to upgrade your code
+
+Run in
+
+`❯/claude-api api-version`
+
+
+
+## Upgrade steps
+
+1. 1
+
+   ### Switch to 2026-10-21
+
+   If you use an SDK, your requests use the API version that was current when your SDK’s major version was released. The versions shown for your language are the first to use `2026-10-21`, so upgrade to them. If you call the API without an SDK, set the `anthropic-version` header to `2026-10-21`.
+
+   Upgrade the `anthropic` package to version 2.0.0.
+
+   
+
+   On Amazon Bedrock, `2026-10-21` is available only for Claude 4.7 and later models. You might call a model numbered 4.6 or lower on Bedrock (see [Claude on Amazon Bedrock (`bedrock-runtime`)](/docs/en/build-with-claude/claude-on-amazon-bedrock-legacy)). If so, keep those calls on the API version they use today. If you use an SDK, stay on the SDK version you use today. If you set the API version yourself, keep sending the version you send today. To move those calls to `2026-10-21`, first switch them to a Claude 4.7 or later model.
+
+   Release the upgrade together with your fixes from the next step.
+2. 2
+3. 3
+
+   ### Test against 2026-10-21
+
+   Test your integration against `2026-10-21` before you release.
+
+## Breaking changes
+
+### Messages API
+
+These changes apply to requests to the Messages API (`POST /v1/messages`), to [token counting](/docs/en/build-with-claude/token-counting), and to each request in a [Message Batch](/docs/en/build-with-claude/batch-processing) created with `2026-10-21`.
+
+#### Document blocks in assistant messages return an error
+
+Affects you if you send `document` blocks directly in `assistant` messages.
+
+In `2026-10-21`, a request that places a `document` block directly in an `assistant` message returns a 400 error. Send documents in `user` messages instead. A document nested inside another block, such as a web fetch tool result that Claude returned, is still accepted.
+
+#### Citations in user messages return an error
+
+Affects you if you send `citations` on `text` blocks in `user` messages, including inside `search_result` blocks.
+
+In `2026-10-21`, a request that sends a `text` block with a non-empty `citations` array in a `user` message returns a 400 error. Remove `citations` from those blocks. Citations on `text` blocks in `assistant` messages, such as Claude’s earlier replies that you send back, are still accepted, and so is the `"citations": {"enabled": true}` setting on documents and search results.
+
+#### Sampling parameters are removed
+
+Affects you if you send `temperature`, `top_p`, or `top_k` in Messages requests or Message Batch requests.
+
+In `2026-10-21`, a request that sends `temperature`, `top_p`, or `top_k` returns a 400 error, even at the parameter’s default value.
+
+Remove the three parameters from your requests.
+
+As of the latest major versions, the SDK and the CLI no longer have the three parameters.
+
+Without these parameters, a request samples with their defaults, including a `temperature` of 1.0, the same as a `2023-06-01` request that leaves them out. Models that already accept only the defaults, such as Claude 4.7 and later models, sample as before. On models that accept other values, such as Claude Sonnet 4.6, a request that lowered `temperature` for more consistent output loses that effect. No other setting replaces it. If a request relies on a non-default value, either stop sending the parameter, or keep that request on `2023-06-01`.
+
+### Admin API and Claude Enterprise Analytics API
+
+Affects you if your code reads the Admin API or Claude Enterprise Analytics API response fields in the following tables.
+
+In `2026-10-21`, responses from the Admin API and the [Claude Enterprise Analytics API](/docs/en/manage-claude/analytics-api) no longer include the old names of renamed fields. Use the new names instead.
+
+Admin API:
+
+Claude Enterprise Analytics API:
+
+The `group_type` query parameter on the rate-limit list endpoints and the `workspace_id` filter on the API key list endpoint are unchanged.
+
+#### `workspace_id` on API keys
+
+Affects you if your code reads `workspace_id` on API keys.
+
+In `2023-06-01`, an API key’s `workspace_id` is the ID of the workspace the key is bound to, or `null` for a key bound to the Default Workspace and for a key that isn’t bound to one workspace (an all-workspaces key).
+
+In `2026-10-21`, `workspace_id` is removed. Read `scope` instead: for a key bound to a workspace, including the Default Workspace, `scope.workspace_id` is that workspace’s real ID, and an all-workspaces key has a `scope` of `{"type": "organization"}`, with no `workspace_id`.
+
+If your code treated a `null` `workspace_id` as the Default Workspace, compare `scope.workspace_id` with your Default Workspace’s ID instead. To find that ID, call [List Workspaces](/docs/en/api/organization/workspaces/list)Preview with links to the API reference available — press Tab until focus enters the card, Escape to return. with `include_default=true` and take the workspace named `"Default"`.
+
+## SDK and CLI changes
+
+Earlier SDK and CLI versions sent `anthropic-version: 2023-06-01` with every request. The versions under [Switch to 2026-10-21](#upgrade) send `2026-10-21`, including their Amazon Bedrock and Google Cloud clients. The changes in [Breaking changes](#breaking-changes) apply to them too: the removed parameters and the old field names are also gone from the SDK’s types and from the CLI’s flags and output.
+
+### `MessageParam` is a union with one type for each role
+
+In earlier versions, `MessageParam` was one type for all roles. Each role now has a type of its own: `UserMessageParam`, `AssistantMessageParam`, and `SystemMessageParam`. `BetaMessageParam` is split the same way, into `BetaUserMessageParam`, `BetaAssistantMessageParam`, and `BetaSystemMessageParam`. The requests that the SDK sends have the same fields and values as before.
+
+A message written as a dict literal, such as `{"role": "user", "content": "Hello"}`, needs no change.
+
+In v1, `anthropic.types.MessageParam` was one `TypedDict`. In v2 it is a union of the three types, and `anthropic.types.beta.BetaMessageParam` is a union of its three. Both names still work in annotations, such as `list[MessageParam]`.
+
+Calling either name now raises a `TypeError`, and a type checker flags it. Write the message as a dict:
+
+Subclassing either name also raises a `TypeError`. Subclass the type for the role, such as `UserMessageParam`.
+
+The remaining changes affect type checking only. A dict whose `role` is a variable that can hold more than one role matches no type in the union, so build the dict for one role at a time:
+
+Two more apply to `BetaMessageParam` only:
+
+* `clear_at` and `output_config` are keys of `BetaSystemMessageParam`, so a user or assistant message can’t have them.
+* `content` is optional in `BetaSystemMessageParam`, so pyright reports `message["content"]`. Read it with `message.get("content")`, or check first that `message["role"]` is not `"system"`.
+
+### One-value enums are constants
+
+This affects the C#, Go, Java, PHP, and Ruby SDKs and one CLI flag. In earlier versions, a required field that can hold only one value had an enum type of its own with a single member. These fields are now constants, and the enum types are gone. The JSON that the SDK sends and reads is the same.
+
+`--type` is optional on `ant beta:sessions:resources add`. `file` is the only value `--type` can take there, so v2 sends it for you. Commands that still pass `--type file` keep working, so there is nothing to change.
+
+This affects the TypeScript and Ruby SDKs. Client-side compaction in the tool runner is removed in favor of server-side compaction, which summarizes the conversation inside the API instead of with an extra request from the client.
+
+The `compactionControl` option and the `@anthropic-ai/sdk/lib/tools/CompactionControl` module are gone. The option stopped working in v0.129.0, where passing it threw an `AnthropicError`. It isn’t in the tool runner’s parameters type, so TypeScript reports it as an unknown property.
+
+To keep compacting automatically at a token threshold:
+
+To decide yourself when the conversation is compacted, call [`runner.compactBeforeNextTurn()`](https://github.com/anthropics/anthropic-sdk-typescript/blob/main/helpers.md#compaction).
+
+The trigger threshold must be at least 50,000 tokens. See [compaction](/docs/en/build-with-claude/compaction-threshold) for the other options (`pause_after_compaction`, custom `instructions`).
+
+### Text Completions is removed
+
+The legacy Text Completions API is removed from the TypeScript, Go, Java, and Ruby SDKs and from the CLI. Newer models and features don’t support it. Use the [Messages API](/docs/en/build-with-claude/working-with-messages) instead.
+
+### `betas` is removed from the non-beta Models methods
+
+The non-beta Models methods no longer take `betas`, and the `ant models` commands no longer take `--beta`. To send beta headers, call the same methods on `client.beta.models`, or `ant beta:models` in the CLI. In the SDK, those methods return `BetaModelInfo` where the non-beta ones return `ModelInfo`.
+
+`client.models.retrieve()` and `client.models.list()` no longer take `betas` (passing it is a `TypeError`, and a type checker flags it), and `anthropic.types.ModelListParams` no longer has a `betas` key.
+
+### API keys are sent as `Authorization: Bearer`
+
+The SDK and the CLI send your API key as `Authorization: Bearer <key>` instead of in the `X-Api-Key` header, so change any proxy or gateway that reads or sets `X-Api-Key` to use `Authorization`, or [send the key in `X-Api-Key` yourself](#sdk-proxy-x-api-key). Also change code in your own program that reads `X-Api-Key`, such as middleware, a log filter, or a test stub. The Claude API accepts a key in either header.
+
+```
+# Before
+X-Api-Key: <key>
+
+# After
+Authorization: Bearer <key>
+```
+
+
+
+`Authorization` is the header `auth_token` already uses.
+
+This applies to the `api_key` argument and the `ANTHROPIC_API_KEY` environment variable of `Anthropic` and `AsyncAnthropic`, and to `api_key` and `ANTHROPIC_AWS_API_KEY` of `AnthropicAWS`. `AnthropicFoundry` still sends its key as `x-api-key`, and `AnthropicBedrockMantle` already sent a bearer token.
+
+#### If a proxy or gateway reads `X-Api-Key`
+
+Move the key back with an `auth` function on the HTTP client. It runs on every request the client sends, including retries:
+
+`AsyncAnthropic` takes the same function, in `http_client=DefaultAsyncHttpxClient(auth=send_x_api_key)`.
+
+#### If you set or removed `X-Api-Key` on a request
+
+This affects the Python, TypeScript, Go, PHP, and Ruby SDKs.
+
+If you removed `X-Api-Key` so that a request sent only an authentication token, delete that code instead of changing it, because removing `Authorization` would remove the token. [A client holds one credential](#sdk-one-credential), so make sure that it’s the token: with none passed in code and both `ANTHROPIC_API_KEY` and `ANTHROPIC_AUTH_TOKEN` set, the client uses the key.
+
+Code that passes `extra_headers={"X-Api-Key": omit}` to keep the key off a request no longer does that. Pass `extra_headers={"Authorization": omit}` instead.
+
+`extra_headers={"X-Api-Key": other_key}` no longer replaces the client’s key: both keys go out. To send another key with one request, pass `extra_headers={"Authorization": f"Bearer {other_key}"}`.
+
+### A client holds one credential
+
+An API key and an authentication token now share a header, so an SDK client holds one credential. With none passed in code, it follows the [credential precedence](/docs/en/manage-claude/wif-reference#credential-precedence) order.
+
+v1 sent both an API key and an authentication token when the client had both, each in its own header. The credential is one of `api_key`, `auth_token`, `credentials`, `config`, or `profile`.
+
+* **Pass at most one.** Two or more in the constructor, or in one `copy()` or `with_options()` call, raise `ValueError`. `None` doesn’t count. v1 raised `TypeError`, and only for two of `credentials`, `config`, and `profile`.
+* **The one you pass is the only one.** As in v1, the client does not look for another in the environment or on disk.
+* **With none passed, only the first of these that is set is used:** `ANTHROPIC_API_KEY`, `ANTHROPIC_AUTH_TOKEN`, the profile that `ANTHROPIC_PROFILE` names, the workload identity federation variables, the active profile on disk (the one the `active_config` file names, otherwise `default`). When both of the first two are set, the client logs a warning once. v1 used the active profile ahead of the federation variables when `ANTHROPIC_CONFIG_DIR` was set or an `active_config` file existed; set `ANTHROPIC_PROFILE` to keep using it.
+* **`copy()` and `with_options()` replace.** A credential you pass replaces the client’s own, whichever kind either one is. A base URL and headers that came from the old credential’s config or profile go with it, and the new credential’s are used. A base URL you passed stays.
+
+The platform clients keep their own rules. `AnthropicAWS` takes `auth_token` next to `api_key` without an error, and sends the key.
+
+The docstrings of `Anthropic.__init__` and `Anthropic.copy` in [`_client.py`](https://github.com/anthropics/anthropic-sdk-python/blob/main/src/anthropic/_client.py) have the details.
+
+If you relied on sending both, for example a token for a gateway and a key for the API behind it, pass the token as `auth_token` and set `X-Api-Key` in `default_headers`. Have the gateway remove its `Authorization` header before it forwards the request. The Claude API expects one credential for each request.
+
+### Changes in one SDK or the CLI
+
+These changes each affect one SDK or the CLI.
+
+**`--api-key` and `--auth-token` are removed.** `ant` no longer takes an API key or authentication token as a flag value, because a value on the command line is visible in shell history and process listings. Both flags have printed a deprecation warning since v1.27.0. A command that still passes one stops with `flag provided but not defined`.
+
+`--api-key-stdin` and `--auth-token-stdin` read all of standard input, so a command that uses one takes its request body from flags.
+
+`ant auth status`, the first-run prompt of `ant apply`, and the note about multiple authentication sources now call these credentials `ANTHROPIC_API_KEY` and `ANTHROPIC_AUTH_TOKEN`, where they printed `--api-key / ANTHROPIC_API_KEY` and `--auth-token / ANTHROPIC_AUTH_TOKEN`.
+
+### The license is Apache 2.0
+
+Starting with the versions under [Switch to 2026-10-21](#upgrade), the SDK and the CLI are licensed under the Apache License, Version 2.0. Earlier versions remain under the MIT License. No code changes are needed. If you track the licenses of your dependencies, update their entries.
+
+* **TypeScript:** The platform packages (`@anthropic-ai/bedrock-sdk`, `@anthropic-ai/vertex-sdk`, `@anthropic-ai/foundry-sdk`, `@anthropic-ai/aws-sdk`, and `@anthropic-ai/google-cloud-sdk`) change license in their own 1.0.0 releases.
+* **C#:** The other packages (`Anthropic.Bedrock`, `Anthropic.Vertex`, `Anthropic.Foundry`, `Anthropic.Aws`, `Anthropic.GoogleCloud`, and `Anthropic.Mcp`) change license in their own 1.0.0 releases.
+* **Java:** The change covers every `com.anthropic` artifact.

@@ -1,0 +1,39 @@
+---
+title: Building Labs that Learn
+type: source
+source_type: article
+url: https://periodic.com/news/building-labs-that-learn
+fetched: 2026-11-24
+---
+
+# Building Labs that Learn
+
+[**Our Research**](./nature-is-our-learning-environment)
+
+[**Our Infrastructure**](./ai-infrastructure-at-periodic)
+
+Since [our launch](../) last year, we have built high-throughput labs in Menlo Park and infrastructure for large-scale physics simulations to discover new materials like superconductors and magnets. We’ve moved rapidly, from conducting our first physical experiments to scaled-up high-throughput labs that run 24/7 with vastly enhanced throughput.
+
+As we build our labs, we leverage AI to make sense of our data and to decide what to do next. AI embeds in our equipment, identifies issues in data, and learns the scientific process. We benefit as frontier AI models improve, but when they fall short or become too costly, we train our own. Our thesis is that experiments from our high-throughput labs provide the data to train increasingly capable scientific AI, which, in turn, guides better experiments.
+
+Periodic Neon is an early example: using our lab data, we trained a trillion-parameter model that outperforms GPT-6 Astra on a critical scientific analysis task using relatively little compute. As we scale our labs and compute, we expect AI trained on our lab data to tackle increasingly complex scientific problems.
+
+![Periodic Neon performance compared with frontier models by cost per analysis](https://framerusercontent.com/images/QdxZD7uRfjbJDFZPmsZcSznLxFA.svg)
+
+*Periodic Neon outperforms both Claude Fable 5.1 and GPT-6 Astra for diffraction analysis. We achieve frontier level reasoning through a combination of midtraining and RL on our own laboratory data. We optimize inference for our model to deploy it at scale.*
+
+*Periodic Neon outperforms both Claude Fable 5.1 and GPT-6 Astra for diffraction analysis. We achieve frontier level reasoning through a combination of midtraining and RL on our own laboratory data. We optimize inference for our model to deploy it at scale.*
+
+We created Neon by midtraining and reinforcement learning (RL) on data from our labs.
+
+RL in digital environments has given rise to intelligent systems that write nearly all of our code and solve standing math conjectures. Dispatching large numbers of agents to learn from fast and verifiable tasks has been a recipe for success. In contrast, learning from physical environments presents new issues: the number of agents is not elastically scalable (increasing the number of concurrent experiments requires power, equipment, and engineering), each experiment can take days, and the results are often ambiguous.
+
+Our approach is to break materials discovery into three phases. These form a loop. We first hypothesize what target to make, driven by predictions of stability and properties. Second, we predict how to synthesize these targets. Third, we must understand what materials we made and whether they have the intended properties. With this information, we refine our hypothesis and repeat the cycle.
+
+![Materials discovery loop: what to make, how to make it, and what was made](https://framerusercontent.com/images/X2aTB7Mi50TAGpBaGQ2OZ0Azw.svg)
+
+This moves us closer to the digital regime. Rather than keeping GPUs idle as lab experiments are conducted, we analyze, process, and improve predictions of our AI using existing experimental data.
+
+Our [research blog post](./nature-is-our-learning-environment) explains how we trained Periodic Neon to interpret X-ray diffraction (XRD) results from our lab. XRD analysis historically required hours of scientific judgment, drawing on experimental conditions, simulations, and prior results. Our [infrastructure blog post](./ai-infrastructure-at-periodic) covers how we built performant, scalable infra for building AI specialized for science.
+
+We are extending this approach to train our AI to direct scientific campaigns, to develop synthesis procedures, and to decide which experiments to run. The future we seek requires materials no one yet knows how to make. Our labs are learning how.

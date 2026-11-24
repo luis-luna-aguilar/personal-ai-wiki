@@ -1,0 +1,163 @@
+---
+title: "What Playing With AI Taught Me About My Work"
+type: newsletter
+sender: "Every <hello@every.to>"
+received: 2026-09-14
+gmail_id: 1a0a1be014ff7856
+---
+
+# What Playing With AI Taught Me About My Work
+
+**From:** Every <hello@every.to>
+**Date:** 2026-09-14
+
+AI can turn work into play—and distract me from the work I need to do. Here’s how I’m learning to bring something back from those detours.  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vIiwicG9zaXRpb24iOjAsInV0bV9zb3VyY2UiOiJlbWFpbCIsInV0bV9tZWRpdW0iOiJwb3N0IiwidXRtX2NhbXBhaWduIjoiNDQ3NSIsInV0bV90ZXJtIjoidW5rbm93bl8yMDI2LTA5LTE0IiwiZXZfZW1haWxfaWQiOiJwb3N0XzQ0NzVfcG9zdF82OGYwZTQ4NDI2MmQiLCJldl9hdWRpZW5jZSI6InVua25vd24iLCJldl9wb3N0X2lkIjoiNDQ3NSIsImV2X2VtYWlsX3R5cGUiOiJwb3N0IiwiZXZfc2VuZF9kYXRlIjoiMjAyNi0wOS0xNCIsInV0bV9jb250ZW50IjoibGlua18wIiwiZXZfbGlua19pZCI6InBvc3RfNDQ3NV9wb3N0XzY4ZjBlNDg0MjYyZF9saW5rXzAifQ==?ev_audience=free
+
+Working Overtime
+
+https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vd29ya2luZy1vdmVydGltZSIsInBvc2l0aW9uIjoxLCJ1dG1fc291cmNlIjoiZW1haWwiLCJ1dG1fbWVkaXVtIjoicG9zdCIsInV0bV9jYW1wYWlnbiI6IjQ0NzUiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0xNCIsImV2X2VtYWlsX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkIiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0NzUiLCJldl9lbWFpbF90eXBlIjoicG9zdCIsImV2X3NlbmRfZGF0ZSI6IjIwMjYtMDktMTQiLCJ1dG1fY29udGVudCI6ImxpbmtfMSIsImV2X2xpbmtfaWQiOiJwb3N0XzQ0NzVfcG9zdF82OGYwZTQ4NDI2MmRfbGlua18xIn0=?ev_audience=free
+
+
+WHAT PLAYING WITH AI TAUGHT ME ABOUT MY WORK https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vd29ya2luZy1vdmVydGltZS93aGF0LXBsYXlpbmctd2l0aC1haS10YXVnaHQtbWUtYWJvdXQtbXktd29yayIsInBvc2l0aW9uIjoyLCJ1dG1fc291cmNlIjoiZW1haWwiLCJ1dG1fbWVkaXVtIjoicG9zdCIsInV0bV9jYW1wYWlnbiI6IjQ0NzUiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0xNCIsImV2X2VtYWlsX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkIiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0NzUiLCJldl9lbWFpbF90eXBlIjoicG9zdCIsImV2X3NlbmRfZGF0ZSI6IjIwMjYtMDktMTQiLCJ1dG1fY29udGVudCI6ImxpbmtfMiIsImV2X2xpbmtfaWQiOiJwb3N0XzQ0NzVfcG9zdF82OGYwZTQ4NDI2MmRfbGlua18yIn0=?ev_audience=free
+
+
+AI CAN TURN WORK INTO PLAY—AND DISTRACT ME FROM THE WORK I NEED TO DO. HERE’S HOW I’M LEARNING TO BRING SOMETHING BACK FROM THOSE DETOURS. https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vd29ya2luZy1vdmVydGltZS93aGF0LXBsYXlpbmctd2l0aC1haS10YXVnaHQtbWUtYWJvdXQtbXktd29yayIsInBvc2l0aW9uIjozLCJ1dG1fc291cmNlIjoiZW1haWwiLCJ1dG1fbWVkaXVtIjoicG9zdCIsInV0bV9jYW1wYWlnbiI6IjQ0NzUiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0xNCIsImV2X2VtYWlsX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkIiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0NzUiLCJldl9lbWFpbF90eXBlIjoicG9zdCIsImV2X3NlbmRfZGF0ZSI6IjIwMjYtMDktMTQiLCJ1dG1fY29udGVudCI6ImxpbmtfMyIsImV2X2xpbmtfaWQiOiJwb3N0XzQ0NzVfcG9zdF82OGYwZTQ4NDI2MmRfbGlua18zIn0=?ev_audience=free
+
+by Katie Parrott https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vQGthdGllXzk3MjAiLCJwb3NpdGlvbiI6NCwidXRtX3NvdXJjZSI6ImVtYWlsIiwidXRtX21lZGl1bSI6InBvc3QiLCJ1dG1fY2FtcGFpZ24iOiI0NDc1IiwidXRtX3Rlcm0iOiJ1bmtub3duXzIwMjYtMDktMTQiLCJldl9lbWFpbF9pZCI6InBvc3RfNDQ3NV9wb3N0XzY4ZjBlNDg0MjYyZCIsImV2X2F1ZGllbmNlIjoidW5rbm93biIsImV2X3Bvc3RfaWQiOiI0NDc1IiwiZXZfZW1haWxfdHlwZSI6InBvc3QiLCJldl9zZW5kX2RhdGUiOiIyMDI2LTA5LTE0IiwidXRtX2NvbnRlbnQiOiJsaW5rXzQiLCJldl9saW5rX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkX2xpbmtfNCJ9?ev_audience=free
+
+Midjourney/Every illustration.
+
+Was this newsletter forwarded to you? Sign up https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vYWNjb3VudCIsInBvc2l0aW9uIjo1LCJ1dG1fc291cmNlIjoiZW1haWwiLCJ1dG1fbWVkaXVtIjoicG9zdCIsInV0bV9jYW1wYWlnbiI6IjQ0NzUiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0xNCIsImV2X2VtYWlsX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkIiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0NzUiLCJldl9lbWFpbF90eXBlIjoicG9zdCIsImV2X3NlbmRfZGF0ZSI6IjIwMjYtMDktMTQiLCJ1dG1fY29udGVudCI6ImxpbmtfNSIsImV2X2xpbmtfaWQiOiJwb3N0XzQ0NzVfcG9zdF82OGYwZTQ4NDI2MmRfbGlua181In0=?ev_audience=free to get it in your inbox.
+
+
+
+----------------------------------------
+
+
+
+My childhood make-believe involved quite a bit of multitasking. I’d rollerblade in my front driveway for hours, bouncing a tennis ball on a racket and muttering dialogue for an elaborate storyline in which I was a Jane Austen heroine, or a 10th female member of the Fellowship of the Ring. Yes, I was incredibly cool.
+
+That habit faded in my late teens, sort of like my religious faith https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vd29ya2luZy1vdmVydGltZS9ob3ctdG8ta2VlcC15b3VyLXdyaXRpbmctd2VpcmQtaW4tdGhlLWFnZS1vZi1haSIsInBvc2l0aW9uIjo2LCJ1dG1fc291cmNlIjoiZW1haWwiLCJ1dG1fbWVkaXVtIjoicG9zdCIsInV0bV9jYW1wYWlnbiI6IjQ0NzUiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0xNCIsImV2X2VtYWlsX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkIiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0NzUiLCJldl9lbWFpbF90eXBlIjoicG9zdCIsImV2X3NlbmRfZGF0ZSI6IjIwMjYtMDktMTQiLCJ1dG1fY29udGVudCI6ImxpbmtfNiIsImV2X2xpbmtfaWQiOiJwb3N0XzQ0NzVfcG9zdF82OGYwZTQ4NDI2MmRfbGlua182In0=?ev_audience=free did. Even at a tiny liberal arts college where people routinely wore cosplay around campus, I managed to lose touch with my imaginary people. Then adulthood happened, and I spent most of my twenties and early thirties learning to be employed and coexist peacefully with my brain.
+
+Now, in my mid-30s, make-believe has made a big comeback and, yes, it’s thanks to AI. These days, my imaginary people come with websites and job descriptions.
+
+Over Labor Day weekend, I spent a couple hundred dollars in tokens getting Astra https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vdmliZS1jaGVjay9ncHQtNi1hc3RyYS12aWJlLWNoZWNrIiwicG9zaXRpb24iOjcsInV0bV9zb3VyY2UiOiJlbWFpbCIsInV0bV9tZWRpdW0iOiJwb3N0IiwidXRtX2NhbXBhaWduIjoiNDQ3NSIsInV0bV90ZXJtIjoidW5rbm93bl8yMDI2LTA5LTE0IiwiZXZfZW1haWxfaWQiOiJwb3N0XzQ0NzVfcG9zdF82OGYwZTQ4NDI2MmQiLCJldl9hdWRpZW5jZSI6InVua25vd24iLCJldl9wb3N0X2lkIjoiNDQ3NSIsImV2X2VtYWlsX3R5cGUiOiJwb3N0IiwiZXZfc2VuZF9kYXRlIjoiMjAyNi0wOS0xNCIsInV0bV9jb250ZW50IjoibGlua183IiwiZXZfbGlua19pZCI6InBvc3RfNDQ3NV9wb3N0XzY4ZjBlNDg0MjYyZF9saW5rXzcifQ==?ev_audience=free to turn the skills in Compound Writing https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vZ3VpZGVzL2NvbXBvdW5kLXdyaXRpbmciLCJwb3NpdGlvbiI6OCwidXRtX3NvdXJjZSI6ImVtYWlsIiwidXRtX21lZGl1bSI6InBvc3QiLCJ1dG1fY2FtcGFpZ24iOiI0NDc1IiwidXRtX3Rlcm0iOiJ1bmtub3duXzIwMjYtMDktMTQiLCJldl9lbWFpbF9pZCI6InBvc3RfNDQ3NV9wb3N0XzY4ZjBlNDg0MjYyZCIsImV2X2F1ZGllbmNlIjoidW5rbm93biIsImV2X3Bvc3RfaWQiOiI0NDc1IiwiZXZfZW1haWxfdHlwZSI6InBvc3QiLCJldl9zZW5kX2RhdGUiOiIyMDI2LTA5LTE0IiwidXRtX2NvbnRlbnQiOiJsaW5rXzgiLCJldl9saW5rX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkX2xpbmtfOCJ9?ev_audience=free, my AI writing toolkit, into imaginary creatures. I could want something ridiculous, change my mind, and follow a result because it surprised me. On Every’s frontier team, my job is to explore what AI makes possible and turn what I learn into something others can use. My private game seemed like a promising place to start.
+
+When the workweek started, I had an essay to write and little interactive worlds that I’d built for my AI creatures and couldn’t stop fiddling with. Working on those worlds could count as part of my job and feel like continuing my private game—while helping me avoid the essay I owed. Enjoying myself wasn’t much help in telling those possibilities apart.
+
+If you read Every, I’d bet you have some version of that mandate, whether anybody wrote it down: Find a different way to do the work, while continuing to get the work done. I’m learning to take something useful from an experiment without making the whole experiment my next assignment.
+
+
+I TURNED THE WORK INTO A GAME
+
+I started by asking Astra to create Codex pets—little creatures that could live on my desktop—for the skills in Compound Writing. I wanted to make it easier to teach, and I was willing to believe that making it cuter would help. The Brainstorm skill, which helps me find something to say, became a purple axolotl with a light bulb above its head. Astra had turned the instructions I’d written for each skill into a character.
+
+I was already using the skills in my everyday writing. Now I could put faces to them.
+
+I started building worlds for the characters to live in. I supplied the whim, and Astra supplied details I hadn’t thought of, which gave me something else to want. I spent the most time on the Evergrowing Press https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vdGhlLWV2ZXJncm93aW5nLXByZXNzLnZlcmNlbC5hcHAvIiwicG9zaXRpb24iOjksInV0bV9zb3VyY2UiOiJlbWFpbCIsInV0bV9tZWRpdW0iOiJwb3N0IiwidXRtX2NhbXBhaWduIjoiNDQ3NSIsInV0bV90ZXJtIjoidW5rbm93bl8yMDI2LTA5LTE0IiwiZXZfZW1haWxfaWQiOiJwb3N0XzQ0NzVfcG9zdF82OGYwZTQ4NDI2MmQiLCJldl9hdWRpZW5jZSI6InVua25vd24iLCJldl9wb3N0X2lkIjoiNDQ3NSIsImV2X2VtYWlsX3R5cGUiOiJwb3N0IiwiZXZfc2VuZF9kYXRlIjoiMjAyNi0wOS0xNCIsInV0bV9jb250ZW50IjoibGlua185IiwiZXZfbGlua19pZCI6InBvc3RfNDQ3NV9wb3N0XzY4ZjBlNDg0MjYyZF9saW5rXzkifQ==?ev_audience=free, a print shop inspired by the animated worlds of Hayao Miyazaki. There, Save—the Compound Writing skill that preserves lessons from writing sessions—became a mossy tortoise with wooden archive drawers for a shell and a fierce concern about putting things in the wrong one. A passing preference could become a permanent rule; an instruction saved in the wrong file might never help. I’d given Astra the literal plug-in, with the rules I’d written to prevent this, and it had turned my filing anxiety into a creature.
+
+I loved him. He was worried about the same thing I was.
+
+https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZDI0b3ZoZ3U4czczNDEuY2xvdWRmcm9udC5uZXQvdXBsb2Fkcy9lZGl0b3IvcG9zdC80NDc1L29wdGltaXplZF8xZTVmNjJlOS00Zjg3LTQ1YmQtODc2YS0zODM1YzJiNDY3YWIuanBnIiwicG9zaXRpb24iOjEwLCJ1dG1fc291cmNlIjoiZW1haWwiLCJ1dG1fbWVkaXVtIjoicG9zdCIsInV0bV9jYW1wYWlnbiI6IjQ0NzUiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0xNCIsImV2X2VtYWlsX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkIiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0NzUiLCJldl9lbWFpbF90eXBlIjoicG9zdCIsImV2X3NlbmRfZGF0ZSI6IjIwMjYtMDktMTQiLCJ1dG1fY29udGVudCI6ImxpbmtfMTAiLCJldl9saW5rX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkX2xpbmtfMTAifQ==?ev_audience=freeSave, the Drawerback Tortoise, at the Evergrowing Press. (Katie Parrott/Every screenshot).
+
+
+
+
+I sent the pets to my friends, posted them in the social media channel at work, and put them on X, with all the energy of a preschooler coming home with 40 handprint turkeys and expecting all of them to make it onto the fridge. Nobody had any reason to care. I wanted everyone to look anyway.
+
+
+WOULD ANYONE ELSE GET ANYTHING OUT OF THIS?
+
+I already knew what Save was for. But could the tortoise help another writer figure out when to use the skill? His archive drawers might explain why it matters where AI saves a lesson—and how a passing preference can harden into a permanent rule. Otherwise I’ve shown you a tortoise and asked for space on your fridge. Getting past “look what I made” meant giving someone else something they could use.
+
+Now I was trying to fit my weekend’s worth of delight into a prompt a reader could run.
+
+It would have to work when I wasn’t there to steer every choice. Someone could bring their favorite setting, and the characters would still need to explain the writing skills. I put the prompt in my work plan for the week. My little dioramas had acquired a deliverable.
+
+Delivering proved harder than playing. I kept narrowing the brief, but the results still felt overbuilt and didn’t match my vision of a world that someone could wander into and understand how to navigate. Compared with my colleagues’ other projects, my project didn’t feel urgent enough to pursue. I set it aside.
+
+
+THE CARTOONS CHANGED THE WRITING SYSTEM
+
+A different distraction gave me something I could use, though I hadn’t set out to make anything useful. The Tuesday after Labor Day, I was supposed to be writing an ambitious response to Dan Shipper’s essay https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vcC9hZnRlci1hdXRvbWF0aW9uIiwicG9zaXRpb24iOjExLCJ1dG1fc291cmNlIjoiZW1haWwiLCJ1dG1fbWVkaXVtIjoicG9zdCIsInV0bV9jYW1wYWlnbiI6IjQ0NzUiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0xNCIsImV2X2VtYWlsX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkIiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0NzUiLCJldl9lbWFpbF90eXBlIjoicG9zdCIsImV2X3NlbmRfZGF0ZSI6IjIwMjYtMDktMTQiLCJ1dG1fY29udGVudCI6ImxpbmtfMTEiLCJldl9saW5rX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkX2xpbmtfMTEifQ==?ev_audience=free about jobs after automation and where taste gets formed. It needed research, probably interviews, and a kind of attention I did not feel equal to giving it.
+
+Instead, I asked Astra to turn Every’s columns into Disney characters, complete with villains, animal sidekicks, wants, and signature songs. It filled out the lore with needs, flaws, and stories. Also True for Humans https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vYWxzby10cnVlLWZvci1odW1hbnMiLCJwb3NpdGlvbiI6MTIsInV0bV9zb3VyY2UiOiJlbWFpbCIsInV0bV9tZWRpdW0iOiJwb3N0IiwidXRtX2NhbXBhaWduIjoiNDQ3NSIsInV0bV90ZXJtIjoidW5rbm93bl8yMDI2LTA5LTE0IiwiZXZfZW1haWxfaWQiOiJwb3N0XzQ0NzVfcG9zdF82OGYwZTQ4NDI2MmQiLCJldl9hdWRpZW5jZSI6InVua25vd24iLCJldl9wb3N0X2lkIjoiNDQ3NSIsImV2X2VtYWlsX3R5cGUiOiJwb3N0IiwiZXZfc2VuZF9kYXRlIjoiMjAyNi0wOS0xNCIsInV0bV9jb250ZW50IjoibGlua18xMiIsImV2X2xpbmtfaWQiOiJwb3N0XzQ0NzVfcG9zdF82OGYwZTQ4NDI2MmRfbGlua18xMiJ9?ev_audience=free became the coach of impossible apprentices, opposed by Baron Obviously. Dan’s Chain of Thought https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vY2hhaW4tb2YtdGhvdWdodCIsInBvc2l0aW9uIjoxMywidXRtX3NvdXJjZSI6ImVtYWlsIiwidXRtX21lZGl1bSI6InBvc3QiLCJ1dG1fY2FtcGFpZ24iOiI0NDc1IiwidXRtX3Rlcm0iOiJ1bmtub3duXzIwMjYtMDktMTQiLCJldl9lbWFpbF9pZCI6InBvc3RfNDQ3NV9wb3N0XzY4ZjBlNDg0MjYyZCIsImV2X2F1ZGllbmNlIjoidW5rbm93biIsImV2X3Bvc3RfaWQiOiI0NDc1IiwiZXZfZW1haWxfdHlwZSI6InBvc3QiLCJldl9zZW5kX2RhdGUiOiIyMDI2LTA5LTE0IiwidXRtX2NvbnRlbnQiOiJsaW5rXzEzIiwiZXZfbGlua19pZCI6InBvc3RfNDQ3NV9wb3N0XzY4ZjBlNDg0MjYyZF9saW5rXzEzIn0=?ev_audience=free became an unfinished cartographer whose villain was the Last Word. My own column became “the maker who cannot clock out,” with a song called “One More Thing.”
+
+I kept working on their Disneyness and their Everyness, trying to make the characters more immersive and believable, until the maker who cannot clock out had a trailer, and I still had an essay to write.
+
+“No i’m not procrastinating, you’re procrastinating,” I posted alongside the characters. Dan replied, “Been there.”
+
+https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZDI0b3ZoZ3U4czczNDEuY2xvdWRmcm9udC5uZXQvdXBsb2Fkcy9lZGl0b3IvcG9zdC80NDc1L29wdGltaXplZF84NzUwNDI1Ni01NTExLTQ2NTQtYjMyNC1kZjY5NmE1YWNhZjkuanBnIiwicG9zaXRpb24iOjE0LCJ1dG1fc291cmNlIjoiZW1haWwiLCJ1dG1fbWVkaXVtIjoicG9zdCIsInV0bV9jYW1wYWlnbiI6IjQ0NzUiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0xNCIsImV2X2VtYWlsX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkIiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0NzUiLCJldl9lbWFpbF90eXBlIjoicG9zdCIsImV2X3NlbmRfZGF0ZSI6IjIwMjYtMDktMTQiLCJ1dG1fY29udGVudCI6ImxpbmtfMTQiLCJldl9saW5rX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkX2xpbmtfMTQifQ==?ev_audience=freeAstra’s version of Working Overtime: the maker who cannot clock out. (Astra/Every illustration).
+
+
+
+
+To get the characters right, I had to think about what moved them: what they wanted, what stood in their way, what they would need to learn to move the story forward. My maker could keep making things forever. But a story would have to give her something to discover that changed what she did next.
+
+Those questions started looking useful for the person on the other side of an essay. What does a reader arrive wanting? What might they need to understand or try? What could they take back into their own life when the piece was over?
+
+By the next morning, I’d added audience guidance to Compound Writing with sections for “Reader’s want and need” and “Their hero’s journey.” The audience guidance lives in AUDIENCE.md, a file the writer and the AI can consult while developing a piece. Every already had a description of who we write for. I could give it a job in the writing process: Help me decide what a reader should be able to do with a piece.
+
+I’d changed my process while making cartoons to avoid writing. I also decided to write about work and play instead of the ambitious essay I hadn’t been able to face. You’re reading the result. The useful thing had arrived through a side door, while the project on my work plan sat there. This was encouraging and an extremely convenient lesson for someone who wanted to make another village to have learned.
+
+
+WHAT CAN I TAKE FROM THIS?
+
+The audience questions helped shape this essay. The worlds were harder to place. I still wanted to know whether they could help someone learn, but that question didn’t tell me whether to spend tomorrow building another one.
+
+While developing this essay, I made an experimental skill called Is This Anything? to help me review a single AI session and find what I might want to take with me. My version can read my experiment records and compare what I’ve been doing with my priorities and the frontier team’s. This matters when almost everything I want to do has a plausible claim on my workday.
+
+https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZDI0b3ZoZ3U4czczNDEuY2xvdWRmcm9udC5uZXQvdXBsb2Fkcy9lZGl0b3IvcG9zdC80NDc1L29wdGltaXplZF8xZjYxMGRhMy02OTJmLTRhMjgtYjFiMi1mYmI5NzgxYmFkMDQuanBnIiwicG9zaXRpb24iOjE1LCJ1dG1fc291cmNlIjoiZW1haWwiLCJ1dG1fbWVkaXVtIjoicG9zdCIsInV0bV9jYW1wYWlnbiI6IjQ0NzUiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0xNCIsImV2X2VtYWlsX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkIiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0NzUiLCJldl9lbWFpbF90eXBlIjoicG9zdCIsImV2X3NlbmRfZGF0ZSI6IjIwMjYtMDktMTQiLCJ1dG1fY29udGVudCI6ImxpbmtfMTUiLCJldl9saW5rX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkX2xpbmtfMTUifQ==?ev_audience=freeMy Notion dashboard connects the work in front of me with the possibilities I want to pursue. Is This Anything? draws on this context to help me find where an experiment might lead. (Katie Parrott/Every screenshot).
+
+
+
+
+I don’t have to turn the session into a report before asking. The conversation already contains the detours, corrections, and rejected attempts I want help understanding. Somewhere in the argument over what a character should look like, I may have explained something about my work more clearly than I had while trying to be serious.
+
+When the skill reviewed my worldbuilding sessions, it recovered a useful brief: Let readers explore the diorama, group characters by what their skills do, and link them to the tools. I could keep those decisions without committing to finish another world.
+
+The skill asks what started the experiment. If I wanted to see a tortoise, I can say that; I don’t need the skill to improve my motives in retrospect. It identifies up to three possible lessons, connects them to my priorities and distinguishes what came from the conversation from its own suggestions.
+
+You can try the skill with a conversation you already have—even one you left mid-tangent. Give your assistant the Is This Anything? instructions https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZHJpdmUuZ29vZ2xlLmNvbS9maWxlL2QvMWhLQ05UbVdSd1NncXppMWw0alFPSzVoSkZtSE9rMGp6L3ZpZXciLCJwb3NpdGlvbiI6MTYsInV0bV9zb3VyY2UiOiJlbWFpbCIsInV0bV9tZWRpdW0iOiJwb3N0IiwidXRtX2NhbXBhaWduIjoiNDQ3NSIsInV0bV90ZXJtIjoidW5rbm93bl8yMDI2LTA5LTE0IiwiZXZfZW1haWxfaWQiOiJwb3N0XzQ0NzVfcG9zdF82OGYwZTQ4NDI2MmQiLCJldl9hdWRpZW5jZSI6InVua25vd24iLCJldl9wb3N0X2lkIjoiNDQ3NSIsImV2X2VtYWlsX3R5cGUiOiJwb3N0IiwiZXZfc2VuZF9kYXRlIjoiMjAyNi0wOS0xNCIsInV0bV9jb250ZW50IjoibGlua18xNiIsImV2X2xpbmtfaWQiOiJwb3N0XzQ0NzVfcG9zdF82OGYwZTQ4NDI2MmRfbGlua18xNiJ9?ev_audience=free, with the experiment in the chat or attached as a transcript. Include your current priorities and relevant team goals; if you haven’t written those down, start with a sentence about the work you need to do. Then ask:
+
+Is this anything?
+
+Read the note for something you’d like to carry into your work: a question that clarified what you wanted, a way of explaining something, a result you can use again. If a question belongs in the assignment in front of you, take it there. If an idea belongs to a project you aren’t ready to pursue, save it with enough of the conversation to remember why it interested you. You can use that part without committing to finish everything the session made possible.
+
+
+
+----------------------------------------
+
+
+
+Katie Parrott https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vQGthdGllLnBhcnJvdHQxMiIsInBvc2l0aW9uIjoxNywidXRtX3NvdXJjZSI6ImVtYWlsIiwidXRtX21lZGl1bSI6InBvc3QiLCJ1dG1fY2FtcGFpZ24iOiI0NDc1IiwidXRtX3Rlcm0iOiJ1bmtub3duXzIwMjYtMDktMTQiLCJldl9lbWFpbF9pZCI6InBvc3RfNDQ3NV9wb3N0XzY4ZjBlNDg0MjYyZCIsImV2X2F1ZGllbmNlIjoidW5rbm93biIsImV2X3Bvc3RfaWQiOiI0NDc1IiwiZXZfZW1haWxfdHlwZSI6InBvc3QiLCJldl9zZW5kX2RhdGUiOiIyMDI2LTA5LTE0IiwidXRtX2NvbnRlbnQiOiJsaW5rXzE3IiwiZXZfbGlua19pZCI6InBvc3RfNDQ3NV9wb3N0XzY4ZjBlNDg0MjYyZF9saW5rXzE3In0=?ev_audience=free is a staff writer at Every. To read more essays like this, subscribe to Every https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vc3Vic2NyaWJlIiwicG9zaXRpb24iOjE4LCJ1dG1fc291cmNlIjoiZW1haWwiLCJ1dG1fbWVkaXVtIjoicG9zdCIsInV0bV9jYW1wYWlnbiI6IjQ0NzUiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0xNCIsImV2X2VtYWlsX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkIiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0NzUiLCJldl9lbWFpbF90eXBlIjoicG9zdCIsImV2X3NlbmRfZGF0ZSI6IjIwMjYtMDktMTQiLCJ1dG1fY29udGVudCI6ImxpbmtfMTgiLCJldl9saW5rX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkX2xpbmtfMTgifQ==?ev_audience=free, and follow us on X at @every https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHA6Ly90d2l0dGVyLmNvbS9ldmVyeSIsInBvc2l0aW9uIjoxOSwidXRtX3NvdXJjZSI6ImVtYWlsIiwidXRtX21lZGl1bSI6InBvc3QiLCJ1dG1fY2FtcGFpZ24iOiI0NDc1IiwidXRtX3Rlcm0iOiJ1bmtub3duXzIwMjYtMDktMTQiLCJldl9lbWFpbF9pZCI6InBvc3RfNDQ3NV9wb3N0XzY4ZjBlNDg0MjYyZCIsImV2X2F1ZGllbmNlIjoidW5rbm93biIsImV2X3Bvc3RfaWQiOiI0NDc1IiwiZXZfZW1haWxfdHlwZSI6InBvc3QiLCJldl9zZW5kX2RhdGUiOiIyMDI2LTA5LTE0IiwidXRtX2NvbnRlbnQiOiJsaW5rXzE5IiwiZXZfbGlua19pZCI6InBvc3RfNDQ3NV9wb3N0XzY4ZjBlNDg0MjYyZF9saW5rXzE5In0=?ev_audience=free and on LinkedIn https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vd3d3LmxpbmtlZGluLmNvbS9jb21wYW55L2V2ZXJ5aW5jLyIsInBvc2l0aW9uIjoyMCwidXRtX3NvdXJjZSI6ImVtYWlsIiwidXRtX21lZGl1bSI6InBvc3QiLCJ1dG1fY2FtcGFpZ24iOiI0NDc1IiwidXRtX3Rlcm0iOiJ1bmtub3duXzIwMjYtMDktMTQiLCJldl9lbWFpbF9pZCI6InBvc3RfNDQ3NV9wb3N0XzY4ZjBlNDg0MjYyZCIsImV2X2F1ZGllbmNlIjoidW5rbm93biIsImV2X3Bvc3RfaWQiOiI0NDc1IiwiZXZfZW1haWxfdHlwZSI6InBvc3QiLCJldl9zZW5kX2RhdGUiOiIyMDI2LTA5LTE0IiwidXRtX2NvbnRlbnQiOiJsaW5rXzIwIiwiZXZfbGlua19pZCI6InBvc3RfNDQ3NV9wb3N0XzY4ZjBlNDg0MjYyZF9saW5rXzIwIn0=?ev_audience=free.
+
+Everyone’s a builder now. Every All Access https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vYnVpbGRlci1wYWNrIiwicG9zaXRpb24iOjIxLCJ1dG1fc291cmNlIjoiZW1haWwiLCJ1dG1fbWVkaXVtIjoicG9zdCIsInV0bV9jYW1wYWlnbiI6IjQ0NzUiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0xNCIsImV2X2VtYWlsX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkIiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0NzUiLCJldl9lbWFpbF90eXBlIjoicG9zdCIsImV2X3NlbmRfZGF0ZSI6IjIwMjYtMDktMTQiLCJ1dG1fY29udGVudCI6ImxpbmtfMjEiLCJldl9saW5rX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkX2xpbmtfMjEifQ==?ev_audience=free gets you the full membership plus the Builder Pack—$9,000+ in credits for the tools we build with.
+
+Subscribe https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vc3Vic2NyaWJlP3V0bV9jdGFfc291cmNlPXBvc3RfYnV0dG9uIiwicG9zaXRpb24iOjIyLCJ1dG1fc291cmNlIjoiZW1haWwiLCJ1dG1fbWVkaXVtIjoicG9zdCIsInV0bV9jYW1wYWlnbiI6IjQ0NzUiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0xNCIsImV2X2VtYWlsX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkIiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0NzUiLCJldl9lbWFpbF90eXBlIjoicG9zdCIsImV2X3NlbmRfZGF0ZSI6IjIwMjYtMDktMTQiLCJ1dG1fY29udGVudCI6ImxpbmtfMjIiLCJldl9saW5rX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkX2xpbmtfMjIifQ==?ev_audience=free
+
+WHAT DID YOU THINK OF THIS POST?
+
+Amazing https://every.to/working-overtime/what-playing-with-ai-taught-me-about-my-work/feedback?rating=amazing&hash=136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e Good https://every.to/working-overtime/what-playing-with-ai-taught-me-about-my-work/feedback?rating=good&hash=136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e Meh https://every.to/working-overtime/what-playing-with-ai-taught-me-about-my-work/feedback?rating=meh&hash=136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e Bad https://every.to/working-overtime/what-playing-with-ai-taught-me-about-my-work/feedback?rating=bad&hash=136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e
+
+
+GET MORE OUT OF YOUR SUBSCRIPTION
+
+Try our AI tools for ultimate productivity
+
+https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8vcHJvZHVjdHM_dXRtX2N0YV9zb3VyY2U9ZW1haWxfcG9zdF9wYXl3YWxsXHUwMDI2cGxhY2VtZW50PXBheXdhbGxfZ2lmIiwicG9zaXRpb24iOjI3LCJ1dG1fc291cmNlIjoiZW1haWwiLCJ1dG1fbWVkaXVtIjoicG9zdCIsInV0bV9jYW1wYWlnbiI6IjQ0NzUiLCJ1dG1fdGVybSI6InVua25vd25fMjAyNi0wOS0xNCIsImV2X2VtYWlsX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkIiwiZXZfYXVkaWVuY2UiOiJ1bmtub3duIiwiZXZfcG9zdF9pZCI6IjQ0NzUiLCJldl9lbWFpbF90eXBlIjoicG9zdCIsImV2X3NlbmRfZGF0ZSI6IjIwMjYtMDktMTQiLCJ1dG1fY29udGVudCI6ImxpbmtfMjciLCJldl9saW5rX2lkIjoicG9zdF80NDc1X3Bvc3RfNjhmMGU0ODQyNjJkX2xpbmtfMjcifQ==?ev_audience=free
+Front-row access to the future of AI
+In-depth reviews of new models on release day
+Playbooks and guides for putting AI to work
+Prompts and use cases for builders
+
+Bundle of AI software
+Sparkle: Organize your Mac with AI
+Cora: The most human way to do email
+Spiral: Repurpose your content endlessly
+Monologue: Effortless voice dictation for your Mac
+
+You received this email because you signed up for emails from Every https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vZXZlcnkudG8iLCJwb3NpdGlvbiI6MjgsInV0bV9zb3VyY2UiOiJlbWFpbCIsInV0bV9tZWRpdW0iOiJwb3N0IiwidXRtX2NhbXBhaWduIjoiNDQ3NSIsInV0bV90ZXJtIjoidW5rbm93bl8yMDI2LTA5LTE0IiwiZXZfZW1haWxfaWQiOiJwb3N0XzQ0NzVfcG9zdF82OGYwZTQ4NDI2MmQiLCJldl9hdWRpZW5jZSI6InVua25vd24iLCJldl9wb3N0X2lkIjoiNDQ3NSIsImV2X2VtYWlsX3R5cGUiOiJwb3N0IiwiZXZfc2VuZF9kYXRlIjoiMjAyNi0wOS0xNCIsInV0bV9jb250ZW50IjoibGlua18yOCIsImV2X2xpbmtfaWQiOiJwb3N0XzQ0NzVfcG9zdF82OGYwZTQ4NDI2MmRfbGlua18yOCJ9?ev_audience=free. Need help? Visit our help center https://every.to/emails/click/136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e/eyJzdWJqZWN0IjoiIFdoYXQgUGxheWluZyBXaXRoIEFJIFRhdWdodCBNZSBBYm91dCBNeSBXb3JrIiwicG9zdF9pZCI6NDQ3NSwicG9zdF90eXBlIjoicG9zdCIsInVybCI6Imh0dHBzOi8vaGVscC5ldmVyeS50byIsInBvc2l0aW9uIjoyOSwidXRtX3NvdXJjZSI6ImVtYWlsIiwidXRtX21lZGl1bSI6InBvc3QiLCJ1dG1fY2FtcGFpZ24iOiI0NDc1IiwidXRtX3Rlcm0iOiJ1bmtub3duXzIwMjYtMDktMTQiLCJldl9lbWFpbF9pZCI6InBvc3RfNDQ3NV9wb3N0XzY4ZjBlNDg0MjYyZCIsImV2X2F1ZGllbmNlIjoidW5rbm93biIsImV2X3Bvc3RfaWQiOiI0NDc1IiwiZXZfZW1haWxfdHlwZSI6InBvc3QiLCJldl9zZW5kX2RhdGUiOiIyMDI2LTA5LTE0IiwidXRtX2NvbnRlbnQiOiJsaW5rXzI5IiwiZXZfbGlua19pZCI6InBvc3RfNDQ3NV9wb3N0XzY4ZjBlNDg0MjYyZF9saW5rXzI5In0=?ev_audience=free. No longer interested in receiving emails from us? Click here to unsubscribe https://every.to/unsubscribe?post=what-playing-with-ai-taught-me-about-my-work&hash=136f006095268802530f927779a5f4d55a493840c0f1f77c950761a77b64df9e.
+
+221 Canal St 5th floor, New York, NY 10013
