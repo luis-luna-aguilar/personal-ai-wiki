@@ -15,7 +15,7 @@ Every's weekly recap of its Vibe Checks. This page covers the GPT-6 Sol story: D
 
 ## Influenced pages
 
-- [GPT-6.1 Sol](../../models/gpt-6-1-sol.md) — Every's verdict in the GPT-6 Sol predecessor note
+- [GPT-6.1 Sol](../../history/models/gpt-6-1-sol.md) — Every's verdict in the GPT-6 Sol predecessor note
 
 ## Key claims extracted
 

@@ -15,7 +15,7 @@ Every's weekly digest recapping a subscriber-only comparison camp: staff split o
 
 ## Influenced pages
 
-- [GPT-6 Astra](../../models/gpt-6-astra.md) — Senior Engineer Bench score, camp comparison findings
+- [GPT-6 Astra](../../history/models/gpt-6-astra.md) — Senior Engineer Bench score, camp comparison findings
 - [Claude Fable 5.1 / Mythos 5.1](../../models/claude-fable-5-1.md) — comparative reception, quote-limit overrun finding
 
 ## Key claims extracted

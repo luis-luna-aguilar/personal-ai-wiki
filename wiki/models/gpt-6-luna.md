@@ -5,12 +5,12 @@ domains: [models]
 subcategory: small-model
 tags: [openai, closed-source]
 as_of: 2026-10-08
-sources: [ainews-gpt-6-sol-luna-launch-2026-09-23, ainews-gpt-6-1-sol-devday-2026-09-30, ainews-gpt-6-1-sol-evals-2026-10-01, ainews-gpt-6-1-sol-ultrafast-2026-10-08]
+sources: [ainews-gpt-6-sol-luna-launch-2026-09-23, ainews-gpt-6-1-sol-devday-2026-09-30, ainews-gpt-6-1-sol-evals-2026-10-01, ainews-gpt-6-1-sol-ultrafast-2026-10-08, openai-introducing-gpt-6-2-astra-sol]
 ---
 
 # GPT-6 Luna
 
-OpenAI's cheapest GPT-6 tier, launched with GPT-6 Sol on 2026-09-22 as a cheaper model built on [GPT-6 Astra](gpt-6-astra.md)'s advances. It supersedes GPT-5.6 Luna (covered on the archived [GPT-5.6 Sol](../history/models/gpt-5-6-sol.md) page) at about half the price. The mid tier has since moved on to [GPT-6.1 Sol](gpt-6-1-sol.md); no GPT-6.1 Luna has been announced.
+OpenAI's cheapest GPT-6 tier, launched with GPT-6 Sol on 2026-09-22 as a cheaper model built on [GPT-6 Astra](../history/models/gpt-6-astra.md)'s advances. It supersedes GPT-5.6 Luna (covered on the archived [GPT-5.6 Sol](../history/models/gpt-5-6-sol.md) page) at about half the price. The mid tier has since moved on to [GPT-6.1 Sol](../history/models/gpt-6-1-sol.md) and then [GPT-6.2 Sol](gpt-6-2-sol.md) (2026-11-23); no GPT-6.1 or GPT-6.2 Luna has been announced.
 
 ## Current status (as of 2026-10-08)
 
@@ -23,7 +23,7 @@ OpenAI's cheapest GPT-6 tier, launched with GPT-6 Sol on 2026-09-22 as a cheaper
 ## Weaknesses / caveats
 
 - Price parity with [Claude Haiku 5.5](claude-haiku-5-5.md), which launched at the same $0.10/$0.50 list price
-- No GPT-6.1 Luna yet, so Luna has not had the 6.1 refresh that cut Sol's per-task cost
+- No GPT-6.1 or GPT-6.2 Luna yet, so Luna has not had the refreshes that cut Sol's per-task cost
 
 ## Recent changes
 
@@ -38,3 +38,4 @@ OpenAI's cheapest GPT-6 tier, launched with GPT-6 Sol on 2026-09-22 as a cheaper
 - [AINews — OpenAI DevDay 2026: GPT-6.1 Sol](../sources/newsletters/ainews-gpt-6-1-sol-devday-2026-09-30.md)
 - [AINews — GPT-6.1 Sol independent evals](../sources/newsletters/ainews-gpt-6-1-sol-evals-2026-10-01.md)
 - [AINews — GPT-6.1 Sol Ultrafast and Arena Alignment Index](../sources/newsletters/ainews-gpt-6-1-sol-ultrafast-2026-10-08.md)
+- [OpenAI — Introducing GPT-6.2 Astra and Sol](../sources/articles/openai-introducing-gpt-6-2-astra-sol.md)

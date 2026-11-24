@@ -4,15 +4,19 @@ type: tool
 domains: [coding, agents, cybersecurity]
 subcategory: terminal-coding-agent
 tags: [cognition]
-as_of: 2026-10-19
-sources: [devin-auto-triage-2026-05, the-code-devin-security-2026-07-02, ainews-not-much-happened-2026-07-02, devinai-blog-agentic-map-reduce, cognitioncom-blog-devin-fusion, cognitioncom-blog-ai-productivity, the-code-spacexai-drops-grok-45-2026-07-09, ainews-devin-fusion-router-moat-2026-07-14, cognition-devin-outposts-2026-07-21, devinai-blog-introducing-devin-oncall, cognition-agent-memory-repo-2026-10, ainews-devin-dreaming-2026-10-06, devin-cloud-in-your-terminal-2026-09-21, ainews-cma-flows-agent-teams-2026-10-10, devin-dynamic-workflows-docs-2026-10]
+as_of: 2026-11-23
+sources: [devin-auto-triage-2026-05, the-code-devin-security-2026-07-02, ainews-not-much-happened-2026-07-02, devinai-blog-agentic-map-reduce, cognitioncom-blog-devin-fusion, cognitioncom-blog-ai-productivity, the-code-spacexai-drops-grok-45-2026-07-09, ainews-devin-fusion-router-moat-2026-07-14, cognition-devin-outposts-2026-07-21, devinai-blog-introducing-devin-oncall, cognition-agent-memory-repo-2026-10, ainews-devin-dreaming-2026-10-06, devin-cloud-in-your-terminal-2026-09-21, ainews-cma-flows-agent-teams-2026-10-10, devin-dynamic-workflows-docs-2026-10, devinai-bots]
 ---
 
 # Devin
 
-Cognition's autonomous coding agent, initially positioned as one of the first "fully autonomous software engineer" agents. Now expanding into persistent operational roles: Devin Oncall (generally available October 2026) investigates and mitigates production alerts and incidents, succeeding Auto-Triage (May 2026), Cognition's first always-on deployment. Cognition valued at $25B (May 2026).
+Cognition's autonomous coding agent, initially positioned as one of the first "fully autonomous software engineer" agents. Now expanding into persistent operational roles: Devin Oncall (generally available October 2026) investigates and mitigates production alerts and incidents, succeeding Auto-Triage (May 2026), Cognition's first always-on deployment; [Devin Bots](devin-bots.md) (November 2026) run teams of Devins as persistent AI teammates. Cognition valued at $25B (May 2026).
 
-## Current status (as of 2026-10-19)
+## Current status (as of 2026-11-23)
+
+### Devin Bots
+
+- **Devin Bots (November 2026):** persistent AI teammates that split a goal across parallel Devin sessions until the PRs are mergeable; see [Devin Bots](devin-bots.md).
 
 ### Devin Oncall
 
@@ -64,6 +68,7 @@ Security Swarm extends the same architecture into enterprise security work, and 
 
 ## Recent changes
 
+- [2026-11-23] [Devin Bots](devin-bots.md) launched: persistent AI teammates that split a goal across parallel Devin sessions on separate VMs, reachable by text, Slack or phone; own page.
 - [2026-10-19] Devin Oncall generally available: Responders (successor to Auto-Triage, ~60% of alerts skipped as known issues) and Incidents; review agent and per-org memory/skills; 100% end-to-end on SREGym-Lite; AngelList deprecated its in-house harness for it.
 - [2026-10-13] Devin Dynamic Workflows: deterministic Python orchestration of Devin sessions with record-and-replay resume; Devins can also spawn trees of managed Devins.
 - [2026-10-06] Devin Dreaming (overnight memory prune-and-link) launched; storage format open-sourced as Agent Memory Repo.
@@ -73,7 +78,6 @@ Security Swarm extends the same architecture into enterprise security work, and 
 - [2026-07-14] Cognition's session-level productivity estimator (`r_log = 0.74`, human-hours-equivalent, calibrated conservative) is now running in production with customers.
 - [2026-07-14] Added the delegation-efficiency mechanism behind Devin Fusion's cost advantage on Fable 5: in 81% of sampled Fable-led runs, the lead model never edits code itself (per AINews, relaying an independent coding-agent index analysis).
 - [2026-07-09] Cognition released SWE-1.7, a budget frontier coding model post-trained from Kimi K2.7 inside Devin's agent harness; per The Code's recap, Cognition claims it matches GPT-5.5 within a point on FrontierCode at ~$2/task with Opus 4.8 slightly ahead (secondhand, tier unspecified); supports up to six-hour sessions via self-summarization and resume.
-- [2026-07-02] Cognition shipped Devin Security Swarm for parallel vulnerability discovery, sandbox reproduction, exploitability validation, and fix PRs.
 
 ## Sources
 
@@ -92,3 +96,4 @@ Security Swarm extends the same architecture into enterprise security work, and 
 - [Cognition — Bringing Devin Cloud to your terminal](../sources/articles/devin-cloud-in-your-terminal-2026-09-21.md)
 - [AINews — Managed Agents flows, agent-team economics, Devin trees](../sources/newsletters/ainews-cma-flows-agent-teams-2026-10-10.md)
 - [Devin Docs — Dynamic Workflows](../sources/articles/devin-dynamic-workflows-docs-2026-10.md)
+- [Cognition — Devin Bots product page](../sources/articles/devinai-bots.md)

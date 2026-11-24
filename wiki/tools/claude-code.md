@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: [anthropic, cli, agentic]
-as_of: 2026-10-26
-sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, claude-code-fast-mode-default-2026-05, dynamic-workflows-claude-code, claude-code-getting-started-with-loops-2026-06-30, codex-general-work-agents-2026-07, ainews-opus-48-dynamic-workflows-2026-05, every-claude-dynamic-workflows-reliability-2026-06, claude-code-design-sync-2026-07, claude-sonnet-5-official-2026-06-30, every-urge-to-merge-2026-07-14, thecode-claude-code-effort-levels-2026-07-17, zawinskis-law-multiagents-2026-08-08, every-copilot-studio-microsoft-2026-08-03, claude-security-product-page, latent-space-thariq-claude-code-next-era-2026-09-29, claudedevs-cloud-sessions-ga-2026-09-23, ainews-claude-code-cloud-sessions-projects-2026-09-24, claude-projects-redesigned-2026-09-17, claudeai-projects-one-conversation-2026-09-17, emollick-claude-projects-mysteries-2026-09-17, tamaratran-fast-jev-compaction]
+as_of: 2026-11-23
+sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, claude-code-fast-mode-default-2026-05, dynamic-workflows-claude-code, claude-code-getting-started-with-loops-2026-06-30, codex-general-work-agents-2026-07, ainews-opus-48-dynamic-workflows-2026-05, every-claude-dynamic-workflows-reliability-2026-06, claude-code-design-sync-2026-07, claude-sonnet-5-official-2026-06-30, every-urge-to-merge-2026-07-14, thecode-claude-code-effort-levels-2026-07-17, zawinskis-law-multiagents-2026-08-08, every-copilot-studio-microsoft-2026-08-03, claude-security-product-page, latent-space-thariq-claude-code-next-era-2026-09-29, claudedevs-cloud-sessions-ga-2026-09-23, ainews-claude-code-cloud-sessions-projects-2026-09-24, claude-projects-redesigned-2026-09-17, claudeai-projects-one-conversation-2026-09-17, emollick-claude-projects-mysteries-2026-09-17, tamaratran-fast-jev-compaction, claude-ship-launch-2026-11-23]
 ---
 
 # Claude Code
@@ -70,6 +70,10 @@ Context-window management, verification criteria, the explore-plan-code workflow
 
 Cloud multi-agent code review (research preview since v2.1.86, $5–$20 per run as extra usage); details and when to use it over `/review` are on [Claude Code practices](../workflows/claude-code-practices.md).
 
+## Claude Ship (/ship)
+
+`/ship` (beta, 2026-11-23) hands a finished change to [Claude Ship](claude-ship.md): Claude pushes it, opens the PR, reviews it, and works on feedback and failing checks until it is ready to merge, within the developer's permissions and the repository's branch rules.
+
 ## Claude Security
 
 Anthropic's security-review product, in public beta for Claude Enterprise per Anthropic's product page: it scans a codebase with Claude Mythos 5.1 (not Opus 4.7, as earlier secondary coverage reported), traces data flows across files, adversarially self-verifies each finding, and proposes a reviewable patch per finding. A Claude Code plugin, also in beta, runs the same pipeline locally. *(as of 2026-09-09)*
@@ -96,6 +100,7 @@ That matters because it shifts the product story away from "Anthropic has a stro
 
 ## Recent changes
 
+- [2026-11-23] `/ship` command added (beta): pushes the change, opens the PR, and hands it to [Claude Ship](claude-ship.md) for review, fixes, and an approval decision.
 - [2026-10-26] Function hooks confirmed as early access (2.1.274+, opt-in env flag); the third-party [fast-jev-compaction](fast-jev-compaction.md) plugin uses them to replace the `/compact` summary with pruning.
 - [2026-10-21] Split: the "Best practices (Anthropic engineering)" and "/ultrareview" sections moved to [Claude Code practices](../workflows/claude-code-practices.md); one-line pointers remain.
 - [2026-10-19] Split: the loop-taxonomy table and loop guidance moved to [Agent loop design](../workflows/agent-loop-design.md) (one-line pointer remains); Claude Security detail (Enterprise public beta on Mythos 5.1, adversarial self-verification, per-finding patches, Claude Code plugin beta, as of 2026-09-09) moved here from the [State of Cybersecurity](../state-of/cybersecurity.md) leader line.
@@ -105,7 +110,6 @@ That matters because it shifts the product story away from "Anthropic has a stro
 - [2026-08-08] Cross-session messaging shipped (one session summarizes to another on a different machine); auto mode becomes the default permission mode for Pro/Max/Team, gated by a classifier Anthropic says caught 89% of dangerous commands vs. 14% for manual approval; also added session budgets, automatic repo-skill loading, and mid-session advisor models.
 - [2026-07-17] `/code-review` gains configurable effort levels (low: fast single pass; high: sub-agents verify every finding), replacing the previous single fixed prompt.
 - [2026-07-14] Anthropic countered OpenAI's Codex/ChatGPT merge week with a Claude Code in-app browser, a third extension of Fable 5's promotional access (through July 19) with 50%-higher Claude Code limits, and a Chat+Cowork "home" tab merge.
-- [2026-07-08] Claude Code and Claude Design add bidirectional `/design-sync` between repo work and Claude Design canvases.
 
 ## Sources
 
@@ -145,3 +149,4 @@ That matters because it shifts the product story away from "Anthropic has a stro
 - [Claude (@claudeai) — Projects now run from one conversation](../sources/tweets/claudeai-projects-one-conversation-2026-09-17.md)
 - [Ethan Mollick — Claude Projects handles teams of agents](../sources/tweets/emollick-claude-projects-mysteries-2026-09-17.md)
 - [tamaratran/fast-jev-compaction (GitHub)](../sources/repos/tamaratran-fast-jev-compaction.md)
+- [Introducing Claude Ship](../sources/articles/claude-ship-launch-2026-11-23.md)

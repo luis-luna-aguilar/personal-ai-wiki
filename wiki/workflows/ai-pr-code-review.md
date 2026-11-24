@@ -4,8 +4,8 @@ type: workflow
 domains: [coding, agents]
 subcategory: agentic-orchestration-patterns
 tags: [agentic]
-as_of: 2026-10-25
-sources: [ai-code-review-eval-integrity-2026-06, agent-review-artifacts-2026-05-13, dashbench-code-review-understanding-2026-07, crabbox-remote-execution-2026-07, cognition-async-agents-testing-2026-05, lavaee-verification-pyramid-2026-10, agents-evals-deep-research, thorstenball-how-i-work-with-agents-2026-10-25]
+as_of: 2026-11-23
+sources: [ai-code-review-eval-integrity-2026-06, agent-review-artifacts-2026-05-13, dashbench-code-review-understanding-2026-07, crabbox-remote-execution-2026-07, cognition-async-agents-testing-2026-05, lavaee-verification-pyramid-2026-10, agents-evals-deep-research, thorstenball-how-i-work-with-agents-2026-10-25, claude-ship-launch-2026-11-23]
 ---
 
 # AI PR and code review
@@ -24,6 +24,7 @@ This page covers both sides of the workflow: automated review execution and huma
 - Ask the review agent to emit evidence, not only opinions: changed files, risk areas, invariants, missing tests, suspected regressions, and exact code references.
 - Require a human-facing understanding artifact for meaningful agent-written diffs: what changed, why, what assumptions the agent made, what could break, and what the reviewer should verify.
 - Review from a session that never saw the implementer's transcript, since a reviewer reading the implementer's reasoning tends to continue it. The reviewer picks its checks from the acceptance criteria before reading the diff, tags findings P0–P2, and approval is decided in code (e.g. two independent approvals, discarded if the same review lists a blocker), with a cap on review rounds and a hand-off to a person when it runs out. Before merge, map every change to the criterion it satisfies; a change that maps to nothing is scope creep.
+- **Separate the fixer from the approver, and write the approval rule down.** Anthropic's Claude Ship (November 2026) splits the post-PR loop into a reviewer, a fixer that works failing checks, conflicts, and review comments but never approves or merges, and an approver that applies a policy file kept in the repository: routine changes can pass alone, named scenarios need a person, and the policy can weigh review findings and team-written plain-language classifiers. Run the approval policy in observe-only mode until its calls match the team's, then make it a required branch-protection check.
 - **Review by blast radius, not by line.** Thorsten Ball (Amp, Oct 2026) reads only the few central files in his codebase (fewer than five) and database migrations, and no longer cares about closure versus class, a neater type, variable names, or even duplication. For everything else he asks four questions before deciding whether to read the code at all: does it work, does he understand it at the arrows-in-a-diagram level, did the agent test it end to end, and could he change it in a month. This keeps the goal of understanding-preserving review below (a mental model good enough to steer the next loop) while dropping line-level reading outside the risky core.
 
 ## Review execution stack
@@ -115,6 +116,7 @@ Artifacts should make review faster and more accurate. They should not become de
 - Crabbox documents a remote execution control plane for tests, builds, browser checks, and review evidence, keeping the local developer story unchanged while running commands on leased or provider-backed machines.
 - Cognition's Walden Yan frames testing and proof artifacts as central to async coding-agent trust: screenshots, videos, and command results become the review surface, not just generated code.
 - Cursor's "/thermo-nuclear-code-review" signal suggests deep AI code review is becoming a productized mode, though the fetched source is only a thin tweet and should be treated as directional.
+- On Anthropic's Claude Code team, where Claude's review is one layer of a broader process, merged PRs more than doubled from June to September 2026 while the share of PRs reverted fell by more than 40% ([Claude Ship](../tools/claude-ship.md)).
 
 ## Related
 
@@ -122,9 +124,11 @@ Artifacts should make review faster and more accurate. They should not become de
 - [AI enablement - software development](../training/ai-enablement-software-development.md) - broader engineering adoption and supervision guidance
 - [Agent evals](../concepts/agent-evals.md) - why historical replay and trajectory analysis matter
 - [Agentic orchestration patterns](agentic-orchestration-patterns.md) - where review artifacts fit in agent loops
+- [Claude Ship](../tools/claude-ship.md) - Anthropic's productized review, fix, and policy-based approval loop for pull requests
 
 ## Recent changes
 
+- [2026-11-23] Added fixer/approver separation with a repo-file approval policy run observe-only first, and the Claude Code team's merge and revert numbers, from Anthropic's Claude Ship launch.
 - [2026-10-25] Added review-by-blast-radius guidance from Thorsten Ball (Amp): read only central files and migrations, and gate the rest on four questions (works, understood at diagram level, tested end to end, changeable in a month).
 - [2026-10-19] Added Judge calibration (calibrated rubrics, reference answers, 5–10% human audits with inter-rater agreement), moved from [Evals for agentic software development](../training/evals-for-agentic-software-development.md)'s "LLM-as-judge for code review" section.
 - [2026-10-14] Added fresh-session review guidance: criteria-first checks, P0–P2 findings, coded two-reviewer approval, capped review rounds, and change-to-criterion mapping.
@@ -141,3 +145,4 @@ Artifacts should make review faster and more accurate. They should not become de
 - [Agents Write the Code. Your System Has to Prove It. — Alex Lavaee](../sources/tweets/lavaee-verification-pyramid-2026-10.md)
 - [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)
 - [Thorsten Ball (@thorstenball) — How I work with Agents](../sources/tweets/thorstenball-how-i-work-with-agents-2026-10-25.md)
+- [Introducing Claude Ship](../sources/articles/claude-ship-launch-2026-11-23.md)

@@ -3,8 +3,8 @@ title: Cost-aware AI task routing
 type: training
 domains: [agents, models]
 tags: [agentic]
-as_of: 2026-09-25
-sources: [task-routing-cost-discipline-2026-05-13, thinking-machines-financial-expert-judgment-2026-07-02, superhuman-bridgewater-thinking-machines-2026-07-02, local-ai-infrastructure-2026-06, token-tightening-ai-finops-2026-06, efficiencymaxxing-model-routing-2026-07, fable-unknowns-routing-2026-07, ubereng-software-factory-2026-08-28, ainews-2026-04-23, every-33-questions-executives-2026-08-28, claudedev-spending-your-effort-2026-09-25]
+as_of: 2026-11-17
+sources: [task-routing-cost-discipline-2026-05-13, thinking-machines-financial-expert-judgment-2026-07-02, superhuman-bridgewater-thinking-machines-2026-07-02, local-ai-infrastructure-2026-06, token-tightening-ai-finops-2026-06, efficiencymaxxing-model-routing-2026-07, fable-unknowns-routing-2026-07, ubereng-software-factory-2026-08-28, ainews-2026-04-23, every-33-questions-executives-2026-08-28, claudedev-spending-your-effort-2026-09-25, claude-platform-linked-billing-2026-11-17]
 ---
 
 # Cost-aware AI task routing
@@ -43,6 +43,7 @@ AI cost discipline is becoming an operating function, not just a prompt-writing 
 - Cap context growth with a fixed auto-compaction threshold (e.g. 400K tokens) even on much larger context-window models, to control cache-burst and repeated-input costs rather than relying on the full window.
 - Default reasoning effort to a middle tier (e.g. Medium) rather than maximum, since reasoning/output tokens bill at a multiple of input-token rates and a large share of tasks don't need top-tier reasoning to hit a good cost/quality balance. Raise it by how much checking the task needs, not by how hard it sounds. Anthropic's rule of thumb for Claude Code: low for in-the-loop sketching, medium for most feature work, high for verification-heavy work such as bugs in existing code, and max only for fully autonomous hard problems such as security audits.
 - Pair spend visibility with staged behavioral nudges, not hard caps: a live per-session cost counter, a shared budget pool across interactive tools (separate tiers for managed agents), alerts at 50/80/100% of expected spend, and an on-demand dashboard that flags specific, named cost-anti-patterns (e.g. running simple sessions on an expensive model, stale-cache rebuilds after long idle gaps, 100K-token prompt-init overhead) each paired with its dollar impact — closer-to-real-time feedback than a single aggregate spend number.
+- Bring third-party AI tool spend under the company's own model account instead of handing each tool an API key: Anthropic's linked billing (beta, November 2026) links the organization once, with a monthly spend limit and spend visibility per tool. Requests run in the tool's organization, so the customer's IP allowlists, encryption keys, and retention settings do not apply. Details on [Claude Platform](../tools/claude-platform.md).
 
 ## Failure modes
 
@@ -59,6 +60,7 @@ AI cost discipline is becoming an operating function, not just a prompt-writing 
 ## Recent changes
 
 - [2026-11-23] Split the three evidence groups (model and harness selection wins, routing as infrastructure, cost variance and budgeting tradeoffs) out to [Cost-aware routing: evidence from practice](cost-aware-routing-evidence.md); this page keeps the guidance, AI FinOps controls, and failure modes.
+- [2026-11-17] Added a FinOps control for third-party tool spend: Anthropic's linked billing replaces shared API keys with an organization link, per-platform monthly spend limits, and spend visible per platform; the customer's own IP allowlists, encryption keys, and retention settings do not apply to those requests.
 - [2026-10-19] Merged the "Cost and model routing" proven-patterns group from [Company-wide AI enablement](company-wide-ai-enablement.md): tasteful tokenmaxxing (depth over breadth), route by task novelty, and token allocation as governance (folded into AI FinOps controls); its efficiencymaxxing bullet duplicated this page's Current guidance and was not repeated.
 - [2026-09-25] Added Anthropic's per-task effort rule of thumb (low for in-the-loop sketching, medium for most feature work, high for verification-heavy work, max for fully autonomous hard problems) to the middle-tier FinOps control.
 
@@ -69,8 +71,9 @@ AI cost discipline is becoming an operating function, not just a prompt-writing 
 - [Agent autonomy and governance](agent-autonomy-and-governance.md) - "exploration budget, then governance" sequencing for when token allocation should start.
 
 - [AI work delegation modes](ai-work-delegation-modes.md) - task-shape framework for choosing autonomous delegation versus close collaboration.
-- [Flex processing](../workflows/flex-processing.md) - lower-cost asynchronous execution for non-urgent OpenAI workloads.
+- [OpenAI discounted async processing](../workflows/async-discounted-processing.md) - lower-cost asynchronous execution for non-urgent OpenAI workloads (Flex on older models, discounted background windows on new ones).
 - [Claude Fable 5.1 / Mythos 5.1](../models/claude-fable-5-1.md) - frontier model whose practical niche is ambiguous or premise-risky work, not every large task.
+- [Claude Platform](../tools/claude-platform.md) - Anthropic's developer platform; linked billing and per-platform spend limits.
 - [Claude Haiku 5.5](../models/claude-haiku-5-5.md) - Anthropic's current cheap/fast tier, pitched for subagent, compaction and high-volume routing slots.
 - [Decision models](../concepts/decision-models.md) - non-generative models that return calibrated yes/no, choice and score answers; the cheapest tier for classification steps.
 
@@ -87,3 +90,4 @@ AI cost discipline is becoming an operating function, not just a prompt-writing 
 - [AINews — Tasteful Tokenmaxxing](../sources/newsletters/ainews-2026-04-23.md)
 - [Every — 33 Questions Executives Ask About AI—Answered](../sources/newsletters/every-33-questions-executives-2026-08-28.md)
 - [Anthropic — Using Claude Code: Spending your effort](../sources/articles/claudedev-spending-your-effort-2026-09-25.md)
+- [Linked billing on the Claude Platform](../sources/articles/claude-platform-linked-billing-2026-11-17.md)

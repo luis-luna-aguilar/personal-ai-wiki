@@ -10,7 +10,7 @@ sources: [ainews-openai-devday-2026-dots-2026-09-30, every-vibe-check-openai-dev
 
 # ChatGPT dots
 
-OpenAI's always-on personal agents inside ChatGPT, launched at DevDay on 2026-09-29. Each dot runs on [GPT-6 Astra](../models/gpt-6-astra.md) and has its own Linux virtual computer in the cloud, so it can run desktop applications and a browser, not only call APIs. It is OpenAI's entry in the always-on agent category alongside [Grok Bot](grok-bot.md), [Meta Muse](meta-muse.md) and [Claude Tag](claude-tag.md).
+OpenAI's always-on personal agents inside ChatGPT, launched at DevDay on 2026-09-29. Each dot runs on [GPT-6 Astra](../history/models/gpt-6-astra.md) and has its own Linux virtual computer in the cloud, so it can run desktop applications and a browser, not only call APIs. It is OpenAI's entry in the always-on agent category alongside [Grok Bot](grok-bot.md), [Meta Muse](meta-muse.md) and [Claude Tag](claude-tag.md).
 
 ## Current status (as of 2026-10-06)
 

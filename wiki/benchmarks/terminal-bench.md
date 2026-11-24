@@ -3,8 +3,8 @@ title: Terminal-Bench
 type: benchmark
 domains: [agents, coding]
 tags: [agentic, cli]
-as_of: 2026-07-09
-sources: [agents-evals-deep-research, terminal-bench-science-announcement, ainews-erdos-benchmarks-cluster-2026-05-21, ainews-fable5-june-2026, ainews-glm-52-june-2026, google-io-2026-search-blog, gpt-5-6-sol-preview-launch-2026-06, cohere-command-a-plus-launch]
+as_of: 2026-11-23
+sources: [agents-evals-deep-research, terminal-bench-science-announcement, ainews-erdos-benchmarks-cluster-2026-05-21, ainews-fable5-june-2026, ainews-glm-52-june-2026, google-io-2026-search-blog, gpt-5-6-sol-preview-launch-2026-06, cohere-command-a-plus-launch, openai-introducing-gpt-6-2-astra-sol]
 ---
 
 # Terminal-Bench
@@ -41,9 +41,11 @@ Terminal-Bench is relevant for evaluating terminal-first coding agents, DevOps a
 
 Even the strongest frontier scores (Fable 5 at 88.0% on the 2.1 variant) leave meaningful room short of full reliability on tasks that a competent systems engineer would often handle routinely — a gap between chat-style capability and real operational autonomy that has narrowed since this page's original April synthesis but hasn't closed.
 
-## Terminal-Bench Science (as of 2026-05-21)
+## Terminal-Bench Science (as of 2026-11-23)
 
 Terminal-Bench Science (TB-Science) extends the Terminal-Bench franchise from software-engineering tasks into real computational workflows from the natural sciences: life, physical, earth, mathematical, and engineering sciences. It targets 100+ tasks, each scientifically grounded (drawn from real research), objectively verifiable via deterministic pytest-based checks, and calibrated toward a 10-20% solve rate at release so tasks remain genuinely hard rather than saturated on day one. Tasks are contributed by practicing scientists through a Propose → Build → Review pipeline (Harbor Task Format), hosted by Stanford University and the Laude Institute, with contributor co-authorship on the resulting paper. Task contributions were open as of the announcement.
+
+**Version 0.1 results (OpenAI, 2026-11-23):** OpenAI reports [GPT-6.2 Astra](../models/gpt-6-2-astra.md) sets a new high on Terminal-Bench-Science 0.1, 9 points above GPT-6 Astra at under a third of the cost. Its Claude Fable 5.2 comparison uses Artificial Analysis's run in the mini-swe-agent harness. Anthropic reported 74.6% for Fable 5.2 at max reasoning in Claude Code, so the two harnesses give different pictures (see [Harness vs. model](../concepts/harness-vs-model.md)).
 
 ## Caveats
 
@@ -57,6 +59,7 @@ Terminal-Bench Science (TB-Science) extends the Terminal-Bench franchise from so
 
 ## Recent changes
 
+- [2026-11-23] Terminal-Bench-Science 0.1 results: OpenAI reports GPT-6.2 Astra 9 points above GPT-6 Astra; Anthropic reports Fable 5.2 at 74.6% in Claude Code.
 - [2026-09-06] Repointed Claude Opus 4.8 to its archived page after Claude Opus 5 superseded it; score unchanged, link/label fix only.
 - [2026-07-09] Rebuilt the current-leaderboard section from model pages already citing Terminal-Bench scores, replacing the stale "frontier models below 65%" line with a table grouped by variant (2.0/2.1/Hard).
 - [2026-05-21] Terminal-Bench Science extension announced: 100+ planned tasks across five scientific domains, contributor-sourced via the Harbor Task Format, targeting a 10-20% solve rate at release.
@@ -71,3 +74,4 @@ Terminal-Bench Science (TB-Science) extends the Terminal-Bench franchise from so
 - [Google I/O 2026 — Search blog](../sources/articles/google-io-2026-search-blog.md)
 - [OpenAI — Previewing GPT-5.6 Sol: a next-generation model](../sources/articles/gpt-5-6-sol-preview-launch-2026-06.md)
 - [Introducing Command A+](../sources/articles/cohere-command-a-plus-launch.md)
+- [OpenAI — Introducing GPT-6.2 Astra and Sol](../sources/articles/openai-introducing-gpt-6-2-astra-sol.md)

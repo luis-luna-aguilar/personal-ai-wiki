@@ -18,7 +18,7 @@ AINews recap of an Anthropic announcement: an unreleased internal research Claud
 - [trends/ai-in-science](../../trends/ai-in-science.md) — originally added as a new Current-status bullet and Recent-changes entry (second pure-math autoresearch signal alongside OpenAI's Erdős disproof); this content later moved to AI in Mathematics
 - [trends/ai-in-mathematics](../../trends/ai-in-mathematics.md) — new page; primary source for the Riemann Hypothesis bound entry
 - [state-of/cybersecurity](../../state-of/cybersecurity.md) — OpenAI Daybreak bullet extended with the GPT-5.6-Cyber launch
-- [trends/restricted-frontier-deployment](../../trends/restricted-frontier-deployment.md) — resolution of the Astra capability-threshold-gating section
+- [OpenAI frontier-model gating](../../trends/openai-frontier-gating.md) — resolution of the Astra capability-threshold-gating section
 - [models/claude-sonnet-5](../../history/models/claude-sonnet-5.md) — pricing bullet updated to reflect permanent $2/$10 pricing
 - [concepts/harness-vs-model](../../concepts/harness-vs-model.md) — Composio DeepSeek V4 Flash four-harness bake-off
 - [models/muse-glimmer](../../models/muse-glimmer.md) — new page: full launch details and benchmarks

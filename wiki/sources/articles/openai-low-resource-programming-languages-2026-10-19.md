@@ -16,7 +16,7 @@ OpenAI research post introducing two evaluations for languages with little publi
 ## Influenced pages
 
 - [MultiLangBench](../../benchmarks/multilangbench.md) — new benchmark page, including the COBOL migration eval
-- [GPT-6 Astra](../../models/gpt-6-astra.md) — MultiLangBench and COBOL-migration results
+- [GPT-6 Astra](../../history/models/gpt-6-astra.md) — MultiLangBench and COBOL-migration results
 - [Acceptance contracts and test oracles](../../training/acceptance-contracts-and-test-oracles.md) — differential-test example for migrations
 
 ## Key claims extracted

@@ -3,8 +3,8 @@ title: FrontierCode
 type: benchmark
 domains: [coding]
 tags: [cognition]
-as_of: 2026-07-09
-sources: [ainews-frontiercode-june-2026, ainews-fable5-june-2026, cognitioncom-blog-devin-fusion, the-code-spacexai-drops-grok-45-2026-07-09]
+as_of: 2026-11-23
+sources: [ainews-frontiercode-june-2026, ainews-fable5-june-2026, cognitioncom-blog-devin-fusion, the-code-spacexai-drops-grok-45-2026-07-09, openai-introducing-gpt-6-2-astra-sol]
 ---
 
 # FrontierCode
@@ -59,6 +59,10 @@ Scores here are not directly comparable to the Diamond-tier percentages above �
 
 Per The Code newsletter's recap (2026-07-09) of Cognition's SWE-1.7 release (a budget coding model for [Devin](../tools/devin.md), post-trained from Kimi K2.7 inside Devin's agent harness), Cognition claims the model matches GPT-5.5 within a point on FrontierCode at roughly $2/task, with Opus 4.8 staying slightly ahead. The recap does not specify which tier (Diamond vs. Extended) or give a numeric score, and Cognition's own announcement (`cognition.com/blog/swe-1-7`) has not been read — treat this as a directional, secondhand vendor claim, not a leaderboard entry.
 
+## FrontierCode 2.0 (as of 2026-11-23)
+
+OpenAI reports [GPT-6.2 Sol](../models/gpt-6-2-sol.md) within 0.5 points of [GPT-6.2 Astra](../models/gpt-6-2-astra.md) on Cognition's FrontierCode 2.0 at about a fifth of the cost, both at max effort. OpenAI describes 2.0 as testing whether changes to real codebases meet maintainers' standards for merging. No absolute scores were captured, and the post does not say how 2.0 relates to the Diamond and Extended results above.
+
 ## Why it matters
 
 FrontierCode recalibrates what "good coding performance" means. A model that scores 80% on SWE-Bench Pro may still only produce mergeable code ~30% of the time on hard Diamond-tier tasks. This benchmark is now cited by Cognition and adopted by Anthropic as a primary launch benchmark for Fable 5.
@@ -67,6 +71,7 @@ The benchmark also serves as a feedback loop: Cognition integrates FrontierCode 
 
 ## Recent changes
 
+- [2026-11-23] FrontierCode 2.0 appears in OpenAI's GPT-6.2 launch: Sol within 0.5 points of Astra at about a fifth of the cost.
 - [2026-07-09] Per The Code's recap, Cognition claims SWE-1.7 (Devin) matches GPT-5.5 within a point on FrontierCode at ~$2/task, with Opus 4.8 slightly ahead (secondhand, tier unspecified, no numeric score).
 - [2026-06-29] Cognition introduced FrontierCode Extended (score + avg. cost/task) alongside Devin Fusion; Fusion+Fable5 leads the cost-adjusted comparison at 57.6/$3.00, while Fable5 alone scores marginally higher (57.0) at much higher cost ($5.12).
 - [2026-06-10] Fable 5 launched with 29.3% Diamond, Mythos 5 at 30.9%
@@ -78,3 +83,4 @@ The benchmark also serves as a feedback loop: Cognition integrates FrontierCode 
 - [AINews — Fable 5 FrontierCode Diamond score (June 10)](../sources/newsletters/ainews-fable5-june-2026.md)
 - [Devin Fusion: Frontier Performance at 35% Lower Cost](../sources/articles/cognitioncom-blog-devin-fusion.md)
 - [The Code - SpaceXAI drops Grok 4.5](../sources/newsletters/the-code-spacexai-drops-grok-45-2026-07-09.md)
+- [OpenAI — Introducing GPT-6.2 Astra and Sol](../sources/articles/openai-introducing-gpt-6-2-astra-sol.md)

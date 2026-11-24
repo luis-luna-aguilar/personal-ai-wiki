@@ -4,8 +4,8 @@ type: workflow
 domains: [agents, coding]
 subcategory: agentic-orchestration-patterns
 tags: [agentic]
-as_of: 2026-10-13
-sources: [googlecloudtech-adk-2-orchestration-patterns, devinai-blog-agentic-map-reduce, cognitioncom-blog-devin-fusion, every-claude-dynamic-workflows-reliability-2026-06, cursor-agent-swarm-economics-2026-09-07, mahax-graph-engineering-2026-07-29, cognition-agent-memory-repo-2026-10, shannholmberg-hermes-agent-operator-2026-05-18, latent-space-claude-dynamic-workflows-2026-10-12, ainews-cma-flows-agent-teams-2026-10-10, devin-dynamic-workflows-docs-2026-10]
+as_of: 2026-11-18
+sources: [googlecloudtech-adk-2-orchestration-patterns, devinai-blog-agentic-map-reduce, cognitioncom-blog-devin-fusion, every-claude-dynamic-workflows-reliability-2026-06, cursor-agent-swarm-economics-2026-09-07, mahax-graph-engineering-2026-07-29, cognition-agent-memory-repo-2026-10, shannholmberg-hermes-agent-operator-2026-05-18, latent-space-claude-dynamic-workflows-2026-10-12, ainews-cma-flows-agent-teams-2026-10-10, devin-dynamic-workflows-docs-2026-10, vercel-board-launch-2026-11-18]
 ---
 
 # Multi-agent coordination
@@ -35,6 +35,7 @@ Cursor's long-running swarm lessons (recursive planner/subplanner/worker topolog
 - **Field Guide: self-authored shared context.** A folder owned entirely by the agents themselves, whose index file is automatically injected into every new agent at start; agents alone decide what goes in it, under a line-budget constraint. Modeled on stigmergy (how ants/termites coordinate by modifying their shared environment rather than communicating directly) — since model weights are frozen, capturing genuine surprises for the next agent's trajectory is the mechanism's whole value.
 - **Memory repo as swarm workspace.** Cognition's Agent Memory Repo gives a swarm its own folder inside the user's git-backed [agent memory](../concepts/agent-memory.md): a README with the goal and the rules (measure only with one shared benchmark script so numbers compare, pull and read the shared files before each step, record what was ruled out, ask when another agent's area might explain what you see), a shared `findings.md`, a `questions.md` where agents ask each other, and one notes file per agent. In the worked example four agents chasing a p99 latency spike each saw one unexplained symptom; the cause (a cache refresh triggering garbage-collection freezes that exhausted the database pool) appeared only when the questions file connected them. Git is the concurrency control: most commits merge, and when two agents edit the same line the second push is rejected and that agent re-reads both versions before writing. When the swarm ends, one index line in `MEMORY.md` links its folder, so later sessions reuse its benchmark and its lessons. This is the Field Guide's stigmergy made durable across sessions, and it differs from the shared-file locking that failed in Cursor's first swarm ([Long-running agent swarms](long-running-agent-swarms.md)) by letting writes collide and resolving them at push time instead of holding locks. *Source: Cognition, Agent Memory Repo (October 2026)*
 - **Control room apart from runtime.** Keep fleet governance in a docs-only folder: which agents exist, what each may and may not do, which credentials each references (never the secrets themselves), runbooks, and backups. An orchestrator reads it to learn what exists and what needs human approval before it routes work, so it is only as good as those docs. Each agent's live state (secrets, memory, skills, sessions, scheduled jobs) stays in its own isolated runtime, which keeps credentials revocable per agent and lets the fleet be rebuilt from the docs: "You can rebuild the body from the brain. You cannot rebuild the brain from the body." Unlike the Field Guide, which the agents write for each other, the operator writes the control room and it governs the agents. *Source: Shann Holmberg's [Hermes Agent](../tools/hermes-agent.md) fleet (May 2026)*
+- **Shared task board as the coordination layer.** When many agents across machines and harnesses work one backlog, give them a shared board instead of per-agent Markdown task files: an agent claims a ready task under a lease it must renew, so a stalled agent's work frees itself; tasks declare dependencies, so a review becomes claimable only when its fix completes while independent fixes run in parallel; and replies or label changes wake the agent that owns the thread. The board also holds the original report, findings and PR together, so another agent or a person can review the work, and it syncs with the Slack and GitHub threads people already use. Unlike the memory-repo workspace above, which lets writes collide and settles them at push time, the board assigns ownership before work starts. [Vercel Board](../tools/vercel-board.md) is the first packaged instance; Vercel runs its security-agent swarm and v0's software factory on it. *Source: Vercel (2026-11-18)*
 
 ## Where these patterns surfaced
 
@@ -43,6 +44,7 @@ Shipped instances (Claude Code dynamic workflows, Claude Code Projects, the Mana
 ## Recent changes
 
 - [2026-11-23] Split: "Where these patterns surfaced" (shipped instances, studies, and agent-team measurements) moved to [Multi-agent coordination: evidence from practice](multi-agent-coordination-evidence.md).
+- [2026-11-18] Added the shared-task-board pattern (leased claims, task dependencies, event watchers, sync with Slack and GitHub) with Vercel Board as its first packaged instance.
 - [2026-10-19] Split Cursor's long-running swarm lessons (recursive planner/subplanner/worker topology, freshness mechanisms, constraints over instructions, steady error rate, swarm coordination failure modes) out to [Long-running agent swarms](long-running-agent-swarms.md).
 - [2026-10-13] Scripted subagent orchestration is now cross-vendor: Claude Managed Agents flows (up to 1,000 agents) and Devin Dynamic Workflows (deterministic Python, record-and-replay resume, explicit when-not-to-use).
 - [2026-10-06] Added the memory-repo swarm-workspace pattern (shared findings and questions files in a git-backed memory repo, conflicts resolved at push time) from Cognition's Agent Memory Repo.
@@ -51,7 +53,6 @@ Shipped instances (Claude Code dynamic workflows, Claude Code Projects, the Mana
 - [2026-07-29] Expanded Hybrid graph orchestration into three patterns — graph vocabulary and the fake-edge test, the diamond paired with a named checker-node primitive, and a static-vs-dynamic graph selection heuristic — generalizing shapes already covered above under Agentic MapReduce and Glasswing. *Source: Mahax X Article on graph engineering with Claude*
 - [2026-07-14] Expanded Agentic MapReduce from a passing mention into a full pattern entry: deterministic Plan/Shard/Map/Reduce (+Verify for Security Swarm) architecture, sourced from Cognition's engineering writeup (its three supporting research citations are now on the evidence page).
 - [2026-06-29] Added Sidekick multi-model harness pattern: persistent frontier + cheaper sidekick agents, cache-aware mid-session model switching at compaction boundaries; contrasted with per-call advisor/smart-friend escalation.
-- [2026-05-18] Added the control-room pattern (docs-only fleet governance an orchestrator reads, kept apart from each agent's secrets and live state) from Shann Holmberg's Hermes Agent fleet.
 
 ## Related
 
@@ -61,6 +62,7 @@ Shipped instances (Claude Code dynamic workflows, Claude Code Projects, the Mana
 - [Advisor strategy](advisor-strategy.md) — the per-call escalation pattern the sidekick pattern is contrasted with
 - [Long-running agent swarms](long-running-agent-swarms.md) — Cursor's multi-day swarm case studies: topology evolution, failure modes and fixes, operating principles
 - [Devin](../tools/devin.md) — production instance of both Agentic MapReduce (Security Swarm) and mayor+polecats (Auto-Triage)
+- [Vercel Board](../tools/vercel-board.md) — packaged shared task board for agent fleets across harnesses
 
 ## Sources
 
@@ -75,3 +77,4 @@ Shipped instances (Claude Code dynamic workflows, Claude Code Projects, the Mana
 - [Latent Space — How Anthropic's dynamic workflows coordinate Claude agents](../sources/newsletters/latent-space-claude-dynamic-workflows-2026-10-12.md)
 - [AINews — Managed Agents flows, agent-team economics, Devin trees](../sources/newsletters/ainews-cma-flows-agent-teams-2026-10-10.md)
 - [Devin Docs — Dynamic Workflows](../sources/articles/devin-dynamic-workflows-docs-2026-10.md)
+- [Vercel — Introducing Vercel Board](../sources/articles/vercel-board-launch-2026-11-18.md)

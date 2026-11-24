@@ -15,6 +15,7 @@ Coverage from AINews and The Code newsletter (2026-05-19): Anthropic promoted Fa
 
 - [Claude Code](../../tools/claude-code.md) — Fast mode default; prompt cache diagnostics
 - [Anti-autopilot review friction](../../training/anti-autopilot-review-friction.md) — spec-drift logging pattern
+- [Claude Platform](../../tools/claude-platform.md) — Console prompt-cache diagnostics
 
 ## Key claims extracted
 

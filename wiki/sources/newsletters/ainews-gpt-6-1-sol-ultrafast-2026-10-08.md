@@ -15,7 +15,7 @@ The OpenAI story from AINews' 8 October issue: the GPT-6.1 Sol Ultrafast rollout
 
 ## Influenced pages
 
-- [GPT-6.1 Sol](../../models/gpt-6-1-sol.md) — Ultrafast tier, Alignment Index, Daybreak Blue
+- [GPT-6.1 Sol](../../history/models/gpt-6-1-sol.md) — Ultrafast tier, Alignment Index, Daybreak Blue
 - [GPT-6 Luna](../../models/gpt-6-luna.md) — decisions latency, Claude Haiku 5.5 price match
 - [State of Models](../../state-of/models.md) — leader-line and Luna-line facts
 

@@ -12,7 +12,7 @@ sources: [metr-gpt-5-6-sol-eval-2026-06, gpt-5-6-sol-preview-launch-2026-06, cha
 
 GPT-5.6 Sol is OpenAI's flagship model in the GPT-5.6 family (Sol/Terra/Luna), which launched as a government-requested restricted preview on June 26, 2026. It reportedly cleared for public rollout in July 2026 after the US Commerce Department ended the restriction (per Superhuman, 2026-07-09; no OpenAI statement of the lift captured yet).
 
-**Superseded by GPT-6 Sol and [GPT-6 Luna](../../models/gpt-6-luna.md) (2026-09-22), then [GPT-6.1 Sol](../../models/gpt-6-1-sol.md) (2026-09-29).**
+**Superseded by GPT-6 Sol and [GPT-6 Luna](../../models/gpt-6-luna.md) (2026-09-22), then [GPT-6.1 Sol](gpt-6-1-sol.md) (2026-09-29).**
 
 ## Current status (as of 2026-08-07)
 

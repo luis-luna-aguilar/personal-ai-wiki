@@ -10,7 +10,9 @@ sources: [ainews-gpt-6-sol-luna-launch-2026-09-23, every-opus-55-sol-split-team-
 
 # GPT-6.1 Sol
 
-OpenAI's current mid-price model in the GPT-6 family, announced at DevDay on 2026-09-29 and pitched as "near-Astra intelligence for a fifth of the price." It replaced GPT-6 Sol a week after that model launched (2026-09-22) and supersedes [GPT-5.6 Sol](../history/models/gpt-5-6-sol.md). [GPT-6 Astra](gpt-6-astra.md) remains the flagship. The cheapest tier, launched alongside GPT-6 Sol, has its own page: [GPT-6 Luna](gpt-6-luna.md).
+OpenAI's current mid-price model in the GPT-6 family, announced at DevDay on 2026-09-29 and pitched as "near-Astra intelligence for a fifth of the price." It replaced GPT-6 Sol a week after that model launched (2026-09-22) and supersedes [GPT-5.6 Sol](../../history/models/gpt-5-6-sol.md). [GPT-6 Astra](gpt-6-astra.md) remains the flagship. The cheapest tier, launched alongside GPT-6 Sol, has its own page: [GPT-6 Luna](../../models/gpt-6-luna.md).
+
+**Superseded by [GPT-6.2 Sol](../../models/gpt-6-2-sol.md) (2026-11-23), at the same $2/$10 price.**
 
 ## Current status (as of 2026-10-19)
 
@@ -41,9 +43,9 @@ Released about an hour after Claude Opus 5.5, at $2/$10, with cached-input disco
 
 ## Sources
 
-- [AINews — GPT-6 Sol and Luna launch](../sources/newsletters/ainews-gpt-6-sol-luna-launch-2026-09-23.md)
-- [Every — Opus 5.5 and Sol Split the Team](../sources/newsletters/every-opus-55-sol-split-team-2026-09-27.md)
-- [AINews — OpenAI DevDay 2026: GPT-6.1 Sol](../sources/newsletters/ainews-gpt-6-1-sol-devday-2026-09-30.md)
-- [AINews — GPT-6.1 Sol independent evals](../sources/newsletters/ainews-gpt-6-1-sol-evals-2026-10-01.md)
-- [AINews — GPT-6.1 Sol Ultrafast and Arena Alignment Index](../sources/newsletters/ainews-gpt-6-1-sol-ultrafast-2026-10-08.md)
-- [OpenAI Developers — Maintaining software with the GPT-6 family](../sources/articles/developersopenaicom-blog-maintaining-software-gpt-6.md)
+- [AINews — GPT-6 Sol and Luna launch](../../sources/newsletters/ainews-gpt-6-sol-luna-launch-2026-09-23.md)
+- [Every — Opus 5.5 and Sol Split the Team](../../sources/newsletters/every-opus-55-sol-split-team-2026-09-27.md)
+- [AINews — OpenAI DevDay 2026: GPT-6.1 Sol](../../sources/newsletters/ainews-gpt-6-1-sol-devday-2026-09-30.md)
+- [AINews — GPT-6.1 Sol independent evals](../../sources/newsletters/ainews-gpt-6-1-sol-evals-2026-10-01.md)
+- [AINews — GPT-6.1 Sol Ultrafast and Arena Alignment Index](../../sources/newsletters/ainews-gpt-6-1-sol-ultrafast-2026-10-08.md)
+- [OpenAI Developers — Maintaining software with the GPT-6 family](../../sources/articles/developersopenaicom-blog-maintaining-software-gpt-6.md)

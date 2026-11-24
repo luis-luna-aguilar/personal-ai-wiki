@@ -15,7 +15,7 @@ The GPT-6 Sol and Luna story from AINews' Claude Opus 5.5 launch-day issue. Open
 
 ## Influenced pages
 
-- [GPT-6.1 Sol](../../models/gpt-6-1-sol.md) — GPT-6 Sol predecessor note
+- [GPT-6.1 Sol](../../history/models/gpt-6-1-sol.md) — GPT-6 Sol predecessor note
 - [GPT-6 Luna](../../models/gpt-6-luna.md) — new page: launch price, availability, OpenAI and Cognition claims
 - [State of Models](../../state-of/models.md) — GPT-6 Luna line in Small / fast models
 

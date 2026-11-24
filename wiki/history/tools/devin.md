@@ -9,3 +9,4 @@ Older recent-change entries spilled from [Devin](../../tools/devin.md).
 ## Archived from current page on 2026-11-23
 
 - [2026-06-29] Devin Fusion (preview): multi-model "sidekick" harness matches frontier performance at 35% lower cost (41% with Fable 5) on FrontierCode Extended; 88% of Cognition's internal merged PRs driven by the automated router.
+- [2026-07-02] Cognition shipped Devin Security Swarm for parallel vulnerability discovery, sandbox reproduction, exploitability validation, and fix PRs.

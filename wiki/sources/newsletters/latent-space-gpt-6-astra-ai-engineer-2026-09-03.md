@@ -15,7 +15,7 @@ Latent Space's early-access writeup: Astra cleanly beats Fable 5.1 on FrontierMa
 
 ## Influenced pages
 
-- [GPT-6 Astra](../../models/gpt-6-astra.md) — early-access benchmark claims, agentic AI-engineer economics
+- [GPT-6 Astra](../../history/models/gpt-6-astra.md) — early-access benchmark claims, agentic AI-engineer economics
 
 ## Key claims extracted
 

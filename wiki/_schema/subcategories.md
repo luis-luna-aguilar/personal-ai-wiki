@@ -6,7 +6,7 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
-Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`, `agent-sandbox-infra`, `coding-discipline-skill`, `knowledge-platform`, `web-data-extraction`, `domain-specialized-model`, `small-model`, `ai-e2e-testing`, `decision-model`, `vector-graphics-model`
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`, `agent-sandbox-infra`, `coding-discipline-skill`, `knowledge-platform`, `web-data-extraction`, `domain-specialized-model`, `small-model`, `ai-e2e-testing`, `decision-model`, `vector-graphics-model`, `ai-code-review`, `runtime-security`
 
 ### spec-driven-development
 - **Parent domain(s):** coding
@@ -253,6 +253,18 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Applies to types:** model
 - **Definition:** Models that generate or edit editable vector graphics (SVG paths, logos, icons, illustrations) rather than raster pixels. Distinct from `image-generation-model`, which outputs raster images.
 - **Examples:** [Arrow 2](../models/arrow-2.md)
+
+### ai-code-review
+- **Parent domain(s):** coding, agents
+- **Applies to types:** tool
+- **Definition:** Tools that review pull requests, fix failing checks and review feedback, or decide what can merge under a team-set policy; distinct from `agentic-devops` (infrastructure provisioning, operation, and post-deploy verification) and `ai-e2e-testing` (agent-driven application tests).
+- **Examples:** [Claude Ship](../tools/claude-ship.md)
+
+### runtime-security
+- **Parent domain(s):** cybersecurity
+- **Applies to types:** tool
+- **Definition:** Tools that protect running production systems in place — blocking exploit behavior, enforcing least-privilege policy, or attesting what protections are loaded — as distinct from scanners that find vulnerabilities and sandboxes that isolate agents.
+- **Examples:** [Shirudo](../tools/shirudo.md)
 
 ### Format
 

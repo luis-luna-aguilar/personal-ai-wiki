@@ -18,7 +18,7 @@ OpenAI's launch post for Astra for Law, a configuration of GPT-6 Astra with a U.
 - [Astra for Law](../../tools/astra-for-law.md) — new page
 - [State of Legal](../../state-of/legal.md) — new leader line
 - [Harvey](../../tools/harvey.md) — builds on Astra for Law; Grupen quote
-- [GPT-6 Astra](../../models/gpt-6-astra.md) — legal configuration
+- [GPT-6 Astra](../../history/models/gpt-6-astra.md) — legal configuration
 
 ## Key claims extracted
 

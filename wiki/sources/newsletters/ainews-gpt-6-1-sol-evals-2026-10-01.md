@@ -15,7 +15,7 @@ The GPT-6.1 Sol story from AINews' Gemini 4 Argon issue: leaderboard placements,
 
 ## Influenced pages
 
-- [GPT-6.1 Sol](../../models/gpt-6-1-sol.md) — leaderboards, cost explanation, Ultrafast hands-on
+- [GPT-6.1 Sol](../../history/models/gpt-6-1-sol.md) — leaderboards, cost explanation, Ultrafast hands-on
 - [GPT-6 Luna](../../models/gpt-6-luna.md) — image-encoding fix
 - [Cost-aware routing evidence](../../training/cost-aware-routing-evidence.md) — per-task cost vs token use
 

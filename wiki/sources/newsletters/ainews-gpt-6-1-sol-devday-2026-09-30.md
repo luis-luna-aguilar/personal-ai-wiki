@@ -15,9 +15,9 @@ The GPT-6.1 Sol story from AINews' DevDay issue: OpenAI's pitch and claims, Arti
 
 ## Influenced pages
 
-- [GPT-6.1 Sol](../../models/gpt-6-1-sol.md) — new page: pricing, AA read, OpenAI claims, caveats
+- [GPT-6.1 Sol](../../history/models/gpt-6-1-sol.md) — new page: pricing, AA read, OpenAI claims, caveats
 - [GPT-6 Luna](../../models/gpt-6-luna.md) — powers the Decisions API
-- [GPT-6 Astra](../../models/gpt-6-astra.md) — GPT-6.1 Astra scrapped
+- [GPT-6 Astra](../../history/models/gpt-6-astra.md) — GPT-6.1 Astra scrapped
 - [State of Models](../../state-of/models.md) — Frontier models leader line
 
 ## Key claims extracted

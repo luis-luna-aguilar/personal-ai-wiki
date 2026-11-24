@@ -15,7 +15,7 @@ OpenAI's benchmark for building software in many programming languages, includin
 
 - 20 languages: C, C#, C++, COBOL, Common Lisp, Fortran, Go, Java, JavaScript, Lean, OCaml, PHP, PowerShell, Python, Ruby, Rust, Scala, Swift, Visual Basic, Zig.
 - Grading uses database files as a shared interface: the candidate program takes an initial database and a SQL query and writes a modified database, which is checked against the reference SQLite. Tests are adapted from SQLite's own suite, so every language gets the same tests. Reports test pass rate and API cost.
-- Average pass rate at max reasoning effort (OpenAI's chart): [GPT-6 Astra](../models/gpt-6-astra.md) 87.4%, [GPT-6.1 Sol](../models/gpt-6-1-sol.md) 87.0%, GPT-6 Sol 57.7%, [GPT-6 Luna](../models/gpt-6-luna.md) 40.3%, GPT-5.6 Terra 37.9%, GPT-5.6 Sol 26.8%, [GPT-5.5](../models/gpt-5-5.md) 25.8%, GPT-5.4 17.4%. Only OpenAI models are reported.
+- Average pass rate at max reasoning effort (OpenAI's chart): [GPT-6 Astra](../history/models/gpt-6-astra.md) 87.4%, [GPT-6.1 Sol](../history/models/gpt-6-1-sol.md) 87.0%, GPT-6 Sol 57.7%, [GPT-6 Luna](../models/gpt-6-luna.md) 40.3%, GPT-5.6 Terra 37.9%, GPT-5.6 Sol 26.8%, [GPT-5.5](../models/gpt-5-5.md) 25.8%, GPT-5.4 17.4%. Only OpenAI models are reported.
 - Astra clears 83% in 19 of 20 languages; COBOL stays hardest at 72.1% (GPT-5.6 Sol: 10.9%). GPT-6 Luna improves on GPT-5.6 Sol in every language at ~$0.77 vs $3.48 per sample (~78% cheaper).
 
 ## Companion eval: COBOL migration

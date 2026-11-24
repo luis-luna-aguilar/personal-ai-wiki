@@ -94,3 +94,5 @@
 - [2026-09-22] Added [DigitalOcean Managed Agents](../../tools/digitalocean-managed-agents.md) to Agent sandbox / compute infrastructure: bring-your-own-harness microVM sessions with active-CPU billing and a credential-brokering MCP tool gateway (public preview).
 - [2026-09-25] Microsoft relaunched Copilot as one app with an Autopilot tab: persistent, user-named agents that appear in the org chart, joining OpenAI's dots, Meta Muse and Grok Bot in the always-on agent category.
 - [2026-09-29] Added [ChatGPT dots](../../tools/chatgpt-dots.md) to Agent orchestration (OpenAI's always-on agents with their own cloud computers, joining Grok Bot and Claude Tag) and its companion surfaces [ChatGPT Space](../../tools/chatgpt-space.md) and [ChatGPT Pages](../../tools/chatgpt-pages.md) to Agent-native documents.
+- [2026-10-06] Added [Pi](../../tools/pi.md) to Agent frameworks: Pi 1.0 and Pi Durable (checkpointed, crash-resuming harness on Bun or Cloudflare Durable Objects).
+- [2026-10-07] Added [Mecatl](../../tools/mecatl.md) to Agent frameworks: Stacklok's open-source cloud-native harness, built by Kubernetes co-creators Craig McLuckie and Joe Beda.

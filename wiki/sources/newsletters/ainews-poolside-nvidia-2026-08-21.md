@@ -21,6 +21,7 @@ AINews's 2026-08-21 issue leads with NVIDIA's $12B "reverse execuhire" of Poolsi
 - [Multi-agent coordination: evidence from practice](../../workflows/multi-agent-coordination-evidence.md) — 1,902-run multi-agent coordination study
 - [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — AT&T evidence bullet
 - [Muse Spark](../../models/muse-spark.md) — additional benchmark bullet
+- [Claude Platform](../../tools/claude-platform.md) — Claude Platform GA tools
 
 ## Key claims extracted
 

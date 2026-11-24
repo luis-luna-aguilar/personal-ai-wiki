@@ -17,6 +17,7 @@ Anthropic's launch post for Claude Sonnet 5.5, the second Claude 5.5 model. Anth
 - [Claude Sonnet 5.5](../../models/claude-sonnet-5-5.md) — new page: pricing, benchmarks, safeguards, availability
 - [Claude Sonnet 5](../../history/models/claude-sonnet-5.md) — archived as superseded
 - [State of Models](../../state-of/models.md) — Sonnet 5.5 replaces Sonnet 5 in Frontier models
+- [Claude Platform](../../tools/claude-platform.md) — default High effort on the Platform
 
 ## Key claims extracted
 - Available on all platforms (AWS, Google Cloud, Microsoft Azure) and on the Claude Platform as `claude-sonnet-5-5`; thinking-off users must switch to the new `between_tools` setting.

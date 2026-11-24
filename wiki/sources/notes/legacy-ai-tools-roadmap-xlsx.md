@@ -39,4 +39,4 @@ One-time exception ingest from the user's legacy workbook. It contains mixed not
 - [HeyGen](../../tools/heygen.md)
 - [Stitch](../../tools/stitch.md)
 - [SWE-PolyBench](../../benchmarks/swe-polybench.md)
-- [Flex processing](../../workflows/flex-processing.md)
+- [OpenAI discounted async processing (formerly Flex processing)](../../workflows/async-discounted-processing.md)

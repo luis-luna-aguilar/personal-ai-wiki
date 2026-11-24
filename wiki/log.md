@@ -647,3 +647,17 @@ grep "^- \[" wiki/log.md | tail -20
 - [2026-11-23] **lint** | refactor state-of/models | 10 longest leader bullets shortened (detail already on model pages); AI economics snapshot moved to trends/compute-infrastructure as "Lab and subscription economics"; pointer left
 - [2026-11-23] **lint** | refactor trends/agent-safety-and-alignment-research | "Chain-of-thought monitorability" (Astra debate and system card, Gemini 4 Argon, Nadella) moved to new trends/cot-monitorability with its 4 Recent-changes entries and 5 source ids; links re-pointed on gemini-4-argon, gpt-6-astra, agi-timeline-claims, openai-huggingface-cyber-incident, state-of/cybersecurity and 5 source pages
 - [2026-11-23] **lint** | refactor state-of/cybersecurity | Cloudflare Glasswing stage table moved to models/claude-mythos-preview; long leader bullets tightened; agent-incidents pointer moved into "Agents acting in the wild" to end the scope overlap
+- [2026-11-23] **ingest** | Introducing Claude Ship | 3 pages updated, 2 created
+- [2026-11-23] **schema** | added subcategory `ai-code-review` (no other tool pages qualified; review tools elsewhere are features of larger products)
+- [2026-11-23] **ingest** | Cognition — Devin Bots product page | 2 pages updated, 2 created
+- [2026-11-23] **ingest** | Vercel — Introducing Vercel Board | 2 pages updated, 2 created
+- [2026-11-23] **ingest** | Linked billing on the Claude Platform | 7 pages updated, 2 created (incl. State of Agents line for the new Claude Platform page)
+- [2026-11-23] **ingest** | OpenAI API docs — Background mode | 3 pages updated, 1 created
+- [2026-11-23] **lint** | refactor workflows/flex-processing → workflows/async-discounted-processing | renamed "OpenAI discounted async processing" with Flex processing as alias; inbound links re-pointed
+- [2026-11-23] **ingest** | OpenAI — ChatGPT for Accounting solutions page | 1 page updated, 1 created
+- [2026-11-23] **ingest** | OpenAI — Introducing GPT-6.2 Astra and Sol | 30 pages updated, 3 created
+- [2026-11-23] **lint** | history move models/gpt-6-astra, models/gpt-6-1-sol → history/models/ | superseded by GPT-6.2 Astra and GPT-6.2 Sol; inbound links re-pointed on 6 live pages and 14 source pages
+- [2026-11-23] **lint** | refactor trends/restricted-frontier-deployment | OpenAI capability-threshold gating, training-time pause and internal-use restrictions (plus the GPT-6.2 paragraph) moved to new trends/openai-frontier-gating with 5 Recent-changes entries and 5 source ids; origin as_of → 2026-07-09; 5 source pages re-pointed
+- [2026-11-23] **schema** | added subcategory `runtime-security`
+- [2026-11-23] **ingest** | OpenAI and Cisco introduce Shirudo | 1 page updated, 2 created
+- [2026-11-23] **ingest** | OpenAI — AI for Cybersecurity Teams solutions page | 2 pages updated, 1 created

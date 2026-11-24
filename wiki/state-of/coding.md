@@ -3,8 +3,8 @@ title: State of Coding
 type: state-of
 domains: [coding]
 tags: []
-as_of: 2026-10-19
-sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit, cursor-bugbot-learning, claude-code-routines, openai-codex-ongoing-tasks, orca-homepage, coding-agent-control-planes, claude-code-leak-architecture, cursor-3-orchestration-bet, skills-and-plugin-packaging-late-march, cursor-cloud-agents-march, claude-code-scheduled-tasks-march, codex-security-march, agentic-devops-deep-research, cursor-sdk-agent-runtime-2026-04-30, symphony-devin-terminal-orchestration-2026-04-28, end-of-finetuning-debate-2026-05-13, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, model-harness-fit-2026-05-13, agent-first-ide-convergence-may-2026, dynamic-workflows-claude-code, fable-ban-june-2026, spacex-cursor-june-2026, ainews-frontiercode-june-2026, ainews-not-much-happened-2026-07-02, every-sonnet-5-vibe-check-2026-07-02, the-code-devin-security-2026-07-02, every-tale-of-two-models-2026-07-05, claude-code-getting-started-with-loops-2026-06-30, claude-sonnet-5-official-2026-06-30, cursor-ios-mobile-app-2026-06, devinai-blog-windsurf-adaptive, devinai-blog-agentic-map-reduce, cognitioncom-blog-devin-fusion, every-copilot-studio-microsoft-2026-08-03, dietrichgebert-ponytail, rauchg-gdp-ts-2026-10, tester-army-e2e, ainews-muse-wonder-launch-2026-10-13]
+as_of: 2026-11-23
+sources: [sdd-3-tools-fowler, cursor-3-launch, stripe-cli, claude-code-monitor, openai-pro-100, cursor-pr-demos, shopify-ai-toolkit, cursor-bugbot-learning, claude-code-routines, openai-codex-ongoing-tasks, orca-homepage, coding-agent-control-planes, claude-code-leak-architecture, cursor-3-orchestration-bet, skills-and-plugin-packaging-late-march, cursor-cloud-agents-march, claude-code-scheduled-tasks-march, codex-security-march, agentic-devops-deep-research, cursor-sdk-agent-runtime-2026-04-30, symphony-devin-terminal-orchestration-2026-04-28, end-of-finetuning-debate-2026-05-13, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, model-harness-fit-2026-05-13, agent-first-ide-convergence-may-2026, dynamic-workflows-claude-code, fable-ban-june-2026, spacex-cursor-june-2026, ainews-frontiercode-june-2026, ainews-not-much-happened-2026-07-02, every-sonnet-5-vibe-check-2026-07-02, the-code-devin-security-2026-07-02, every-tale-of-two-models-2026-07-05, claude-code-getting-started-with-loops-2026-06-30, claude-sonnet-5-official-2026-06-30, cursor-ios-mobile-app-2026-06, devinai-blog-windsurf-adaptive, devinai-blog-agentic-map-reduce, cognitioncom-blog-devin-fusion, every-copilot-studio-microsoft-2026-08-03, dietrichgebert-ponytail, rauchg-gdp-ts-2026-10, tester-army-e2e, ainews-muse-wonder-launch-2026-10-13, claude-ship-launch-2026-11-23]
 ---
 
 # State of Coding
@@ -71,8 +71,15 @@ Testing frameworks in which an agent drives a web or mobile app through natural-
 
 - [TesterArmy e2e](../tools/tester-army-e2e.md) — open-source; natural-language agent steps plus deterministic assertions for web and mobile apps, with verified agent steps replayed without model calls *(as of 2026-10-19)*
 
+### AI code review
+
+Tools that review pull requests, fix failing checks and review feedback, or decide what can merge under a policy the team sets.
+
+- [Claude Ship](../tools/claude-ship.md) — Anthropic; Code Review plus beta fixer (PR Steward) and policy-file approver (Claude Approvals) agents; `/ship` in Claude Code or per-repository admin enablement *(as of 2026-11-23)*
+
 ## Recent changes
 
+- [2026-11-23] New "AI code review" section (new `ai-code-review` subcategory) with Claude Ship: Anthropic's review, fix, and policy-based approval agents for pull requests, in beta.
 - [2026-10-19] New "AI end-to-end testing" section (new `ai-e2e-testing` subcategory) with TesterArmy e2e: agent-driven end-to-end tests for web and mobile that record verified agent steps and replay them without model calls.
 - [2026-10-19] New "Coding discipline skills" section: gdp-ts (compile-time authorization proofs for TypeScript, with an agent skill) joins Ponytail.
 - [2026-10-12] Added Muse Code to Terminal coding agent: with Meta's new Muse Wonder Full it scores 68 on Artificial Analysis's Coding Agents Index, tying Claude Code + Sonnet 5.5.
@@ -82,4 +89,3 @@ Testing frameworks in which an agent drives a web or mobile app through natural-
 - [2026-07-02] Fable 5 returned to coding-tool surfaces; Sonnet 5 testing reinforced cost-per-completed-task as a better routing metric than token list price.
 - [2026-07-02] Z.ai launched ZCode for GLM-5.2, a signal that open coding models are building product ecosystems around long-context workflows rather than competing only as checkpoints.
 - [2026-06-30] Cursor iOS beta adds mobile launch/control for always-on cloud agents and desktop agents.
-- [2026-06-30] Official Sonnet 5 launch confirms Claude Code availability and `claude-sonnet-5` API access.

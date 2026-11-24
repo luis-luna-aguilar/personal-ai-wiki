@@ -15,7 +15,7 @@ Dense AINews digest aggregating Twitter reaction to the Astra launch: official p
 
 ## Influenced pages
 
-- [GPT-6 Astra](../../models/gpt-6-astra.md) — full benchmark/reception picture, pricing, rollout timeline
+- [GPT-6 Astra](../../history/models/gpt-6-astra.md) — full benchmark/reception picture, pricing, rollout timeline
 - [State of Models](../../state-of/models.md) — new frontier leader line
 - [AGI timeline claims](../../trends/agi-timeline-claims.md) — launch vs. named timeline, fragmented AGI discourse
 - [Chain-of-thought monitorability](../../trends/cot-monitorability.md) — system-card CoT-monitorability numbers

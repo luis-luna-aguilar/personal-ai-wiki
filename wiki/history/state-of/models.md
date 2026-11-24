@@ -120,3 +120,4 @@
 - [2026-09-29] GPT-6.1 Sol replaces GPT-5.6 Sol in Frontier models; GPT-6 Sol (2026-09-22) was superseded within a week. GPT-6 Luna added to Small / fast models at $0.10/$0.50. AA puts 6.1 Sol one point below Astra at $0.72 vs $3.26 per task.
 - [2026-09-22] Xiaomi MiMo-V2.6-Pro added to Open-weight models: 1T/42B-active omnimodal MoE under MIT, AA Intelligence Index 46 at $0.13 per task, shipped with its RL environments and training code.
 - [2026-10-07] Claude Haiku 5.5 launched; new Small / fast models section. About 75% cheaper than Haiku 4.5, OSWorld 2.1 72.4% and Terminal-Bench 4.0 39.2% (Sonnet 5.5: 83.9% / 70.6%), first Haiku with an effort setting.
+- [2026-10-12] Meta launched Muse Wonder and Wonder Full: AA Intelligence Index 56 for Full (Opus 5.5 leads at 58), Coding Agents Index 68 in Muse Code, Vals Index #5; Meta joins the frontier tier 14 months after founding MSL.

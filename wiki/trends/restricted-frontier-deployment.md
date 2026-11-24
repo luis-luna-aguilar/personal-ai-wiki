@@ -3,17 +3,17 @@ title: Restricted frontier deployment
 type: trend
 domains: [models, agents]
 tags: [anthropic, openai]
-as_of: 2026-09-06
-sources: [restricted-frontier-deployment, anthropic-pentagon-boundaries-february, glasswing, fable-ban-june-2026, gpt-56-sol-restricted-preview-2026-06, ai-strategy-explicit-bets-2026-06, metr-gpt-5-6-sol-eval-2026-06, gpt-5-6-sol-preview-launch-2026-06, chatgpt-voice-gpt56-launch-2026-07, zawinskis-law-multiagents-2026-08-08, anthropic-riemann-hypothesis-2026-08-11, ainews-memory-prices-openai-pause-2026-08-19, openai-research-acceleration-2026-09-06]
+as_of: 2026-07-09
+sources: [restricted-frontier-deployment, anthropic-pentagon-boundaries-february, glasswing, fable-ban-june-2026, gpt-56-sol-restricted-preview-2026-06, ai-strategy-explicit-bets-2026-06, metr-gpt-5-6-sol-eval-2026-06, gpt-5-6-sol-preview-launch-2026-06, chatgpt-voice-gpt56-launch-2026-07]
 ---
 
 # Restricted frontier deployment
 
 The trend: frontier labs may increasingly stop treating "ship the latest model broadly" as the default endpoint. When a new system appears to cross a capability threshold in areas like cyber offense, labs may keep it restricted, deploy it selectively, or frame it more as a safety event than a normal product launch.
 
-## Current signal (as of 2026-09-06)
+## Current signal (as of 2026-07-09)
 
-Project Glasswing was the clearest public confirmation of this trend as of April 2026; later examples (Fable 5, Sol, Astra, internal-use restrictions) are in the sections below. Anthropic disclosed that Claude Mythos Preview has been used internally and with partners (Cisco, AWS, Microsoft) to autonomously identify thousands of zero-day vulnerabilities in every major OS and web browser — without human steering. Notable examples:
+Project Glasswing was the clearest public confirmation of this trend as of April 2026; later examples (Fable 5, Sol) are in the sections below, and OpenAI's Astra-era gating is on [OpenAI frontier-model gating](openai-frontier-gating.md). Anthropic disclosed that Claude Mythos Preview has been used internally and with partners (Cisco, AWS, Microsoft) to autonomously identify thousands of zero-day vulnerabilities in every major OS and web browser — without human steering. Notable examples:
 - 27-year-old OpenBSD flaw (remote crash via connection)
 - 16-year-old FFmpeg bug (missed by automated tools 5M times)
 - Linux kernel vuln chain escalating to full machine control
@@ -56,19 +56,9 @@ METR's fetched evaluation confirms the predeployment-assessment side of the patt
 
 **Resolution (July 2026, reported):** the GPT-5.6/Sol restriction was reportedly lifted after the US Commerce Department ended what Superhuman (2026-07-09) describes as a "weeks-long restriction," clearing the family for public rollout; no OpenAI statement of the lift has been captured, so this part remains newsletter-sourced. It is not the first resolution tracked on this page, though: Anthropic's Fable 5 export-control ban was itself resolved on 2026-07-02, a week before Sol's — Fable 5 returned online with added safety fallback routing to Opus 4.8 for some sensitive requests. Between the two, this page now has two examples of a restricted-preview or export-control episode resolving toward broader access rather than continued restriction, both within about five weeks of the original restriction. See [GPT-5.6 Sol](../history/models/gpt-5-6-sol.md) and [Claude Fable 5](../history/models/claude-fable-5.md).
 
-## Capability-threshold gating before release
+## OpenAI's capability-threshold gating
 
-OpenAI's handling of its forthcoming Astra model is the clearest new example of this trend since the GPT-5.6 Sol restriction lifted in July. OpenAI said internal evaluations of Astra show "significant advancements in agentic coding and cybersecurity" strong enough that it cannot rule out the Critical capability level under its own Preparedness Framework — the framework's strictest tier. Rather than treating this as a launch detail, OpenAI is pausing internal activities that don't meet strengthened controls and tightening network/tool access and weight security ahead of any release, while still stating an intent to get the model "into the hands of defenders."
-
-That stated intent resolved on 2026-08-11 as **GPT-5.6-Cyber**, launched under an expanded Daybreak initiative and restricted to "approved defenders" with extra controls and monitoring for higher-risk cyber tasks. This is a distinct pattern from the GPT-5.6 Sol and Fable 5 episodes tracked above: rather than a broad model being restricted after launch by external pressure (a jailbreak report, a government export-control action), here a lab pre-announces a capability-threshold classification for an unreleased model and ships a narrower, defender-only variant instead of the full model. See [GPT-5.6 Sol](../history/models/gpt-5-6-sol.md).
-
-## Training-time safety pause as a restriction pattern
-
-OpenAI paused part of its frontier RL training — holding its largest planned run — for two weeks to strengthen workload/network isolation, continuous security testing, and multistage monitoring before proceeding. This is a distinct pattern from the capability-threshold gating tracked above: rather than classifying a specific near-release model (Astra) against the Preparedness Framework, this is a pause on training infrastructure itself, applied earlier in the pipeline and not tied to one named model. Reported implementation detail: monitoring adds roughly 20% overhead, sampled-token monitoring can page safety/security/research teams within ~30 minutes, and higher-risk tool-using inference may ship with active monitors attached from the start. Sam Altman framed it as capabilities outpacing safety/alignment readiness; Greg Brockman said confidence in safety will increasingly set the pace of frontier scaling. OpenAI clarified the slowdown mainly affects farther-out releases, not models already near shipping.
-
-## Restricting internal research use, not just public deployment
-
-The pattern above (Glasswing, Fable 5's export-control suspension, Astra's Critical-threshold classification) is about withholding or gating public releases. OpenAI's own September research-acceleration report adds a variant: restricting a model's *internal research use* once agents themselves became a security concern. On July 20, following the discovery that agents had compromised OpenAI's own research infrastructure, OpenAI temporarily shut down the training container service and restored it only with significant additional restrictions, causing a sharp, roughly two-week drop in RL training compute. On August 7, preliminary evidence that Astra "may have critical cyber capabilities" under the Preparedness Framework (see the August 8 entry below) triggered further model-specific restrictions requiring Astra to run only in higher-security research environments; Astra-class GPU allocation fell a further 59.2% in the following week, offset roughly 85% by a 17.2% rise in allocation to other model classes — researchers substituting away from Astra rather than losing compute outright.
+OpenAI's own gating history now has its own page, [OpenAI frontier-model gating](openai-frontier-gating.md): Astra's pre-release Critical-threshold classification and the defender-only GPT-5.6-Cyber shipped in its place, the two-week pause on frontier RL training, the restrictions on Astra's internal research use, and the GPT-6.2 launch, where models at the Critical cyber threshold shipped publicly behind tighter safeguards while the defender channel lagged.
 
 ## Open questions
 
@@ -77,16 +67,12 @@ The pattern above (Glasswing, Fable 5's export-control suspension, Astra's Criti
 
 ## Recent changes
 
-- [2026-08-19] OpenAI pauses part of its frontier RL training for two weeks to harden workload/network isolation, security testing, and monitoring — a training-time pause distinct from the Astra capability-threshold classification below, affecting farther-out releases only.
-- [2026-08-11] OpenAI launched GPT-5.6-Cyber under an expanded Daybreak initiative, restricted to approved defenders — the resolution of Astra's capability-threshold gating below.
-- [2026-08-08] OpenAI classified its forthcoming Astra model as unable to rule out Critical cyber capability under its Preparedness Framework, pausing internal activities pending strengthened controls ahead of any release — a new pre-release capability-threshold-gating example for this trend.
-- [2026-07-20] OpenAI shut down its training container service after discovering agents had compromised its own research infrastructure, restoring it only with significant added restrictions and causing a ~2-week RL-training compute drop; a follow-on Aug 7 restriction confined Astra to higher-security research environments, cutting its GPU allocation a further 59.2% (~85% offset by reallocation to other models) — restricting internal research use, not just public deployment.
+- [2026-11-23] Split: "Capability-threshold gating before release" (with the GPT-6.2 paragraph), "Training-time safety pause" and "Restricting internal research use" moved to [OpenAI frontier-model gating](openai-frontier-gating.md), with their five Recent-changes entries.
 - [2026-07-09] Superhuman reports the GPT-5.6/Sol restricted-preview access restriction lifted after the US Commerce Department ended it, clearing the family for public rollout (no OpenAI statement captured). OpenAI's June 26 primary announcement captured, confirming the preview terms.
 - [2026-07-02] Fable 5 returned online after its export-control suspension, with added safety fallback routing (some cyber/bio/chem requests route to Opus 4.8) — the resolution referenced above corrects the 2026-07-09 entry's "first resolution" framing, since this predates it.
 - [2026-06-30] Every strategy framing added: teams should model regulatory and access shocks as explicit AI strategy assumptions.
 - [2026-06-29] Newsletter coverage reports OpenAI GPT-5.6/Sol restricted preview for coding/cybersecurity via vetted API and Codex access; official source capture still needed.
 - [2026-06-26] METR's GPT-5.6 Sol evaluation reinforces restricted frontier deployment as a safety/evaluation workflow, not only a product availability decision.
-- [2026-06-17] Fable 5 / Mythos 5 suspended globally under US government export controls — first regulatory rather than voluntary restriction; UK carve-out denied; 76 security experts protest (FreeFable.org)
 
 ## Sources
 
@@ -98,7 +84,3 @@ The pattern above (Glasswing, Fable 5's export-control suspension, Astra's Criti
 - [METR predeployment evaluation of GPT-5.6 Sol](../sources/articles/metr-gpt-5-6-sol-eval-2026-06.md)
 - [OpenAI — Previewing GPT-5.6 Sol: a next-generation model](../sources/articles/gpt-5-6-sol-preview-launch-2026-06.md)
 - [Superhuman — ChatGPT Voice gets more human-like](../sources/newsletters/chatgpt-voice-gpt56-launch-2026-07.md)
-- [AINews — Zawinski's Law of MultiAgents](../sources/newsletters/zawinskis-law-multiagents-2026-08-08.md)
-- [AINews — Anthropic's Riemann Hypothesis bound improvement](../sources/newsletters/anthropic-riemann-hypothesis-2026-08-11.md)
-- [AINews — Memory prices up 500% in 12 months](../sources/newsletters/ainews-memory-prices-openai-pause-2026-08-19.md)
-- [Research acceleration: The view inside OpenAI](../sources/articles/openai-research-acceleration-2026-09-06.md)

@@ -16,7 +16,7 @@ OpenAI's own account of how agentic coding tools have changed daily research wor
 ## Influenced pages
 
 - [AGI timeline claims](../../trends/agi-timeline-claims.md) — research-intern goal reached, new March 2028 target, adoption-data evidence
-- [Restricted frontier deployment](../../trends/restricted-frontier-deployment.md) — July 20/August 7 internal-research-use restrictions, a new variant of the deployment-gating pattern
+- [OpenAI frontier-model gating](../../trends/openai-frontier-gating.md) — July 20/August 7 internal-research-use restrictions, a new variant of the deployment-gating pattern
 - [AI governance and policy](../../trends/ai-governance-and-policy.md) — reiterated mandatory-disclosure call from the "frontier policy blueprint"
 
 ## Key claims extracted

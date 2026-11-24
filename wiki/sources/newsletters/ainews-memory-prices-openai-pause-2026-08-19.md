@@ -18,7 +18,7 @@ AINews's 2026-08-19 issue leads with DRAM/memory-price shortage coverage (Tom's 
 - [Qwen 3.8 27B](../../models/qwen-3-8-27b.md) — new page
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Current-signal bullet
 - [Compute infrastructure as decisive competitive moat](../../trends/compute-infrastructure.md) — DRAM shortage bullet
-- [Restricted frontier deployment](../../trends/restricted-frontier-deployment.md) — OpenAI RL-pause bullet
+- [OpenAI frontier-model gating](../../trends/openai-frontier-gating.md) — OpenAI RL-pause bullet
 - [Harness (agent)](../../concepts/harness.md) — multi-agent coordination research bullet
 
 ## Key claims extracted

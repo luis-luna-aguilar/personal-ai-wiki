@@ -15,7 +15,7 @@ Every's teaser/preview for its Astra Vibe Check review: Astra impressed on writi
 
 ## Influenced pages
 
-- [GPT-6 Astra](../../models/gpt-6-astra.md) — launch reception, over-building behavior
+- [GPT-6 Astra](../../history/models/gpt-6-astra.md) — launch reception, over-building behavior
 
 ## Key claims extracted
 

@@ -14,7 +14,7 @@ An engineer on OpenAI's Core Experimentation team describes using GPT-6 Astra an
 
 ## Influenced pages
 
-- [GPT-6 Astra](../../models/gpt-6-astra.md) — maintenance results in Codex, comparison with GPT-6.1 Sol
+- [GPT-6 Astra](../../history/models/gpt-6-astra.md) — maintenance results in Codex, comparison with GPT-6.1 Sol
 - [Codex](../../tools/codex.md) — maintenance-pass usage pattern
 - [Engineering AI adoption: evidence from practice](../../training/engineering-ai-adoption-evidence.md) — OpenAI maintenance case study
 - [AI enablement — software development](../../training/ai-enablement-software-development.md) — agent-driven maintenance pattern

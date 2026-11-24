@@ -18,6 +18,7 @@ Anthropic's launch page for Claude Haiku 5.5 presents it as its cheapest, fastes
 - [Claude Sonnet 5.5](../../models/claude-sonnet-5-5.md) — cache-read price cut to $0.10 per 1M tokens
 - [State of Models](../../state-of/models.md) — new Small / fast models section
 - [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — Anthropic tier split and Cognition sidekick result
+- [Claude Platform](../../tools/claude-platform.md) — monthly Platform API credits
 
 ## Key claims extracted
 - Haiku 5.5 is available on all platforms (AWS, Google Cloud, Microsoft Azure) and on the Claude Platform as `claude-haiku-5-5`.
