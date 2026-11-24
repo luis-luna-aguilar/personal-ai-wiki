@@ -15,6 +15,7 @@ AINews deep-dive on Microsoft Build 2026. Covers the full MAI model family, MAIA
 ## Influenced pages
 
 - [MAI-Thinking-1](../../models/mai-thinking-1.md) — new page
+- [MAI-Transcribe and MAI-Voice](../../models/mai-transcribe-voice.md) — MAI-Transcribe-1.5 and MAI-Voice-2 rows (moved from MAI-Thinking-1 on 2026-11-23)
 - [Microsoft Copilot](../../tools/microsoft-copilot.md) — MAI-Code-1-Flash, Autopilot, Scout
 - [State of Models](../../state-of/models.md) — MAI entries added
 

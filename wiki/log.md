@@ -554,3 +554,69 @@ grep "^- \[" wiki/log.md | tail -20
 - [2026-10-20] **triage** | AI inbox digest 2026-10-01 to 2026-10-10 | 14 proposals, 0 skipped
 - [2026-10-20] **triage** | AI inbox digest 2026-10-11 to 2026-10-20 | 8 proposals, 0 skipped
 - [2026-10-20] **triage** | Raw-files sweep 2026-10-19 | 4 proposals, 0 skipped
+- [2026-10-21] **reject** | Agents as coach and stand-in (self-assessment and colleague clones) | deleted by the user; filed in proposals/rejected
+- [2026-10-21] **reject** | Auditing agent behaviour — agents gaming their tests, leaky evals, and trace-reading models | deleted by the user; filed in proposals/rejected
+- [2026-10-21] **ingest** | Cognition Agent Memory Repo and Devin Dreaming | 4 pages updated, 2 created
+- [2026-10-21] **ingest** | Latent Space — Inside-Out AI: Rebuilding Airbnb | 5 pages updated, 1 created; inline answer added the explain-your-PR rule to training/ai-native-hiring-and-junior-talent
+- [2026-10-21] **ingest** | Claude Code's next era (Mods, Projects, cloud sessions) and cloud handoff across coding agents | 4 pages updated, 5 created; inline answer added a Codex cloud-environments Recent-changes entry (spilled 2026-05-10 to history); Devin spill of 2026-05-19 Auto-Triage to new history/tools/devin.md (list filled by the Agent Memory Repo apply)
+- [2026-10-21] **lint** | refactor tools/claude-code | "Best practices (Anthropic engineering)" and "/ultrareview" moved to new workflows/claude-code-practices; pointers left, 2026-06-18 entry spilled to history, two source pages re-pointed
+- [2026-10-21] **ingest** | Ari Weinstein: computer use is "180 degrees different" | 3 pages updated, 1 created; Codex spill rebased to 2026-05-15 (2026-05-10 already spilled); Codex leader line trimmed to 358 chars for the state-of bullet limit
+- [2026-10-21] **ingest** | Anthropic ART enzyme system, Google ERA (John Platt), genomic LMs and biosecurity (Eric Nguyen) | 2 pages updated, 5 created; ERA section placed after the biology pointer because of the split
+- [2026-10-21] **lint** | refactor trends/ai-in-science | biology material (status bullets, Protein world models, Virtual cell models, AI-native drug design, ART, genomic LMs + 4 Recent-changes entries) moved to new trends/ai-in-biology; state-of/science lab line and esmfold2/xaira/chai/ART/genomic source pages re-pointed
+- [2026-10-21] **ingest** | Latent Space — Crossing the Threshold (AIE NYC finance keynotes) | 2 pages updated, 1 created
+- [2026-10-21] **ingest** | Lessons from Anthropic on building effective human-agent teams | 3 pages updated, 1 created; dated 2026-10-10 per user; governance as_of stays 2026-10-14 (rebased on the finance proposal)
+- [2026-10-21] **ingest** | Containing agents in the wild (AINews 10-15 to 10-20) | 1 page updated, 4 created; OpenCode leader bullet trimmed to under 400 characters
+- [2026-10-21] **ingest** | Claude Haiku 5.5 independent evals (AINews 2026-10-08/10) | 5 pages updated, 3 created; Sonnet 5.5 date not moved backwards here (live page carried a 2026-10-20 claim); only its cache-read entry re-dated to 2026-10-07
+- [2026-10-21] **ingest** | Claude Opus 5.5 launch date, independent evals, Every verdict | 5 pages updated, 5 created; applied as drafted
+- [2026-10-21] **ingest** | Claude Sonnet 5.5 build guide and preserved thinking | 4 pages updated, 5 created; page date 2026-10-07 not 2026-09-30 (cache-read claim dated 2026-10-07 after the Haiku apply); State of Models and index stamps match; cache-read entry kept at 2026-10-07
+- [2026-10-28] **ingest** | Cursor — Scaling long-running autonomous coding | 1 page updated, 1 created
+- [2026-10-28] **schema** | added subcategory `decision-model`; ScaleDown (from `utility-model`) and MedDecider-27B (from `domain-specialized-model`) moved into it
+- [2026-10-28] **ingest** | Decision models become a product category (Jev and its rivals) | 4 pages updated, 12 created
+- [2026-10-28] **ingest** | DeepSeek V4.1 Flash 1017, MiniMax M3.1 Flash, Mercury 3 | 3 pages updated, 3 created
+- [2026-10-28] **lint** | refactor models/deepseek-v4 | V4 Flash sections (0731 update, Vision-Exp), Flash builds bullet, Flash pricing and two Recent-changes entries moved to history/models/deepseek-v4.md; live page now V4 Pro with pointer to deepseek-v4-1-flash; two source pages re-pointed
+- [2026-10-28] **ingest** | Durable, cloud-native harnesses (Pi 1.0, Pi Durable, Stacklok Mecatl) | 5 pages updated, 6 created
+- [2026-10-28] **schema** | added page type and directory `robotics/` (AGENTS.md layout, type list and Robotics pages section; config.yml ceiling 1500)
+- [2026-10-28] **ingest** | Latent Space — Dyna-2 and hour-long physical agents (Jason Ma) | 1 page updated, 2 created
+- [2026-11-23] **ingest** | Anthropic — Using Claude Code: Spending your effort | 2 pages updated, 2 created
+- [2026-11-23] **ingest** | Eleven Realtime launch page (ElevenLabs) | 2 pages updated, 2 created
+- [2026-11-23] **ingest** | Every Agent on Claude Managed Agents (Every) | 6 pages updated, 4 created
+- [2026-11-23] **ingest** | Gemini 4 Argon — Google returns to the frontier | 4 pages updated, 8 created
+- [2026-11-23] **ingest** | GPT-6 Sol and Luna, then GPT-6.1 Sol, supersede GPT-5.6 Sol | 14 pages updated, 7 created
+- [2026-11-23] **lint** | refactor models/gpt-5-6-sol | superseded by GPT-6 Sol/Luna and GPT-6.1 Sol; moved to history/models/gpt-5-6-sol.md with links deepened and a Superseded-by line
+- [2026-11-23] **ingest** | Grok 4.7 replaces Grok 4.6 | 8 pages updated, 3 created
+- [2026-11-23] **lint** | refactor models/grok-4-6 | superseded by Grok 4.7; moved to history/models/grok-4-6.md with links fixed and a Superseded-by line; cursor and grok-build links re-pointed
+- [2026-11-23] **ingest** | Shann Holmberg — How to Become a Hermes Agent Operator | 2 pages updated, 1 created
+- [2026-11-23] **ingest** | Every — instruction bloat (Parrott) and context engineering for chat (Taylor) | 1 page updated, 3 created
+- [2026-11-23] **ingest** | Meta Connect 2026 — Muse gets voice, email, Mac computer use and glasses | 3 pages updated, 3 created
+- [2026-11-23] **ingest** | Every — Copilot Gets a Seat in the Org Chart | 3 pages updated, 1 created
+- [2026-11-23] **ingest** | Meta ships Muse Wonder and Wonder Full | 5 pages updated, 5 created
+- [2026-11-23] **ingest** | OpenAI 722 math manuscripts and mathematicians' pushback | 2 pages updated, 3 created
+- [2026-11-23] **lint** | refactor trends/agent-safety-and-alignment-research | Current signal (826 words, flat after the Argon bullet) split under three ### subheads: alignment research and evaluation, chain-of-thought monitorability, dissent and interpretability
+- [2026-11-23] **lint** | refactor trends/ai-in-mathematics | "Verification and formalization" (Tao's proof indigestion, FLT formalization, math tooling) plus its 2026-09-09 and 2026-08-12 Recent-changes entries moved to new trends/ai-math-verification; origin keeps a pointer paragraph; every-our-agents-ourselves and anthropic-flt-formalization source pages re-pointed
+- [2026-11-23] **lint** | refactor training/cost-aware-ai-task-routing | three evidence groups (model and harness selection wins, routing as infrastructure, cost variance) → new training/cost-aware-routing-evidence; 30 source pages and 5 live-page links re-pointed; origin 2,911 → 1,053 body words
+- [2026-11-23] **reject** | The Batch, 17 April 2026 — US state AI laws, Persona Generators, Lilly–Insilico | deleted by the user; filed in proposals/rejected
+- [2026-11-23] **ingest** | Every — How to Create Your Own Personal AI Benchmark | 1 page updated, 2 created
+- [2026-11-23] **ingest** | Ultramarine 1 Flash: Scaling Non-Verifiable RL — Paper Instruments | 2 pages updated, 4 created
+- [2026-11-23] **ingest** | AINews — October US open-weight push (Muse Spark Open, Reflection Beam, Mistral Large 4) | 4 pages updated, 8 created
+- [2026-11-23] **ingest** | OpenAI DevDay 2026 — dots, Space and Pages, Agents API, Codex plan changes | 3 pages updated, 11 created
+- [2026-11-23] **ingest** | Orchestration as code — Claude Managed Agents flows, Devin Dynamic Workflows, agent-team measurements | 6 pages updated, 4 created
+- [2026-11-23] **ingest** | "Pacing the Frontier" and a new run of agent incidents (Latent Space Thariq interview; AINews 2026-09-24, 2026-09-30) | 4 pages updated, 5 created
+- [2026-11-23] **ingest** | Real-time world models — Runway GWM Worlds 2 and AMD buying World Labs | 3 pages updated, 3 created
+- [2026-11-23] **ingest** | Local search tools for agents (sgrep and XERJ) | 1 page updated, 4 created
+- [2026-11-23] **ingest** | Spotify on quality at AI velocity | 3 pages updated, 2 created
+- [2026-11-23] **ingest** | Xiaomi MiMo-V2.6-Pro (AINews 2026-09-22, 2026-09-25) | 3 pages updated, 3 created
+- [2026-11-23] **ingest** | Anthropic — An alignment assessment of the UK AISI cybertesting incident | 3 pages updated, 1 created
+- [2026-11-23] **ingest** | Boris Cherny — formally verifying the Claude Agent SDK with Lean and Opus 5.5 | 2 pages updated, 1 created
+- [2026-11-23] **ingest** | Anthropic — Automating eval design and hillclimbing with Claude | 3 pages updated, 1 created
+- [2026-11-23] **ingest** | Projects redesigned: from folder to conversation (+ @claudeai, @emollick threads) | 2 pages updated, 3 created
+- [2026-11-23] **ingest** | "How to turn AI into a whole team that runs your business" — Yarchi | 1 page updated, 1 created
+- [2026-11-23] **ingest** | Nathan Critchett — How to Build a Brain in the AI Age | 1 page updated, 1 created
+- [2026-11-23] **ingest** | Eugen Alpeza — The FDE boom is a product gap | 3 pages updated, 1 created
+- [2026-11-23] **lint** | refactor concepts/knowledge-architectures | term map (21 rows, incl. new ContextOps row) moved to new concepts/knowledge-term-map; hub keeps axes, matrix and a pointer; 9 source pages re-pointed
+- [2026-11-23] **lint** | refactor training/ai-delegation-management | grouped Proven patterns under two ### subheads to clear the flat-section lint
+- [2026-11-23] **schema** | AGENTS.md: hub term tables may live on a companion page; knowledge-architectures term map now at concepts/knowledge-term-map
+- [2026-11-23] **ingest** | Voice leaderboard refresh (October 2026) | 6 pages updated, 12 created
+- [2026-11-23] **lint** | refactor models/mai-thinking-1 | MAI-Transcribe and MAI-Voice rows moved to new models/mai-transcribe-voice; pointer left on MAI-Thinking-1
+- [2026-11-23] **ingest** | Claude Cowork and chat are now one Claude | 13 pages updated, 2 created
+- [2026-11-23] **lint** | refactor tools/claude-cowork → tools/claude-app | page renamed "Claude app" with all content kept and "formerly Claude Cowork" alias; history file renamed to history/tools/claude-app.md; inbound links re-pointed (state-of/agents, claude-tag, claude-design, _schema/subcategories, 7 source pages, 2 history links)
+- [2026-11-23] **ingest** | DigitalOcean — Introducing Managed Agents | 3 pages updated, 2 created

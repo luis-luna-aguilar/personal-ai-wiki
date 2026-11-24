@@ -3,15 +3,15 @@ title: Agent-native compute infrastructure
 type: trend
 domains: [agents]
 tags: [agentic]
-as_of: 2026-09-07
-sources: [railway-agent-native-cloud-2026-05-20, daytona-giving-agents-computers-2026-05-21, modal-agent-experience-2026-07-08, ainews-new-ai-infra-unicorns-2026-05-22, superhuman-autonomous-growth-agent-2026-05-21, cloudflare-computer-launch-2026-09-07]
+as_of: 2026-09-22
+sources: [railway-agent-native-cloud-2026-05-20, daytona-giving-agents-computers-2026-05-21, modal-agent-experience-2026-07-08, ainews-new-ai-infra-unicorns-2026-05-22, superhuman-autonomous-growth-agent-2026-05-21, cloudflare-computer-launch-2026-09-07, digitalocean-managed-agents-public-preview-2026-09-22]
 ---
 
 # Agent-native compute infrastructure
 
 Cloud infrastructure built for human developers (Kubernetes, EKS/GKE, slow-scaling web-server assumptions) is increasingly being displaced by a distinct category purpose-built for agent workloads: bursty, stateful-but-pausable sandboxes that must scale from zero to tens or hundreds of thousands of concurrent instances, driven substantially by RL/eval training loops rather than steady human traffic. Daytona, Modal, and Railway are converging on this thesis from different starting points, alongside a broader infrastructure funding wave.
 
-## Current status (as of 2026-09-07)
+## Current status (as of 2026-09-22)
 
 - **[Daytona](../tools/daytona.md)**: pivoted from human dev environments to AI sandboxes; bare-metal scheduler gives ~60ms single-sandbox startup and ~75s to spin up 50,000 concurrently; biggest customer runs ~850,000 sandboxes/day; RL/eval workloads grew from ~0% to ~50% of usage within months; building Windows/macOS computer-use sandboxes to extend beyond Linux-only code execution
 - **[Modal](../tools/modal.md)**: raised a $355M Series C (valuation reported by AINews as $4.65–4.7B); reframed its SDK team's mission from "developer experience" to "agent experience"; RL rollouts can require 100,000 sandboxes at once; ships open-source DeFlash (block-based speculative decoding) and "Auto Endpoints"; runs a capacity pool spanning 17 cloud providers with its own reliability layer on top
@@ -19,6 +19,7 @@ Cloud infrastructure built for human developers (Kubernetes, EKS/GKE, slow-scali
 - **Funding wave** (per AINews 2026-05-22 and Superhuman 2026-05-21, secondary): Exa raised $250M Series C at $2.2B (agent-oriented search/retrieval); Turbopuffer crossed $100M ARR profitably having raised under $1M; Hark raised $700M at $6B (GPU infrastructure, model development, hardware, personal-intelligence products); OpenAI launched "Guaranteed Capacity," letting enterprises lock in 1–3 year compute commitments at volume discounts
 - Common technical thread across providers: RL/eval workloads are far spikier than historical human developer traffic (Daytona reports mean utilization near 15% to cover peaks up to 90%); managed Kubernetes (EKS/GKE) is described by both Daytona and Modal as a poor fit; the CLI is emerging as the primary agent-facing interface over dashboards/canvases (Railway, Daytona)
 - **Cloudflare's `@cloudflare/computer` (September 2026):** open-source, early-preview package arguing isolates — not containers — are the only agent-runtime primitive that scales to hundreds of millions or billions of concurrent agents; gives agents a durable shared filesystem across a fast isolate backend and a full-Linux container backend, targeting under 10% of agent work needing a container at all. A distinct angle on this trend from Daytona/Modal/Railway: a shared-filesystem abstraction across backend types, rather than a sandbox-provisioning speed record.
+- **[DigitalOcean Managed Agents](../tools/digitalocean-managed-agents.md) (September 2026):** a general-purpose cloud entering the category rather than a sandbox specialist. Firecracker microVM sessions are billed per second on CPU actually consumed, so an agent waiting on a model or a human approval costs no CPU, and paused sessions resume to ready in about 305 ms (DigitalOcean's own benchmark), which makes auto-pausing idle agents cheap enough to be the default.
 
 ## Why it matters
 
@@ -35,9 +36,11 @@ RL and eval workloads are structurally different from serving ordinary backgroun
 
 - [Compute infrastructure as decisive competitive moat](compute-infrastructure.md) — the frontier-training-scale analog to this execution-layer trend
 - [E2B](../tools/e2b.md) — earlier-covered isolated sandbox runtime for agent code execution; part of the same Latent Space "agent cloud" series
+- [DigitalOcean Managed Agents](../tools/digitalocean-managed-agents.md) — general-cloud entrant with active-CPU billing and pause/resume sessions
 
 ## Recent changes
 
+- [2026-09-22] DigitalOcean Managed Agents public preview: active-CPU billing and ~305 ms resume for microVM agent sessions; a general cloud provider joining the sandbox specialists.
 - [2026-09-07] Cloudflare's `@cloudflare/computer`: isolates-over-containers agent runtime with a shared filesystem across two swappable execution backends, targeting under 10% container usage.
 - [2026-07-08] Modal detailed its shift from developer experience to agent experience, its $355M Series C, and 100,000-sandbox RL rollout workloads.
 - [2026-05-22] AINews cluster confirmed the funding wave: Exa $250M@$2.2B, Turbopuffer $100M ARR profitable, Modal $355M at $4.65–4.7B (the issue gives both figures), plus Hark $700M@$6B.
@@ -55,3 +58,4 @@ RL and eval workloads are structurally different from serving ordinary backgroun
 - [AINews — New AI Infra unicorns: Exa, Modal, TurboPuffer](../sources/newsletters/ainews-new-ai-infra-unicorns-2026-05-22.md)
 - [Superhuman — Meet the autonomous growth agent (OpenAI Guaranteed Capacity mention)](../sources/newsletters/superhuman-autonomous-growth-agent-2026-05-21.md)
 - [Cloudflare — Your agent needs a computer, not a container](../sources/articles/cloudflare-computer-launch-2026-09-07.md)
+- [DigitalOcean — Introducing Managed Agents](../sources/articles/digitalocean-managed-agents-public-preview-2026-09-22.md)

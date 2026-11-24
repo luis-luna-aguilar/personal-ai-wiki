@@ -15,7 +15,7 @@ Databricks' own primary post describing an internal benchmark built from real co
 
 ## Influenced pages
 
-- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — confirms and sharpens the harness-choice finding already added from the newsletter recap
+- [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — confirms and sharpens the harness-choice finding already added from the newsletter recap
 
 ## Key claims extracted
 

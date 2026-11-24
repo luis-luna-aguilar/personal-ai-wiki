@@ -15,7 +15,7 @@ The Code's July 10 "Insight" section covers a Databricks benchmark built from re
 
 ## Influenced pages
 
-- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — added a new evidence bullet citing all three findings
+- [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — added a new evidence bullet citing all three findings
 - [Muse Spark](../../models/muse-spark.md) — Muse Spark 1.1 specs and positioning
 
 ## Key claims extracted

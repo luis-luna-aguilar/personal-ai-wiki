@@ -40,6 +40,7 @@ wiki/                      # You own this. Current state.
   trends/                  # Things being watched.
   training/                # Practical guidance for teaching teams and businesses to use AI well.
   use-cases/               # Concrete applications and repeatable business/workflow use cases.
+  robotics/                # One page per robotics company or robot platform (not a tool, not a model).
   sources/                 # One lightweight summary page per ingested source.
   history/                 # Archived old versions. Mirrors wiki/ structure.
   _schema/                 # Controlled vocabulary files. See below.
@@ -79,7 +80,7 @@ Four files in `wiki/_schema/` define the valid terms:
 
 Sources coin terms faster than the field settles them, and several different things get the same name ("second brain", "company brain", "knowledge base", "world model"). The wiki does not record every coinage as a concept. Rules:
 
-- **Hub pages own the vocabulary of a cluster.** Where several concept pages describe overlapping ideas, one hub page holds the disambiguation: a matrix of the axes that separate the ideas, one canonical page per cell, and a table mapping every term seen in sources to its canonical page. The first hub is [`concepts/knowledge-architectures.md`](wiki/concepts/knowledge-architectures.md) for the knowledge, memory, brain, ontology, and semantic-layer cluster. Create a hub only when three or more concept pages overlap; propose it like any new page.
+- **Hub pages own the vocabulary of a cluster.** Where several concept pages describe overlapping ideas, one hub page holds the disambiguation: a matrix of the axes that separate the ideas, one canonical page per cell, and a table mapping every term seen in sources to its canonical page. The first hub is [`concepts/knowledge-architectures.md`](wiki/concepts/knowledge-architectures.md) for the knowledge, memory, brain, ontology, and semantic-layer cluster; its term table lives on the companion page [`concepts/knowledge-term-map.md`](wiki/concepts/knowledge-term-map.md), split out when the hub outgrew its length ceiling. A hub's term table may live on such a companion page; it still counts as the hub's mapping table. Create a hub only when three or more concept pages overlap; propose it like any new page.
 - **Map before you create.** When a source uses a term in a cluster that has a hub, find the term in the hub's mapping table before proposing a page, tag, or subcategory. If the term is an alias, update the canonical page and add the alias to its `## Also called` line. If the term is a new cell in the matrix, the proposal must add the row to the hub in the same change. Never leave a term unmapped.
 - **`## Also called` is the alias list.** Canonical pages in a cluster carry a one-line `## Also called` section directly under the definition paragraph, listing the aliases sources use and, where an alias narrows scope, the scope in parentheses ("second brain (personal scope)"). Aliases never get their own page.
 - **Pairwise "this vs that" sentences are not a substitute for the hub.** A `## Related` line may say how two pages differ, but it must agree with the hub. When a Related line and the hub disagree, the hub wins and the Related line is fixed.
@@ -93,7 +94,7 @@ Every wiki page has YAML frontmatter:
 ```yaml
 ---
 title: Claude Opus 4.6
-type: model          # model | tool | benchmark | workflow | concept | trend | training | use-case | state-of | source
+type: model          # model | tool | benchmark | workflow | concept | trend | training | use-case | robotics | state-of | source
 domains: [coding, agents]
 subcategory: frontier-model    # required for type: tool | model | workflow; optional elsewhere
 tags: [anthropic, frontier]
@@ -260,6 +261,10 @@ The word targets above (150–300 words for routine pages) are writing targets. 
 - Run `scripts/link_check.py` and `scripts/page_length.py` on both pages before reporting done.
 
 `"check page length"` / `"split candidates"` runs the lint. The script reports; it never splits. Findings are marked `[warn]` (within 110%), plain (split candidate), or `split required` (above 150%). Only non-warning findings make the script exit 1. Splitting below 150% is a judgment call the user makes from the report or from a proposal's Open questions. Above 150%, the next proposal that touches the page must include the split as a checkbox item.
+
+### Robotics pages
+
+Robotics pages (`wiki/robotics/*.md`, `type: robotics`) cover one robotics company or robot platform: its robot foundation models, its hardware and its deployments, kept together on one page. Use them for physical-AI players that are neither a software tool nor a standalone foundation model. Cross-cutting robotics developments stay on [`trends/physical-ai-deployment.md`](wiki/trends/physical-ai-deployment.md), which links to the robotics pages. Follow the tool-page shape (`## Current status`, `## Weaknesses / caveats`, `## Recent changes`, `## Sources`) and its 150–300 word target. `domains` and `subcategory` are optional.
 
 ### Sources pages
 

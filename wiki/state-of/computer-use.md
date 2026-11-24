@@ -4,7 +4,7 @@ type: state-of
 domains: [computer-use]
 tags: []
 as_of: 2026-10-14
-sources: [perplexity-computer-plaid, open-weight-momentum-early-april, claude-computer-use-late-march, perplexity-personal-computer, desktop-mobile-computer-use-february, pig-homepage, legacy-ai-tools-roadmap-xlsx, codex-for-work-2026-05-01, amazon-quick-work-context-assistant-2026-04-29, gemini-downloadable-files-2026-04-30, knowledge-work-os-agent-apps-2026-04-28, peekaboo-repo-2026-05-13, website-future-agent-readable-2026-07-02, vercel-agents-new-software-2026-07-03, codex-general-work-agents-2026-07, agent-ready-saas-mcp-2026-06, gemini-computer-use-aside-2026-06, cloudflare-agent-internet-monetization-2026-07, expand-fetch-launch-2026-10]
+sources: [perplexity-computer-plaid, open-weight-momentum-early-april, claude-computer-use-late-march, perplexity-personal-computer, desktop-mobile-computer-use-february, pig-homepage, legacy-ai-tools-roadmap-xlsx, codex-for-work-2026-05-01, amazon-quick-work-context-assistant-2026-04-29, gemini-downloadable-files-2026-04-30, knowledge-work-os-agent-apps-2026-04-28, peekaboo-repo-2026-05-13, website-future-agent-readable-2026-07-02, vercel-agents-new-software-2026-07-03, codex-general-work-agents-2026-07, agent-ready-saas-mcp-2026-06, gemini-computer-use-aside-2026-06, cloudflare-agent-internet-monetization-2026-07, expand-fetch-launch-2026-10, weinstein-computer-use-180-degrees-2026-09-30]
 ---
 
 # State of Computer Use
@@ -19,7 +19,7 @@ Autonomous agents that orchestrate models, connect to external services, and exe
 
 - [Perplexity Computer](../tools/perplexity-computer.md) — Perplexity's persistent digital-proxy model: always-on dedicated Mac mini environment, remotely controllable from any device, 19-model orchestration, 400+ app and 12,000+ financial-institution connectivity *(as of 2026-04-10)*
 - [Pig](../tools/pig.md) — Windows-focused computer-use platform with product, API, and SDK layers for automating application workflows on Windows machines *(as of 2026-04-22)*
-- [Codex](../tools/codex.md) — OpenAI; increasingly positioned as a horizontal computer-work agent for documents, spreadsheets, slides, browser flows, research, planning, inbox/CRM cleanup, meeting-note workflows, and connected workplace apps; current evidence remains newsletter synthesis *(as of 2026-07-01)*
+- [Codex](../tools/codex.md) — OpenAI; horizontal computer-work agent across documents, browser flows, and workplace apps. Agents now combine screenshots, accessibility trees, DOM, and Playwright, write code that performs many actions per step, and recover from failures, beating the average person on many tasks; also in the Agents API *(as of 2026-09-30)*
 - [Peekaboo](../tools/peekaboo.md) — open-source macOS CLI + MCP server for agent screen capture, UI detection, and action-first GUI automation; v3.0 unified screenshot/UI detection across CLI and MCP and added native agent flows *(as of 2026-05-11)*
 
 Computer use is also broadening into thinner action layers: desktop Electron apps exposed through CDP-based skills and mobile app actions exposed through assistant integrations, not only full remote-desktop proxies.
@@ -47,6 +47,7 @@ The reader side of the agent-readable web: APIs that fetch and clean arbitrary p
 ## Recent changes
 
 - [2026-10-14] Added `Agent web data extraction` with [Expand Fetch](../tools/expand-fetch.md), the reader-side counterpart to sites serving agent-native Markdown.
+- [2026-09-30] OpenAI's Ari Weinstein calls computer use "180 degrees different" from a year ago: self-debugging agents, multi-modal input (accessibility trees, DOM, App Shots), code-writing multi-action steps, GPT-6.1 Sol at ~1/7 of Astra's computer-use cost, and agents testing the software they build.
 - [2026-07-08] Cloudflare Monetization Gateway adds an agent-internet monetization signal: metered access for pages, datasets, APIs, and MCP tools.
 - [2026-07-03] Added agent-readable web concept: Vercel reports serving Markdown directly to detected agent requests, signaling a split between human and machine website experiences.
 - [2026-07-01] Every adds Codex examples outside coding: inbox/CRM cleanup, healthcare coordination, writing setups, meeting notes, and personal folders.
@@ -55,7 +56,6 @@ The reader side of the agent-readable web: APIs that fetch and clean arbitrary p
 - [2026-05-11] Added [Peekaboo](../tools/peekaboo.md) as a local macOS computer-use action layer for agents: CLI + MCP screen capture, UI detection, and GUI automation.
 - [2026-05-05] Added knowledge-work OS framing: left-sidebar desktop app + agentic terminal is emerging as a universal knowledge-work interface pattern; sticky workflow state creates switching costs
 - [2026-05-05] Gemini now generates downloadable files from chat: Google Docs/Sheets/Slides, Microsoft Office formats, PDF, CSV, LaTeX, TXT, RTF, Markdown — artifact-producing assistant behavior
-- [2026-05-05] Amazon Quick (caveated): desktop work-context assistant building personal knowledge graph from files/calendar/Slack, integrating with Kiro CLI and Claude Code; secondary coverage only — pending primary Amazon verification
 
 ## Sources
 
@@ -71,3 +71,4 @@ The reader side of the agent-readable web: APIs that fetch and clean arbitrary p
 - [Gemini computer use and Aside agentic browser](../sources/newsletters/gemini-computer-use-aside-2026-06.md)
 - [Cloudflare Monetization Gateway and agent internet monetization](../sources/newsletters/cloudflare-agent-internet-monetization-2026-07.md)
 - [Announcing Expand Fetch](../sources/articles/expand-fetch-launch-2026-10.md)
+- [Ari Weinstein: computer use is "180 degrees different"](../sources/newsletters/weinstein-computer-use-180-degrees-2026-09-30.md)

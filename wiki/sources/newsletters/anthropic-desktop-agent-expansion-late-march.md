@@ -13,7 +13,7 @@ This source cluster captures the week Anthropic's agent story widened from "Clau
 
 ## Influenced pages
 
-- [Claude Cowork](../../tools/claude-cowork.md) — adds the VM-backed local-first and longer-planning-horizon framing
+- [Claude app (formerly Claude Cowork)](../../tools/claude-app.md) — adds the VM-backed local-first and longer-planning-horizon framing
 - [Claude Code](../../tools/claude-code.md) — adds Channels / recurring tasks as part of the supervised multi-session direction
 
 ## Key claims extracted

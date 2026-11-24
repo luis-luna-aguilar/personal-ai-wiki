@@ -15,7 +15,7 @@ General-purpose robots are starting to cross from pilots into repeat, multi-site
 
 [[#Open questions|Open questions: 1 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 On 13 October 2026 Latent Space published a podcast episode, with a full transcript, in which swyx and Vibhu interview Jason Ma, co-founder and chief scientist of Dyna Robotics. The month before, Dyna had announced Dyna-2, which it calls a "world-action model": instead of only predicting the robot's next movements, it predicts future video of the scene together with the actions. Ma's argument is that a vision-language-action model (a chat-style vision model adapted to output robot commands) bakes in human choices about what matters, while predicting the raw camera future removes that bias. Dyna-2 was pre-trained on more than a million hours of mostly first-person human video, and Dyna claims scaling laws for transfer from human footage to robots across four orders of magnitude.
@@ -105,3 +105,4 @@ None.
 
 ## Open questions
 - Should Dyna get its own page (`tools/` or `models/`), or stay as a trend bullet until a second source covers it (assumed: stay as a bullet)?
+	- it needs a page, but is not a tool nor a model, its robotics/, create this new category

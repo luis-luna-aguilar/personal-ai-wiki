@@ -41,3 +41,8 @@
 ## Archived from current page on 2026-09-09
 
 - [2026-07-28] NVIDIA launches the "Open Secure AI Alliance" (Adobe, Cisco, Cloudflare, Hugging Face, IBM, Microsoft, Red Hat, Salesforce, SAP, ServiceNow, Snowflake, SpaceX); Anthropic does not join — publishing its own position (chip controls, anti-distillation, safety testing, not a ban) instead; NYT reports both labs lobbying Washington against open models even as Altman publicly backs them
+
+## Archived from current page on 2026-11-23
+
+- [2026-07-29] Kimi K3 deployment economics documented: ~8×MI355X minimum to load, 64+ GPUs for production serving, six-figure entry cost; Composio's cross-harness comparison shows the same model performs similarly but at very different cost/speed depending on the agent harness used (Kimi Code, Hermes, Claude Code).
+- [2026-07-31] Thinking Machines shipped Inkling-Small (276B/12B MoE, Intelligence Index 40, ~1/4 the flagship's active footprint at near-flagship capability), extending its US-origin open-weight flagship into a smaller sibling.

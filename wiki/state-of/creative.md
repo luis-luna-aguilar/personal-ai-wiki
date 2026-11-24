@@ -3,8 +3,8 @@ title: State of Creative
 type: state-of
 domains: [creative]
 tags: []
-as_of: 2026-09-01
-sources: [legacy-ai-tools-roadmap-xlsx, seedance-2, luma-dream-machine, heygen-homepage, genspark-slides, stitch-google, claude-design-anthropic-labs, ai-music-commercialization-2026-05-01, claude-creative-tool-connectors-2026-04-29, video-agents-ethan-he-june-2026, ainews-cosmos-nemotron-june-2026, ainews-ideogram-june-2026, powerpoint-agent-skill-failure-mode-2026-06, open-creative-workflows-2026-06, meta-muse-image-video-2026-07, kimi-goal-mode-creative-agents-2026-06, google-io-agents-agents-agents, ainews-new-ai-infra-unicorns-2026-05-22, bfl-flux-3-2026-07-24, ainews-fal-h3-max-live-2026-09-01]
+as_of: 2026-10-20
+sources: [legacy-ai-tools-roadmap-xlsx, seedance-2, luma-dream-machine, heygen-homepage, genspark-slides, stitch-google, claude-design-anthropic-labs, ai-music-commercialization-2026-05-01, claude-creative-tool-connectors-2026-04-29, video-agents-ethan-he-june-2026, ainews-cosmos-nemotron-june-2026, ainews-ideogram-june-2026, powerpoint-agent-skill-failure-mode-2026-06, open-creative-workflows-2026-06, meta-muse-image-video-2026-07, kimi-goal-mode-creative-agents-2026-06, google-io-agents-agents-agents, ainews-new-ai-infra-unicorns-2026-05-22, bfl-flux-3-2026-07-24, ainews-fal-h3-max-live-2026-09-01, latent-space-runway-worldprompt-2026-09-25, suno-speech-beta-2026-10, claude-cowork-is-now-claude-2026-09-16]
 ---
 
 # State of Creative
@@ -23,7 +23,8 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 - **Muse Video** — Meta Superintelligence Labs preview; paired with Muse Image and described in AINews as using agentic planning, tool use, code execution, and self-refinement before rendering *(as of 2026-07-08)*
 - **Fal H3 Max Live** — Fal optimized a post-trained MiniMax H3 video model 35x on its own inference engine, crossing faster-than-realtime continuous generation for a live, audience-steerable stream; content quality is still poor, the milestone is the infrastructure *(as of 2026-09-01)*
 - **Palmier** — Mac-native video editor where Claude or Codex can generate, organize, and trim footage directly in-app; integrates leading video models such as Seedance 2.0, Kling V3, and Grok Imagine. Current evidence is newsletter coverage only *(as of 2026-06-19)*
-- **Runway Aleph 2.0 / Edit Studio** — Runway; lets users edit a single frame and propagate that edit through the rest of the video, which AINews frames as a practical productization of "reference-guided edit propagation." Current evidence is an AINews recap (linking Runway's launch post and a product-lead post); primary announcement not fetched *(as of 2026-05-22)*
+- [Runway Aleph 2.0 / Edit Studio](../tools/runway.md) — Runway; lets users edit a single frame and propagate that edit through the rest of the video, which AINews frames as a practical productization of "reference-guided edit propagation." Current evidence is an AINews recap (linking Runway's launch post and a product-lead post); primary announcement not fetched *(as of 2026-05-22)*
+- [Runway GWM Worlds 2](../tools/runway.md) — Runway; research preview streaming interactive worlds at 720p/24fps with 48kHz audio, steered by WorldPrompt (fixed first frame plus timestamped, live-promptable events). Open problems: error accumulation, long-term memory, realistic outcomes for unlikely actions. Competes with Genie 3, Odyssey-2 Pro and World Labs' RTFM *(as of 2026-09-25)*
 - [FLUX 3](../tools/flux-3.md) — Black Forest Labs; unified image/video/audio/action-prediction architecture ("Self Flow"); native audio generation, video-to-video character continuity, agentic multi-shot clip chaining; companion FLUX3-mimic extends it to robot control (testing with Audi); open-weights Dev version planned *(as of 2026-07-24)*
 
 ### AI image generation
@@ -43,7 +44,7 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 
 ### Visual design & prototyping
 
-- [Claude Design](../tools/claude-design.md) — Anthropic; collaborative prototype, slide, and marketing-asset tool powered by Opus 4.7, with creative-suite connectors and bidirectional Claude Code sync via `/design-sync` *(as of 2026-07-08)*
+- [Claude Design](../tools/claude-design.md) — Anthropic; collaborative prototype, slide, and marketing-asset tool with creative-suite connectors and `/design-sync` to Claude Code; since 2026-09-16 also works inside Claude conversations beside the new Claude Docs and Slides (beta) *(as of 2026-09-16)*
 - [Genspark Slides](../tools/genspark-slides.md) — AI presentation generation inside Genspark's broader agent/content surface; current training evidence still cautions that polished enterprise decks need deep skill/tooling support and human review, not a thin prompt *(as of 2026-06-29)*
 - **Adobe Firefly AI Assistant** — Adobe assistant that executes multi-step creative tasks across Premiere, Photoshop, InDesign, and other Adobe apps, with expansion planned to ChatGPT, Claude, Gemini, Copilot, and Slack. Current evidence is newsletter coverage only *(as of 2026-06-19)*
 - **Figma Agent** — Figma; a native, in-canvas design agent (released 2026-05-20) that edits directly inside the canvas, built on a mix of Gemini Flash, Claude Sonnet, and Figma's own fine-tuned models; solves the blank-page problem for first-pass exploration but detail fidelity is weak per Every's hands-on review *(as of 2026-05-20)*
@@ -51,12 +52,15 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 
 ### AI music generation
 
-- **Suno** — category anchor for AI-generated music with reported subscriber and revenue milestones; no dedicated tool page yet, pending primary source fetch *(as of 2026-05-01)*
+- **Suno** — category anchor for AI-generated music with reported subscriber and revenue milestones; Speech (beta, open to all users) generates spoken voice and original background music together as one track; no dedicated tool page yet *(as of 2026-10-20)*
 - **Udio** — category anchor alongside Suno; AI-generated music *(as of 2026-05-01)*
 - **ElevenMusic** — ElevenLabs' new entrant to AI music generation *(as of 2026-05-01)*
 
 ## Recent changes
 
+- [2026-10-20] Suno opened Speech (beta), billed as the first audio model that generates voice and music together as one track.
+- [2026-09-25] Runway GWM Worlds 2 (research preview) turns its audio-video model into a real-time interactive world at 720p/24fps via WorldPrompt, autoregressive post-training and step distillation (about 50 → 4 denoising steps); Runway also showed an "interface world model" that renders software UIs as pixels.
+- [2026-09-16] Claude Design moved into Claude conversations as Anthropic merged chat and Cowork, launching Claude Docs and Claude Slides beside it (all beta on paid plans).
 - [2026-09-01] Fal's H3 Max Live crosses faster-than-realtime video generation (35x inference speedup over MiniMax H3's official endpoint), enabling a continuous, audience-steerable live-video product; Fal also launched Reference-to-Video for MiniMax H3 Max at up to real-time factor 1.
 - [2026-07-24] Black Forest Labs launched FLUX 3: unified image/video/audio/action-prediction model, positioned against Seedance 2.0/Gemini Omni/Grok Imagine; companion FLUX3-mimic release extends it to robot control.
 - [2026-07-08] Meta launched Muse Image into Meta AI, Instagram Stories, and WhatsApp and previewed Muse Video; AINews describes an agentic generation loop with planning, tool use, code execution, and self-refinement.
@@ -64,9 +68,6 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 - [2026-06-24] OpenArt Director and Krea 2 Raw/Turbo signal creative workflows splitting between conversational editing products and open fine-tuning ecosystems.
 - [2026-06-19] Palmier and Adobe Firefly Assistant show creative tooling moving toward agentic desktop workflows: video editing and multi-app creative tasks executed from natural-language instructions.
 - [2026-06-04] Ideogram 4.0: #1 open image model (Arena #8 overall); JSON layout control; strong text/branding capabilities; fp8/nf4 checkpoints, ComfyUI support
-- [2026-06-02] NVIDIA Cosmos 3: Mixture-of-Transformers architecture; #1 open-weight Image-to-Video and Text-to-Image; full weights + data released via Cosmos Coalition with Runway
-- [2026-06-01] Video agents thesis: Ethan He (ex-NVIDIA Cosmos, ex-xAI) argues video model intelligence comes from LLMs not video training; Grok Imagine Agent beta is first public video agent; evolution mirrors coding → coding agents
-- [2026-05-22] Figma released a native in-canvas design agent (Gemini Flash + Claude Sonnet + Figma fine-tuned models; Every hands-on: good for first drafts, weak on detail fidelity) and Runway launched Aleph 2.0/Edit Studio for single-frame-edit propagation across video (AINews recap); both newsletter-sourced, no primary announcement fetched, no dedicated pages yet.
 
 ## Sources
 
@@ -86,3 +87,6 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 - [AINews — New AI Infra unicorns: Exa, Modal, TurboPuffer (Runway Aleph 2.0 recap)](../sources/newsletters/ainews-new-ai-infra-unicorns-2026-05-22.md)
 - [AINews — Black Forest Labs FLUX 3](../sources/newsletters/bfl-flux-3-2026-07-24.md)
 - [AINews — Fal's H3 Max Live breaks the infinite videogen barrier](../sources/newsletters/ainews-fal-h3-max-live-2026-09-01.md)
+- [Latent Space — Runway's WorldPrompt and the engineering of real-time worlds](../sources/newsletters/latent-space-runway-worldprompt-2026-09-25.md)
+- [Suno — Introducing Speech (beta)](../sources/articles/suno-speech-beta-2026-10.md)
+- [Claude Cowork and chat are now one Claude](../sources/articles/claude-cowork-is-now-claude-2026-09-16.md)

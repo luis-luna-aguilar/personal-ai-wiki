@@ -4,19 +4,20 @@ type: source
 source_type: article
 source_file: raw/articles/2026-10-19-anthropiccom-claude-haiku-5-5.md
 url: https://www.anthropic.com/claude-haiku-5-5
+published: 2026-10-07
 ingested: 2026-10-19
 domains: [models]
 ---
 
 # Claude Haiku 5.5 launch
 
-Anthropic's launch page for Claude Haiku 5.5 presents it as its cheapest, fastest and most capable small model, built for high-volume, cost-sensitive tasks and subagent roles under Opus 5.5 and Sonnet 5.5. It includes a benchmark table against Haiku 4.5, GPT-6 Luna and Sonnet 5.5, two-tier pricing split at 100k-token prompts, quotes from six launch customers, and safety notes. The same page announces a Sonnet 5.5 cache-read price cut, monthly API credits for Max and Team subscribers, and computer-use and browser-use support in the Claude SDKs. The page carries no publication date; the fetch date (2026-10-19) is used.
+Anthropic's launch page for Claude Haiku 5.5 presents it as its cheapest, fastest and most capable small model, built for high-volume, cost-sensitive tasks and subagent roles under Opus 5.5 and Sonnet 5.5. It includes a benchmark table against Haiku 4.5, GPT-6 Luna and Sonnet 5.5, two-tier pricing split at 100k-token prompts, quotes from six launch customers, and safety notes. The same page announces a Sonnet 5.5 cache-read price cut, monthly API credits for Max and Team subscribers, and computer-use and browser-use support in the Claude SDKs. The page itself carries no date; AINews launch coverage (covering 6–7 October, with no mention in the previous day's issue) dates the release to 2026-10-07.
 
 ## Influenced pages
 - [Claude Haiku 5.5](../../models/claude-haiku-5-5.md) — new page: benchmarks, pricing, effort control, availability, safety
 - [Claude Sonnet 5.5](../../models/claude-sonnet-5-5.md) — cache-read price cut to $0.10 per 1M tokens
 - [State of Models](../../state-of/models.md) — new Small / fast models section
-- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — Anthropic tier split and Cognition sidekick result
+- [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — Anthropic tier split and Cognition sidekick result
 
 ## Key claims extracted
 - Haiku 5.5 is available on all platforms (AWS, Google Cloud, Microsoft Azure) and on the Claude Platform as `claude-haiku-5-5`.

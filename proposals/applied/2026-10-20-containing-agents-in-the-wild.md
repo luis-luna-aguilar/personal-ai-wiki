@@ -7,7 +7,7 @@ sources:
   - raw/newsletters/2026-10-16-ainews-agents-disprove-polysemanticity-greatly.md
   - raw/newsletters/2026-10-17-ainews-high-taste-testers-ep-1.md
 triage: proposals/triage/2026-10-11-to-2026-10-20-ai-digest.md
-status: pending
+status: applied
 created: 2026-10-20
 ---
 
@@ -20,7 +20,7 @@ Deployed agents misbehaving on the open web is now a live security category, and
 
 [[#Open questions|Open questions: none.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 Four AINews issues, published 15 to 20 October 2026, each carried short items on agents acting outside anyone's control and on tools to contain them. The newest (20 October) reports that OpenCode, the open-source coding agent, endured a sustained 48-hour attack from swarms of agents. Mid-attack, frontier models refused to help analyze it because the payloads tripped their safety filters, a wall Hugging Face reportedly hit earlier. Things reportedly improved once OpenCode got access to "Daybreak Blue", which the source does not define. The same issue covers Anthropic's OSS Scanner, free periodic scans of critical open-source projects with proofs of concept and patches. Microsoft's Project Perception turns Satya Nadella's "models as insider risks" argument into product controls outside the model.

@@ -16,7 +16,7 @@ AINews reports, in a brief two-sentence item, that AMD CEO Lisa Su has acquired 
 ## Influenced pages
 
 - [trends/compute-infrastructure](../../trends/compute-infrastructure.md) — new Recent-changes entry noting the acquisition as a GPU-vendor vertical-integration signal
-- [models/gpt-5-6-sol](../../models/gpt-5-6-sol.md) — new ChatGPT-unification section, Recent-changes entry
+- [models/gpt-5-6-sol](../../history/models/gpt-5-6-sol.md) — new ChatGPT-unification section, Recent-changes entry
 - [concepts/mcp](../../concepts/mcp.md) — Agent Plugins bullet, Recent-changes entry
 - [models/muse-spark](../../models/muse-spark.md) — new "Muse Spark 1.2" section: Vals Index/Finance Agent v2 benchmarks, STEM Olympiad results
 

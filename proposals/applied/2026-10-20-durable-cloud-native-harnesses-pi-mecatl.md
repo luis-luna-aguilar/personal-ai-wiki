@@ -20,7 +20,7 @@ The agent harness is being pulled apart so it can run as server infrastructure: 
 
 [[#Open questions|Open questions: 1 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 On 2 October 2026 AINews led with Pi, the open-source minimal coding harness (now part of the company Earendil), shipping version 1.0 and a sibling called Pi Durable. Pi 1.0 adds a "code mode" with native MCP, Jev and image-model support, deferred tool loading, prompt-cache warming for Anthropic models, and system messages that can change mid-conversation. Pi Durable is a rewrite of Pi in about 15,000 lines of TypeScript around a small task-based workflow engine. Every step is a checkpoint, so agents and subagents pick up where they stopped after a crash. Storage is pluggable (memory, SQLite, JSONL), it runs on Bun or Cloudflare Durable Objects, one harness can hold several parallel conversation branches, app state sits next to the transcript so several people or UIs can watch and steer one agent. The 6 October issue adds that control is separated from execution and that the authors skipped the Effect.ts library because it offers no durability.
@@ -368,3 +368,4 @@ Long podcast transcript with MIT PhD student Alex Zhang, author of the Recursive
 ## Open questions
 
 - Should Stacklok's Mecatl get its own `tools/` page now, or wait for a second source (assumed: wait; it lives on Agent runtime platforms for now)?
+	- Get it now.

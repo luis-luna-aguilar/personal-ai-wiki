@@ -16,7 +16,7 @@ AINews recap covering three separate stories from the same issue: OpenAI's GPT-5
 ## Influenced pages
 
 - [trends/physical-ai-deployment](../../trends/physical-ai-deployment.md) — added Gemini Robotics 2 as the clearest embodied-generality jump tracked so far
-- [models/gpt-5-6-sol](../../models/gpt-5-6-sol.md) — new pricing, self-optimizing-infrastructure note
+- [models/gpt-5-6-sol](../../history/models/gpt-5-6-sol.md) — new pricing, self-optimizing-infrastructure note
 - [state-of/models](../../state-of/models.md) — updated GPT-5.6 Sol and Inkling leader lines, Recent-changes entries
 - [models/inkling](../../models/inkling.md) — Inkling-Small shipped status, benchmarks, deployment support
 - [trends/open-weight-momentum-broadens](../../trends/open-weight-momentum-broadens.md) — Inkling-Small Recent-changes entry

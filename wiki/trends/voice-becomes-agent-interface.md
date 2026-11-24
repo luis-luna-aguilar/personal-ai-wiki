@@ -3,8 +3,8 @@ title: Voice becomes an agent interface
 type: trend
 domains: [models, agents, voice]
 tags: [agentic]
-as_of: 2026-08-05
-sources: [voice-becomes-agent-interface, gpt-live-launch-2026-07, bfl-flux-3-2026-07-24, every-voice-guide-2026-07-31, every-team-of-specialists-2026-08-02, chatgpt-voice-mode-vibe-check-2026-08-05]
+as_of: 2026-10-20
+sources: [voice-becomes-agent-interface, gpt-live-launch-2026-07, bfl-flux-3-2026-07-24, every-voice-guide-2026-07-31, every-team-of-specialists-2026-08-02, chatgpt-voice-mode-vibe-check-2026-08-05, eleven-realtime-2026-10-20, xai-grok-voice-3-2026-10-14, microsoft-mai-transcribe-2-streaming-2026-10-01]
 ---
 
 # Voice becomes an agent interface
@@ -22,6 +22,8 @@ Voice is becoming a practical agent interface rather than a chat add-on. What st
 - A five-step workflow loop — capture, retrieve and ground, define the outcome, act, review and redirect — is emerging as the standard shape for voice-driven agent work (Every, July 2026): voice removes the "translation step" between a raw thought and a polished agent instruction, not the review step itself.
 - Monologue (Every's voice-dictation tool) passed 500 million words dictated by early August 2026, up from roughly 1 million words/week at its September 2025 launch, now running on Mac, iPhone, and Apple Watch — a concrete usage datapoint for voice as a working interface rather than a novelty mode.
 - A week-long independent trial of ChatGPT Voice Mode (Every, August 2026) is the first close non-vendor look at GPT-Live in real work: strong for reading material aloud and asking questions against a live codebase, but mobile voice mode can't reach context outside the current thread, and filtering speech meant for the model from ambient conversation is inconsistent. Verdict: "both not quite there yet and obviously the future."
+- OpenAI's Realtime API protocol is becoming a common plug: ElevenLabs' Eleven Realtime (October 2026) serves its own speech-to-speech models through an OpenAI-compatible endpoint, so OpenAI's SDK and existing handlers work after an endpoint and model-name change. The voice layer of an agent becomes swappable between vendors.
+- Customer support is where voice agents now run at volume (October 2026). Grok Voice 3.0 handles 20,000 Starlink calls a day with about 70% resolved without a human, and Microsoft pitches streaming transcription partials (first text in ~100ms) so agents can start reasoning and calling tools before the caller finishes. Vendors now compete on agent-task benchmarks (τ-Voice, ServiceNow's EVA-Bench) and latency, not only voice quality.
 
 ## Why it matters
 
@@ -37,6 +39,8 @@ Full-duplex voice changes the interaction model from "send a spoken prompt, wait
 
 ## Recent changes
 
+- [2026-10-20] ElevenLabs ships Eleven Realtime behind an OpenAI-compatible Realtime API, making voice vendors swappable at the protocol level.
+- [2026-10-14] Support-call voice agents at scale: Grok Voice 3.0 resolves ~70% of 20,000 daily Starlink calls; Microsoft's streaming STT lets agents act before the caller finishes.
 - [2026-08-05] Independent week-long trial (Every) finds GPT-Live strong for read-and-ask workflows, weaker on cross-device context and ambient-speech filtering.
 - [2026-08-02] Monologue passed 500 million words dictated (up from ~1M/week at its September 2025 launch), now on Mac, iPhone, and Apple Watch.
 - [2026-07-31] Every formalized a five-step voice-agent workflow loop (capture → retrieve/ground → define outcome → act → review/redirect) for turning speech into finished work with an agent.
@@ -51,3 +55,6 @@ Full-duplex voice changes the interaction model from "send a spoken prompt, wait
 - [Build Faster With Voice — Every guide](../sources/newsletters/every-voice-guide-2026-07-31.md)
 - [Every — Your AI Is a Team of Specialists (weekly roundup)](../sources/newsletters/every-team-of-specialists-2026-08-02.md)
 - [Mini-Vibe Check: ChatGPT Voice Mode](../sources/newsletters/chatgpt-voice-mode-vibe-check-2026-08-05.md)
+- [Eleven Realtime launch page](../sources/articles/eleven-realtime-2026-10-20.md)
+- [Introducing Grok Voice 3.0 (x.ai)](../sources/articles/xai-grok-voice-3-2026-10-14.md)
+- [Microsoft AI — MAI-Transcribe-2-Streaming and MAI-Voice-2.1](../sources/articles/microsoft-mai-transcribe-2-streaming-2026-10-01.md)

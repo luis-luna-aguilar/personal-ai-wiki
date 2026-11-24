@@ -14,7 +14,7 @@ domains: [models]
 Every's Katie Parrott tested GPT-5.6 Sol across coding, writing, research, spreadsheets, and agent workflows. The headline finding is a split verdict: Sol loses Every's own Senior Engineer benchmark badly to Claude Fable 5, yet becomes the team's default daily-driver model for narrower, faster-turnaround work once it's running inside OpenAI's new unified ChatGPT/Codex desktop app. The `url` above was recovered by decoding this newsletter's own click-tracking redirect links (Every's plain-text capture has no direct "view online" URL) — it is the actual canonical permalink, not a guess.
 
 ## Influenced pages
-- [GPT-5.6 Sol](../../models/gpt-5-6-sol.md) — Every's Senior Engineer benchmark comparison and daily-use verdict
+- [GPT-5.6 Sol](../../history/models/gpt-5-6-sol.md) — Every's Senior Engineer benchmark comparison and daily-use verdict
 
 ## Key claims extracted
 - Sol scored 56/100 vs. Fable 5's 90/100 on Every's in-house Senior Engineer benchmark (rewrite a vibe-coded production codebase from first principles); Every attributes most of the gap to ~12,900 lines of unnecessary code Sol wrote

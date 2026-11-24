@@ -4,28 +4,23 @@ type: tool
 domains: [agents]
 subcategory: ai-assistant
 tags: [microsoft, closed-source]
-as_of: 2026-06-17
-sources: [microsoft-copilot-agent-mode-office, microsoft-word-legal-agent, copilot-cowork-ga-june-2026, ainews-mai-build-june-2026, satya-nadella-no-priors-june-2026]
+as_of: 2026-09-25
+sources: [microsoft-copilot-agent-mode-office, microsoft-word-legal-agent, copilot-cowork-ga-june-2026, ainews-mai-build-june-2026, satya-nadella-no-priors-june-2026, every-copilot-seat-in-org-chart-2026-09-25]
 ---
 
 # Microsoft Copilot
 
-Microsoft's cross-application assistant surface inside Microsoft 365. The April 2026 signal is that Copilot is no longer only a passive sidebar helper: in Word, Excel, and PowerPoint it is now explicitly agentic by default, taking multi-step native actions inside the application canvas while keeping review and control with the user.
+Microsoft's assistant surface across Microsoft 365. Since September 2026 it is one Copilot app with three tabs: Home (chat plus Word, Excel and PowerPoint with shared context), Code (non-developers build and share small apps), and Autopilot (persistent, goal-driven agents that sit in the org chart). Its pitch is that the documents, conversations and permissions an enterprise agent needs already live in Microsoft 365.
 
-## Current status (as of 2026-06-17)
+## Current status (as of 2026-09-25)
 
-- Agentic capabilities in Word, Excel, and PowerPoint are generally available and now the default experience
-- Copilot can take multi-step, app-native actions directly in documents, worksheets, and presentations rather than only answer questions or suggest steps
-- Microsoft emphasizes control: users review changes, keep what they want, and preserve structure/style preferences
-- Work IQ is part of the grounding story, using Microsoft work signals to improve context and output quality
-- Microsoft explicitly frames Copilot as multi-model and cross-app consistent, not tied to one single model/provider
-- Current rollout spans Microsoft 365 Copilot, Microsoft 365 Premium, and also Personal / Family plans
-- [Microsoft Word Legal Agent](microsoft-word-legal-agent.md) is an example of domain-specific depth inside the Copilot surface: a contract-review agent in Word with playbook-based redlines, tracked-change output, and a deterministic document-edit resolution layer; available through the Frontier program for US Windows users
-- **Copilot Cowork GA (June 2026):** generally available to any Microsoft 365 user globally; model choice, usage-based billing, cost management controls
-- Microsoft claims Copilot Cowork runs 30-40% cheaper per prompt than Anthropic's Claude Cowork — primarily a pricing rather than capability differentiation
-- Follow-up: Microsoft may explore Microsoft-hosted DeepSeek variants as cheaper optional backends; framed as sustainable pricing alternative to unlimited-use tiers
-- **MAI-Code-1-Flash** powers GitHub Copilot and VS Code at Build launch — Microsoft's first-party 5B active / 137B MoE coding model replaces external model dependency for Copilot's core coding feature (as of 2026-06-03)
-- **Microsoft Autopilot:** hosted long-running agent runtime launched at Build; OpenClaw and Hermes Agent as early examples; Scout is the first consumer-facing always-on agent; long-running agent substrate positioning
+- **One Copilot app (launched 2026-09-23):** replaces the separate consumer and work chat apps; features roll out in previews and the early-access program over the coming months
+- **Autopilot** is now the user-facing persistent agent: it draws on the last 30 days of work, the org chart and the calendar, keeps private memories of preferences and corrections, works under a user-given name (e.g. "Dot (Ryan's Autopilot)") that colleagues can tag in Teams, and runs Routines such as daily briefings; shown "reporting" to its owner in the org chart; off by default, billed in usage credits. (Microsoft first announced Autopilot at Build in June as a hosted long-running agent runtime.)
+- Office inside Copilot holds context across apps: Copilot knows which document and slide the user is on
+- Agentic mode in Word, Excel, and PowerPoint has been GA and the default since April 2026; [Microsoft Word Legal Agent](microsoft-word-legal-agent.md) is a domain-specific example (contract review with playbook redlines, Frontier program)
+- **Copilot Cowork GA (June 2026):** available to all Microsoft 365 users with model choice and usage-based billing; Microsoft claims 30-40% cheaper per prompt than Claude Cowork
+- **MAI-Code-1-Flash** powers GitHub Copilot and VS Code since Build (June 2026); Microsoft may also explore hosted DeepSeek variants as cheaper backends
+- Microsoft runs about 16,000 internal evals built from common workflows and pushes customers toward company-specific evals (see [Evals for workflow and task agents](../training/evals-for-agentic-work.md))
 
 ## Strengths
 
@@ -35,11 +30,13 @@ Microsoft's cross-application assistant surface inside Microsoft 365. The April 
 
 ## Weaknesses / caveats
 
-- Current source is a Microsoft product post; independent operator evidence is still thin
-- The page is intentionally narrow to the April 2026 Office-app signal, not a full history of all Copilot surfaces
+- Enterprise permissions cut both ways: in a hands-on test at launch, Copilot found both files for a Word-to-Excel table move but lacked permission to edit the workbook, and a Chat-to-Code handoff was blocked the same way; whether it works on day one depends on the customer's IT setup
+- Nadella calls the AI agent "the new massive insider risk"; Autopilot's governance (own permissions, org-chart visibility) is Microsoft's answer, not yet proven at scale
+- Always-on agents spend tokens around the clock; Microsoft says Autopilot has to "clear a higher bar" than on-demand tools to justify the cost
 
 ## Recent changes
 
+- [2026-09-25] One Copilot app launched 2026-09-23 with Home, Code and Autopilot tabs; Autopilot agents are named, persistent, org-chart-visible and usage-billed; hands-on test hit permission blocks on cross-app tasks
 - [2026-06-17] Copilot Cowork GA: available to all Microsoft 365 users; model choice, usage-based billing; Microsoft claims 30-40% cheaper per prompt than Claude Cowork; DeepSeek backend option reportedly under consideration
 - [2026-06-03] Build 2026: MAI-Code-1-Flash in Copilot/VS Code; Microsoft Autopilot hosted agent runtime; Scout (always-on personal agent across M365)
 - [2026-05-01] Microsoft Word Legal Agent added in Frontier: domain-specific contract-review and redlining agent inside Word with deterministic document-edit resolution
@@ -52,3 +49,4 @@ Microsoft's cross-application assistant surface inside Microsoft 365. The April 
 - [Microsoft Copilot Cowork generally available (June 2026)](../sources/newsletters/copilot-cowork-ga-june-2026.md)
 - [AINews — Microsoft Build 2026, MAI-Thinking-1 and MAI family (June 3)](../sources/newsletters/ainews-mai-build-june-2026.md)
 - [Satya Nadella on No Priors x Latent Space (June 3)](../sources/newsletters/satya-nadella-no-priors-june-2026.md)
+- [Every — Copilot Gets a Seat in the Org Chart](../sources/newsletters/every-copilot-seat-in-org-chart-2026-09-25.md)

@@ -3,8 +3,8 @@ title: Agent memory
 type: concept
 domains: [agents]
 tags: [agentic, knowledge-cluster]
-as_of: 2026-09-01
-sources: [agent-memory-without-vector-db, memory-vs-context-rot-february, agent-memory-systems-layer-2026-06, minteval-paper-2026-05, ainews-erdos-benchmarks-cluster-2026-05-21, ainews-openai-shuts-off-cursor-2026-08-29, ainews-fal-h3-max-live-2026-09-01]
+as_of: 2026-10-06
+sources: [agent-memory-without-vector-db, memory-vs-context-rot-february, agent-memory-systems-layer-2026-06, minteval-paper-2026-05, ainews-erdos-benchmarks-cluster-2026-05-21, ainews-openai-shuts-off-cursor-2026-08-29, ainews-fal-h3-max-live-2026-09-01, cognition-agent-memory-repo-2026-10, ainews-devin-dreaming-2026-10-06]
 ---
 
 # Agent memory
@@ -15,10 +15,11 @@ Agent memory is the problem of helping an AI system recover the right facts from
 
 Memory layer, memory system, long-term agent memory. "Ghost memory" is not an alias but a named failure mode (see below).
 
-## Current status (as of 2026-09-01)
+## Current status (as of 2026-10-06)
 
 - Memory is moving from "retrieve old facts" toward a lifecycle system: extract candidate memories, deduplicate them, reconcile conflicts, scope them to the right user/team/task, retrieve evidence, and expire or update stale facts.
 - Supermemory's ASMR system uses specialized agents to read conversation history and extract facts instead of embedding everything and querying by similarity; Engram-style systems frame memory as asynchronous infrastructure that turns traces into cleaned, scoped memories rather than stuffing every event back into the prompt.
+- Cognition ships the lifecycle as a product and opens its format (October 2026). Agent Memory Repo stores one user's agent memory as a git repo of markdown files: a `MEMORY.md` entry point with an index, one fact per line, each ending in a link to the session that produced it, and wiki-style links between files. Devin "Dreaming" runs overnight to prune and link that memory graph. Together they put two of the practical implications below (provenance on every memory, structure a human can inspect and prune) into a shipping agent, and git gives shared writes for free (see the swarm-workspace pattern on [Multi-agent coordination](../workflows/multi-agent-coordination.md)).
 - Late-August 2026 research moves memory inside the agent's working loop: explicit mutable state instead of growing transcripts (WikiSkill / SKILL.state), RL credit assigned to individual context edits (ContextPilot), and a Google DeepMind ablation where a persistent knowledge store compiled from traces carried much of the gain (see "Context editing and persistent state" below).
 - A-TMA-style "ghost memory" work highlights a concrete failure mode: stale and current facts can be retrieved together, causing long-running assistants to act on outdated state.
 - ReContext and BlockSearch-style work suggests some memory failures are inference-time evidence-use problems, not only storage problems.
@@ -49,6 +50,7 @@ Late-August 2026 research moves memory inside the agent's working loop rather th
 ## Recent changes
 
 - [2026-10-19] Added a "Context editing and persistent state" section (WikiSkill/SKILL.state, ContextPilot, Google's trace → knowledge-store → skill ablation), moved from [Harness (agent)](harness.md).
+- [2026-10-06] Added Cognition's Agent Memory Repo (git-and-markdown memory format, one sourced fact per line, `MEMORY.md` index) and Devin Dreaming (overnight prune-and-link pass).
 - [2026-09-09] Terminology reorganization: added the `## Also called` alias line, dated the Current-status stamp, and rewrote the Related lines to agree with the new [Knowledge architectures](knowledge-architectures.md) hub (this page previously described itself as "retrieval mechanics" on one page and as a "lifecycle system" on another).
 - [2026-07-07] AINews memory cluster updates agent memory from retrieval problem to systems layer: extraction, dedupe, reconciliation, scoping, lifecycle, and offline trace writeback.
 - [2026-05-19] MINTEval published: a dedicated benchmark for long-horizon memory under multi-target interference; 7 evaluated systems average 27.9% accuracy (best 33.4% per AINews' recap), giving independent confirmation that current memory systems are far from solved.
@@ -74,3 +76,5 @@ Late-August 2026 research moves memory inside the agent's working loop rather th
 - [AINews — agent-benchmark cluster (InferenceBench, Terminal-Bench Science, MINTEval)](../sources/newsletters/ainews-erdos-benchmarks-cluster-2026-05-21.md)
 - [AINews — OpenAI shuts off Cursor](../sources/newsletters/ainews-openai-shuts-off-cursor-2026-08-29.md)
 - [AINews — Fal's H3 Max Live breaks the infinite videogen barrier](../sources/newsletters/ainews-fal-h3-max-live-2026-09-01.md)
+- [Cognition — Agent Memory Repo](../sources/articles/cognition-agent-memory-repo-2026-10.md)
+- [AINews — Devin Dreaming and Agent Memory Repo](../sources/newsletters/ainews-devin-dreaming-2026-10-06.md)

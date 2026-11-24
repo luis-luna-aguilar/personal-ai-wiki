@@ -14,7 +14,7 @@ Every's July 19 newsletter, reported by Good Start Labs (which worked directly w
 
 ## Influenced pages
 
-- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — new evidence bullet on narrow purpose-built models beating frontier LLMs on out-of-distribution tasks, with a concrete cost ratio
+- [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — new evidence bullet on narrow purpose-built models beating frontier LLMs on out-of-distribution tasks, with a concrete cost ratio
 
 ## Key claims extracted
 

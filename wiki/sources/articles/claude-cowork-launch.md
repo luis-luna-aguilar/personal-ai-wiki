@@ -22,5 +22,5 @@ Anthropic's official product page for Claude Cowork. It positions Cowork as a de
 
 ## Influenced pages
 
-- [Claude Cowork](../../tools/claude-cowork.md) — new tool page
+- [Claude app (formerly Claude Cowork)](../../tools/claude-app.md) — new tool page
 - [Agents](../../state-of/agents.md) — Cowork added under agent orchestration UIs

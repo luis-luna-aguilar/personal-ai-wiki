@@ -105,3 +105,17 @@
 - [2026-08-13] Qwen3.8-Max shipped open weights (2.4T/~95B active MoE), text-only initial drop; day-0 vLLM/Together/Baseten support.
 - [2026-08-13] DeepSeek V4 Pro reached general availability at $0.435/$0.87 pricing, +15.8% Terminal-Bench over preview; capability reception mixed versus Kimi/Flash.
 - [2026-08-12] Nemotron 3.5 Lightning (NVIDIA, 31.6B/3.6B active) added to Open-weight models: AA Intelligence Index 24, strong per-size agentic benchmarks, Harvey's Legal Agent Bench post-training result beating Opus 4.6 and Nemotron 3 Ultra.
+
+## Archived from current page on 2026-10-28
+
+- [2026-08-20] GLM-5.3 launched, superseding GLM-5.2: same 753B/40B MoE footprint and price, +246 GDPval-AA v2, ties Kimi K3 on AA Intelligence Index — gains attributed to post-training RL rather than scale.
+- [2026-08-13] Grok 4.6 launched, superseding Grok 4.5: AA Intelligence Index 61, 88.4% Terminal-Bench v2.1, unchanged $2/$6 pricing; powers new Grok Bot AI-teammate product.
+
+## Archived from current page on 2026-11-23
+
+- [2026-09-01] Claude Fable 5.1 / Mythos 5.1 launched, superseding Fable 5: AA Intelligence Index 66 (was 62), 75% cache-read price cut, same-weights/different-safety-routing debate between the two paired model names.
+- [2026-09-03] Muse Spark 1.3 launched: AA Intelligence Index #3 in the world, parity with GPT-5.6 Sol/Opus 5 on several evals, open weights still pending.
+- [2026-09-03] GPT-6 Astra launched (OpenAI): new flagship, but not a clean win — Fable 5.1 leads AA's coding-agent and intelligence indices, Astra leads token efficiency and cost-per-task; full rollout completed 2026-09-08; system card discloses a sharp CoT-monitorability decline.
+- [2026-09-21] Grok 4.7 replaced Grok 4.6 in Frontier models: same price and speed, AA Coding Agent Index 56, but #24 on the Vals Index (down 5 points) and a split verdict from Every's testers.
+- [2026-09-29] GPT-6.1 Sol replaces GPT-5.6 Sol in Frontier models; GPT-6 Sol (2026-09-22) was superseded within a week. GPT-6 Luna added to Small / fast models at $0.10/$0.50. AA puts 6.1 Sol one point below Astra at $0.72 vs $3.26 per task.
+- [2026-09-22] Xiaomi MiMo-V2.6-Pro added to Open-weight models: 1T/42B-active omnimodal MoE under MIT, AA Intelligence Index 46 at $0.13 per task, shipped with its RL environments and training code.

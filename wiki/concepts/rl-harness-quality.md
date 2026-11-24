@@ -3,8 +3,8 @@ title: RL harness quality
 type: concept
 domains: [agents]
 tags: [agentic]
-as_of: 2026-09-09
-sources: [rl-harness-quality-june-2026, ainews-muse-spark-13-2026-09-03]
+as_of: 2026-10-14
+sources: [rl-harness-quality-june-2026, ainews-muse-spark-13-2026-09-03, paper-instruments-ultramarine-1-flash-2026-10-14, ainews-xiaomi-mimo-v26-pro-2026-09-22]
 ---
 
 # RL harness quality
@@ -28,6 +28,15 @@ Eight common failure modes, with examples:
 
 Treating the training harness like production code — with tests, versioning, and monitoring for failure rate — is the main mitigation. See [Harness (agent)](harness.md) for a related but distinct failure mode, harness-level forgetting, that affects a harness's non-RL components as they evolve.
 - **RL-as-a-service tooling.** Miles shipped as an open-source RL-as-a-service training framework using SGLang as its rollout inference engine.
+- **Open RL environments.** Xiaomi released the RL environments and recipes behind [MiMo-V2.6](../models/mimo-v2-6.md) (coding, cyber vulnerability reproduction, knowledge work, web development, music), with about 7K environments planned; its environment-factory paper generates tasks from open repositories with agents in the loop to check robustness and block cheating. Commentators argue environment quality is becoming the strategic asset that pretraining data was.
+
+## Design choices from a non-verifiable RL run
+
+Paper Instruments' Ultramarine 1 Flash report (Oct 2026; see [Non-verifiable RL](non-verifiable-rl.md)) adds three environment-design choices that guard against the failure modes above:
+
+- **Score only failures the policy caused.** Malformed calls and failing commands return an error and the trajectory continues; a lost sandbox or broken tool transport ends the attempt, which is excluded from training rather than scored zero, so infrastructure noise never enters the reward.
+- **Keep the agent loop outside the sandbox.** Commands run in the sandbox, but the loop, credentials and grader live on the orchestrator, and grading material arrives only after the rollout, so the model cannot alter its own harness or grader.
+- **Train on neutral instructions.** A 50-token system prompt and tool descriptions that say what a tool does, not when to use it; prescriptive production prompts (1,800–4,400 tokens in surveyed harnesses) come only in the final stage, because they narrow exploration.
 
 ## Why it matters
 
@@ -36,6 +45,8 @@ An RL environment is not a neutral measuring instrument; it actively shapes what
 ## Recent changes
 
 - [2026-10-19] Added Miles (open-source RL-as-a-service framework), moved from [Harness (agent)](harness.md).
+- [2026-10-14] Added three environment-design choices from Paper Instruments' Ultramarine 1 Flash report: exclude environment failures from the reward, keep the agent loop outside the sandbox, train on neutral instructions.
+- [2026-09-22] Added open RL environments: Xiaomi open-sourced the environments behind MiMo-V2.6, including an agents-in-the-loop anti-cheating task factory.
 - [2026-09-09] Page created, split out of [Harness (agent)](harness.md)'s "RL harness quality" section, which had grown into a self-contained sub-concept distinct from general harness architecture.
 
 ## Related
@@ -47,3 +58,5 @@ An RL environment is not a neutral measuring instrument; it actively shapes what
 
 - [RL harness quality — Auriel W (Google Gemini team)](../sources/newsletters/rl-harness-quality-june-2026.md)
 - ["[AINews] Muse Spark 1.3 matches GPT-5.6-Sol, confirming Meta Superintelligence as the newest Frontier Lab"](../sources/newsletters/ainews-muse-spark-13-2026-09-03.md)
+- [Paper Instruments — Ultramarine 1 Flash: Scaling Non-Verifiable RL](../sources/articles/paper-instruments-ultramarine-1-flash-2026-10-14.md)
+- [AINews — Xiaomi MiMo-V2.6-Pro 1T-A42B](../sources/newsletters/ainews-xiaomi-mimo-v26-pro-2026-09-22.md)

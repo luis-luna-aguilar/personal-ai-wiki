@@ -3,8 +3,8 @@ title: Automated harness optimization
 type: concept
 domains: [agents]
 tags: [agentic]
-as_of: 2026-10-09
-sources: [langchain-better-harness, self-improving-skills, ainews-andrew-ng-ai-engineering-2026-08-25, ainews-poolside-nvidia-2026-08-21, ainews-muse-spark-13-2026-09-03, harness2-recursive-harnessing-2026-10, ainews-openai-agi-bar-2026-08-28, primeintellect-prime-agent-2026-08-05]
+as_of: 2026-10-26
+sources: [langchain-better-harness, self-improving-skills, ainews-andrew-ng-ai-engineering-2026-08-25, ainews-poolside-nvidia-2026-08-21, ainews-muse-spark-13-2026-09-03, harness2-recursive-harnessing-2026-10, ainews-openai-agi-bar-2026-08-28, primeintellect-prime-agent-2026-08-05, claude-api-build-eval-hillclimb]
 ---
 
 # Automated harness optimization
@@ -29,6 +29,10 @@ LangChain's Better-Harness is a prototype that formalizes the improvement loop a
 6. **Human review** — manual gate catches overfit instructions and token waste
 
 Tested with Claude Sonnet 4.6 and GLM-5. Results showed near-full generalization to holdout sets on tool_selection and followup_quality categories. The analogy is explicit: `harness + evals + harness engineering → better agent`, mirroring `model + training data + gradient descent → better model`.
+
+## Guided hill-climbing in Claude Code
+
+Anthropic's `/claude-api hillclimb` productizes the same loop. The user picks what may change (prompt, skills, tool descriptions, model and effort, harness code) and the goal (quality, or cost at equal quality). A random test split is never read, and the eval's noise must be smaller than the smallest gain worth acting on. Each round makes one root-cause patch, kept only if train and test both rise. Failing transcripts never go into the prompt. After two or three flat rounds Claude sorts the remaining failures by cause, which catches broken tasks and graders. It advises against merging gains within noise. Cheap, attributable surfaces (prompt text, skill descriptions) climb best; open-ended harness rewrites and near-saturated evals stall. Eval design is on [Evals for workflow and task agents](../training/evals-for-agentic-work.md).
 
 ## Recursive harnessing without ground truth
 
@@ -73,6 +77,7 @@ ByteDance Seed's HarnessDev has models build and then iteratively improve their 
 
 ## Recent changes
 
+- [2026-10-26] Added Anthropic's `/claude-api hillclimb`: train/test split, noise check, one patch per round kept only if both sets rise, failure sorting by cause when the score stalls.
 - [2026-10-19] Added JIT-Agent (runtime-synthesized harness) and Prime Agent's self-modifiable Continual Harness, moved from [Harness (agent)](harness.md).
 - [2026-10-19] Page created, split out of [Agent improvement loop](agent-improvement-loop.md) (Better-Harness, self-improving skills) and [Harness (agent)](harness.md) (self-modifying harnesses, harness continual learning, HarnessDev).
 - [2026-10-09] Added Harness² (Google Cloud AI Research): label-free per-task harness refinement via propose-probe-compose, plus a lessons library carried across tasks; up to +11.5 points on WorkBuddy-Bench with frozen weights.
@@ -96,3 +101,4 @@ ByteDance Seed's HarnessDev has models build and then iteratively improve their 
 - [Harness²: Recursive Agent Harnessing for an Open World — Google Cloud AI Research](../sources/papers/harness2-recursive-harnessing-2026-10.md)
 - [[AINews] OpenAI to reach AGI bar by end-2026](../sources/newsletters/ainews-openai-agi-bar-2026-08-28.md)
 - [Prime Intellect on X: \"Introducing Prime Agent: A self-improving RLM harness\](../sources/tweets/primeintellect-prime-agent-2026-08-05.md)
+- [Anthropic — Automating eval design and hillclimbing with Claude](../sources/articles/claude-api-build-eval-hillclimb.md)

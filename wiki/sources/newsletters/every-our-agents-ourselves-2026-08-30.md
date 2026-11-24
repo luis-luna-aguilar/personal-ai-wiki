@@ -15,7 +15,7 @@ Every's Context Window roundup covering Terence Tao's "proof indigestion" observ
 
 ## Influenced pages
 
-- [AI in mathematics](../../trends/ai-in-mathematics.md) — "proof indigestion" bullet
+- [AI math verification](../../trends/ai-math-verification.md) — "proof indigestion" bullet (moved from AI in mathematics in the 2026-11-23 split)
 
 ## Key claims extracted
 

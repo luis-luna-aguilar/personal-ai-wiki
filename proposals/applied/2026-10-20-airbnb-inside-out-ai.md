@@ -2,7 +2,7 @@
 type: proposal
 source: raw/newsletters/2026-10-02-inside-out-ai-rebuilding-airbnb-behind-the-scenes.md
 triage: proposals/triage/2026-10-01-to-2026-10-10-ai-digest.md
-status: pending
+status: applied
 created: 2026-10-20
 ---
 
@@ -15,7 +15,7 @@ A large incumbent can get most of its code from AI and still ship faster, but on
 
 [[#Open questions|Open questions: 1 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 Latent Space published an interview with Ahmad Al-Dahle on 2 October 2026. He ran generative AI and the Llama launches at Meta before joining Airbnb as CTO in January; his brief is to make Airbnb "AI-native" from the inside out: use AI internally to speed up product development first, then put the same capabilities into the guest experience. His headline numbers are 60% of code AI-authored, nearly 80% more features and improvements shipped year over year, and PR throughput per engineer up about 1.6x. The main process change is that product, design and engineering skip the handoff chain of requirements document, Figma file and implementation, and work straight from prototypes, so "the code is the artifact we reason upon."
@@ -192,3 +192,4 @@ None.
 ## Open questions
 
 - Should Al-Dahle's explain-your-PR rule also go onto `training/ai-native-hiring-and-junior-talent.md` as a junior-craft safeguard (assumed no; it stays on the engineering evidence page)?
+	- Yes, add it, sounds good

@@ -3,7 +3,7 @@ title: Agentic infrastructure operations
 type: training
 domains: [agents, coding]
 as_of: 2026-10-19
-sources: [agentic-devops-deep-research, devinai-blog-introducing-devin-oncall]
+sources: [agentic-devops-deep-research, devinai-blog-introducing-devin-oncall, spotify-quality-at-higher-velocity-2026-09]
 ---
 
 # Agentic infrastructure operations
@@ -65,6 +65,7 @@ Verification should continue after the action. A safe infra loop is:
 ## Evidence from practice
 
 - **Devin Oncall (Cognition, October 2026)** is the first production-scale case on this page. Cognition's account of why earlier agents failed at production debugging matches the ladder above: they declared answers too early, explored too narrowly, and reached for large code changes instead of simple mitigations such as rollbacks and scale-ups. Its fixes are structural rather than prompt-only: a second review agent checks whether conclusions follow from the evidence (a recent deploy is a lead, not a cause); a parent agent deduplicates the alert stream so each investigation starts with fresh context; and per-org memory and generated skills cache environment knowledge, so context is configured upfront and shared rather than supplied by each engineer. Autonomy is graduated in practice: at Reducto, Devin often remediates medium-severity issues, or opens and tests a PR, before paging an engineer for review; at AngelList it handles half of incidents end-to-end. See [Devin](../tools/devin.md).
+- **Spotify Fleet Management (September 2026)** merges most fleet-wide automated changes without a human once they pass safety checks, and now runs agent-driven changes such as a Java migration across backend services finished in three days. An automated dependency upgrade passed every check and still failed in production, hurting users. Spotify's response is about the delivery system, not the agent: stronger safeguards, more rollback capacity, and scheduling automated changes during the owning team's working hours so someone is there to respond. See [Engineering AI adoption: evidence from practice](engineering-ai-adoption-evidence.md) for the wider quality data.
 
 ## Failure modes
 
@@ -74,6 +75,7 @@ Verification should continue after the action. A safe infra loop is:
 - Using custom wrappers everywhere and losing auditability and portability
 - Treating infrastructure changes as complete when the command returned 0 instead of when the system state is actually verified
 - Accepting the first plausible root cause; without a separate reviewer challenging the investigation, an engineer ends up having to say "dig deeper"
+- Letting automated change volume grow faster than rollback capacity and on-hand owners; a change that passes every check can still fail in production when no one who owns the service is around
 
 ## Open questions
 
@@ -84,8 +86,10 @@ Verification should continue after the action. A safe infra loop is:
 ## Recent changes
 
 - [2026-10-19] Added Devin Oncall as the first production evidence: review agent against premature conclusions, alert-stream deduplication, shared org memory, severity-graduated autonomy; new failure mode on stopping at the first plausible root cause.
+- [2026-09-30] Added Spotify's automated dependency-upgrade failure and its fixes (rollback capacity, changes scheduled in owners' working hours); new failure mode on change volume outrunning rollback and ownership.
 
 ## Sources
 
 - [Agentic infrastructure and operations](../sources/deep-research/agentic-devops-deep-research.md)
 - [Cognition — Introducing Devin Oncall](../sources/articles/devinai-blog-introducing-devin-oncall.md)
+- [Spotify Engineering — AI Changed How Spotify Builds](../sources/articles/spotify-quality-at-higher-velocity-2026-09.md)

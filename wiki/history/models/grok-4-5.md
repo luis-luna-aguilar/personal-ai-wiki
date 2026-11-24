@@ -12,7 +12,7 @@ sources: [cursor-blog-grok-4-5-launch-2026-07, ainews-spacexai-grok-45-2026-07-0
 
 xAI's (rebranded SpaceXAI following its Cursor acquisition) first model co-trained with Cursor — a 1.5T-parameter mixture-of-experts model, 3x larger than Grok 4.3. Positioned as "Opus-class" but faster, more token-efficient, and lower cost, and as xAI's first model trained for more than software engineering: a deliberately broad STEM/knowledge-work data mix alongside coding and agent trajectories drawn from Cursor's own usage data.
 
-**Superseded by [Grok 4.6](../../models/grok-4-6.md), 2026-08-13.**
+**Superseded by [Grok 4.6](grok-4-6.md), 2026-08-13 (itself superseded by [Grok 4.7](../../models/grok-4-7.md), 2026-09-21).**
 
 ## Current status (as of 2026-07-12)
 

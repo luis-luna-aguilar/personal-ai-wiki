@@ -15,7 +15,7 @@ The Code reports that Anthropic expanded Claude Cowork beta to web and mobile fo
 
 ## Influenced pages
 
-- [Claude Cowork](../../tools/claude-cowork.md) - updates current status and recent changes.
+- [Claude app (formerly Claude Cowork)](../../tools/claude-app.md) - updates current status and recent changes.
 - [State of Agents](../../state-of/agents.md) - refreshes the Cowork orchestration entry.
 
 ## Key claims extracted

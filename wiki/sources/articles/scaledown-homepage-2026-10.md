@@ -14,7 +14,7 @@ Product homepage for ScaleDown, a self-described applied research lab selling fo
 
 ## Influenced pages
 
-- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — evidence bullet under "Routing as infrastructure"
+- [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — evidence bullet under "Routing as infrastructure"
 - [ScaleDown](../../models/scaledown.md) — pricing, model lineup, and positioning claims
 
 ## Key claims extracted

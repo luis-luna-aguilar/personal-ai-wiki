@@ -2,7 +2,7 @@
 type: proposal
 source: raw/articles/2026-10-20-claudecom-blog-building-effective-human-agent-teams.md
 triage: proposals/triage/2026-10-01-to-2026-10-10-ai-digest.md
-status: pending
+status: applied
 created: 2026-10-20
 ---
 
@@ -15,7 +15,7 @@ Shared team agents fail on norms more than on technology: Anthropic says its hum
 
 [[#Open questions|Open questions: 1 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 Kristen Swanson of Anthropic's Education team wrote this Claude blog post, which reached the wiki through an early-October forward. It describes "multiplayer agents": agents with their own credentials, memory and skills that work with many people at once inside Slack, through Anthropic's Claude Tag product, instead of one person chatting with one agent.
@@ -173,3 +173,4 @@ None.
 ## Open questions
 
 - The article carries no date. Is 10 October (the end of the digest window it arrived in) acceptable for `as_of`, or should the pages use the 20 October fetch date?
+	- Yes, use Oct 10th, 2026

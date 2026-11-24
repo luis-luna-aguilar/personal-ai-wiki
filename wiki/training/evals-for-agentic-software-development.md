@@ -2,7 +2,7 @@
 title: Evals for agentic software development
 type: training
 as_of: 2026-10-19
-sources: [agents-evals-deep-research, qa-tooling-for-software-agents-deep-research, cost-aware-agent-evaluation-2026-04-28, opus-4-7-tokenizer-economics-2026-04-30, agentic-security-tooling-2026-05-13, ai-code-review-eval-integrity-2026-06, dashbench-code-review-understanding-2026-07, crabbox-remote-execution-2026-07, cognition-async-agents-testing-2026-05, lavaee-verification-pyramid-2026-10, tester-army-e2e]
+sources: [agents-evals-deep-research, qa-tooling-for-software-agents-deep-research, cost-aware-agent-evaluation-2026-04-28, opus-4-7-tokenizer-economics-2026-04-30, agentic-security-tooling-2026-05-13, ai-code-review-eval-integrity-2026-06, dashbench-code-review-understanding-2026-07, crabbox-remote-execution-2026-07, cognition-async-agents-testing-2026-05, lavaee-verification-pyramid-2026-10, tester-army-e2e, spotify-quality-at-higher-velocity-2026-09]
 ---
 
 # Evals for agentic software development
@@ -144,6 +144,7 @@ Write the user scenario in plain steps before the agent starts (log in → open 
 
 - **Scope assertions as a category.** Did the agent touch files it wasn't supposed to? This is one of the most important and most commonly missed checks.
 - **Red/green TDD for agent-written tests.** Prompt the agent to write a failing test first, then write the implementation to make it pass. The five-word prompt "use red/green TDD" encodes this workflow because agents recognize the jargon.
+- **Measure quality at the delivery-system level once change volume jumps.** Spotify adds two questions to every major-incident retrospective (did AI-authored code directly contribute? did the volume of change strain review, testing, rollout, or observability?), tracks rework rate weighted by the age of the code changed rather than raw code churn, and holds PR-size and complexity thresholds steady instead of loosening them while it is unclear whether they still signal risk. See [Engineering AI adoption: evidence from practice](engineering-ai-adoption-evidence.md).
 
 ## Failure modes
 
@@ -166,6 +167,7 @@ Write the user scenario in plain steps before the agent starts (log in → open 
 - [2026-10-20] Split the acceptance contract, expected-value, test-diff-first, and test-integrity guidance and the "Oracles agents can't game" section (with its two entries, 2026-10-14 and 2026-10-19) out to [Acceptance contracts and test oracles](acceptance-contracts-and-test-oracles.md); Lavaee's multi-judge scoring and scenario-driven browser and performance checks (2026-10-14) stay here.
 - [2026-10-19] Added TesterArmy e2e to browser self-verification: agent steps mixed with deterministic assertions, with verified steps replayed without model calls.
 - [2026-10-19] Moved code-review judge calibration (rubrics, reference answers, human audits) to [AI PR and code review](../workflows/ai-pr-code-review.md), folded the AI code review pointer into a renamed "LLM judges as eval scorers" section, and condensed Current guidance where it restated later sections.
+- [2026-09-30] Added Spotify's delivery-system quality measurement as a proven pattern: two AI questions in incident retrospectives, age-weighted rework rate over churn, thresholds held steady.
 - [2026-07-08] Added remote execution control planes as part of the coding-agent eval/proof-artifact stack.
 - [2026-07-08] Moved detailed AI PR/code-review execution guidance into a dedicated workflow and added DashBench historical PR replay as the review-eval pattern.
 - [2026-06-26] Added AI review workflow guidance and public-benchmark leakage caveat from The Code / AINews coverage.
@@ -185,3 +187,4 @@ Write the user scenario in plain steps before the agent starts (log in → open 
 - [Cognition async agents and testing proof](../sources/newsletters/cognition-async-agents-testing-2026-05.md)
 - [Agents Write the Code. Your System Has to Prove It. — Alex Lavaee](../sources/tweets/lavaee-verification-pyramid-2026-10.md)
 - [tester-army/e2e GitHub repository](../sources/repos/tester-army-e2e.md)
+- [Spotify Engineering — AI Changed How Spotify Builds](../sources/articles/spotify-quality-at-higher-velocity-2026-09.md)

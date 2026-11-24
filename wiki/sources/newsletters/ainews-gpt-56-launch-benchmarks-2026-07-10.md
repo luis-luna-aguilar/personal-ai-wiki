@@ -14,7 +14,7 @@ domains: [models, cybersecurity]
 AINews' Twitter-recap coverage of the GPT-5.6 family launch: three tiers (Sol/Terra/Luna) plus a new "ultra" parallel-subagent effort level, tiered API pricing, and OpenAI's own framing (Altman: "obviously the best model we have ever produced"). The bulk of the issue compiles independent third-party evaluations — Artificial Analysis, Vals, ARC Prize — alongside safety pushback from the UK AI Safety Institute and community skepticism about a "Sol autonomously post-trained Luna" claim that was quickly walked back to something narrower.
 
 ## Influenced pages
-- [GPT-5.6 Sol](../../models/gpt-5-6-sol.md) — independent benchmark placements and caveats
+- [GPT-5.6 Sol](../../history/models/gpt-5-6-sol.md) — independent benchmark placements and caveats
 - [State of Models](../../state-of/models.md) — refreshed leader line
 - [State of Cybersecurity](../../state-of/cybersecurity.md) — AI Safety Institute jailbreak finding added to the offensive-capability line
 

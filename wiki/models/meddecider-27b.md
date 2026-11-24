@@ -2,7 +2,7 @@
 title: MedDecider-27B
 type: model
 domains: [models, healthcare]
-subcategory: domain-specialized-model
+subcategory: decision-model
 tags: [open-weights]
 as_of: 2026-10-19
 sources: [lion-ai-meddecider-27b]
@@ -36,6 +36,7 @@ It turns a class of clinical judgments into a cheap, scorable primitive: a proba
 
 ## Recent changes
 
+- [2026-10-28] Moved from the `domain-specialized-model` subcategory to `decision-model`, alongside [Jev](jev.md) and the other [decision models](../concepts/decision-models.md).
 - [2026-10-19] Page created from the Hugging Face model card (October 2026 release).
 
 ## Sources

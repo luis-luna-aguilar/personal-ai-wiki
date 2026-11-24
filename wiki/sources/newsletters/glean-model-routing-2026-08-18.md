@@ -16,7 +16,7 @@ Latent Space interview with Glean co-founder Arvind Jain on why model routing ha
 ## Influenced pages
 
 - [Glean](../../tools/glean.md) — new page
-- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — new Evidence-from-practice bullet
+- [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — new Evidence-from-practice bullet
 
 ## Key claims extracted
 

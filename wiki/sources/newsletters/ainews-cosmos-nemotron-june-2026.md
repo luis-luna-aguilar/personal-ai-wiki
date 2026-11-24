@@ -21,6 +21,7 @@ AINews roundup covering NVIDIA's Computex 2026 announcements: Cosmos 3 (Mixture-
 - [State of Models](../../state-of/models.md) — Recent changes update
 - [State of Creative](../../state-of/creative.md) — Recent changes update
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Nemotron open-weight signal
+- [Runway](../../tools/runway.md) — Cosmos Coalition partner
 
 ## Key claims extracted
 - Cosmos 3 MoT architecture unifies autoregressive reasoner and diffusion generator

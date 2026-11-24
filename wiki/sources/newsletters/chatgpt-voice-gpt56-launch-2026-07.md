@@ -15,7 +15,7 @@ Superhuman's recap covering OpenAI's GPT-Live rollout and, separately, GPT-5.6 c
 
 ## Influenced pages
 
-- [GPT-5.6 Sol](../../models/gpt-5-6-sol.md) — public-launch/export-control-lift update
+- [GPT-5.6 Sol](../../history/models/gpt-5-6-sol.md) — public-launch/export-control-lift update
 - [Restricted frontier deployment](../../trends/restricted-frontier-deployment.md) — resolution of the GPT-5.6/Sol restricted-preview thread
 
 ## Key claims extracted

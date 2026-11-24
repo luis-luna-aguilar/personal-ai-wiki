@@ -14,7 +14,8 @@ Thinking Machines describes a Bridgewater AIA Labs collaboration on training mod
 
 ## Influenced pages
 
-- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) - verified domain-tuned model case
+- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) - compare-three-routes guidance and model-prestige failure mode
+- [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) - verified domain-tuned model case
 - [State of Finance](../../state-of/finance.md) - institutional finance AI signal
 
 ## Key claims extracted

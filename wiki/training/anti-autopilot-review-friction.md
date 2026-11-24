@@ -1,8 +1,8 @@
 ---
 title: Anti-autopilot review friction
 type: training
-as_of: 2026-09-08
-sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026, lennysan-simonw-interview, prof-devs-control, agents-evals-deep-research, agentic-devops-deep-research, agent-review-artifacts-2026-05-13, osmani-cognitive-debt-ai-learning-2026-05, claude-code-fast-mode-default-2026-05, powerpoint-agent-skill-failure-mode-2026-06, anthropic-ai-assistance-coding-skills-2026, every-read-the-code-2026-09-08]
+as_of: 2026-09-18
+sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026, lennysan-simonw-interview, prof-devs-control, agents-evals-deep-research, agentic-devops-deep-research, agent-review-artifacts-2026-05-13, osmani-cognitive-debt-ai-learning-2026-05, claude-code-fast-mode-default-2026-05, powerpoint-agent-skill-failure-mode-2026-06, anthropic-ai-assistance-coding-skills-2026, every-read-the-code-2026-09-08, nathannn-critch-build-a-brain-ai-age-2026-09-18]
 ---
 
 # Anti-autopilot review friction
@@ -66,6 +66,8 @@ From field research (N=99 surveys; suitable:unsuitable ratios):
 
 Cognitive debt (Addy Osmani, May 2026): the accumulated deficit in comprehension and skill that results from using AI to close tasks without understanding what was produced. "Silently trading future capability for present-day speed, and the tools won't force us to do otherwise." Distinct from hallucination risk: cognitive debt accrues even when the AI output is correct.
 
+### Evidence
+
 **Three empirical studies:**
 
 - **Anthropic comprehension study:** Engineers learned a new Python library — half with AI assistance, half without. Both groups finished tasks at about the same speed. But the AI group scored 50% on the follow-up comprehension quiz vs 67% for the manual group (Cohen's *d*=0.738); the gap widened most on debugging questions. Within the AI group, *how* people used the assistant mattered more than *whether* they did: three low-scoring patterns (quiz average under 40%) all involved heavy reliance with little independent thought — wholesale AI delegation, starting with a few questions before drifting into full delegation, and asking AI to debug rather than to explain. Three high-scoring patterns (65%+) all paired AI use with active comprehension-checking — generating code then asking follow-up questions, requesting code and explanation together, or asking only conceptual questions and reasoning the rest independently. Anthropic's own framing: "not all AI-reliance is the same" — the posture, not the tool, determined the outcome. Confirmed against Anthropic's own primary writeup (arXiv 2601.20245); no longer a secondary-account figure.
@@ -74,14 +76,27 @@ Cognitive debt (Addy Osmani, May 2026): the accumulated deficit in comprehension
 
 - **Anchoring study:** When participants had LLM access at the *start* of a task, the LLM framed the entire problem — even when humans did the rest of the work themselves, initial anchoring produced measurably worse decisions. Order of operations mattered more than total amount of AI used. Implication: defer AI until after you've formed your own initial frame.
 
-**Learning-posture prescriptions:**
+**A fourth data point, and an older name for the pattern:** a 2026 review by Margaret Mitchell, Avijit Ghosh, and Samir Passi (arXiv:2608.23642) documents that extended AI-agent use measurably erodes the vigilance, critical thinking, and domain skill human oversight depends on. The underlying dynamic isn't new — it's the "irony of automation," a term coined in 1983 by a safety researcher studying human operators of automated factories and power plants: the more capable the automation gets, the faster the human's own skill erodes. Agents just make it move faster. *Source: Every, Kieran Klaassen, "To Read—Or Not to Read the Code?" (2026-09-08)*
+
+**Two more data points, as cited by Nathan Critchett (September 2026):**
+
+- **Confidently wrong AI:** in a Harvard Business School study of BCG consultants, those who relied on AI when it was confidently wrong were 19 percentage points less accurate than consultants working without it.
+- **The "50 Percent Problem":** in a 2026 study of 27,000 Chinese secondary students given unguided access to generative AI over two years, half of the adopters had fully outsourced their homework within five months, and high-stakes exam scores fell 24%. Benjamin Riley, who analysed the data, names the pattern: homework scores went up while learning went down.
+
+### Horizontal versus vertical development
+
+Critchett frames the remedy with a developmental-psychology distinction. Horizontal development adds tools, facts, and skills; most "learn AI" courses are horizontal. Vertical development changes how a person thinks. His claim is that the people who do well with AI built evaluative judgment first, and that the skill AI rewards is metacognition: taking a confident, polished answer and asking whether it is right, whether it answers the right question, and what the machine could not know to include. On this reading the student study shows that AI without cognitive development does harm, not that AI does.
+
+### Learning-posture prescriptions
+
 - Form a hypothesis before asking: write 2–3 sentences on what you think the problem is; use the model's answer to test your theory, not replace it
 - Ask for explanation before code: in unfamiliar territory, first prompt = "explain how this works, alternatives, and tradeoffs" — request code only after grasping concepts
 - Treat AI output like a PR from a junior engineer: read it, critique it, push back; don't merge just because tests pass
 - Re-derive by hand occasionally: recreate code the model wrote — calibration check for what you've quietly lost
 - Ask the model to teach: after it writes a clever function, ask what concepts it used and what you'd read to understand the design choice
-
-**A fourth data point, and an older name for the pattern:** a 2026 review by Margaret Mitchell, Avijit Ghosh, and Samir Passi (arXiv:2608.23642) documents that extended AI-agent use measurably erodes the vigilance, critical thinking, and domain skill human oversight depends on. The underlying dynamic isn't new — it's the "irony of automation," a term coined in 1983 by a safety researcher studying human operators of automated factories and power plants: the more capable the automation gets, the faster the human's own skill erodes. Agents just make it move faster. *Source: Every, Kieran Klaassen, "To Read—Or Not to Read the Code?" (2026-09-08)*
+- Practise judging, not producing: spend even 20 minutes a day deliberately questioning and pushing back on what a model gives you, instead of only consuming its output
+- Ask what the tool is failing to see, and whether you are solving the right problem, before asking how to get better output
+- Use AI to stress-test work you built rather than to produce it; Dan Willingham's rule is to use AI only for what you already know how to do
 
 ## Failure modes
 
@@ -96,6 +111,7 @@ Cognitive debt (Addy Osmani, May 2026): the accumulated deficit in comprehension
 
 ## Recent changes
 
+- [2026-09-18] Cognitive debt section given subheads; added two data points cited by Nathan Critchett (HBS/BCG: 19 points less accurate when AI was confidently wrong; 27,000 students: half outsourced homework, exam scores −24%), the horizontal-vs-vertical development framing, and three judgment-practice prescriptions.
 - [2026-09-08] Added two proven patterns (trace mechanics not diffs; quiz before merge) and a fourth cited study on AI-agent-use skill erosion (Mitchell/Ghosh/Passi, arXiv:2608.23642), framed via the 1983 "irony of automation."
 - [2026-06-29] Added near-correct presentation decks as a review-friction failure mode: polished artifacts can hide subtle but costly defects.
 - [2026-05-19] Spec-drift logging pattern: append implementation-notes.html prompt to expose Claude's design decisions, deviations, and tradeoffs as a reviewable artifact (Anthropic engineer, @trq212)
@@ -118,3 +134,4 @@ Cognitive debt (Addy Osmani, May 2026): the accumulated deficit in comprehension
 - [PowerPoint remains hard for agents](../sources/newsletters/powerpoint-agent-skill-failure-mode-2026-06.md)
 - [How AI assistance impacts the formation of coding skills](../sources/articles/anthropic-ai-assistance-coding-skills-2026.md)
 - [Every — To Read—Or Not to Read the Code?](../sources/newsletters/every-read-the-code-2026-09-08.md)
+- [Nathan Critchett on X — How to Build a Brain in the AI Age](../sources/tweets/nathannn-critch-build-a-brain-ai-age-2026-09-18.md)

@@ -19,7 +19,7 @@
 - [2026-05-05] Model-pool routing and local-first browser agents emerge as a two-tier orchestration pattern: AI-managed orchestrators route across model pools at the top; local browser agents handle tasks client-side without cloud handoff
 - [2026-05-01] Production harness engineering expanding into deployment manifests, auth, RBAC, credential management, and artifact-backed multi-agent collaboration — beyond loop logic and evals alone
 
-- [2026-04-21] Added [Claude Cowork](../../tools/claude-cowork.md) under `Agent orchestration UIs`; desktop-first knowledge-work agent with Live Artifacts
+- [2026-04-21] Added [Claude Cowork](../../tools/claude-app.md) under `Agent orchestration UIs`; desktop-first knowledge-work agent with Live Artifacts
 - [2026-04-21] Added [Hermes Agent](../../tools/hermes-agent.md) under `Agent orchestration`; 100K stars, substantive orchestration patterns from AINews breakdown
 - [2026-04-15] Added [OpenAI Agents SDK](../../tools/openai-agents-sdk.md) under `agent-orchestration` after ingesting OpenAI's Agents SDK evolution post.
 - [2026-04-10] Added [Agentic thinking](../../concepts/agentic-thinking.md) — Junyang Lin's essay on the shift from reasoning to agentic thinking
@@ -78,3 +78,17 @@
 ## Archived from current page on 2026-10-20
 
 - [2026-07-08] Google managed agents in the Gemini API add MCP support, background execution, custom function calling, and credential refresh, making hosted agent runtime features first-party Gemini primitives.
+
+## Archived from current page on 2026-10-28
+
+- [2026-07-08] Added `Agent sandbox / compute infrastructure` subcategory with [Daytona](../../tools/daytona.md), [Modal](../../tools/modal.md), and [Railway](../../tools/railway.md); agent execution-layer providers now tracked here and in [Agent-native compute infrastructure](../../trends/agent-native-compute.md)
+- [2026-07-08] Claude Cowork beta expands to web/mobile and strengthens scheduled background work, making Cowork a cross-device agent surface rather than only a desktop app.
+
+## Archived from current page on 2026-11-23
+
+- [2026-08-13] Grok Bot launched (xAI/SpaceXAI): "AI teammates with their own cloud computers," a new entrant in the AI-teammate category alongside Claude Tag.
+- [2026-09-09] Added a `Knowledge platforms` subcategory (new `knowledge-platform` schema entry) and moved [OpenWiki](../../tools/openwiki.md) into it from Agent frameworks, as part of the knowledge-cluster terminology reorganization anchored on [Knowledge architectures](../../concepts/knowledge-architectures.md).
+- [2026-09-09] Added Mastra to Agent frameworks: YC-backed open-source TypeScript framework combining an agent abstraction with an explicit graph-based workflow engine, human-in-the-loop suspend/resume, and Observational Memory.
+- [2026-09-09] Utopia (DeepLethe) added under Knowledge platforms: open-source bitemporal knowledge graph / ontology engine with an agent harness over MCP.
+- [2026-09-23] Added Meta Muse to Agent orchestration after Meta Connect: voice and video, Muse Mail, Mac computer use, 1,500+ connectors; Muse passed ChatGPT in the App Store.
+- [2026-09-22] Added [DigitalOcean Managed Agents](../../tools/digitalocean-managed-agents.md) to Agent sandbox / compute infrastructure: bring-your-own-harness microVM sessions with active-CPU billing and a credential-brokering MCP tool gateway (public preview).

@@ -5,7 +5,7 @@ sources:
   - raw/articles/2026-10-20-cognitioncom-agent-memory-repo.md
   - raw/newsletters/2026-10-06-ainews-reflection-beam-501b-a23b-american-open.md
 triage: proposals/triage/2026-10-01-to-2026-10-10-ai-digest.md
-status: pending
+status: applied
 created: 2026-10-20
 ---
 
@@ -18,7 +18,7 @@ Agent memory is converging on plain git and markdown: Cognition stores a user's 
 
 [[#Open questions|Open questions: 1 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 In early October 2026 Cognition, the company behind the Devin coding agent, launched Devin "Dreaming", an overnight job that prunes and links Devin's memory graph, and said it is open-sourcing the storage format behind it as Agent Memory Repo. The AINews newsletter of 6 October carries the launch in one line; the format itself is published as a page at cognition.com.
@@ -246,3 +246,4 @@ One story from the 6 October 2026 AINews issue ("Reflection Beam"): Cognition la
 ## Open questions
 
 - Should Agent Memory Repo eventually get a `tools/` page, or stay as an example on Agent memory until a second source describes the format's rules beyond the worked example (assumed: stay as an example)?
+	- Just an example for now, i don't think is solid enough.

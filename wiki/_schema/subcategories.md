@@ -6,7 +6,7 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
-Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`, `agent-sandbox-infra`, `coding-discipline-skill`, `knowledge-platform`, `web-data-extraction`, `domain-specialized-model`, `small-model`, `ai-e2e-testing`
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`, `agent-sandbox-infra`, `coding-discipline-skill`, `knowledge-platform`, `web-data-extraction`, `domain-specialized-model`, `small-model`, `ai-e2e-testing`, `decision-model`
 
 ### spec-driven-development
 - **Parent domain(s):** coding
@@ -24,7 +24,7 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Parent domain(s):** agents
 - **Applies to types:** tool | workflow
 - **Definition:** Platforms, surfaces, and patterns for running, supervising, or internally routing AI agents — spanning hosted runtimes, human-supervision UIs, and multi-model coordination patterns within a single agentic task.
-- **Examples:** [Claude Managed Agents](../tools/claude-managed-agents.md), [Claude Cowork](../tools/claude-cowork.md), [Advisor strategy](../workflows/advisor-strategy.md)
+- **Examples:** [Claude Managed Agents](../tools/claude-managed-agents.md), [Claude app](../tools/claude-app.md), [Advisor strategy](../workflows/advisor-strategy.md)
 
 ### coding-model
 - **Parent domain(s):** models, coding
@@ -234,13 +234,19 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Parent domain(s):** models, healthcare
 - **Applies to types:** model
 - **Definition:** Models fine-tuned for one profession's decisions or knowledge (clinical, legal, financial) and evaluated on that domain's tasks rather than general benchmarks; distinct from `utility-model`, which covers small models for a generic pipeline task such as PII redaction or embedding.
-- **Examples:** [MedDecider-27B](../models/meddecider-27b.md)
+- **Examples:** none currently ([MedDecider-27B](../models/meddecider-27b.md) moved to `decision-model` on 2026-10-28)
 
 ### ai-e2e-testing
 - **Parent domain(s):** coding
 - **Applies to types:** tool
 - **Definition:** End-to-end testing frameworks in which an AI agent drives a web or mobile app through natural-language steps while deterministic assertions check the result; distinct from `agent-eval-tooling` (tools that evaluate agents) and `agentic-devops` (infrastructure provisioning, operation, and post-deploy verification).
 - **Examples:** [TesterArmy e2e](../tools/tester-army-e2e.md)
+
+### decision-model
+- **Parent domain(s):** models, agents
+- **Applies to types:** model | concept
+- **Definition:** Models that answer typed questions about an input (a yes/no probability, a pick from options, a score on a scale) in one pass without generating text, used as cheap programmable judgments inside software and agent loops. Covers general-purpose ones and those tuned for one domain's decisions. Distinct from `utility-model` (one fixed pipeline task that is not a typed judgment) and `domain-specialized-model` (domain models that generate rather than decide).
+- **Examples:** [Jev](../models/jev.md), [Decision models](../concepts/decision-models.md), [ScaleDown](../models/scaledown.md), [MedDecider-27B](../models/meddecider-27b.md)
 
 ### Format
 

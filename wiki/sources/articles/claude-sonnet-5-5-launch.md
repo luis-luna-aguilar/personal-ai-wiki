@@ -4,13 +4,14 @@ type: source
 source_type: article
 source_file: raw/articles/2026-10-20-anthropiccom-claude-sonnet-5-5.md
 url: https://www.anthropic.com/claude-sonnet-5-5
+published: 2026-09-28
 ingested: 2026-10-20
 domains: [models, coding]
 ---
 
 # Claude Sonnet 5.5 launch
 
-Anthropic's launch post for Claude Sonnet 5.5, the second Claude 5.5 model. Anthropic presents it as a clear upgrade on Sonnet 5 at the same token price, 30%+ faster and up to 30% cheaper per task, and as the faster, lower-cost complement to Opus 5.5. It includes a benchmark table against Sonnet 5, Opus 5.5 and GPT-6 Sol, pricing, about fifteen customer quotes, and safety notes. The post carries no publication date; it says Haiku 5.5 "will join the Claude 5.5 family in the coming weeks," so it predates Haiku 5.5. The ingest date (2026-10-20) is used. The fetched page already shows the $0.10 cache-read price that the Haiku 5.5 launch announced as a cut.
+Anthropic's launch post for Claude Sonnet 5.5, the second Claude 5.5 model. Anthropic presents it as a clear upgrade on Sonnet 5 at the same token price, 30%+ faster and up to 30% cheaper per task, and as the faster, lower-cost complement to Opus 5.5. It includes a benchmark table against Sonnet 5, Opus 5.5 and GPT-6 Sol, pricing, about fifteen customer quotes, and safety notes. The post itself carries no date; Anthropic's build guide and launch-week coverage date the release to 2026-09-28, before Haiku 5.5, which the post says "will join the Claude 5.5 family in the coming weeks." The fetched page already shows the $0.10 cache-read price that the Haiku 5.5 launch announced as a cut.
 
 ## Influenced pages
 - [Claude Sonnet 5.5](../../models/claude-sonnet-5-5.md) — new page: pricing, benchmarks, safeguards, availability

@@ -14,7 +14,7 @@ domains: [science, models, agents, healthcare]
 AINews daily digest for 2026-08-13, covering "Frontier Model Day" — a same-day cluster of four launches: xAI/SpaceXAI's Grok 4.6 (1.5T MoE, AA Intelligence Index 61, 88.4% Terminal-Bench v2.1, unchanged $2/$6 pricing) and its accompanying Grok Bot "AI teammate" product; Alibaba's Qwen3.8-Max shipping open weights (2.4T/95B active, text-only initial drop); DeepSeek V4 Pro reaching general availability at $0.435/$0.87 pricing with a 15.8% Terminal-Bench gain over preview; and Microsoft's MAI-Thinking-1 reaching availability in Azure AI Foundry. The same issue also carries a widely-engaged but unverified tweet from Steven Strogatz reporting that a neurosurgery resident used ChatGPT 5.6 to solve an open numerical-linear-algebra problem, plus a Reddit recap section explaining Anthropic's rollout of imperceptible Claude text watermarking and C2PA file-provenance metadata for models launched on or after 2026-08-02.
 
 ## Influenced pages
-- [Grok 4.6](../../models/grok-4-6.md) — new page, supersedes Grok 4.5
+- [Grok 4.6](../../history/models/grok-4-6.md) — new page, supersedes Grok 4.5 (page later superseded by [Grok 4.7](../../models/grok-4-7.md))
 - [Grok Bot](../../tools/grok-bot.md) — new page
 - [Qwen 3.8](../../models/qwen-3-8.md) — open weights shipped
 - [DeepSeek V4](../../models/deepseek-v4.md) — V4 Pro general availability

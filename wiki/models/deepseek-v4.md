@@ -4,32 +4,22 @@ type: model
 domains: [models, coding, agents]
 subcategory: coding-model
 tags: [open-weights, agentic]
-as_of: 2026-08-22
-sources: [deepseek-v4-preview, ainews-2026-04-25, ainews-all-model-labs-are-now-agent-labs, ainews-not-much-happened-2026-08-01, ainews-spacexai-grok-46-and-grok-bot-2026-08-13, ainews-10-worse-100x-cheaper-2026-08-22]
+as_of: 2026-10-20
+sources: [deepseek-v4-preview, ainews-2026-04-25, ainews-all-model-labs-are-now-agent-labs, ainews-spacexai-grok-46-and-grok-bot-2026-08-13, ainews-deepseek-v4-1-flash-1017-2026-10-20]
 ---
 
 # DeepSeek V4
 
-DeepSeek's April 2026 open-weight release for long-context agent workloads. The key contribution is not a clean overall frontier win, but a serious systems design point: V4 pairs competitive open-model capability with 1M-token context, much lower KV-cache pressure, explicit tool-use shaping, and a Pro/Flash split for different cost/performance needs.
+DeepSeek's April 2026 open-weight release for long-context agent workloads; this page now tracks **V4 Pro**, DeepSeek's current Pro model. The key contribution is not a clean overall frontier win, but a serious systems design point: V4 pairs competitive open-model capability with 1M-token context, much lower KV-cache pressure, and explicit tool-use shaping. **The V4 Flash tier is superseded by [DeepSeek V4.1 Flash](deepseek-v4-1-flash.md)** (new 552B/16B architecture); its 0731 update and Vision-Exp build are archived in [history](../history/models/deepseek-v4.md).
 
-## Current status (as of 2026-08-22)
+## Current status (as of 2026-10-20)
 
-- Two tiers, both 1M-token context and MIT-licensed: **V4 Pro** (1.6T total / 49B active) and **V4 Flash** (284B total / 13B active)
+- **V4 Flash superseded:** DeepSeek's current Flash model is [V4.1 Flash](deepseek-v4-1-flash.md) (1017 build, 20 October 2026); on Artificial Analysis' re-versioned Intelligence Index it scores 45 against V4 Pro 0813's 36
+- **V4 Pro:** 1.6T total / 49B active, 1M-token context, MIT-licensed (the V4 Flash tier, 284B / 13B active, is archived)
 - **V4 Pro reached general availability on 2026-08-13** after the April preview, with a reported 15.8% Terminal-Bench gain over the preview; reception was mixed, solid but not clearly ahead of Kimi/Flash on all tasks
-- **V4 Flash's current builds:** the post-training-only 0731 update (Terminal-Bench 82.7, AA Intelligence Index 50, one point behind GPT-5.6 Luna; open weights with day-0 vLLM) and the API-only V4-Flash-Vision-Exp (2026-08-22), which adds text+image input and reports 83.9 Terminal-Bench 2.1; Vision-Exp weights not yet found on Hugging Face
-- **Pricing:** V4 Pro $0.435 / $0.87 per 1M input/output tokens (the 75% discount made permanent in May, confirmed at GA; Cline puts it ~57x cheaper than Claude Fable 5), replacing the launch price of $1.74 / $3.48; V4 Flash $0.14 / $0.28. **Caveat:** DeepSeek's own pricing page, as fetched 2026-08-25, shows a peak/off-peak, cache-hit/cache-miss structure whose figures do not match these numbers; current pricing needs its own dated ingest
+- **Pricing:** V4 Pro $0.435 / $0.87 per 1M input/output tokens (the 75% discount made permanent in May, confirmed at GA; Cline puts it ~57x cheaper than Claude Fable 5), replacing the launch price of $1.74 / $3.48. **Caveat:** DeepSeek's own pricing page, as fetched 2026-08-25, shows a peak/off-peak, cache-hit/cache-miss structure whose figures do not match these numbers; current pricing needs its own dated ingest
 - Still behind the strongest closed frontier systems overall, and very high token usage in some evaluations means cheap per-token pricing does not guarantee cheap tasks
 - Huawei Ascend compatibility and rapid vLLM / third-party support make the release part of a broader inference-substrate story, not just a checkpoint drop
-
-## V4-Flash 0731 update (as of 2026-07-31)
-
-DeepSeek shipped a post-training-only upgrade to V4-Flash — same 284B total / 13B active architecture, no scaling or architecture change:
-
-- **Benchmarks:** Terminal-Bench 56.9 → 82.7 (+25.8); Artificial Analysis Intelligence Index 40 → 50, one point behind GPT-5.6 Luna's 51 at roughly 60% lower cost per task on DeepSeek's own API; GDPval-AA v2 Elo 1189 → 1559; output-token usage down 12% versus the predecessor.
-- **Pricing:** $0.14 / $0.28 per 1M input/output tokens, with a 98% cache-hit discount down to $0.0028/1M cached tokens.
-- **Open weights:** released under MIT with immediate day-0 vLLM support — 256 routed experts, 6 active per token, three reasoning-effort levels, and an included DSpark speculative-decoding module enabled via a single flag. Local/quantized builds landed same-day (Unsloth: ~168GB RAM for lossless 4-bit, ~110GB for 3-bit).
-- **Scope:** this update applies to V4-Flash only. V4-Pro's API, app, and web product are unchanged; an official V4-Pro release remains pending.
-- Widely read as a direct competitive response to OpenAI's GPT-5.6 price cuts the day before.
 
 ## V4 Pro general availability (as of 2026-08-13)
 
@@ -39,18 +29,9 @@ DeepSeek's V4 Pro reached general availability, closing out the "official releas
 - **Benchmarks:** a reported 15.8% Terminal-Bench gain over the V4 Pro preview (absolute score not given in this source)
 - **Reception:** mixed — some early users (Yuchen Jin, scaling01, teortaxesTex) found it solid but not clearly ahead of Kimi/Flash on all tasks; observers suggested DeepSeek's next gains may depend more on RL/agent-environment work than raw scale
 
-## V4-Flash-Vision-Exp adds multimodal (as of 2026-08-22)
-
-DeepSeek shipped DeepSeek-V4-Flash-Vision-Exp, adding multimodal (text+image) input to V4-Flash while reportedly preserving its existing text capability:
-
-- **Benchmarks (per AINews, relaying DeepSeek's release claims):** 83.9 Terminal-Bench 2.1, 75.9 Toolathlon-Verified, 64.3 Chartography — a large jump over the prior V4-Flash-0731 release, positioned as closing the multimodal-agent gap to Claude Opus-4.8
-- **API:** mixed text+image support via base64, external URLs, or a new Files API for reusable image uploads across requests; images billed at up to 384 tokens each, at V4-Flash pricing
-- **Availability:** live via the DeepSeek API (`model='deepseek-v4-flash-vision-exp'`); weights not yet found on Hugging Face as of this writing, unlike DeepSeek's prior fully open-weighted releases
-
 ## Strengths
 
 - Serious open-weight long-context release with unusually concrete attention to KV-cache and long-trace economics
-- Flash tier may matter more for practical adoption than Pro in workloads where 1M context and low per-token price dominate
 - Competitive with top open-weight coding/agent models while exposing a richer technical report than many frontier releases
 
 ## Weaknesses / caveats
@@ -61,9 +42,8 @@ DeepSeek shipped DeepSeek-V4-Flash-Vision-Exp, adding multimodal (text+image) in
 
 ## Recent changes
 
-- [2026-08-22] V4-Flash-Vision-Exp adds multimodal (text+image) input while preserving V4-Flash's text capability; reported benchmarks (83.9 Terminal-Bench 2.1, 75.9 Toolathlon-Verified, 64.3 Chartography) position it as closing the multimodal-agent gap to Opus-4.8; API-only at launch, weights not yet found on Hugging Face.
+- [2026-10-20] V4 Flash superseded by DeepSeek V4.1 Flash (552B/16B encoder-decoder MoE; 1017 build scores 45 on the current AA index, where V4 Pro 0813 scores 36); V4 Pro remains current. The V4 Flash 0731 and Vision-Exp sections moved to history.
 - [2026-08-13] V4 Pro reached general availability: $0.435/$0.87 per M token pricing confirmed, +15.8% Terminal-Bench over its preview; capability reception mixed versus Kimi/Flash
-- [2026-07-31] V4-Flash 0731: post-training-only update jumps Terminal-Bench to 82.7 (+25.8) and AA Intelligence Index to 50 (from 40), now 1pt behind GPT-5.6 Luna; open-weighted under MIT with day-0 vLLM support; V4-Pro unaffected, still pending its own release.
 - [2026-05-23] DeepSeek made the 75% V4-Pro discount permanent; Artificial Analysis pricing/cost-per-Intelligence-Index comparison (via AINews) added, caveated as a May 2026 snapshot since DeepSeek's pricing page (fetched 2026-08-25) has since moved to peak/off-peak, cache-hit/miss tiers.
 - [2026-04-25] AINews follow-up reframed DeepSeek V4 from preview to release: Pro/Flash specs, MIT license, API pricing, independent open-model placement, Huawei Ascend compatibility, and token-volume caveats
 - [2026-04-24] Preview released: DeepSeek moves its open-model story toward 1M-context agent workloads, hybrid attention for cheaper long traces, and stronger tool-use positioning
@@ -73,6 +53,5 @@ DeepSeek shipped DeepSeek-V4-Flash-Vision-Exp, adding multimodal (text+image) in
 - [DeepSeek V4 Preview](../sources/articles/deepseek-v4-preview.md)
 - [AINews - DeepSeek V4 Pro and Flash](../sources/newsletters/ainews-2026-04-25.md)
 - [AINews — All model labs are now agent labs (DeepSeek V4-Pro permanent discount)](../sources/newsletters/ainews-all-model-labs-are-now-agent-labs.md)
-- [AINews — not much happened today (DeepSeek V4-Flash 0731)](../sources/newsletters/ainews-not-much-happened-2026-08-01.md)
 - [AINews — SpaceXAI Grok 4.6 and Grok Bot (DeepSeek V4 Pro GA)](../sources/newsletters/ainews-spacexai-grok-46-and-grok-bot-2026-08-13.md)
-- [AINews — 10% worse, 100x cheaper, 10000x faster: Why Simulation is taking over](../sources/newsletters/ainews-10-worse-100x-cheaper-2026-08-22.md)
+- [AINews — DeepSeek V4.1 Flash 1017, MiniMax M3.1 Flash, Mercury 3 (20 October 2026)](../sources/newsletters/ainews-deepseek-v4-1-flash-1017-2026-10-20.md)

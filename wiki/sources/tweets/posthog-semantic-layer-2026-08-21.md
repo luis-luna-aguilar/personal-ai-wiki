@@ -16,7 +16,8 @@ PostHog's own account (Lizzie Epton, Thiago Rocha Salvatore) of building a gover
 ## Influenced pages
 
 - [Semantic layer](../../concepts/semantic-layer.md) — new concept page
-- [Knowledge architectures](../../concepts/knowledge-architectures.md) — new semantic-layer row and two term-map rows
+- [Knowledge architectures](../../concepts/knowledge-architectures.md) — new semantic-layer row
+- [Knowledge term map](../../concepts/knowledge-term-map.md) — "context warehouse" and "metrics layer" term-map rows
 - [Ontologies as agent guardrails](../../concepts/ontology-agent-guardrails.md) — `## Also called` now links the metric-definition sense of "semantic layer"
 
 ## Key claims extracted

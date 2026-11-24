@@ -4,8 +4,8 @@ type: model
 domains: [models, coding]
 subcategory: coding-model
 tags: [minimax, agentic]
-as_of: 2026-06-02
-sources: [ainews-cosmos-nemotron-june-2026, ainews-june-05-2026]
+as_of: 2026-10-20
+sources: [ainews-cosmos-nemotron-june-2026, ainews-june-05-2026, ainews-deepseek-v4-1-flash-1017-2026-10-20]
 ---
 
 # MiniMax M3
@@ -20,6 +20,15 @@ MiniMax's claimed "open-weight frontier model" with 1M context and strong agent 
 - **PostTrainBench:** #3 overall (behind Claude Opus 4.7 and GPT-5.5)
 - Day-0 support: Novita, Vercel AI Gateway, Cloudflare Workers AI, and others
 - **Contested claim:** At launch, neither model weights nor parameter count were publicly disclosed. This is the "open-weight without weights" launch pattern — arguably not open-weight at time of writing.
+
+## M3.1 Flash (as of 2026-10-20)
+
+MiniMax's cheaper, faster sibling, revealed as the stealth model "Space Bunny" that topped usage leaderboards:
+
+- **Pricing:** $0.15 / $0.60 per 1M input/output tokens, cache reads $0.015; MiniMax claims 1/3 the cost and 3x the speed of M3. Weights due 23 October 2026; free for a limited time on OpenRouter, OpenCode, Cline and Ollama Cloud.
+- **MiniMax's figures:** DeepSWE 74%, Automation-Bench 62%, BabyVision 91%.
+- **Artificial Analysis:** Intelligence Index 42 (level with GLM-5.3-Flash, behind [DeepSeek V4.1 Flash](deepseek-v4-1-flash.md)'s 45) at about $0.22 per task; HLE 48%, AA-Omniscience accuracy 56%, but a **93% hallucination rate** because it attempts nearly every question.
+- **Arenas:** #12 open in Code Arena WebDev (1588, +106 over M3); #26 on Design Arena frontend.
 
 ## Strengths
 
@@ -36,9 +45,11 @@ MiniMax's claimed "open-weight frontier model" with 1M context and strong agent 
 
 ## Recent changes
 
+- [2026-10-20] M3.1 Flash launched (formerly stealth "Space Bunny"): $0.15/$0.60, AA Intelligence Index 42 with a 93% hallucination rate; weights due 23 October.
 - [2026-06-02] Launched; initial benchmarks; weights not disclosed at launch despite open-weight claim
 
 ## Sources
 
 - [AINews — NVIDIA Cosmos 3, Nemotron 3 Ultra, MiniMax M3 (June 2)](../sources/newsletters/ainews-cosmos-nemotron-june-2026.md)
 - [AINews — June 5 (PostTrainBench placement)](../sources/newsletters/ainews-june-05-2026.md)
+- [AINews — DeepSeek V4.1 Flash 1017, MiniMax M3.1 Flash, Mercury 3 (20 October 2026)](../sources/newsletters/ainews-deepseek-v4-1-flash-1017-2026-10-20.md)

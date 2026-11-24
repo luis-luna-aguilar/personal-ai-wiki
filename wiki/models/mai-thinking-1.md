@@ -41,11 +41,12 @@ Microsoft's first frontier-class reasoning model, launched at Build 2026. The he
 | MAI-Thinking-1 | 35B active / 1T MoE | 97% AIME 2025, 53% SWE-Pro | Reasoning, flagship |
 | MAI-Code-1-Flash | 5B active / 137B MoE | 51% SWE-Pro | GitHub Copilot, VS Code |
 | MAI-Image-2.5 | — | #2 Image Edit Arena (1401) | Image editing |
-| MAI-Transcribe-1.5 | — | 276x realtime, 2.4% AA-WER, 43 langs | Transcription |
-| MAI-Voice-2 | — | — | Voice synthesis |
+
+Microsoft's audio models (MAI-Transcribe for speech recognition, MAI-Voice for text-to-speech) are a separate family with their own page: [MAI-Transcribe and MAI-Voice](mai-transcribe-voice.md).
 
 ## Recent changes
 
+- [2026-11-23] MAI-Transcribe and MAI-Voice rows moved off the family table to their own page, [MAI-Transcribe and MAI-Voice](mai-transcribe-voice.md).
 - [2026-08-13] Reached general availability in Azure AI Foundry; Microsoft (Finbarr Timbers) specifically soliciting feedback on tool-use behavior
 - [2026-06-03] Launched at Microsoft Build 2026; initial benchmarks and tech report
 

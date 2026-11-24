@@ -12,7 +12,7 @@ sources: [every-sonnet-5-vibe-check-2026-07-02, the-code-devin-security-2026-07-
 
 Claude Sonnet 5 is Anthropic's middle-tier Claude 5 model, positioned as a default model for broad daily work: more capable than smaller utility tiers, cheaper on paper than Opus, and more available than Fable for many users.
 
-**Superseded by [Claude Sonnet 5.5](../../models/claude-sonnet-5-5.md), October 2026.**
+**Superseded by [Claude Sonnet 5.5](../../models/claude-sonnet-5-5.md), launched 2026-09-28.**
 
 ## Current status (as of 2026-08-13)
 

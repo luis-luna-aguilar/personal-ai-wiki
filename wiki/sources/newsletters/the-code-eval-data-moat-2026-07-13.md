@@ -17,7 +17,7 @@ The Code's July 13 issue covers GPT-5.6 Sol's strong opening weekend, Cursor's 3
 
 - [Cursor](../../tools/cursor.md) — side chats, transcript search, cloud-agent hooks
 - [Codex](../../tools/codex.md) — GPT-5.6 Sol weekend usage / combined Codex+Work user count corroboration
-- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — added the eval-data-as-moat evidence bullet
+- [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — added the eval-data-as-moat evidence bullet
 
 ## Key claims extracted
 

@@ -3,8 +3,8 @@ title: Knowledge layer
 type: concept
 domains: [agents]
 tags: [agentic, knowledge-cluster]
-as_of: 2026-08-20
-sources: [knowledge-layer-architecture, llm-wikis-paperwiki-2026-07-06, ainews-not-much-happened-2026-07-02, agent-memory-systems-layer-2026-06, karpathy-llm-wiki-gist, rvaniaaaa-second-brain-compiler-2026-08-20]
+as_of: 2026-09-29
+sources: [knowledge-layer-architecture, llm-wikis-paperwiki-2026-07-06, ainews-not-much-happened-2026-07-02, agent-memory-systems-layer-2026-06, karpathy-llm-wiki-gist, rvaniaaaa-second-brain-compiler-2026-08-20, eugenalpeza-fde-boom-product-gap-2026-09-29]
 ---
 
 # Knowledge layer
@@ -15,11 +15,12 @@ A knowledge layer is a compiled, maintained context surface that sits between ra
 
 LLM wiki (Karpathy's name for the pattern), second brain (personal scope), PaperWiki (a research instance), wiki memory, maintained context surface. Not the same as a product's "knowledge base" feature, which is a document store rather than a compiled layer.
 
-## Current status (as of 2026-08-20)
+## Current status (as of 2026-09-29)
 
 - Framed as an answer to why agents often feel generic: they start from thin or unstructured context
 - Contrasted with naive RAG: compile once, cross-reference, and maintain over time rather than repeatedly searching raw chunks
 - Often paired with a separate human-maintained rules layer for voice, preferences, constraints, and operating rules
+- The operating-rules side now has a named discipline. Edra's "ContextOps" (September 2026) treats an agent's procedures like code: agents propose rule changes from case evidence, the process owner reviews the supporting and contradicting cases and approves, and every instruction has an owner, a version, tests, and rollback. Its metric is executable coverage, the share of a process's cases an agent can handle with current approved procedures (see [Forward-deployed engineering](../training/forward-deployed-engineering.md)).
 - Becomes more useful as outputs, queries, and new sources compound back into the same system
 - Practitioner examples now frame this as "LLM Wikis": maintained markdown knowledge layers for agents, often implemented as Obsidian vaults with rich metadata, full-text + semantic search, and generated HTML artifacts that research agents can navigate directly
 - Wiki-style memory is moving from personal agent folders into explicit tooling: LangChain's [OpenWiki](../tools/openwiki.md) generates and maintains codebase docs meant for agents to consume.
@@ -47,6 +48,7 @@ A practitioner elaboration (@rvaniaaaa, August 2026) builds the same pattern spe
 
 ## Recent changes
 
+- [2026-09-29] Added Edra's ContextOps as a named discipline for the operating-rules layer: evidence-backed proposals, owner approval, versioned and tested instructions, executable coverage.
 - [2026-09-09] Terminology reorganization: added the `## Also called` alias line, corrected the Current-status stamp to match the page date, and rewrote the Related lines to agree with the new [Knowledge architectures](knowledge-architectures.md) hub.
 - [2026-08-20] Restructured the LLM Wiki section to lead with Karpathy's own original gist (the pattern's primary source, previously uncited here) rather than only the secondary PaperWiki example, and added a practitioner elaboration (@rvaniaaaa) built around Claude Desktop — with an explicit caveat that the elaboration misattributes two quotes to Karpathy.
 - [2026-07-07] Agent-memory systems coverage reinforces that knowledge layers should reconcile and maintain facts rather than retrieve every plausible old fragment.
@@ -55,7 +57,7 @@ A practitioner elaboration (@rvaniaaaa, August 2026) builds the same pattern spe
 ## Caveats
 
 - The strongest current source is a practitioner essay, not an academic benchmark or vendor-neutral comparison
-- The idea overlaps with context engineering, RAG, memory systems, and personal-knowledge-base workflows; the [Knowledge architectures](knowledge-architectures.md) hub records where the wiki draws each boundary
+- The idea overlaps with context engineering, RAG, memory systems, and personal-knowledge-base workflows; the [Knowledge architectures](knowledge-architectures.md) hub and its [term map](knowledge-term-map.md) record where the wiki draws each boundary
 
 ## Sources
 
@@ -65,3 +67,4 @@ A practitioner elaboration (@rvaniaaaa, August 2026) builds the same pattern spe
 - [Agent memory becomes a systems layer](../sources/newsletters/agent-memory-systems-layer-2026-06.md)
 - [LLM Wiki (gist) — Andrej Karpathy](../sources/articles/karpathy-llm-wiki-gist.md)
 - [The Second Brain Is Not a Storage System. It's a Compiler.](../sources/tweets/rvaniaaaa-second-brain-compiler-2026-08-20.md)
+- [Eugen Alpeza on X — The FDE boom is a product gap](../sources/tweets/eugenalpeza-fde-boom-product-gap-2026-09-29.md)

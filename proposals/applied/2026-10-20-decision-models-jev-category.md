@@ -27,7 +27,7 @@ A new model class now sits beside chat models: decision models, which return a c
 
 [[#Open questions|Open questions: 2 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 
@@ -572,4 +572,6 @@ The decision-model items from the 2026-10-17 AINews issue.
 ## Open questions
 
 - Should ScaleDown (now marketed as "Constrained Decoding Models", with a Jev-compatible Decisions API) and MedDecider-27B move into the new Decision models section and subcategory? The proposal leaves them where they are, as a utility model and a domain-specialized model.
+	- Yes, lets move them to the decisions model subcategory
 - Liquid d1-ultra, Clef and pplx-decider appear as unlinked lines on State of Models. Should any of them get its own model page now, or wait until a primary source is ingested?
+	- Not until a primary source is ingested

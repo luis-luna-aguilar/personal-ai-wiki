@@ -15,7 +15,7 @@ METR conducted an external predeployment evaluation of GPT-5.6 Sol under NDA wit
 
 ## Influenced pages
 
-- [GPT-5.6 Sol](../../models/gpt-5-6-sol.md) — new restricted-preview model page.
+- [GPT-5.6 Sol](../../history/models/gpt-5-6-sol.md) — new restricted-preview model page.
 - [State of Models](../../state-of/models.md) — caveated frontier-model entry.
 - [Restricted frontier deployment](../../trends/restricted-frontier-deployment.md) — adds GPT-5.6 access-control / staged-preview signal.
 

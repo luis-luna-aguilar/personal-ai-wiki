@@ -4,7 +4,7 @@ type: training
 domains: [agents]
 tags: [agentic]
 as_of: 2026-10-19
-sources: [ai-work-splitting-2026-05-10, task-routing-cost-discipline-2026-05-13, every-after-automation-2026-05, every-chatgpt-openclaw-guides-2026-08-27, leeknowlton-verifiable-work-2026-10-17, rieseberg-how-to-be-more-ambitious]
+sources: [ai-work-splitting-2026-05-10, task-routing-cost-discipline-2026-05-13, every-after-automation-2026-05, every-chatgpt-openclaw-guides-2026-08-27, leeknowlton-verifiable-work-2026-10-17, rieseberg-how-to-be-more-ambitious, every-agent-launch-2026-10-06, every-agent-token-efficiency-2026-10-07]
 ---
 
 # AI work delegation modes
@@ -54,7 +54,7 @@ The shift: the question is no longer "can I use AI here?" but "which mode fits t
 - Anthropic's Claude Managed Agents documentation for "Define outcomes" (May 2026) formalizes the delegation-mode approach at the platform level
 - Every's "After Automation" essay (Dan Shipper, May 2026) reframes delegation mode as "agent employees" — coworker agents you tag and ask to do work (Every's Claudie, Andy, Viktor) and embedded agents living inside a product workflow (Fin, which closed 40.1% of actionable customer-service conversations without a human in a recent week) — and reframes collaboration mode as the "human sandwich": a human frames the task, the agent collapses it, and a human judges and extends the result inside tools like Codex, Claude Code, and Claude Cowork.
 - OpenClaw's pull-request volume (44,469 PRs by May 16, 2026; 12,430 since April 1 — versus Kubernetes' 5,200 PRs in all of 2022) is offered as evidence of how fast delegation-mode volume rises once a skill becomes cheaply available, independent of whether review capacity rises with it.
-- **Every reverses its personal-agent default.** After months of running individual OpenClaw-style personal agents, Every found a stronger model still can't log in when a credential expires or notice a silently-broken integration — the maintenance burden falls entirely on the agent's owner. Their new default is a single shared "Every Agent" living in Slack: the whole company shares one agent, but each person works through their own connections and context. A personal Claw can still make sense for recurring work specific to one person who's willing to maintain it and doesn't need company-wide context.
+- **Every reverses its personal-agent default.** After months of running individual OpenClaw-style personal agents, Every found a stronger model still can't log in when a credential expires or notice a silently-broken integration — the maintenance burden falls entirely on the agent's owner. Their new default, launched publicly as the Every Agent in October 2026, is a single shared agent living in Slack: the whole company shares one agent, but each person works through their own connections and context. Every's other reasons: a personal agent only knew its owner's work, a good workflow stayed with one agent, every fix had to be made once per agent, and nobody remembered which bot did what, while the threads where the whole team pulled in one agent worked best. A personal Claw can still make sense for recurring work specific to one person who's willing to maintain it and doesn't need company-wide context; Every's Willie Williams expects a company agent at work and a personal agent at home, with transactional tasks going to a Codex thread.
 
 ## Open questions
 
@@ -65,6 +65,7 @@ The shift: the question is no longer "can I use AI here?" but "which mode fits t
 
 - [2026-10-19] Added the outcome-level delegation pattern (delegate the goal, then give the agent the data and machines to verify it), from Felix Rieseberg's crash-free example.
 - [2026-10-17] Added the verifiability sort: verifier for verifiable work, eval-tested AI judge for maybe-verifiable work, focused one-or-two-task human work otherwise, and carving out verifiable sub-tasks (Lee Knowlton).
+- [2026-10-08] Extended Every's personal-to-shared agent evidence with the reasons the per-person agents failed and the October launch of the shared Every Agent.
 
 ## Related
 
@@ -80,3 +81,5 @@ The shift: the question is no longer "can I use AI here?" but "which mode fits t
 - [Every — Our ChatGPT and OpenClaw Guides Just Got an Overhaul](../sources/newsletters/every-chatgpt-openclaw-guides-2026-08-27.md)
 - [Lee Knowlton — notes on using AI productively](../sources/tweets/leeknowlton-verifiable-work-2026-10-17.md)
 - [How to be more ambitious: a tutorial for humans with models — Felix Rieseberg](../sources/articles/rieseberg-how-to-be-more-ambitious.md)
+- [Every — Introducing the Every Agent](../sources/newsletters/every-agent-launch-2026-10-06.md)
+- [Every — Building a More Efficient Agent](../sources/newsletters/every-agent-token-efficiency-2026-10-07.md)

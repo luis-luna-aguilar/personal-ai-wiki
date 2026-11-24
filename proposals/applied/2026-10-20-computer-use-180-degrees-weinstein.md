@@ -2,7 +2,7 @@
 type: proposal
 source: raw/newsletters/2026-09-30-why-dwarkesh-is-wrong-about-computer-use-how-ope.md
 triage: proposals/triage/2026-09-21-to-2026-09-30-ai-digest.md
-status: pending
+status: applied
 created: 2026-10-20
 ---
 
@@ -14,7 +14,7 @@ created: 2026-10-20
 Computer use stopped being a screenshot-and-click loop: agents now read accessibility trees and the DOM, write code that performs many actions at once, and recover from their own errors, which makes them faster than the average person on many tasks. OpenAI's computer-use lead says GPT-6.1 Sol costs about a seventh of Astra for this work, and that the most useful application is agents testing the software they just built. The proposal updates State of Computer Use, Codex and Harness vs model, and adds one source page. One scope choice to note: only the computer-use half of the episode is ingested.
 [[#Open questions|Open questions: none.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 On 2026-09-30, at OpenAI DevDay, Latent Space interviewed Ari Weinstein, the Sky co-founder who now leads computer use at OpenAI, in response to Dwarkesh Patel's claim that computer use had stalled. Weinstein says it is now "180 degrees different". A year ago, agents could start a task reliably but stalled when something went wrong. Now they debug, retry and check what is and isn't working. Agents also no longer look only at pixels. They combine screenshots, the accessibility tree (the structured description of an interface that screen readers use), the page's DOM and Playwright. In Codex they often write JavaScript that performs several actions in a single step, so they no longer have to scroll and re-screenshot over and over. App Shots, triggered by pressing Command twice, send an app's full accessibility representation into Codex or ChatGPT instead of an image.

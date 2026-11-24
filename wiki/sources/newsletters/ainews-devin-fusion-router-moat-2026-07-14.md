@@ -17,7 +17,7 @@ AINews' July 14 issue leads with Codex's reported usage growth (roughly 10x year
 
 - [Codex](../../tools/codex.md) — usage-growth estimate and its sourcing chain, plus OpenAI's rollout-friction fixes
 - [Devin](../../tools/devin.md) — added the delegation-efficiency mechanism (81% no-edit statistic) behind Devin Fusion's cost advantage on Fable 5
-- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — added as corroborating detail in the eval-data-as-moat evidence bullet
+- [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — added as corroborating detail in the eval-data-as-moat evidence bullet
 
 ## Key claims extracted
 

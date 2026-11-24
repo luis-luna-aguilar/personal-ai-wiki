@@ -14,7 +14,8 @@ Superhuman summarizes a Bridgewater AIA Labs and Thinking Machines collaboration
 
 ## Influenced pages
 
-- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) - domain-tuned model routing case
+- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) - compare-three-routes guidance and model-prestige failure mode
+- [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) - domain-tuned model routing case
 - [State of Finance](../../state-of/finance.md) - finance workflow signal
 
 ## Key claims extracted

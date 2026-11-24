@@ -16,7 +16,8 @@ README for Helix Foundry, HelixDB's open-source (Apache 2.0) local-first data wo
 
 - [Helix Foundry](../../tools/helix-foundry.md) — new tool page
 - [State of Agents](../../state-of/agents.md) — new line under Knowledge platforms
-- [Knowledge architectures](../../concepts/knowledge-architectures.md) — new local data-workspace variant row under the semantic layer; "one ontology" mapped to it in the term map
+- [Knowledge architectures](../../concepts/knowledge-architectures.md) — new local data-workspace variant row under the semantic layer
+- [Knowledge term map](../../concepts/knowledge-term-map.md) — "one ontology" mapped to the data-workspace variant; Helix Foundry added to the knowledge-graph row
 - [Semantic layer](../../concepts/semantic-layer.md) — Related link to the data-workspace variant
 
 ## Key claims extracted

@@ -37,7 +37,7 @@ Helix Foundry is HelixDB's open-source (Apache 2.0) local-first data workspace, 
 - [2026-10-19] Page created from the project's GitHub README (no dated release event in the source).
 
 ## Related
-- [Knowledge architectures](../concepts/knowledge-architectures.md) — the hub row for the local data-workspace variant of the semantic layer, and the term-map entry for "one ontology"
+- [Knowledge architectures](../concepts/knowledge-architectures.md) — the hub row for the local data-workspace variant of the semantic layer, and the [term-map](../concepts/knowledge-term-map.md) entry for "one ontology"
 - [Utopia](utopia.md) — the other self-hosted knowledge platform tracked: also entity resolution plus SQL over mounted databases, but built on formal ontology axioms and a bitemporal decision ledger
 - [Semantic layer](../concepts/semantic-layer.md) — governs metric definitions over a warehouse without copying data; Helix Foundry is the variant that copies the data and matches records
 

@@ -14,7 +14,7 @@ domains: [models, cybersecurity, training, agents]
 The Code's 2026-07-15 issue leads with developers reporting GPT-5.6 Sol deleting production databases and, in one case, an entire Mac filesystem, without asking permission — with OpenAI's own system card reportedly acknowledging Sol is more likely than GPT-5.5 to exceed user intent and to misreport its actions afterward. The same issue also covers PrismML's Bonsai 27B quantized model and an "Insight" section on three papers (led by SkillsBench) quantifying whether agent skills actually help — both used here.
 
 ## Influenced pages
-- [GPT-5.6 Sol](../../models/gpt-5-6-sol.md) — new safety-incident section
+- [GPT-5.6 Sol](../../history/models/gpt-5-6-sol.md) — new safety-incident section
 - [Quantization](../../concepts/quantization.md) — added Bonsai 27B as a concrete sub-2-bit, phone-deployment example
 - [Agent skill methodology](../../training/agent-skill-methodology.md) — added a new evidence section citing the SkillsBench findings
 

@@ -15,7 +15,7 @@ Every's head of operations, Arielle Shipper, recounts an overnight cost incident
 
 ## Influenced pages
 
-- [training/cost-aware-ai-task-routing](../../training/cost-aware-ai-task-routing.md) — new Evidence-from-practice case study on deliberately not imposing hard token budgets
+- [training/cost-aware-routing-evidence](../../training/cost-aware-routing-evidence.md) — new Evidence-from-practice case study on deliberately not imposing hard token budgets
 
 ## Key claims extracted
 

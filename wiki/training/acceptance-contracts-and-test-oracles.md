@@ -3,7 +3,7 @@ title: Acceptance contracts and test oracles
 type: training
 domains: [coding]
 as_of: 2026-10-19
-sources: [lavaee-verification-pyramid-2026-10, rauchg-gdp-ts-2026-10]
+sources: [lavaee-verification-pyramid-2026-10, rauchg-gdp-ts-2026-10, bcherny-formal-verification-agent-sdk-2026-09-22]
 ---
 
 # Acceptance contracts and test oracles
@@ -28,6 +28,7 @@ An oracle is whatever decides pass/fail against something trusted. Fixed example
 - **Approved snapshots** change only when a person approves the new snapshot.
 - **Invariants and contracts** check pre/post-conditions on every run.
 - **Proof-carrying types** make a check impossible to skip: the sensitive function demands a compile-time proof about its exact arguments that only one trusted module can mint, so a missing, stale, or mismatched authorization check is a type error, and a lint preset blocks forged proofs ([gdp-ts](../tools/gdp-ts.md) for TypeScript).
+- **Model-checked specifications** have the agent write a formal model of the risky part of the code (TLA+ for concurrency and races, Lean for state and data flow), let the checker search for counterexamples, then reproduce each one in the real code before fixing it. Boris Cherny reports that a couple of prompts to Opus 5.5 turned the Claude Agent SDK into 16 bug- and race-fix PRs, without his knowing either language well. The caveat: models have been weak at choosing the high-level properties worth checking, so a person should review those (Hillel Wayne).
 - **Seeded replays** re-run a recorded session deterministically.
 
 The agent can write property tests; a person decides which matter. Treat coverage as a record of what ran, not of what was checked.
@@ -40,6 +41,7 @@ The agent can write property tests; a person decides which matter. Treat coverag
 
 - [2026-10-19] Added proof-carrying types (gdp-ts) as an oracle: authorization checks enforced by the TypeScript compiler and a lint preset rather than by review.
 - [2026-10-14] Added Lavaee's verification-pyramid guidance: acceptance contract first, oracles agents can't game, test-diff-first review, multi-judge mean-plus-veto scoring, and scenario-driven browser and performance checks.
+- [2026-09-22] Added model-checked specifications (TLA+/Lean) as an oracle: Opus 5.5 modeled the Claude Agent SDK and its counterexamples became 16 bug- and race-fix PRs.
 - [2026-10-20] Page created, split out of [Evals for agentic software development](evals-for-agentic-software-development.md).
 
 ## Related
@@ -52,3 +54,4 @@ The agent can write property tests; a person decides which matter. Treat coverag
 
 - [Agents Write the Code. Your System Has to Prove It. — Alex Lavaee](../sources/tweets/lavaee-verification-pyramid-2026-10.md)
 - [rauchg/gdp-ts — Ghosts of Departed Proofs for TypeScript (GitHub)](../sources/repos/rauchg-gdp-ts-2026-10.md)
+- [Boris Cherny — formally verifying the Claude Agent SDK with Lean and Opus 5.5](../sources/tweets/bcherny-formal-verification-agent-sdk-2026-09-22.md)

@@ -14,7 +14,7 @@ Anthropic's account of the first complete, computer-checked (Lean) proof of Ferm
 
 ## Influenced pages
 
-- [AI in mathematics](../../trends/ai-in-mathematics.md) — new Current-status entry, framed as the verification-side answer to Tao's "proof indigestion" concern
+- [AI math verification](../../trends/ai-math-verification.md) — Current-status entry (moved from AI in mathematics in the 2026-11-23 split), framed as the verification-side answer to Tao's "proof indigestion" concern
 
 ## Key claims extracted
 

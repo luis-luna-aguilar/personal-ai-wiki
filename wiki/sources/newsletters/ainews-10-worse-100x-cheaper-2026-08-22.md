@@ -16,7 +16,7 @@ An AINews essay arguing that one component of the ML pipeline after another has 
 ## Influenced pages
 
 - [AI-simulated human populations](../../trends/synthetic-human-simulation.md) — new page, primary source for the "synthetic-everything" framing
-- [DeepSeek V4](../../models/deepseek-v4.md) — V4-Flash-Vision-Exp multimodal update, from this issue's Twitter/Reddit recap
+- [DeepSeek V4 Flash (archived)](../../history/models/deepseek-v4.md) — V4-Flash-Vision-Exp multimodal update, from this issue's Twitter/Reddit recap (superseded by V4.1 Flash)
 
 ## Key claims extracted
 

@@ -2,7 +2,7 @@
 title: ScaleDown
 type: model
 domains: [models]
-subcategory: utility-model
+subcategory: decision-model
 tags: [closed-source]
 as_of: 2026-10-19
 sources: [scaledown-homepage-2026-10, scaledown-site-crawl-2026-10]
@@ -49,6 +49,7 @@ All figures are from the site's text tables; the homepage charts did not survive
 
 ## Recent changes
 
+- [2026-10-28] Moved from the `utility-model` subcategory to `decision-model`, alongside [Jev](jev.md) and the other [decision models](../concepts/decision-models.md).
 - [2026-10-19] Page created from a crawl of scaledown.ai.
 
 ## Sources

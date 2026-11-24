@@ -4,15 +4,15 @@ type: tool
 domains: [creative]
 subcategory: visual-design-prototyping
 tags: [anthropic, closed-source, beta]
-as_of: 2026-07-08
-sources: [claude-design-anthropic-labs, claude-creative-tool-connectors-2026-04-29, claude-code-design-sync-2026-07]
+as_of: 2026-09-16
+sources: [claude-design-anthropic-labs, claude-creative-tool-connectors-2026-04-29, claude-code-design-sync-2026-07, claude-cowork-is-now-claude-2026-09-16, claudeai-cowork-chat-merge-2026-09-16]
 ---
 
 # Claude Design
 
 Anthropic Labs' collaborative visual design and prototyping tool. Powered by Claude Opus 4.7, it lets users build polished designs, prototypes, slides, one-pagers, and marketing assets through conversation and direct editing — without requiring a design background.
 
-## Current status (as of 2026-07-08)
+## Current status (as of 2026-09-16)
 
 - Research preview launched 2026-04-22 via Anthropic Labs; rolling out gradually to Pro, Max, Team, and Enterprise subscribers
 - Powered by Claude Opus 4.7 (Anthropic's most capable vision model)
@@ -20,6 +20,7 @@ Anthropic Labs' collaborative visual design and prototyping tool. Powered by Cla
 - Refinement via inline comments on specific elements, direct text edits, and adjustment knobs (spacing, color, layout live)
 - Org-scoped sharing (private, view-link, or collaborative edit with group conversation + Claude); export to PPTX and Canva
 - Syncs with Claude Code in both directions through `/design-sync` (2026-07-08): design systems can be pulled into a repo for implementation work, and built work can be pushed back into the Claude Design canvas
+- Works inside Claude conversations since 2026-09-16, beside the new Claude Docs and Claude Slides, as part of the chat and Cowork merge into the [Claude app](claude-app.md): draft a one-pager in Docs, turn it into a deck in Slides, and mock up a matching visual in Design from one thread. Users can select an element and move it or tell Claude what to change; outputs live at one shareable link. In beta on paid plans, Enterprise admins choose when to enable it, and standalone Claude Design keeps working as before.
 
 ## Use cases
 
@@ -53,6 +54,7 @@ This extends Claude beyond artifact generation into direct integration with crea
 
 ## Recent changes
 
+- [2026-09-16] Claude Design now works inside Claude conversations, launched alongside Claude Docs and Claude Slides (beta, paid plans); standalone Design unchanged.
 - [2026-07-08] Claude Code / Claude Design bidirectional sync announced through `/design-sync`.
 - [2026-04-29] Creative tool connectors reported: Claude integrations for Adobe, Blender, Fusion, Ableton, Splice, SketchUp, Affinity, Resolume; moves Claude from artifact generation toward in-workflow creative-production integration (secondary coverage)
 - [2026-04-22] Full launch via Anthropic Labs; brand onboarding, PPTX/Canva export, group editing, web capture — replacing earlier thin stub
@@ -62,3 +64,5 @@ This extends Claude beyond artifact generation into direct integration with crea
 - [Introducing Claude Design by Anthropic Labs](../sources/articles/claude-design-anthropic-labs.md)
 - [Claude creative tool connectors](../sources/newsletters/claude-creative-tool-connectors-2026-04-29.md)
 - [Claude Code and Claude Design sync](../sources/tweets/claude-code-design-sync-2026-07.md)
+- [Claude Cowork and chat are now one Claude](../sources/articles/claude-cowork-is-now-claude-2026-09-16.md)
+- [Claude (@claudeai) — Claude Cowork and chat are merging into one Claude](../sources/tweets/claudeai-cowork-chat-merge-2026-09-16.md)

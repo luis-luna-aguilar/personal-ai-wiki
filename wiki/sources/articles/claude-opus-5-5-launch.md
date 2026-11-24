@@ -4,13 +4,14 @@ type: source
 source_type: article
 source_file: raw/articles/2026-10-20-anthropiccom-claude-opus-5-5.md
 url: https://www.anthropic.com/claude-opus-5-5
+published: 2026-09-22
 ingested: 2026-10-20
 domains: [models, coding]
 ---
 
 # Introducing Claude Opus 5.5
 
-Anthropic's launch post for Claude Opus 5.5, the first model in the Claude 5.5 family and its first release since Dario Amodei's "We Must Pace the Frontier" essay. Anthropic says it performs at the level of Fable 5.1 on most work, costs about 40% less than Opus 5 to run, writes more clearly, and ships with Fable 5.1-class safeguards. It includes a benchmark table against Fable 5.1, Opus 5, GPT-6 Astra and GPT-5.6 Sol, a pricing table, about two dozen customer quotes, and a long safety section. The post carries no publication date; it says Sonnet 5.5 and Haiku 5.5 "will follow in the coming weeks," so it predates both. The ingest date (2026-10-20) is used.
+Anthropic's launch post for Claude Opus 5.5, the first model in the Claude 5.5 family and its first release since Dario Amodei's "We Must Pace the Frontier" essay. Anthropic says it performs at the level of Fable 5.1 on most work, costs about 40% less than Opus 5 to run, writes more clearly, and ships with Fable 5.1-class safeguards. It includes a benchmark table against Fable 5.1, Opus 5, GPT-6 Astra and GPT-5.6 Sol, a pricing table, about two dozen customer quotes, and a long safety section. The post itself carries no date; launch-day coverage (AINews, Every) dates the release to 2026-09-22, the same day as GPT-6 Sol and Luna, and Sonnet 5.5 and Haiku 5.5 followed, as the post said they would "in the coming weeks."
 
 ## Influenced pages
 - [Claude Opus 5.5](../../models/claude-opus-5-5.md) — new page: pricing, benchmarks, safeguards, availability

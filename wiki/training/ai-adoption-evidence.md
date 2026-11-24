@@ -1,8 +1,8 @@
 ---
 title: "AI adoption: evidence from practice"
 type: training
-as_of: 2026-09-04
-sources: [every-four-agents, ai-for-boring-businesses, ai-native-organizations-operating-model-2026-05-13, lennysan-netflix-cpto-2026-07-20, ramp-ai-adoption-playbook, vasuman-applied-ai-doesnt-work-2026-09-04, every-ai-sandwich-april-2026, superhuman-autonomous-growth-agent-2026-05-21]
+as_of: 2026-10-02
+sources: [every-four-agents, ai-for-boring-businesses, ai-native-organizations-operating-model-2026-05-13, lennysan-netflix-cpto-2026-07-20, ramp-ai-adoption-playbook, vasuman-applied-ai-doesnt-work-2026-09-04, every-ai-sandwich-april-2026, superhuman-autonomous-growth-agent-2026-05-21, latent-space-airbnb-inside-out-ai-2026-10-02]
 ---
 
 # AI adoption: evidence from practice
@@ -20,6 +20,7 @@ Practice-level case studies behind [Company-wide AI enablement](company-wide-ai-
 - **UK Dept for Business and Trade M365 Copilot trial (2025, published 2026):** 1,000 licenses over 3 months produced only 1.14 Copilot actions per user per day; PowerPoint generation got 7 minutes faster (18→11 min) but at lower quality, Excel analysis got slower and lower-quality, and email time savings were "extremely small." The department's own conclusion: "We did not find robust evidence to suggest that time savings are leading to improved productivity" — yet 72% of users reported being satisfied or very satisfied. A concrete illustration of AI adoption improving individual sentiment without moving organizational output.
 - **Varick Agents' reported process-redesign results** (vendor-reported, not independently audited): across enterprise deployments (~$500M-$100B revenue clients), month-end close fell from 18-22 days to 7-9 days, AP exception volume fell from 600-800/month to under 50, payroll corrections fell 90%, and reported total value delivered exceeded $100M. Treat these as one AI-transformation vendor's own case-study numbers, not independently verified — the UK DBT trial above is the independently checkable data point in this entry.
 - **Netflix CPTO Elizabeth Stone on systems thinking (via Lenny Rachitsky, July 2026).** Systems thinking — seeing across business domains and building shared scaffolding, not just optimizing your own task — is the most important AI-era skill in her framing, and it's learnable: habitually zoom out one level from the specific problem in front of you. Current role confusion ("what is my job anymore?") is a predictable "storming before forming" phase, not a sign of failure. Stone argues today's top AI labs converged on cultural traits (high agency, high talent density, bottom-up thinking) already present in Netflix's early culture; the "keeper's test" (would I fight to keep this person?) is used mainly as an entry point for positive performance conversations, not a firing mechanism. Netflix's AI-competence approach: one cross-level "AI fluency" aspiration rather than a rewritten career ladder per level.
+- **Airbnb's "inside-out AI" (October 2026, CTO Ahmad Al-Dahle via Latent Space).** Airbnb applied AI to internal product development first, then carried the same capabilities to customers. Roughly half of support tickets are resolved purely by AI (nearly 45% in Q2 results); each support agent is tested against a battery of synthetic data before production, and some ticket types, such as safety issues, are deliberately kept with humans. An internal context graph, Everest, stores what teams learned: the grocery-delivery integration took eight to nine months, and the similar airport-pickup service built on its lessons took about six weeks (see [Company brain](../concepts/company-brain.md)). Airbnb runs 10+ post-trained open models in production and picks each model on a cost, quality, and latency trade-off with evals sampled from that use case's production traffic. Al-Dahle's organizational claim: companies organized around features will struggle, companies organized around objectives and results will not. The engineering-side numbers are on [Engineering AI adoption: evidence from practice](engineering-ai-adoption-evidence.md).
 
 ## Autonomy and org-architecture cases
 
@@ -33,6 +34,7 @@ Concrete mechanisms companies use to grant agents autonomy and to place humans a
 ## Recent changes
 
 - [2026-10-19] Added an "Autonomy and org-architecture cases" section moved from [Agents reshape organizations](../trends/agents-reshape-organizations.md): Every's Claudie trust battery, the AI sandwich, Dan Shipper's two-org-models prediction, and Tempo's "AI head of growth" agent.
+- [2026-10-02] Added Airbnb's company-level case: AI resolves about half of support tickets after synthetic-data testing, the Everest context graph cut a new service from 8–9 months to ~6 weeks, and teams organized by outcomes rather than features.
 - [2026-09-09] Page created, split out of [Company-wide AI enablement](company-wide-ai-enablement.md)'s "Evidence from practice" section, which kept only a pointer here for case-level evidence after its macro adoption/labor statistics were consolidated onto [Agents reshape organizations](../trends/agents-reshape-organizations.md).
 - [2026-09-04] Added two process-redesign case data points: the UK Dept for Business and Trade's M365 Copilot trial (1.14 actions/user/day, no measurable productivity gain, 72% satisfied anyway) and Varick Agents' vendor-reported enterprise deployment results.
 - [2026-07-20] Netflix CPTO Elizabeth Stone's systems-thinking framing added, via Lenny Rachitsky.
@@ -55,3 +57,4 @@ Concrete mechanisms companies use to grant agents autonomy and to place humans a
 - ["Applied AI Doesn't Work" — Vas, Varick Agents](../sources/tweets/vasuman-applied-ai-doesnt-work-2026-09-04.md)
 - [Every — "You're the Bread in the AI Sandwich" (April 2026)](../sources/newsletters/every-ai-sandwich-april-2026.md)
 - [Meet the autonomous growth agent (Superhuman)](../sources/newsletters/superhuman-autonomous-growth-agent-2026-05-21.md)
+- [Latent Space — Inside-Out AI: Rebuilding Airbnb](../sources/newsletters/latent-space-airbnb-inside-out-ai-2026-10-02.md)

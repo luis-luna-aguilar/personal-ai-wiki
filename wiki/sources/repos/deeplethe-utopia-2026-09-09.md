@@ -16,7 +16,8 @@ README for Utopia, DeepLethe's open-source (Apache-2.0) bitemporal knowledge gra
 
 - [Utopia](../../tools/utopia.md) — new tool page
 - [Ontologies as agent guardrails](../../concepts/ontology-agent-guardrails.md) — concrete implementation example
-- [Knowledge architectures](../../concepts/knowledge-architectures.md) — ontology-row example and world-model marketing-alias note now link to the tool page
+- [Knowledge architectures](../../concepts/knowledge-architectures.md) — ontology-row example now links to the tool page
+- [Knowledge term map](../../concepts/knowledge-term-map.md) — world-model marketing-alias note (moved from the hub in the 2026-11-23 split)
 - [State of Agents](../../state-of/agents.md) — new line under Knowledge platforms
 
 ## Key claims extracted

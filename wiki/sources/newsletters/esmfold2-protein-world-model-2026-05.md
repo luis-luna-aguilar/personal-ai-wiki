@@ -16,7 +16,7 @@ Latent Space covers ESMFold2 as an open scientific engine for protein prediction
 ## Influenced pages
 
 - [State of Science](../../state-of/science.md) - new protein-model subcategory
-- [AI in Science](../../trends/ai-in-science.md) - protein world-model trend update
+- [AI in Biology](../../trends/ai-in-biology.md) - protein world-model trend update (moved from AI in Science in the 2026-10-21 split)
 
 ## Key claims extracted
 

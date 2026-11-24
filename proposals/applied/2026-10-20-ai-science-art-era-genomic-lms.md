@@ -8,7 +8,7 @@ sources:
   - raw/newsletters/2026-09-22-an-oscar-two-asteroids-and-the-algorithm-in-yo.md
   - raw/newsletters/2026-09-23-bio-security-is-an-ai-arms-race-eric-nguyen-ce.md
 triage: proposals/triage/2026-09-21-to-2026-09-30-ai-digest.md
-status: pending
+status: applied
 created: 2026-10-20
 ---
 
@@ -21,7 +21,7 @@ Agent swarms can now originate a biological discovery, not just assist one, but 
 
 [[#Open questions|Open questions: 2 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 In late September Anthropic announced a new life-sciences research group with its own Bay Area lab (low biosafety levels only, all bench work done by humans). Its first result: given one high-level prompt, roughly 950 Claude agents spent 21 hours and 210 million tokens combing a DNA database for reverse transcriptases, enzymes that copy RNA into DNA. They gathered over 200,000, nominated 3,500 candidate systems and wrote reports on 20. One agent noticed, next to an already-known enzyme in a jumbo bacteriophage (a large virus that infects bacteria), a long array of evenly spaced DNA repeats and an extra gene. The layout resembles a CRISPR array, the feature that makes CRISPR programmable. Anthropic named it ART (array-associated reverse transcriptases). Human-run experiments showed the array is transcribed into distinct short RNAs, but its function is unknown. Anthropic says so plainly, Dario Amodei called it PhD-worthy but of unclear significance, commenters stressed it is nowhere near AlphaFold or CRISPR scale, and a Stanford team independently described a related system. The post also says the lab now studies which agent reports scientists choose to test, and feeds that "taste" back into Claude's instructions.
@@ -328,4 +328,6 @@ None.
 ## Open questions
 
 - With these additions AI in Science reaches about 1,600 body words (~133% of its 1,200 ceiling). Split the biology material (Protein world models, Virtual cell models, AI-native drug design, ART, genomic language models) into a new `trends/ai-in-biology.md`, leaving AI in Science as a short hub with self-driving labs and ERA? (Assumed: not in this proposal.)
+	- Yes, split it
 - Should ERA also get a one-line pointer in [Agent improvement loop](../wiki/concepts/agent-improvement-loop.md) as the "optimize anything scoreable" case? (Assumed no: ERA improves solutions to a problem, not the agent.)
+	- No

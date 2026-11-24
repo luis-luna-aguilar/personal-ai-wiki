@@ -13,3 +13,7 @@ Older recent-change entries spilled from [Company-wide AI enablement](../../trai
 ## Archived from current page on 2026-10-19
 
 - [2026-06-24] Token tightening adds allocation-style AI governance: budgets, routing, and higher-cost access tied to visible ROI.
+
+## Archived from current page on 2026-11-23
+
+- [2026-06-30] Added explicit-bets strategy exercise: name token, lock-in, wrapper, vertical, data-moat, regulation, and switching-cost assumptions before committing AI strategy.

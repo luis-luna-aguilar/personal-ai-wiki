@@ -15,7 +15,7 @@ Anthropic's engineering blog post on how they use Claude Code internally. Centra
 
 ## Influenced pages
 
-- [Claude Code](../../tools/claude-code.md) — new Best practices section
+- [Claude Code practices](../../workflows/claude-code-practices.md) — Best practices section (moved from Claude Code on 2026-10-21)
 
 ## Key claims extracted
 

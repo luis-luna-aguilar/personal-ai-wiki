@@ -15,7 +15,8 @@ Uber Engineering's first-party account (posted by @udaykiran) of how it runs and
 
 ## Influenced pages
 
-- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — benchmark-driven model selection, FinOps controls (caching TTL, compaction, reasoning-effort default, spend visibility)
+- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — FinOps controls (caching TTL, compaction, reasoning-effort default, spend visibility)
+- [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — benchmark-driven model selection
 - [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — AI Context Graph and Code-mode patterns
 - [AI enablement — software development](../../training/ai-enablement-software-development.md) — Software Factory adoption numbers and strategic framing
 

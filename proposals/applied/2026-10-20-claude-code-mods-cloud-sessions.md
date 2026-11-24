@@ -8,7 +8,7 @@ sources:
   - raw/articles/2026-10-20-devinai-blog-devin-cloud-in-your-terminal.md
   - raw/newsletters/2026-09-30-ainews-openai-devday-2026-dots-61-sol-ultraf.md
 triage: proposals/triage/2026-09-21-to-2026-09-30-ai-digest.md
-status: pending
+status: applied
 created: 2026-10-20
 ---
 
@@ -22,7 +22,7 @@ A coding agent that keeps working in the cloud after you close the laptop, and h
 
 [[#Open questions|Open questions: 2 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 
@@ -355,4 +355,6 @@ None.
 ## Open questions
 
 - Claude Code would sit at about 1,690 body words (113% of the 1,500 ceiling). Split now? The cleanest cut is moving `## Best practices (Anthropic engineering)` and `## /ultrareview` (about 450 words together) to a new `workflows/claude-code-practices.md`, leaving one-line pointers.
+	- Yes, split now
 - Should the Codex page also get a Recent-changes entry for cloud environments, or is the runtime-page mention enough for a one-line newsletter item?
+	- Both

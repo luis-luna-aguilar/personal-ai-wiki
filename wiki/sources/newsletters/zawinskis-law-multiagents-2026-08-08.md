@@ -20,7 +20,7 @@ AINews recap covering two threads: OpenAI's Astra model, whose internal evaluati
 - [trends/restricted-frontier-deployment](../../trends/restricted-frontier-deployment.md) — new capability-threshold-gating section
 - [tools/claude-code](../../tools/claude-code.md) — cross-session messaging, auto-mode-by-default with classifier detection rate, session budgets, repo-skill auto-load, advisor models
 - [concepts/harness](../../concepts/harness.md) — SWE-bench Pro harness-swap data point
-- [training/cost-aware-ai-task-routing](../../training/cost-aware-ai-task-routing.md) — Databricks internal AI FinOps breakdown
+- [training/cost-aware-routing-evidence](../../training/cost-aware-routing-evidence.md) — Databricks internal AI FinOps breakdown
 
 ## Key claims extracted
 

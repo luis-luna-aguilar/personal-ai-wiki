@@ -1,18 +1,32 @@
 ---
-title: Claude Cowork
+title: Claude app
 type: tool
 domains: [agents]
 subcategory: agent-orchestration
 tags: [anthropic, agentic]
-as_of: 2026-07-08
-sources: [claude-cowork-launch, aakash-gupta-cowork, claude-design-launch, claude-productivity-surfaces, anthropic-desktop-agent-expansion-late-march, anthropic-persistent-workflow-surfaces-february, awsai-cowork-bedrock-2026-04-23, claude-cowork-mobile-2026-07]
+as_of: 2026-10-23
+sources: [claude-cowork-launch, aakash-gupta-cowork, claude-design-launch, claude-productivity-surfaces, anthropic-desktop-agent-expansion-late-march, anthropic-persistent-workflow-surfaces-february, awsai-cowork-bedrock-2026-04-23, claude-cowork-mobile-2026-07, claude-cowork-is-now-claude-2026-09-16, claudeai-cowork-chat-merge-2026-09-16]
 ---
 
-# Claude Cowork
+# Claude app
 
-Anthropic's desktop agent for knowledge work. It works across local files, folders, and workplace applications to complete high-effort, repeatable tasks without the user coordinating each step. Included in Claude Pro ($20/month).
+Anthropic's unified Claude app, where chat and Cowork, its delegated knowledge-work agent, became one product on 2026-09-16. Cowork's capabilities are alive inside it: Claude works across local files, folders, and workplace applications to complete high-effort, repeatable tasks without the user coordinating each step, and handing over a long-running task (a report, a deck, a recurring job) works from any conversation. Included in Claude Pro ($20/month).
 
-## Current status (as of 2026-07-08)
+## Also called
+
+Formerly Claude Cowork (a separate app until 2026-09-16); Anthropic still uses "Cowork" for the delegated-work capability.
+
+## Current status (as of 2026-10-23)
+
+- **One Claude.** Cowork and chat merged on 2026-09-16. Anthropic says users struggled to decide where a task belonged and lost context moving between surfaces; Claude now works out what a task needs and uses the context, skills, and connectors already in the conversation.
+- **Rollout.** Pro and Max first, on web, desktop, and mobile, with nothing to turn on; Team and Free to follow. Generally available for Claude Enterprise since 2026-10-23.
+- **Background work.** Tasks keep running after the laptop closes, progress can be checked from a phone, and a task can be scheduled to recur ("every Monday"). By default Claude asks before taking an action; users can let it keep working and check in only when something needs a closer look.
+- **Docs, Slides, and Design in the conversation.** Claude Docs (co-written documents) and Claude Slides (Claude-drafted decks) launched with the merge, and [Claude Design](claude-design.md) now works inside conversations. Users edit directly, present from Claude, or download PowerPoint/PDF; each output lives at one shareable link. All three are in beta on paid plans, and Enterprise admins choose when to enable them.
+- **Carry-over.** Existing Cowork chats, projects, artifacts, connectors, and skills stay where users left them.
+
+## Cowork capabilities (as of 2026-07-08)
+
+Cowork's state as a separate app; its capabilities carried into the Claude app:
 
 - Desktop-first agent that works across local files, folders, and everyday applications; now expanded into a cross-device Cowork beta on web and mobile for Max subscribers.
 - Users can start delegated work at a desk, monitor it from a phone, and retrieve the final output from any device.
@@ -36,6 +50,8 @@ Claude Cowork is now available via Amazon Bedrock in public research preview. Th
 
 ## Why it matters
 
+The merge turns Cowork from a destination into a capability of the main app: the user no longer picks "chat" or "agent", and outputs (docs, decks, designs) live next to the conversation that made them. It is the same direction as OpenAI's plan to fold ChatGPT Work into regular Chat (see [Codex](codex.md)).
+
 Cowork pushes agent UX beyond chat and toward delegated desktop work. Live Artifacts also puts competitive pressure on dashboard and internal-tool products by making connected reports and trackers much easier to create inside a general-purpose agent workflow. Alongside [Claude Design](claude-design.md), it also signals a broader Anthropic move toward artifact-first interfaces rather than chat-only interactions.
 
 Cowork now reads less like a one-off desktop shell around Claude and more like Anthropic's bet on a general delegated-computer workflow. The same week introduced persistent sessions and then Channels, which suggests the real product is not "desktop app" versus "terminal app" but a continuous agent that can move between local computer, remote session, and mobile supervision.
@@ -44,6 +60,8 @@ Cowork also did not appear from nowhere. The earlier Claude for Word beta sugges
 
 ## Recent changes
 
+- [2026-10-23] Unified Claude (chat plus Cowork) generally available for Claude Enterprise.
+- [2026-09-16] Cowork and chat merged into one Claude app (Pro/Max rollout over several weeks); Claude Docs and Claude Slides launched and Claude Design moved into conversations, all three in beta on paid plans; existing Cowork work carried over. Page renamed from Claude Cowork to Claude app on 2026-11-23.
 - [2026-07-08] Cowork beta expands to web/mobile for Max subscribers; scheduled tasks can run while the user's computer is closed; Fable 5 access extended through 2026-07-12.
 - [2026-05-14] Claude for Small Business and Claude for Legal launched: 27 combined one-click agentic workflows on Cowork, with QuickBooks/PayPal/DocuSign integrations; first direct vertical automation product push
 - [2026-04-23] AWS Bedrock public research preview: Cowork now available via Bedrock, keeping prompts, files, and model responses within the customer's AWS account
@@ -60,3 +78,5 @@ Cowork also did not appear from nowhere. The earlier Claude for Word beta sugges
 - [Anthropic persistent workflow surfaces in late February](../sources/newsletters/anthropic-persistent-workflow-surfaces-february.md)
 - [AWS AI — Claude Cowork now available via Amazon Bedrock](../sources/tweets/awsai-cowork-bedrock-2026-04-23.md)
 - [Claude Cowork web/mobile beta](../sources/newsletters/claude-cowork-mobile-2026-07.md)
+- [Claude Cowork and chat are now one Claude](../sources/articles/claude-cowork-is-now-claude-2026-09-16.md)
+- [Claude (@claudeai) — Claude Cowork and chat are merging into one Claude](../sources/tweets/claudeai-cowork-chat-merge-2026-09-16.md)

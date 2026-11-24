@@ -15,7 +15,7 @@ Flue is Fred Schott's agent framework — Schott is the creator of the Astro web
 ## Current status (as of 2026-09-01)
 
 - Flue 2 ships 16 built-in hooks (`useSkill()`, `useTool()`, `useSubagent()`, plus custom hooks), authored in TypeScript.
-- Built on top of Pi, an open-source minimal harness — Schott treats Pi's role as analogous to Vite underneath Astro: a foundational, unopinionated layer Flue adds developer-facing opinions on top of.
+- Built on top of [Pi](pi.md), an open-source minimal harness — Schott treats Pi's role as analogous to Vite underneath Astro: a foundational, unopinionated layer Flue adds developer-facing opinions on top of.
 - Central thesis: "there is no agent without a harness" — the harness is fundamental to what an agent is, not a bolt-on feature.
 - Pivoted from Flue 1's naive file-based routing ("five agents, five files") to a composability-first design after finding most customers run one agent for their whole company, not many routed agents.
 - Positioned as an open-source, host-portable framework ("for every host") — the main differentiator from its closest competitor, [eve](eve.md), which is optimized for (though not locked to) Vercel's own platform.

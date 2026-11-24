@@ -21,6 +21,7 @@ AINews Twitter-recap issue (covering 2026-05-20 to 2026-05-21) highlighting a cl
 - [Compute infrastructure as decisive competitive moat](../../trends/compute-infrastructure.md) — cross-link and Recent-changes entry
 - [Agentic orchestration patterns](../../workflows/agentic-orchestration-patterns.md) — added single-agent-first escalation threshold
 - [State of Creative](../../state-of/creative.md) — added Runway Aleph 2.0/Edit Studio as a new bullet under "AI video generation"
+- [Runway](../../tools/runway.md) — Aleph 2.0 / Edit Studio
 
 ## Key claims extracted
 - Turbopuffer: crossed $100M run-rate in March, 19 months after $1M ARR, profitable, having raised under $1M

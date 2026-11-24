@@ -15,7 +15,7 @@ Every's Context Window newsletter covering KateBench/DanLens (cloning specific c
 
 ## Influenced pages
 
-- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — Fable adoption data
+- [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — Fable adoption data
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Fable adoption data, Vercel Gateway open-weight share
 - [Agent skill methodology](../../training/agent-skill-methodology.md) — self-improve Codex skill as a proven pattern
 

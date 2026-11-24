@@ -21,7 +21,7 @@ AINews issue leading with Andrew Ng's DeepLearning.AI relaunch around four "AI E
 - [Automated harness optimization](../../concepts/automated-harness-optimization.md) — Headlong/exo self-modifying harnesses (moved from Harness)
 - [Model Context Protocol](../../concepts/mcp.md) — enterprise-managed MCP auth
 - [AI Engineering skills](../../training/ai-engineering-skills.md) — new page, primary source for the Andrew Ng skills taxonomy
-- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — cost-normalized DeepSWE/Cline benchmark evidence
+- [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — cost-normalized DeepSWE/Cline benchmark evidence
 
 ## Key claims extracted
 

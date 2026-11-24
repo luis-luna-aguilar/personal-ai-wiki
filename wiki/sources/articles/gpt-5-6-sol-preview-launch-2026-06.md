@@ -15,7 +15,7 @@ OpenAI's own announcement of the GPT-5.6 family (Sol/Terra/Luna) as a restricted
 
 ## Influenced pages
 
-- [GPT-5.6 Sol](../../models/gpt-5-6-sol.md) — primary-source capability/pricing/safety detail added; caveat resolved
+- [GPT-5.6 Sol](../../history/models/gpt-5-6-sol.md) — primary-source capability/pricing/safety detail added; caveat resolved
 - [Restricted frontier deployment](../../trends/restricted-frontier-deployment.md) — corroborates the restricted-preview episode's existence and terms
 
 ## Key claims extracted

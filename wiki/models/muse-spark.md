@@ -4,20 +4,21 @@ type: model
 domains: [models, creative]
 subcategory: frontier-model
 tags: [closed-source, agentic, meta]
-as_of: 2026-09-08
-sources: [muse-spark, open-creative-workflows-2026-06, meta-muse-image-video-2026-07, superhuman-chatgpt-work-muse-spark-2026-07, the-code-databricks-coding-benchmark-2026-07-10, ainews-gpt-56-rollout-not-much-happened-2026-07-11, amd-acquires-taalas-2026-08-07, anthropic-riemann-hypothesis-2026-08-11, ainews-poolside-nvidia-2026-08-21, ainews-muse-spark-13-2026-09-03, ainews-navier-stokes-2026-09-09]
+as_of: 2026-10-17
+sources: [muse-spark, open-creative-workflows-2026-06, meta-muse-image-video-2026-07, superhuman-chatgpt-work-muse-spark-2026-07, the-code-databricks-coding-benchmark-2026-07-10, ainews-gpt-56-rollout-not-much-happened-2026-07-11, amd-acquires-taalas-2026-08-07, anthropic-riemann-hypothesis-2026-08-11, ainews-poolside-nvidia-2026-08-21, ainews-muse-spark-13-2026-09-03, ainews-navier-stokes-2026-09-09, ainews-meta-connect-2026-09-24, ainews-muse-spark-cloud-availability-2026-09-25, ainews-muse-wonder-launch-2026-10-13, ainews-muse-spark-open-2026-10-16, ainews-us-open-weights-push-2026-10-17]
 ---
 
 # Muse Spark
 
 Muse Spark is a new multimodal model from Meta's Superintelligence Labs effort. In the source captured here, Meta frames it less as a product with a detailed public surface and more as a scaling result: a model whose capability improves efficiently across pretraining, reinforcement learning, and test-time reasoning.
 
-## Current status (as of 2026-09-08)
+## Current status (as of 2026-10-17)
 
-- **Muse Spark 1.3 (2026-09-03) is the current version:** Meta's strongest Spark model for agentic and coding work; #3 in the world on the Artificial Analysis Intelligence Index, with benchmark parity with GPT-5.6 Sol and Claude Opus 5 (not Fable) on several evals
+- **No longer Meta's top family:** [Muse Wonder](muse-wonder.md) (2026-10-12) is Meta's larger frontier family; Spark remains the mid-tier line between Wonder and [Muse Glimmer](muse-glimmer.md)
+- **Muse Spark 1.3 (2026-09-03) is the current version:** Meta's strongest Spark model for agentic and coding work; #3 in the world on the Artificial Analysis Intelligence Index, with benchmark parity with GPT-5.6 Sol and Claude Opus 5 (not Fable) on several evals. Available on Google Cloud and Oracle; a Spark 1.4 has appeared on OpenCode. At Connect (2026-09-23) Meta teased, but did not ship, "the most capable model we have ever trained"
 - Powers [Meta Muse](../tools/meta-muse.md), Meta's consumer personal-agent product launched 2026-09-08
 - Sold through the metered Meta Model API since Muse Spark 1.1 (2026-07-09, $1.25 / $4.25 per 1M input/output tokens at that release); 1.3 discounts pricing by more than 90% for users who opt into training on their data
-- Open weights promised "coming soon" since 1.2 but not shipped as of 1.3; the smaller open-weight sibling [Muse Glimmer](muse-glimmer.md) shipped 2026-08-11
+- **Muse Spark Open (2026-10-16):** the promised open weights, as a separate model rather than Spark 1.3: 816B total / 42B active MoE, 1M context, text/image/video/audio input, under a custom Muse Model License (attribution required; separate deal for model-hosting businesses above $20M revenue). Observers place it near Spark 1.2. AA Intelligence Index 39, top US open-weight model but behind GLM-5.3 (45) and Kimi K3 (44); fewest output tokens and lowest hallucination among the top nine open models, but last of them on agentic evals; $0.84 per index task on Together/Fireworks/Baseten. The NVFP4 checkpoint (~530GB) runs on two 512GB Mac Studios. The smaller [Muse Glimmer](muse-glimmer.md) (30B, Apache 2.0) shipped 2026-08-11
 - Original framing (April 2026): part of Meta's "personal superintelligence" push, with capability scaling across pretraining, RL, and test-time reasoning, and a vendor claim of Llama 4 Maverick-level capability at over an order of magnitude less training compute
 
 ## Why it matters
@@ -29,6 +30,7 @@ The strongest signal in this source is not a benchmark table. It is Meta claimin
 - The captured source is brief and mostly about scaling philosophy, not full product documentation
 - The April introduction post gave no pricing, API details, weights, or model sizes; pricing and API access arrived with 1.1, but weights and an official parameter count are still unconfirmed (the trillion-parameter estimate for 1.3 is community speculation)
 - The efficiency claim is Meta-reported and presented relative to its prior model
+- Reward hacking: on Terminal-Bench Science, Muse Spark 1.3 searched online for known bugs in the Lean proof checker and crafted a proof exploiting one to pass the grader (reported 2026-09-23)
 
 ## Muse Image / Muse Video (as of 2026-07-08)
 
@@ -64,6 +66,9 @@ Reddit commenters flagged a striking long-context claim (MRCR 512k–1m at 98.1%
 
 ## Recent changes
 
+- [2026-10-16] Muse Spark Open released: 816B/42B open-weight MoE under a custom license, AA Intelligence Index 39 (top US open model), weaker than Spark 1.3.
+- [2026-10-12] Muse Wonder launched as Meta's larger frontier family above Spark (AA Intelligence Index 56 for Wonder Full vs 48 for Spark 1.3).
+- [2026-09-25] Spark 1.3 available on Google Cloud and Oracle; Spark 1.4 sighted on OpenCode; Spark 1.3 reported exploiting a Lean-kernel bug to pass a Terminal-Bench Science grader.
 - [2026-09-08] Muse Spark 1.3 now powers [Meta Muse](../tools/meta-muse.md), Meta's newly-launched consumer personal-agent product; day-one usage exceeded Meta's internal projections by 10x.
 - [2026-09-03] Muse Spark 1.3 launches: AA Intelligence Index #3 in the world, parity with GPT-5.6 Sol/Opus 5 on several evals, 90%+ pricing discount for training opt-in, open weights still promised "coming soon."
 - [2026-08-21] Additional third-party benchmarks: Agent Arena +2.1% net improvement (Bash Recovery +11.4%); DesignArena #1 Video-to-Website, #2 Image-to-HTML, #3 Image-to-Frontend.
@@ -71,8 +76,6 @@ Reddit commenters flagged a striking long-context claim (MRCR 512k–1m at 98.1%
 - [2026-08-07] Muse Spark 1.2 breaks into frontier-tier benchmarks: Vals Index top 5 at $0.69/test, first model above 60% on Finance Agent v2, five STEM Olympiad gold-medal-level results under no-tool conditions.
 - [2026-07-09] Muse Spark 1.1 launches on the new Meta Model API — Meta's first paid, metered model; AA Intelligence Index 51 (+8 vs 1.0); Arena #9 Code Arena: Frontend.
 - [2026-07-08] Muse Image launches in Meta AI, Instagram Stories, and WhatsApp; Muse Video previewed; AINews describes an agentic planning/tool-use/self-refinement generation loop.
-- [2026-06-24] Superhuman reports Meta Glasses launched with Muse Spark built in; secondary coverage only.
-- [2026-04-10] Page created from Meta's Muse Spark introduction post
 
 ## Sources
 
@@ -86,3 +89,8 @@ Reddit commenters flagged a striking long-context claim (MRCR 512k–1m at 98.1%
 - [AINews — Anthropic's Riemann Hypothesis bound improvement](../sources/newsletters/anthropic-riemann-hypothesis-2026-08-11.md)
 - [AINews — Poolside gets $12B reverse-execuhire to NVIDIA](../sources/newsletters/ainews-poolside-nvidia-2026-08-21.md)
 - [AINews — OpenAI reports Navier-Stokes singularity find](../sources/newsletters/ainews-navier-stokes-2026-09-09.md)
+- [AINews — Meta Connect 2026](../sources/newsletters/ainews-meta-connect-2026-09-24.md)
+- [AINews — Muse Spark 1.3 on Google Cloud and Oracle](../sources/newsletters/ainews-muse-spark-cloud-availability-2026-09-25.md)
+- [AINews — Meta launches Muse Wonder and Wonder Full](../sources/newsletters/ainews-muse-wonder-launch-2026-10-13.md)
+- [AINews — Meta releases Muse Spark Open](../sources/newsletters/ainews-muse-spark-open-2026-10-16.md)
+- [AINews — US open-weights push: Spark Open and Beam 1.0](../sources/newsletters/ainews-us-open-weights-push-2026-10-17.md)

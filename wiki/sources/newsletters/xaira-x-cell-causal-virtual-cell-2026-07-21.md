@@ -14,7 +14,7 @@ Latent Space's podcast summary with Xaira Therapeutics' Chief Discovery Officer 
 
 ## Influenced pages
 
-- [AI in Science](../../trends/ai-in-science.md) — new "Virtual cell models" section, positioned as a causal counterpoint to correlational RNA-expression models
+- [AI in Biology](../../trends/ai-in-biology.md) — new "Virtual cell models" section (moved from AI in Science in the 2026-10-21 split), positioned as a causal counterpoint to correlational RNA-expression models
 
 ## Key claims extracted
 

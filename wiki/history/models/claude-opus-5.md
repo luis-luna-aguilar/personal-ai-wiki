@@ -12,7 +12,7 @@ sources: [ainews-claude-opus-5-launch-2026-07-25, every-vibe-check-opus-5-2026-0
 
 Anthropic's new flagship, launched 2026-07-24, superseding [Claude Opus 4.8](claude-opus-4-8.md). Epoch's Capabilities Index puts it just behind Fable 5 (159 vs. 161) while tying Fable exactly on software-engineering capability (SWE-ECI 161 for both), at roughly half Fable's price. Practitioner reports are more divided than the benchmarks suggest: strong on hard coding and debugging grind, but harder to manage day-to-day than either Fable 5 or GPT-5.6 Sol.
 
-**Superseded by [Claude Opus 5.5](../../models/claude-opus-5-5.md), October 2026.**
+**Superseded by [Claude Opus 5.5](../../models/claude-opus-5-5.md), launched 2026-09-22.**
 
 ## Current status (as of 2026-07-28)
 

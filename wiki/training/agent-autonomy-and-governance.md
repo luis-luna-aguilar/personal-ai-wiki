@@ -3,8 +3,8 @@ title: Agent autonomy and governance
 type: training
 domains: [agents]
 tags: [agentic]
-as_of: 2026-10-11
-sources: [agents-evals-deep-research, mckinsey-agentic-org, ramp-ai-adoption-playbook, ai-for-boring-businesses, token-tightening-ai-finops-2026-06, every-ai-sandwich-april-2026, every-cheap-competence-after-automation-2026-05, every-33-questions-executives-2026-08-28, every-ai-adoption-levels, karpathy-capability-funnel-2026-10-11, satyanadella-models-as-insider-risks-2026-10-10]
+as_of: 2026-10-14
+sources: [agents-evals-deep-research, mckinsey-agentic-org, ramp-ai-adoption-playbook, ai-for-boring-businesses, token-tightening-ai-finops-2026-06, every-ai-sandwich-april-2026, every-cheap-competence-after-automation-2026-05, every-33-questions-executives-2026-08-28, every-ai-adoption-levels, karpathy-capability-funnel-2026-10-11, satyanadella-models-as-insider-risks-2026-10-10, latent-space-crossing-the-threshold-2026-10-14, anthropic-human-agent-teams-2026-10]
 ---
 
 # Agent autonomy and governance
@@ -72,9 +72,21 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - **Exploration budget, then governance.** Removing token caps and access restrictions gives people room to discover high-leverage use cases before ROI is obvious — treat this as the deliberate first phase, with token allocation as governance (see [Cost-aware AI task routing](cost-aware-ai-task-routing.md)) as the second phase once a workflow's value is established, not a contradiction to resolve.
 - **Reward outcomes, not AI usage.** Teams stall or drift when "used AI" becomes the goal; quality and throughput improvements are the only metrics that matter.
 - **Trust battery with judge agent.** Grant autonomy incrementally, tied to demonstrated reliability rather than elapsed time — see [AI adoption: evidence from practice](ai-adoption-evidence.md) for the concrete Claudie mechanism (nightly judge agent, starting trust percentage, self-updating memory).
+- **Widen autonomy per task type, with verification built in.** Anthropic's teams (Oct 2026) track which kinds of task each agent has earned autonomy on and widen scope one type at a time after repeated successes. They review all agent work by hand at first and turn that feedback into verification checklists, have a separate verifier agent check the doer's work, and ask agents for a weekly "lessons & missteps" report. As agents grow more independent, they are coached to treat human attention as scarce: batch questions into one pass, restate key context, limit how many items a person sees at once; some teams cap agent output per day so review stays sustainable. Retest tasks when models change, since old guardrails can hold a stronger model back. One engineering team reached agents handling 500 bug fixes independently this way.
 - **Keep humans at the judgment boundary.** As AI fills in the middle of workflows, employees need stronger habits for framing, taste, coordination, and review rather than only faster execution tactics.
 - **Split governance ownership explicitly.** A central AI team should own standards, security and vendor decisions, shared infrastructure, and the first few working examples; individual business teams should own their own workflows. Centralizing everything creates a bottleneck; leaving every team to build alone creates sprawl.
 - **Measure at the workflow level, never by a single metric.** Track cycle time, output quality, error/rework rate, user satisfaction (e.g. NPS), and traditional cost-benefit business impact — and track reuse of shared skills as a leading indicator. Establish a pre-AI baseline (time, quality standard, cost, common mistakes) before claiming a workflow improved.
+
+### Place controls where they enable autonomy
+
+Finance practitioners at AI Engineer New York (October 2026) argued that safe autonomy depends on where controls and human judgment sit, not on how many approvals are added.
+
+- **Approval fatigue is a risk, not a safeguard.** A person asked to approve everything slows the work and stops paying attention to the decisions that matter (John Feminella, Two Sigma).
+- **Route by case type.** Classifiers settle routine calls and escalate only consequential or ambiguous ones to a person; deterministic rules handle clear-cut cases. Two Sigma runs this as one of five composable controls, each doing one job.
+- **Propose, don't act, at the boundary.** Anthropic's trade-break investigation agent proposes order amendments for a human to approve and never writes them itself.
+- **Build one trust layer, then deploy many agents.** Anthropic's three parts: identity and permissions (whom the agent acts as), a sandbox and approval layer (who signs off before it acts), and regression checks (does it still work when variables change).
+- **Keep enforcement outside the model.** Bloomberg's incident list, including an agent that obeyed instructions hidden in a marketplace review and stocked a product, leads to scoped credentials, tool-call checks, egress limits, audit logs, budgets, and kill switches, plus input validation and provenance tracking. This is the practitioner form of the insider-risk principles below.
+- **Treat human-in-the-loop as product design.** OpenAI's Joseph Kim: decide what the user must still control, review, or approve, and build traceability (where each number came from) into the interface.
 
 ### Treat the model as an insider risk
 
@@ -97,7 +109,9 @@ This complements the autonomy ladder above: the ladder decides how much authorit
 
 - [2026-10-19] Added Every's 8-level adoption maturity model from [Company-wide AI enablement](company-wide-ai-enablement.md), merged with the AI-fluency ladder that described the same framework.
 - [2026-10-19] Page created, split out of [Company-wide AI enablement](company-wide-ai-enablement.md): its "Autonomy ladder" and "Humans in the loop vs. above the loop" sections and the "Governance, autonomy, and reliability" proven-patterns group.
+- [2026-10-14] Added "Place controls where they enable autonomy" from AIE NYC finance keynotes: approval fatigue, classifier-versus-rule routing (Two Sigma), propose-not-act and a three-part trust layer (Anthropic), deterministic controls outside the model (Bloomberg), HITL as product design (OpenAI).
 - [2026-10-11] Added Karpathy's capability funnel (≈75% barely touched LLMs, ≈20% casual free-tier, ≈0.2% professional frontier-agent users) and its three drivers as the population-scale counterpart to Every's "where people sit".
+- [2026-10-10] Added "Widen autonomy per task type, with verification built in" from Anthropic's lessons on human-agent teams (verifier agents, weekly lessons-and-missteps reports, human-attention budgets).
 - [2026-10-10] Added "Treat the model as an insider risk": Satya Nadella's external-control principles (model diversity, observe everything, verifiability, independent controls and audit, containment, incident disclosure).
 
 ## Related
@@ -121,3 +135,5 @@ This complements the autonomy ladder above: the ladder decides how much authorit
 - [AI Is Ready. Organizations Aren''t." — Every (June 7)](../sources/newsletters/every-ai-adoption-levels.md)
 - [Andrej Karpathy on X — the LLM capability funnel](../sources/tweets/karpathy-capability-funnel-2026-10-11.md)
 - [Satya Nadella — Models as Insider Risks in the Super Intelligence Era](../sources/tweets/satyanadella-models-as-insider-risks-2026-10-10.md)
+- [Latent Space — Crossing the Threshold: autonomy and safety in financial agents](../sources/newsletters/latent-space-crossing-the-threshold-2026-10-14.md)
+- [Lessons from Anthropic on building effective human-agent teams](../sources/articles/anthropic-human-agent-teams-2026-10.md)

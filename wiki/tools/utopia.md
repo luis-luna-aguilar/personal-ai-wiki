@@ -39,7 +39,7 @@ Enterprise world model (DeepLethe's marketing term), bitemporal knowledge graph,
 - [2026-09-09] Page created from the project's GitHub README (no dated release event in the source).
 
 ## Related
-- [Knowledge architectures](../concepts/knowledge-architectures.md) — the hub that places this product on the ontology row and pins "enterprise world model" as a marketing alias
+- [Knowledge architectures](../concepts/knowledge-architectures.md) — the hub that places this product on the ontology row and pins "enterprise world model" as a marketing alias on its [term map](../concepts/knowledge-term-map.md)
 - [Ontologies as agent guardrails](../concepts/ontology-agent-guardrails.md) — the formal-ontology-as-guardrail concept this tool implements concretely, including a working "execution gate" roadmap item that checks agent calls against ontology rules
 - [Company brain](../concepts/company-brain.md) — Zep/Graphiti's "knowledge graph with a clock" in the company-brain survey is the same bitemporal idea at a different scope
 

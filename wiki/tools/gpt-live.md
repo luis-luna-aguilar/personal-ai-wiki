@@ -4,16 +4,18 @@ type: tool
 domains: [voice, agents]
 subcategory: voice-models
 tags: [openai, closed-source, agentic]
-as_of: 2026-08-05
-sources: [gpt-live-launch-2026-07, bfl-flux-3-2026-07-24, chatgpt-voice-mode-vibe-check-2026-08-05]
+as_of: 2026-10-16
+sources: [gpt-live-launch-2026-07, bfl-flux-3-2026-07-24, chatgpt-voice-mode-vibe-check-2026-08-05, xai-grok-voice-3-2026-10-14, ainews-gpt-live-1-1-2026-10-16]
 ---
 
 # GPT-Live
 
 GPT-Live is OpenAI's full-duplex voice model family for natural human-AI interaction. It powers the new ChatGPT Voice experience and is designed to listen and speak at the same time instead of forcing rigid turn-taking.
 
-## Current status (as of 2026-08-05)
+## Current status (as of 2026-10-16)
 
+- GPT-Live-1.1 (2026-10-16) adds multilingual voices and cuts filler; rolling out to ChatGPT, Codex, and dots, with the API to follow.
+- On Artificial Analysis's Speech-to-Speech Index, GPT-Live-1 (Astra, Medium) scores 83.2, second to [Grok Voice](grok-voice.md) 3.0 (86.9); it still edges Grok on τ-Voice support-call success (74.5% vs 71.6%) but at higher latency and cost per task.
 - Desktop app rollout (2026-07-22) adds computer-control and cross-app coordination across ChatGPT Work and Codex, alongside the existing mobile/web full-duplex experience.
 - Rolling out globally to ChatGPT on iOS, Android, and ChatGPT.com.
 - **GPT-Live-1** becomes the default ChatGPT Voice model for Go, Plus, and Pro users.
@@ -44,6 +46,7 @@ OpenAI says GPT-Live adds audio-native safety tests, generated-audio synthetic e
 
 ## Recent changes
 
+- [2026-10-16] GPT-Live-1.1: multilingual voices and less filler, rolling out to ChatGPT, Codex, and dots; API later. GPT-Live-1 now ranks second on AA's Speech-to-Speech Index (83.2), behind Grok Voice 3.0 (2026-10-14).
 - [2026-08-05] Independent week-long trial (Every) finds strong read-and-ask/codebase workflows but real gaps: cross-device/thread context, ambient-speech filtering, and latency.
 - [2026-07-22] Desktop app rollout: ChatGPT Voice can now control the computer and coordinate work across ChatGPT Work and Codex.
 - [2026-07-07] GPT-Live-1 and GPT-Live-1 mini launched in ChatGPT Voice globally; API access planned.
@@ -53,3 +56,5 @@ OpenAI says GPT-Live adds audio-native safety tests, generated-audio synthetic e
 - [Introducing GPT-Live](../sources/articles/gpt-live-launch-2026-07.md)
 - [AINews — Black Forest Labs FLUX 3](../sources/newsletters/bfl-flux-3-2026-07-24.md)
 - [Mini-Vibe Check: ChatGPT Voice Mode](../sources/newsletters/chatgpt-voice-mode-vibe-check-2026-08-05.md)
+- [Introducing Grok Voice 3.0 (x.ai)](../sources/articles/xai-grok-voice-3-2026-10-14.md)
+- [AINews — GPT-Live-1.1 (Oct 16)](../sources/newsletters/ainews-gpt-live-1-1-2026-10-16.md)

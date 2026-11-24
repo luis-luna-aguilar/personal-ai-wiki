@@ -3,8 +3,8 @@ title: Agent skill methodology
 type: training
 domains: [agents]
 tags: [perplexity, agentic]
-as_of: 2026-09-03
-sources: [perplexity-agent-skill-methodology-2026-05-12, agent-html-artifacts-2026-05-13, agent-skills-context-evals-2026-05-13, skill-engineering-impeccable-2026-07-02, vercel-agents-new-software-2026-07-03, autoresearch-agent-recipes-2026-07, powerpoint-agent-skill-failure-mode-2026-06, gpt-56-raising-concerns-2026-07-15, case-against-skills-2026-07-16, swe-skills-bench-2026-07, wayfinder-skill-2026-08-20, every-cloning-your-coworkers-2026-08-26, skills-and-plugin-packaging-late-march, harness-engineering-early-april, googlecloudtech-adk-2-orchestration-patterns, ainews-andrew-ng-ai-engineering-2026-08-25, ainews-openai-shuts-off-cursor-2026-08-29, ainews-muse-spark-13-2026-09-03]
+as_of: 2026-10-26
+sources: [perplexity-agent-skill-methodology-2026-05-12, agent-html-artifacts-2026-05-13, agent-skills-context-evals-2026-05-13, skill-engineering-impeccable-2026-07-02, vercel-agents-new-software-2026-07-03, autoresearch-agent-recipes-2026-07, powerpoint-agent-skill-failure-mode-2026-06, gpt-56-raising-concerns-2026-07-15, case-against-skills-2026-07-16, swe-skills-bench-2026-07, wayfinder-skill-2026-08-20, every-cloning-your-coworkers-2026-08-26, skills-and-plugin-packaging-late-march, harness-engineering-early-april, googlecloudtech-adk-2-orchestration-patterns, ainews-andrew-ng-ai-engineering-2026-08-25, ainews-openai-shuts-off-cursor-2026-08-29, ainews-muse-spark-13-2026-09-03, claude-api-build-eval-hillclimb]
 ---
 
 # Agent skill methodology
@@ -93,6 +93,7 @@ Every's head of operations, Arielle Shipper, keeps a standing "self-improve" ski
 - Vercel's eve interview frames skills as a way to keep agents current when model training data contains stale product knowledge.
 - Impeccable coverage shows the same pattern applied to design agents: encode design vocabulary and constraints as reusable skills rather than relying on one-shot taste prompts.
 - The instruction layer is a real quality lever: a T3 Code team reported that fine-tuning its `agents.md`/`claude.md` instruction files measurably improved pull-request quality, with the largest gain coming from better PR names and descriptions rather than the underlying code generation (late August 2026).
+- **Training priors can override the skill.** Hill-climbing Anthropic's claude-api skill against a docs-derived eval took it from 66% to 88%. Adding eight missing features and fixing C#/Java type tables got it to 77%. Sorting the remaining failures by cause then showed the skill already had the right content, but Claude kept writing older API shapes it remembered from training (fixed-budget extended thinking instead of adaptive thinking, old web-search and web-fetch tool versions). A "remembered form → current form" table near the top of the skill fixed most of it. The same sort exposed tasks whose graders contradicted the docs, which were fixed rather than climbed against.
 
 ## What the benchmarks say
 
@@ -112,6 +113,7 @@ The SkillsBench harness is open-source, so a team can run these same comparisons
 
 ## Recent changes
 
+- [2026-10-26] Added the claude-api skill hill-climb (66% → 88%): a model can ignore current guidance in favour of training priors; a remembered-to-current mapping table near the top fixed it.
 - [2026-10-19] Merged in skill material from two over-long pages: from [Agentic orchestration patterns](../workflows/agentic-orchestration-patterns.md), "share skills, not just code", "thin harness, fat skills, fat code", composable progressive disclosure, and the note that "skill" means different things across ecosystems; from [Harness (agent)](../concepts/harness.md), NVIDIA's Skill Lift metric, the Retrieval-Invoked Actual-Use Effect paper, and T3 Code's instruction-file fine-tuning result.
 - [2026-08-26] Added a personal self-improve-skill pattern (Arielle Shipper, Every): feed the agent feedback on a mistake, then run a skill that proposes a targeted edit to the agent's own operating instructions — the same compounding mechanism as team-facing skills, run by one person on their own workflow.
 - [2026-08-20] Added /wayfinder: a map/persistent-decisions + per-session-ticket pattern for planning work under uncertainty, plus "leading words"/ubiquitous-language as a terminology-design principle (Matt Pocock).
@@ -153,3 +155,4 @@ The SkillsBench harness is open-source, so a team can run these same comparisons
 - [AINews — Andrew Ng gets into AI Engineering](../sources/newsletters/ainews-andrew-ng-ai-engineering-2026-08-25.md)
 - [AINews — OpenAI shuts off Cursor](../sources/newsletters/ainews-openai-shuts-off-cursor-2026-08-29.md)
 - [AINews — Muse Spark 1.3 matches GPT-5.6-Sol](../sources/newsletters/ainews-muse-spark-13-2026-09-03.md)
+- [Anthropic — Automating eval design and hillclimbing with Claude](../sources/articles/claude-api-build-eval-hillclimb.md)

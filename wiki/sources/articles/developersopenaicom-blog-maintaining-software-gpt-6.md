@@ -18,7 +18,7 @@ An engineer on OpenAI's Core Experimentation team describes using GPT-6 Astra an
 - [Codex](../../tools/codex.md) — maintenance-pass usage pattern
 - [Engineering AI adoption: evidence from practice](../../training/engineering-ai-adoption-evidence.md) — OpenAI maintenance case study
 - [AI enablement — software development](../../training/ai-enablement-software-development.md) — agent-driven maintenance pattern
-- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — model/effort cost-per-finding comparison
+- [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — model/effort cost-per-finding comparison
 
 ## Key claims extracted
 

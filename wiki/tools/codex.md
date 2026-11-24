@@ -5,20 +5,21 @@ domains: [coding, agents, cybersecurity, computer-use]
 subcategory: terminal-coding-agent
 tags: [openai, closed-source, agentic]
 as_of: 2026-10-19
-sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026, openai-gpt-5-5-launch, superhuman-2026-04-23, codex-broader-computer-work-2026-04-24, codex-for-work-2026-05-01, symphony-devin-terminal-orchestration-2026-04-28, openai-daybreak-2026-05-13, codex-mobile-may-2026, codex-adoption-ecosystem-2026-05, codex-maxxing-jxnl-2026-05, codex-zoom-mobile-2026-05, codex-general-work-agents-2026-07, every-urge-to-merge-2026-07-14, ainews-devin-fusion-router-moat-2026-07-14, chatgpt-work-launch-2026-08-04, unsloth-desktop-chatgpt-linux-2026-08-12, developersopenaicom-blog-maintaining-software-gpt-6]
+sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026, openai-gpt-5-5-launch, superhuman-2026-04-23, codex-broader-computer-work-2026-04-24, codex-for-work-2026-05-01, symphony-devin-terminal-orchestration-2026-04-28, openai-daybreak-2026-05-13, codex-mobile-may-2026, codex-adoption-ecosystem-2026-05, codex-maxxing-jxnl-2026-05, codex-zoom-mobile-2026-05, codex-general-work-agents-2026-07, every-urge-to-merge-2026-07-14, ainews-devin-fusion-router-moat-2026-07-14, chatgpt-work-launch-2026-08-04, unsloth-desktop-chatgpt-linux-2026-08-12, developersopenaicom-blog-maintaining-software-gpt-6, ainews-codex-cloud-environments-2026-09-30, weinstein-computer-use-180-degrees-2026-09-30, ainews-openai-devday-2026-dots-2026-09-30, every-sam-altman-dots-ultrafast-2026-09-30, ainews-devday-agent-stack-recap-2026-10-01, every-vibe-check-openai-devday-2026-09-29, ainews-openai-capacity-squeeze-codex-pledge-2026-10-06, ainews-codex-windows-sandbox-2026-10-10]
 ---
 
 # Codex
 
 OpenAI's cloud-based agent surface, accessed via CLI, ChatGPT, and mobile. It started as a coding agent, but current product direction is expanding into a broader computer-work system that can operate across code, browser flows, documents, spreadsheets, inboxes, CRM cleanup, healthcare coordination, meeting notes, and repeatable knowledge-work tasks.
 
-## Current status (as of 2026-08-12)
+## Current status (as of 2026-10-09)
 
 - Cloud-based agent surface accessed via CLI, ChatGPT, and mobile; product direction has broadened from coding into general computer-work (browser, docs, sheets, inbox, CRM, meeting notes)
 - Folded into the ChatGPT desktop "superapp" since 2026-07-14 (Chat/Work/Codex modes); usage estimated at 6-7M+ users, roughly 10x year-to-date growth despite a rocky rollout (see Recent changes)
 - Powered by GPT-5.5 with a 400K context window and a Fast mode trading cost for speed; OpenAI reports 85%+ internal weekly usage
 - Supports subagents, usage-based pricing on Business/Enterprise, and PR code review via ChatGPT subscription ("@codex review this")
 - Mobile app, Remote SSH, CI/CD hooks, and scoped tokens extend it beyond interactive terminal sessions
+- DevDay (2026-09-29): Codex cloud environments keep running with the laptop closed; refreshed CLI with worktrees and `/agents`; Security Cloud; **Ultrafast** mode, up to 8x faster generation (about 300 tok/s) at 6x the price, which SemiAnalysis says runs on NVIDIA GPUs at low batch size, not Cerebras. A Windows sandbox built on Microsoft Execution Containers followed on 2026-10-09. Dots ([ChatGPT dots](chatgpt-dots.md)) hand bug triage, failing builds and PRs to Codex.
 - Dedicated subsystems below: Workspace Agents (shareable team agents), Codex Chronicle (ambient screen memory), and ChatGPT Work's persistent microVM architecture
 
 ## Workspace Agents (as of 2026-04-23)
@@ -59,11 +60,13 @@ Not just a preview pane: it's where the artifact lives and where annotation + ac
 **Maintenance passes (OpenAI Core Experimentation, October 2026)**
 OpenAI's own experimentation team runs codebase maintenance through Codex with short, open prompts ("find code that is never reached, prove it, and remove it") rather than hand-built static analysis. The model gathers evidence first (past PRs, Slack threads, project trackers, production profiling) and explains each deletion; anything risky, such as a widely-used "Permanent" feature flag, goes to human review. The team's recipe: start with one small task, compare model and effort settings, fold review comments back into the prompt, then widen to a subdirectory or project. See [GPT-6 Astra](../models/gpt-6-astra.md) for the results.
 
-## Pricing (as of 2026-04-21)
+## Plans and capacity (as of 2026-10-06)
 
-- **Plus** ($20/mo) — baseline Codex usage included
-- **Pro** ($100/mo, new) — 5× Codex usage over Plus, exclusive Pro model, unlimited Instant and Thinking models
-- **Launch promo:** up to 10× Plus-level Codex usage for Pro subscribers through 2026-05-31
+- **Re-tiering at DevDay:** Plus 1x, Pro $100 5x, Pro $200 10x, and a new Pro $500 25x. That roughly halves the old Pro $200's value and drew heavy backlash. Ultrafast in Codex and ChatGPT is limited to the $500 tier and eligible Enterprise/Edu plans.
+- **Sign in with ChatGPT:** plan quota can be spent in about 15 partner apps, including Devin, T3 Code, Nous Portal/Hermes, OpenCode, Pi and Amp.
+- **Capacity squeeze (early October):** new $200 sign-ups were reportedly paused and limits effectively halved. SemiAnalysis's limit test found Claude subscriptions deliver 5x+ more API-equivalent value than OpenAI plans.
+- **Response:** on 2026-10-05 Codex lead Tibo pledged an improvement or a full reset every day for 28 days. Day one raised default speed for GPT-6 Astra and GPT-6.1 Sol by about 50% (about 30 to 50 tok/s) across subscriptions and Sign in with ChatGPT partners.
+- **Sentiment:** Altman says he only prompts on Ultrafast because the speed changes his iteration loop. DHH says GPT-6.1 Sol made Codex his primary tool over Claude.
 
 ## Codex Chronicle (as of 2026-04-21)
 
@@ -88,15 +91,15 @@ A detailed independent teardown of Work — the ChatGPT mode OpenAI folded Codex
 ## Recent changes
 
 - [2026-10-19] Added OpenAI's maintenance-pass pattern: short evidence-first prompts for dead code, stale experiments and CI cost, run on GPT-6 Astra and GPT-6.1 Sol in Codex.
+- [2026-10-09] Windows sandbox mode built on Microsoft Execution Containers (faster setup, network enforcement, granular file controls); Pro-only composer predictions in beta; DHH switches to Codex as his primary tool.
+- [2026-10-05] Capacity squeeze after DevDay: new $200 sign-ups reportedly paused and limits cut; Tibo pledges a Codex improvement or reset every day for 28 days, starting with a ~50% default speed increase.
+- [2026-09-30] Codex cloud environments keep sessions running with the laptop closed, alongside a refreshed Codex CLI with worktrees and `/agents` (per AINews); see [Agent runtime platforms](../concepts/agent-runtime-platforms.md).
+- [2026-09-30] Computer use in Codex now writes JavaScript that performs many actions per step and reads accessibility trees and the DOM instead of only screenshots; App Shots (double Command press) bring an app's full accessibility representation into a chat. OpenAI says GPT-6.1 Sol runs computer use at ~1/7 of Astra's cost, and the same implementation is now in the Agents API.
+- [2026-09-29] DevDay: Security Cloud, Ultrafast (up to 8x faster at 6x price), Sign in with ChatGPT for partner apps, and plan re-tiering with a new $500 Pro tier.
 - [2026-08-12] ChatGPT desktop app ships for Linux in preview (Ubuntu, Debian, Fedora; x64/ARM64); the desktop app can now import and sync projects, chats, skills, and plugins from other agents into ChatGPT Work and Codex with automatic updates — read as an effort to cut agent-switching friction and make Codex/Desktop an integration hub.
 - [2026-08-04] Independent architecture teardown of ChatGPT Work: persistent cloud microVM specs, deliberate split between agent-owned scratch space and product-managed continuity (Personal Context/Library/Projects), browser-service tool-call model, two-tier Scheduled Tasks, Plugin Directory discovery gap, and 10M-user milestone three weeks post-launch.
 - [2026-07-14] OpenAI folded Codex into a new ChatGPT desktop "superapp" (Chat/Work/Codex modes); power users pushed back hard, but usage estimates put Codex around 6-7M users by mid-July, roughly 10x growth year-to-date.
 - [2026-07-11] Rollout friction: 36-plus model/effort configuration combinations drew complaints; OpenAI ran multiple usage-limit resets and rolled the context limit back from 372K to 272K.
-- [2026-07-01] Every frames Codex as a general-purpose workspace agent for inbox, CRM, healthcare coordination, writing, meeting-note, and personal knowledge workflows.
-- [2026-05-19] Zoom plugin (meeting-to-task context handoffs), keep-Mac-awake for long-running remote sessions, additional mobile remote-execution improvements
-- [2026-05-16] 4M+ WAU, 5× messages/user, 1M+ app downloads; Ollama Codex support; MagicPath canvas; /goal as portable MCP; Zed subscription parity; VS Code/Copilot team confirms harness-over-model thesis
-- [2026-05-15] Mobile preview in ChatGPT app: steer Codex sessions from iOS/Android while agent runs on devbox; Remote SSH GA; CI/CD hooks; scoped tokens; 30-day enterprise switch promo (2 months free)
-- [2026-05-10] Codex-maxxing usage patterns (jxnl): durable threads, Heartbeats (thread-local scheduling), Goals with verification criteria, memory as files (vault + AGENTS.md), $browser/@chrome/@computer, side panel as live work surface
 
 ## Sources
 
@@ -121,3 +124,11 @@ A detailed independent teardown of Work — the ChatGPT mode OpenAI folded Codex
 - [ChatGPT Work architecture teardown](../sources/newsletters/chatgpt-work-launch-2026-08-04.md)
 - [Local AI tooling: Unsloth Desktop, ChatGPT desktop for Linux](../sources/newsletters/unsloth-desktop-chatgpt-linux-2026-08-12.md)
 - [OpenAI Developers — Maintaining software with the GPT-6 family](../sources/articles/developersopenaicom-blog-maintaining-software-gpt-6.md)
+- [AINews — Codex cloud environments](../sources/newsletters/ainews-codex-cloud-environments-2026-09-30.md)
+- [Ari Weinstein: computer use is "180 degrees different"](../sources/newsletters/weinstein-computer-use-180-degrees-2026-09-30.md)
+- [AINews — OpenAI DevDay 2026: dots and platform changes](../sources/newsletters/ainews-openai-devday-2026-dots-2026-09-30.md)
+- [Every — Vibe Check: OpenAI DevDay 2026](../sources/newsletters/every-vibe-check-openai-devday-2026-09-29.md)
+- [Every — How Sam Altman uses dots to take back his time](../sources/newsletters/every-sam-altman-dots-ultrafast-2026-09-30.md)
+- [AINews — DevDay agent stack recap](../sources/newsletters/ainews-devday-agent-stack-recap-2026-10-01.md)
+- [AINews — OpenAI capacity squeeze and the Codex 28-day pledge](../sources/newsletters/ainews-openai-capacity-squeeze-codex-pledge-2026-10-06.md)
+- [AINews — Codex Windows sandbox and DHH's switch](../sources/newsletters/ainews-codex-windows-sandbox-2026-10-10.md)

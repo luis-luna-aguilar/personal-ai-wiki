@@ -14,7 +14,7 @@ domains: [science]
 A Latent Space podcast with Chai Discovery cofounder Matt McPartlon and product lead Neil Patil on how the two-year-old, OpenAI-backed binding-model startup reached a $4B valuation and four major 2026 pharma tools deals (Lilly, Novartis, argenx, an expanded Eli Lilly program), driven by a shift from structural to binding models and a CAD-style "Photoshop for molecules" product strategy.
 
 ## Influenced pages
-- [AI in Science](../../trends/ai-in-science.md) — new AI-native drug design subsection and Current status bullet
+- [AI in Biology](../../trends/ai-in-biology.md) — new AI-native drug design subsection (moved from AI in Science in the 2026-10-21 split) and Current status bullet
 
 ## Key claims extracted
 - Chai Discovery valued at $4B as of 2026-08-11, two years after founding

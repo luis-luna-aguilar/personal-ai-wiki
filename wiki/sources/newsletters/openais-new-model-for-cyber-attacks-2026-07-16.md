@@ -17,7 +17,7 @@ A multi-story AI newsletter dated 2026-07-16, covering Bun's Zig-to-Rust rewrite
 - [Training — AI enablement (software development)](../../training/ai-enablement-software-development.md) — corrected Bun rewrite figures, new adversarial-review case-study entry
 - [Grok Build](../../tools/grok-build.md) — incident/resolution caveat, open-source bullet, Recent changes
 - [State of Cybersecurity](../../state-of/cybersecurity.md) — new AI-specific attack surface bullet and new GPT-Red entry under AI security tooling, Recent changes
-- [GPT-5.6 Sol](../../models/gpt-5-6-sol.md) — Recent-changes entry for the GPT-Red adversarial-training result
+- [GPT-5.6 Sol](../../history/models/gpt-5-6-sol.md) — Recent-changes entry for the GPT-Red adversarial-training result
 - [Engineering AI adoption: evidence from practice](../../training/engineering-ai-adoption-evidence.md) — Bun rewrite case study (moved from AI enablement — software development)
 
 ## Key claims extracted

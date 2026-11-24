@@ -15,7 +15,7 @@ Flat agent swarms fail even when the concurrency mechanics work: Cursor's first-
 
 [[#Open questions|Open questions: none.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 "Scaling long-running autonomous coding" is Cursor's first post on running hundreds of coding agents on one project for weeks; the later "Towards self-driving codebases", already in the wiki, builds on it.

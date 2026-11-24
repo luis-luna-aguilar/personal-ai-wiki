@@ -4,19 +4,20 @@ type: tool
 domains: [agents]
 subcategory: agent-orchestration
 tags: [xai, agentic]
-as_of: 2026-09-05
-sources: [ainews-spacexai-grok-46-and-grok-bot-2026-08-13, latent-space-grok-bot-openclaw-2026-09-05]
+as_of: 2026-09-24
+sources: [ainews-spacexai-grok-46-and-grok-bot-2026-08-13, latent-space-grok-bot-openclaw-2026-09-05, every-grok-47-mini-vibe-check-2026-09-24]
 ---
 
 # Grok Bot
 
-xAI's (SpaceXAI) entry into the AI-teammate/multiplayer-agent category, launched 2026-08-13 alongside its underlying model, [Grok 4.6](../models/grok-4-6.md). Described as "AI teammates with their own cloud computers": agents that can log into tools, watch Slack and GitHub Actions, run scheduled routines, and spawn other bots. Positioned against Anthropic's Claude Tag; AINews read the strength of early reviews as validation that the AI-teammate space is the next major agent-product battleground.
+xAI's (SpaceXAI) entry into the AI-teammate/multiplayer-agent category, launched 2026-08-13 alongside its underlying model, [Grok 4.6](../history/models/grok-4-6.md). Described as "AI teammates with their own cloud computers": agents that can log into tools, watch Slack and GitHub Actions, run scheduled routines, and spawn other bots. Positioned against Anthropic's Claude Tag; AINews read the strength of early reviews as validation that the AI-teammate space is the next major agent-product battleground.
 
-## Current status (as of 2026-09-05)
+## Current status (as of 2026-09-24)
 
-- Runs on Grok 4.6; launched the same day to what AINews describes as "very positive reviews"
+- Launched alongside Grok 4.6 to what AINews describes as "very positive reviews"
 - Core capabilities per the launch coverage: persistent cloud compute per bot, tool/service login, monitoring of Slack and GitHub Actions, scheduled routines, and bot-spawning
 - Tied to the Cursor↔SpaceX/xAI relationship — the same team that shipped Grok 4.5 co-trained with Cursor
+- Now runs on [Grok 4.7](../models/grok-4-7.md) (released 2026-09-21); Every's heaviest Grok user reports the bot improved after the switch, needing one-line requests instead of repeated corrections
 
 ## Hands-on review (as of 2026-09-05)
 
@@ -35,6 +36,7 @@ A new named entrant to the AI-teammate/multiplayer-agent category the wiki alrea
 
 ## Recent changes
 
+- [2026-09-24] Switched to Grok 4.7; Every's mini Vibe Check reports fewer corrections needed.
 - [2026-09-05] Latent Space's five-day hands-on review: near-zero-setup connectors, Bot-as-atomic-unit design, shared-computer/session caveat (org boundary, not security boundary), and a "useful for shallow work, not deep implementation" verdict.
 - [2026-08-13] Launched alongside Grok 4.6: "AI teammates with their own cloud computers," positioned against Claude Tag
 
@@ -42,3 +44,4 @@ A new named entrant to the AI-teammate/multiplayer-agent category the wiki alrea
 
 - [AINews — SpaceXAI Grok 4.6 and Grok Bot](../sources/newsletters/ainews-spacexai-grok-46-and-grok-bot-2026-08-13.md)
 - [Latent Space — OpenClaw Power, MacBook Simplicity: Five Days With Grok Bot](../sources/newsletters/latent-space-grok-bot-openclaw-2026-09-05.md)
+- [Every — Mini Vibe Check: Grok 4.7](../sources/newsletters/every-grok-47-mini-vibe-check-2026-09-24.md)

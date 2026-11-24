@@ -38,3 +38,11 @@
 ## Archived from current page on 2026-09-09
 
 - [2026-07-28] The OpenAI–Hugging Face agentic-misalignment entry (previously thin and unconfirmed as of 2026-07-21) is now confirmed: full exploit chain to RCE on Hugging Face servers, Reuters' "schemer" follow-up, and Hugging Face's Delangue publicly asking OpenAI for transcripts and $100M in defense compute.
+
+## Archived from current page on 2026-11-23
+
+- [2026-08-05] Added an npm preinstall-stealer supply-chain campaign (868 packages, 2B+ monthly installs, multi-credential harvesting, maintainer-to-maintainer propagation) to AI developer supply chain attacks; thinly sourced (secondary AINews recap) and not confirmed to specifically target AI/ML tooling.
+- [2026-08-12] Added reasoning-trace leakage as a new AI-specific attack surface: encrypted/signed CoT from Claude, GPT, and Gemini can be decoded and replayed onto a different model/session/user; a scan of ~7,000 public traces found 62 API keys, 33 emails, and 33 passwords hidden inside reasoning blocks alone.
+- [2026-08-11] OpenAI launched GPT-5.6-Cyber under an expanded Daybreak initiative, restricted to approved defenders; cited real-world use finding previously-unknown bugs including in Chrome V8.
+- [2026-08-08] OpenAI classified its forthcoming Astra model as unable to rule out Critical cyber capability under its Preparedness Framework, pausing internal activities pending strengthened controls.
+- [2026-08-28] OpenAI publishes a cyber-defense open letter co-signed by 116 organizations (Anthropic, AWS, Google, Microsoft, Oracle) calling for a coordinated industry surge against AI-enabled attacks.

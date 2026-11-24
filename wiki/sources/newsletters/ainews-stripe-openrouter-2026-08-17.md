@@ -17,7 +17,7 @@ AINews's 2026-08-17 issue leads with Stripe's reported $7B acquisition of OpenRo
 
 - [OpenRouter](../../tools/openrouter.md) — new page
 - [Glean](../../tools/glean.md) — new page, cites the OpenRouter deal as context for enterprise model-routing economics
-- [Cost-aware AI task routing](../../training/cost-aware-ai-task-routing.md) — new Evidence-from-practice bullet
+- [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — new Evidence-from-practice bullet
 - [Cursor](../../tools/cursor.md) — Origin git-hosting launch bullet
 - [Qwen 3.8 27B](../../models/qwen-3-8-27b.md) — local-momentum signal
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Qwen3.8-27B momentum signal

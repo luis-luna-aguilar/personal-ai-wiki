@@ -60,6 +60,7 @@ page_length:
     tool:      1500
     benchmark: 1500
     use-case:  1500
+    robotics:  1500
     workflow:  2000
     state-of:  2000
     training:  2500
