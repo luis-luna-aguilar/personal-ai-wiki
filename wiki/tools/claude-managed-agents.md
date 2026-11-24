@@ -22,29 +22,11 @@ Anthropic's core idea is that these pieces should be decoupled so the system can
 
 ## Current status (as of 2026-10-12)
 
-- Public beta service on the Claude Platform for long-running agents
-- Official launch framing: developers specify tasks and tools while Anthropic handles orchestration, permissions, and sandboxing
-- Handles agent infrastructure primitives including sessions, memory, tool use, and credentials
-- Anthropic is simultaneously expanding adjacent agent surfaces: custom agents inside Claude for packaged recurring jobs, and longer-running monitor/loop patterns in Claude Code
-- Core abstractions in the post: `session`, `harness`, `sandbox`
-- Harness is decoupled from the execution container and calls tools through a generic interface like `execute(name, input) -> string`
-- Session lives outside the harness as an append-only event log and can be resumed with operations like `wake(sessionId)`, `getSession(id)`, `emitEvent(id, event)`, and `getEvents()`
-- Sandboxes are provisioned on demand instead of being assumed to exist for every session from the start
-- Designed to connect Claude to customer infrastructure, including resources in a customer's own VPC
-- Supports MCP-backed tools with OAuth credentials stored outside the sandbox in a secure vault
-- Every reports that Spiral used the service to spin up a new agent in a few hours; the cited benefit was less custom infrastructure maintenance, not just faster initial coding
-- **Every Agent in production (October 2026):** Every built @Every, one Slack agent shared by the whole company, on CMA after a month of self-hosting a single agent persuaded it not to run its own infrastructure. Each Slack thread is one session on a VM billed at 8 cents an hour while running; memory is folders of notes the agent reads at session start; app calls pause the agent and are made by Every's servers with the asking user's own login, so the agent never holds a credential.
-- Existing agents can be updated through the dashboard by changing the system prompt or underlying model and saving
-- Built-in memory is now in public beta: memories are mounted as files on the agent filesystem instead of hidden inside a proprietary opaque memory layer
-- Memory stores can be shared across agents with scoped permissions (for example org-wide read-only plus per-user read/write)
-- Changes are tracked with audit logs and surfaced as session events in the Claude Console; developers can roll back or redact prior memory state
-- Anthropic is explicitly pitching memory as a way to replace custom retrieval / memory infrastructure for long-running agent deployments
-- **Dreams feature** (May 2026, research preview): agents periodically reflect on past sessions to identify long-term patterns that no single session can surface — recurring mistakes, shared user preferences, stale assumptions. The reflection produces a cleaned-up, consolidated memory store that improves future session performance. Available in research preview; request access via Claude's form.
-- Anthropic says new Claude API features such as advisor strategy, code execution, and web search ship same-day into Managed Agents, reinforcing the product as a hosted platform service rather than a static sample runtime.
-- **Self-hosted sandboxes** (public beta, announced at Code with Claude London, May 2026): tool execution can run on the customer's own infrastructure or through a supported managed provider (Cloudflare, Daytona, Modal, Vercel), while Anthropic's hosted agent loop — orchestration, context management, error recovery — stays on Anthropic's side. Sensitive files, packages, and services never leave the customer's perimeter; the customer controls compute sizing and the runtime image.
-- **MCP tunnels** (research preview): let Managed Agents reach MCP servers inside a private network without exposing them to the public internet. A lightweight gateway the customer deploys makes a single outbound connection — no inbound firewall rules, no public endpoints, traffic encrypted end to end. Supported in both Managed Agents and the Messages API; managed from Claude Console workspace settings by org admins.
-- **General availability (August 2026):** computer use, the browser tool, the Skills API (versioned reusable procedures), and the Files API (now with expiration control, 5x higher rate limits to 500 RPM, and 1 TB/org) all moved from research preview to GA, alongside an AG-UI adapter that maps chat threads to managed sessions and streams text, tool calls, and thinking into custom UIs.
-- **Vercel Chat SDK cookbook:** Anthropic published a cookbook connecting Managed Agents to Vercel's Chat SDK, giving a unified chat layer with server-side harness, session management, and memory — packaging the pattern as a reusable recipe rather than bespoke integration work.
+- Public beta on the Claude Platform: developers specify tasks and tools while Anthropic handles orchestration, permissions, sandboxing, sessions, memory, and credentials. New Claude API features (advisor strategy, code execution, web search) ship into it the same day.
+- Built-in file-backed memory is in public beta, with Dreams (memory consolidation from past sessions) in research preview; see Memory below.
+- Customer infrastructure: self-hosted sandboxes (public beta) and MCP tunnels (research preview) since May 2026; see Customer infrastructure below.
+- **General availability (August 2026):** computer use, the browser tool, the Skills API (versioned reusable procedures), and the Files API (now with expiration control, 5x higher rate limits to 500 RPM, and 1 TB/org), plus an AG-UI adapter that maps chat threads to managed sessions and streams text, tool calls, and thinking into custom UIs. A Vercel Chat SDK cookbook packages a chat layer with server-side harness, sessions, and memory as a reusable recipe.
+- In production at Spiral and at Every, which runs its company-wide Slack agent on it; see In production below.
 
 ### Dynamic workflows (flows)
 
@@ -70,11 +52,11 @@ Anthropic is making a strong product bet on inspectable file-backed memory rathe
 - **Hands:** sandboxes and external tools that execute actions
 - **Session:** durable event log of what happened
 
-Each piece can fail or be replaced independently. If a sandbox dies, that shows up as a tool-call failure and a fresh sandbox can be provisioned. If the harness dies, a new one can restart and resume from the session log.
+The harness is decoupled from the execution container and calls tools through a generic interface like `execute(name, input) -> string`. Sandboxes are provisioned on demand rather than assumed to exist from the start of every session. Each piece can fail or be replaced independently. If a sandbox dies, that shows up as a tool-call failure and a fresh sandbox can be provisioned. If the harness dies, a new one can restart and resume from the session log.
 
 ### Session outside the context window
 
-Anthropic explicitly treats the session as recoverable context that lives outside Claude's live context window. The harness can fetch slices of earlier events and decide what to pass back into the prompt, instead of relying only on irreversible summarization or trimming.
+Anthropic explicitly treats the session as recoverable context that lives outside Claude's live context window: an append-only event log with operations like `wake(sessionId)`, `getSession(id)`, `emitEvent(id, event)`, and `getEvents()`. The harness can fetch slices of earlier events and decide what to pass back into the prompt, instead of relying only on irreversible summarization or trimming.
 
 ### Security boundary
 
@@ -83,6 +65,19 @@ The post argues for a structural security boundary: secrets should never be reac
 - Git credentials can be wired into the local remote during sandbox setup without exposing the token to the agent
 - MCP calls can go through a proxy that looks up session-bound credentials from a secure vault
 - The harness itself does not need direct access to user credentials
+
+### Customer infrastructure
+
+The service is designed to reach customer infrastructure, including resources in a customer's own VPC.
+
+- **Self-hosted sandboxes** (public beta, Code with Claude London, May 2026): tool execution runs on the customer's own infrastructure or a supported managed provider (Cloudflare, Daytona, Modal, Vercel), while Anthropic's hosted agent loop (orchestration, context management, error recovery) stays on Anthropic's side. Sensitive files, packages, and services never leave the customer's perimeter; the customer controls compute sizing and the runtime image.
+- **MCP tunnels** (research preview): a lightweight customer-deployed gateway makes a single outbound connection, so agents reach MCP servers inside a private network with no inbound firewall rules or public endpoints and traffic encrypted end to end. Supported in Managed Agents and the Messages API; managed by org admins from Claude Console workspace settings.
+
+### Memory
+
+- Memories are mounted as files on the agent filesystem, not hidden in an opaque proprietary layer. Stores can be shared across agents with scoped permissions (for example org-wide read-only plus per-user read/write).
+- Changes are audit-logged and surfaced as session events in the Claude Console; developers can roll back or redact prior memory state. Anthropic pitches this as a replacement for custom retrieval and memory infrastructure.
+- **Dreams** (May 2026, research preview, by access request): agents periodically reflect on past sessions to find patterns no single session surfaces (recurring mistakes, shared user preferences, stale assumptions) and produce a consolidated memory store that improves future sessions.
 
 ## Reported operational gains
 
@@ -94,6 +89,11 @@ Anthropic reports faster startup after decoupling the brain from the hands.
 - Reported result: **over 90% lower p95 TTFT**
 
 The simple reason is that sessions that do not need a sandbox immediately can start inference before any container is provisioned.
+
+## In production
+
+- Every reports that Spiral used the service to spin up a new agent in a few hours; the cited benefit was less custom infrastructure maintenance, not just faster initial coding.
+- **Every Agent (October 2026):** Every built @Every, one Slack agent shared by the whole company, on CMA after a month of self-hosting a single agent persuaded it not to run its own infrastructure. Each Slack thread is one session on a VM billed at 8 cents an hour while running; memory is folders of notes the agent reads at session start; app calls pause the agent and are made by Every's servers with the asking user's own login, so the agent never holds a credential.
 
 ## Strengths
 
@@ -123,6 +123,7 @@ The simple reason is that sessions that do not need a sandbox immediately can st
 
 ## Recent changes
 
+- [2026-11-23] Trimmed: Current status cut to five bullets; memory, customer-infrastructure, and production detail moved into new Architecture subsections (Memory, Customer infrastructure) and an "In production" section.
 - [2026-10-12] Dynamic workflows ("flows") in public beta: the lead agent writes its own multi-agent orchestration, up to 1,000 agents per run; session budgets, shared filesystem, Console payload graph.
 - [2026-10-08] Every's production account of the Every Agent: thread-per-session on 8¢/hour VMs, credential proxying through its own servers, and the limits it lives with (Claude-only, no zero-data retention, long sessions rotated with a recap for −39% cost).
 - [2026-08-28] Computer use, browser tool, Skills API, and Files API reach general availability (plus higher Files API rate limits and 1 TB/org); AG-UI adapter added; Vercel Chat SDK cookbook published.

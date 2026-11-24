@@ -14,7 +14,7 @@ Frontier models are now good at code in languages with little training data, whi
 
 [[#Open questions|Open questions: none.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 On 19 October 2026 OpenAI published a research post on coding in "low-resource" programming languages. These are languages like COBOL, Fortran and Visual Basic, which have far less public code and documentation to learn from than Python or JavaScript. They still run a lot of critical systems: the post says COBOL is behind more than 40% of online banking systems and 95% of ATM transactions. Customers had told OpenAI that coding models struggle with these languages.

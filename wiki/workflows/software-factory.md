@@ -4,8 +4,8 @@ type: workflow
 domains: [agents, coding]
 subcategory: agentic-orchestration-patterns
 tags: [agentic]
-as_of: 2026-10-19
-sources: [gas-city-software-factory-2026-05, aiewf-loops-debate-2026-07-03, software-factories-fde-2026-07, aiewf-2026-five-trends-latentspace, latent-space-pr-not-welcome-2026-09-01, ubereng-software-factory-2026-08-28, composio-anti-slop-software-factory-2026-10-12, rauchg-gdp-ts-2026-10]
+as_of: 2026-10-25
+sources: [gas-city-software-factory-2026-05, aiewf-loops-debate-2026-07-03, software-factories-fde-2026-07, aiewf-2026-five-trends-latentspace, latent-space-pr-not-welcome-2026-09-01, ubereng-software-factory-2026-08-28, composio-anti-slop-software-factory-2026-10-12, rauchg-gdp-ts-2026-10, thorstenball-how-i-work-with-agents-2026-10-25]
 ---
 
 # Software factory
@@ -36,6 +36,11 @@ A software factory is an agent pipeline that covers most of the software lifecyc
   7. **Fast CI**, because non-engineers work only through preview deployments, so the build is their whole loop (moving to Blacksmith cut some checks by 50-70%).
 - **Then a shared cloud agent.** Only once the repo enforces its own standards does Composio point its internal cloud agent, Zen, at it. Zen is triggered from a Slack message, a Linear issue, a Datadog alert, or a cron job, reads logs, session replays, and tickets through Composio's managed auth, and has merged 1,300+ PRs across Composio's repos since February 2026 (245 in September). *Source: Sarah (@sarahfim), Composio (2026-10-12)*
 
+### Lifecycle legibility
+
+- **Make the whole lifecycle legible to the agent.** Thorsten Ball (Amp) argues that tool calls are what stopped hallucination, because they let agents touch reality, and that whatever an agent cannot see it makes up. So let it run what it builds end to end, read production logs, deploy, watch the rollout, cut the release, flip the feature flag, triage the bug report, and email the customer: anything an engineer can see, the agent should see too. Amp's team backs this with custom plugins for bug reports, emailing users, an "is our system healthy?" check, and granting feature flags. It hands agents the deploy and release actions that the control-layer prerequisite above, and fleet policies such as Shopify's deny-list for `push` and `deploy` ([AI enablement — software development](../training/ai-enablement-software-development.md)), keep gated.
+- **Remote machines over local dev.** Each agent should be able to install and run whatever its task needs and test end to end; on one laptop parallel agents run into resource conflicts, on remote machines they do not. *Source: Thorsten Ball, Amp (2026-10-25)*
+
 ### Contribution model
 
 - **PRs closed by default, software factories instead.** Several AI-native OSS projects now auto-close external human pull requests rather than reviewing them as code, routing incoming issues through their own agent pipelines instead: Vercel's AI SDK factory (20M+ weekly npm downloads) authors 25-35% of merged PRs and closes 70-80% of issues, four weeks after deployment; Astro's auto-triage system reversed years of unmanageable issue backlog into a routine weekly task; [Flue](../tools/flue.md) goes further, auto-converting every external PR into an issue or discussion. The framing from tldraw's Steve Ruiz and Ghostty's Mitchell Hashimoto: once agents can implement a well-specified issue, a human PR is no longer more valuable than the issue that specifies it — so large OSS projects increasingly limit community contribution to reporting, discussion, and perspective rather than code. *Source: Latent Space, "PRs Not Welcome" (2026-09-01)*
@@ -49,10 +54,11 @@ A software factory is an agent pipeline that covers most of the software lifecyc
 
 - Building the factory before the control layer: unbounded cost, unreviewed changes, and no recovery path.
 - Moving work into the dark layer before its output has earned trust.
-- Letting slop compound: running agents at scale in a repo whose conventions live only in instructions rather than enforced checks, so every plan-implement-self-review round builds on the previous round's slop and approvals slow down over time.
+- Letting slop compound: running agents at scale in a repo whose conventions live only in instructions rather than enforced checks, so every plan-implement-self-review round builds on the previous round's slop and approvals slow down over time. Not everyone treats this as a current risk: Thorsten Ball (Oct 2026) says he is no longer convinced current models add slop, or that the result is unmaintainable if they do.
 
 ## Recent changes
 
+- [2026-10-25] Added "Lifecycle legibility" (agents see and act on logs, deploys, rollouts, flags, bug reports, and customer email through SDLC plugins; remote machines over local dev) and Thorsten Ball's dissent on the slop failure mode.
 - [2026-10-19] Added the "make unsafe agent code fail to compile" prerequisite, with gdp-ts as the example.
 - [2026-10-19] Page created, split out of [Agentic orchestration patterns](agentic-orchestration-patterns.md): the dark/light factory, control-layer, software-factory-loop, and PRs-closed-by-default patterns, plus the AI Engineer World's Fair FDE examples.
 - [2026-10-12] Added "Repository as the factory": Composio's seven-step ordering (co-location, end-to-end types, duplication, 38 lint rules instead of skills, global E2E tests, review bots last, fast CI) before a shared cloud agent (Zen, 1,300+ merged PRs since February), plus the "slop compounds" failure mode.
@@ -78,3 +84,4 @@ A software factory is an agent pipeline that covers most of the software lifecyc
 - [Uber Engineering — Running a Software Factory Efficiently at Uber Scale](../sources/tweets/ubereng-software-factory-2026-08-28.md)
 - [Sarah (@sarahfim) — How to build an anti-slop software factory for teams of 30+](../sources/tweets/composio-anti-slop-software-factory-2026-10-12.md)
 - [rauchg/gdp-ts — Ghosts of Departed Proofs for TypeScript (GitHub)](../sources/repos/rauchg-gdp-ts-2026-10.md)
+- [Thorsten Ball (@thorstenball) — How I work with Agents](../sources/tweets/thorstenball-how-i-work-with-agents-2026-10-25.md)

@@ -16,7 +16,8 @@ Latent Space writeup of an AI Engineer NYC workshop (12 October 2026) where Anth
 ## Influenced pages
 
 - [Claude Managed Agents](../../tools/claude-managed-agents.md) — dynamic workflows bullet
-- [Multi-agent coordination](../../workflows/multi-agent-coordination.md) — orchestration-as-code pattern and workshop details
+- [Multi-agent coordination](../../workflows/multi-agent-coordination.md) — orchestration-as-code pattern
+- [Multi-agent coordination: evidence from practice](../../workflows/multi-agent-coordination-evidence.md) — Managed Agents flows workshop details
 - [State of Agents](../../state-of/agents.md) — Managed Agents leader line
 
 ## Key claims extracted

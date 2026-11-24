@@ -15,7 +15,7 @@ The lead story of the 2 October 2026 AINews issue: Earendil, which the Pi harnes
 ## Influenced pages
 
 - [Pi](../../tools/pi.md) — new page
-- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — durable-harness section
+- [Agent execution runtimes](../../concepts/agent-execution-runtimes.md) — durable-harness section (moved from Agent runtime platforms)
 - [State of Agents](../../state-of/agents.md) — Pi added under Agent frameworks
 
 ## Key claims extracted

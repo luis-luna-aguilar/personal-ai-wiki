@@ -3,8 +3,8 @@ title: Agent autonomy and governance
 type: training
 domains: [agents]
 tags: [agentic]
-as_of: 2026-10-14
-sources: [agents-evals-deep-research, mckinsey-agentic-org, ramp-ai-adoption-playbook, ai-for-boring-businesses, token-tightening-ai-finops-2026-06, every-ai-sandwich-april-2026, every-cheap-competence-after-automation-2026-05, every-33-questions-executives-2026-08-28, every-ai-adoption-levels, karpathy-capability-funnel-2026-10-11, satyanadella-models-as-insider-risks-2026-10-10, latent-space-crossing-the-threshold-2026-10-14, anthropic-human-agent-teams-2026-10]
+as_of: 2026-11-12
+sources: [agents-evals-deep-research, mckinsey-agentic-org, ramp-ai-adoption-playbook, ai-for-boring-businesses, token-tightening-ai-finops-2026-06, every-ai-sandwich-april-2026, every-cheap-competence-after-automation-2026-05, every-33-questions-executives-2026-08-28, every-ai-adoption-levels, karpathy-capability-funnel-2026-10-11, satyanadella-models-as-insider-risks-2026-10-10, latent-space-crossing-the-threshold-2026-10-14, anthropic-human-agent-teams-2026-10, claude-for-manufacturing-2026-11-12]
 ---
 
 # Agent autonomy and governance
@@ -73,6 +73,7 @@ Both will coexist. "Above the loop" represents the higher-value state for most k
 - **Reward outcomes, not AI usage.** Teams stall or drift when "used AI" becomes the goal; quality and throughput improvements are the only metrics that matter.
 - **Trust battery with judge agent.** Grant autonomy incrementally, tied to demonstrated reliability rather than elapsed time — see [AI adoption: evidence from practice](ai-adoption-evidence.md) for the concrete Claudie mechanism (nightly judge agent, starting trust percentage, self-updating memory).
 - **Widen autonomy per task type, with verification built in.** Anthropic's teams (Oct 2026) track which kinds of task each agent has earned autonomy on and widen scope one type at a time after repeated successes. They review all agent work by hand at first and turn that feedback into verification checklists, have a separate verifier agent check the doer's work, and ask agents for a weekly "lessons & missteps" report. As agents grow more independent, they are coached to treat human attention as scarce: batch questions into one pass, restate key context, limit how many items a person sees at once; some teams cap agent output per day so review stays sustainable. Retest tasks when models change, since old guardrails can hold a stronger model back. One engineering team reached agents handling 500 bug fixes independently this way.
+- **Keep looking up separate from changing, and let write access follow the user's own permissions.** Anthropic's Claude for Manufacturing (November 2026) ends every skill with the responsible person's review: the estimator checks and releases the quote, the quality engineer verifies the fix. Its Infor connector only looks records up. Changes in Infor go through Infor's own plugin and run only after the user approves (for example, releasing a purchase order to another supplier and rescheduling production when a steel shipment slips), within that user's existing Infor permissions. Claude links figures and claims back to the underlying data and documents so the reviewer can check them.
 - **Keep humans at the judgment boundary.** As AI fills in the middle of workflows, employees need stronger habits for framing, taste, coordination, and review rather than only faster execution tactics.
 - **Split governance ownership explicitly.** A central AI team should own standards, security and vendor decisions, shared infrastructure, and the first few working examples; individual business teams should own their own workflows. Centralizing everything creates a bottleneck; leaving every team to build alone creates sprawl.
 - **Measure at the workflow level, never by a single metric.** Track cycle time, output quality, error/rework rate, user satisfaction (e.g. NPS), and traditional cost-benefit business impact — and track reuse of shared skills as a leading indicator. Establish a pre-AI baseline (time, quality standard, cost, common mistakes) before claiming a workflow improved.
@@ -107,6 +108,7 @@ This complements the autonomy ladder above: the ladder decides how much authorit
 
 ## Recent changes
 
+- [2026-11-12] Added "Keep looking up separate from changing" from Anthropic's Claude for Manufacturing launch: skills end in the responsible person's review, Infor changes go through Infor's own plugin after approval and within the user's Infor permissions, and figures link back to source data.
 - [2026-10-19] Added Every's 8-level adoption maturity model from [Company-wide AI enablement](company-wide-ai-enablement.md), merged with the AI-fluency ladder that described the same framework.
 - [2026-10-19] Page created, split out of [Company-wide AI enablement](company-wide-ai-enablement.md): its "Autonomy ladder" and "Humans in the loop vs. above the loop" sections and the "Governance, autonomy, and reliability" proven-patterns group.
 - [2026-10-14] Added "Place controls where they enable autonomy" from AIE NYC finance keynotes: approval fatigue, classifier-versus-rule routing (Two Sigma), propose-not-act and a three-part trust layer (Anthropic), deterministic controls outside the model (Bloomberg), HITL as product design (OpenAI).
@@ -137,3 +139,4 @@ This complements the autonomy ladder above: the ladder decides how much authorit
 - [Satya Nadella — Models as Insider Risks in the Super Intelligence Era](../sources/tweets/satyanadella-models-as-insider-risks-2026-10-10.md)
 - [Latent Space — Crossing the Threshold: autonomy and safety in financial agents](../sources/newsletters/latent-space-crossing-the-threshold-2026-10-14.md)
 - [Lessons from Anthropic on building effective human-agent teams](../sources/articles/anthropic-human-agent-teams-2026-10.md)
+- [Claude for Manufacturing: AI plugin for plant teams](../sources/articles/claude-for-manufacturing-2026-11-12.md)

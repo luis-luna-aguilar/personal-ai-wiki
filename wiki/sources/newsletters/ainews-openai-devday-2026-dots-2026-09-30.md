@@ -19,7 +19,7 @@ AINews's same-day roundup of OpenAI DevDay (2026-09-29). This page covers the do
 - [ChatGPT Space](../../tools/chatgpt-space.md) — new page; Space framed with dots as OpenAI's answer to Notion and the office suite
 - [ChatGPT Pages](../../tools/chatgpt-pages.md) — new page; companion launch
 - [Codex](../../tools/codex.md) — DevDay Codex features, Ultrafast, Sign in with ChatGPT, plan re-tiering
-- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — Agents API
+- [Agent execution runtimes](../../concepts/agent-execution-runtimes.md) — Agents API (moved from Agent runtime platforms)
 - [State of Agents](../../state-of/agents.md) — dots, Space and Pages lines
 
 ## Key claims extracted

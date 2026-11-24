@@ -3,8 +3,8 @@ title: Knowledge term map
 type: concept
 domains: [agents]
 tags: [knowledge-cluster]
-as_of: 2026-10-19
-sources: [llm-wikis-paperwiki-2026-07-06, agent-memory-systems-layer-2026-06, femke-plantinga-company-brains-2026-08-27, ontologies-agentic-systems-2026-07-30, posthog-semantic-layer-2026-08-21, deeplethe-utopia-2026-09-09, helixdb-helix-foundry-2026-10-19, cognition-agent-memory-repo-2026-10, ainews-devin-dreaming-2026-10-06, latent-space-airbnb-inside-out-ai-2026-10-02, every-agent-claude-managed-agents-2026-10-08, latent-space-runway-worldprompt-2026-09-25, eugenalpeza-fde-boom-product-gap-2026-09-29]
+as_of: 2026-10-25
+sources: [llm-wikis-paperwiki-2026-07-06, agent-memory-systems-layer-2026-06, femke-plantinga-company-brains-2026-08-27, ontologies-agentic-systems-2026-07-30, posthog-semantic-layer-2026-08-21, deeplethe-utopia-2026-09-09, helixdb-helix-foundry-2026-10-19, cognition-agent-memory-repo-2026-10, ainews-devin-dreaming-2026-10-06, latent-space-airbnb-inside-out-ai-2026-10-02, every-agent-claude-managed-agents-2026-10-08, latent-space-runway-worldprompt-2026-09-25, eugenalpeza-fde-boom-product-gap-2026-09-29, thorstenball-how-i-work-with-agents-2026-10-25, palantir-autoresearch-fine-tuning-ontology-2026-10-24]
 ---
 
 # Knowledge term map
@@ -12,6 +12,8 @@ sources: [llm-wikis-paperwiki-2026-07-06, agent-memory-systems-layer-2026-06, fe
 The lookup table for the knowledge, memory, company-brain, and ontology cluster: every term seen in sources, mapped to its canonical page in the [Knowledge architectures](knowledge-architectures.md) matrix. Look a term up here before proposing a page, tag, or subcategory. An alias updates the canonical page's `## Also called` line and gets a row here; a term that names a new cell in the matrix gets its row here in the same change that adds the cell to the hub. No term is left unmapped. Where a row and the hub disagree, the hub wins.
 
 ## Term map
+
+### Knowledge layer and company brain
 
 | Term seen in sources | Maps to | Note |
 |---|---|---|
@@ -22,16 +24,33 @@ The lookup table for the knowledge, memory, company-brain, and ontology cluster:
 | company brain, org brain, GBrain, "the agent's brain" | Company brain | the organization-scope system |
 | content brain, brand brain | Company brain (function scope) | a company brain limited to one function, for example marketing |
 | context graph, organizational context graph | Company brain | Airbnb's name for Everest, an organization-wide graph of codebase and project context that agents and engineers query. Not the same as "knowledge graph" below, which is a data structure; a context graph names the organization-scope system |
+| company memory, "threads are your company memory" | Company brain | Amp's phrasing (Thorsten Ball) for agent threads shared across a team and linked to git commits. The raw transcripts are searched as they are, with nothing extracted or pruned, so it is an organization-scope company brain covering signals and searching, not agent memory, which extracts facts from sessions |
+
+### Agent memory
+
+| Term seen in sources | Maps to | Note |
+|---|---|---|
 | memory layer, memory system, long-term memory | Agent memory | aliases |
 | ghost memory | Agent memory | not an alias: a named failure mode where stale and current facts are retrieved together |
 | memory repo, Agent Memory Repo | Agent memory | Cognition's open git-and-markdown format for one user's agent memory. Its `MEMORY.md` index and linked pages look like a knowledge layer, but agents write it from their own sessions, one sourced fact per line, so it sits on the agent-memory row |
 | dreaming, dreams | Agent memory (lifecycle step) | an offline pass that prunes, links, or rewrites stored memories between sessions, as in Cognition's Devin Dreaming and the Dreams feature of [Claude Managed Agents](../tools/claude-managed-agents.md). The [company brain](company-brain.md)'s "dreaming & pruning" function is the same step at organization scope. A step, not a store |
+
+### Semantic layer and ontology
+
+| Term seen in sources | Maps to | Note |
+|---|---|---|
 | context warehouse | Semantic layer | PostHog's product name for the store its semantic layer sits on; a vendor term, not a concept |
 | metrics layer, governed metric catalog | Semantic layer | aliases |
 | ontology, neurosymbolic AI, OWL/RDF guardrails | Ontologies as agent guardrails | the formal rule layer |
 | Neo4j's "semantic layer" | Ontologies as agent guardrails | Emil Eifrem uses "semantic layer" for a shared ontology substrate that agents consume. It is not the metric-definition [semantic layer](semantic-layer.md) above; the collision is noted on both pages |
 | knowledge graph | a data structure, not a concept | used by company brains (Zep/Graphiti), by ontology engines ([Utopia](../tools/utopia.md)), by personal assistants ([Amazon Quick](../tools/amazon-quick.md)), and by local data workspaces ([Helix Foundry](../tools/helix-foundry.md)). Link to the page whose system uses it |
 | "one ontology" over company data, local-first data workspace | Semantic layer, local data-workspace variant | Helix Foundry's marketing term for the model it suggests by matching the same customers and records across connected sources. It has no axioms or machine-checked rules, so it is not the ontology row's sense; it is the matrix's data-workspace variant of the semantic layer. See [Helix Foundry](../tools/helix-foundry.md) |
+| Fine-Tuning Ontology | not a knowledge architecture | Palantir's name for a versioned registry of training datasets, training recipes, and model weights with lineage and access controls, produced by [Palantir AutoResearch](../tools/palantir-autoresearch.md). It stores training assets, not knowledge for agents to read, and has no machine-checked rules, so it is not the ontology row's sense; a vendor name only. It is built on the Palantir Foundry Ontology (object types and links over ERP, MES and CRM records), which is the sense of the "one ontology" row above at organization scope |
+
+### Practices, mechanisms, and outside senses
+
+| Term seen in sources | Maps to | Note |
+|---|---|---|
 | context engineering | [Harness](harness.md) | the practice of assembling what goes into a model's context window; a technique, not a store |
 | ContextOps | Knowledge layer (maintenance practice) | Edra's name for keeping agents' operating procedures current: agents propose rules from case evidence, the process owner approves, and each instruction has an owner, a version, tests, and rollback. A practice, not a store. Its authors contrast it with a context graph (the Company brain alias above), which records mistakes and exceptions alike. See [Forward-deployed engineering](../training/forward-deployed-engineering.md) |
 | company agent, shared company agent | [Multiplayer AI](multiplayer-ai.md), outside this cluster | one agent a whole organization shares in team chat (Every Agent). Its memory folders and saved skills are [agent memory](agent-memory.md) at company scope; it is a company brain only if it also carries a knowledge layer and a refresh loop |
@@ -45,6 +64,8 @@ The lookup table for the knowledge, memory, company-brain, and ontology cluster:
 ## Recent changes
 
 - [2026-11-23] Page created, split out of [Knowledge architectures](knowledge-architectures.md)'s "Term map" section.
+- [2026-10-25] Mapped "company memory" (Amp's shared, commit-linked agent threads) to Company brain.
+- [2026-10-24] Recorded Palantir's "Fine-Tuning Ontology" as a vendor name for a registry of training datasets, recipes, and weights, outside this cluster and not the ontology row's sense.
 - [2026-10-19] Mapped Helix Foundry's "one ontology" to the semantic layer's local data-workspace variant rather than to the ontology row, and added Helix Foundry to the knowledge-graph row.
 - [2026-10-08] Mapped "company agent" (Every Agent) to Multiplayer AI, outside the cluster, with its memory part pointed at Agent memory.
 - [2026-10-06] Mapped "memory repo / Agent Memory Repo" and "dreaming / dreams" (Cognition's Devin Dreaming, Anthropic's Managed Agents Dreams) to Agent memory.
@@ -52,7 +73,6 @@ The lookup table for the knowledge, memory, company-brain, and ontology cluster:
 - [2026-09-29] Mapped "ContextOps" (Edra) to the Knowledge layer as a maintenance practice for owner-approved, versioned agent procedures, not a new store.
 - [2026-09-25] Mapped Runway's "interface world model" (video-generated software UIs) to the world-model row's video-prediction sense.
 - [2026-09-09] Recorded Utopia's "enterprise world model" as the first "world model" marketing alias, kept on the ontology row.
-- [2026-08-21] Added "context warehouse" and "metrics layer" rows (PostHog), both mapped to the Semantic layer.
 
 ## Sources
 
@@ -69,3 +89,5 @@ The lookup table for the knowledge, memory, company-brain, and ontology cluster:
 - [Every — Why We Handed Our Agent's Infrastructure to Anthropic](../sources/newsletters/every-agent-claude-managed-agents-2026-10-08.md)
 - [Latent Space — Runway's WorldPrompt and the engineering of real-time worlds](../sources/newsletters/latent-space-runway-worldprompt-2026-09-25.md)
 - [Eugen Alpeza on X — The FDE boom is a product gap](../sources/tweets/eugenalpeza-fde-boom-product-gap-2026-09-29.md)
+- [Thorsten Ball (@thorstenball) — How I work with Agents](../sources/tweets/thorstenball-how-i-work-with-agents-2026-10-25.md)
+- [Palantir — AutoResearch and the Fine-Tuning Ontology](../sources/papers/palantir-autoresearch-fine-tuning-ontology-2026-10-24.md)

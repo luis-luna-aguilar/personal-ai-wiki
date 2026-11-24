@@ -15,7 +15,7 @@ A small Block research lab says a full-duplex conversational voice model can lea
 
 [[#Open questions|Open questions: none.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 

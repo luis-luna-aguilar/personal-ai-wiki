@@ -16,9 +16,9 @@ AINews's 2026-08-21 issue leads with NVIDIA's $12B "reverse execuhire" of Poolsi
 ## Influenced pages
 
 - [Harness (agent)](../../concepts/harness.md) — Claude Platform GA, harness continual learning
-- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — Claude Platform GA (moved from Harness (agent))
+- [Agent execution runtimes](../../concepts/agent-execution-runtimes.md) — Claude Platform GA (moved from Harness (agent), then Agent runtime platforms)
 - [Automated harness optimization](../../concepts/automated-harness-optimization.md) — harness continual learning (moved from Harness)
-- [Multi-agent coordination](../../workflows/multi-agent-coordination.md) — 1,902-run multi-agent coordination study
+- [Multi-agent coordination: evidence from practice](../../workflows/multi-agent-coordination-evidence.md) — 1,902-run multi-agent coordination study
 - [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — AT&T evidence bullet
 - [Muse Spark](../../models/muse-spark.md) — additional benchmark bullet
 

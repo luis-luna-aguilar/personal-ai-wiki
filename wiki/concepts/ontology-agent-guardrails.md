@@ -3,8 +3,8 @@ title: Ontologies as agent guardrails
 type: concept
 domains: [agents]
 tags: [agentic, knowledge-cluster]
-as_of: 2026-09-09
-sources: [ontologies-agentic-systems-2026-07-30, deeplethe-utopia-2026-09-09]
+as_of: 2026-10-28
+sources: [ontologies-agentic-systems-2026-07-30, deeplethe-utopia-2026-09-09, fabio-rovai-open-ontologies-2026-10-28]
 ---
 
 # Ontologies as agent guardrails
@@ -15,7 +15,7 @@ An ontology is a structured description of a domain's concepts and how they rela
 
 Neurosymbolic AI, OWL/RDF guardrails, knowledge-graph guardrails. A knowledge graph is the data structure an ontology is usually stored in, not a synonym for the guardrail idea. Neo4j's Emil Eifrem calls the shared ontology substrate a "semantic layer"; that is a different idea from the data-warehouse sense of the term, the metric-definition [semantic layer](semantic-layer.md); the hub page keeps the two apart.
 
-## Current status (as of 2026-09-09)
+## Current status (as of 2026-10-28)
 
 - Pitched as a "logical guardrail" for agent loops, which can otherwise silently go off the rails: "an OWL axiom is a rule a machine enforces," in Coyle's framing, versus a prompt instruction, which an LLM can drift from over a long loop.
 - A practical advantage: established ontologies (Schema.org, FOAF, Dublin Core, RDFS, OWL) are already present in LLM training data, so a team can prompt for them directly instead of designing a domain ontology from scratch.
@@ -23,6 +23,7 @@ Neurosymbolic AI, OWL/RDF guardrails, knowledge-graph guardrails. A knowledge gr
 - Coyle demonstrated a Claude agent using an ontology to validate its own reasoning after a tool call — a concrete example of using the ontology as a post-hoc check rather than only as upfront context.
 - The known failure mode is maintenance: ontology upkeep is exactly why the 1990s/2000s Semantic Web vision never reached broad adoption. One proposed mitigation, from AI developer Prasenjit Sarkar, is having the agent maintain its own ontology as part of its operation — updating definitions as it hits edge cases — which changes the character of the maintenance problem without eliminating it.
 - [Utopia](../tools/utopia.md) (open-source, Apache-2.0) is the clearest move yet from conference-talk concept to working product: ontology axioms compile directly into forward-chaining derivation rules, conflict detection checks the ontology itself before looking at fact-level clashes, and a named "execution gate" roadmap item would check an agent's tool calls against ontology rules and symbolic logic before allowing them to run. It doesn't resolve the maintenance-burden caveat below — its own review-queue and entity-resolution machinery is an acknowledgment of that burden, not a solution to it — but it's a concrete, deployable reference implementation of the pattern this page otherwise only describes in the abstract.
+- [Open Ontologies](../tools/open-ontologies.md) (open-source, MIT) brings change control to the ontology itself: it plans a change like Terraform, reports the blast radius and the new consequences a text diff hides (one added line, zero triples affected, 901 new inferences in its README example), and writes a derivation certificate that a separate Lean 4 checker re-verifies offline, refusing forged conclusions. It does not reduce the upkeep burden below, but it makes each upkeep change reviewable and reversible.
 
 ## Why it matters
 
@@ -41,6 +42,7 @@ This gives the wiki's informal "agent loops go off the rails" problem a named, c
 
 ## Recent changes
 
+- [2026-10-28] Added Open Ontologies as change-control tooling for the ontology itself: semantic plan with blast radius, rollback, and Lean-checked derivation certificates.
 - [2026-09-09] Added Utopia (open-source bitemporal knowledge graph / ontology engine) as a concrete, deployable implementation of the ontology-as-guardrail pattern: compiled derivation rules, ontology-checked-first conflict detection, and a named "execution gate" roadmap item for checking agent tool calls against ontology rules.
 - [2026-09-09] Terminology reorganization: added the `## Also called` alias line, noted that Eifrem's "semantic layer" means a shared ontology and not a metric catalog, and rewrote the Related lines to agree with the new [Knowledge architectures](knowledge-architectures.md) hub.
 - [2026-07-30] Page created from Frank Coyle's AI Engineer World's Fair talk on ontologies as agent guardrails (via Latent Space recap).
@@ -49,3 +51,4 @@ This gives the wiki's informal "agent loops go off the rails" problem a named, c
 
 - [Ontologies Are So Back: Why AI Agents Are Reviving the Semantic Web](../sources/newsletters/ontologies-agentic-systems-2026-07-30.md)
 - [deeplethe/utopia (GitHub)](../sources/repos/deeplethe-utopia-2026-09-09.md)
+- [fabio-rovai/open-ontologies (GitHub)](../sources/repos/fabio-rovai-open-ontologies-2026-10-28.md)

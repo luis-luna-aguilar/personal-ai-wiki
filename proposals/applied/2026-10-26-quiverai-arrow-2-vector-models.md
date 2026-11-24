@@ -17,7 +17,7 @@ Generative image models are splitting by output format: QuiverAI's Arrow 2 produ
 
 [[#Open questions|Open questions: 1 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 QuiverAI, which describes itself as "frontier AI for design", announced Arrow 2 on 16 September 2026 in an X thread (2.3M views) and a launch post on its blog. Its premise is that vectors should be "intentionally crafted through code": instead of painting pixels, the model writes SVG, the format designers use for logos, icons and diagrams, so every output can be opened, adjusted and reused.
@@ -189,3 +189,4 @@ None.
 ## Open questions
 
 - Should vector-graphics models get their own subcategory (for example `vector-graphics-model`) once a second one appears, or stay under `image-generation-model`?
+	- yes, subcategory

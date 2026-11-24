@@ -4,8 +4,8 @@ type: tool
 domains: [agents]
 subcategory: agent-orchestration
 tags: [anthropic, agentic]
-as_of: 2026-10-23
-sources: [claude-cowork-launch, aakash-gupta-cowork, claude-design-launch, claude-productivity-surfaces, anthropic-desktop-agent-expansion-late-march, anthropic-persistent-workflow-surfaces-february, awsai-cowork-bedrock-2026-04-23, claude-cowork-mobile-2026-07, claude-cowork-is-now-claude-2026-09-16, claudeai-cowork-chat-merge-2026-09-16]
+as_of: 2026-11-12
+sources: [claude-cowork-launch, aakash-gupta-cowork, claude-design-launch, claude-productivity-surfaces, anthropic-desktop-agent-expansion-late-march, anthropic-persistent-workflow-surfaces-february, awsai-cowork-bedrock-2026-04-23, claude-cowork-mobile-2026-07, claude-cowork-is-now-claude-2026-09-16, claudeai-cowork-chat-merge-2026-09-16, claude-for-manufacturing-2026-11-12]
 ---
 
 # Claude app
@@ -35,14 +35,15 @@ Cowork's state as a separate app; its capabilities carried into the Claude app:
 - Positioned for high-effort, repeatable knowledge-work tasks rather than one-off prompt-response use.
 - Live Artifacts shipped in April 2026: dashboards, trackers, and reports wired to connectors that auto-refresh on open.
 
-## Vertical workflow bundles (as of 2026-05-14)
+## Vertical workflow bundles (as of 2026-11-12)
 
-Anthropic launched two prebuilt Cowork-based workflow bundles targeting end-users rather than developers:
+Anthropic packages prebuilt workflows, skills, and connectors for specific industries, aimed at end users rather than developers. The first two launched as Cowork-based bundles; Claude for Manufacturing is described as a Claude plugin for Team and Enterprise plans, without naming the surface it runs in.
 
 - **Claude for Small Business** — 15 ready-to-run agentic workflows + 15 skills; integrations with QuickBooks, PayPal, DocuSign; automates payroll planning, invoice chasing, campaign launch, and similar repeatable tasks
 - **Claude for Legal Professionals** — 12 one-click workflows for legal document and workflow automation
+- **Claude for Manufacturing** (2026-11-12) — 17 skills for plant teams: quoting a new job, investigating a failed inspection, diagnosing a breakdown, sourcing from another supplier, comparing designs in Autodesk Fusion, and production reporting. Connectors to Autodesk Fusion, Infor, Microsoft 365, and Oracle NetSuite; systems without a connector are covered by saving regular exports to Microsoft 365. Every skill ends in a person's review, with figures linked back to source data. The Infor connector only reads; changes in Infor go through Infor's own plugin, after the user approves, within that user's Infor permissions. Does not operate equipment (Anthropic points to its [Model Hardware Standard](../concepts/model-hardware-standard.md) research preview for that). Setup: install on a Team or Enterprise plan and say "Set us up"; Claude asks which systems the team uses, tests the connectors, and reports which skills can't fully run yet.
 
-Both bundles are the clearest signal yet of Anthropic shifting from developer API tools toward direct end-user vertical automation products.
+Together the bundles are the clearest signal yet of Anthropic shifting from developer API tools toward direct end-user vertical automation products.
 
 ## AWS Bedrock deployment (as of 2026-04-23)
 
@@ -60,6 +61,7 @@ Cowork also did not appear from nowhere. The earlier Claude for Word beta sugges
 
 ## Recent changes
 
+- [2026-11-12] Claude for Manufacturing launched: 17-skill plugin for plant teams (quoting, failed-inspection investigation, breakdown diagnosis, sourcing, Fusion design comparison, production reporting) with Autodesk Fusion, Infor, Microsoft 365, and Oracle NetSuite connectors; every skill ends in human review; Infor writes via Infor's own plugin under the user's permissions; Team and Enterprise plans.
 - [2026-10-23] Unified Claude (chat plus Cowork) generally available for Claude Enterprise.
 - [2026-09-16] Cowork and chat merged into one Claude app (Pro/Max rollout over several weeks); Claude Docs and Claude Slides launched and Claude Design moved into conversations, all three in beta on paid plans; existing Cowork work carried over. Page renamed from Claude Cowork to Claude app on 2026-11-23.
 - [2026-07-08] Cowork beta expands to web/mobile for Max subscribers; scheduled tasks can run while the user's computer is closed; Fable 5 access extended through 2026-07-12.
@@ -80,3 +82,4 @@ Cowork also did not appear from nowhere. The earlier Claude for Word beta sugges
 - [Claude Cowork web/mobile beta](../sources/newsletters/claude-cowork-mobile-2026-07.md)
 - [Claude Cowork and chat are now one Claude](../sources/articles/claude-cowork-is-now-claude-2026-09-16.md)
 - [Claude (@claudeai) — Claude Cowork and chat are merging into one Claude](../sources/tweets/claudeai-cowork-chat-merge-2026-09-16.md)
+- [Claude for Manufacturing: AI plugin for plant teams](../sources/articles/claude-for-manufacturing-2026-11-12.md)

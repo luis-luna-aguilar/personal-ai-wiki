@@ -119,3 +119,4 @@
 - [2026-09-21] Grok 4.7 replaced Grok 4.6 in Frontier models: same price and speed, AA Coding Agent Index 56, but #24 on the Vals Index (down 5 points) and a split verdict from Every's testers.
 - [2026-09-29] GPT-6.1 Sol replaces GPT-5.6 Sol in Frontier models; GPT-6 Sol (2026-09-22) was superseded within a week. GPT-6 Luna added to Small / fast models at $0.10/$0.50. AA puts 6.1 Sol one point below Astra at $0.72 vs $3.26 per task.
 - [2026-09-22] Xiaomi MiMo-V2.6-Pro added to Open-weight models: 1T/42B-active omnimodal MoE under MIT, AA Intelligence Index 46 at $0.13 per task, shipped with its RL environments and training code.
+- [2026-10-07] Claude Haiku 5.5 launched; new Small / fast models section. About 75% cheaper than Haiku 4.5, OSWorld 2.1 72.4% and Terminal-Bench 4.0 39.2% (Sonnet 5.5: 83.9% / 70.6%), first Haiku with an effort setting.

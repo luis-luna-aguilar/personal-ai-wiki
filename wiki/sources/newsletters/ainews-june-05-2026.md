@@ -14,7 +14,7 @@ AINews covering Anthropic's RSI disclosure, Nemotron 3 Ultra architecture clarif
 
 ## Influenced pages
 
-- [State of Models](../../state-of/models.md) — RSI data
+- [State of Models](../../state-of/models.md) — Nemotron 3 Ultra and Ideogram 4.0 details (RSI data moved off the page; it lives on Engineering AI adoption: evidence from practice)
 - [AI enablement — software development](../../training/ai-enablement-software-development.md) — RSI evidence from practice
 - [MiniMax M3](../../models/minimax-m3.md) — PostTrainBench placement signal
 - [Engineering AI adoption: evidence from practice](../../training/engineering-ai-adoption-evidence.md) — Anthropic RSI evidence (moved from AI enablement — software development)

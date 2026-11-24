@@ -14,7 +14,7 @@ Two research items from the 8 October 2026 AINews issue on multi-agent efficienc
 
 ## Influenced pages
 
-- [Multi-agent coordination](../../workflows/multi-agent-coordination.md) — agent-team measurements
+- [Multi-agent coordination: evidence from practice](../../workflows/multi-agent-coordination-evidence.md) — agent-team measurements
 
 ## Key claims extracted
 

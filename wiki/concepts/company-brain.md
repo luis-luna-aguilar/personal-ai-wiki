@@ -3,8 +3,8 @@ title: Company brain
 type: concept
 domains: [agents]
 tags: [knowledge-cluster]
-as_of: 2026-10-02
-sources: [lovable-future-of-saas-2026-08-26, cloudflare-os-launch-2026-09-07, femke-plantinga-company-brains-2026-08-27, cerebras-knowledge-base, dhravyashah-supermemory-company-brain-2026-07-28, latent-space-airbnb-inside-out-ai-2026-10-02]
+as_of: 2026-10-25
+sources: [lovable-future-of-saas-2026-08-26, cloudflare-os-launch-2026-09-07, femke-plantinga-company-brains-2026-08-27, cerebras-knowledge-base, dhravyashah-supermemory-company-brain-2026-07-28, latent-space-airbnb-inside-out-ai-2026-10-02, thorstenball-how-i-work-with-agents-2026-10-25]
 ---
 
 # Company brain
@@ -13,11 +13,15 @@ A "company brain" is a per-organization system that gives an agent (or many agen
 
 ## Also called
 
-Org brain, GBrain (Garry Tan's implementation), "the agent's brain" (Every's phrasing for interconnected Notion databases), context graph (Airbnb's Everest), content brain and brand brain (function-scope instances limited to marketing).
+Org brain, GBrain (Garry Tan's implementation), "the agent's brain" (Every's phrasing for interconnected Notion databases), context graph (Airbnb's Everest), company memory (Amp's phrasing for shared agent threads), content brain and brand brain (function-scope instances limited to marketing).
 
-## Current status (as of 2026-10-02)
+## Current status (as of 2026-10-25)
+
+### The four functions
 
 A widely-shared survey of 9 real implementations (Slite's Femke Plantinga, August 2026) found every one doing the same four things: **getting signals** (pulling in new information from connected tools), **remembering** (deciding what's worth keeping), **dreaming & pruning** (periodically reconciling and discarding stale material), and **speaking & searching** (surfacing what it knows back to people and other agents). Named examples: Garry Tan's GBrain (email/calendar into a git repo, nightly re-linking and stale-flagging), mem0 (an explicit-write memory library, ranks fresh over idle facts), Letta (agents decide what's worth keeping; a second agent tidies memory in the background), Zep/Graphiti (a knowledge graph with a clock — facts get an end date instead of being overwritten), Sylph (a content brain living entirely in git; the agent reads human edits to learn what it got wrong), a plain Claude-Code-plus-git DIY setup ("what most engineering teams actually do"), Pletor (a brand brain for marketing, human-gated rule changes), Gorgias Cortex (12,000 markdown nodes, nightly self-correcting PRs from wrong answers), and Slite Agent (watches ~20 connected tools for staleness, routes diffs to page owners, human-approved).
+
+### Production examples
 
 Five larger production examples show the pattern scaling into full platforms rather than personal tools:
 
@@ -27,12 +31,15 @@ Five larger production examples show the pattern scaling into full platforms rat
 - **Cerebras Knowledge:** an internal tool fielding 15,000+ questions/day three months after launch, built around one shared Postgres table of embeddings, summaries, and metadata fed by per-source connectors (Slack, wiki/Confluence, code repos, netlists, custom databases) so anything ingested is immediately queryable through the same interface. Retrieval fuses six parallel search lists — full-text, embedding, thread-summary, code-graph, wiki-vector, and Slack full-text — with reciprocal rank fusion before a small reranker model picks the final top ten. The same retrieval primitives are exposed as narrow, LLM-free MCP tools (search, search_slack, search_code, who_knows) rather than one black-box "answer this question" endpoint, so Claude Code or any MCP client owns the orchestration itself; "projects" scope a user's default search to their team's own sources instead of the whole company corpus.
 - **Airbnb Everest (October 2026):** an internal organizational "context graph" across Airbnb's codebase, built and queried with LLMs, embeddings, and AI retrieval, and paired with AirChat, an internal agent carrying the company's MCP-connected context. Its reported payoff is reuse: lessons from the grocery-delivery partner integration (eight to nine months to build) were stored in Everest, and the similar airport-pickup service took about six weeks; CTO Ahmad Al-Dahle also credits it with letting generalists work in specialist parts of the code. The interview does not describe how Everest refreshes or prunes itself, so it shows the signals and searching functions only.
 
+A lighter variant needs no separate store. In Amp, agent threads are shared across the team and linked to the git commits they produced, so "why did we do this?" is answered by finding the thread. Thorsten Ball (Oct 2026) calls threads "your company memory" and says the knowledge multiplies, and duplicate work drops, as more of the team works in Amp. It covers the signals and searching functions from raw transcripts, with no remembering or pruning step.
+
 ## Why it matters
 
 The four-function convergence (signals, memory, pruning, retrieval) suggests "company brain" is becoming a recognizable architecture pattern, not just a marketing label. It is worth tracking as its own concept because it is the *composition*: [MCP](mcp.md) is the tool-exposure protocol several of these systems use, [agent memory](agent-memory.md) is the lifecycle mechanics behind "remembering" and "dreaming & pruning", and the [knowledge layer](knowledge-layer.md) is the compiled content that "speaking & searching" serves. None of those three alone is a company brain.
 
 ## Recent changes
 
+- [2026-10-25] Added Amp's commit-linked shared threads ("threads are your company memory", Thorsten Ball) as a store-free variant covering signals and searching only; "company memory" added to Also called.
 - [2026-10-02] Added Airbnb's Everest context graph and AirChat agent as a production example (grocery-integration lessons reused to ship airport pickups in ~6 weeks); "context graph" added to Also called.
 - [2026-09-09] Added Cerebras Knowledge as a production example: one shared Postgres embeddings table across Slack/wiki/code/custom sources, six-way retrieval fusion via reciprocal rank fusion, and narrow LLM-free MCP tools that let the calling client (e.g. Claude Code) own orchestration instead of one black-box answer endpoint.
 - [2026-09-09] Terminology reorganization: added the `## Also called` alias line, stated the page's position in the new [Knowledge architectures](knowledge-architectures.md) hub (an organization-scope system composed of a knowledge layer, agent memory, and tool access), and rewrote the Related lines to agree with it.
@@ -54,3 +61,4 @@ The four-function convergence (signals, memory, pruning, retrieval) suggests "co
 - [Cerebras — How We Built Our Knowledge Base](../sources/articles/cerebras-knowledge-base.md)
 - [Dhravya Shah on X — How to Build Your Company Brain in 5 Minutes](../sources/tweets/dhravyashah-supermemory-company-brain-2026-07-28.md)
 - [Latent Space — Inside-Out AI: Rebuilding Airbnb](../sources/newsletters/latent-space-airbnb-inside-out-ai-2026-10-02.md)
+- [Thorsten Ball (@thorstenball) — How I work with Agents](../sources/tweets/thorstenball-how-i-work-with-agents-2026-10-25.md)

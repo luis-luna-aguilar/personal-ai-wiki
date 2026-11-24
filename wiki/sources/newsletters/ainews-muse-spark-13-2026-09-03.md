@@ -22,7 +22,7 @@ AINews' AI Twitter recap for 8/22–8/24/2026 (published with a lag). Lead story
 - [Harness vs model](../../concepts/harness-vs-model.md) — openJiuwen fixed-model result (moved from Harness (agent))
 - [Automated harness optimization](../../concepts/automated-harness-optimization.md) — HarnessDev self-evolved-harness finding (moved from Harness)
 - [AGI timeline claims](../../trends/agi-timeline-claims.md) — @rasbt's Astra architecture rebuttal
-- [Agent safety and alignment research](../../trends/agent-safety-and-alignment-research.md) — Astra recurrent-depth/monitorability context
+- [Chain-of-thought monitorability](../../trends/cot-monitorability.md) — Astra recurrent-depth/monitorability context
 
 ## Key claims extracted
 

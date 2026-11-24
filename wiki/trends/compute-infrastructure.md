@@ -4,7 +4,7 @@ type: trend
 domains: [models]
 tags: [anthropic]
 as_of: 2026-08-19
-sources: [ainews-2026-04-21, runtime-improvements-improve-agent-economics, google-cloud-next-2026, ainews-2026-04-25, ai-earnings-capex-2026-04-30, inference-inflection-agent-runtime-2026-04-30, parallel-web-agent-apis-2026-04-30, persistent-cloud-computers-agents-2026-05-01, stripe-agent-native-commerce-fraud-2026-04-29, ainews-not-much-happened-2026-07-02, local-ai-infrastructure-2026-06, outputmaxxing-amp-compute-utilization-2026-06, railway-agent-native-cloud-2026-05-20, daytona-giving-agents-computers-2026-05-21, modal-agent-experience-2026-07-08, ainews-new-ai-infra-unicorns-2026-05-22, amd-acquires-taalas-2026-08-07, ainews-memory-prices-openai-pause-2026-08-19]
+sources: [ainews-2026-04-21, runtime-improvements-improve-agent-economics, google-cloud-next-2026, ainews-2026-04-25, ai-earnings-capex-2026-04-30, inference-inflection-agent-runtime-2026-04-30, parallel-web-agent-apis-2026-04-30, persistent-cloud-computers-agents-2026-05-01, stripe-agent-native-commerce-fraud-2026-04-29, ainews-not-much-happened-2026-07-02, local-ai-infrastructure-2026-06, outputmaxxing-amp-compute-utilization-2026-06, railway-agent-native-cloud-2026-05-20, daytona-giving-agents-computers-2026-05-21, modal-agent-experience-2026-07-08, ainews-new-ai-infra-unicorns-2026-05-22, amd-acquires-taalas-2026-08-07, ainews-memory-prices-openai-pause-2026-08-19, openai-economics-june-2026]
 ---
 
 # Compute infrastructure as decisive competitive moat
@@ -41,6 +41,15 @@ Outputmaxxing is the discipline of maximizing useful model-training or inference
 
 The useful wiki update is not to treat AMP's exact MFU anecdotes as settled facts. The durable point is that frontier compute advantage is becoming a systems problem: GPU supply, memory, networking, workload scheduling, power, and utilization all affect model progress.
 
+## Lab and subscription economics
+
+As of June 2026, the economics behind frontier model access:
+
+- **OpenAI FY2025 (leaked):** $38.5B net loss (7× worse than 2024's $5B); revenue $3.7B → $13B; ChatGPT market share dipped below 50% for first time; confidential S-1 filed for IPO; company considering drastic API price cuts ahead of anticipated Anthropic move (WSJ)
+- **Subscriber compute costs (SemiAnalysis):** $200/mo Claude Max plan costs Anthropic up to $8,000/mo in compute; $200/mo ChatGPT Pro costs OpenAI up to $14,000/mo — both unlimited-usage tiers are structurally loss-leading at current usage rates
+- **Enterprise deployment reality (Scale "6% Report"):** Only 6% of organizations have deployed AI at scale with measurable business value despite large spending; most are still in pilot stage
+- **Oracle:** $19B quarterly revenue; largest cloud infrastructure beneficiary of frontier AI compute spending
+
 ## What to watch
 
 - Whether this deal shows up as a measurable Claude capability lead in H2 2026
@@ -58,6 +67,7 @@ The useful wiki update is not to treat AMP's exact MFU anecdotes as settled fact
 
 ## Recent changes
 
+- [2026-11-23] Lab and subscription economics section (June 2026: OpenAI FY2025 financials, SemiAnalysis subscriber compute costs, Scale "6% Report", Oracle) moved here from [State of Models](../state-of/models.md).
 - [2026-08-19] DRAM/memory prices reportedly up to ~10x their lowest-ever level, with 2027 production capacity largely pre-committed by hyperscalers; Cerebras announces CS-4, roughly doubling per-wafer inference throughput over WSE-3 (4,400+ tok/s/user on GPT-OSS-120B, claimed up to 30x faster than GPUs).
 - [2026-08-07] AMD (Lisa Su) acquired custom-ASIC inference startup Taalas, which etches specific model weights directly into silicon — a concrete vertical-integration move by a major GPU vendor, though the source itself notes unresolved skepticism about etched-LLM economics from its own podcast coverage.
 - [2026-07-08] Agent-execution-layer analog spun off into a dedicated page: [Agent-native compute infrastructure](agent-native-compute.md) covers Daytona/Modal/Railway sandbox economics, RL/eval workload shapes, and the infra funding wave (Exa, Turbopuffer, Hark, Modal).
@@ -88,3 +98,4 @@ The useful wiki update is not to treat AMP's exact MFU anecdotes as settled fact
 - [AINews — New AI Infra unicorns: Exa, Modal, TurboPuffer](../sources/newsletters/ainews-new-ai-infra-unicorns-2026-05-22.md)
 - [AMD acquires Taalas](../sources/newsletters/amd-acquires-taalas-2026-08-07.md)
 - [AINews — Memory prices up 500% in 12 months](../sources/newsletters/ainews-memory-prices-openai-pause-2026-08-19.md)
+- [AI subscription economics and OpenAI financials (June 2026)](../sources/newsletters/openai-economics-june-2026.md)

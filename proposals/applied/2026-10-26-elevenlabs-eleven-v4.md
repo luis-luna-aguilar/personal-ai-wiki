@@ -15,7 +15,7 @@ ElevenLabs has merged its two text-to-speech lines, expressive and real-time, in
 
 [[#Open questions|Open questions: 1 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 
@@ -231,3 +231,4 @@ None.
 ## Open questions
 
 - Eleven v4 shipped before the ingest date: an early-October newsletter in `raw/` already ranks v4 Turbo. Backdate `as_of` on the new page and on the State of Voice line to the earliest dated mention, or keep the ingest date the schema prescribes when the source has no date (assumed: keep 26 October)?
+	- Keep it

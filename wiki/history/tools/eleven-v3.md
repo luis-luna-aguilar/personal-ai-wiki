@@ -12,6 +12,8 @@ sources: [eleven-v3, legacy-ai-tools-roadmap-xlsx]
 
 Eleven v3 is ElevenLabs' expressive text-to-speech model. Its core role is high-control, emotionally directed speech synthesis rather than low-latency real-time voice conversation.
 
+**Superseded by [Eleven v4](../../tools/eleven-v4.md), 2026-10-26.**
+
 ## Current status (as of 2026-04-22)
 
 - Latest expressive TTS model in ElevenLabs documentation
@@ -20,6 +22,5 @@ Eleven v3 is ElevenLabs' expressive text-to-speech model. Its core role is high-
 
 ## Sources
 
-- [Eleven v3 docs](../sources/articles/eleven-v3.md)
-- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
-
+- [Eleven v3 docs](../../sources/articles/eleven-v3.md)
+- [AI Tools & Roadmap legacy workbook](../../sources/notes/legacy-ai-tools-roadmap-xlsx.md)

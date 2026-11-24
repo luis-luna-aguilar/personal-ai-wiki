@@ -16,7 +16,7 @@ DigitalOcean's product-blog announcement (dated "Updated: September 22, 2026") t
 ## Influenced pages
 - [DigitalOcean Managed Agents](../../tools/digitalocean-managed-agents.md) — new tool page
 - [State of Agents](../../state-of/agents.md) — new line under Agent sandbox / compute infrastructure
-- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — bring-your-own-harness managed runtimes bullet
+- [Agent execution runtimes](../../concepts/agent-execution-runtimes.md) — bring-your-own-harness managed runtimes bullet (moved from Agent runtime platforms)
 - [Agent-native compute infrastructure](../../trends/agent-native-compute.md) — general-cloud entrant, active-CPU billing, fast resume
 
 ## Key claims extracted

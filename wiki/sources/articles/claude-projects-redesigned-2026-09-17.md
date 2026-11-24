@@ -16,7 +16,7 @@ Anthropic's launch post for the redesigned Projects in Claude Code. A project no
 ## Influenced pages
 
 - [Claude Code](../../tools/claude-code.md) — Projects mechanics, rollout, usage warning
-- [Multi-agent coordination](../../workflows/multi-agent-coordination.md) — Projects as shipped coordinator-specialist routing
+- [Multi-agent coordination: evidence from practice](../../workflows/multi-agent-coordination-evidence.md) — Projects as shipped coordinator-specialist routing
 
 ## Key claims extracted
 

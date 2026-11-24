@@ -16,7 +16,7 @@ X Article by Microsoft's CEO arguing that enterprises cannot outsource responsib
 ## Influenced pages
 
 - [Agent autonomy and governance](../../training/agent-autonomy-and-governance.md) — new "Treat the model as an insider risk" governance subsection
-- [Agent safety and alignment research](../../trends/agent-safety-and-alignment-research.md) — Current-signal bullet on CoT transparency and nested black boxes; What-to-watch line
+- [Chain-of-thought monitorability](../../trends/cot-monitorability.md) — Current-signal bullet on CoT transparency and nested black boxes; What-to-watch line
 - [Harness (agent)](../../concepts/harness.md) — Related cross-reference to the governance subsection
 
 ## Key claims extracted

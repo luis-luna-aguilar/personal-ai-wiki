@@ -15,7 +15,7 @@ Palantir is selling post-training as a factory that turns a company's operationa
 
 [[#Open questions|Open questions: 2 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 
@@ -333,4 +333,6 @@ None.
 ## Open questions
 
 - The knowledge-architectures hub moves from about 111% to about 118% of its 1,200-word ceiling. Split it now by moving `## Term map` to its own page (for example `concepts/knowledge-architectures-term-map.md`), with the hub keeping the three axes and the matrix and pointing to the map? Below 150%, so this is optional.
+	- Split now
 - The new row maps the Palantir Foundry Ontology itself (object types, properties and links over a company's ERP, MES and CRM records, plus recorded decisions) to the `"one ontology"` sense at organization scope, as a hedge inside the note. Keep it as a note until a source describes the Foundry Ontology directly (assumed), or give it its own matrix row now?
+	- keep it as note

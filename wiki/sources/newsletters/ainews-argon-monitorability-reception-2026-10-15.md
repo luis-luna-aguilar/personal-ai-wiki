@@ -16,7 +16,7 @@ Story-specific page for the Gemini 4 Argon section of AINews' 15 October 2026 is
 ## Influenced pages
 
 - [Gemini 4 Argon](../../models/gemini-4-argon.md) — reception, monitorability caveat
-- [Agent safety and alignment research](../../trends/agent-safety-and-alignment-research.md) — Argon monitorability
+- [Chain-of-thought monitorability](../../trends/cot-monitorability.md) — Argon monitorability
 
 ## Key claims extracted
 

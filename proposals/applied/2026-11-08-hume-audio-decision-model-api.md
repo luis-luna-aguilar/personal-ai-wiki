@@ -14,7 +14,7 @@ Decision models now reach audio. Hume's new model judges how speech sounds, not 
 
 [[#Open questions|Open questions: 1 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 Hume AI, the company behind the empathic voice model EVI 3, has put up a product page for its Audio Decisions API. The page carries no publish date. The model follows the pattern that TypeSafe's Jev set in September. It does not write an answer. A developer sends an audio file, a question and the allowed answers (yes/no, pick one, or a point on a scale), and the model returns a probability for each answer. Several questions can go in one call. The request format even uses Jev-style question types ("noul" and "choice"). What is new is the input. The model listens to the audio directly, so it can answer questions a transcript cannot, such as whether a patient sounds anxious, whether two speakers talk over each other, or whether there is background speech.
@@ -235,3 +235,4 @@ None.
 ## Open questions
 
 - Should the model also be listed on **State of Voice AI** as its own section? That needs `voice` added to the `decision-model` subcategory's parent domains in `wiki/_schema/subcategories.md` and `voice` added to the page's `domains`. This proposal keeps it under Models with a one-line pointer from Voice.
+	- Yes, move it as own section. And searcg what else to put in there, lets organize stuff around that section when its related

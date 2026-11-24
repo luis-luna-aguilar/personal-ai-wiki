@@ -6,7 +6,7 @@ Subcategories group tools, models, and workflows into cohorts of comparable thin
 
 ## Current subcategories
 
-Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`, `agent-sandbox-infra`, `coding-discipline-skill`, `knowledge-platform`, `web-data-extraction`, `domain-specialized-model`, `small-model`, `ai-e2e-testing`, `decision-model`
+Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-orchestration`, `coding-model`, `frontier-model`, `open-weight-model`, `legal-ai`, `agentic-devops`, `computer-use`, `ai-assistant`, `terminal-coding-agent`, `agent-toolkits`, `agentic-orchestration-patterns`, `agent-native-documents`, `autonomous-research-agent`, `image-generation-model`, `agent-framework`, `science-agent-platform`, `formal-verification`, `speech-to-text`, `voice-models`, `ai-video-generation`, `ai-avatar-video`, `ui-generation`, `document-intelligence`, `healthcare-ai`, `finance-ai`, `deep-research-tool`, `utility-model`, `visual-design-prototyping`, `agent-eval-tooling`, `ai-music-generation`, `agent-sandbox-infra`, `coding-discipline-skill`, `knowledge-platform`, `web-data-extraction`, `domain-specialized-model`, `small-model`, `ai-e2e-testing`, `decision-model`, `vector-graphics-model`
 
 ### spec-driven-development
 - **Parent domain(s):** coding
@@ -156,7 +156,7 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Parent domain(s):** agents, voice
 - **Applies to types:** tool
 - **Definition:** AI voice products centered on expressive text-to-speech, speech-to-speech conversation, or voice cloning as a primary interface or output surface.
-- **Examples:** [Hume EVI 3](../tools/hume-evi-3.md), [Eleven v3](../tools/eleven-v3.md)
+- **Examples:** [Hume EVI 3](../tools/hume-evi-3.md), [Eleven v4](../tools/eleven-v4.md)
 
 ### ai-video-generation
 - **Parent domain(s):** creative
@@ -243,10 +243,16 @@ Declared slugs: `spec-driven-development`, `agentic-coding-workspace`, `agent-or
 - **Examples:** [TesterArmy e2e](../tools/tester-army-e2e.md)
 
 ### decision-model
-- **Parent domain(s):** models, agents
+- **Parent domain(s):** models, agents, voice
 - **Applies to types:** model | concept
 - **Definition:** Models that answer typed questions about an input (a yes/no probability, a pick from options, a score on a scale) in one pass without generating text, used as cheap programmable judgments inside software and agent loops. Covers general-purpose ones and those tuned for one domain's decisions. Distinct from `utility-model` (one fixed pipeline task that is not a typed judgment) and `domain-specialized-model` (domain models that generate rather than decide).
-- **Examples:** [Jev](../models/jev.md), [Decision models](../concepts/decision-models.md), [ScaleDown](../models/scaledown.md), [MedDecider-27B](../models/meddecider-27b.md)
+- **Examples:** [Jev](../models/jev.md), [Decision models](../concepts/decision-models.md), [ScaleDown](../models/scaledown.md), [MedDecider-27B](../models/meddecider-27b.md), [Hume Audio Decision Model](../models/hume-audio-decision-model.md)
+
+### vector-graphics-model
+- **Parent domain(s):** models, creative
+- **Applies to types:** model
+- **Definition:** Models that generate or edit editable vector graphics (SVG paths, logos, icons, illustrations) rather than raster pixels. Distinct from `image-generation-model`, which outputs raster images.
+- **Examples:** [Arrow 2](../models/arrow-2.md)
 
 ### Format
 

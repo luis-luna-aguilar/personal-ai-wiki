@@ -15,6 +15,7 @@ One-line TTS item from the 6 October AINews issue.
 ## Influenced pages
 
 - [State of Voice](../../state-of/voice.md) — Eleven line
+- [Eleven v4](../../tools/eleven-v4.md) — Provider Voice TTS arena result
 
 ## Key claims extracted
 

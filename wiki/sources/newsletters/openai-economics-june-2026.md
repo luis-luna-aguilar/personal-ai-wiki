@@ -14,7 +14,7 @@ SemiAnalysis compute cost analysis, leaked OpenAI FY2025 financials, and Scale's
 
 ## Influenced pages
 
-- [State of Models](../../state-of/models.md) — economics snapshot section
+- [Compute infrastructure](../../trends/compute-infrastructure.md) — lab and subscription economics section (moved from State of Models' economics snapshot)
 
 ## Key claims extracted
 

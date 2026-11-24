@@ -3,7 +3,7 @@ title: Acceptance contracts and test oracles
 type: training
 domains: [coding]
 as_of: 2026-10-19
-sources: [lavaee-verification-pyramid-2026-10, rauchg-gdp-ts-2026-10, bcherny-formal-verification-agent-sdk-2026-09-22]
+sources: [lavaee-verification-pyramid-2026-10, rauchg-gdp-ts-2026-10, bcherny-formal-verification-agent-sdk-2026-09-22, openai-low-resource-programming-languages-2026-10-19]
 ---
 
 # Acceptance contracts and test oracles
@@ -23,7 +23,7 @@ An oracle is whatever decides pass/fail against something trusted. Fixed example
 
 - **Property-based tests** check an invariant over thousands of generated inputs ("output is always sorted").
 - **Metamorphic tests** compare related runs (same inputs at 30 and 120 FPS must give the same outcome).
-- **Differential tests** run old vs new, or yours vs a reference, on the same input.
+- **Differential tests** run old vs new, or yours vs a reference, on the same input. For migrations this is the main oracle: OpenAI's COBOL-migration eval requires byte-for-byte parity of outputs between the COBOL original and the rewrite on hidden tests, and passes a migration only if every test passes. It catches changes a reviewer would miss: COBOL drops extra decimal digits unless told to round, so a rewrite that rounds runs cleanly and still gets the money wrong ([MultiLangBench](../benchmarks/multilangbench.md)).
 - **Mutation tests** plant small faults; if tests still pass, they aren't testing what you think.
 - **Approved snapshots** change only when a person approves the new snapshot.
 - **Invariants and contracts** check pre/post-conditions on every run.
@@ -40,6 +40,7 @@ The agent can write property tests; a person decides which matter. Treat coverag
 ## Recent changes
 
 - [2026-10-19] Added proof-carrying types (gdp-ts) as an oracle: authorization checks enforced by the TypeScript compiler and a lint preset rather than by review.
+- [2026-10-19] Added OpenAI's COBOL-migration eval as a differential-test example: byte-for-byte output parity on hidden tests, all tests must pass.
 - [2026-10-14] Added Lavaee's verification-pyramid guidance: acceptance contract first, oracles agents can't game, test-diff-first review, multi-judge mean-plus-veto scoring, and scenario-driven browser and performance checks.
 - [2026-09-22] Added model-checked specifications (TLA+/Lean) as an oracle: Opus 5.5 modeled the Claude Agent SDK and its counterexamples became 16 bug- and race-fix PRs.
 - [2026-10-20] Page created, split out of [Evals for agentic software development](evals-for-agentic-software-development.md).
@@ -49,9 +50,11 @@ The agent can write property tests; a person decides which matter. Treat coverag
 - [Evals for agentic software development](evals-for-agentic-software-development.md) — the full eval stack these checks feed
 - [AI PR and code review](../workflows/ai-pr-code-review.md) — fresh-session review
 - [gdp-ts](../tools/gdp-ts.md) — proof-carrying types for TypeScript
+- [MultiLangBench](../benchmarks/multilangbench.md) — OpenAI's multi-language build benchmark and COBOL-migration eval
 
 ## Sources
 
 - [Agents Write the Code. Your System Has to Prove It. — Alex Lavaee](../sources/tweets/lavaee-verification-pyramid-2026-10.md)
 - [rauchg/gdp-ts — Ghosts of Departed Proofs for TypeScript (GitHub)](../sources/repos/rauchg-gdp-ts-2026-10.md)
 - [Boris Cherny — formally verifying the Claude Agent SDK with Lean and Opus 5.5](../sources/tweets/bcherny-formal-verification-agent-sdk-2026-09-22.md)
+- [OpenAI — Advancing coding in low-resource programming languages](../sources/articles/openai-low-resource-programming-languages-2026-10-19.md)

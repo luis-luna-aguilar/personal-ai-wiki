@@ -15,7 +15,7 @@ Ethan Mollick (Wharton) describes an early-access Claude Projects run in which a
 
 ## Influenced pages
 
-- [Multi-agent coordination](../../workflows/multi-agent-coordination.md) — worked example of coordinator-specialist routing in Projects
+- [Multi-agent coordination: evidence from practice](../../workflows/multi-agent-coordination-evidence.md) — worked example of coordinator-specialist routing in Projects
 
 ## Key claims extracted
 

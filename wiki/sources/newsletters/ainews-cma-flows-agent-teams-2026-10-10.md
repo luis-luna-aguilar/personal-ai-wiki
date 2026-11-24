@@ -15,7 +15,8 @@ The "Multi-Agent Orchestration and Coding Tools" section of the 10 October 2026 
 ## Influenced pages
 
 - [Claude Managed Agents](../../tools/claude-managed-agents.md) — public beta, 1,000-agent limit, beta header, cost warning
-- [Multi-agent coordination](../../workflows/multi-agent-coordination.md) — agent-team measurements
+- [Multi-agent coordination](../../workflows/multi-agent-coordination.md) — Managed Agents flows in the orchestration-as-code pattern
+- [Multi-agent coordination: evidence from practice](../../workflows/multi-agent-coordination-evidence.md) — agent-team measurements
 - [Devin](../../tools/devin.md) — Devin trees
 - [Cost-aware routing: evidence from practice](../../training/cost-aware-routing-evidence.md) — Vals team-cost bullet
 

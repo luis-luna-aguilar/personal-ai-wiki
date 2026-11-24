@@ -4,7 +4,7 @@ type: trend
 domains: [science]
 tags: []
 as_of: 2026-09-22
-sources: [self-driving-lab-radical-ai, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07, openai-erdos-unit-distance-2026-05, lila-sciences-automated-wet-lab-2026-07-16, anthropic-riemann-hypothesis-2026-08-11, gdm-reshuffle-discovery-loop-2026-08-06, john-platt-google-era-2026-09-22]
+sources: [self-driving-lab-radical-ai, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07, openai-erdos-unit-distance-2026-05, lila-sciences-automated-wet-lab-2026-07-16, anthropic-riemann-hypothesis-2026-08-11, gdm-reshuffle-discovery-loop-2026-08-06, john-platt-google-era-2026-09-22, model-hardware-standard-research-preview-2026-08-27]
 ---
 
 # AI in Science
@@ -54,11 +54,14 @@ Anthropic argues AI has advanced faster in coding than biology not because of in
 
 **A second automated lab (Lila Sciences, as of 2026-07-16):** Flagship Pioneering spinout Lila Sciences runs a fully automated, 24/7 robotic wet lab spanning biology, chemistry, drug discovery, and materials science simultaneously — the same lab, same AI, across domains Radical AI treats separately. Lila has generated over 10 trillion experimentally-validated scientific reasoning tokens so far, and rebuilt a gas-sorption measurement to run roughly 2,500x faster by treating lab instruments as nodes on a graph rather than serial steps. Lila's stated goal is a general scientific reasoner, not an automation tool: they report breadth (small-molecule chemistry priors transferring to materials science) outperforming domain-specific models sample-for-sample.
 
+**A shared instrument standard (Anthropic, as of 2026-08-27):** much of a self-driving lab's cost is bespoke instrument integration. Anthropic's [Model Hardware Standard](../concepts/model-hardware-standard.md) research preview, developed with HHMI Janelia, gives microscopes, liquid handlers, and robot arms a common driver so one agent can run several in parallel; Tecan, QIAGEN, Danaher, MBF Bioscience, and Automata are building support.
+
 ## Recent changes
 
 - [2026-10-21] Biology material (protein world models, virtual cells, AI-native drug design, ART, genomic language models) split out into a new dedicated page, [AI in Biology](ai-in-biology.md), at the user's request.
 - [2026-09-22] Added Google's ERA (Empirical Research Assistance): tree search over Gemini-mutated notebooks for any problem with a score function; 10+ papers, contrail counterfactual solved.
 - [2026-09-07] Pure-mathematics signals (OpenAI's Erdős disproof, Anthropic's Riemann Hypothesis bound) split out into a new dedicated page, [AI in Mathematics](ai-in-mathematics.md), at the user's request.
+- [2026-08-27] Anthropic's [Model Hardware Standard](../concepts/model-hardware-standard.md) research preview (with HHMI Janelia): a common driver so agents can discover, run, and coordinate lab instruments; Tecan, QIAGEN, Danaher, MBF Bioscience, and Automata building support.
 - [2026-08-11] Anthropic reported an unreleased research Claude variant improved a Riemann Hypothesis-related bound (proportion of zeta zeros proven on the critical line: 41.6% → 67.2%), via ~31M output tokens of retries/exploration — a second pure-math signal alongside OpenAI's Erdős disproof; not yet independently verified.
 - [2026-08-06] Jeff Dean, Sanjay Ghemawat, Oriol Vinyals, and Quoc Le left Google DeepMind to found autoresearch startup Discovery Loop; accompanied by a DeepMind leadership reshuffle (Hassabis to Chair of GDM/Chief Scientist of Alphabet, Kavukcuoglu to SVP of DeepMind)
 - [2026-07-16] Added Lila Sciences as a second self-driving-lab signal: cross-domain automated wet lab, 10T+ validated scientific reasoning tokens, ~2,500x gas-sorption speedup
@@ -75,3 +78,4 @@ Anthropic argues AI has advanced faster in coding than biology not because of in
 - [AINews — Anthropic's Riemann Hypothesis bound improvement](../sources/newsletters/anthropic-riemann-hypothesis-2026-08-11.md)
 - [AINews — Jeff, Sanjay, Oriol, and Quoc depart DeepMind; Discovery Loop founded](../sources/newsletters/gdm-reshuffle-discovery-loop-2026-08-06.md)
 - [Latent Space — John Platt on Google's ERA](../sources/newsletters/john-platt-google-era-2026-09-22.md)
+- [Anthropic — Previewing the Model Hardware Standard](../sources/articles/model-hardware-standard-research-preview-2026-08-27.md)

@@ -3,8 +3,8 @@ title: AI delegation management
 type: training
 domains: [agents, training]
 tags: [agentic]
-as_of: 2026-10-19
-sources: [management-as-ai-superpower-2026-07, andy-matuschak-agent-loop-tempo-2026-07, design-layer-framework-2026-08-04, vibe-coded-security-risk-2026-08-10, securing-ai-employee-guide-2026-08-14, next-era-of-great-work-2026-08-16, engineering-team-cost-of-codex-2026-08-19, rieseberg-how-to-be-more-ambitious, yarchi-ai-team-runs-business-2026-09]
+as_of: 2026-10-25
+sources: [management-as-ai-superpower-2026-07, andy-matuschak-agent-loop-tempo-2026-07, design-layer-framework-2026-08-04, vibe-coded-security-risk-2026-08-10, securing-ai-employee-guide-2026-08-14, next-era-of-great-work-2026-08-16, engineering-team-cost-of-codex-2026-08-19, rieseberg-how-to-be-more-ambitious, yarchi-ai-team-runs-business-2026-09, thorstenball-how-i-work-with-agents-2026-10-25]
 ---
 
 # AI delegation management
@@ -18,6 +18,9 @@ Working with agents is increasingly a management skill: define the job, explain 
 - Write delegation documents like managers already do: purpose, constraints, authority limits, deliverables, interim checkpoints, and definition of done.
 - Match loop tempo to the work. Fast 1-2 minute loops keep the human in control; slow delegated loops work when the human can ignore details until checkpoints. Mid-speed 10-30 minute loops can create context switching and comprehension loss.
 - Write the spec before execution starts, not after — encode constraints, standards, and what "good" looks like so both people and agents downstream can make the decisions you would make. See the worked example under Proven patterns.
+- **Use the strongest current model for delegated work.** Thorsten Ball (Amp, Oct 2026): a model that is wrong 10% of the time does not tell you which 10%, so a cheaper, weaker model costs you repeated attempts. This is a counterpoint to [cost-aware task routing](cost-aware-ai-task-routing.md); both treat the human's review and retry time as the real cost, and disagree on how often a cheaper executor is competent.
+- **Prompt the what, not the how.** Describe the result and the bar ("make the bytecode compiler and VM as fast as you can; do not stop until it's 2x faster") rather than your own plan for reaching it; Ball reports better results. Altitude, under "Raising the ambition of a delegation" below, goes one step further, to the outcome behind the task.
+- **Don't manage context by hand.** One thread per task, and let compaction handle length; Ball's threads range from 3 to 3,714 messages. This disagrees with Anthropic's Claude Code guidance to start a fresh session when the context fills ([Claude Code practices](../workflows/claude-code-practices.md)); which advice holds likely depends on how well a given harness compacts.
 
 ## Proven patterns
 
@@ -25,7 +28,9 @@ Working with agents is increasingly a management skill: define the job, explain 
 
 - Use domain expertise to explain the output standard and catch subtle failures.
 - Convert repeated delegation into templates, checklists, or skills once the first few runs are stable.
-- Ask for interim evidence when the cost of a wrong direction is high.
+- Ask for interim evidence when the cost of a wrong direction is high, and for **irrefutable proof** at the end: an end-to-end walkthrough, a demo video, before/after numbers. Thorsten Ball (Amp, Oct 2026) calls this his biggest change, says agents are good at producing such proof, and suggests writing what does *not* count as evidence into the team's `AGENTS.md`. Judging proof is an instinct built up over time.
+- **Let the agent build the tools to iterate, instead of iterating with it.** Rather than "try this... no, try that", ask for "20 variations and a little page that lets me combine and test them". The same works on the problem side: "give me four theories on why this is slow, then check all four." (Thorsten Ball, Oct 2026)
+- **Let agents wait on you, not the reverse.** Hand over bigger, batched tasks instead of back-and-forth, and use scheduled wake-ups ("check the logs in 2 hours", "let me know once this is live", "check every day at 9am"), which Ball names as a feature he missed badly once it was switched off. This is the slow delegated loop from Current guidance made routine.
 - **Spec-first delegation, worked example.** Before any build starts, write a spec covering an overview, a hero scenario (a concrete walkthrough of the primary use case), functional and behavioral requirements, explicit non-goals, and failure modes — the details AI can't infer because they depend on how you live and work, not on general knowledge. Worked example (a personal "friend tracker" app): overview states the goal in one line; the hero scenario describes a specific Sunday-morning walkthrough; behavioral rules define what counts as "contact" and forbid nagging notifications; non-goals rule out gamification and relationship scoring; failure modes name what "gone wrong" looks like (feels like obligation, generic suggestions, more than 3 people surfaced at once). This generalizes [spec-driven development](../concepts/spec-driven-development.md)'s coding-specific spec-first practice to delegating any kind of work, human or agent. (Aishwarya Reganti, Aug 2026)
 - **Targeted review questions over exhaustive reading.** When an agent produces a large multi-file output, ask four or five pointed questions that expose likely failure points — "How are you handling auth?", "What happens when a token expires mid-session?", "What are the different failure paths?" — rather than reading every line. The domain expertise is in knowing what to ask, not in reading everything.
 - **Turn recurring corrections into reusable instructions.** When the same correction keeps recurring across AI drafts, write it into a standing instruction or prompt rule instead of correcting it again next time — converts one-off taste into something reusable by the team and its agents. For standing agents, keep one **rulings file**: every correction lands as a single line ("cost per booked consultation is the metric, not cost per lead") and every agent reads it before it works, so a correction becomes permanent instead of repeated. (Yarchi, Sep 2026)
@@ -62,6 +67,7 @@ All three directions assume the agent has a computer, can install software, and 
 
 ## Recent changes
 
+- [2026-10-25] Added Thorsten Ball's (Amp) delegation habits: strongest current model, prompt the what not the how, no manual context management (counterpoints to cost-aware routing and Anthropic's fresh-session advice), irrefutable proof with a "this is not evidence" rule, agent-built iteration tools, and async work with scheduled wake-ups.
 - [2026-10-19] Added "Raising the ambition of a delegation": Felix Rieseberg's altitude, depth, and range directions, a reusable "deeper, not bigger" prompt, and a failure mode for role play and self-grading.
 - [2026-09-04] Folded Yarchi's five-step setup for scheduled agents in a small business into existing bullets: a numbered standing-lane sequence on the specialist-roster pattern (one lane per channel, pinned job-description context, ordered schedules), a rulings file on recurring corrections, and a reversible/irreversible approval line on layered access control.
 - [2026-08-19] Added the specialist-agent-roster pattern and dispatch-desk triage recipe from a solo builder running several named Codex "team members," each with its own AGENTS.md, skills, and memory.
@@ -85,3 +91,4 @@ All three directions assume the agent has a computer, can install software, and 
 - [An Engineering Team for the Cost of Codex](../sources/articles/engineering-team-cost-of-codex-2026-08-19.md)
 - [How to be more ambitious: a tutorial for humans with models — Felix Rieseberg](../sources/articles/rieseberg-how-to-be-more-ambitious.md)
 - ["How to turn AI into a whole team that runs your business" — Yarchi](../sources/tweets/yarchi-ai-team-runs-business-2026-09.md)
+- [Thorsten Ball (@thorstenball) — How I work with Agents](../sources/tweets/thorstenball-how-i-work-with-agents-2026-10-25.md)

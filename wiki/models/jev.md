@@ -4,15 +4,15 @@ type: model
 domains: [models]
 subcategory: decision-model
 tags: [closed-source]
-as_of: 2026-10-17
-sources: [latent-space-jev-diogo-almeida-2026-09-21, every-how-to-get-most-out-of-jev-2026-09-23, ainews-jev-judge-clm-critique-2026-09-25, cloudflare-clef-decision-models-2026-10-02, ainews-decisions-api-beta-vals-jev-2026-10-07, ainews-decision-models-product-category-2026-10-10, ainews-aa-decision-index-2026-10-14, ainews-liquid-d1-ultra-pplx-decider-2026-10-17]
+as_of: 2026-10-26
+sources: [latent-space-jev-diogo-almeida-2026-09-21, every-how-to-get-most-out-of-jev-2026-09-23, ainews-jev-judge-clm-critique-2026-09-25, cloudflare-clef-decision-models-2026-10-02, ainews-decisions-api-beta-vals-jev-2026-10-07, ainews-decision-models-product-category-2026-10-10, ainews-aa-decision-index-2026-10-14, ainews-liquid-d1-ultra-pplx-decider-2026-10-17, tamaratran-fast-jev-compaction]
 ---
 
 # Jev
 
 TypeSafe's API-only decision model, released 2026-09-15 and marketed as a "System One" model. Jev answers questions about text or structured input instead of generating text. A Noulli question returns the probability that a statement is true, a Choice question returns probabilities over a set of options, and a Score question places the input on a scale. TypeSafe CEO Diogo Almeida, a co-author of InstructGPT, maps them to an if statement, a switch statement and a sort. It is the reference point for the [decision models](../concepts/decision-models.md) category.
 
-## Current status (as of 2026-10-17)
+## Current status (as of 2026-10-26)
 
 - Price: $0.042 per 1M input tokens, output free. Text and structured data only, no images; 32K context per Cloudflare's comparison.
 - Trained with RLCD (reinforcement learning for calibrated decisions), an unpublished method that rewards honest probabilities rather than rater-preferred answers.
@@ -35,6 +35,7 @@ TypeSafe's API-only decision model, released 2026-09-15 and marketed as a "Syste
 
 ## Recent changes
 
+- [2026-10-26] Used as the keep-or-drop engine in [fast-jev-compaction](../tools/fast-jev-compaction.md), a Claude Code plugin that prunes stale tool calls and results instead of summarizing context; it calls `jev-latest` and splits requests to stay under Jev's 32K request limit.
 - [2026-10-17] Page created: launch (2026-09-15), pricing, independent results, and its fall to second on Artificial Analysis's Decision Index.
 
 ## Sources
@@ -47,3 +48,4 @@ TypeSafe's API-only decision model, released 2026-09-15 and marketed as a "Syste
 - [AINews — Decision models become a product category](../sources/newsletters/ainews-decision-models-product-category-2026-10-10.md)
 - [AINews — Artificial Analysis launches a Decision Index](../sources/newsletters/ainews-aa-decision-index-2026-10-14.md)
 - [AINews — Liquid d1-ultra tops the Decision Index; pplx-decider v1.2](../sources/newsletters/ainews-liquid-d1-ultra-pplx-decider-2026-10-17.md)
+- [tamaratran/fast-jev-compaction (GitHub)](../sources/repos/tamaratran-fast-jev-compaction.md)

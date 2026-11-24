@@ -18,7 +18,7 @@ A frontier lab now sells its own legal AI and still supplies the legal-AI compan
 
 [[#Open questions|Open questions: 1 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 
@@ -282,3 +282,4 @@ None.
 ## Open questions
 
 - Astra for Law is filed as a `legal-ai` tool. The alternative is a model page under `domain-specialized-model`, but that subcategory's definition says "fine-tuned" and lists no `legal` parent domain, so it would need a schema change. Keep it as a tool (assumed)?
+	- Its a tool

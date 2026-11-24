@@ -15,7 +15,7 @@ Anthropic's industry packaging has reached the plant floor, and its control desi
 
 [[#Open questions|Open questions: 1 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 
@@ -159,3 +159,4 @@ None.
 ## Open questions
 
 - Should I fetch and ingest Anthropic's Model Hardware Standard research-preview announcement (https://www.anthropic.com/news/model-hardware-standard-research-preview) as its own source? It would likely fit [Physical AI deployment](../wiki/trends/physical-ai-deployment.md), which watches for safety and validation practices around equipment that AI touches. This proposal mentions it only as the plugin's stated boundary.
+	- Yes, please pull it as its own source and create another proposal

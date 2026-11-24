@@ -18,7 +18,7 @@ The AI receptionist has become a packaged product that a small business can swit
 
 [[#Open questions|Open questions: 1 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 
@@ -215,3 +215,4 @@ None.
 ## Open questions
 
 - Reception is filed under `use-cases/` with no product page. The alternative is `tools/reception.md` under the existing `voice-models` subcategory, or a new `voice-agent-platform` subcategory that could also hold ElevenAgents. Keep the use-case filing (assumed), or add a tool page?
+	- Use case please

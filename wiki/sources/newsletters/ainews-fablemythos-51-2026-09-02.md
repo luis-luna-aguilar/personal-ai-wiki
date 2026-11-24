@@ -20,7 +20,7 @@ AINews' AI Twitter recap deep-dive on Anthropic's Fable 5.1/Mythos 5.1 launch: b
 - [Qwen 3.8](../../models/qwen-3-8.md) — Qwen3.8-Max-0902 #1 WebDev result
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Qwen3.8-Max-0902 data point
 - [AGI timeline claims](../../trends/agi-timeline-claims.md) — Astra "Critical" cyber-capability preparedness milestone
-- [Agent safety and alignment research](../../trends/agent-safety-and-alignment-research.md) — Astra recurrent-depth/CoT-monitorability debate
+- [Chain-of-thought monitorability](../../trends/cot-monitorability.md) — Astra recurrent-depth/CoT-monitorability debate
 
 ## Key claims extracted
 

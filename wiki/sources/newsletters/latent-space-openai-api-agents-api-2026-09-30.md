@@ -15,7 +15,7 @@ Second half of Latent Space's DevDay episode: OpenAI API product lead Nikunj Han
 
 ## Influenced pages
 
-- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — model-lab agent APIs
+- [Agent execution runtimes](../../concepts/agent-execution-runtimes.md) — model-lab agent APIs (moved from Agent runtime platforms)
 - [ChatGPT dots](../../tools/chatgpt-dots.md) — each dot gets its own Linux cloud computer
 - [ChatGPT Space](../../tools/chatgpt-space.md) — meeting notes flowing into a Space, built on the Agents API
 - [ChatGPT Pages](../../tools/chatgpt-pages.md) — Spaces/Pages/dot collaboration demo

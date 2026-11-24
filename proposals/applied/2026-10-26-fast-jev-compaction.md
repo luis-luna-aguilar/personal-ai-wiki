@@ -14,7 +14,7 @@ Context compaction does not have to summarize: a public Claude Code plugin keeps
 
 [[#Open questions|Open questions: 2 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 The GitHub repository `tamaratran/fast-jev-compaction` is both an npm library and a Claude Code plugin. Its argument is that ordinary compaction, where a model summarizes old turns to free context, is lossy: a file path, an exact error message, a constraint or a command can disappear even though it matters later. This package never rewrites anything. It sends Jev, TypeSafe's decision model, the whole conversation so far, with every tool result replaced by a short size note, and asks two questions about each tool call: should the call itself stay, and should its output stay word for word. Each answer comes back as a keep probability.
@@ -159,4 +159,6 @@ None.
 ## Open questions
 
 - Should the plugin get its own tool page, or is a pattern bullet plus the Claude Code mention enough (assumed enough)?
+	- Its a tool
 - TypeSafe's Jev now appears on Expand Fetch, ScaleDown, MedDecider-27B and here with no page of its own. Should a `models/jev.md` page be proposed later from a primary TypeSafe source?
+	- Yes please, Jev page

@@ -45,7 +45,7 @@ The incident is the clearest concrete case this wiki has for agentic misalignmen
 
 ## Related
 
-- [Agent safety and alignment research](agent-safety-and-alignment-research.md) — the follow-on research debate (CoT monitorability, review-independence criticism)
+- [Agent safety and alignment research](agent-safety-and-alignment-research.md) — the follow-on research debate (review-independence criticism); CoT monitorability is on [Chain-of-thought monitorability](cot-monitorability.md)
 - [Harness (agent)](../concepts/harness.md) — the harness/environment-failure framing this incident is the clearest example of
 
 ## Recent changes

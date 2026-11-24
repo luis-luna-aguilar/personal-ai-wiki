@@ -620,3 +620,30 @@ grep "^- \[" wiki/log.md | tail -20
 - [2026-11-23] **ingest** | Claude Cowork and chat are now one Claude | 13 pages updated, 2 created
 - [2026-11-23] **lint** | refactor tools/claude-cowork → tools/claude-app | page renamed "Claude app" with all content kept and "formerly Claude Cowork" alias; history file renamed to history/tools/claude-app.md; inbound links re-pointed (state-of/agents, claude-tag, claude-design, _schema/subcategories, 7 source pages, 2 history links)
 - [2026-11-23] **ingest** | DigitalOcean — Introducing Managed Agents | 3 pages updated, 2 created
+- [2026-11-23] **reject** | signüll — browser use is a commodity | deleted by the user; filed in proposals/rejected
+- [2026-11-23] **schema** | added subcategory `vector-graphics-model` (per inline answer on the QuiverAI Arrow 2 proposal)
+- [2026-11-23] **ingest** | Eleven v4 and Eleven v4 Turbo (ElevenLabs product page) | 4 pages updated, 2 created
+- [2026-11-23] **lint** | history move tools/eleven-v3 | superseded by Eleven v4; moved to wiki/history/tools/eleven-v3.md; inbound links (eleven-realtime, legacy roadmap source, index, voice-models schema example) re-pointed
+- [2026-11-23] **ingest** | Introducing Reception, an AI Receptionist by ElevenAgents | 1 page updated, 3 created
+- [2026-11-23] **ingest** | tamaratran/fast-jev-compaction (GitHub) | 3 pages updated, 2 created
+- [2026-11-23] **ingest** | Introducing Astra for Law (OpenAI) + Harvey thread | 3 pages updated, 3 created
+- [2026-11-23] **ingest** | OpenAI — Advancing coding in low-resource programming languages | 2 pages updated, 2 created
+- [2026-11-23] **ingest** | QuiverAI — Introducing Arrow 2 and Arrow 2 Telos | 1 page updated, 3 created
+- [2026-11-23] **reject** | Supermemory open-sources its company-brain harness | deleted by the user; filed in proposals/rejected
+- [2026-11-23] **ingest** | Claude for Manufacturing: AI plugin for plant teams | 2 pages updated, 1 created
+- [2026-11-23] **ingest** | Dessa — the Conversation Model trained only on speech (Block) | 2 pages updated, 2 created
+- [2026-11-23] **ingest** | Hume AI — Audio Decisions API launch page | 4 pages updated, 2 created
+- [2026-11-23] **schema** | added parent domain `voice` to subcategory `decision-model`; Hume Audio Decision Model added to its examples
+- [2026-11-23] **ingest** | fabio-rovai/open-ontologies (GitHub) | 3 pages updated, 2 created
+- [2026-11-23] **ingest** | Thorsten Ball — How I work with Agents | 7 pages updated, 1 created
+- [2026-11-23] **ingest** | Palantir — AutoResearch and the Fine-Tuning Ontology | 4 pages updated, 2 created
+- [2026-11-23] **lint** | refactor concepts/company-brain | Current status split under ### The four functions / ### Production examples (flat-section fix)
+- [2026-11-23] **lint** | refactor concepts/knowledge-term-map | term table split into four ### sub-tables to fix a flat section; no rows changed
+- [2026-11-23] **ingest** | Anthropic — Previewing the Model Hardware Standard | 4 pages updated, 2 created
+- [2026-11-23] **lint** | refactor concepts/harness-vs-model | flat Current status (916 words) grouped under three ### subheads: measured evidence, the harness cycle and its dissent, vocabulary and model-harness fit
+- [2026-11-23] **lint** | refactor concepts/agent-runtime-platforms | "Execution runtimes" and "Durable and cloud-native harnesses" plus matching status bullets and four Recent-changes entries moved to new concepts/agent-execution-runtimes; origin as_of 2026-10-07 → 2026-09-30; 13 source pages re-pointed
+- [2026-11-23] **lint** | refactor tools/claude-managed-agents | Current status cut to 5 bullets; memory, customer-infrastructure and in-production detail moved into Architecture subsections and a new "In production" section; duplicates removed
+- [2026-11-23] **lint** | refactor workflows/multi-agent-coordination | "Where these patterns surfaced" moved to new workflows/multi-agent-coordination-evidence (shipped products, studies and measurements); origin keeps pointer; 8 source pages and the routing-evidence link re-pointed
+- [2026-11-23] **lint** | refactor state-of/models | 10 longest leader bullets shortened (detail already on model pages); AI economics snapshot moved to trends/compute-infrastructure as "Lab and subscription economics"; pointer left
+- [2026-11-23] **lint** | refactor trends/agent-safety-and-alignment-research | "Chain-of-thought monitorability" (Astra debate and system card, Gemini 4 Argon, Nadella) moved to new trends/cot-monitorability with its 4 Recent-changes entries and 5 source ids; links re-pointed on gemini-4-argon, gpt-6-astra, agi-timeline-claims, openai-huggingface-cyber-incident, state-of/cybersecurity and 5 source pages
+- [2026-11-23] **lint** | refactor state-of/cybersecurity | Cloudflare Glasswing stage table moved to models/claude-mythos-preview; long leader bullets tightened; agent-incidents pointer moved into "Agents acting in the wild" to end the scope overlap

@@ -52,3 +52,4 @@ Older recent-change entries spilled from [Claude Code](../../tools/claude-code.m
 ## Archived from current page on 2026-11-23
 
 - [2026-06-30] Claude Sonnet 5 became available in Claude Code and via the API as `claude-sonnet-5`, alongside Claude Fable 5's return two days later — Claude Code's model lineup moved from a single fast-mode tier to multiple concurrently available models.
+- [2026-07-01] Every frames Claude Code alongside Codex as a general-purpose agent harness spilling beyond software work when tasks can be represented as files, tools, and review artifacts.

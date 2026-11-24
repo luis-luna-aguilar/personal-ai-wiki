@@ -23,7 +23,7 @@ One-time exception ingest from the user's legacy workbook. It contains mixed not
 - [OpenAI Deep Research](../../tools/openai-deep-research.md)
 - [ElevenLabs Scribe](../../tools/elevenlabs-scribe.md)
 - [Hume EVI 3](../../tools/hume-evi-3.md)
-- [Eleven v3](../../tools/eleven-v3.md)
+- [Eleven v3](../../history/tools/eleven-v3.md) (archived; superseded by Eleven v4)
 - [Mistral Document AI](../../tools/mistral-document-ai.md)
 - [LandingAI Agentic Document Extraction](../../tools/landingai-agentic-document-extraction.md)
 - [Dragon Copilot](../../tools/dragon-copilot.md)

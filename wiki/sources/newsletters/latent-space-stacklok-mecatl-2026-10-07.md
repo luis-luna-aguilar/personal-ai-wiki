@@ -16,7 +16,7 @@ Latent Space interview with Kubernetes co-creators Craig McLuckie and Joe Beda a
 ## Influenced pages
 
 - [Mecatl](../../tools/mecatl.md) — new page
-- [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — Mecatl and the Stacklok control plane in the durable-harness section
+- [Agent execution runtimes](../../concepts/agent-execution-runtimes.md) — Mecatl and the Stacklok control plane in the durable-harness section (moved from Agent runtime platforms)
 - [State of Agents](../../state-of/agents.md) — Mecatl added under Agent frameworks
 
 ## Key claims extracted

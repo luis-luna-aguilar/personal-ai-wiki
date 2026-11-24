@@ -18,6 +18,10 @@ Hume EVI 3 is a speech-to-speech voice model centered on emotionally aware conve
 - More relevant to live voice interaction than to offline narration
 - Strong fit for the "voice as agent interface" trend
 
+## Related
+
+- [Hume Audio Decision Model](../models/hume-audio-decision-model.md) — Hume's audio-native decision model, which scores recordings instead of generating speech
+
 ## Sources
 
 - [Hume EVI 3 launch](../sources/articles/hume-evi-3.md)

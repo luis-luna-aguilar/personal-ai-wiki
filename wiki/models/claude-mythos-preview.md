@@ -42,6 +42,21 @@ Cloudflare red-teamed 50+ of their own repositories with Mythos Preview. Key obs
 
 Cloudflare's architectural takeaway: "Patching faster is not the answer." Defenses-in-front, component isolation, and simultaneous rollout matter more than compressing the patch cycle.
 
+**Harness architecture.** Cloudflare's eight-stage harness around Mythos Preview for large-scale repo security research:
+
+| Stage | Role |
+|---|---|
+| Recon | Architecture document; trust boundaries; entry points; initial task queue |
+| Hunt | ~50 concurrent narrowly scoped agents; each fans out to exploration subagents with PoC scratch env |
+| Validate | Independent adversarial agent re-reads code to *disprove* findings; no ability to emit new findings |
+| Gapfill | Re-queues areas touched but not covered thoroughly |
+| Dedupe | Collapses findings sharing the same root cause |
+| Trace | Per-consumer-repo reachability: "there is a flaw" → "there is a reachable vulnerability" |
+| Feedback | Reachable traces become new hunt tasks in consumer repos |
+| Report | Structured report against predefined schema; submitted to ingest API |
+
+Design lessons: narrow scope beats exhaustive single-agent; an adversarial second agent reduces noise more than self-review; splitting "is this buggy?" from "can an attacker reach it?" works better than asking both together. Cloudflare later productized the harness, on GPT-5.6 Cyber, as Vulnerability Discovery and Remediation (see [State of Cybersecurity](../state-of/cybersecurity.md)).
+
 ## Apple M5 MIE bypass
 
 - Calif research team (Vietnam) used Mythos Preview to defeat Apple's Memory Integrity Enforcement (MIE) — Apple's strongest-ever hardware security layer, first shipped on M5

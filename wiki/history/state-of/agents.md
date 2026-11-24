@@ -92,3 +92,5 @@
 - [2026-09-09] Utopia (DeepLethe) added under Knowledge platforms: open-source bitemporal knowledge graph / ontology engine with an agent harness over MCP.
 - [2026-09-23] Added Meta Muse to Agent orchestration after Meta Connect: voice and video, Muse Mail, Mac computer use, 1,500+ connectors; Muse passed ChatGPT in the App Store.
 - [2026-09-22] Added [DigitalOcean Managed Agents](../../tools/digitalocean-managed-agents.md) to Agent sandbox / compute infrastructure: bring-your-own-harness microVM sessions with active-CPU billing and a credential-brokering MCP tool gateway (public preview).
+- [2026-09-25] Microsoft relaunched Copilot as one app with an Autopilot tab: persistent, user-named agents that appear in the org chart, joining OpenAI's dots, Meta Muse and Grok Bot in the always-on agent category.
+- [2026-09-29] Added [ChatGPT dots](../../tools/chatgpt-dots.md) to Agent orchestration (OpenAI's always-on agents with their own cloud computers, joining Grok Bot and Claude Tag) and its companion surfaces [ChatGPT Space](../../tools/chatgpt-space.md) and [ChatGPT Pages](../../tools/chatgpt-pages.md) to Agent-native documents.

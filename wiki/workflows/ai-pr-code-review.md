@@ -4,8 +4,8 @@ type: workflow
 domains: [coding, agents]
 subcategory: agentic-orchestration-patterns
 tags: [agentic]
-as_of: 2026-10-14
-sources: [ai-code-review-eval-integrity-2026-06, agent-review-artifacts-2026-05-13, dashbench-code-review-understanding-2026-07, crabbox-remote-execution-2026-07, cognition-async-agents-testing-2026-05, lavaee-verification-pyramid-2026-10, agents-evals-deep-research]
+as_of: 2026-10-25
+sources: [ai-code-review-eval-integrity-2026-06, agent-review-artifacts-2026-05-13, dashbench-code-review-understanding-2026-07, crabbox-remote-execution-2026-07, cognition-async-agents-testing-2026-05, lavaee-verification-pyramid-2026-10, agents-evals-deep-research, thorstenball-how-i-work-with-agents-2026-10-25]
 ---
 
 # AI PR and code review
@@ -24,6 +24,7 @@ This page covers both sides of the workflow: automated review execution and huma
 - Ask the review agent to emit evidence, not only opinions: changed files, risk areas, invariants, missing tests, suspected regressions, and exact code references.
 - Require a human-facing understanding artifact for meaningful agent-written diffs: what changed, why, what assumptions the agent made, what could break, and what the reviewer should verify.
 - Review from a session that never saw the implementer's transcript, since a reviewer reading the implementer's reasoning tends to continue it. The reviewer picks its checks from the acceptance criteria before reading the diff, tags findings P0–P2, and approval is decided in code (e.g. two independent approvals, discarded if the same review lists a blocker), with a cap on review rounds and a hand-off to a person when it runs out. Before merge, map every change to the criterion it satisfies; a change that maps to nothing is scope creep.
+- **Review by blast radius, not by line.** Thorsten Ball (Amp, Oct 2026) reads only the few central files in his codebase (fewer than five) and database migrations, and no longer cares about closure versus class, a neater type, variable names, or even duplication. For everything else he asks four questions before deciding whether to read the code at all: does it work, does he understand it at the arrows-in-a-diagram level, did the agent test it end to end, and could he change it in a month. This keeps the goal of understanding-preserving review below (a mental model good enough to steer the next loop) while dropping line-level reading outside the risky core.
 
 ## Review execution stack
 
@@ -124,6 +125,7 @@ Artifacts should make review faster and more accurate. They should not become de
 
 ## Recent changes
 
+- [2026-10-25] Added review-by-blast-radius guidance from Thorsten Ball (Amp): read only central files and migrations, and gate the rest on four questions (works, understood at diagram level, tested end to end, changeable in a month).
 - [2026-10-19] Added Judge calibration (calibrated rubrics, reference answers, 5–10% human audits with inter-rater agreement), moved from [Evals for agentic software development](../training/evals-for-agentic-software-development.md)'s "LLM-as-judge for code review" section.
 - [2026-10-14] Added fresh-session review guidance: criteria-first checks, P0–P2 findings, coded two-reviewer approval, capped review rounds, and change-to-criterion mapping.
 - [2026-07-08] Added remote execution and proof artifacts as first-class PR-review infrastructure for agent-authored work.
@@ -138,3 +140,4 @@ Artifacts should make review faster and more accurate. They should not become de
 - [Cognition async agents and testing proof](../sources/newsletters/cognition-async-agents-testing-2026-05.md)
 - [Agents Write the Code. Your System Has to Prove It. — Alex Lavaee](../sources/tweets/lavaee-verification-pyramid-2026-10.md)
 - [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)
+- [Thorsten Ball (@thorstenball) — How I work with Agents](../sources/tweets/thorstenball-how-i-work-with-agents-2026-10-25.md)

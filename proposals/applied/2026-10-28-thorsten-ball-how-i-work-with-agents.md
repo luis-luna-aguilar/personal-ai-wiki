@@ -14,7 +14,7 @@ Thorsten Ball's rule for coding agents is to stop steering the method and start 
 
 [[#Open questions|Open questions: 3 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 Thorsten Ball is an engineer at Amp, Sourcegraph's coding agent. On 25 October 2026 he posted an X Article called "How I work with Agents", fifteen short practices dated "as of October 2026", which passed 900,000 views.
@@ -309,5 +309,8 @@ None.
 ## Open questions
 
 - Amp has no tool page. Should one be created (subcategory would need checking), or is a practitioner post the wrong basis for it? Assumed: no page for now.
+	- Ok, no page
 - "Threads are your company memory" is mapped to Company brain because the threads are shared team-wide and nothing is extracted from them. Would you rather treat it as an agent-memory example, or keep it as a note on the source page only?
+	- Example
 - The Knowledge architectures hub is already above its length ceiling (1,336 body words, 111%), and this proposal adds one term-map row to it. Should the hub be split now (for example, moving the term map to its own page), or left as is? Assumed: no split.
+	- Add and split

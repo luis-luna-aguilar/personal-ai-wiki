@@ -15,7 +15,7 @@ A change to a production ontology should be planned and proved, not just diffed:
 
 [[#Open questions|Open questions: 1 to answer.]]
 
-- [ ] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
+- [x] **Approve all** — checking this box approves every item in `## Intended changes` and `## Schema / vocabulary additions` below; the individual boxes may stay empty.
 
 ### The source
 
@@ -208,3 +208,4 @@ None.
 ## Open questions
 
 - The Knowledge architectures hub lists tracked examples on its ontology row (currently Neo4j's three-layer stack and Utopia). Adding Open Ontologies there is a few words but would add to a page already at 111% of its 1,200-word ceiling. I left the hub untouched. Should I add the example anyway, and if so, should the hub be split (for example, moving the term map to its own page) as a separate refactor?
+	- Add the example

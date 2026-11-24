@@ -4,7 +4,7 @@ type: training
 domains: [agents]
 tags: [perplexity, agentic]
 as_of: 2026-10-26
-sources: [perplexity-agent-skill-methodology-2026-05-12, agent-html-artifacts-2026-05-13, agent-skills-context-evals-2026-05-13, skill-engineering-impeccable-2026-07-02, vercel-agents-new-software-2026-07-03, autoresearch-agent-recipes-2026-07, powerpoint-agent-skill-failure-mode-2026-06, gpt-56-raising-concerns-2026-07-15, case-against-skills-2026-07-16, swe-skills-bench-2026-07, wayfinder-skill-2026-08-20, every-cloning-your-coworkers-2026-08-26, skills-and-plugin-packaging-late-march, harness-engineering-early-april, googlecloudtech-adk-2-orchestration-patterns, ainews-andrew-ng-ai-engineering-2026-08-25, ainews-openai-shuts-off-cursor-2026-08-29, ainews-muse-spark-13-2026-09-03, claude-api-build-eval-hillclimb]
+sources: [perplexity-agent-skill-methodology-2026-05-12, agent-html-artifacts-2026-05-13, agent-skills-context-evals-2026-05-13, skill-engineering-impeccable-2026-07-02, vercel-agents-new-software-2026-07-03, autoresearch-agent-recipes-2026-07, powerpoint-agent-skill-failure-mode-2026-06, gpt-56-raising-concerns-2026-07-15, case-against-skills-2026-07-16, swe-skills-bench-2026-07, wayfinder-skill-2026-08-20, every-cloning-your-coworkers-2026-08-26, skills-and-plugin-packaging-late-march, harness-engineering-early-april, googlecloudtech-adk-2-orchestration-patterns, ainews-andrew-ng-ai-engineering-2026-08-25, ainews-openai-shuts-off-cursor-2026-08-29, ainews-muse-spark-13-2026-09-03, claude-api-build-eval-hillclimb, thorstenball-how-i-work-with-agents-2026-10-25]
 ---
 
 # Agent skill methodology
@@ -66,14 +66,17 @@ When reviewing an existing skill library, sort every skill into one of three buc
 - **Retest** — skills that exist to compensate for a general model weakness or quirk; these have a shelf life as models improve, and may already be doing nothing or actively hurting on the current model.
 - **Retire** — skills that don't demonstrably improve results when tested with and without them (a favorite AI agent can run the comparison directly).
 
+**9. Check that agents actually use the codebase's knowledge**
+Codebases pile up `AGENTS.md` files, skills, scripts, and docs without anyone checking that agents read them. Thorsten Ball (Amp, Oct 2026) spawns five blind agents on the same task, split into a control group without the knowledge and a treatment group with it, and compares the results; agents are good at running such experiments themselves. This is the Skill Lift comparison under "What the benchmarks say" applied to any agent-facing knowledge, not only skills. Composio's conclusion that agents ignore written instructions, so rules belong in lint ([Software factory](../workflows/software-factory.md)), is one result such a test can produce.
+
 ### Planning and personal workflows
 
-**9. Split planning into a persistent map and per-session tickets for open-ended work**
+**10. Split planning into a persistent map and per-session tickets for open-ended work**
 When a project's end state isn't fully knowable up front (Matt Pocock calls this "the fog of war"), don't try to plan it in one session. Keep one persistent "map" document holding every decision made so far and a rough overview of what else is happening, and give each individual working session only its own scoped "ticket" — a grilling, prototype, research, or task ticket — so a child session isn't overloaded with irrelevant context. Use a single-session planning skill (e.g. "grill me") when the whole task fits in one sitting; switch to a map/ticket split once it doesn't.
 - Precise, consistent terminology matters as much as the structure itself: Pocock calls this finding "leading words" so agent and human share a "ubiquitous language" — vague or inconsistently-used terms (calling everything a "ticket," or naming the same concept differently in different places) produce confused agent behavior.
 - (Matt Pocock, /wayfinder, Aug 2026)
 
-**10. Run a personal self-improve loop, not just a team skill library**
+**11. Run a personal self-improve loop, not just a team skill library**
 Every's head of operations, Arielle Shipper, keeps a standing "self-improve" skill for her own Codex workflow: whenever the agent produces a wrong or off-tone result, she feeds it feedback on what went wrong and what a better response would have looked like, then runs the skill — which reviews the failure, interrogates the cause, and proposes a targeted edit to Codex's own operating instructions so the mistake is less likely to repeat (e.g. "always re-read prior thread messages before drafting a Slack reply"). This is the same compounding mechanism behind team-facing skills like Every's KateBench/DanLens (which rewrite themselves based on which suggestions get accepted or rejected), scaled down to something one person runs on their own workflow rather than infrastructure a team builds and maintains.
 - (Arielle Shipper, Every, Aug 2026 — skill published on GitHub)
 
@@ -114,6 +117,7 @@ The SkillsBench harness is open-source, so a team can run these same comparisons
 ## Recent changes
 
 - [2026-10-26] Added the claude-api skill hill-climb (66% → 88%): a model can ignore current guidance in favour of training priors; a remembered-to-current mapping table near the top fixed it.
+- [2026-10-25] Added step 9, a blind control/treatment check on whether agents actually use `AGENTS.md` files, skills, and docs (Thorsten Ball, Amp).
 - [2026-10-19] Merged in skill material from two over-long pages: from [Agentic orchestration patterns](../workflows/agentic-orchestration-patterns.md), "share skills, not just code", "thin harness, fat skills, fat code", composable progressive disclosure, and the note that "skill" means different things across ecosystems; from [Harness (agent)](../concepts/harness.md), NVIDIA's Skill Lift metric, the Retrieval-Invoked Actual-Use Effect paper, and T3 Code's instruction-file fine-tuning result.
 - [2026-08-26] Added a personal self-improve-skill pattern (Arielle Shipper, Every): feed the agent feedback on a mistake, then run a skill that proposes a targeted edit to the agent's own operating instructions — the same compounding mechanism as team-facing skills, run by one person on their own workflow.
 - [2026-08-20] Added /wayfinder: a map/persistent-decisions + per-session-ticket pattern for planning work under uncertainty, plus "leading words"/ubiquitous-language as a terminology-design principle (Matt Pocock).
@@ -156,3 +160,4 @@ The SkillsBench harness is open-source, so a team can run these same comparisons
 - [AINews — OpenAI shuts off Cursor](../sources/newsletters/ainews-openai-shuts-off-cursor-2026-08-29.md)
 - [AINews — Muse Spark 1.3 matches GPT-5.6-Sol](../sources/newsletters/ainews-muse-spark-13-2026-09-03.md)
 - [Anthropic — Automating eval design and hillclimbing with Claude](../sources/articles/claude-api-build-eval-hillclimb.md)
+- [Thorsten Ball (@thorstenball) — How I work with Agents](../sources/tweets/thorstenball-how-i-work-with-agents-2026-10-25.md)

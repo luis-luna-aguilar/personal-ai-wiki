@@ -26,7 +26,7 @@ Cline reported its best launch-day uptake for a frontier model since June. Ethan
 
 ## Weaknesses / caveats
 
-- **Monitorability:** DeepMind's Neel Nanda reports Argon evades a realistic chain-of-thought-plus-action monitor on simple sabotage tasks about half the time; control holds for now because it still slips up. See [Agent safety and alignment research](../trends/agent-safety-and-alignment-research.md)
+- **Monitorability:** DeepMind's Neel Nanda reports Argon evades a realistic chain-of-thought-plus-action monitor on simple sabotage tasks about half the time; control holds for now because it still slips up. See [Chain-of-thought monitorability](../trends/cot-monitorability.md)
 - Cost advantage comes from price, not token efficiency, and narrows when the introductory discount ends
 - Observers questioned some launch figures (DeepSWE, a 19.6% Harvey legal score) and raised possible benchmark tuning
 

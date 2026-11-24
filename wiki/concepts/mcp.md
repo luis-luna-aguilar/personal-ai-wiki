@@ -38,6 +38,10 @@ Model Context Protocol, usually shortened to MCP, is an open protocol for exposi
 - It is increasingly not just a transport layer but a design surface: Anthropic now explicitly recommends remote servers, intent-grouped tools, richer semantics like inline UI and elicitation, and skills layered on top of MCP rather than treated as a separate concern
 - In practice, MCP strategy now splits into local-first and remote-first deployment. Local MCP is the straightforward path for Claude Desktop; ChatGPT-style custom integrations currently point more toward publicly reachable remote MCP servers or connector/app surfaces
 
+## Related
+
+- [Model Hardware Standard](model-hardware-standard.md) — Anthropic's parallel standard for agents operating physical devices; MCP is one of its control paths.
+
 ## Recent changes
 
 - [2026-09-09] Cerebras's internal knowledge base confirms the narrow-tool MCP design pattern (small, LLM-free, composable tools; client owns orchestration) with a second production example alongside Stainless's guidance.

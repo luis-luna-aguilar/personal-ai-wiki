@@ -29,7 +29,7 @@ ElevenLabs' speech-to-speech model family for voice agents. Speech recognition, 
 ## Related
 
 - [GPT-Realtime-2](gpt-realtime-2.md): the OpenAI model whose API protocol Eleven Realtime mirrors
-- [Eleven v3](eleven-v3.md): ElevenLabs' text-to-speech line
+- [Eleven v4](eleven-v4.md): ElevenLabs' text-to-speech line
 - [Voice becomes an agent interface](../trends/voice-becomes-agent-interface.md)
 
 ## Recent changes

@@ -15,7 +15,7 @@ Cloudflare's first-party writeup of using Mythos Preview (via Anthropic's Projec
 
 ## Influenced pages
 
-- [Claude Mythos Preview](../../models/claude-mythos-preview.md) — operational findings; exploit chain construction; proof loop; refusal inconsistency
+- [Claude Mythos Preview](../../models/claude-mythos-preview.md) — operational findings; exploit chain construction; proof loop; refusal inconsistency; eight-stage harness table
 - [State of Cybersecurity](../../state-of/cybersecurity.md) — Glasswing updated with harness detail; architectural resilience takeaway
 - [Harness (concept)](../../concepts/harness.md) — 8-stage narrow-scope parallel harness as worked example
 

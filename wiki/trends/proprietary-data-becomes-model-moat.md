@@ -3,8 +3,8 @@ title: Proprietary data becomes model moat
 type: trend
 domains: [models]
 tags: []
-as_of: 2026-06-30
-sources: [market-for-making-ai-better, ainews-2026-04-21, ai-strategy-explicit-bets-2026-06]
+as_of: 2026-10-24
+sources: [market-for-making-ai-better, ainews-2026-04-21, ai-strategy-explicit-bets-2026-06, palantir-autoresearch-fine-tuning-ontology-2026-10-24]
 ---
 
 # Proprietary data becomes model moat
@@ -13,13 +13,14 @@ The trend: as frontier model quality converges, more of the advantage may come f
 
 This is not only about selling data to labs. The same company can license its data externally, fine-tune an internal model with it, or do both. The strongest position is a flywheel: production work generates proprietary traces, those traces become training/eval data, and the resulting model becomes cheaper or better for that company's own use case.
 
-## Current status (as of 2026-06-30)
+## Current status (as of 2026-10-24)
 
 - AI labs and intermediaries are actively seeking non-public operational data, not just public web corpora
 - The highest-value datasets tend to be both **high quality** and **continuously growing**
 - Programming and math remain overrepresented in benchmark coverage relative to the distribution of paid work in the real economy
 - The next scarce asset may be less "more text" and more **good task definitions plus ground-truth data** for domain work
 - Small or open-base models can reportedly beat most frontier models on narrow professional tasks when trained on the right expert examples
+- The flywheel is being sold as a product: Palantir's AutoResearch (October 2026) turns an institution's operational records into training sets and specialized models, and treats both as owned assets that can be licensed or white-labeled
 
 ## Why it matters
 
@@ -28,6 +29,10 @@ If this trend holds, "best model" stops being a single global ranking and become
 The bottleneck also shifts upstream from model access to **measurement**. Teams that define credible evals for real work first get to decide what "good" means in that domain, which shapes training demand and product direction.
 
 **Ambient memory capture as a new moat vector.** OpenAI's Codex Chronicle (April 2026) passively captures screen context and builds on-device memories from it. This is a different flavor of the proprietary-data moat: the data is not coming from a company's operational systems, but from an individual user's work history. As context accumulates, switching tools can mean losing accumulated context. Harrison Chase's framing is that "memory will be the great lock-in."
+
+## Productized example: Palantir AutoResearch
+
+Palantir's whitepaper on [AutoResearch](../tools/palantir-autoresearch.md) is the most complete vendor version of this trend's flywheel. Records from ERP, MES, CRM, quality and maintenance systems, plus the decisions people made and whether they worked, become versioned training datasets with lineage and security markings. An agent searches training recipes against held-back real cases, and the resulting weights are registered with their data, recipe, cost and scores. Every production recommendation that is accepted, overridden or fails becomes new training data. Palantir offers three paths for the outputs: deploy them in the institution's own workflows, or rent, sell or white-label the datasets and weights to other organizations. That matches this page's open question about where the moat sits: Palantir's answer is the dataset, the evaluation set and the production loop together, kept as one owned asset.
 
 ## Signals in this source
 
@@ -51,6 +56,7 @@ The bottleneck also shifts upstream from model access to **measurement**. Teams 
 
 ## Recent changes
 
+- [2026-10-24] Added Palantir AutoResearch as a productized version of the data-to-owned-model flywheel, including licensing and white-labeling of datasets and weights.
 - [2026-06-30] Added explicit-bets caveat: vertical data/workflow moats should be treated as strategic assumptions, not guarantees.
 - [2026-04-21] Added ambient memory capture vector — Codex Chronicle as personal-context lock-in
 - [2026-04-10] Trend opened from Every's "The Market for Making AI Better" essay
@@ -60,3 +66,4 @@ The bottleneck also shifts upstream from model access to **measurement**. Teams 
 - [The Market for Making AI Better](../sources/articles/market-for-making-ai-better.md)
 - [AINews — Moonshot Kimi K2.6, Hermes Agent, Codex Chronicle (2026-04-21)](../sources/newsletters/ainews-2026-04-21.md)
 - [AI strategy as explicit bets](../sources/newsletters/ai-strategy-explicit-bets-2026-06.md)
+- [Palantir — AutoResearch and the Fine-Tuning Ontology](../sources/papers/palantir-autoresearch-fine-tuning-ontology-2026-10-24.md)

@@ -4,8 +4,8 @@ type: concept
 domains: [models, agents]
 subcategory: decision-model
 tags: []
-as_of: 2026-10-17
-sources: [latent-space-jev-diogo-almeida-2026-09-21, every-how-to-get-most-out-of-jev-2026-09-23, jackyk02-clm-contrastive-language-model-2026-09-23, ainews-jev-judge-clm-critique-2026-09-25, latent-space-openai-decisions-api-2026-09-30, cloudflare-clef-decision-models-2026-10-02, ainews-decisions-api-beta-vals-jev-2026-10-07, ainews-decision-models-product-category-2026-10-10, ainews-aa-decision-index-2026-10-14, ainews-liquid-d1-ultra-pplx-decider-2026-10-17]
+as_of: 2026-11-08
+sources: [latent-space-jev-diogo-almeida-2026-09-21, every-how-to-get-most-out-of-jev-2026-09-23, jackyk02-clm-contrastive-language-model-2026-09-23, ainews-jev-judge-clm-critique-2026-09-25, latent-space-openai-decisions-api-2026-09-30, cloudflare-clef-decision-models-2026-10-02, ainews-decisions-api-beta-vals-jev-2026-10-07, ainews-decision-models-product-category-2026-10-10, ainews-aa-decision-index-2026-10-14, ainews-liquid-d1-ultra-pplx-decider-2026-10-17, hume-audio-decision-model-api-2026-11-08]
 ---
 
 # Decision models
@@ -16,9 +16,9 @@ Models that answer a typed question about a given input in one pass, without gen
 
 System One models (TypeSafe's term), Constrained Decoding Models (ScaleDown), Decisions API (OpenAI); critics call them zero-shot classifiers.
 
-## Current status (as of 2026-10-17)
+## Current status (as of 2026-11-08)
 
-- **Category formed in a month.** [Jev](../models/jev.md) launched on 2026-09-15; about 100 API clones followed within two weeks. By mid-October the field included Cloudflare's open-weight Clef and Clef-flash (2 October), OpenAI's Decisions API on GPT-6 Luna (public beta, $0.10/M input, no output charge), Perplexity's open pplx-decider (v1.1 27B, then v1.2 in 27B and 4B), Microsoft-Decision-1, Liquid d1 and vLLM Semantic Router's Decision 2.0. Unsloth published a notebook that turns Qwen3.5-4B into one on 8GB of VRAM.
+- **Category formed in a month.** [Jev](../models/jev.md) launched on 2026-09-15; about 100 API clones followed within two weeks. By mid-October the field included Cloudflare's open-weight Clef and Clef-flash (2 October), OpenAI's Decisions API on GPT-6 Luna (public beta, $0.10/M input, no output charge), Perplexity's open pplx-decider (v1.1 27B, then v1.2 in 27B and 4B), Microsoft-Decision-1, Liquid d1 and vLLM Semantic Router's Decision 2.0. Unsloth published a notebook that turns Qwen3.5-4B into one on 8GB of VRAM. In November Hume AI added the first audio-native one, the [Hume Audio Decision Model](../models/hume-audio-decision-model.md), which judges how speech sounds rather than what a transcript says.
 - **Common build.** A frozen LLM backbone reads the input once (prefill only) and a small trained head scores each valid option. Cloudflare's Clef uses Qwen3.8-27B with a Brier-loss calibration step. CLM swaps the head for a contrastive pair of state and action encoders, so a fixed action set can be cached.
 - **Benchmarks.** There are three competing indices: Cloudflare's "Jev Decision Index", Hugging Face's Decision Index v0.3 and Artificial Analysis's Decision Index (14 October). On AA's index, Liquid d1-ultra leads at 65 against Jev 1.14's 57. Claude Haiku 5.5 at low effort scores 61, but costs $184 against Jev's $42 per million tasks and takes 1.4 s against 0.13 s per task.
 - **Where they fit.** Routing, approval gates, judging traces, tool selection, reranking, and real-time interfaces where an LLM's one-to-two-second turn breaks the feel. AA finds them competitive on classification and routing, but weaker and often overconfident on knowledge and reasoning. CLM's authors say Jev fails as a verifier on long-horizon coding tasks.
@@ -34,9 +34,11 @@ Every's rule: if a person could make the call in under 10 seconds, send it to a 
 - [Cost-aware AI task routing](../training/cost-aware-ai-task-routing.md) — where decision models fit in a routing cascade
 - [MedDecider-27B](../models/meddecider-27b.md) — a medical decision model tuned for clinical choices
 - [ScaleDown](../models/scaledown.md) — classify/extract models with a Jev-compatible Decisions API, marketed as "Constrained Decoding Models"
+- [Hume Audio Decision Model](../models/hume-audio-decision-model.md) — the first audio-native decision model, for judging tone, pacing and background sound
 
 ## Recent changes
 
+- [2026-11-08] Hume AI's Audio Decision Model added to the rival list as the first audio-native decision model.
 - [2026-10-17] Page created: the category from Jev's launch (2026-09-15) to Artificial Analysis's Decision Index and Liquid d1-ultra taking its top spot.
 
 ## Sources
@@ -51,3 +53,4 @@ Every's rule: if a person could make the call in under 10 seconds, send it to a 
 - [AINews — Decision models become a product category](../sources/newsletters/ainews-decision-models-product-category-2026-10-10.md)
 - [AINews — Artificial Analysis launches a Decision Index](../sources/newsletters/ainews-aa-decision-index-2026-10-14.md)
 - [AINews — Liquid d1-ultra tops the Decision Index; pplx-decider v1.2](../sources/newsletters/ainews-liquid-d1-ultra-pplx-decider-2026-10-17.md)
+- [Hume AI — Audio Decisions API launch page](../sources/articles/hume-audio-decision-model-api-2026-11-08.md)
