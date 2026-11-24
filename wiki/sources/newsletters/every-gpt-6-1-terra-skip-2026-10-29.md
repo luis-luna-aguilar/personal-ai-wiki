@@ -1,5 +1,5 @@
 ---
-title: Every — Skip: GPT-6.1 Terra (Context Window, 2026-10-29)
+title: 'Every — Skip: GPT-6.1 Terra (Context Window, 2026-10-29)'
 type: source
 source_type: newsletter
 source_file: raw/newsletters/2026-10-29-my-first-week-with-an-ai-coworker.md

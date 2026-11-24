@@ -125,7 +125,7 @@ sources: [claude-opus-46-launch, swe-bench-april]   # IDs matching files in wiki
 
 ### Internal links
 
-- `wiki/index.md` uses GitBook-compatible relative Markdown links, for example `[tools/claude-code](tools/claude-code.md)`.
+- `wiki/index.md` uses relative Markdown links, for example `[tools/claude-code](tools/claude-code.md)`.
 - Page bodies should use relative Markdown links that resolve from the current file's directory, for example `[Claude Code](../tools/claude-code.md)` from a state-of page.
 - Do not add editor-specific wiki link syntax in page bodies. `scripts/link_check.py` reports that syntax as invalid.
 
