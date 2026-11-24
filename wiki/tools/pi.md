@@ -32,6 +32,7 @@ Pi is the reference point for the "thin harness" position: MIT's Alex Zhang uses
 
 - [Flue](flue.md) — agent framework built on Pi
 - [Harness vs model](../concepts/harness-vs-model.md) — the harness-swap measurements Pi appears in
+- [Harness-model co-evolution](../concepts/harness-model-co-evolution.md) — HarnessTax cost gap and the same-loop dissent Pi appears in
 - [Agent runtime platforms](../concepts/agent-runtime-platforms.md) — durable and cloud-native harnesses
 
 ## Sources

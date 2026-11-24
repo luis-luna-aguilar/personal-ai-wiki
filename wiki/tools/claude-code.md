@@ -5,21 +5,22 @@ domains: [coding, agents]
 subcategory: terminal-coding-agent
 tags: [anthropic, cli, agentic]
 as_of: 2026-11-23
-sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, claude-code-fast-mode-default-2026-05, dynamic-workflows-claude-code, claude-code-getting-started-with-loops-2026-06-30, codex-general-work-agents-2026-07, ainews-opus-48-dynamic-workflows-2026-05, every-claude-dynamic-workflows-reliability-2026-06, claude-code-design-sync-2026-07, claude-sonnet-5-official-2026-06-30, every-urge-to-merge-2026-07-14, thecode-claude-code-effort-levels-2026-07-17, zawinskis-law-multiagents-2026-08-08, every-copilot-studio-microsoft-2026-08-03, claude-security-product-page, latent-space-thariq-claude-code-next-era-2026-09-29, claudedevs-cloud-sessions-ga-2026-09-23, ainews-claude-code-cloud-sessions-projects-2026-09-24, claude-projects-redesigned-2026-09-17, claudeai-projects-one-conversation-2026-09-17, emollick-claude-projects-mysteries-2026-09-17, tamaratran-fast-jev-compaction, claude-ship-launch-2026-11-23]
+sources: [claude-code-monitor, claude-code-routines, claude-code-leak-architecture, claude-computer-use-late-march, anthropic-desktop-agent-expansion-late-march, coding-agents-review-and-orchestration-march, claude-code-scheduled-tasks-march, anthropic-persistent-workflow-surfaces-february, memory-vs-context-rot-february, thecode-april-22-2026, claude-code-worktree-autofix, claude-code-ultrareview, claude-code-one-time-scheduling, claude-code-product-management-2026-05-01, claude-code-goal-fastmode-fleetview-2026-05-13, claude-code-agent-view-2026-05-13, agent-native-product-management-2026-05-13, claude-code-fast-mode-default-2026-05, dynamic-workflows-claude-code, claude-code-getting-started-with-loops-2026-06-30, codex-general-work-agents-2026-07, ainews-opus-48-dynamic-workflows-2026-05, every-claude-dynamic-workflows-reliability-2026-06, claude-code-design-sync-2026-07, claude-sonnet-5-official-2026-06-30, every-urge-to-merge-2026-07-14, thecode-claude-code-effort-levels-2026-07-17, zawinskis-law-multiagents-2026-08-08, every-copilot-studio-microsoft-2026-08-03, claude-security-product-page, latent-space-thariq-claude-code-next-era-2026-09-29, claudedevs-cloud-sessions-ga-2026-09-23, ainews-claude-code-cloud-sessions-projects-2026-09-24, claude-projects-redesigned-2026-09-17, claudeai-projects-one-conversation-2026-09-17, emollick-claude-projects-mysteries-2026-09-17, tamaratran-fast-jev-compaction, claude-ship-launch-2026-11-23, ainews-claude-code-agents-md-2026-09-19, latent-space-claude-mods-2026-10-21, claudedevs-code-mode-2026-11-17]
 ---
 
 # Claude Code
 
 Anthropic's terminal-first AI coding agent. Runs in the shell, operates autonomously on files, shell commands, and tool calls, and is expanding toward supervised multi-session workflows; users increasingly treat it as a general-purpose agent harness for product, research, and operational work when those workflows can be represented as files, commands, skills, and review artifacts.
 
-## Current status (as of 2026-10-26)
+## Current status (as of 2026-11-17)
 
-- Terminal CLI agent with persistent project context via `CLAUDE.md` and project-local auto-memory (`MEMORY.md` plus topic files); most-used AI coding tool at 63% of respondents per Pragmatic Engineer's May 2025–Feb 2026 developer survey
+- Terminal CLI agent with persistent project context via `CLAUDE.md` (or `AGENTS.md` when no CLAUDE.md exists) and project-local auto-memory (`MEMORY.md` plus topic files); most-used AI coding tool at 63% of respondents per Pragmatic Engineer's May 2025–Feb 2026 developer survey
 - Supports subagents, hooks, and background/event-driven flows; `--worktree` gives each session its own isolated git worktree for parallel work
 - Current model lineup: Claude Sonnet 5 and Claude Fable 5 (restored 2026-07-02) alongside Opus 4.8, selectable via fast mode
 - Remote Control (`claude remote-control`) and Agent View (`claude agents`) extend supervision to mobile and multi-session dispatch; cloud sessions (GA 2026-09-23) keep work running on Anthropic's infrastructure with the laptop closed
-- Auto mode is now the default permission mode for Pro/Max/Team, backed by a classifier plus per-session budgets and mid-session advisor models (see Recent changes)
+- Auto mode is now the default permission mode for Pro/Max/Team, backed by a classifier plus per-session budgets and mid-session advisor models
 - Dedicated subsystems below cover the rest: Monitor (event-driven wake), Routines (scheduled/hosted workflows), Dynamic workflows (parallel orchestration), and `/ultrareview` (cloud multi-agent review, detailed on [Claude Code practices](../workflows/claude-code-practices.md))
+- **Code Mode (experimental, 2026-11-17):** Claude writes one script that chains its tool calls instead of one call per round trip, and can answer while long commands still run. Opt in with `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1` (v2.1.323+); compare `/cost` with it off and on. The general pattern is on [Agentic orchestration patterns](../workflows/agentic-orchestration-patterns.md).
 
 ## Monitor tool
 
@@ -57,10 +58,10 @@ Anthropic's turn-based / goal-based / time-based / proactive loop taxonomy maps 
 ## Mods, Projects, and cloud sessions
 
 - **Cloud sessions (GA 2026-09-23):** start from claude.ai/code, the mobile Code tab, the desktop app, or `claude --cloud`; GitHub connection required; billed to normal plan usage, with a one-time promotional credit ($100 Pro, $250 Max) spent first.
-- **Projects:** a Claude Tag-style supervising agent for individual users without Slack admin setup. You set a goal and connect repos or documents; a coordinator chat scopes the request and routes it to parallel threads, each a full cloud session on its own branch and repo copy that opens PRs and runs tests, with overlapping edits resolved as ordinary merge conflicts. Threads share one project memory, and a library keeps added files and Claude's artifacts (each artifact with its own database several agents can read and write). Coordinator and workers take separate model and effort settings, and projects reach usage limits faster. Beta since 2026-09-17 for select Pro/Max cloud-session users (waitlist); chat, Cowork, Team and Enterprise follow. Single-player; threads were cloud-only at launch, and local runs followed.
-- **Claude Mods:** in-process "function hooks" for the CLI and desktop harness. Unlike shell hooks, a mod sees turn/token counts and messages, can spawn forked subagents that reuse the prompt cache, parse structured output, change the UI, and register modes other mods compose with. Examples: end-of-turn quiz, assumption register, model router, next-steps supervisor. Function hooks are early access from Claude Code 2.1.274 and need `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1`; third-party plugins already use them to replace built-in behaviour, for example [fast-jev-compaction](fast-jev-compaction.md), which hooks `session.compact` to swap the `/compact` summary for model-scored pruning (see [Agent memory](../concepts/agent-memory.md)).
+- **Projects:** a coordinator chat that routes a goal to parallel threads, each a cloud session on its own branch, with shared project memory and a library (beta since 2026-09-17). Details on [Claude Code Projects](claude-code-projects.md).
+- **Claude Mods:** in-process function hooks (early access from 2.1.274) that let plugins observe and change prompts, tool calls and the UI. Anthropic now ships parts of Claude Code itself as built-in mods, the AGENTS.md loader among them, and mods are not sandboxed. The mechanics, the built-in list, token costs and the trust caveat are on [Claude Code Mods](claude-code-mods.md).
 - **Direction:** "cloud brain, local hands" — one cloud-resident agent that works in cloud sandboxes or on your machine when it is online (see [Agent runtime platforms](../concepts/agent-runtime-platforms.md)).
-- **CLAUDE.md:** Thariq Shihipar expects it to disappear in the limit and suggests starting new projects without one, adding only repeated failure modes, since those are model-specific; AGENTS.md support is coming.
+- **CLAUDE.md:** Thariq Shihipar expects it to disappear in the limit and suggests starting new projects without one, adding only repeated failure modes, since those are model-specific. Since v2.1.277 (September 2026) Claude Code reads AGENTS.md when no CLAUDE.md is present, with a config toggle, which removes shim files that only point one format at the other; the built-in `agents-md` mod ([Claude Code Mods](claude-code-mods.md)) now does the loading.
 
 ## Best practices (Anthropic engineering)
 
@@ -76,7 +77,7 @@ Cloud multi-agent code review (research preview since v2.1.86, $5–$20 per run 
 
 ## Claude Security
 
-Anthropic's security-review product, in public beta for Claude Enterprise per Anthropic's product page: it scans a codebase with Claude Mythos 5.1 (not Opus 4.7, as earlier secondary coverage reported), traces data flows across files, adversarially self-verifies each finding, and proposes a reviewable patch per finding. A Claude Code plugin, also in beta, runs the same pipeline locally. *(as of 2026-09-09)*
+Anthropic's security-review product, in public beta for Claude Enterprise per Anthropic's product page: it scans a codebase with Anthropic's most capable models, now including Claude Mythos 5.2 (as of 2026-11-09; earlier Mythos 5.1, not Opus 4.7 as early secondary coverage reported), traces data flows across files, adversarially self-verifies each finding, and proposes a reviewable patch per finding. A Claude Code plugin, also in beta, runs the same pipeline locally. *(as of 2026-09-09)*
 
 ## Architecture lessons from the leak
 
@@ -100,16 +101,14 @@ That matters because it shifts the product story away from "Anthropic has a stro
 
 ## Recent changes
 
+- [2026-11-24] Split: Claude Mods (function hooks, built-in mods, the unsandboxed-mods caveat) moved to [Claude Code Mods](claude-code-mods.md) and Projects to [Claude Code Projects](claude-code-projects.md); short pointers remain.
 - [2026-11-23] `/ship` command added (beta): pushes the change, opens the PR, and hands it to [Claude Ship](claude-ship.md) for review, fixes, and an approval decision.
-- [2026-10-26] Function hooks confirmed as early access (2.1.274+, opt-in env flag); the third-party [fast-jev-compaction](fast-jev-compaction.md) plugin uses them to replace the `/compact` summary with pruning.
+- [2026-11-17] Experimental Code Mode (`CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1`): Claude chains tool calls in one script and can reply while long commands run.
 - [2026-10-21] Split: the "Best practices (Anthropic engineering)" and "/ultrareview" sections moved to [Claude Code practices](../workflows/claude-code-practices.md); one-line pointers remain.
 - [2026-10-19] Split: the loop-taxonomy table and loop guidance moved to [Agent loop design](../workflows/agent-loop-design.md) (one-line pointer remains); Claude Security detail (Enterprise public beta on Mythos 5.1, adversarial self-verification, per-finding patches, Claude Code plugin beta, as of 2026-09-09) moved here from the [State of Cybersecurity](../state-of/cybersecurity.md) leader line.
 - [2026-09-29] Thariq Shihipar (Latent Space) details Claude Mods (in-process function hooks: forked cache-sharing subagents, UI changes, composable modes), Projects, the "cloud brain, local hands" direction, and advice to start new projects without a CLAUDE.md.
 - [2026-09-23] Cloud sessions left research preview (`claude --cloud`, web, mobile, desktop): work continues with the laptop closed on normal plan usage, plus a one-time $100 Pro / $250 Max credit; Projects launched alongside and now also run locally.
-- [2026-09-17] Projects redesigned (beta, select Pro/Max cloud-session users): one coordinator chat routes work to parallel threads, each a cloud session on its own branch; shared project memory and a file/artifact library; model and effort set separately for coordinator and workers.
-- [2026-08-08] Cross-session messaging shipped (one session summarizes to another on a different machine); auto mode becomes the default permission mode for Pro/Max/Team, gated by a classifier Anthropic says caught 89% of dangerous commands vs. 14% for manual approval; also added session budgets, automatic repo-skill loading, and mid-session advisor models.
-- [2026-07-17] `/code-review` gains configurable effort levels (low: fast single pass; high: sub-agents verify every finding), replacing the previous single fixed prompt.
-- [2026-07-14] Anthropic countered OpenAI's Codex/ChatGPT merge week with a Claude Code in-app browser, a third extension of Fable 5's promotional access (through July 19) with 50%-higher Claude Code limits, and a Chat+Cowork "home" tab merge.
+- [2026-09-19] v2.1.277 reads AGENTS.md when no CLAUDE.md is present, with a config toggle.
 
 ## Sources
 
@@ -150,3 +149,6 @@ That matters because it shifts the product story away from "Anthropic has a stro
 - [Ethan Mollick — Claude Projects handles teams of agents](../sources/tweets/emollick-claude-projects-mysteries-2026-09-17.md)
 - [tamaratran/fast-jev-compaction (GitHub)](../sources/repos/tamaratran-fast-jev-compaction.md)
 - [Introducing Claude Ship](../sources/articles/claude-ship-launch-2026-11-23.md)
+- [AINews — Claude Code reads AGENTS.md (v2.1.277)](../sources/newsletters/ainews-claude-code-agents-md-2026-09-19.md)
+- [Latent Space — Claude Mods: Flipping the Harness Inside Out](../sources/newsletters/latent-space-claude-mods-2026-10-21.md)
+- [ClaudeDevs — Code Mode (experimental)](../sources/tweets/claudedevs-code-mode-2026-11-17.md)

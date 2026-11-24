@@ -61,7 +61,7 @@ Operating patterns built on a harness (ambiguity gates, scoped context, failure-
 
 ### Self-modifying and recursive harnesses
 
-Self-rewriting harnesses (Headlong, exo, JIT-Agent, Prime Agent, HarnessDev, Better-Harness, Harness²) are on [Automated harness optimization](automated-harness-optimization.md); Harvey and Baseten's recursive due-diligence harness is on [Harness vs model](harness-vs-model.md).
+Self-rewriting harnesses are on [Automated harness optimization](automated-harness-optimization.md) and [Harness evolution research](harness-evolution-research.md); Harvey and Baseten's recursive due-diligence harness is on [Harness vs model](harness-vs-model.md).
 
 ## Harness vs folder-level context
 
@@ -72,7 +72,7 @@ The two are related but not identical, and the vocabulary is not yet standardize
 
 ## Ecosystem signals
 
-Context-editing research lives on [Agent memory](agent-memory.md) and skill-retrieval findings on [Agent skill methodology](../training/agent-skill-methodology.md). Recent harness product signals: openJiuwen's fixed-model result is on [Harness vs model](harness-vs-model.md); Miles (RL-as-a-service) is on [RL harness quality](rl-harness-quality.md) and DeepSeek's plugin-contract changes on [Agent runtime platforms](agent-runtime-platforms.md); Google's Gemini team named new "AGY" harness patterns for iterative coding, document review, long formal proofs, and self-verification; and several independent voices (@omarsar0, @dejavucoder) named "harness engineering" a core, distinct AI-engineering skill.
+Context-editing research lives on [Context editing](context-editing.md) and skill-retrieval findings on [Agent skill methodology](../training/agent-skill-methodology.md). Recent harness product signals: openJiuwen's fixed-model result is on [Harness vs model](harness-vs-model.md); Miles (RL-as-a-service) is on [RL harness quality](rl-harness-quality.md) and DeepSeek's plugin-contract changes on [Agent runtime platforms](agent-runtime-platforms.md); Google's Gemini team named new "AGY" harness patterns for iterative coding, document review, long formal proofs, and self-verification; and several independent voices (@omarsar0, @dejavucoder) named "harness engineering" a core, distinct AI-engineering skill.
 
 ## Caveats
 
@@ -106,7 +106,8 @@ Context-editing research lives on [Agent memory](agent-memory.md) and skill-retr
 - [Prompt injection](prompt-injection.md) — the concrete security attack the harness security boundary defends against
 - [Ontologies as agent guardrails](ontology-agent-guardrails.md) — a distinct, formally rule-based control mechanism that sits inside the harness's control/evaluation layer alongside prompts, evals, and permission logic
 - [Agent runtime platforms](agent-runtime-platforms.md) — managed platforms, execution runtimes, fleet governance, and distribution around the harness
-- [Automated harness optimization](automated-harness-optimization.md) — systems that improve the harness automatically: hill-climbing with evals, per-task refinement, self-modifying harnesses
+- [Automated harness optimization](automated-harness-optimization.md) — systems that improve the harness automatically: hill-climbing with evals, self-improving skills, self-modifying harnesses
+- [Harness evolution research](harness-evolution-research.md) — label-free and offline-evolved harnesses: Harness², OO-Harness, Agent S4, HarnessDev
 - [Agent autonomy and governance](../training/agent-autonomy-and-governance.md) — governance layer around the harness, including Nadella's rule that access and action controls sit outside both the model and the harness
 
 ## Sources

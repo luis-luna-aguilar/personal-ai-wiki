@@ -4,19 +4,26 @@ type: tool
 domains: [models, computer-use, agents]
 subcategory: ai-assistant
 tags: [google, closed-source]
-as_of: 2026-10-14
-sources: [gemini-browser-utility-updates, gemini-deep-research-max, ainews-2026-04-22, google-cloud-next-2026, gemini-downloadable-files-2026-04-30, gemini-computer-use-aside-2026-06, gemini-managed-agents-2026-07, google-io-2026-search-blog, ainews-google-io-2026, gemini-personal-agent-superhuman-2026-05, ainews-death-of-params-glm-53-2026-08-20, sundarpichai-gemini-35-transcribe-2026-08-26, ainews-argon-ga-aie-nyc-2026-10-14]
+as_of: 2026-11-18
+sources: [gemini-browser-utility-updates, gemini-deep-research-max, ainews-2026-04-22, google-cloud-next-2026, gemini-downloadable-files-2026-04-30, gemini-computer-use-aside-2026-06, gemini-managed-agents-2026-07, google-io-2026-search-blog, ainews-google-io-2026, gemini-personal-agent-superhuman-2026-05, ainews-death-of-params-glm-53-2026-08-20, sundarpichai-gemini-35-transcribe-2026-08-26, ainews-argon-ga-aie-nyc-2026-10-14, google-introducing-gemini-4-carbon, google-introducing-gemini-4-hydrogen, google-introducing-gemini-4-neon]
 ---
 
 # Gemini
 
 Google's AI assistant product, built on the Gemini model family. Combines conversational AI, search, productivity features, and increasingly agentic research and workflow utilities across browser, desktop, API, and media-generation surfaces.
 
-## Current status (as of 2026-10-14)
+## Current status (as of 2026-11-18)
 
-### Gemini 4 Argon (as of 2026-10-14)
+### Gemini 4 lineup (as of 2026-11-18)
 
-Google's new frontier model, [Gemini 4 Argon](../models/gemini-4-argon.md), went GA on 2026-10-13 in the Gemini API, the Gemini app (Pro and Ultra), AI Mode in Search, AI Studio and Antigravity (Pro subscribers get a separate weekly quota). Antigravity's coding interface is coming to the Gemini macOS app, Gemini connects to 40+ apps (including Instacart, OpenTable, Adobe, Shopify), and 10,000 scientists get Antigravity's top usage tier free for six months.
+Google shipped four Gemini 4 models in about five weeks, now sold as tiers:
+
+- [Gemini 4 Carbon](../models/gemini-4-carbon.md) (announced 2026-10-28) — strongest model, for long-horizon engineering and cyber defense; defenders first through the Fairwind Program
+- [Gemini 4 Argon](../models/gemini-4-argon.md) (GA 2026-10-13) — still offered as a frontier model beside Carbon
+- [Gemini 4 Neon](../models/gemini-4-neon.md) (2026-11-18) — midweight at $3/$15, aimed at complex, high-frequency work
+- **Gemini 4 Hydrogen** (2026-11-12) — fast everyday model for all tiers, including free users, Gemini for business, the Gemini app and Search; replaces Gemini 3.8 Flash at $1.50/$7.50 flat across its 1M-token context, with up to 1M output tokens. Google reports AA Intelligence Index v5.0 51 at high and 54 at xhigh (Argon 50), Terminal-Bench 4.1 57% (3.8 Flash 18.2%), 2.5x faster task completion than 3.8 Flash, and 5x fewer fabricated claims; four thinking levels (low, medium, high default, xhigh)
+
+**Orchestrator in Antigravity** (2026-11-12) switches between models such as Carbon and Hydrogen inside one session: on Terminal-Bench 4.0 it came close to Carbon's success rate using 24% less quota and finishing 19% faster. For parallel work Carbon or Neon coordinates while Hydrogen runs worker and verifier agents. Argon's GA brought the Antigravity coding interface to the Gemini macOS app and 40+ connected apps.
 
 ### Gemini Enterprise Agent Platform (Cloud Next '26)
 
@@ -98,6 +105,9 @@ Google added hosted-agent primitives to the Gemini API: MCP support for direct a
 
 ## Recent changes
 
+- [2026-11-18] Gemini 4 Neon launched as the midweight model at $3/$15; AA Intelligence Index v5.0 61 at xhigh, #2 Vals Index.
+- [2026-11-12] Gemini 4 Hydrogen launched for every tier and Search, replacing Gemini 3.8 Flash at $1.50/$7.50; Orchestrator in Antigravity switches between Carbon and Hydrogen within a session.
+- [2026-10-28] Gemini 4 Carbon announced as Google's strongest model; Fairwind defenders first, at Argon's $2/$10 introductory price.
 - [2026-10-13] Gemini 4 Argon GA across the API, app, AI Mode, AI Studio and Antigravity; Antigravity coding interface coming to the macOS app; 40+ connected apps.
 - [2026-08-26] Gemini 3.5 Transcribe launched: multi-speaker intent detection, 85+ languages auto-detected, custom vocabulary adaptation for specialized jargon; available via the Gemini API in Google AI Studio and Gemini Enterprise.
 - [2026-08-20] Gemini 3.7 Flash posts strong cost-adjusted benchmarks: 84.6% ARC-AGI-2 at $0.25/task, 95.5% ARC-AGI-1 at $0.12/task, #1 on AA-AnalystAgent at $0.54/task average.
@@ -105,9 +115,6 @@ Google added hosted-agent primitives to the Gemini API: MCP support for direct a
 - [2026-06-25] Gemini 3.5 Flash adds built-in computer use for browser, desktop, and mobile with sensitive-action confirmations and prompt-injection shutdown behavior.
 - [2026-05-19] Google I/O 2026: Gemini 3.5 Flash GA as the new AI Mode default (per AINews: Terminal-Bench 2.1 76.2%; AA flags Intelligence Index 55 but 5.5x costlier than Gemini 3 Flash), Antigravity 2.0 (desktop/CLI/SDK multi-agent coding orchestration), Gemini Spark (24/7 personal background agent on cloud VMs), and a Search AI-Mode redesign with generative UI, mini-apps, and persistent information agents.
 - [2026-04-30] Downloadable file generation from chat: Google/Microsoft Office formats, PDF, CSV, LaTeX, TXT, RTF, Markdown — positions Gemini as an artifact-producing workplace assistant, not only conversational AI
-- [2026-04-23] Cloud Next '26: Gemini Enterprise Agent Platform replaces Vertex AI; Agent Studio, 200+ models, Workspace Intelligence GA, Knowledge Catalog, Gemini Embedding 2 GA, and broader agent governance stack
-- [2026-04-22] Added benchmark scores for Deep Research Max (93.3% DeepSearchQA, 85.9% BrowseComp, 54.6% HLE); added collaborative planning and code execution capabilities from AINews coverage
-- [2026-04-21] Added Deep Research and Deep Research Max: Gemini API public preview, MCP support, multimodal grounding, and native visual reports
 
 ## Sources
 
@@ -124,3 +131,6 @@ Google added hosted-agent primitives to the Gemini API: MCP support for direct a
 - [AINews — Death of Params: Z.ai CEO Jie Tang on GLM 5.3](../sources/newsletters/ainews-death-of-params-glm-53-2026-08-20.md)
 - [Sundar Pichai — Gemini 3.5 Transcribe](../sources/tweets/sundarpichai-gemini-35-transcribe-2026-08-26.md)
 - [AINews — Argon GA at AI Engineer NYC](../sources/newsletters/ainews-argon-ga-aie-nyc-2026-10-14.md)
+- [Google — Introducing Gemini 4 Carbon](../sources/articles/google-introducing-gemini-4-carbon.md)
+- [Google — Introducing Gemini 4 Hydrogen](../sources/articles/google-introducing-gemini-4-hydrogen.md)
+- [Google — Introducing Gemini 4 Neon](../sources/articles/google-introducing-gemini-4-neon.md)

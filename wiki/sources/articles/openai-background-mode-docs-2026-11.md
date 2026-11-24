@@ -15,6 +15,7 @@ OpenAI's guide to running long Responses API requests asynchronously, including 
 ## Influenced pages
 - [OpenAI discounted async processing](../../workflows/async-discounted-processing.md) — Flex dropped on new models; discounted completion windows as replacement, guidance and caveats (page renamed from Flex processing)
 - [Agent execution runtimes](../../concepts/agent-execution-runtimes.md) — background mode for multi-step agent runs in the model-lab agent APIs bullet
+- [GPT-6.1 Terra](../../models/gpt-6-1-terra.md) — discounted completion windows available on Terra
 
 ## Key claims extracted
 - Completion windows: `soonest` (default, no discount), `2h` (30% below Standard), `8h` (40% below Standard); API targets completion within 2h/8h after acceptance and auto-retries eligible capacity errors

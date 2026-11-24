@@ -14,7 +14,7 @@ The rogue-agent and UN Security Council segment of AINews's 2026-09-24 issue (he
 
 ## Influenced pages
 - [Agent incidents in the wild](../../trends/agent-incidents-in-the-wild.md) — new page: Services Australia and Transluce logs
-- [State of Cybersecurity](../../state-of/cybersecurity.md) — pointer line to the new page in the misalignment section
+- [State of Cybersecurity](../../state-of/cybersecurity.md) — pointer to Agent incidents in the wild (now under "Agent incidents")
 - [AI governance and policy](../../trends/ai-governance-and-policy.md) — UN Security Council session
 
 ## Key claims extracted

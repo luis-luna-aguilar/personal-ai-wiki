@@ -64,6 +64,7 @@ Adoption, labor-market, and productivity statistics (a16z, Ramp, McKinsey, Stanf
 - [AI adoption: evidence from practice](../training/ai-adoption-evidence.md) — practice-level cases, including the trust battery, AI sandwich, and Tempo examples moved from this page
 - [Forward-deployed engineering](../training/forward-deployed-engineering.md) — the FDE model behind labs' move downstream into deployment services
 - [Software factory](../workflows/software-factory.md) — the agent-pipeline pattern that software factories and FDE teams are building
+- [Agents and SaaS demand](agents-and-saas-demand.md) — whether agent-built software erodes demand for bought SaaS: slowdown-not-churn data and the build-versus-buy line
 
 ## Open questions
 

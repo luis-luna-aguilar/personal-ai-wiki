@@ -15,7 +15,7 @@ Anthropic's launch thread for redesigned Projects, pointing to the blog post. It
 
 ## Influenced pages
 
-- [Claude Code](../../tools/claude-code.md) — launch date, cloud-only threads at launch
+- [Claude Code Projects](../../tools/claude-code-projects.md) — launch date, cloud-only threads at launch
 
 ## Key claims extracted
 

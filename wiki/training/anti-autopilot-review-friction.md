@@ -1,8 +1,8 @@
 ---
 title: Anti-autopilot review friction
 type: training
-as_of: 2026-09-18
-sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026, lennysan-simonw-interview, prof-devs-control, agents-evals-deep-research, agentic-devops-deep-research, agent-review-artifacts-2026-05-13, osmani-cognitive-debt-ai-learning-2026-05, claude-code-fast-mode-default-2026-05, powerpoint-agent-skill-failure-mode-2026-06, anthropic-ai-assistance-coding-skills-2026, every-read-the-code-2026-09-08, nathannn-critch-build-a-brain-ai-age-2026-09-18]
+as_of: 2026-10-27
+sources: [every-ai-autopilot, every-youre-the-manager-now, ai-work-intensification-march, post-vibe-coding-verification-february, every-vibe-check-april-21-2026, lennysan-simonw-interview, prof-devs-control, agents-evals-deep-research, agentic-devops-deep-research, agent-review-artifacts-2026-05-13, osmani-cognitive-debt-ai-learning-2026-05, claude-code-fast-mode-default-2026-05, powerpoint-agent-skill-failure-mode-2026-06, anthropic-ai-assistance-coding-skills-2026, every-read-the-code-2026-09-08, nathannn-critch-build-a-brain-ai-age-2026-09-18, anthropic-agents-judgment-calls-2026-10-27]
 ---
 
 # Anti-autopilot review friction
@@ -16,6 +16,7 @@ As AI output gets more fluent and more often correct, people stop truly checking
 - Force yourself to explain why an accepted output is right for this reader, client, or task
 - Use confidence checks as a trigger for more review, not as a substitute for review
 - Ask agents to turn high-risk or judgment-heavy outputs into review artifacts before accepting them: comparison grids for options, annotated diffs for code, dashboards for data, and one-off editors for structured decisions. The point is to make review easier, not to make output look more polished.
+- On open judgment calls (which metric, which comparison, which population), write down your own pick before the agent offers one, and ask it for the strongest case for the option it is not recommending
 
 ## Proven patterns
 
@@ -62,6 +63,17 @@ From field research (N=99 surveys; suitable:unsuitable ratios):
 - Integrating with existing or legacy code — 3:17
 - Replacing human decision-making — 0:12
 
+## Deferral on judgment calls
+
+Anthropic's October 2026 randomized study measured how much an agent's preference decides calls that experts believe they are making. Fifty causal-inference analysts did an hour-long analysis with Claude Code (Opus 4.8). On four choices with two defensible options each, the agent was secretly given a coin-flip lean and told to argue honestly and never mislead.
+
+- Analysts went with the agent's lean 86% of the time (50% would mean no influence). Analysts who had already picked an option switched 60% of the time when the agent disagreed, against 6% when it agreed.
+- The coin flips alone predicted 82% of final recommendations.
+- 77% justified their choices with the agent's arguments, sometimes word for word; 15% credited the agent. Those who deferred most were as confident as the rest and as likely to call the result their own. Experience did not predict deferral.
+- Working with the agent still beat working without it: the 11 who skipped it made serious errors far more often (55% against 6%) and took longer, though they were less experienced.
+
+Limits: the agents' preferences were deliberately strengthened, and the study covers one task, field and model. Anthropic's untested suggestions are agents that argue each option or ask for the expert's view first, and institutions that decide which calls need a person's own informed judgment.
+
 ## Cognitive debt
 
 Cognitive debt (Addy Osmani, May 2026): the accumulated deficit in comprehension and skill that results from using AI to close tasks without understanding what was produced. "Silently trading future capability for present-day speed, and the tools won't force us to do otherwise." Distinct from hallucination risk: cognitive debt accrues even when the AI output is correct.
@@ -105,12 +117,14 @@ Critchett frames the remedy with a developmental-psychology distinction. Horizon
 - Letting fluency stand in for correctness
 - Reviewing too many AI outputs in a row without reset
 - Using AI to replace the judgment layer rather than the execution layer
+- **Counting sign-off as independent judgment.** When an agent frames the open choices, experts adopt its preferences without noticing. Error checks don't catch it because both options look sound, and asking the expert afterwards doesn't either, because they report the decision as their own.
 - **Vibe-coding default inheritance.** AI coding tools (Lovable and similar) generate working prototypes with insecure defaults — Supabase row-level security off, public access rules on storage, API keys embedded in client-side code. The code looks complete and runs correctly, so it passes review without triggering concern. Users inherit the AI's insecure-by-default configurations unless they know to audit them specifically. This is distinct from hallucination: the code is correct code with an insecure configuration choice.
 - **AI tooling layer as supply-chain attack surface.** The Vercel/Context AI breach (April 2026): a third-party AI integration vendor was compromised, exposing Vercel customer credentials. As AI tool dependencies proliferate, the AI tooling layer becomes a new supply-chain attack surface separate from the application layer.
 - **The "lethal trifecta" of agent security.** See [Prompt injection](../concepts/prompt-injection.md) for Simon Willison's three-condition framework — private data, untrusted content, and an external send channel together make prompt injection unfixable with current techniques.
 
 ## Recent changes
 
+- [2026-10-27] Added "Deferral on judgment calls": in Anthropic's randomized study, analysts followed Claude Code's covertly assigned lean 86% of the time and 77% reused its arguments while 15% credited it; plus a guidance bullet and a failure mode.
 - [2026-09-18] Cognitive debt section given subheads; added two data points cited by Nathan Critchett (HBS/BCG: 19 points less accurate when AI was confidently wrong; 27,000 students: half outsourced homework, exam scores −24%), the horizontal-vs-vertical development framing, and three judgment-practice prescriptions.
 - [2026-09-08] Added two proven patterns (trace mechanics not diffs; quiz before merge) and a fourth cited study on AI-agent-use skill erosion (Mitchell/Ghosh/Passi, arXiv:2608.23642), framed via the 1983 "irony of automation."
 - [2026-06-29] Added near-correct presentation decks as a review-friction failure mode: polished artifacts can hide subtle but costly defects.
@@ -135,3 +149,4 @@ Critchett frames the remedy with a developmental-psychology distinction. Horizon
 - [How AI assistance impacts the formation of coding skills](../sources/articles/anthropic-ai-assistance-coding-skills-2026.md)
 - [Every — To Read—Or Not to Read the Code?](../sources/newsletters/every-read-the-code-2026-09-08.md)
 - [Nathan Critchett on X — How to Build a Brain in the AI Age](../sources/tweets/nathannn-critch-build-a-brain-ai-age-2026-09-18.md)
+- [Anthropic — How AI agents shape experts' judgment calls](../sources/articles/anthropic-agents-judgment-calls-2026-10-27.md)

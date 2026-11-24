@@ -15,7 +15,7 @@ Every's Katie Parrott and Dan Shipper review Anthropic's Fable 5.1 launch: faste
 
 ## Influenced pages
 
-- [Claude Fable 5.1 / Mythos 5.1](../../models/claude-fable-5-1.md) — launch coverage and practitioner framing
+- [Claude Fable 5.1 / Mythos 5.1](../../history/models/claude-fable-5-1.md) — launch coverage and practitioner framing
 - [State of Models](../../state-of/models.md) — leader-line update
 
 ## Key claims extracted

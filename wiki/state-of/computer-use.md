@@ -3,8 +3,8 @@ title: State of Computer Use
 type: state-of
 domains: [computer-use]
 tags: []
-as_of: 2026-10-14
-sources: [perplexity-computer-plaid, open-weight-momentum-early-april, claude-computer-use-late-march, perplexity-personal-computer, desktop-mobile-computer-use-february, pig-homepage, legacy-ai-tools-roadmap-xlsx, codex-for-work-2026-05-01, amazon-quick-work-context-assistant-2026-04-29, gemini-downloadable-files-2026-04-30, knowledge-work-os-agent-apps-2026-04-28, peekaboo-repo-2026-05-13, website-future-agent-readable-2026-07-02, vercel-agents-new-software-2026-07-03, codex-general-work-agents-2026-07, agent-ready-saas-mcp-2026-06, gemini-computer-use-aside-2026-06, cloudflare-agent-internet-monetization-2026-07, expand-fetch-launch-2026-10, weinstein-computer-use-180-degrees-2026-09-30]
+as_of: 2026-11-24
+sources: [perplexity-computer-plaid, open-weight-momentum-early-april, claude-computer-use-late-march, perplexity-personal-computer, desktop-mobile-computer-use-february, pig-homepage, legacy-ai-tools-roadmap-xlsx, codex-for-work-2026-05-01, amazon-quick-work-context-assistant-2026-04-29, gemini-downloadable-files-2026-04-30, knowledge-work-os-agent-apps-2026-04-28, peekaboo-repo-2026-05-13, website-future-agent-readable-2026-07-02, vercel-agents-new-software-2026-07-03, codex-general-work-agents-2026-07, agent-ready-saas-mcp-2026-06, gemini-computer-use-aside-2026-06, cloudflare-agent-internet-monetization-2026-07, expand-fetch-launch-2026-10, weinstein-computer-use-180-degrees-2026-09-30, cua-spaces-connect-your-agent-docs, trycua-cua-repo-2026-11, ainews-cua-s1-forms-2026-09-19, perplexity-computer-local-mac-2026-10-20, vals-cua-bench-2026-10-13]
 ---
 
 # State of Computer Use
@@ -17,10 +17,11 @@ Current state of AI agents that operate through real application UIs, interact w
 
 Autonomous agents that orchestrate models, connect to external services, and execute complex workflows through application interfaces.
 
-- [Perplexity Computer](../tools/perplexity-computer.md) — Perplexity's persistent digital-proxy model: always-on dedicated Mac mini environment, remotely controllable from any device, 19-model orchestration, 400+ app and 12,000+ financial-institution connectivity *(as of 2026-04-10)*
+- [Perplexity Computer](../tools/perplexity-computer.md) — Perplexity's persistent digital-proxy agent: 19-model orchestration, 400+ app and 12,000+ financial-institution connectivity, remote control from any device; can now also run fully on-device on Apple-silicon Macs with a Perplexity-tuned Qwen model, using no credits, for Pro, Max and Enterprise *(as of 2026-10-20)*
 - [Pig](../tools/pig.md) — Windows-focused computer-use platform with product, API, and SDK layers for automating application workflows on Windows machines *(as of 2026-04-22)*
 - [Codex](../tools/codex.md) — OpenAI; horizontal computer-work agent across documents, browser flows, and workplace apps. Agents now combine screenshots, accessibility trees, DOM, and Playwright, write code that performs many actions per step, and recover from failures, beating the average person on many tasks; also in the Agents API *(as of 2026-09-30)*
 - [Peekaboo](../tools/peekaboo.md) — open-source macOS CLI + MCP server for agent screen capture, UI detection, and action-first GUI automation; v3.0 unified screenshot/UI detection across CLI and MCP and added native agent flows *(as of 2026-05-11)*
+- [Cua](../tools/cua.md) — open stack that gives coding agents their own desktops: Cua Spaces runs local or self-hosted macOS/Linux VMs that Claude Code, Codex and Cursor drive over MCP, including nested agent runs with no host credentials copied in *(as of 2026-11-24)*
 
 Computer use is also broadening into thinner action layers: desktop Electron apps exposed through CDP-based skills and mobile app actions exposed through assistant integrations, not only full remote-desktop proxies.
 
@@ -29,6 +30,8 @@ Computer use is also broadening into thinner action layers: desktop Electron app
 - **Aside** — agentic browser using local on-device browsing history and autofill to act across logged-in websites; benchmark leadership claims remain secondary until primary source is fetched *(as of 2026-06-25)*
 
 **Knowledge-work OS pattern:** Every argues that left-sidebar desktop apps combined with agentic terminals/chat are converging on a common interface shape (Codex, Claude, Cursor). Sticky workflow state across sessions is the emerging switching cost and platform-lock mechanism.
+
+**How far raw computer use still has to go:** on Vals AI's [CUA-bench](../sources/articles/vals-cua-bench-2026-10-13.md), where agents play six commercial games (three held out) from pixels, keyboard and mouse in real time, no tested model averages 20 of 100; GPT-6 Astra leads *(as of 2026-10-13)*.
 
 ### Agent-readable web infrastructure
 
@@ -46,16 +49,16 @@ The reader side of the agent-readable web: APIs that fetch and clean arbitrary p
 
 ## Recent changes
 
+- [2026-11-24] Added [Cua](../tools/cua.md): Cua Spaces lets coding agents create and drive their own macOS/Linux desktops over MCP, and its open CUA-S1-FORMS model scores form-filling decisions for computer use.
+- [2026-10-20] Perplexity Computer can run fully local on Apple-silicon Macs: model, harness and execution on-device across local files and Mac apps, no credits used, open to Pro, Max and Enterprise.
 - [2026-10-14] Added `Agent web data extraction` with [Expand Fetch](../tools/expand-fetch.md), the reader-side counterpart to sites serving agent-native Markdown.
+- [2026-10-13] Vals AI's CUA-bench: real-time play of six commercial games (three held out) from pixels only; no tested model averages 20 of 100.
 - [2026-09-30] OpenAI's Ari Weinstein calls computer use "180 degrees different" from a year ago: self-debugging agents, multi-modal input (accessibility trees, DOM, App Shots), code-writing multi-action steps, GPT-6.1 Sol at ~1/7 of Astra's computer-use cost, and agents testing the software they build.
 - [2026-07-08] Cloudflare Monetization Gateway adds an agent-internet monetization signal: metered access for pages, datasets, APIs, and MCP tools.
 - [2026-07-03] Added agent-readable web concept: Vercel reports serving Markdown directly to detected agent requests, signaling a split between human and machine website experiences.
 - [2026-07-01] Every adds Codex examples outside coding: inbox/CRM cleanup, healthcare coordination, writing setups, meeting notes, and personal folders.
 - [2026-06-29] Added agent-ready SaaS framing: products should expose docs, APIs, auth, and MCP servers for external agents.
 - [2026-06-25] Gemini 3.5 Flash computer use moves browser/desktop/mobile action into a mainstream Gemini API tool; Aside launches as a browser-native computer-use product.
-- [2026-05-11] Added [Peekaboo](../tools/peekaboo.md) as a local macOS computer-use action layer for agents: CLI + MCP screen capture, UI detection, and GUI automation.
-- [2026-05-05] Added knowledge-work OS framing: left-sidebar desktop app + agentic terminal is emerging as a universal knowledge-work interface pattern; sticky workflow state creates switching costs
-- [2026-05-05] Gemini now generates downloadable files from chat: Google Docs/Sheets/Slides, Microsoft Office formats, PDF, CSV, LaTeX, TXT, RTF, Markdown — artifact-producing assistant behavior
 
 ## Sources
 
@@ -72,3 +75,7 @@ The reader side of the agent-readable web: APIs that fetch and clean arbitrary p
 - [Cloudflare Monetization Gateway and agent internet monetization](../sources/newsletters/cloudflare-agent-internet-monetization-2026-07.md)
 - [Announcing Expand Fetch](../sources/articles/expand-fetch-launch-2026-10.md)
 - [Ari Weinstein: computer use is "180 degrees different"](../sources/newsletters/weinstein-computer-use-180-degrees-2026-09-30.md)
+- [Cua docs — Connect your agent](../sources/articles/cua-spaces-connect-your-agent-docs.md)
+- [trycua/cua GitHub README](../sources/repos/trycua-cua-repo-2026-11.md)
+- [Perplexity — Perplexity Computer now runs fully local on Mac](../sources/articles/perplexity-computer-local-mac-2026-10-20.md)
+- [Vals AI — CUA-bench leaderboard and methodology](../sources/articles/vals-cua-bench-2026-10-13.md)

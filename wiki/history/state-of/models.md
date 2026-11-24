@@ -121,3 +121,10 @@
 - [2026-09-22] Xiaomi MiMo-V2.6-Pro added to Open-weight models: 1T/42B-active omnimodal MoE under MIT, AA Intelligence Index 46 at $0.13 per task, shipped with its RL environments and training code.
 - [2026-10-07] Claude Haiku 5.5 launched; new Small / fast models section. About 75% cheaper than Haiku 4.5, OSWorld 2.1 72.4% and Terminal-Bench 4.0 39.2% (Sonnet 5.5: 83.9% / 70.6%), first Haiku with an effort setting.
 - [2026-10-12] Meta launched Muse Wonder and Wonder Full: AA Intelligence Index 56 for Full (Opus 5.5 leads at 58), Coding Agents Index 68 in Muse Code, Vals Index #5; Meta joins the frontier tier 14 months after founding MSL.
+
+## Archived from current page on 2026-11-24
+
+- [2026-10-13] Gemini 4 Argon replaced Gemini 3.1 Pro as Google's frontier entry: announced 2026-09-30 for defenders, GA 2026-10-13; level with GPT-6 Astra on the AA Intelligence Index at lower cost per task, #1 on the Vals Index.
+- [2026-10-16] US open-weight push: Meta's Muse Spark Open (816B/42B, AA 39, top US open model) and Reflection Beam 1.0 (501B/23B, Apache 2.0, AA 30) added to Open-weight models, both behind GLM-5.3 (45) and Kimi K3 (44); Mistral Large 4 (AA 38, previewed 2026-10-07, weights pending) added alongside.
+- [2026-10-17] New Decision models section. Jev (TypeSafe, 2026-09-15) started a class of models that return calibrated typed answers instead of text; within a month Cloudflare, OpenAI, Perplexity and Liquid shipped rivals, and Liquid d1-ultra took the top of Artificial Analysis's new Decision Index (65 vs Jev 1.14's 57). ScaleDown (from Specialized utility models) and MedDecider-27B (from the now-removed Domain-specialized models section) moved here.
+- [2026-10-19] Added the "Domain-specialized models" section with MedDecider-27B, a medical decision model that returns calibrated option probabilities without generating text.

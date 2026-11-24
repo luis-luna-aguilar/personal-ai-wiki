@@ -15,7 +15,7 @@ Story from the 15 October 2026 AINews issue (covering 13–14 October), "Safety,
 
 ## Influenced pages
 
-- [State of Cybersecurity](../../state-of/cybersecurity.md) — rogue agent fleet line in "Agents acting in the wild"
+- [Agent incidents in the wild](../../trends/agent-incidents-in-the-wild.md) — rogue agent fleet line under real-use incidents (moved from State of Cybersecurity on 2026-11-24)
 
 ## Key claims extracted
 

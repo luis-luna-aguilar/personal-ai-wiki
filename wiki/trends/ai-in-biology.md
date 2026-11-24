@@ -3,15 +3,15 @@ title: AI in Biology
 type: trend
 domains: [science]
 tags: []
-as_of: 2026-09-24
-sources: [noetik-cancer-trials, gpt-rosalind-launch, esmfold2-protein-world-model-2026-05, xaira-x-cell-causal-virtual-cell-2026-07-21, chai-discovery-bioai-phase-shift-2026-08-11, anthropic-claude-art-enzyme-system-2026-09, ainews-claude-art-amodei-2026-09-24, ainews-art-critique-2026-09-25, radical-numerics-genomic-lms-biosecurity-2026-09-23]
+as_of: 2026-10-27
+sources: [noetik-cancer-trials, gpt-rosalind-launch, esmfold2-protein-world-model-2026-05, xaira-x-cell-causal-virtual-cell-2026-07-21, chai-discovery-bioai-phase-shift-2026-08-11, anthropic-claude-art-enzyme-system-2026-09, ainews-claude-art-amodei-2026-09-24, ainews-art-critique-2026-09-25, radical-numerics-genomic-lms-biosecurity-2026-09-23, anthropic-early-progress-drug-development-2026-10-27]
 ---
 
 # AI in Biology
 
 Split out from [AI in Science](ai-in-science.md) because biology and drug discovery are the densest cluster in the science trend. Models are positioned not just as literature copilots but as systems that infer treatment response, model proteins and cells, design molecules, read and write DNA, and now originate discovery candidates for human labs to test. Cross-domain science platforms (Claude Science), self-driving labs, and Google's ERA stay on AI in Science.
 
-## Current status (as of 2026-09-24)
+## Current status (as of 2026-10-27)
 
 - Noetik is presented as using large multimodal tumor datasets and transformer models to predict treatment response and improve cancer-trial selection
 - The company reportedly signed a $50M GSK deal tied to this stack
@@ -20,6 +20,7 @@ Split out from [AI in Science](ai-in-science.md) because biology and drug discov
 - ESMFold2 adds a protein-world-model signal: general transformer scaling and diverse protein data are being applied to structure prediction, protein interactions, antibody tasks, and design/discovery workflows.
 - Chai Discovery ($4B valuation) reports four major pharma tools deals since January — Lilly, Novartis, argenx, and an expanded Eli Lilly program — as structural models give way to binding models that support real molecule design, not just prediction
 - Agent swarms produced the first genome-mining discovery claim in this wiki: Anthropic's ART phage system, found by ~950 Claude agents and confirmed only as far as "transcribed into short RNAs" (see below).
+- Anthropic now runs its own drug programs: it acquired Mithril Medicine, a one-person biotech whose founder used Claude to coordinate 11 outside labs, and reports preclinical Claude results at five partner companies (see below).
 - Genomic language models raise the biosecurity stakes of the same capability gains (see below).
 
 ## Protein world models
@@ -35,6 +36,14 @@ Anthropic's new life-sciences lab (Bay Area, BSL-1/2 only, all bench work by hum
 - **Validated so far:** human-run experiments (expression in E. coli plus RNA-seq) show the array is transcribed into distinct short RNAs. Function is unknown; there is no evidence yet of programmable editing.
 - **Reception:** Amodei called it PhD-worthy but of unclear significance; community critics said it is not AlphaFold- or CRISPR-scale; a Stanford team independently described a distinct RT system with a non-coding array.
 - **Workflow lesson:** with hundreds to thousands of reports per campaign, the lab now studies which hypotheses scientists choose to test and feeds that "taste" back into Claude's instructions. Work runs in Claude Science and Claude Code, sometimes with a harness that coordinates many parallel sessions.
+
+## Claude across the drug pipeline (Anthropic, Mithril)
+
+Anthropic's life-sciences team argues that drug-development bottlenecks are spread across every stage, so it works inside real programs rather than on molecule design alone (as of 2026-10-27).
+
+- **Lean biotech model:** Mithril Medicine's founder, Cody Tranbarger, was its only employee. He used Claude to run contracts, logistics and experiments across 11 external labs and took a rare muscular-dystrophy candidate from idea to promising mouse results in under 18 months. Anthropic acquired the company; he will start several more programs there, and Anthropic says a drug could enter human trials as soon as late 2028. The Column Group's new company Pleiades is built on the same idea: many programs, small team, Claude doing the operational work.
+- **Partner results by stage:** design (Generate Biomedicines: a CAR T-cell component about 70% shorter that performed better in lab tests), hit generation (Divergence Labs: ~35,000 antibody designs in a month, hits for both arms of a food-allergy drug), lead optimization (BigHat: ~1,010 variants tested in 10 weeks with its automated lab; >10x tighter binding), and manufacturing paperwork (Enveda: all 11 human-found issues plus 7 missed ones in 1,061 pages, review time down 89%). Bristol Myers Squibb is testing Claude on clinical-trial planning.
+- **Caveat:** nearly all of this is preclinical; no drug from these programs has been tested in humans.
 
 ## Genomic language models and biosecurity
 
@@ -54,6 +63,7 @@ Chai's product bet is UX-driven: a CAD-like molecule editor ("Photoshop for mole
 
 ## Recent changes
 
+- [2026-10-27] Added Claude across the drug pipeline: Anthropic acquired one-person Mithril Medicine (Claude coordinated 11 outside labs; mouse results in under 18 months) and reported preclinical results with Generate, Divergence, BigHat, Enveda, The Column Group and BMS.
 - [2026-10-21] Page split out from [AI in Science](ai-in-science.md): protein world models, virtual cells, AI-native drug design, ART, and genomic language models moved here.
 - [2026-09-24] Anthropic's life-sciences lab reported ART, a CRISPR-like phage reverse-transcriptase system found by ~950 Claude agents (21 hours, 210M tokens); array confirmed transcribed into short RNAs, function unknown; critics and Amodei both call its significance unclear.
 - [2026-09-23] Added genomic language models and biosecurity: Radical Numerics reports in-context DNA optimization and argues defense is losing the arms race.
@@ -71,3 +81,4 @@ Chai's product bet is UX-driven: a CAD-like molecule editor ("Photoshop for mole
 - [AINews — Claude's ART phage system and Amodei's framing](../sources/newsletters/ainews-claude-art-amodei-2026-09-24.md)
 - [AINews — Community critique of the ART result](../sources/newsletters/ainews-art-critique-2026-09-25.md)
 - [Latent Space — Eric Nguyen: bio-security is an AI arms race](../sources/newsletters/radical-numerics-genomic-lms-biosecurity-2026-09-23.md)
+- [Anthropic — Early progress on accelerating drug development with Claude](../sources/articles/anthropic-early-progress-drug-development-2026-10-27.md)

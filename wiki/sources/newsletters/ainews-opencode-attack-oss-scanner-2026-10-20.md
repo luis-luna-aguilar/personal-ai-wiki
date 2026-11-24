@@ -15,7 +15,8 @@ Story from the 20 October 2026 AINews issue (covering 16–19 October), "Cyber D
 
 ## Influenced pages
 
-- [State of Cybersecurity](../../state-of/cybersecurity.md) — new "Agents acting in the wild" section (OpenCode attack, Project Perception); OSS Scanner in vulnerability detection
+- [State of Cybersecurity](../../state-of/cybersecurity.md) — OSS Scanner in vulnerability detection
+- [Agent incidents in the wild](../../trends/agent-incidents-in-the-wild.md) — OpenCode attack and Project Perception lines (moved from State of Cybersecurity on 2026-11-24)
 
 ## Key claims extracted
 

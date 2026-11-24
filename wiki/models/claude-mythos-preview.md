@@ -5,14 +5,14 @@ domains: [models, cybersecurity, agents]
 subcategory: frontier-model
 tags: [anthropic, closed-source, beta]
 as_of: 2026-05-23
-sources: [glasswing, metr-long-horizon-2026-05-12, claude-mythos-m5-bypass-2026-05, cloudflare-glasswing-2026-05, anthropic-glasswing-10k-vulnerabilities, ainews-fablemythos-51-2026-09-02]
+sources: [glasswing, metr-long-horizon-2026-05-12, claude-mythos-m5-bypass-2026-05, cloudflare-glasswing-2026-05, anthropic-glasswing-10k-vulnerabilities, ainews-fablemythos-51-2026-09-02, anthropic-claude-fable-mythos-5-2]
 ---
 
 # Claude Mythos Preview
 
 Anthropic's restricted-preview frontier model, demonstrated through Project Glasswing. Not publicly available. Operates above the current Opus 4.7 tier in autonomous cybersecurity capability.
 
-**Note:** In September 2026, Anthropic separately launched a public, paired knowledge-work model also named Mythos (Mythos 5.1, alongside Fable 5.1) — see [Claude Fable 5.1 / Mythos 5.1](claude-fable-5-1.md). The two share a name but, per current sources, not an established lineage; this page's Mythos Preview remains the restricted-access Project Glasswing cybersecurity-research model.
+**Note:** Since September 2026 Anthropic has also shipped a public-tier model named Mythos, paired with Fable (Mythos 5.1, now [Claude Fable 5.2 / Mythos 5.2](claude-fable-5-2.md)). Anthropic says Fable and Mythos 5.2 are the same model, with Mythos lacking Fable's cyber and biology blocks and limited to vetted organizations. No lineage to this page's Mythos Preview is established; Mythos Preview remains the restricted-access Project Glasswing cybersecurity-research model.
 
 ## Current status (as of 2026-05-23)
 
@@ -84,6 +84,7 @@ Mythos Preview is the first public evidence of an Anthropic model operating auto
 
 ## Recent changes
 
+- [2026-11-09] Mythos 5.2 launched with Fable 5.2 as the same model without Fable's cyber and biology safeguards; disambiguation note updated.
 - [2026-09-01] Anthropic launched a distinct, publicly available Mythos 5.1 alongside Fable 5.1 — added a disambiguation note; no lineage established between the two.
 - [2026-05-23] Anthropic reported Project Glasswing and partners found 10,000+ high/critical-severity vulnerabilities in essential software within a month of launch — a program-wide figure, not just the Cloudflare result; AINews' recap adds that Anthropic framed it as an industry-wide volume-adaptation warning.
 - [2026-05-19] Cloudflare Project Glasswing detailed writeup: exploit chain construction, proof generation loop, inconsistent organic refusals, and 8-stage narrow-scope harness architecture confirmed
@@ -98,3 +99,4 @@ Mythos Preview is the first public evidence of an Anthropic model operating auto
 - [Apple M5 MIE bypass — Claude Mythos Preview](../sources/newsletters/claude-mythos-m5-bypass-2026-05.md)
 - [Project Glasswing: what Mythos showed us — Cloudflare](../sources/articles/cloudflare-glasswing-2026-05.md)
 - [Anthropic on X — Project Glasswing finds 10,000+ vulnerabilities](../sources/tweets/anthropic-glasswing-10k-vulnerabilities.md)
+- [Anthropic — Introducing Claude Fable 5.2 and Claude Mythos 5.2](../sources/articles/anthropic-claude-fable-mythos-5-2.md)

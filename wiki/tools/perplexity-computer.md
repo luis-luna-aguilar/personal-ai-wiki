@@ -4,24 +4,26 @@ type: tool
 domains: [computer-use, finance]
 subcategory: computer-use
 tags: [perplexity, closed-source]
-as_of: 2026-08-29
+as_of: 2026-10-20
 sources:
   - perplexity-computer-plaid
   - perplexity-personal-computer
   - finance-agent-workflows-2026-05-06
   - ainews-openai-shuts-off-cursor-2026-08-29
+  - perplexity-computer-local-mac-2026-10-20
 ---
 
 # Perplexity Computer
 
 Autonomous AI agent launched 2026-02-25 that orchestrates 19 different AI models to complete complex, multi-step workflows in the background. Rather than relying on a single model, Computer is an orchestration layer that routes each part of a task to the model best suited for that type of work.
 
-## Current status (as of 2026-08-29)
+## Current status (as of 2026-10-20)
 
-- Exclusively available on Perplexity Max ($200/month); 10,000 credits/month, consumption varies by task complexity
+- Cloud Computer is available on Perplexity Max ($200/month); 10,000 credits/month, consumption varies by task complexity
 - Enterprise tier at $325/seat/month with security controls and audit logs
 - Connects to 400+ applications (Slack, Gmail, GitHub, Notion) and 12,000+ financial institutions via Plaid
 - Personal Computer, launched 2026-03-11, frames the product as a persistent digital proxy: an always-on Mac mini environment with ongoing access to files, apps, and sessions that can still be remotely controlled from any device
+- **Fully local on Mac (2026-10-20):** the model, harness and task execution can all run on supported Apple-silicon Macs (36 GB+ unified memory recommended), working across local files and Mac apps such as Notes, Messages, Mail and Numbers with permission. Local models are Qwen 3.6 or PPLX Pro, a post-trained Qwen ([Qwen 3.8](../models/qwen-3-8.md) per Perplexity's X thread); local tasks use no Computer credits, and the mode is open to Pro, Max and Enterprise subscribers. Hybrid Compute (September) instead starts in the cloud and hands private-file work to a local model, and a local task can be allowed to escalate to the cloud for current information, browser use and connected apps.
 - Secondary May 2026 coverage describes a Professional Finance variant that combines licensed finance data with packaged workflows; verify against Perplexity primary materials before treating this as a mature product surface.
 - **Perplexity Search tops a new Artificial Analysis Search Index (August 2026):** Artificial Analysis launched a dedicated benchmark for search-as-a-subsystem (measured on action count, latency, and downstream token cost, not just answer quality); Perplexity Search placed #1 across all three tested context variants, with its medium tier scoring 80 against a prior-leader ceiling of 75, and the lowest per-task inference cost among tested providers due to smaller payloads.
 
@@ -39,16 +41,17 @@ Autonomous AI agent launched 2026-02-25 that orchestrates 19 different AI models
 - Deep third-party integrations (400+ apps, 12,000+ financial institutions via Plaid)
 - Can run for hours or months on long-horizon tasks
 - Dedicated-machine model makes "always-on agent" behavior more concrete than a normal chat surface
-- Local-ish Personal Computer variant addresses privacy-sensitive and continuity-sensitive workloads better than purely ephemeral sessions
+- Fully local mode keeps planning, reasoning and file processing for sensitive work on the user's Mac, and Personal Computer covers continuity-sensitive workloads better than purely ephemeral sessions
 
 ## Weaknesses / caveats
 
-- $200/month price point limits adoption to power users and enterprises
+- Cloud Computer's $200/month Max price limits it to power users and enterprises; the local mode reaches Pro subscribers but needs a 36 GB-class Apple-silicon Mac
 - Credit-based consumption model makes cost unpredictable for complex workflows
 - Multi-model routing adds latency and potential failure modes vs. single-model agents
 
 ## Recent changes
 
+- [2026-10-20] Computer runs fully local on Apple-silicon Macs (Qwen 3.6 or PPLX Pro, no credits used, 36 GB+ recommended) for Pro, Max and Enterprise; Hybrid Compute splits tasks between cloud and local models.
 - [2026-08-29] Perplexity Search took #1 on Artificial Analysis's new Search Index benchmark (score 80 vs. prior ceiling 75), with the lowest per-task inference cost among tested providers.
 - [2026-04-10] Plaid integration connects to 12,000+ financial institutions; users can build custom budgeting/tracking tools
 - [2026-03-11] Perplexity Personal Computer launched — local Mac Mini variant for on-device agent workloads
@@ -60,3 +63,4 @@ Autonomous AI agent launched 2026-02-25 that orchestrates 19 different AI models
 - [Perplexity Personal Computer](../sources/newsletters/perplexity-personal-computer.md)
 - [Finance agent workflow packaging - May 2026](../sources/newsletters/finance-agent-workflows-2026-05-06.md)
 - [AINews — OpenAI shuts off Cursor](../sources/newsletters/ainews-openai-shuts-off-cursor-2026-08-29.md)
+- [Perplexity — Perplexity Computer now runs fully local on Mac](../sources/articles/perplexity-computer-local-mac-2026-10-20.md)

@@ -661,3 +661,80 @@ grep "^- \[" wiki/log.md | tail -20
 - [2026-11-23] **schema** | added subcategory `runtime-security`
 - [2026-11-23] **ingest** | OpenAI and Cisco introduce Shirudo | 1 page updated, 2 created
 - [2026-11-23] **ingest** | OpenAI — AI for Cybersecurity Teams solutions page | 2 pages updated, 1 created
+- [2026-11-24] **ingest** | Ernie Tedeschi (Stripe) — agentic commerce data ahead of the 2026 holiday season | 2 pages updated, 1 created
+- [2026-11-24] **triage** | 2026-11-23-ai-inbox-01-sep07-sep15 | 6 proposals (1 checked item merged into 02), 13 skipped
+- [2026-11-24] **triage** | 2026-11-23-ai-inbox-02-sep15-sep20 | 9 proposals, 21 skipped
+- [2026-11-24] **triage** | 2026-11-23-ai-inbox-03-sep20-oct21 | 9 proposals, 14 skipped
+- [2026-11-24] **triage** | 2026-11-23-ai-inbox-04-oct21-oct28 | 12 proposals, 22 skipped
+- [2026-11-24] **triage** | 2026-11-23-ai-inbox-05-oct29-nov10 | 8 proposals, 11 skipped
+- [2026-11-24] **triage** | 2026-11-23-ai-inbox-06-nov10-nov23 | 15 proposals, 11 skipped
+- [2026-11-24] **ingest** | Anthropic — How AI agents shape experts' judgment calls | 1 pages updated, 1 created
+- [2026-11-24] **ingest** | Anthropic — The AI-native SDLC playbook | 2 pages updated, 1 created
+- [2026-11-24] **ingest** | Migrating to API version 2026-10-21 (Claude Platform docs) | 1 pages updated, 1 created
+- [2026-11-24] **ingest** | Anthropic — The components of agent memory | 2 pages updated, 1 created
+- [2026-11-24] **ingest** | Claude — Building agents: When to fold subagents into your main agent loop | 2 pages updated, 1 created
+- [2026-11-24] **lint** | refactor concepts/agent-memory | "Context editing and persistent state" section, its Current-status bullet, two Recent-changes entries (10-26, 10-19) and three sources moved to new concepts/context-editing.md; pointer paragraph left on agent-memory; context-editing/compaction row added to concepts/knowledge-term-map.md (oldest entry, 2026-09-09, spilled to history); three source pages re-pointed
+- [2026-11-24] **ingest** | Every Vibe Check — Afterimage agent VFX test; Meta SAM 3.1 on Model API | 1 page updated, 3 created
+- [2026-11-24] **ingest** | Latent Space — Underwriting Superintelligence: Rune Kvist on AIUC-1 and agent insurance | 1 page updated, 2 created
+- [2026-11-24] **ingest** | Anthropic — Early progress on accelerating drug development with Claude | 2 pages updated, 1 created
+- [2026-11-24] **ingest** | Anthropic S-1 and IPO (Every analyses, Anthropic filing and close announcements) | 1 page updated, 5 created
+- [2026-11-24] **ingest** | Anthropic — Using Claude to reduce the attack surface of code | 1 page updated, 1 created
+- [2026-11-24] **ingest** | Anthropic — LLMs are making formal software verification feasible at a much larger scale | 3 pages updated, 2 created
+- [2026-11-24] **ingest** | Anthropic — Detecting and countering misuse of AI: September 2026 | 3 pages updated, 1 created
+- [2026-11-24] **lint** | refactor state-of/cybersecurity → trends/agent-incidents-in-the-wild | "Agentic misalignment incidents" and "Agents acting in the wild" (7 bullets) moved into the target, regrouped as real-use incidents, eval-time incidents and containment; Recent-changes entries moved/split; 6 source ids moved; one-paragraph pointer left; 9 source pages re-pointed
+- [2026-11-24] **ingest** | Asymptote-Labs/agent-beacon (GitHub) | 3 pages updated, 2 created
+- [2026-11-24] **ingest** | ChatGPT dots texting and Wallet; agentic commerce (OpenAI, a16z, Every) | 6 pages updated, 7 created
+- [2026-11-24] **ingest** | OpenAI — Introducing ChatGPT for Financial Services | 1 page updated, 1 created
+- [2026-11-24] **ingest** | Anthropic — Introducing Claude Duet | 2 pages updated, 4 created
+- [2026-11-24] **ingest** | Artificial Analysis HealthBench leaderboards | 1 page updated, 3 created
+- [2026-11-24] **ingest** | AINews — Bria Fibo 2.0 and Krea 3 Ultra image editing | 1 page updated, 1 created
+- [2026-11-24] **ingest** | Anthropic — Introducing Claude Fable 5.2 and Claude Mythos 5.2 (+ three Every stories) | 13 pages updated, 5 created
+- [2026-11-24] **lint** | refactor models/claude-fable-5-1 | superseded by Fable 5.2; moved to history/models/claude-fable-5-1.md, links re-pointed
+- [2026-11-24] **lint** | refactor state-of/creative | new "AI image editing" section; GPT-Image-2.5 and MAI-Image-2.5 editing ranks referenced; Krea 2 Raw/Turbo and Krea 3 Ultra merged into one Krea line
+- [2026-11-24] **ingest** | Is Bash All You Need? / HarnessTax / harness-design and context-trimming studies | 2 pages updated, 4 created
+- [2026-11-24] **ingest** | OpenAI — Data agent in ChatGPT Work | 4 pages updated, 1 created
+- [2026-11-24] **ingest** | Claude Mods essay, Claude Code AGENTS.md fallback, Code Mode | 1 page updated, 3 created
+- [2026-11-24] **lint** | refactor tools/claude-code | Claude Mods and built-in mods bullets, the unsandboxed-mods caveat and two Recent-changes entries moved to tools/claude-code-mods; Projects bullet and its 09-17 entry moved to tools/claude-code-projects; pointers remain; 4 source pages re-pointed
+- [2026-11-24] **lint** | refactor training/ai-adoption-evidence | flat "Case evidence" section split into three ### subsections
+- [2026-11-24] **lint** | refactor state-of/finance → trends/agentic-commerce | agent-purchaser and Stripe Link Agent Wallet bullets plus their 2026-11-20 entry moved to the new trend page; pointer left; 2 source pages re-pointed
+- [2026-11-24] **ingest** | ElevenCreative — Chimera launch post | 1 page updated, 2 created
+- [2026-11-24] **lint** | move tools/seedance-2 → history/tools/seedance-2 | Seedance 2.0 superseded by Seedance 2.5 (new tools/seedance-2-5); live links re-pointed in state-of/creative and _schema/subcategories; legacy-ai-tools-roadmap-xlsx source page re-pointed to the history path
+- [2026-11-24] **ingest** | The Next Two Levels of AI Adoption — Every | 2 pages updated, 1 created
+- [2026-11-24] **ingest** | Why We Replaced Personal Agents With One for the Whole Company — Every | 1 page updated, 1 created
+- [2026-11-24] **ingest** | Cursor — Introducing Projects (+ Fatih Arslan, How I manage my agents) | 4 pages updated, 2 created
+- [2026-11-24] **ingest** | Cognition — Factoring RSA-260 | 3 pages updated, 1 created
+- [2026-11-24] **ingest** | Cognition September releases (SWE-2, Fusion in Desktop & CLI, AWS, Code Scans) | 4 pages updated, 4 created
+- [2026-11-24] **lint** | refactor tools/devin | Devin Oncall section (bullets, Why-it-matters paragraph, 2026-10-19 Recent-changes entry) moved to new tools/devin-oncall; devin.md keeps a one-bullet pointer; Oncall links added on state-of/agents and training/agentic-infrastructure-operations
+- [2026-11-24] **ingest** | Cua Spaces (Connect your agent docs), trycua/cua README, AINews CUA-S1-FORMS | 3 pages updated, 4 created
+- [2026-11-24] **ingest** | AINews — DeepSeek DeepInfer open-sources its production inference stack; AINews inference systems (TorchTPU, EAGLE-4) | 3 pages updated, 2 created
+- [2026-11-24] **ingest** | Object-Oriented Harness (Google Cloud AI Research) and Evolving Agent Interfaces (Agent S4, Simular) | 1 page updated, 2 created
+- [2026-11-24] **lint** | refactor concepts/automated-harness-optimization | Harness², OO-Harness/Agent S4, harness continual learning and HarnessDev sections with their status bullets and 10-09/10-20 entries moved to new concepts/harness-evolution-research; pointers updated on harness, agent-improvement-loop, harness2 and three source pages
+- [2026-11-24] **ingest** | METR — Independent assessment of AI R&D acceleration at Anthropic; OpenAI — Research acceleration: The jagged frontier | 2 pages updated, 3 created
+- [2026-11-24] **ingest** | OpenAI — Introducing the Agents API | 1 page updated, 1 created
+- [2026-11-24] **ingest** | OpenAI — Our framework for reporting model misalignment | 1 page updated, 1 created
+- [2026-11-24] **ingest** | How I Finally Got AI to Write Like Me — Every | 2 pages updated, 3 created
+- [2026-11-24] **ingest** | Gemini 4 Carbon, Neon and Hydrogen (Google launch posts and Every reviews) | 6 pages updated, 9 created
+- [2026-11-24] **ingest** | OpenAI launches GPT-6.1 Terra (BleepingComputer, Every) | 1 page updated, 3 created
+- [2026-11-24] **ingest** | Every — Vibe Check: GPT-6.2 Astra and Sol | 2 pages updated, 2 created
+- [2026-11-24] **ingest** | TypeSafe docs — Jev image input and Box questions | 2 pages updated, 2 created
+- [2026-11-24] **ingest** | Forward-deployed engineering — openings up 4.6x, Ode field evidence, "report to product, not sales" (Every ×3, Latent Space) | 2 pages updated, 4 created
+- [2026-11-24] **ingest** | Framer — Harness 2: executing agent code as it streams | 1 page updated, 1 created
+- [2026-11-24] **ingest** | Neurons as an Interpretable Basis — Goodfire | 2 pages updated, 1 created
+- [2026-11-24] **ingest** | Microsoft AI — MAI Licensed Weights (Ignite 2026) | 3 pages updated, 2 created
+- [2026-11-24] **ingest** | The "SaaSpocalypse" as a buying slowdown; build versus buy (Lemkin, Every) | 1 page updated, 5 created
+- [2026-11-24] **ingest** | Latent Space — The Programmable Data Center (Evan Conrad, SF Compute) | 1 page updated, 1 created
+- [2026-11-24] **ingest** | Your AI Agents Can Multitask. Can You? — Every | 1 page updated, 1 created
+- [2026-11-24] **ingest** | Cartesia Managed Agents, Voxtral 3, Grok Voice Transcribe 2.0, Kyutai Pocket TTS | 4 pages updated, 4 created
+- [2026-11-24] **ingest** | Periodic Labs — Nature Is Our Learning Environment (Neon) | 3 pages updated, 1 created
+- [2026-11-24] **ingest** | whatmodel.sh — What AI labs report vs what independent tests find | 1 page updated, 1 created
+- [2026-11-24] **lint** | refactor concepts/harness-vs-model | moved "The harness cycle and its dissent" (train→absorb→shed essay, Hugging Face multi-harness proxy, Alex Zhang's dissent, HarnessTax) to new concepts/harness-model-co-evolution; pointer paragraph left; 3 Recent-changes entries moved; 4 source pages re-pointed
+- [2026-11-24] **ingest** | PHP2Shell and OpenAI's Patch the Planet response | 1 page updated, 2 created
+- [2026-11-24] **ingest** | Railway credential exposure and Every's agent-run cleanup | 2 pages updated, 2 created
+- [2026-11-24] **ingest** | Third-party frontier evaluation: Anthropic–Accenture, AEF-1, Amodei's "We Must Pace the Frontier" | 2 pages updated, 4 created
+- [2026-11-24] **lint** | refactor state-of/cybersecurity | "AI developer supply chain attacks" moved to new trends/ai-developer-supply-chain-attacks, one-paragraph pointer left; Railway 10-21 entry moved with it; 6 source pages and the Railway and agent-safety links re-pointed
+- [2026-11-24] **ingest** | Perplexity — Perplexity Computer now runs fully local on Mac | 2 pages updated, 1 created
+- [2026-11-24] **ingest** | What Effort Level Should I Choose? (JHU, Together AI, Cornell) | 2 pages updated, 1 created
+- [2026-11-24] **ingest** | Recursive Flint model card | 2 pages updated, 4 created
+- [2026-11-24] **ingest** | Every — Why You Should Burn More Tokens; AINews — Databricks Astra sub-budget | 2 pages updated, 2 created
+- [2026-11-24] **ingest** | Vals AI — Router Index, ClaimBench, CUA-bench | 4 pages updated, 3 created
+- [2026-11-24] **ingest** | Sparks of Weight-Space Programming; Cmpnd dspy-wsp | 2 pages updated, 3 created

@@ -3,8 +3,8 @@ title: AI delegation management
 type: training
 domains: [agents, training]
 tags: [agentic]
-as_of: 2026-10-25
-sources: [management-as-ai-superpower-2026-07, andy-matuschak-agent-loop-tempo-2026-07, design-layer-framework-2026-08-04, vibe-coded-security-risk-2026-08-10, securing-ai-employee-guide-2026-08-14, next-era-of-great-work-2026-08-16, engineering-team-cost-of-codex-2026-08-19, rieseberg-how-to-be-more-ambitious, yarchi-ai-team-runs-business-2026-09, thorstenball-how-i-work-with-agents-2026-10-25]
+as_of: 2026-11-23
+sources: [management-as-ai-superpower-2026-07, andy-matuschak-agent-loop-tempo-2026-07, design-layer-framework-2026-08-04, vibe-coded-security-risk-2026-08-10, securing-ai-employee-guide-2026-08-14, next-era-of-great-work-2026-08-16, engineering-team-cost-of-codex-2026-08-19, rieseberg-how-to-be-more-ambitious, yarchi-ai-team-runs-business-2026-09, thorstenball-how-i-work-with-agents-2026-10-25, every-agents-multitask-brain-fry-2026-11-23]
 ---
 
 # AI delegation management
@@ -56,6 +56,20 @@ A reusable prompt for depth:
 
 All three directions assume the agent has a computer, can install software, and can reach the relevant data.
 
+## Supervising many agent threads
+
+Parallel agents move the limit to the supervisor. In a Boston Consulting Group survey of nearly 1,500 US workers (reported in HBR), people overseeing multiple AI agents were among the most likely to report "brain fry," fatigue from supervising AI beyond their capacity, which came with more errors, more decision fatigue and higher intent to quit. Habits from nine Every staff, engineers and non-engineers (November 2026):
+
+- **Cap active work.** One engineer's ceiling is a main project plus one subproject, with only persistent tasks running in the background; five live sessions was draining.
+- **Decide what runs unattended before the block starts.** Send work an AI can check to the background and keep judgment work in the foreground (the sort is described on [AI work delegation modes](ai-work-delegation-modes.md)). Another makes every creative decision up front and counts a mid-run request for input as a failure.
+- **Let reversibility decide what comes back to you.** The same approval line as for standing agents (see layered access control above), applied to reduce switching: agents act alone when the result can be undone, and publishing, purchases and design calls without an obvious answer return to the human.
+- **Re-enter with a decision brief, not a recap.** On returning to a project, spend 15–30 minutes asking what happened, where things stand, and which decisions need you, with options and a recommendation, before deciding anything.
+- **Triage threads in a fixed order:** urgent, then blocked (unblocking frees the thread to keep going), then interesting.
+- **Keep the structure plain.** A short skill per pipeline (write, check, stop for review) keeps parallel sessions from colliding; complex skills get followed worse.
+- **Step back to the goal.** When deep in a sub-goal of a sub-goal, have the orchestrator restate the top-level goal and sort work in flight into needed, nice to have, or drifted before handing out more.
+
+Some report the same mode as draining and productive at once; prior experience managing people made constant switching feel routine for one general manager.
+
 ## Failure modes
 
 - Delegating vague work where the desired output is specific but unstated.
@@ -64,9 +78,11 @@ All three directions assume the agent has a computer, can install software, and 
 - **Constraint drift.** AI output quality drifts as models, inputs, and context change; a setup that works well on day one can quietly degrade by month three with no obvious trigger unless someone deliberately re-checks output against the original spec on a schedule.
 - **Happy-path-only testing plus the illusion of explanatory depth.** A non-expert who tests only the intended-use path, then reads an agent's fluent, followable reasoning and mistakes "I can follow this" for "the right questions were asked," ships work whose adversarial cases were never checked. Case in point: a writer built and shipped an MCP connector for a small app with Claude's help, tested that it worked, and only learned it had a public, unauthenticated registration route when a second model reviewed the same code cold weeks later. Mitigation: learn the field's basics before delegating consequential work, get a human expert review, and don't let the same system's self-assessment be the only evidence a feature is safe.
 - **Role play instead of method, and self-grading.** Asking a model to "write like a short seller" changes the transcript, not the outcome; ask it to do what a short seller does to research a position. Likewise, a model asked to judge its own work is not evidence the work is right; insist on an outside check.
+- **Thread sprawl.** Starting new agent work while waiting on the last ("seven lines of work in 29 minutes") until no thread gets deep thought, and finished threads sit unnoticed.
 
 ## Recent changes
 
+- [2026-11-23] Added "Supervising many agent threads": BCG's "brain fry" survey finding and Every staff habits (two-project cap, reversibility as the autonomy line, re-entry decision brief, urgent-blocked-interesting triage, short skills, step back to the goal), plus a thread-sprawl failure mode.
 - [2026-10-25] Added Thorsten Ball's (Amp) delegation habits: strongest current model, prompt the what not the how, no manual context management (counterpoints to cost-aware routing and Anthropic's fresh-session advice), irrefutable proof with a "this is not evidence" rule, agent-built iteration tools, and async work with scheduled wake-ups.
 - [2026-10-19] Added "Raising the ambition of a delegation": Felix Rieseberg's altitude, depth, and range directions, a reusable "deeper, not bigger" prompt, and a failure mode for role play and self-grading.
 - [2026-09-04] Folded Yarchi's five-step setup for scheduled agents in a small business into existing bullets: a numbered standing-lane sequence on the specialist-roster pattern (one lane per channel, pinned job-description context, ordered schedules), a rulings file on recurring corrections, and a reversible/irreversible approval line on layered access control.
@@ -92,3 +108,4 @@ All three directions assume the agent has a computer, can install software, and 
 - [How to be more ambitious: a tutorial for humans with models — Felix Rieseberg](../sources/articles/rieseberg-how-to-be-more-ambitious.md)
 - ["How to turn AI into a whole team that runs your business" — Yarchi](../sources/tweets/yarchi-ai-team-runs-business-2026-09.md)
 - [Thorsten Ball (@thorstenball) — How I work with Agents](../sources/tweets/thorstenball-how-i-work-with-agents-2026-10-25.md)
+- [Every — Your AI Agents Can Multitask. Can You?](../sources/newsletters/every-agents-multitask-brain-fry-2026-11-23.md)

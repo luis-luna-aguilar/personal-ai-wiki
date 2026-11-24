@@ -4,7 +4,7 @@ type: state-of
 domains: [voice]
 tags: []
 as_of: 2026-11-08
-sources: [eleven-v3, hume-evi-3, elevenlabs-scribe, voice-becomes-agent-interface, legacy-ai-tools-roadmap-xlsx, gpt-realtime-2-2026-05-08, thinking-machines-interaction-2026-05-12, cartesia-voice-june-2026, gpt-live-launch-2026-07, eleven-realtime-2026-10-20, xai-grok-voice-3-2026-10-14, spacexsi-grok-voice-3-2026-10-14, microsoft-mai-transcribe-2-streaming-2026-10-01, fishaudio-drama-3-2026-10-13, ainews-heygen-voice-whistle-2026-10-10, ainews-eleven-v4-turbo-2026-10-06, ainews-fish-drama-3-2026-10-14, ainews-grok-voice-3-results-2026-10-15, ainews-gpt-live-1-1-2026-10-16, elevenlabs-eleven-v4, block-dessa-2026-10-28, hume-audio-decision-model-api-2026-11-08]
+sources: [eleven-v3, hume-evi-3, elevenlabs-scribe, voice-becomes-agent-interface, legacy-ai-tools-roadmap-xlsx, gpt-realtime-2-2026-05-08, thinking-machines-interaction-2026-05-12, cartesia-voice-june-2026, gpt-live-launch-2026-07, eleven-realtime-2026-10-20, xai-grok-voice-3-2026-10-14, spacexsi-grok-voice-3-2026-10-14, microsoft-mai-transcribe-2-streaming-2026-10-01, fishaudio-drama-3-2026-10-13, ainews-heygen-voice-whistle-2026-10-10, ainews-eleven-v4-turbo-2026-10-06, ainews-fish-drama-3-2026-10-14, ainews-grok-voice-3-results-2026-10-15, ainews-gpt-live-1-1-2026-10-16, elevenlabs-eleven-v4, block-dessa-2026-10-28, hume-audio-decision-model-api-2026-11-08, cartesia-managed-agents-2026-10-29, mistral-voxtral-3-2026-10-22, ainews-voxtral-3-pocket-tts-2026-10-21, ainews-grok-voice-transcribe-2-2026-09-19]
 ---
 
 # State of Voice AI
@@ -19,7 +19,8 @@ Healthcare voice tools (Dragon Copilot, Zo, Kora) are tracked in [State of Healt
 
 Streaming AI systems that process live speech, audio, and sometimes screen/video context with sub-second response, native interruption handling, and multi-turn conversation management. This merges the "real-time voice" and "real-time interaction" categories rather than treating them as separate tracks.
 
-- [Grok Voice](../tools/grok-voice.md) — SpaceXAI; Grok Voice 3.0 is #1 on Artificial Analysis's Speech-to-Speech Index (86.9 vs GPT-Live-1 83.2, Gemini 3.8 Live 82.6); 71.6% τ-Voice at ~40% lower latency than GPT-Live-1; $0.08/min *(as of 2026-10-14)*
+- [Cartesia Managed Agents](../tools/cartesia.md) — Cartesia; enterprise voice-agent platform whose harness and voice models are tuned together; #1 of 30 on AA's Speech Agent Arena (Elo 1115) and #1 on ServiceNow's EVA-Bench (87.4% accuracy, 90.7% experience); 44 languages *(as of 2026-10-29)*
+- [Grok Voice](../tools/grok-voice.md) — SpaceXAI; Grok Voice 3.0 is #1 on Artificial Analysis's Speech-to-Speech Index (86.9 vs GPT-Live-1 83.2, Gemini 3.8 Live 82.6) and the top speech-to-speech model on EVA-Bench (73.7%), behind Cartesia's platform; $0.08/min *(as of 2026-10-29)*
 - [GPT-Live](../tools/gpt-live.md) — OpenAI; full-duplex ChatGPT Voice family that delegates deeper work to frontier models; GPT-Live-1 is now second on the AA index; GPT-Live-1.1 adds multilingual voices and less filler, API later *(as of 2026-10-16)*
 - [GPT-Realtime-2](../tools/gpt-realtime-2.md) — OpenAI; "GPT-5-class reasoning" in voice; 128K context (4× prior), 5 reasoning levels (minimal→xhigh), tool use, interruption recovery, graceful failure handling; API: $1.15/hr input, $4.61/hr output *(as of 2026-05-08)*
 - **GPT-Realtime-Translate** — OpenAI; live speech-to-speech translation; 70+ input languages → 13 output languages; available in Realtime API *(as of 2026-05-08)*
@@ -37,6 +38,8 @@ AI products centered on expressive text-to-speech, speech-to-speech conversation
 - [Eleven v4](../tools/eleven-v4.md) — ElevenLabs; successor to Eleven v3: expressive, directed TTS in 90+ languages with inline audio tags and Professional Voice Clones; Eleven v4 Turbo (~150 ms median time to first speech) serves real-time agents and tops AA's Provider Voice TTS arena at half v4's price *(as of 2026-10-26)*
 - [MAI-Voice-2.1 / MAI-Voice-2.1-Flash](../models/mai-transcribe-voice.md) — Microsoft AI; 23 languages, one cloned voice keeps a native accent across all of them; Flash: 150ms end-to-end, $15 per 1M characters *(as of 2026-10-01)*
 - **Fish Audio Drama 3** — open-weight controllable TTS (35B MoE, 3B active, 83 languages, community license); word-level delivery and mid-sentence tone control; leads AA pronunciation robustness (93.2%) and is #1 open-weight, but 10th/14th overall on quality *(as of 2026-10-14)*
+- **Voxtral Mini TTS 3** — Mistral; context-aware emotion and pacing in 35+ languages, Pro Voice cloning from 30 minutes of audio; top 12 in both AA voice arenas at $13 per 1M characters (112 characters/s); EU-hosted API or self-deployed *(as of 2026-10-22)*
+- **Kyutai Pocket TTS** — Kyutai; CPU-sized TTS variants down to 1.9M parameters, claimed 103× realtime on one CPU core, with voice cloning *(as of 2026-10-21)*
 - [Hume EVI 3](../tools/hume-evi-3.md) — Hume; speech-to-speech voice model with strong emotional and empathic conversation framing; fits the "voice as agent interface" direction *(as of 2026-04-22)*
 - [Cartesia](../tools/cartesia.md) — Cartesia; Sonic-3.5 (streaming TTS) + Ink-2 (streaming STT); claimed #1 for both on Together AI's benchmark in June; sub-90ms latency; 42 languages; strong structured-utterance handling *(as of 2026-06-16)*
 
@@ -45,6 +48,8 @@ AI products centered on expressive text-to-speech, speech-to-speech conversation
 Products focused primarily on transcription, speech recognition, and converting audio into structured text.
 
 - [MAI-Transcribe-2-Streaming](../models/mai-transcribe-voice.md) — Microsoft AI; #1 on Artificial Analysis for accuracy on both partial and final transcripts; first partials in just over 100ms so agents can act mid-sentence; 60 languages with continuous detection; $0.54/hr introductory *(as of 2026-10-01)*
+- **Voxtral 3** — Mistral; Small Transcribe 3 is #3 on AA's word-error index (2.1%), with diarization and keyphrase biasing in 50+ languages; Realtime Transcribe 3 under 500 ms (3.3% AA-WER at 960 ms); $0.0035–0.008/min; ships with a LiveKit-based voice-agent SDK *(as of 2026-10-22)*
+- [Grok Voice Transcribe 2.0](../tools/grok-voice.md) — SpaceXAI; 2.7% WER on AA streaming final transcripts, delivered 0.49 s after end of speech (predecessor 3.9%); $0.20/hr streaming, $0.10/hr batch *(as of 2026-09-19)*
 - [ElevenLabs Scribe](../tools/elevenlabs-scribe.md) — ElevenLabs; enterprise transcription stack for real-time and operational documentation workflows *(as of 2026-04-22)*
 - **Whistle** — 16.9MB on-device speech-to-text model said to rival Whisper base *(as of 2026-10-10)*
 
@@ -57,6 +62,7 @@ Models that listen to audio and return a judgment about it (how speech sounds, w
 ## Recent changes
 
 - [2026-11-08] New Audio understanding / decision models section for models that judge recordings rather than generate or transcribe speech; first entry is the Hume Audio Decision Model.
+- [2026-10-29] Cartesia Managed Agents takes the voice-agent lead (#1 Speech Agent Arena, #1 EVA-Bench at 87.4% vs Grok Voice 3.0's 73.7%); Grok Voice 3.0 keeps the speech-to-speech index. Speech-to-text and TTS lines added for Mistral's Voxtral 3 (2026-10-22), Grok Voice Transcribe 2.0 (2026-09-19) and Kyutai Pocket TTS (2026-10-21).
 - [2026-10-28] Added Dessa (Block) to real-time voice / interaction: first full-duplex conversation model trained only on human speech; research access only.
 - [2026-10-26] Eleven v4 and v4 Turbo replace Eleven v3 under Voice models; the v3 page moved to history.
 - [2026-10-20] ElevenLabs launches Eleven Realtime v1 Mini and v1 Max, speech-to-speech models with an OpenAI-compatible Realtime API.
@@ -80,3 +86,7 @@ Models that listen to audio and return a judgment about it (how speech sounds, w
 - [Eleven v4 and Eleven v4 Turbo (ElevenLabs product page)](../sources/articles/elevenlabs-eleven-v4.md)
 - [Dessa — the Conversation Model trained only on speech (Block)](../sources/articles/block-dessa-2026-10-28.md)
 - [Hume AI — Audio Decisions API launch page](../sources/articles/hume-audio-decision-model-api-2026-11-08.md)
+- [Cartesia — Introducing Managed Agents](../sources/articles/cartesia-managed-agents-2026-10-29.md)
+- [Mistral — Voxtral 3](../sources/articles/mistral-voxtral-3-2026-10-22.md)
+- [AINews — Voxtral 3 rankings and Kyutai Pocket TTS (Oct 21)](../sources/newsletters/ainews-voxtral-3-pocket-tts-2026-10-21.md)
+- [AINews — Grok Voice Transcribe 2.0 (Sep 19)](../sources/newsletters/ainews-grok-voice-transcribe-2-2026-09-19.md)

@@ -4,7 +4,7 @@ type: training
 domains: [agents]
 tags: [agentic]
 as_of: 2026-11-12
-sources: [agents-evals-deep-research, mckinsey-agentic-org, ramp-ai-adoption-playbook, ai-for-boring-businesses, token-tightening-ai-finops-2026-06, every-ai-sandwich-april-2026, every-cheap-competence-after-automation-2026-05, every-33-questions-executives-2026-08-28, every-ai-adoption-levels, karpathy-capability-funnel-2026-10-11, satyanadella-models-as-insider-risks-2026-10-10, latent-space-crossing-the-threshold-2026-10-14, anthropic-human-agent-teams-2026-10, claude-for-manufacturing-2026-11-12]
+sources: [agents-evals-deep-research, mckinsey-agentic-org, ramp-ai-adoption-playbook, ai-for-boring-businesses, token-tightening-ai-finops-2026-06, every-ai-sandwich-april-2026, every-cheap-competence-after-automation-2026-05, every-33-questions-executives-2026-08-28, every-ai-adoption-levels, karpathy-capability-funnel-2026-10-11, satyanadella-models-as-insider-risks-2026-10-10, latent-space-crossing-the-threshold-2026-10-14, anthropic-human-agent-teams-2026-10, claude-for-manufacturing-2026-11-12, latent-space-aiuc-rune-kvist-2026-09-16, every-next-two-adoption-levels-2026-11-12]
 ---
 
 # Agent autonomy and governance
@@ -31,7 +31,7 @@ A practical governance model for expanding what an agent is allowed to do: each 
 
 ## AI adoption and fluency levels
 
-Every (Mike Taylor / Laura Entis, June 2026) published an 8-level framework for AI adoption maturity, which its consulting practice also uses as an AI-fluency ladder. Central insight: **higher level is not automatically better.** The right level depends on how much you trust the AI and how costly a mistake is.
+Every (Mike Taylor / Laura Entis, June 2026) published an 8-level framework for AI adoption maturity, which its consulting practice also uses as an AI-fluency ladder; Taylor added Levels 9 and 10 in November 2026. Central insight: **higher level is not automatically better.** The right level depends on how much you trust the AI and how costly a mistake is.
 
 | Level | Name | What the AI does |
 |---|---|---|
@@ -43,11 +43,15 @@ Every (Mike Taylor / Laura Entis, June 2026) published an 8-level framework for 
 | 6 | Goal-directed agent | Given an objective and constraints; plans and executes independently. |
 | 7 | Multi-tool orchestrator | Combines tools, agents, and APIs across a pipeline to complete complex work. |
 | 8 | Sub-agent orchestrator | Runs a team of specialized sub-agents under a master orchestrator. |
+| 9 | Simulation | Several orchestrated agent teams pursue the same goal with different strategies and compete under a scoring rule you set. |
+| 10 | Multiverse | The same competition is rerun many times to separate strategies that win reliably from ones that won by luck. |
 
 **Practical rules from the framework:**
 - Match level to task risk and trust. High-stakes tasks with hard-to-verify outputs belong at lower levels with more human review.
 - The signal to move up: consistent performance at the current level with no meaningful error rate — not just enthusiasm or capability.
 - Levels 5-8 require investing in evals, verification, and guardrails before promotion.
+
+**Levels 9 and 10 (Every, November 2026).** Levels 1–8 hand off more work and autonomy; 9 and 10 change how agents explore strategies once orchestration is routine. At Level 9 your job becomes defining the goal, the scoring and the rules of competition, for problems where trying several approaches is cheaper than guessing wrong (growth, pricing, content strategy, engineering problems with more than one solution); diverse teams can be seeded with persona prompts built from colleagues' past messages. At Level 10 you rerun that competition with the same starting conditions and trust only what wins across runs: Taylor's simulator of ~2,000 cloned Hacker News commenters predicted front-page headlines 60% of the time, and its misses came from chance (one extra early upvote sent identical posts down different paths), not from bad personas. Limits he states: both levels are experimental and burn far more tokens; each competing team needs reliable orchestration and its own share of human attention; a bad simulation averaged 50 times gives "a very confident wrong answer," so for now this works on narrow systems such as a single feed or focus group. Check a winning plan with real people before acting on it.
 
 **Where people sit (Every consulting, August 2026):** most people are at levels 1–2 (chatbot use, co-working with AI in Docs or Excel). The level knowledge workers are actively moving to is "agentic" work (Codex, Claude Cowork, Claude Code, adopting skills and running several tasks at once). Everything above that is still largely experimental, up to level 8, where a manager AI orchestrates other AIs. Use the ladder to calibrate expectations rather than pushing every team toward the top.
 
@@ -102,6 +106,12 @@ Satya Nadella (October 2026) argues agent governance should reuse the enterprise
 
 This complements the autonomy ladder above: the ladder decides how much authority an agent has earned; these controls make sure that authority is enforced and observable from outside the model. Nadella's summary: the most trustworthy system is the one that lets you trust the model least.
 
+### Certify and insure agents externally
+
+Enterprise buyers increasingly ask who pays when an agent fails; the Air Canada ruling, which held the airline to a refund policy its chatbot invented, made that a legal question, not a hypothetical. [AIUC](../tools/aiuc.md) (cofounder Rune Kvist; $40M Series A, September 2026) sells the answer as one package of standard, testing and insurance. Its AIUC-1 standard for agent security, safety and reliability has six categories and about 51 requirements and 130 controls of three kinds: technical controls (for example, configure a groundedness filter), test controls (an independent party measures whether the control works), and policy controls (a named person accountable for failures, a plan for telling customers). Auditors such as KPMG and Schellman check that the evidence exists; AIUC runs the effectiveness tests itself, thousands of simulated jailbreak, hallucination and data-leak attempts every quarter. Certification takes 3–10 weeks and lasts a year. A consortium of Fortune 1000 risk leaders meets twice a quarter, so the standard is revised quarterly (recent additions: MCP and agent-to-agent risks). Certification pairs with liability cover: ElevenLabs bought an agent insurance policy underwritten with Lloyd's of London, which carries most of the financial risk. Lovable, ElevenLabs and Intercom are certified.
+
+The practical lesson for builders: most teams already have guardrails, but few have stress-tested them against an adversary. This is the outside-assurance counterpart to the insider-risk controls above.
+
 ## Open questions
 
 - When does "above the loop" become viable for a given workflow? What's the minimum agent reliability threshold before removing humans from execution entirely?
@@ -109,12 +119,14 @@ This complements the autonomy ladder above: the ladder decides how much authorit
 ## Recent changes
 
 - [2026-11-12] Added "Keep looking up separate from changing" from Anthropic's Claude for Manufacturing launch: skills end in the responsible person's review, Infor changes go through Infor's own plugin after approval and within the user's Infor permissions, and figures link back to source data.
+- [2026-11-12] Extended Every's adoption ladder with Level 9 (Simulation: competing agent teams under a scoring rule) and Level 10 (Multiverse: rerun to filter out luck), with Mike Taylor's limits.
 - [2026-10-19] Added Every's 8-level adoption maturity model from [Company-wide AI enablement](company-wide-ai-enablement.md), merged with the AI-fluency ladder that described the same framework.
 - [2026-10-19] Page created, split out of [Company-wide AI enablement](company-wide-ai-enablement.md): its "Autonomy ladder" and "Humans in the loop vs. above the loop" sections and the "Governance, autonomy, and reliability" proven-patterns group.
 - [2026-10-14] Added "Place controls where they enable autonomy" from AIE NYC finance keynotes: approval fatigue, classifier-versus-rule routing (Two Sigma), propose-not-act and a three-part trust layer (Anthropic), deterministic controls outside the model (Bloomberg), HITL as product design (OpenAI).
 - [2026-10-11] Added Karpathy's capability funnel (≈75% barely touched LLMs, ≈20% casual free-tier, ≈0.2% professional frontier-agent users) and its three drivers as the population-scale counterpart to Every's "where people sit".
 - [2026-10-10] Added "Widen autonomy per task type, with verification built in" from Anthropic's lessons on human-agent teams (verifier agents, weekly lessons-and-missteps reports, human-attention budgets).
 - [2026-10-10] Added "Treat the model as an insider risk": Satya Nadella's external-control principles (model diversity, observe everything, verifiability, independent controls and audit, containment, incident disclosure).
+- [2026-09-16] Added "Certify and insure agents externally": AIUC's AIUC-1 standard (technical, test and policy controls; quarterly adversarial testing by AIUC and quarterly revisions with Fortune 1000 risk leaders) paired with Lloyd's-backed agent liability insurance.
 
 ## Related
 
@@ -140,3 +152,5 @@ This complements the autonomy ladder above: the ladder decides how much authorit
 - [Latent Space — Crossing the Threshold: autonomy and safety in financial agents](../sources/newsletters/latent-space-crossing-the-threshold-2026-10-14.md)
 - [Lessons from Anthropic on building effective human-agent teams](../sources/articles/anthropic-human-agent-teams-2026-10.md)
 - [Claude for Manufacturing: AI plugin for plant teams](../sources/articles/claude-for-manufacturing-2026-11-12.md)
+- [Latent Space — Underwriting Superintelligence: Rune Kvist on AIUC-1 and agent insurance](../sources/newsletters/latent-space-aiuc-rune-kvist-2026-09-16.md)
+- [Every — The Next Two Levels of AI Adoption](../sources/newsletters/every-next-two-adoption-levels-2026-11-12.md)

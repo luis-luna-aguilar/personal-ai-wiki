@@ -96,6 +96,7 @@ How AI changes engineering hiring (AI-assisted build interviews, judgment over s
 
 - [Engineering AI adoption: evidence from practice](engineering-ai-adoption-evidence.md) — Shopify, Ramp, Anthropic, GitHub, Uber-scale data, Bun rewrite, and practitioner case studies behind this page
 - [Software factory](../workflows/software-factory.md) — the general software-factory pattern Uber's name refers to: light/dark split, control layer first, PRs-closed-by-default OSS factories
+- [Software factory — Stage hand-offs](../workflows/software-factory.md#stage-hand-offs) — Anthropic's six-stage operating model: each stage commits an artifact that triggers the next, hooks as approval gates, control bands that reopen the loop
 - [Forward-deployed engineering](forward-deployed-engineering.md) — the FDE model: provider engineers embedded inside customer organizations, including OpenAI's FDE org
 - [Evals for agentic software development](evals-for-agentic-software-development.md) — eval stack for coding agents: sandboxed execution, QA artifact capture, browser self-verification, MVES, and trace mining
 - [AI PR and code review](../workflows/ai-pr-code-review.md) — dedicated workflow for AI-assisted pull request analysis, review execution, historical PR replay, and comprehension-preserving review artifacts

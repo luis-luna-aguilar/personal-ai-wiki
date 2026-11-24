@@ -3,8 +3,8 @@ title: State of Healthcare
 type: state-of
 domains: [healthcare]
 tags: []
-as_of: 2026-10-19
-sources: [legacy-ai-tools-roadmap-xlsx, dragon-copilot-launch, hippocratic-ai-homepage, tempus-homepage, zocdoc-zo, open-evidence-homepage, konko-kora-homepage, elevenlabs-scribe, 2026-06-16-metalearn-mystery-fatigue-ai, midjourney-medical-scanner-2026-06, ai-healthcare-triage-doctronic-2026-05, mistral-document-ai, bfl-flux-3-2026-07-24, ainews-spacexai-grok-46-and-grok-bot-2026-08-13, lion-ai-meddecider-27b, maziyarpanahi-openmed]
+as_of: 2026-11-24
+sources: [legacy-ai-tools-roadmap-xlsx, dragon-copilot-launch, hippocratic-ai-homepage, tempus-homepage, zocdoc-zo, open-evidence-homepage, konko-kora-homepage, elevenlabs-scribe, 2026-06-16-metalearn-mystery-fatigue-ai, midjourney-medical-scanner-2026-06, ai-healthcare-triage-doctronic-2026-05, mistral-document-ai, bfl-flux-3-2026-07-24, ainews-spacexai-grok-46-and-grok-bot-2026-08-13, lion-ai-meddecider-27b, maziyarpanahi-openmed, artificial-analysis-healthbench-2026-11, ainews-healthbench-leaderboards-2026-10-21]
 ---
 
 # State of Healthcare
@@ -36,6 +36,10 @@ Current state of AI in healthcare — clinical documentation, medical knowledge 
 
 - [MedDecider-27B](../models/meddecider-27b.md) — open-weight medical decision model returning calibrated probabilities for note checks, trial eligibility, and exam questions; passes every Polish medical licensing exam session 2008–2026; research use, CC BY-NC *(as of 2026-10-19)*
 
+### Medical-knowledge benchmarks
+
+- [HealthBench](../benchmarks/healthbench.md) — OpenAI's physician-graded medical-conversation benchmark, run by Artificial Analysis; length-adjusted leaders: Claude Sonnet 5.5 (general, 62.1%) and [Claude Fable 5.2](../models/claude-fable-5-2.md) (clinician, 68.1%); DeepSeek V4.1 Flash close on general at a sixteenth of the cost *(as of 2026-11-24)*
+
 ### Document intelligence
 
 AI products specialized for extracting, structuring, querying, or reasoning over documents, PDFs, forms, and tables — as distinct from general clinical or patient-facing tools.
@@ -54,6 +58,7 @@ AI products specialized for extracting, structuring, querying, or reasoning over
 
 ## Recent changes
 
+- [2026-11-24] Added HealthBench, the first medical-knowledge benchmark on the dashboard: Sonnet 5.5 leads the general set and Fable 5.2 the clinician set on Artificial Analysis' length-adjusted scores, and the length adjustment alone moves Opus 5.5 from first to mid-table.
 - [2026-10-19] Added MedDecider-27B, the first medical-specialized model on the dashboard: calibrated per-option probabilities for clinical decisions, strongest on robustness and planted-instruction resistance.
 - [2026-10-19] Added OpenMed, the first open-source, on-device entry: clinical NER and de-identification across Python, Apple, Android, browser, and REST runtimes.
 - [2026-08-13] Added Google's ResidencyRL — RL training over simulated telehealth encounters lifted diagnostic accuracy under adversarial conditions from 81% to 88% (secondary source; no primary writeup).
@@ -76,3 +81,5 @@ AI products specialized for extracting, structuring, querying, or reasoning over
 - [AINews — SpaceXAI Grok 4.6 and Grok Bot (Google ResidencyRL)](../sources/newsletters/ainews-spacexai-grok-46-and-grok-bot-2026-08-13.md)
 - [MedDecider-27B model card](../sources/repos/lion-ai-meddecider-27b.md)
 - [OpenMed GitHub repository](../sources/repos/maziyarpanahi-openmed.md)
+- [Artificial Analysis — HealthBench leaderboards](../sources/articles/artificial-analysis-healthbench-2026-11.md)
+- [AINews — HealthBench leaderboards launch (Oct 21)](../sources/newsletters/ainews-healthbench-leaderboards-2026-10-21.md)

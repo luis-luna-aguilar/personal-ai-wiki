@@ -5,7 +5,7 @@ domains: [agents]
 subcategory: agent-orchestration
 tags: [anthropic, closed-source]
 as_of: 2026-11-17
-sources: [claude-code-fast-mode-default-2026-05, claude-managed-agents-updates-2026-05, ainews-poolside-nvidia-2026-08-21, claude-sonnet-5-5-launch, claude-haiku-5-5-launch-2026-10-19, claude-platform-linked-billing-2026-11-17]
+sources: [claude-code-fast-mode-default-2026-05, claude-managed-agents-updates-2026-05, ainews-poolside-nvidia-2026-08-21, claude-sonnet-5-5-launch, claude-haiku-5-5-launch-2026-10-19, claude-platform-linked-billing-2026-11-17, anthropic-api-version-2026-10-21]
 ---
 
 # Claude Platform
@@ -19,6 +19,7 @@ Anthropic's developer platform: the Claude API, the Console where organizations 
 - **API tools GA (August 2026):** computer use, browser tool, Skills API and Files API, plus an AG-UI adapter for Managed Agents.
 - **Admin controls.** MCP tunnels for Managed Agents and the Messages API are managed from Console workspace settings.
 - **Defaults and credits.** Sonnet 5.5 defaults to High effort on the Platform (Medium in Claude Code and the apps). Max and Team subscriptions get monthly Platform API credits: $100 (Max 5x), $200 (Max 20x), up to $500 pooled (Team).
+- **API version 2026-10-21.** The first new API version since 2023-06-01. The Messages API rejects `temperature`, `top_p` and `top_k` with a 400 error, even at default values. It also rejects `document` blocks placed directly in assistant messages and citations in user messages, and the Admin and Analytics APIs drop old field names. The latest major SDKs and CLI send this version by default and send the key as `Authorization: Bearer` instead of `X-Api-Key`. Claude 4.7+ models sample as before. Requests that need a non-default temperature on older models stay on 2023-06-01, which remains supported. On Bedrock the new version works only for Claude 4.7+.
 
 ## Weaknesses / caveats
 
@@ -27,6 +28,7 @@ Anthropic's developer platform: the Claude API, the Console where organizations 
 ## Recent changes
 
 - [2026-11-17] Linked billing launched in beta: organization links with per-platform spend limits replace shared API keys.
+- [2026-10-21] API version 2026-10-21 removes `temperature`, `top_p` and `top_k` from the Messages API; new major SDKs default to it; 2023-06-01 stays supported.
 - [2026-10-07] Monthly Platform API credits added for Max and Team subscriptions.
 - [2026-08-21] Computer use, browser tool, Skills API and Files API reach GA.
 - [2026-05-20] MCP tunnels managed from Console workspace settings.
@@ -39,6 +41,7 @@ Anthropic's developer platform: the Claude API, the Console where organizations 
 
 ## Sources
 
+- [Migrating to API version 2026-10-21](../sources/articles/anthropic-api-version-2026-10-21.md)
 - [Linked billing on the Claude Platform](../sources/articles/claude-platform-linked-billing-2026-11-17.md)
 - [AINews — Poolside reverse execuhire (Claude Platform GA)](../sources/newsletters/ainews-poolside-nvidia-2026-08-21.md)
 - [Claude Haiku 5.5 launch](../sources/articles/claude-haiku-5-5-launch-2026-10-19.md)

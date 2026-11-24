@@ -14,7 +14,7 @@ domains: [cybersecurity]
 GitHub's official account (@github) confirmed a compromised employee device involving a poisoned VS Code extension led to unauthorized access to GitHub-internal repositories. The five-post thread began 2026-05-19 (post 1: detection and containment "yesterday", malicious extension version removed, endpoint isolated); posts 2–5 followed on 2026-05-20 with the scope assessment, the ~3,800-repo statement, secret rotation, and the promise of a fuller report. GitHub's own assessment: the attacker's claimed figure of ~3,800 exfiltrated repos is "directionally consistent" with GitHub's investigation so far. Critical secrets were rotated overnight; a fuller report was promised once the investigation completed.
 
 ## Influenced pages
-- [State of Cybersecurity](../../state-of/cybersecurity.md) — added as a new entry under AI developer supply chain attacks
+- [AI developer supply chain attacks](../../trends/ai-developer-supply-chain-attacks.md) — GitHub breach entry (moved from State of Cybersecurity in the 2026-11-24 split)
 
 ## Key claims extracted
 - Compromise detected and contained 2026-05-18 ("yesterday" relative to the 2026-05-19 post); employee device compromised via a poisoned VS Code extension; malicious extension version removed and endpoint isolated

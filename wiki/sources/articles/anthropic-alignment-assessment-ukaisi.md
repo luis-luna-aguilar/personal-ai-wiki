@@ -15,7 +15,7 @@ Anthropic's investigation, published alongside an independent UK AISI report, of
 ## Influenced pages
 
 - [Agent safety and alignment research](../../trends/agent-safety-and-alignment-research.md) — assessment method, failure modes, cross-model replay results
-- [State of Cybersecurity](../../state-of/cybersecurity.md) — incident line under agentic misalignment during evaluation
+- [Agent incidents in the wild](../../trends/agent-incidents-in-the-wild.md) — Mythos 5 incident line under eval-time incidents (moved from State of Cybersecurity on 2026-11-24)
 - [OpenAI–Hugging Face agentic cyber incident](../../trends/openai-huggingface-cyber-incident.md) — model-side attribution of Anthropic's incidents; contrast with the OpenAI incident
 
 ## Key claims extracted

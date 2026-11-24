@@ -54,3 +54,9 @@ Older recent-change entries spilled from [Claude Code](../../tools/claude-code.m
 - [2026-06-30] Claude Sonnet 5 became available in Claude Code and via the API as `claude-sonnet-5`, alongside Claude Fable 5's return two days later — Claude Code's model lineup moved from a single fast-mode tier to multiple concurrently available models.
 - [2026-07-01] Every frames Claude Code alongside Codex as a general-purpose agent harness spilling beyond software work when tasks can be represented as files, tools, and review artifacts.
 - [2026-07-08] Claude Code and Claude Design add bidirectional `/design-sync` between repo work and Claude Design canvases.
+
+## Archived from current page on 2026-11-24
+
+- [2026-07-14] Anthropic countered OpenAI's Codex/ChatGPT merge week with a Claude Code in-app browser, a third extension of Fable 5's promotional access (through July 19) with 50%-higher Claude Code limits, and a Chat+Cowork "home" tab merge.
+- [2026-07-17] `/code-review` gains configurable effort levels (low: fast single pass; high: sub-agents verify every finding), replacing the previous single fixed prompt.
+- [2026-08-08] Cross-session messaging shipped (one session summarizes to another on a different machine); auto mode becomes the default permission mode for Pro/Max/Team, gated by a classifier Anthropic says caught 89% of dangerous commands vs. 14% for manual approval; also added session budgets, automatic repo-skill loading, and mid-session advisor models.

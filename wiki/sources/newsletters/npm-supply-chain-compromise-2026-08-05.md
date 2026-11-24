@@ -15,7 +15,7 @@ AINews recap covering an Inference Engineering Masterclass podcast segment on wh
 
 ## Influenced pages
 
-- [state-of/cybersecurity](../../state-of/cybersecurity.md) — new npm preinstall-stealer campaign entry under AI developer supply chain attacks
+- [AI developer supply chain attacks](../../trends/ai-developer-supply-chain-attacks.md) — npm preinstall-stealer campaign entry (moved from State of Cybersecurity in the 2026-11-24 split)
 
 ## Key claims extracted
 

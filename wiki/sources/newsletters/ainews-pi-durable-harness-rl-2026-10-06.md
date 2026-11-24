@@ -16,7 +16,7 @@ Two items from the "Agent Harnesses, RL Environments and Developer Tooling" sect
 
 - [Pi](../../tools/pi.md) — Pi Durable design details
 - [Agent execution runtimes](../../concepts/agent-execution-runtimes.md) — durable-harness section (moved from Agent runtime platforms)
-- [Harness vs model](../../concepts/harness-vs-model.md) — same-weights harness swap and multi-harness training result
+- [Harness-model co-evolution](../../concepts/harness-model-co-evolution.md) — same-weights harness swap and multi-harness training result
 
 ## Key claims extracted
 

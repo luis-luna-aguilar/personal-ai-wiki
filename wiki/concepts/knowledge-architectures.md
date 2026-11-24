@@ -3,8 +3,8 @@ title: Knowledge architectures
 type: concept
 domains: [agents]
 tags: [knowledge-cluster]
-as_of: 2026-10-28
-sources: [knowledge-layer-architecture, llm-wikis-paperwiki-2026-07-06, agent-memory-systems-layer-2026-06, femke-plantinga-company-brains-2026-08-27, ontologies-agentic-systems-2026-07-30, dhravyashah-supermemory-company-brain-2026-07-28, posthog-semantic-layer-2026-08-21, deeplethe-utopia-2026-09-09, helixdb-helix-foundry-2026-10-19, cognition-agent-memory-repo-2026-10, latent-space-airbnb-inside-out-ai-2026-10-02, fabio-rovai-open-ontologies-2026-10-28, thorstenball-how-i-work-with-agents-2026-10-25]
+as_of: 2026-11-24
+sources: [knowledge-layer-architecture, llm-wikis-paperwiki-2026-07-06, agent-memory-systems-layer-2026-06, femke-plantinga-company-brains-2026-08-27, ontologies-agentic-systems-2026-07-30, dhravyashah-supermemory-company-brain-2026-07-28, posthog-semantic-layer-2026-08-21, deeplethe-utopia-2026-09-09, helixdb-helix-foundry-2026-10-19, cognition-agent-memory-repo-2026-10, latent-space-airbnb-inside-out-ai-2026-10-02, fabio-rovai-open-ontologies-2026-10-28, thorstenball-how-i-work-with-agents-2026-10-25, asymptote-labs-agent-beacon]
 ---
 
 # Knowledge architectures
@@ -24,7 +24,7 @@ Every system in this cluster can be placed by asking three questions:
 | Canonical page | Scope | What it holds | Who writes it | Examples tracked |
 |---|---|---|---|---|
 | [Knowledge layer](knowledge-layer.md) | one person or one team | compiled documents: summaries, entity and concept pages, an index, a log | an agent compiles; a human curates the schema and reviews | LLM Wiki, PaperWiki, [OpenWiki](../tools/openwiki.md) |
-| [Agent memory](agent-memory.md) | one agent, or one user's agents | episodic facts, preferences, and outcomes extracted from past sessions, managed as a lifecycle (extract, dedupe, reconcile, scope, expire) | the agent, under governed write rules | Supermemory, Engram, mem0, Letta, Cognition's Agent Memory Repo (no tool pages yet) |
+| [Agent memory](agent-memory.md) | one agent, or one user's agents | episodic facts, preferences, and outcomes extracted from past sessions, managed as a lifecycle (extract, dedupe, reconcile, scope, expire) | the agent, under governed write rules | [Beacon](../tools/beacon.md), Supermemory, Engram, mem0, Letta, Cognition's Agent Memory Repo |
 | [Company brain](company-brain.md) | the organization | a *system*, not one store: a knowledge layer plus agent memory plus tool access plus a refresh loop that pulls signals, prunes, and answers | hybrid; agents draft, humans gate rule changes | GBrain, Slite Agent, Gorgias Cortex, Lovable capabilities, Cloudflare OS, Supermemory Company Brain, Airbnb Everest, Amp's shared threads |
 | [Semantic layer](semantic-layer.md) | the organization's data | definitions only: what each metric means, which tables to trust, how sources join, on top of an existing warehouse with no data copied | agents propose, humans approve; edits reset approval | PostHog semantic layer |
 | [Semantic layer](semantic-layer.md), local data-workspace variant | one person, over the organization's data | copied snapshots of the organization's records, matched across sources into one graph of objects and relationships, queried with SQL | an agent proposes the matching model and changes; the user confirms | [Helix Foundry](../tools/helix-foundry.md) |
@@ -50,6 +50,7 @@ The table that maps every term seen in sources (second brain, LLM wiki, context 
 
 ## Recent changes
 
+- [2026-11-24] Beacon added as the Agent memory row's first tool page (cross-harness, human-approved memory from coding-agent traces).
 - [2026-11-23] Split the term map out to [Knowledge term map](knowledge-term-map.md); this page keeps the three axes, the canonical-pages matrix, and a pointer. Recent-changes entries about term-map rows moved with it.
 - [2026-10-28] Open Ontologies added as an ontology-row example (change control for the ontology itself).
 - [2026-10-25] Added Amp's shared threads to the Company brain row's examples; the "company memory" mapping is on the [term map](knowledge-term-map.md).
@@ -59,7 +60,6 @@ The table that maps every term seen in sources (second brain, LLM wiki, context 
 - [2026-09-09] Utopia added as an ontology-row example.
 - [2026-09-09] Page created as the vocabulary hub for the knowledge, memory, company-brain, and ontology cluster, after the four existing pages had drifted into contradictory "this vs that" descriptions of each other.
 - [2026-08-21] Added the semantic-layer row (governed metric and data-source definitions over an existing warehouse) from PostHog's account.
-- [2026-07-28] Added Supermemory Company Brain to the Company brain row's tracked examples, mirroring the new production example on that page.
 
 ## Sources
 
@@ -76,3 +76,4 @@ The table that maps every term seen in sources (second brain, LLM wiki, context 
 - [Latent Space — Inside-Out AI: Rebuilding Airbnb](../sources/newsletters/latent-space-airbnb-inside-out-ai-2026-10-02.md)
 - [fabio-rovai/open-ontologies (GitHub)](../sources/repos/fabio-rovai-open-ontologies-2026-10-28.md)
 - [Thorsten Ball (@thorstenball) — How I work with Agents](../sources/tweets/thorstenball-how-i-work-with-agents-2026-10-25.md)
+- [Asymptote-Labs/agent-beacon (GitHub)](../sources/repos/asymptote-labs-agent-beacon.md)

@@ -15,7 +15,7 @@ AINews' AI Twitter recap deep-dive on Anthropic's Fable 5.1/Mythos 5.1 launch: b
 
 ## Influenced pages
 
-- [Claude Fable 5.1 / Mythos 5.1](../../models/claude-fable-5-1.md) — primary launch coverage
+- [Claude Fable 5.1 / Mythos 5.1](../../history/models/claude-fable-5-1.md) — primary launch coverage
 - [State of Models](../../state-of/models.md) — leader-line update
 - [Qwen 3.8](../../models/qwen-3-8.md) — Qwen3.8-Max-0902 #1 WebDev result
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Qwen3.8-Max-0902 data point

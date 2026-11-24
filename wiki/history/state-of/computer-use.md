@@ -19,3 +19,9 @@
 ## Archived from current page on 2026-10-21
 
 - [2026-05-05] Amazon Quick (caveated): desktop work-context assistant building personal knowledge graph from files/calendar/Slack, integrating with Kiro CLI and Claude Code; secondary coverage only — pending primary Amazon verification
+
+## Archived from current page on 2026-11-24
+
+- [2026-05-05] Gemini now generates downloadable files from chat: Google Docs/Sheets/Slides, Microsoft Office formats, PDF, CSV, LaTeX, TXT, RTF, Markdown — artifact-producing assistant behavior
+- [2026-05-05] Added knowledge-work OS framing: left-sidebar desktop app + agentic terminal is emerging as a universal knowledge-work interface pattern; sticky workflow state creates switching costs
+- [2026-05-11] Added [Peekaboo](../../tools/peekaboo.md) as a local macOS computer-use action layer for agents: CLI + MCP screen capture, UI detection, and GUI automation.

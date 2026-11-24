@@ -12,6 +12,8 @@ sources: [seedance-2, legacy-ai-tools-roadmap-xlsx]
 
 Seedance 2.0 is ByteDance Seed's audio-video generation product. The important distinction in this wiki is synchronized multimodal output: not only generating video, but treating audio and video as a coupled creative artifact.
 
+**Superseded by [Seedance 2.5](../../tools/seedance-2-5.md), 2026-10-21.**
+
 ## Current status (as of 2026-04-22)
 
 - Positioned as a high-end multimodal video-generation system
@@ -20,6 +22,6 @@ Seedance 2.0 is ByteDance Seed's audio-video generation product. The important d
 
 ## Sources
 
-- [Seedance 2.0 product page](../sources/articles/seedance-2.md)
-- [AI Tools & Roadmap legacy workbook](../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
+- [Seedance 2.0 product page](../../sources/articles/seedance-2.md)
+- [AI Tools & Roadmap legacy workbook](../../sources/notes/legacy-ai-tools-roadmap-xlsx.md)
 

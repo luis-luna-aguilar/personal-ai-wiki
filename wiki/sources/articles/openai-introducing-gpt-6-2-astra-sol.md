@@ -23,11 +23,13 @@ The capture (rendered through a logged-in browser after a headless fetch hit a J
 - [OpenAI frontier-model gating](../../trends/openai-frontier-gating.md) — Critical-threshold models shipped publicly with safeguards; defender channel lags
 - [Chain-of-thought monitorability](../../trends/cot-monitorability.md) — Control Room and reasoning-and-action monitoring
 - [Astra for Law](../../tools/astra-for-law.md) — now on GPT-6.2 Astra; Harvey LAB-AA
+- [GPT-6.1 Terra](../../models/gpt-6-1-terra.md) — Terra's place in the lineup below GPT-6.2 Sol
 - [State of Legal](../../state-of/legal.md) — Astra for Law line updated
 - [Agents' Last Exam](../../benchmarks/agents-last-exam.md) — v1.1 data point
 - [FrontierCode](../../benchmarks/frontiercode.md) — FrontierCode 2.0 data point
 - [Terminal-Bench](../../benchmarks/terminal-bench.md) — Terminal-Bench-Science 0.1 results and the harness footnote
 - [GPT-6 Luna](../../models/gpt-6-luna.md) — mid tier now GPT-6.2 Sol; no 6.2 Luna
+- [Claude Fable 5.2 / Mythos 5.2](../../models/claude-fable-5-2.md) — Anthropic's 74.6% Terminal-Bench-Science figure and OpenAI's ALE, LAB-AA and AA-3D comparisons
 
 ## Key claims extracted
 

@@ -20,3 +20,8 @@
 ## Archived from current page on 2026-11-23
 
 - [2026-05-09] Added `Robotics` subcategory; Genesis AI GENE-26.5 (full-stack multi-manufacturer robot model + 5-finger hand) goes viral; "embodiment gap" framing introduced
+
+## Archived from current page on 2026-11-24
+
+- [2026-05-13] Added AI Co-Mathematician (Google DeepMind): 48% FrontierMath Tier 4; asynchronous stateful workbench for mathematicians; physics-intern (related) boosted Gemini 3.1 Pro from 17.7% → 31.4% on CritPt via specialized subagent decomposition
+- [2026-05-20] Added OpenAI's unnamed general-purpose reasoning model to `Frontier models used in science`: disproved the 1946 Erdős planar unit-distance conjecture, verified by external mathematicians (Alon, Gowers, Shankar, Tsimerman); OpenAI discloses no model name, runtime, or cost

@@ -96,3 +96,8 @@
 - [2026-09-29] Added [ChatGPT dots](../../tools/chatgpt-dots.md) to Agent orchestration (OpenAI's always-on agents with their own cloud computers, joining Grok Bot and Claude Tag) and its companion surfaces [ChatGPT Space](../../tools/chatgpt-space.md) and [ChatGPT Pages](../../tools/chatgpt-pages.md) to Agent-native documents.
 - [2026-10-06] Added [Pi](../../tools/pi.md) to Agent frameworks: Pi 1.0 and Pi Durable (checkpointed, crash-resuming harness on Bun or Cloudflare Durable Objects).
 - [2026-10-07] Added [Mecatl](../../tools/mecatl.md) to Agent frameworks: Stacklok's open-source cloud-native harness, built by Kubernetes co-creators Craig McLuckie and Joe Beda.
+
+## Archived from current page on 2026-11-24
+
+- [2026-10-09] Added [Harness²](../../tools/harness2.md) to Agent frameworks: Google's open-source recursive harnessing framework, frozen weights, up to +11.5 points on WorkBuddy-Bench.
+- [2026-10-12] Claude Managed Agents dynamic workflows ("flows") enter public beta: the lead agent writes its own orchestration program, up to 1,000 subagents per run; Devin shipped the same pattern as Dynamic Workflows a day later.

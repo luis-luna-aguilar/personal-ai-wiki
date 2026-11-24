@@ -5,7 +5,7 @@ domains: [agents, coding]
 subcategory: agentic-orchestration-patterns
 tags: [agentic]
 as_of: 2026-10-25
-sources: [gas-city-software-factory-2026-05, aiewf-loops-debate-2026-07-03, software-factories-fde-2026-07, aiewf-2026-five-trends-latentspace, latent-space-pr-not-welcome-2026-09-01, ubereng-software-factory-2026-08-28, composio-anti-slop-software-factory-2026-10-12, rauchg-gdp-ts-2026-10, thorstenball-how-i-work-with-agents-2026-10-25]
+sources: [gas-city-software-factory-2026-05, aiewf-loops-debate-2026-07-03, software-factories-fde-2026-07, aiewf-2026-five-trends-latentspace, latent-space-pr-not-welcome-2026-09-01, ubereng-software-factory-2026-08-28, composio-anti-slop-software-factory-2026-10-12, rauchg-gdp-ts-2026-10, thorstenball-how-i-work-with-agents-2026-10-25, claude-ai-native-sdlc-playbook-2026-08-21]
 ---
 
 # Software factory
@@ -18,6 +18,27 @@ A software factory is an agent pipeline that covers most of the software lifecyc
 
 - **Software factory loop.** Long-running agents can cover planning, design, coding, testing, review, deployment, maintenance, and feedback, while humans supervise interfaces, policies, escalation, and customer-specific workflow fit rather than editing every artifact.
 - **Dark factory / light factory.** Split agentic workflows into a **light** layer (planning, review, and human-agent interaction stay visible) and a **dark** layer (clearly defined execution runs in the background without human monitoring). As trust builds in the dark layer's output, more work moves out of the visible layer. Distinct from simple background execution: the light/dark split is a deliberate architectural boundary, not just async scheduling. *Source: Gas City workshop, Every (2026-05-19)*
+
+### Stage hand-offs
+
+Anthropic's AI-native SDLC playbook (also called the agentic SDLC, AI SDLC or agentic software development) describes how a factory's stages hand off. Its premise: once build shrinks to hours, plan, review/test and deploy become the bottleneck, and controls designed for human authors (line-by-line review, weekly committees) stop matching reality. The control objectives (accountability, separation of duties, audit) stay; the enforcement changes. *Source: Anthropic (2026-08-21)*
+
+- **Each stage commits one artifact; accepting it starts the next.** Humans review at the gates instead of starting each stage, and the commit chain is the audit trail: who asked for what, what the agent produced, who approved it. Early stages use Markdown because a product owner and an agent can both read and act on the same file.
+
+  | Stage | Committed artifact | What accepting it triggers |
+  | --- | --- | --- |
+  | Plan | `intent.md`: what is wanted, why, under which constraints, in the originator's words; corrected by the product owner | Requirements and design session |
+  | Design | `spec.md`, guided by standards encoded as skills | Plan mode |
+  | Build | `plan.md`, then the diff and its tests | Test and review |
+  | Test | Eval results from continuous evals in CI | PR |
+  | Deploy | The PR with ranked review findings and human approval | Pipeline and release gate |
+  | Maintain | Incident record; a diagnosis written as a new `intent.md` | The loop restarts at Plan |
+
+- **Human review moves up a level.** Every PR gets the same agent review passes (bugs, security, compliance with spec and plan), with nits capped and findings ranked. Humans judge intent and risk, and approval comes from a person through branch protection, so the agent that wrote the code cannot approve it.
+- **Hooks as approval gates.** A hook that runs before the agent acts can allow, block, or pause until a named person approves (for example, production deploys need a release authorization). Team hooks live in the repo; non-negotiable ones go in managed settings that engineers cannot override. Auto-accept becomes the default for routine work only once instructions, policy skills, blocking hooks and a runnable test suite exist.
+- **One source of truth per artifact beside legacy tools.** Either the repo, with Jira or the requirements tool referencing commits, or the legacy tool, with the Markdown files as working copies synced through MCP. The minimum bar is linkage: every artifact carries the record ID and every record carries the commit SHA.
+- **Control bands close the loop.** A deterministic, unit-tested script watches one metric with a stable baseline (CI failure rate, post-deploy 5xx, PR cycle time): at 1σ it logs, at 2σ it runs the agent read-only to diagnose, at 3σ the agent may only open a PR into the review gate or trigger a pre-approved runbook. The diagnosis becomes the next `intent.md`, and each shipped fix adds an eval. Recurring security scans and an incident-channel agent feed the same routes: a small fix becomes a PR, anything larger an `intent.md`.
+- **Adopt in dependency order.** The plays are modular, and fully headless maintenance needs every earlier gate in place first (PR review, hooks, a rollback path, the `intent.md` format). The templates are built around Claude Code, Claude Security and Claude Tag; the chain-and-gate pattern is general.
 
 ### Prerequisites
 
@@ -63,6 +84,7 @@ A software factory is an agent pipeline that covers most of the software lifecyc
 - [2026-10-19] Page created, split out of [Agentic orchestration patterns](agentic-orchestration-patterns.md): the dark/light factory, control-layer, software-factory-loop, and PRs-closed-by-default patterns, plus the AI Engineer World's Fair FDE examples.
 - [2026-10-12] Added "Repository as the factory": Composio's seven-step ordering (co-location, end-to-end types, duplication, 38 lint rules instead of skills, global E2E tests, review bots last, fast CI) before a shared cloud agent (Zen, 1,300+ merged PRs since February), plus the "slop compounds" failure mode.
 - [2026-09-01] Added the "PRs closed by default" software-factory pattern with three named production examples (Vercel AI SDK, Astro/Flue, tldraw) and their concrete PR/issue-closure numbers.
+- [2026-08-21] Added "Stage hand-offs" from Anthropic's AI-native SDLC playbook: stage-to-artifact chain (`intent.md` → `spec.md` → `plan.md` → diff → reviewed PR → incident), hooks and branch protection as gates, source of truth beside legacy tools, and control-band loop closure.
 - [2026-07-14] Added named AI Engineer World's Fair 2026 detail to the software-factory/FDE pattern: named FDE examples (Sierra, Cursor, Warp Oz).
 
 ## Related
@@ -85,3 +107,4 @@ A software factory is an agent pipeline that covers most of the software lifecyc
 - [Sarah (@sarahfim) — How to build an anti-slop software factory for teams of 30+](../sources/tweets/composio-anti-slop-software-factory-2026-10-12.md)
 - [rauchg/gdp-ts — Ghosts of Departed Proofs for TypeScript (GitHub)](../sources/repos/rauchg-gdp-ts-2026-10.md)
 - [Thorsten Ball (@thorstenball) — How I work with Agents](../sources/tweets/thorstenball-how-i-work-with-agents-2026-10-25.md)
+- [Anthropic — The AI-native SDLC playbook](../sources/articles/claude-ai-native-sdlc-playbook-2026-08-21.md)

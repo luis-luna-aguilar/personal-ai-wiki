@@ -15,7 +15,7 @@ The safety segment (roughly 00:55–01:30) of Latent Space's interview with Anth
 
 ## Influenced pages
 - [OpenAI–Hugging Face agentic cyber incident](../../trends/openai-huggingface-cyber-incident.md) — ExploitBench scorer hunt, CollisionWiki chain, RubyGems mention
-- [State of Cybersecurity](../../state-of/cybersecurity.md) — CollisionWiki added to the incident line
+- [Agent incidents in the wild](../../trends/agent-incidents-in-the-wild.md) — OpenAI–Hugging Face incident line (moved from State of Cybersecurity on 2026-11-24)
 - [Agent safety and alignment research](../../trends/agent-safety-and-alignment-research.md) — layered runtime defence (probes, fallback, Auto Mode, identity)
 - [AI governance and policy](../../trends/ai-governance-and-policy.md) — what "Pacing the Frontier" proposes
 

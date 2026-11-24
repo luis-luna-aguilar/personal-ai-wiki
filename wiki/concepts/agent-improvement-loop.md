@@ -3,15 +3,15 @@ title: Agent improvement loop
 type: concept
 domains: [agents]
 tags: [agentic]
-as_of: 2026-10-24
-sources: [trace-agent-improvement-loop, langchain-better-harness, cursor-bugbot-learning, self-improving-skills, agents-evals-deep-research, langchain-interrupt-may-2026, autoresearch-agent-recipes-2026-07, agent-memory-systems-layer-2026-06, ainews-eating-finance-aie-nyc-2026-07-29, palantir-autoresearch-fine-tuning-ontology-2026-10-24]
+as_of: 2026-11-13
+sources: [trace-agent-improvement-loop, langchain-better-harness, cursor-bugbot-learning, self-improving-skills, agents-evals-deep-research, langchain-interrupt-may-2026, autoresearch-agent-recipes-2026-07, agent-memory-systems-layer-2026-06, ainews-eating-finance-aie-nyc-2026-07-29, palantir-autoresearch-fine-tuning-ontology-2026-10-24, latent-space-socher-recursive-2026-09-14, ainews-recursive-flint-2026-10-22, weight-space-programming-takehi-2026-11, cmpnd-dspy-wsp-2026-11-13]
 ---
 
 # Agent improvement loop
 
 A workflow for improving AI agents by studying **execution traces** and feedback signals: records of what the agent actually did during a run, eval results, human review, cost data, and recurring failure patterns. Autoresearch extends this into an outer loop where agents study and maintain the primary agent system itself. The loop is: collect traces, score or review them, identify recurring failure patterns, make targeted changes, validate those changes offline, then redeploy and repeat.
 
-## Current status (as of 2026-10-24)
+## Current status (as of 2026-11-13)
 
 - LangChain frames tracing as the foundation for systematic agent improvement, not just debugging; the loop spans staging and production, with online evals, offline evals, and human review as complementary layers — see the sections below for Cursor's Bugbot and LangSmith Engine as concrete implementations, and [Automated harness optimization](automated-harness-optimization.md) for Better-Harness and Harness²
 - Autoresearch treats the agent system itself as the research subject: agents inspect traces, failures, eval results, human feedback, and cost signals to propose improvements under governance controls
@@ -44,11 +44,13 @@ Human review still matters when correctness depends on domain judgment or nuance
 
 ## Automated harness optimization
 
-Loops that change the harness itself automatically (LangChain's Better-Harness hill-climbing, Google's label-free Harness², self-improving skills, self-modifying harnesses) now live on [Automated harness optimization](automated-harness-optimization.md).
+Loops that change the harness itself automatically (LangChain's Better-Harness hill-climbing, self-improving skills, self-modifying harnesses) now live on [Automated harness optimization](automated-harness-optimization.md); label-free and offline harness evolution (Harness², OO-Harness, Agent S4) is on [Harness evolution research](harness-evolution-research.md).
 
 ## Autoresearch over model weights
 
-The loop can also change the model rather than the harness. Palantir's [AutoResearch](../tools/palantir-autoresearch.md) whitepaper (October 2026) walks one notional workflow through it: fix the single decision the model makes and the rule that says whether its action worked; turn past cases with a measured outcome into "episodes"; hold back a tenth, split by machine, site, fault type and period so no candidate scores by recognizing a case; build versioned mixtures of real and synthetic episodes; log each recipe (base model, mixture, technique, hyperparameters) before it runs; score candidates against thresholds set in advance; change the mixture, synthetic data or settings to fix the failure mode the scores name; promote a model behind a human-approval gate; and feed accepted, overridden and failed recommendations back as new episodes. The holdout rule is the eval-suite hygiene below applied to training data. [HF ml-intern](../tools/hf-ml-intern.md) runs a similar loop from papers and public datasets.
+The loop can also change the model rather than the harness. Palantir's [AutoResearch](../tools/palantir-autoresearch.md) whitepaper (October 2026) walks one notional workflow through it: fix the single decision the model makes and the rule that says whether its action worked; turn past cases with a measured outcome into "episodes"; hold back a tenth, split by machine, site, fault type and period so no candidate scores by recognizing a case; build versioned mixtures of real and synthetic episodes; log each recipe (base model, mixture, technique, hyperparameters) before it runs; score candidates against thresholds set in advance; change the mixture, synthetic data or settings to fix the failure mode the scores name; promote a model behind a human-approval gate; and feed accepted, overridden and failed recommendations back as new episodes. The holdout rule is the eval-suite hygiene below applied to training data. [HF ml-intern](../tools/hf-ml-intern.md) runs a similar loop from papers and public datasets. A newer alternative (November 2026) skips training entirely: in [weight-space programming](weight-space-programming.md), a frontier model reads a small model's weights and edits a few of them directly between short test runs, and Cmpnd's `dspy-wsp` packages this as a DSPy optimizer.
+
+Recursive, Richard Socher's company ($4.65B seed), points the loop at AI research itself. Its early "baby" system, Socher said in September 2026, beat the best human-plus-agent results on Karpathy's NanoChat (bits per byte below the community's 0.937) and the NanoGPT training speedrun in under two days, and topped all but a handful of kernels on SOL-ExecBench with no CUDA experts on the team. Starting from Karpathy's code reached a better result than starting from a vanilla transformer, so expert starting points still matter. In October the same "Eureka Machine" helped design [Flint](../models/recursive-flint.md), a shipped open coding model: sparse architecture, low-bit training, and kernels that added 55% generation speed.
 
 ## Product example: Bugbot learned rules
 
@@ -94,7 +96,9 @@ An eval suite that is not actively maintained will betray you. If you run the sa
 
 ## Recent changes
 
+- [2026-11-13] Added weight-space programming to autoresearch over weights: a frontier model edits a small model's weights directly instead of running training.
 - [2026-10-24] Added autoresearch over model weights: Palantir's AutoResearch loop from operational episodes through held-back evals and iterated training recipes to a gated deployment that feeds overrides back as training data.
+- [2026-10-21] Added Recursive's AI-for-AI-research results (NanoChat, NanoGPT speedrun, SOL-ExecBench kernels; expert starting points still help) and Flint as the first shipped model its loop helped design.
 - [2026-10-19] Split the harness-optimization sections (Better-Harness, self-improving skills) out to [Automated harness optimization](automated-harness-optimization.md), which also takes the new Harness² material.
 - [2026-07-29] Added a cross-product autoresearch example: Kimi K3 recursively improved Cline's own harness over 17 hours, Terminal-Bench 77.5%→88.8%, cost $79→$49.8
 - [2026-07-07] Added trace-to-memory feedback: offline trace analysis can write back maintained memories, but needs dedupe, scope, and conflict checks.
@@ -109,8 +113,10 @@ An eval suite that is not actively maintained will betray you. If you run the sa
 - [Skillify — Agent Reliability Pattern](../workflows/skillify-agent-reliability.md) — complementary pattern: encodes failures as permanent skills rather than harness-level prompt changes; works at the skill/script layer instead of the orchestration layer
 - [Evals for agentic software development](../training/evals-for-agentic-software-development.md) — coding-agent eval patterns for deterministic gates, shadow mode, and trace-derived regression suites
 - [Evals for workflow and task agents](../training/evals-for-agentic-work.md) — workflow-agent eval patterns for reliability, simulation, and production-safe evaluation
-- [Automated harness optimization](automated-harness-optimization.md) — the improvement loop applied to the harness itself: Better-Harness, Harness², self-improving skills, self-modifying harnesses
+- [Automated harness optimization](automated-harness-optimization.md) — the improvement loop applied to the harness itself: Better-Harness, self-improving skills, self-modifying harnesses
+- [Harness evolution research](harness-evolution-research.md) — label-free and offline-evolved harnesses: Harness², OO-Harness, Agent S4, HarnessDev
 - [Palantir AutoResearch](../tools/palantir-autoresearch.md) — the loop applied to model weights: episodes from operational records, held-back evals, iterated training recipes
+- [Weight-space programming](weight-space-programming.md) — improving a model by editing its weights directly, with no training run
 
 ## Sources
 
@@ -124,3 +130,7 @@ An eval suite that is not actively maintained will betray you. If you run the sa
 - [Agent memory becomes a systems layer](../sources/newsletters/agent-memory-systems-layer-2026-06.md)
 - [AINews — AI is eating Finance; AIE NYC now open](../sources/newsletters/ainews-eating-finance-aie-nyc-2026-07-29.md)
 - [Palantir — AutoResearch and the Fine-Tuning Ontology](../sources/papers/palantir-autoresearch-fine-tuning-ontology-2026-10-24.md)
+- [Latent Space — Richard Socher on AI for AI research](../sources/newsletters/latent-space-socher-recursive-2026-09-14.md)
+- [AINews — Flint launch and local serving (2026-10-22)](../sources/newsletters/ainews-recursive-flint-2026-10-22.md)
+- [Sparks of Weight-Space Programming — Takehi, Teoh, Zhang, Khattab](../sources/articles/weight-space-programming-takehi-2026-11.md)
+- [Cmpnd — Weight-Space Programming with DSPy](../sources/articles/cmpnd-dspy-wsp-2026-11-13.md)

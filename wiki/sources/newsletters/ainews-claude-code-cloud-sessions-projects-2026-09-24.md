@@ -14,7 +14,7 @@ Story page for the Claude Code item in the 24 September AINews issue (headlined 
 
 ## Influenced pages
 
-- [Claude Code](../../tools/claude-code.md) — Projects now run locally
+- [Claude Code Projects](../../tools/claude-code-projects.md) — Projects now run locally
 
 ## Key claims extracted
 

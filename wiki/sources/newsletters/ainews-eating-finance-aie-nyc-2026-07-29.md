@@ -15,7 +15,7 @@ Mostly an AI-in-Finance conference recap (AI Engineer NYC), but the AI Twitter R
 
 ## Influenced pages
 
-- [state-of/cybersecurity](../../state-of/cybersecurity.md) — adds the four-additional-accounts detail to the OpenAI–Hugging Face incident entry
+- [Agent incidents in the wild](../../trends/agent-incidents-in-the-wild.md) — OpenAI–Hugging Face incident entry (moved from State of Cybersecurity on 2026-11-24)
 - [Kimi K3](../../models/kimi-k3.md) — deployment economics, harness-dependent cost/speed caveat
 - [Agent improvement loop](../../concepts/agent-improvement-loop.md) — cross-product autoresearch example
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — deployment-economics Recent-changes entry

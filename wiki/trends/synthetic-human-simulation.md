@@ -3,8 +3,8 @@ title: AI-simulated human populations
 type: trend
 domains: [agents, models]
 tags: [agentic]
-as_of: 2026-08-22
-sources: [latent-space-simile-simulation-2026-08-21, ainews-10-worse-100x-cheaper-2026-08-22]
+as_of: 2026-11-12
+sources: [latent-space-simile-simulation-2026-08-21, ainews-10-worse-100x-cheaper-2026-08-22, every-next-two-adoption-levels-2026-11-12]
 ---
 
 # AI-simulated human populations
@@ -17,6 +17,7 @@ The trend: models trained specifically to reproduce how real people behave — n
 - Simile trains two distinct model types — population-level and individual-level — and reports early scaling laws: more human behavioral data and compute produce predictable gains in simulation accuracy, the same shape as pretraining scaling laws.
 - Customers reportedly include CVS, Wealthfront, Gallup (a strategic partnership), and Deloitte, using the models for concept testing, synthetic focus groups, and earnings-call reaction simulation at the population level rather than one-off individual prediction.
 - **The broader pattern:** an AINews essay frames Simile as "Stage 7" of a longer sequence in which each part of the ML pipeline has gone synthetic in turn since 2022 — the reward/judge (RLHF → RLAIF → LLM-as-judge), training data (Phi's textbooks, WRAP), the teacher (Alpaca/distillation), the curriculum (self-rewarding models), the researcher (AlphaEvolve, autoresearch loops), and the RL environment (Z.ai's synthesized-environment pipeline behind GLM-5.3) — leaving the human "subject" (preferences, behavior, demand) as the next component to be modeled rather than measured directly. The one stage the essay argues resists full synthesis is the physical world (wet-lab science, embodied experiment).
+- **A practitioner's limit (Every, November 2026):** Mike Taylor cloned nearly 2,000 Hacker News commenters as personas; the simulator predicted which headlines reached the front page 60% of the time. The misses were not bad personas but chance: one extra early upvote sent identical posts down different paths in parallel runs, echoing the 2006 Columbia/Santa Fe "music worlds" study. His answer is to rerun a simulation many times and trust only results that hold across runs (Level 10 of Every's [adoption ladder](../training/agent-autonomy-and-governance.md)); a wrong simulation rerun 50 times is still wrong.
 
 ## Why it matters
 
@@ -30,9 +31,11 @@ If digital twins are accurate enough to substitute for real user panels on conce
 
 ## Recent changes
 
+- [2026-11-12] Added Mike Taylor's Hacker News simulator (60% front-page prediction; misses driven by chance) and the rerun-many-times answer.
 - [2026-08-22] Page created: Simile's $2B Series B and 85%-accuracy digital-twin claim, framed within a broader "synthetic-everything" pattern (judge → data → teacher → curriculum → researcher → environment → human subject) traced back to 2022.
 
 ## Sources
 
 - [Latent Space — Simulation: the new Scaling Law (Joon Sung Park, Simile AI)](../sources/newsletters/latent-space-simile-simulation-2026-08-21.md)
 - [AINews — 10% worse, 100x cheaper, 10000x faster: Why Simulation is taking over](../sources/newsletters/ainews-10-worse-100x-cheaper-2026-08-22.md)
+- [Every — The Next Two Levels of AI Adoption](../sources/newsletters/every-next-two-adoption-levels-2026-11-12.md)

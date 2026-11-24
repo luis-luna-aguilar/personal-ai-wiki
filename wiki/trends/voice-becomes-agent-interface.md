@@ -3,8 +3,8 @@ title: Voice becomes an agent interface
 type: trend
 domains: [models, agents, voice]
 tags: [agentic]
-as_of: 2026-10-28
-sources: [voice-becomes-agent-interface, gpt-live-launch-2026-07, bfl-flux-3-2026-07-24, every-voice-guide-2026-07-31, every-team-of-specialists-2026-08-02, chatgpt-voice-mode-vibe-check-2026-08-05, eleven-realtime-2026-10-20, xai-grok-voice-3-2026-10-14, microsoft-mai-transcribe-2-streaming-2026-10-01, elevenlabs-reception-2026-09-16, elevenlabs-reception-launch-2026-09-16, block-dessa-2026-10-28]
+as_of: 2026-10-29
+sources: [voice-becomes-agent-interface, gpt-live-launch-2026-07, bfl-flux-3-2026-07-24, every-voice-guide-2026-07-31, every-team-of-specialists-2026-08-02, chatgpt-voice-mode-vibe-check-2026-08-05, eleven-realtime-2026-10-20, xai-grok-voice-3-2026-10-14, microsoft-mai-transcribe-2-streaming-2026-10-01, elevenlabs-reception-2026-09-16, elevenlabs-reception-launch-2026-09-16, block-dessa-2026-10-28, cartesia-managed-agents-2026-10-29, mistral-voxtral-3-2026-10-22, ainews-voxtral-3-pocket-tts-2026-10-21]
 ---
 
 # Voice becomes an agent interface
@@ -15,7 +15,7 @@ Voice is becoming a practical agent interface rather than a chat add-on. What st
 
 - Product teams are widening the interface surface from typed chat to texting and voice-first interaction
 - Google is treating voice quality and live responsiveness as meaningful product differentiators for Gemini
-- Mistral's Voxtral suggests open-weight text-to-speech is becoming production-relevant, not merely experimental
+- Self-hosted voice stacks are becoming production-relevant. Mistral's Voxtral 3 (October 2026) ships transcription, TTS and a LiveKit-based voice-agent SDK that can run on Mistral's EU-hosted API or the customer's own servers, with each stage swappable; Kyutai's Pocket TTS shrinks to 1.9M parameters and runs faster than realtime on one CPU core.
 - GPT-Live adds a stronger product signal for voice as an agent interface: the voice layer stays full-duplex and conversational while deeper search, reasoning, or agentic work is delegated to a frontier model in the background.
 - This separates **interaction management** from **task execution**. The user experiences continuous conversation while another model handles the slower work.
 - GPT-Live reaches desktop (2026-07-22): ChatGPT Voice in the desktop app gains the ability to control the computer and coordinate work across ChatGPT Work and Codex — voice moving from conversational interface toward direct task/agent control, not just background delegation.
@@ -24,6 +24,7 @@ Voice is becoming a practical agent interface rather than a chat add-on. What st
 - A week-long independent trial of ChatGPT Voice Mode (Every, August 2026) is the first close non-vendor look at GPT-Live in real work: strong for reading material aloud and asking questions against a live codebase, but mobile voice mode can't reach context outside the current thread, and filtering speech meant for the model from ambient conversation is inconsistent. Verdict: "both not quite there yet and obviously the future."
 - OpenAI's Realtime API protocol is becoming a common plug: ElevenLabs' Eleven Realtime (October 2026) serves its own speech-to-speech models through an OpenAI-compatible endpoint, so OpenAI's SDK and existing handlers work after an endpoint and model-name change. The voice layer of an agent becomes swappable between vendors.
 - Customer support is where voice agents now run at volume (October 2026). Grok Voice 3.0 handles 20,000 Starlink calls a day with about 70% resolved without a human, and Microsoft pitches streaming transcription partials (first text in ~100ms) so agents can start reasoning and calling tools before the caller finishes. Vendors now compete on agent-task benchmarks (τ-Voice, ServiceNow's EVA-Bench) and latency, not only voice quality.
+- The voice-agent lead has moved from single speech-to-speech models to systems built as one product (October 2026). Cartesia's Managed Agents, whose harness and voice models were tuned together, tops both Artificial Analysis's Speech Agent Arena and ServiceNow's EVA-Bench, ahead of Grok Voice 3.0; ServiceNow's evaluator calls "harnesses and models designed together" a broader pattern in enterprise voice.
 - Voice agents are also being packaged for one narrow business job. ElevenLabs' Reception (2026-09-16), built on ElevenAgents, answers a small business's calls around the clock, answers questions in the caller's language, books appointments into the calendar, and texts a confirmation, set up from the business's website in minutes (see [AI receptionist for small businesses](../use-cases/ai-receptionist.md)).
 - Block's Dessa (October 2026) tests a second route to natural voice: a full-duplex model trained only on human speech, with no text, that keeps emotion, backchannels, and turn timing a speech-to-text pipeline drops, and runs locally on a laptop. GPT-Live keeps a text model behind the voice layer; Dessa removes it. Block presents emotional hearing as a safety concern and has opened early access to safety researchers only.
 
@@ -41,6 +42,7 @@ Full-duplex voice changes the interaction model from "send a spoken prompt, wait
 
 ## Recent changes
 
+- [2026-10-29] Cartesia's co-designed Managed Agents platform leads both voice-agent benchmarks; Mistral's Voxtral 3 (2026-10-22) ships a self-hostable voice-agent stack.
 - [2026-10-28] Block announces Dessa, a full-duplex voice model trained only on human speech that runs locally on a MacBook Pro M4 Max; safety-researcher access only.
 - [2026-10-20] ElevenLabs ships Eleven Realtime behind an OpenAI-compatible Realtime API, making voice vendors swappable at the protocol level.
 - [2026-10-14] Support-call voice agents at scale: Grok Voice 3.0 resolves ~70% of 20,000 daily Starlink calls; Microsoft's streaming STT lets agents act before the caller finishes.
@@ -65,3 +67,6 @@ Full-duplex voice changes the interaction model from "send a spoken prompt, wait
 - [Introducing Reception, an AI Receptionist by ElevenAgents](../sources/articles/elevenlabs-reception-2026-09-16.md)
 - [ElevenLabs (@ElevenLabs) — Introducing Reception, an AI receptionist](../sources/tweets/elevenlabs-reception-launch-2026-09-16.md)
 - [Dessa — the Conversation Model trained only on speech (Block)](../sources/articles/block-dessa-2026-10-28.md)
+- [Cartesia — Introducing Managed Agents](../sources/articles/cartesia-managed-agents-2026-10-29.md)
+- [Mistral — Voxtral 3](../sources/articles/mistral-voxtral-3-2026-10-22.md)
+- [AINews — Voxtral 3 rankings and Kyutai Pocket TTS (Oct 21)](../sources/newsletters/ainews-voxtral-3-pocket-tts-2026-10-21.md)

@@ -4,8 +4,8 @@ type: tool
 domains: [agents]
 subcategory: agent-sandbox-infra
 tags: [agentic]
-as_of: 2026-05-20
-sources: [railway-agent-native-cloud-2026-05-20]
+as_of: 2026-10-21
+sources: [railway-agent-native-cloud-2026-05-20, railway-security-disclosure-2026-10-21, every-railway-response-agents-2026-10-22]
 ---
 
 # Railway
@@ -25,13 +25,17 @@ Railway is a deployment platform ("push code, get a URL") that is rebuilding net
 
 ## Weaknesses / caveats
 
+- Security incident on 2026-10-21: an unauthorized party may have accessed customers' encrypted environment variables and decrypted some (API keys, database and registry credentials). Railway tied it to a series of attacks on platform companies aimed at AI inference providers, told all users to rotate stored secrets, and paused all deployments while investigating, so new keys could not be rolled out. See [AI developer supply chain attacks](../trends/ai-developer-supply-chain-attacks.md)
 - Suffered a major GCP-linked outage on 2026-05-19 (workload discoverability was still tied to GCP despite the multi-cloud mesh); post-mortem published
 - Single founder interview as the only source; economics and user figures are self-reported
 
 ## Recent changes
 
+- [2026-10-21] Security disclosure: customer environment variables possibly decrypted; all users told to rotate secrets while deployments were paused
 - [2026-05-20] Latent Space interview: bare-metal economics, Central Station, agent-safe production forks, progressive rollouts, "the pull request is dying," CLI over canvas
 
 ## Sources
 
 - [Railway: The Agent-Native Cloud — Jake Cooper](../sources/newsletters/railway-agent-native-cloud-2026-05-20.md)
+- [Railway — Security Disclosure: Wednesday October 21st](../sources/articles/railway-security-disclosure-2026-10-21.md)
+- [Every — The agents on Every's Railway response team](../sources/newsletters/every-railway-response-agents-2026-10-22.md)

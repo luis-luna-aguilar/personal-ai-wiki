@@ -14,7 +14,7 @@ Google Cloud AI Research's open-source framework (Apache 2.0) for recursive agen
 
 ## Current status (as of 2026-10-09)
 
-- **How it works:** each task gets one or more propose-probe-compose rounds. An editor writes a general-habits edit and a domain edit, both run on the same task, and only the edits that behave better than the reference run are kept. A lessons library (`EXPERIENCE.md` per adopted harness) carries forward to later tasks. See [Automated harness optimization](../concepts/automated-harness-optimization.md#recursive-harnessing-without-ground-truth).
+- **How it works:** each task gets one or more propose-probe-compose rounds. An editor writes a general-habits edit and a domain edit, both run on the same task, and only the edits that behave better than the reference run are kept. A lessons library (`EXPERIENCE.md` per adopted harness) carries forward to later tasks. See [Harness evolution research](../concepts/harness-evolution-research.md#recursive-harnessing-without-ground-truth).
 - **Editable components:** system prompt, guardrails, memory, skills, tool guidance, scripts, subagents, and a middleware plugin, each mounted as a file.
 - **Supports:** parallel and sequential recursion (`--k`, `--mode`), with OpenCode (default) and Codex executors. Includes setup for the JobBench, LAB, and WorkBuddy-Bench benchmarks, and a credential-free local demo (`harness2-demo`).
 - **Reported results:** one round improved every benchmark in all four model–harness setups, with gains of up to +11.5 points on WorkBuddy-Bench (GLM-5 under OpenCode, 64.2→75.7).

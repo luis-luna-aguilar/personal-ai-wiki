@@ -3,8 +3,8 @@ title: State of Creative
 type: state-of
 domains: [creative]
 tags: []
-as_of: 2026-10-20
-sources: [legacy-ai-tools-roadmap-xlsx, seedance-2, luma-dream-machine, heygen-homepage, genspark-slides, stitch-google, claude-design-anthropic-labs, ai-music-commercialization-2026-05-01, claude-creative-tool-connectors-2026-04-29, video-agents-ethan-he-june-2026, ainews-cosmos-nemotron-june-2026, ainews-ideogram-june-2026, powerpoint-agent-skill-failure-mode-2026-06, open-creative-workflows-2026-06, meta-muse-image-video-2026-07, kimi-goal-mode-creative-agents-2026-06, google-io-agents-agents-agents, ainews-new-ai-infra-unicorns-2026-05-22, bfl-flux-3-2026-07-24, ainews-fal-h3-max-live-2026-09-01, latent-space-runway-worldprompt-2026-09-25, suno-speech-beta-2026-10, claude-cowork-is-now-claude-2026-09-16, quiverai-arrow-2-launch-2026-09-16, quiverai-arrow-2-announcement-2026-09-16]
+as_of: 2026-10-21
+sources: [legacy-ai-tools-roadmap-xlsx, seedance-2, luma-dream-machine, heygen-homepage, genspark-slides, stitch-google, claude-design-anthropic-labs, ai-music-commercialization-2026-05-01, claude-creative-tool-connectors-2026-04-29, video-agents-ethan-he-june-2026, ainews-cosmos-nemotron-june-2026, ainews-ideogram-june-2026, powerpoint-agent-skill-failure-mode-2026-06, open-creative-workflows-2026-06, meta-muse-image-video-2026-07, kimi-goal-mode-creative-agents-2026-06, google-io-agents-agents-agents, ainews-new-ai-infra-unicorns-2026-05-22, bfl-flux-3-2026-07-24, ainews-fal-h3-max-live-2026-09-01, latent-space-runway-worldprompt-2026-09-25, suno-speech-beta-2026-10, claude-cowork-is-now-claude-2026-09-16, quiverai-arrow-2-launch-2026-09-16, quiverai-arrow-2-announcement-2026-09-16, every-vibe-check-afterimage-vfx-2026-09-18, ainews-bria-fibo-krea-3-image-editing-2026-10-21, ainews-navier-stokes-2026-09-09, ainews-mai-build-june-2026]
 ---
 
 # State of Creative
@@ -16,7 +16,7 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 ### AI video generation
 
 - [NVIDIA Cosmos 3 Super](../models/cosmos-3.md) — NVIDIA; #1 open-weight Image-to-Video; Mixture-of-Transformers architecture (autoregressive reasoner + diffusion generator); full weights released via Cosmos Coalition with Runway *(as of 2026-06-02)*
-- [Seedance 2.0](../tools/seedance-2.md) — ByteDance Seed's multimodal audio-video generation product; strongest distinction is synchronized audio-video creative output *(as of 2026-04-22)*
+- [Seedance 2.5](../tools/seedance-2-5.md) — ByteDance Seed's multimodal audio-video generation product; strongest distinction is synchronized audio-video creative output *(as of 2026-04-22)*
 - [Dream Machine](../tools/dream-machine.md) — Luma's broader generative-video and editing surface *(as of 2026-04-22)*
 - **Grok Imagine Agent** — xAI; early beta; first public video agent implementation: LLM plans and iterates using video generation as a tool, calling FFmpeg and editing tools for post-processing; long-form video as a sequence of planned, generated, and edited clips *(as of 2026-06-01)*
 - **OpenArt Director** — conversational "vibe directing" product for generating and editing clips up to five minutes with consistent characters, voiceover, music, and captions; current evidence is newsletter coverage pending primary-source fetch *(as of 2026-06-24)*
@@ -26,14 +26,23 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 - [Runway Aleph 2.0 / Edit Studio](../tools/runway.md) — Runway; lets users edit a single frame and propagate that edit through the rest of the video, which AINews frames as a practical productization of "reference-guided edit propagation." Current evidence is an AINews recap (linking Runway's launch post and a product-lead post); primary announcement not fetched *(as of 2026-05-22)*
 - [Runway GWM Worlds 2](../tools/runway.md) — Runway; research preview streaming interactive worlds at 720p/24fps with 48kHz audio, steered by WorldPrompt (fixed first frame plus timestamped, live-promptable events). Open problems: error accumulation, long-term memory, realistic outcomes for unlikely actions. Competes with Genie 3, Odyssey-2 Pro and World Labs' RTFM *(as of 2026-09-25)*
 - [FLUX 3](../tools/flux-3.md) — Black Forest Labs; unified image/video/audio/action-prediction architecture ("Self Flow"); native audio generation, video-to-video character continuity, agentic multi-shot clip chaining; companion FLUX3-mimic extends it to robot control (testing with Audi); open-weights Dev version planned *(as of 2026-07-24)*
+- [Agent-scripted VFX](../use-cases/agent-scripted-vfx.md) — general-purpose agents doing professional VFX by scripting Blender, Nuke and segmentation models (Afterimage test on real footage); works for rigid objects, fails on organic forms and scene interactions *(as of 2026-09-18)*
 
 ### AI image generation
 
 - [Ideogram 4.0](../models/ideogram-4.md) — Ideogram; 9.3B DiT; #8 overall Image Arena, #1 open image model; strong text rendering and structured layout control via JSON prompting; fp8/nf4 checkpoints with ComfyUI support; no commercial license *(as of 2026-06-04)*
 - [Muse Image](../models/muse-spark.md) — Meta; launched inside Meta AI, Instagram Stories, and WhatsApp; Superhuman reports #2 on Arena text-to-image behind GPT-Image-2; uses agentic planning/self-refinement loop per AINews *(as of 2026-07-08)*
 - [Nano Banana 2](../models/nano-banana-2.md) — Google; uses Gemini's world understanding plus real-time web search imagery to generate images reflecting current real-world conditions *(as of 2026-04-22)*
-- **Krea 2 Raw / Turbo** — open-weight image model pair; Raw is positioned as an undistilled fine-tuning checkpoint, while Turbo is a distilled fast-inference checkpoint with reported day-0 diffusers, LoRA, and training-tool support *(as of 2026-06-24)*
 - [Arrow 2](../models/arrow-2.md) — QuiverAI; vector model: writes editable SVG graphics rather than raster images (illustrations, diagrams, vectorization, micro-animations); the Arrow 2 Telos tier adds frontier-model refinement for harder briefs *(as of 2026-09-16)*
+
+### AI image editing
+
+Changing an existing image from an instruction, rather than generating one from scratch. Ranks differ by leaderboard (Artificial Analysis, LMArena single- vs multi-image editing).
+
+- [GPT-Image-2.5](../models/gpt-image-2.md) — OpenAI; claims #1/#2 on image-edit and multi-image-edit arenas, with its largest gains in multi-image editing; comment-based localized changes *(as of 2026-09-08)*
+- [MAI-Image-2.5](../models/mai-thinking-1.md) — Microsoft; #2 on the Image Edit Arena (1401) at launch *(as of 2026-06-03)*
+- **Bria Fibo 2.0** — Bria; 8B open-weight family (Dev text-to-image, distilled Edit Turbo); Artificial Analysis' leading open-weight editing model; weights non-commercial (commercial use needs a Bria agreement); API $32 per 1,000 images. Newsletter coverage only *(as of 2026-10-21)*
+- **Krea** — Krea 3 Ultra is a closed editing model ranked #4–#8 by board (AA #5; LMArena #4 multi-image, #8 single-image), 2K only, $0.27 per 2K edit; Krea 2 Raw / Turbo are open-weight generation checkpoints (undistilled for fine-tuning, distilled for speed). Newsletter coverage only *(as of 2026-10-21)*
 
 ### AI avatar video
 
@@ -59,16 +68,16 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 
 ## Recent changes
 
+- [2026-10-21] Image editing gets an open-weight leader: Bria's Fibo 2.0 (8B, non-commercial weights) tops Artificial Analysis's open-weight editing board; Krea 3 Ultra joins the closed editing top tier at #4–#8 depending on the arena. New AI image editing section gathers them with GPT-Image-2.5 and MAI-Image-2.5; Krea lines merged.
 - [2026-10-20] Suno opened Speech (beta), billed as the first audio model that generates voice and music together as one track.
 - [2026-09-25] Runway GWM Worlds 2 (research preview) turns its audio-video model into a real-time interactive world at 720p/24fps via WorldPrompt, autoregressive post-training and step distillation (about 50 → 4 denoising steps); Runway also showed an "interface world model" that renders software UIs as pixels.
+- [2026-09-18] Afterimage's test shows an agent doing professional VFX on real footage by scripting Blender, Nuke and segmentation models; rigid objects work, organic forms and scene interactions do not.
 - [2026-09-16] Claude Design moved into Claude conversations as Anthropic merged chat and Cowork, launching Claude Docs and Claude Slides beside it (all beta on paid plans).
 - [2026-09-16] QuiverAI released [Arrow 2](../models/arrow-2.md) and Arrow 2 Telos, vector-graphics models that output editable SVGs, with a rebuilt app and a developer API platform.
 - [2026-09-01] Fal's H3 Max Live crosses faster-than-realtime video generation (35x inference speedup over MiniMax H3's official endpoint), enabling a continuous, audience-steerable live-video product; Fal also launched Reference-to-Video for MiniMax H3 Max at up to real-time factor 1.
 - [2026-07-24] Black Forest Labs launched FLUX 3: unified image/video/audio/action-prediction model, positioned against Seedance 2.0/Gemini Omni/Grok Imagine; companion FLUX3-mimic release extends it to robot control.
 - [2026-07-08] Meta launched Muse Image into Meta AI, Instagram Stories, and WhatsApp and previewed Muse Video; AINews describes an agentic generation loop with planning, tool use, code execution, and self-refinement.
 - [2026-06-29] Every's PowerPoint analysis adds a caution for slide agents: polished enterprise decks require supporting skills, scripts, references, and review loops.
-- [2026-06-24] OpenArt Director and Krea 2 Raw/Turbo signal creative workflows splitting between conversational editing products and open fine-tuning ecosystems.
-- [2026-06-19] Palmier and Adobe Firefly Assistant show creative tooling moving toward agentic desktop workflows: video editing and multi-app creative tasks executed from natural-language instructions.
 
 ## Sources
 
@@ -93,3 +102,7 @@ Current state of AI creative tools — video generation, avatar video, slide gen
 - [Claude Cowork and chat are now one Claude](../sources/articles/claude-cowork-is-now-claude-2026-09-16.md)
 - [QuiverAI — Introducing Arrow 2 and Arrow 2 Telos](../sources/articles/quiverai-arrow-2-launch-2026-09-16.md)
 - [QuiverAI on X — Introducing Arrow 2](../sources/tweets/quiverai-arrow-2-announcement-2026-09-16.md)
+- [Every Vibe Check — Afterimage tests an agent on professional VFX](../sources/newsletters/every-vibe-check-afterimage-vfx-2026-09-18.md)
+- [AINews — Bria Fibo 2.0 and Krea 3 Ultra image editing](../sources/newsletters/ainews-bria-fibo-krea-3-image-editing-2026-10-21.md)
+- [AINews — Navier-Stokes dispute, Muse, GPT-Image-2.5 (Sep 9)](../sources/newsletters/ainews-navier-stokes-2026-09-09.md)
+- [AINews — Microsoft Build 2026, MAI family (June 3)](../sources/newsletters/ainews-mai-build-june-2026.md)

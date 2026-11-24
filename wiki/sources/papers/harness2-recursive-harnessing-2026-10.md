@@ -52,7 +52,7 @@ The pattern carries over to any agent setup without labels: run, change one scop
 - The cross-task library-transfer test is retrospective, not online adaptation.
 
 ## Influenced pages
-- [Automated harness optimization](../../concepts/automated-harness-optimization.md) — "Recursive harnessing without ground truth" section and Current-status bullet (page created by splitting Agent improvement loop and Harness)
+- [Harness evolution research](../../concepts/harness-evolution-research.md) — "Recursive harnessing without ground truth" section and Current-status bullet (moved from Automated harness optimization)
 - [Harness²](../../tools/harness2.md) — new tool page
 - [State of Agents](../../state-of/agents.md) — leader line under Agent frameworks
 

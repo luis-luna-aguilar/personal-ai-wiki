@@ -14,7 +14,7 @@ Two newsletters: "Supply Chain Attacks Keep Hitting AI" (May 13) and "AINews —
 
 ## Influenced pages
 
-- [State of Cybersecurity](../../state-of/cybersecurity.md) — new `AI developer supply chain attacks` subcategory added
+- [AI developer supply chain attacks](../../trends/ai-developer-supply-chain-attacks.md) — Mini Shai-Hulud, HF impersonator and mitigations (originally added to State of Cybersecurity; moved with the 2026-11-24 split)
 
 ## Key claims extracted
 

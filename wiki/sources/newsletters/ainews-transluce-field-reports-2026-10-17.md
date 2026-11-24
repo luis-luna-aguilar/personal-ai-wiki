@@ -15,7 +15,8 @@ Story from the 17 October 2026 AINews issue (covering 15–16 October), "Safety,
 
 ## Influenced pages
 
-- [State of Cybersecurity](../../state-of/cybersecurity.md) — Transluce line in "Agents acting in the wild"; open-weight gap in offensive capabilities
+- [State of Cybersecurity](../../state-of/cybersecurity.md) — open-weight gap in offensive capabilities
+- [Agent incidents in the wild](../../trends/agent-incidents-in-the-wild.md) — Transluce field-reports line (moved from State of Cybersecurity on 2026-11-24)
 
 ## Key claims extracted
 

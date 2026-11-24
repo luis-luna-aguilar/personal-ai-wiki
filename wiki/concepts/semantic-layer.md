@@ -3,8 +3,8 @@ title: Semantic layer
 type: concept
 domains: [agents]
 tags: [agentic, knowledge-cluster]
-as_of: 2026-08-21
-sources: [posthog-semantic-layer-2026-08-21, helixdb-helix-foundry-2026-10-19]
+as_of: 2026-09-10
+sources: [posthog-semantic-layer-2026-08-21, helixdb-helix-foundry-2026-10-19, openai-chatgpt-data-agent-2026-09-10]
 ---
 
 # Semantic layer
@@ -13,15 +13,16 @@ A semantic layer is a governed catalog of definitions — what a metric means, w
 
 ## Also called
 
-Metrics layer, governed metric catalog. "Context warehouse" is PostHog's product name for the store the layer sits on, not a synonym. Neo4j's Emil Eifrem uses "semantic layer" for a shared ontology substrate; that usage belongs to [Ontologies as agent guardrails](ontology-agent-guardrails.md), not here.
+Metrics layer, governed metric catalog. "Context warehouse" is PostHog's product name for the store the layer sits on, not a synonym. Neo4j's Emil Eifrem uses "semantic layer" for a shared ontology substrate; that usage belongs to [Ontologies as agent guardrails](ontology-agent-guardrails.md), not here. Databricks' "Genie Ontology" is a vendor name for a store of business definitions that OpenAI's Data agent reads as a semantic-layer source; despite the name, it belongs here, not under ontologies.
 
-## Current status (as of 2026-08-21)
+## Current status (as of 2026-09-10)
 
 - Concretely: the catalog is stored as ordinary SQL tables (a metric is a table), so any agent that can run SQL can already read the entire layer — discovery is a query, not a bespoke integration.
 - Governance model: "AI generated, human owned." Agents draft metric definitions, canonical-table suggestions, and join proposals, but nothing an agent creates is canonical until a human promotes it from "proposed" to "approved."
 - Approval isn't a one-time gate: editing an approved metric's definition immediately reverts it to "proposed," and if a metric was built from an existing dashboard object that later gets edited independently, the metric is flagged "drifted" on every read (a live check, not a background job) — so the operative rule for any agent is `status = 'approved' AND is_drifted = false`, and everything else is treated as non-canonical.
 - PostHog's implementation snapshots a metric's underlying query (rather than pointing live at a mutable dashboard object) specifically so drift can be detected and approval can't be silently invalidated by someone else's edit.
 - Deliberately deferred: a full semantic query language (dbt-style) for composing metrics — treated as "complexity not yet earned" until usage data shows it's needed; SQL-backed metrics instead reuse an existing "saved view" primitive.
+- Mainstream assistants now read from the layer instead of guessing: OpenAI's Data agent in ChatGPT Work (2026-09-10) takes business terms, metric definitions, custom calculations and data relationships from semantic layers and trusted sources (dbt, Snowflake Horizon, Databricks Genie Ontology, GitHub, BI dashboards) before it queries the warehouse, and runs every query under the connected account's own table, row and column permissions. See [Codex](../tools/codex.md).
 
 ## Why it matters
 
@@ -34,13 +35,16 @@ Agent hallucination on business metrics is a governance problem, not a model-cap
 - [Ontologies as agent guardrails](ontology-agent-guardrails.md) — another governed-ground-truth mechanism, formalized as classes and axioms rather than a metrics catalog
 - [Company brain](company-brain.md) — the organization-scope system a semantic layer can sit under as the definitions its agents read from
 - [Helix Foundry](../tools/helix-foundry.md) — the hub's local data-workspace variant: one person's workspace that copies the organization's records into snapshots and matches them across sources, rather than defining metrics over a warehouse in place
+- [Codex](../tools/codex.md) — ChatGPT Work's Data agent is the first mainstream consumer of semantic layers recorded here
 
 ## Recent changes
 
 - [2026-10-19] Linked the local data-workspace variant (Helix Foundry) now recorded under this row on the Knowledge architectures hub.
+- [2026-09-10] OpenAI's Data agent in ChatGPT Work grounds warehouse analysis in semantic layers (dbt, Snowflake Horizon, Databricks Genie Ontology, BI dashboards) and enforces per-user table, row and column permissions.
 - [2026-08-21] Page created from PostHog's account of building a semantic layer into its context warehouse.
 
 ## Sources
 
 - [PostHog — Building a semantic layer](../sources/tweets/posthog-semantic-layer-2026-08-21.md)
 - [HelixDB/helix-foundry (GitHub)](../sources/repos/helixdb-helix-foundry-2026-10-19.md)
+- [OpenAI — Now everyone can put data to work (Data agent in ChatGPT Work)](../sources/articles/openai-chatgpt-data-agent-2026-09-10.md)

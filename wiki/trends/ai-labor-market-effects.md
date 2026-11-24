@@ -3,15 +3,15 @@ title: AI labor-market effects
 type: trend
 domains: [agents, coding]
 tags: [agentic]
-as_of: 2026-10-19
-sources: [ai-adoption-is-management, ramp-ai-adoption-playbook, mckinsey-agentic-org, stanford-labor-june-2026, anthropic-81k-economics, ainews-fable5-june-2026, anthropic-employment-report-2026-10, karpathy-capability-funnel-2026-10-11, mckinsey-workforce-in-motion-2026-09]
+as_of: 2026-11-13
+sources: [ai-adoption-is-management, ramp-ai-adoption-playbook, mckinsey-agentic-org, stanford-labor-june-2026, anthropic-81k-economics, ainews-fable5-june-2026, anthropic-employment-report-2026-10, karpathy-capability-funnel-2026-10-11, mckinsey-workforce-in-motion-2026-09, every-fde-openings-trueup-2026-11-13]
 ---
 
 # AI labor-market effects
 
 What adoption, productivity, and hiring data say about AI's effect on work: how widely companies use AI, how much more people produce, and which roles are shrinking. Early-career technical and customer-service roles are the clearest early signal, and productivity gains show up as expanded scope as much as speed. The organizational consequences (where the bottleneck moves, how teams are redesigned) are tracked on [Agents reshape organizations](agents-reshape-organizations.md).
 
-## Current status (as of 2026-10-19)
+## Current status (as of 2026-11-13)
 
 - **Enterprise AI spend is already real, not just experimentation.** a16z reports nearly 30% of the Fortune 500 and roughly 20% of the Global 2000 are already live, paying customers of leading AI startups — a useful counterweight to blanket "AI pilots are failing" narratives.
 - **Ramp publishes concrete internal adoption numbers.** Ramp reports AI usage up 6,300% YoY, 99.5% of employees active on AI tools, 84% using coding agents weekly, 1,500+ apps shipped in six weeks by 800+ builders, and non-engineers accounting for 12% of human-initiated PRs on the production codebase.
@@ -27,6 +27,7 @@ What adoption, productivity, and hiring data say about AI's effect on work: how 
   - Wage-productivity relationship is U-shaped: highest-paid workers (software developers, management) report the largest gains, but some lowest-wage workers also report large gains, often for side projects or new capabilities; mid-tier scientific and legal professionals are the least enthusiastic.
 - **[Agents' Last Exam](../benchmarks/agents-last-exam.md) (ALE, 2026):** Labor-market-aligned benchmark across 1,500+ tasks and 55 occupations. Top agents score 2.6% on the hardest tier. Provides a grounded counterpoint to displacement narratives: agents can do some professional tasks autonomously, but the hardest tier of real occupation-scoped work remains largely out of reach.
 - **Anthropic's internal employment report (October 2026).** The Anthropic Institute's study of its own workforce: juniors fell from 21% to 14% of technical headcount since early 2025 and from 27% to 9% of technical hires; roughly a third of ML and a fifth of SWE managers report hiring less due to AI. Following 192 engineers who adopted coding agents against 74 who didn't, code output rose sharply after adoption with no difference in deletion or revert rates between agent-written and human-written code; sales reps closed more deals after adopting agents (the authors flag possible selection). Revenue per employee runs 2–4× Meta's and Google's at the same company age. Administrative functions stayed small as the company tripled in size, and non-technical staff went from 2 to 90 coding-agent sessions a month.
+- **Specialist engineering roles shrink as customer-facing ones grow.** Over the year to November 2026, open front-end roles fell 51% and iOS roles 46% while [forward-deployed engineer](../training/forward-deployed-engineering.md) openings grew 4.6x (TrueUp data, via Every).
 - **Exposure is a steep funnel, not a split (Karpathy, October 2026).** Andrej Karpathy's estimate: about 6B people (~75%) have barely touched LLMs; 1–2B (~20%) are casual free-tier users who treat them as a better search or writing aid, including many professionals outside math and code; about 20M (~0.2%) use frontier agents professionally in math and code and see weeks of work finished from a prompt; about 5,000 have internal access to unreleased systems. He traces the spread to problem ambition, capability that peaks in verifiable, commercially valuable domains, and access tier, and says the gap is widening.
 
 ## Projected reallocation to 2035
@@ -47,6 +48,7 @@ McKinsey Global Institute's "Workforce in motion" report (September 2026) is a t
 
 ## Recent changes
 
+- [2026-11-13] Added TrueUp role data: front-end −51%, iOS −46%, forward-deployed engineer openings 4.6x over a year.
 - [2026-10-19] Page created, split out of [Agents reshape organizations](agents-reshape-organizations.md)'s "Adoption, labor, and economic evidence" subsection, which had grown into its own topic.
 - [2026-10-19] Added Anthropic's internal employment report: junior technical hiring share 27% → 9%, within-person productivity gains from coding-agent adoption with no measured quality drop.
 - [2026-10-11] Added Karpathy's capability funnel: ~75% barely touched LLMs, ~20% casual free-tier, ~0.2% professional frontier-agent users, ~5,000 with internal access.
@@ -65,3 +67,4 @@ McKinsey Global Institute's "Workforce in motion" report (September 2026) is a t
 - [How employment is changing at Anthropic (Anthropic Institute)](../sources/articles/anthropic-employment-report-2026-10.md)
 - [Andrej Karpathy on X — the LLM capability funnel](../sources/tweets/karpathy-capability-funnel-2026-10-11.md)
 - [McKinsey Global Institute — "Workforce in motion: Skills and pathways to future jobs in the United States"](../sources/articles/mckinsey-workforce-in-motion-2026-09.md)
+- [Every — The engineering job that's up 4.6x](../sources/newsletters/every-fde-openings-trueup-2026-11-13.md)

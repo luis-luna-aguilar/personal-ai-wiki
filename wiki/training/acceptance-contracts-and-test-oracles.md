@@ -2,8 +2,8 @@
 title: Acceptance contracts and test oracles
 type: training
 domains: [coding]
-as_of: 2026-10-19
-sources: [lavaee-verification-pyramid-2026-10, rauchg-gdp-ts-2026-10, bcherny-formal-verification-agent-sdk-2026-09-22, openai-low-resource-programming-languages-2026-10-19]
+as_of: 2026-10-22
+sources: [lavaee-verification-pyramid-2026-10, rauchg-gdp-ts-2026-10, bcherny-formal-verification-agent-sdk-2026-09-22, openai-low-resource-programming-languages-2026-10-19, anthropic-formal-verification-2026-10-22]
 ---
 
 # Acceptance contracts and test oracles
@@ -29,6 +29,7 @@ An oracle is whatever decides pass/fail against something trusted. Fixed example
 - **Invariants and contracts** check pre/post-conditions on every run.
 - **Proof-carrying types** make a check impossible to skip: the sensitive function demands a compile-time proof about its exact arguments that only one trusted module can mint, so a missing, stale, or mismatched authorization check is a type error, and a lint preset blocks forged proofs ([gdp-ts](../tools/gdp-ts.md) for TypeScript).
 - **Model-checked specifications** have the agent write a formal model of the risky part of the code (TLA+ for concurrency and races, Lean for state and data flow), let the checker search for counterexamples, then reproduce each one in the real code before fixing it. Boris Cherny reports that a couple of prompts to Opus 5.5 turned the Claude Agent SDK into 16 bug- and race-fix PRs, without his knowing either language well. The caveat: models have been weak at choosing the high-level properties worth checking, so a person should review those (Hillel Wayne).
+- **Proved fuzz tests** turn a fuzz test you already have into a statement ("this entry point never crashes for any input under 64 MB") and have the agent prove it over the compiled binary. A proof checker, not a reviewer, validates the proof, so you only need to trust the statement, the machine model and the checker. Anthropic and Theorem did this for 239 OSS-Fuzz entry points in 123 libraries, and the attempt itself surfaced bugs fuzzing would rarely reach, such as an underflow that only triggered on rare ~20 MB inputs. The caveat: the proof holds only for the modeled machine (here single-threaded static RISC-V builds with musl) and only for what the test checks. More on [AI formal verification](../trends/ai-formal-verification.md).
 - **Seeded replays** re-run a recorded session deterministically.
 
 The agent can write property tests; a person decides which matter. Treat coverage as a record of what ran, not of what was checked.
@@ -39,6 +40,7 @@ The agent can write property tests; a person decides which matter. Treat coverag
 
 ## Recent changes
 
+- [2026-10-22] Added proved fuzz tests as an oracle: Anthropic and Theorem had Claude prove 239 OSS-Fuzz entry points crash-free on compiled RISC-V binaries.
 - [2026-10-19] Added proof-carrying types (gdp-ts) as an oracle: authorization checks enforced by the TypeScript compiler and a lint preset rather than by review.
 - [2026-10-19] Added OpenAI's COBOL-migration eval as a differential-test example: byte-for-byte output parity on hidden tests, all tests must pass.
 - [2026-10-14] Added Lavaee's verification-pyramid guidance: acceptance contract first, oracles agents can't game, test-diff-first review, multi-judge mean-plus-veto scoring, and scenario-driven browser and performance checks.
@@ -51,6 +53,7 @@ The agent can write property tests; a person decides which matter. Treat coverag
 - [AI PR and code review](../workflows/ai-pr-code-review.md) — fresh-session review
 - [gdp-ts](../tools/gdp-ts.md) — proof-carrying types for TypeScript
 - [MultiLangBench](../benchmarks/multilangbench.md) — OpenAI's multi-language build benchmark and COBOL-migration eval
+- [AI formal verification](../trends/ai-formal-verification.md) — proofs over real code, beyond tests
 
 ## Sources
 
@@ -58,3 +61,4 @@ The agent can write property tests; a person decides which matter. Treat coverag
 - [rauchg/gdp-ts — Ghosts of Departed Proofs for TypeScript (GitHub)](../sources/repos/rauchg-gdp-ts-2026-10.md)
 - [Boris Cherny — formally verifying the Claude Agent SDK with Lean and Opus 5.5](../sources/tweets/bcherny-formal-verification-agent-sdk-2026-09-22.md)
 - [OpenAI — Advancing coding in low-resource programming languages](../sources/articles/openai-low-resource-programming-languages-2026-10-19.md)
+- [Anthropic — LLMs are making formal software verification feasible at a much larger scale](../sources/articles/anthropic-formal-verification-2026-10-22.md)

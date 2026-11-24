@@ -15,7 +15,7 @@ The Code newsletter (2026-05-20) covering Google I/O's Gemini 3.5 Flash / Antigr
 
 ## Influenced pages
 - [Claude Managed Agents](../../tools/claude-managed-agents.md) — self-hosted sandboxes / MCP tunnels (the "Code with Claude London" venue detail comes from this newsletter, not the Anthropic blog post)
-- [State of Cybersecurity](../../state-of/cybersecurity.md) — GitHub breach entry
+- [AI developer supply chain attacks](../../trends/ai-developer-supply-chain-attacks.md) — GitHub breach entry (moved from State of Cybersecurity in the 2026-11-24 split)
 
 ## Key claims extracted
 - Anthropic rolled out self-hosted sandboxes (public beta) and MCP tunnels (research preview) for Claude Managed Agents at its Code with Claude event in London; points to the Anthropic blog post ingested separately

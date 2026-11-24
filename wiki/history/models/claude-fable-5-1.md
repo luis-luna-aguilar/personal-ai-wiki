@@ -10,7 +10,9 @@ sources: [every-fable-51-vibe-check-2026-09-01, ainews-fablemythos-51-2026-09-02
 
 # Claude Fable 5.1 / Mythos 5.1
 
-Anthropic's flagship refresh, launched 2026-09-01, superseding [Claude Fable 5](../history/models/claude-fable-5.md). Fable 5.1 targets delegated, long-horizon coding and knowledge work; Mythos 5.1 is a paired release positioned for knowledge work. Credible community analysis (@eliebakouch, corroborated by Artificial Analysis' own fallback-routing note) holds that Fable and Mythos 5.1 are the same underlying weights, differentiated by a safety-classifier threshold rather than distinct base models — flagged requests fall back to Opus 4.8.
+Anthropic's flagship refresh, launched 2026-09-01, superseding [Claude Fable 5](claude-fable-5.md). Fable 5.1 targets delegated, long-horizon coding and knowledge work; Mythos 5.1 is a paired release positioned for knowledge work. Credible community analysis (@eliebakouch, corroborated by Artificial Analysis' own fallback-routing note) holds that Fable and Mythos 5.1 are the same underlying weights, differentiated by a safety-classifier threshold rather than distinct base models — flagged requests fall back to Opus 4.8.
+
+**Superseded by [Claude Fable 5.2 / Mythos 5.2](../../models/claude-fable-5-2.md), about 2026-11-09.**
 
 ## Current status (as of 2026-09-02)
 
@@ -25,7 +27,7 @@ Anthropic's flagship refresh, launched 2026-09-01, superseding [Claude Fable 5](
 
 Community technical analysis converged on: Fable and Mythos 5.1 share weights; internal activations are inspected and escalate to a larger safety classifier, with dangerous requests falling back to Opus 4.8. Artificial Analysis independently confirmed fallback routing in its own evaluation (~4% of output tokens served by fallback) without confirming the "exact same weights" claim directly. If accurate, which benchmark line is labeled Fable vs. Mythos is closer to a safety-routing artifact than a distinct-model comparison — a live open question in system-card interpretation.
 
-Note: this Mythos 5.1 is a new, publicly available paired release, distinct from [Claude Mythos Preview](claude-mythos-preview.md), Anthropic's earlier restricted-access cybersecurity-research model (Project Glasswing). The two share a name but not, per current sources, an established lineage.
+Note: this Mythos 5.1 is a new, publicly available paired release, distinct from [Claude Mythos Preview](../../models/claude-mythos-preview.md), Anthropic's earlier restricted-access cybersecurity-research model (Project Glasswing). The two share a name but not, per current sources, an established lineage.
 
 ## Strengths
 
@@ -41,12 +43,13 @@ Note: this Mythos 5.1 is a new, publicly available paired release, distinct from
 
 ## Recent changes
 
+- [2026-11-09] Superseded by Claude Fable 5.2 / Mythos 5.2 — see [Claude Fable 5.2 / Mythos 5.2](../../models/claude-fable-5-2.md). Anthropic's 5.2 launch post confirms Fable and Mythos are the same underlying model.
 - [2026-09-06] Every's head-to-head testing against newly-launched GPT-6 Astra: Fable 5.1 preferred for complicated product builds (fewer clicks, better diagrams), though Astra was easier to steer through writing back-and-forth; Fable 5.1 also overshot an explicit quote-count limit in testing (returned 43 when asked for 8-12).
 - [2026-09-01] Fable 5.1 / Mythos 5.1 launched, superseding Fable 5: AA Intelligence Index 66, 75% cache-read price cut, same-weights/different-routing debate, EFS false positives.
 
 ## Sources
 
-- [Every — Vibe Check: Fable 5.1](../sources/newsletters/every-fable-51-vibe-check-2026-09-01.md)
-- [AINews — Claude Fable/Mythos 5.1: new SOTA model](../sources/newsletters/ainews-fablemythos-51-2026-09-02.md)
-- [Every — Vibe Check: GPT-6 Astra](../sources/newsletters/every-vibe-check-gpt-6-astra-2026-09-03.md)
-- [Every — A Split Verdict on Fable vs. Astra](../sources/newsletters/every-split-verdict-fable-astra-2026-09-06.md)
+- [Every — Vibe Check: Fable 5.1](../../sources/newsletters/every-fable-51-vibe-check-2026-09-01.md)
+- [AINews — Claude Fable/Mythos 5.1: new SOTA model](../../sources/newsletters/ainews-fablemythos-51-2026-09-02.md)
+- [Every — Vibe Check: GPT-6 Astra](../../sources/newsletters/every-vibe-check-gpt-6-astra-2026-09-03.md)
+- [Every — A Split Verdict on Fable vs. Astra](../../sources/newsletters/every-split-verdict-fable-astra-2026-09-06.md)

@@ -3,8 +3,8 @@ title: State of Science
 type: state-of
 domains: [science]
 tags: []
-as_of: 2026-10-15
-sources: [curiosity-driven-imagination, noetik-cancer-trials, gpt-rosalind-launch, futurehouse-homepage, legacy-ai-tools-roadmap-xlsx, openai-gpt-5-5-launch, ai-co-mathematician-2026-05-13, genesis-ai-gene-26-5-2026-05-09, self-driving-lab-radical-ai, axiom-math-june-2026, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07, esmfold2-protein-world-model-2026-05, openai-erdos-unit-distance-2026-05, anthropic-claude-art-enzyme-system-2026-09, john-platt-google-era-2026-09-22, openai-sharing-ai-progress-in-mathematics-2026-10-06, ainews-openai-722-math-manuscripts-2026-10-07, ainews-openai-math-release-pushback-2026-10-08]
+as_of: 2026-10-27
+sources: [curiosity-driven-imagination, noetik-cancer-trials, gpt-rosalind-launch, futurehouse-homepage, legacy-ai-tools-roadmap-xlsx, openai-gpt-5-5-launch, ai-co-mathematician-2026-05-13, genesis-ai-gene-26-5-2026-05-09, self-driving-lab-radical-ai, axiom-math-june-2026, claude-science-beta-2026-07-06, every-tale-of-two-models-2026-07-05, claude-science-workbench-2026-07, esmfold2-protein-world-model-2026-05, openai-erdos-unit-distance-2026-05, anthropic-claude-art-enzyme-system-2026-09, john-platt-google-era-2026-09-22, openai-sharing-ai-progress-in-mathematics-2026-10-06, ainews-openai-722-math-manuscripts-2026-10-07, ainews-openai-math-release-pushback-2026-10-08, anthropic-early-progress-drug-development-2026-10-27, periodic-labs-neon-xrd-2026-09-15]
 ---
 
 # State of Science
@@ -19,7 +19,7 @@ Tools built to run or supervise literature-driven, hypothesis-oriented, or disco
 
 - [FutureHouse](../tools/futurehouse.md) — science-agent platform aimed at research and discovery workflows rather than generic assistant use *(as of 2026-04-22)*
 - [Claude Science](../tools/claude-science.md) — Anthropic beta science workbench for analysis, database search, reproducible artifacts, persistent kernels, reviewer agents, scientific visualizations, 60+ databases, BioNeMo/Boltz/OpenFold-style integrations, and local/HPC compute; case studies now include Manifold Bio, Allen Institute, and UCSF workflows *(as of 2026-07-06)*
-- **Anthropic life-sciences lab** — Claude agent swarms mine genomic databases and file reports for human-run lab tests; ~950 agents flagged the ART phage system (function unknown) — see [AI in Biology](../trends/ai-in-biology.md) *(as of 2026-09-23)*
+- **Anthropic life-sciences lab** — Claude agent swarms flagged the ART phage system (function unknown); Anthropic now runs its own drug programs after acquiring one-person Mithril Medicine, plus preclinical work with six partners — see [AI in Biology](../trends/ai-in-biology.md) *(as of 2026-10-27)*
 - **Google ERA** (Empirical Research Assistance) — Gemini tree search over experiment notebooks for any problem with a score function; 10+ papers *(as of 2026-09-22)*
 
 ### Protein models and molecular biology
@@ -39,6 +39,7 @@ AI models and hardware designed for physical manipulation — robots that can ha
 Closed-loop systems where an AI scientist generates hypotheses and automated robotic labs execute and characterize experiments — removing the human from the serial experimental loop.
 
 - **Radical AI** — materials science; AI scientist + robotic synthesis + active learning loop; 1,200 alloys characterized in 6 months (~10× DARPA/GE MACH pace); 300 novel materials tested, 10 with SOTA properties; TorchSim and MATRIX open-sourced *(as of 2026-06-17)*
+- **Periodic Labs** — materials science (superconductors, magnets); trains its own models on its lab data: Periodic Neon (1T, post-trained Kimi K2.6) reads X-ray diffraction at 55.3% on its hard FrontierXRD set, above GPT-6 Astra and Claude Fable 5.1 at lower cost — see [AI in Science](../trends/ai-in-science.md) *(as of 2026-09-15)*
 
 ### Frontier models used in science
 
@@ -56,13 +57,13 @@ AI systems that generate or verify formal mathematical proofs, providing machine
 
 ## Recent changes
 
+- [2026-10-27] Anthropic life-sciences line extended: acquired Mithril Medicine (one founder, Claude coordinating 11 labs) to run its own drug programs; preclinical partner results across design, optimization and manufacturing.
 - [2026-10-06] OpenAI's internal-model line updated for its 722-manuscript math release: about 3 hours of ChatGPT Pro compute per result, 3 papers withdrawn and 14 revised within two days, and a mathematicians' call to stop working with OpenAI.
 - [2026-09-24] Added Anthropic's life-sciences lab (Claude agents found the ART phage system, function still unknown) and Google's ERA (score-function tree search) to Science agent platforms.
+- [2026-09-15] Added Periodic Labs to Self-driving labs: its lab-data-trained Neon model beats GPT-6 Astra and Claude Fable 5.1 on XRD analysis (FrontierXRD 55.3%, from 2.7% for the base model).
 - [2026-07-06] Claude Science entered the science-agent-platform set; Anthropic confirms public beta with reproducible artifacts, persistent kernels, 60+ scientific databases, and compute/tool integrations.
 - [2026-07-05] Anthropic's internal drug programs make evaluation/verification feedback loops the Claude Science strategy point to watch.
 - [2026-07-01] Claude Science official announcement adds reviewer agents, artifact rendering, scientific model integrations, and Manifold Bio / Allen Institute / UCSF case studies.
 - [2026-06-17] Added `Self-driving labs` subcategory; Radical AI: ~10× DARPA/GE MACH pace; AI scientist proposed 300 new materials, 10 with novel state-of-the-art properties; TorchSim and MATRIX open-sourced
 - [2026-06-03] Added formal verification subcategory; Axiom Math: 12/12 Putnam 2025, 99% ProofGen vs o3's 4.9%; AXLE open-source Lean toolkit; $200M / $1.6B; thesis: formal verification = scalable RL reward signal
 - [2026-05-27] Added protein models and molecular biology subcategory with ESMFold2 as an open protein-world-model signal.
-- [2026-05-20] Added OpenAI's unnamed general-purpose reasoning model to `Frontier models used in science`: disproved the 1946 Erdős planar unit-distance conjecture, verified by external mathematicians (Alon, Gowers, Shankar, Tsimerman); OpenAI discloses no model name, runtime, or cost
-- [2026-05-13] Added AI Co-Mathematician (Google DeepMind): 48% FrontierMath Tier 4; asynchronous stateful workbench for mathematicians; physics-intern (related) boosted Gemini 3.1 Pro from 17.7% → 31.4% on CritPt via specialized subagent decomposition

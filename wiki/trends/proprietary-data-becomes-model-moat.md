@@ -3,8 +3,8 @@ title: Proprietary data becomes model moat
 type: trend
 domains: [models]
 tags: []
-as_of: 2026-10-24
-sources: [market-for-making-ai-better, ainews-2026-04-21, ai-strategy-explicit-bets-2026-06, palantir-autoresearch-fine-tuning-ontology-2026-10-24]
+as_of: 2026-11-18
+sources: [market-for-making-ai-better, ainews-2026-04-21, ai-strategy-explicit-bets-2026-06, palantir-autoresearch-fine-tuning-ontology-2026-10-24, mai-licensed-weights-2026-11-17, every-nadella-ignite-own-model-2026-11-18]
 ---
 
 # Proprietary data becomes model moat
@@ -13,7 +13,7 @@ The trend: as frontier model quality converges, more of the advantage may come f
 
 This is not only about selling data to labs. The same company can license its data externally, fine-tune an internal model with it, or do both. The strongest position is a flywheel: production work generates proprietary traces, those traces become training/eval data, and the resulting model becomes cheaper or better for that company's own use case.
 
-## Current status (as of 2026-10-24)
+## Current status (as of 2026-11-18)
 
 - AI labs and intermediaries are actively seeking non-public operational data, not just public web corpora
 - The highest-value datasets tend to be both **high quality** and **continuously growing**
@@ -21,6 +21,7 @@ This is not only about selling data to labs. The same company can license its da
 - The next scarce asset may be less "more text" and more **good task definitions plus ground-truth data** for domain work
 - Small or open-base models can reportedly beat most frontier models on narrow professional tasks when trained on the right expert examples
 - The flywheel is being sold as a product: Palantir's AutoResearch (October 2026) turns an institution's operational records into training sets and specialized models, and treats both as owned assets that can be licensed or white-labeled
+- Hyperscalers now sell the same bet: Microsoft's MAI Licensed Weights (Ignite, 2026-11-17) lets enterprises run and fine-tune MAI weights in their own Azure and choose when to upgrade; Satya Nadella says there should be "as many models as firms"
 
 ## Why it matters
 
@@ -33,6 +34,10 @@ The bottleneck also shifts upstream from model access to **measurement**. Teams 
 ## Productized example: Palantir AutoResearch
 
 Palantir's whitepaper on [AutoResearch](../tools/palantir-autoresearch.md) is the most complete vendor version of this trend's flywheel. Records from ERP, MES, CRM, quality and maintenance systems, plus the decisions people made and whether they worked, become versioned training datasets with lineage and security markings. An agent searches training recipes against held-back real cases, and the resulting weights are registered with their data, recipe, cost and scores. Every production recommendation that is accepted, overridden or fails becomes new training data. Palantir offers three paths for the outputs: deploy them in the institution's own workflows, or rent, sell or white-label the datasets and weights to other organizations. That matches this page's open question about where the moat sits: Palantir's answer is the dataset, the evaluation set and the production loop together, kept as one owned asset.
+
+## Hyperscaler version: MAI Licensed Weights
+
+Microsoft's [MAI](../models/mai-thinking-1.md) Licensed Weights, announced at Ignite on 2026-11-17 and "coming soon" through its Frontier Company engagements, puts the flywheel inside a hyperscaler. Customers deploy MAI model weights in their own Azure environment, adapt them with proprietary data, control access, and decide when to upgrade; Microsoft says it trains on their data and adaptations only with express agreement. Its customer results all use tuned MAI Code 2 or Code 2 Flash models: AT&T beat GPT-6.1 Sol on standard 5G network-analysis tasks at 1/50th of the cost; Woven by Toyota got ready-to-merge MISRA coding-standard fixes in 44% of cases its frontier models had handed to humans, at under a tenth of the cost; Alaska Airlines raised maintenance-report classification accuracy from 81% to 91%. Nadella calls this turning the model business into a "database business". Compared with Palantir, which sells the loop around a model, Microsoft sells the base weights and the cloud they run in: the adaptation belongs to the customer, the base model and the infrastructure stay Microsoft's.
 
 ## Signals in this source
 
@@ -56,6 +61,7 @@ Palantir's whitepaper on [AutoResearch](../tools/palantir-autoresearch.md) is th
 
 ## Recent changes
 
+- [2026-11-17] Added Microsoft's MAI Licensed Weights (Ignite) as the hyperscaler version of the flywheel: enterprises fine-tune and run MAI weights in their own Azure; AT&T, Woven by Toyota and Alaska Airlines results; Nadella's "as many models as firms".
 - [2026-10-24] Added Palantir AutoResearch as a productized version of the data-to-owned-model flywheel, including licensing and white-labeling of datasets and weights.
 - [2026-06-30] Added explicit-bets caveat: vertical data/workflow moats should be treated as strategic assumptions, not guarantees.
 - [2026-04-21] Added ambient memory capture vector — Codex Chronicle as personal-context lock-in
@@ -67,3 +73,5 @@ Palantir's whitepaper on [AutoResearch](../tools/palantir-autoresearch.md) is th
 - [AINews — Moonshot Kimi K2.6, Hermes Agent, Codex Chronicle (2026-04-21)](../sources/newsletters/ainews-2026-04-21.md)
 - [AI strategy as explicit bets](../sources/newsletters/ai-strategy-explicit-bets-2026-06.md)
 - [Palantir — AutoResearch and the Fine-Tuning Ontology](../sources/papers/palantir-autoresearch-fine-tuning-ontology-2026-10-24.md)
+- [Microsoft AI — MAI Licensed Weights: Frontier performance you control](../sources/articles/mai-licensed-weights-2026-11-17.md)
+- [Every — Microsoft's CEO Wants Every Company to Own Its Own Model](../sources/newsletters/every-nadella-ignite-own-model-2026-11-18.md)

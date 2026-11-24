@@ -29,3 +29,4 @@ Every summarizes Stripe's view on how AI changes commerce and fraud. The core ar
 
 - `wiki/state-of/finance.md` — agent-native commerce and compute-fraud framing
 - `wiki/trends/compute-infrastructure.md` — stolen compute as a business risk
+- `wiki/trends/agentic-commerce.md` — agents-as-purchasers point (moved from State of Finance on 2026-11-24)

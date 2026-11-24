@@ -1,8 +1,8 @@
 ---
 title: Evals for workflow and task agents
 type: training
-as_of: 2026-10-26
-sources: [agents-evals-deep-research, every-benchmarks-dont-know-your-job-2026-08-25, leeknowlton-verifiable-work-2026-10-17, every-copilot-seat-in-org-chart-2026-09-25, every-personal-ai-benchmark-2026-09-21, every-evals-go-mainstream-2026-09-24, paper-instruments-ultramarine-1-flash-2026-10-14, claude-api-build-eval-hillclimb]
+as_of: 2026-11-11
+sources: [agents-evals-deep-research, every-benchmarks-dont-know-your-job-2026-08-25, leeknowlton-verifiable-work-2026-10-17, every-copilot-seat-in-org-chart-2026-09-25, every-personal-ai-benchmark-2026-09-21, every-evals-go-mainstream-2026-09-24, paper-instruments-ultramarine-1-flash-2026-10-14, claude-api-build-eval-hillclimb, every-whats-left-for-humans-overfitting-2026-11-11]
 ---
 
 # Evals for workflow and task agents
@@ -127,6 +127,8 @@ The same discipline at the scale of one person choosing a daily model. Public be
 
 Include hard tasks: easy ones sit below the "discernment horizon", where every model passes. On Taylor's consulting benchmark OpenAI's cheapest model, Luna, came within a few points of Fable, so routine work can go to the cheap model (see [Cost-aware AI task routing](cost-aware-ai-task-routing.md)). Benchmarks saturate; make the tasks harder as models improve. Every is helping all its staff build one.
 
+Read the checks a model writes the way you would read a draft: they can overfit. Told its ASCII-art cat was unrecognizable, a model wrote a fair check and also the rule "the cat sits facing front," then drew a front-facing cat when asked for one curled up asleep. Taylor calls overfitting "the number one problem in AI right now"; keep testing on everyday work.
+
 ## Failure modes
 
 - Shipping a workflow agent based only on demo performance — demos are single-shot, production is multi-shot
@@ -142,6 +144,7 @@ Include hard tasks: easy ones sit below the "discernment horizon", where every m
 
 ## Recent changes
 
+- [2026-11-11] Added an overfitting caveat to personal benchmarks: model-written checks can encode the wrong rule (Mike Taylor's front-facing-cat example).
 - [2026-10-26] Added Anthropic's checks for an eval you can hill-climb (production-like tasks, scores rising with model and effort, headroom, low variance), plus case sampling, grader validation, and a support-ticket cost hill-climb (held-out 78.6% → 90.5% at ~1/5 the cost).
 - [2026-10-17] Framed LLM-as-judge as the gate on delegation: a judge proven with evals turns maybe-verifiable work into delegable work (Lee Knowlton).
 - [2026-10-14] Added "one proposition per criterion" rubric guidance from Paper Instruments' Ultramarine RL report, linked to the new Non-verifiable RL page.
@@ -159,3 +162,4 @@ Include hard tasks: easy ones sit below the "discernment horizon", where every m
 - [Every — Evals go mainstream](../sources/newsletters/every-evals-go-mainstream-2026-09-24.md)
 - [Paper Instruments — Ultramarine 1 Flash: Scaling Non-Verifiable RL](../sources/articles/paper-instruments-ultramarine-1-flash-2026-10-14.md)
 - [Anthropic — Automating eval design and hillclimbing with Claude](../sources/articles/claude-api-build-eval-hillclimb.md)
+- [Every — What's Left for Humans After Automation (personal-benchmark overfitting)](../sources/newsletters/every-whats-left-for-humans-overfitting-2026-11-11.md)

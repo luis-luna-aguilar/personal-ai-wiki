@@ -4,8 +4,8 @@ type: workflow
 domains: [agents, coding]
 subcategory: agentic-orchestration-patterns
 tags: [agentic]
-as_of: 2026-09-09
-sources: [loopcraft-june-2026, aiewf-loops-debate-2026-07-03, claude-code-getting-started-with-loops-2026-06-30, what-the-hell-is-a-loop-anyway, andy-matuschak-agent-loop-tempo-2026-07, every-compound-engineering-upgrade-2026-05, aiewf-2026-five-trends-latentspace]
+as_of: 2026-10-24
+sources: [loopcraft-june-2026, aiewf-loops-debate-2026-07-03, claude-code-getting-started-with-loops-2026-06-30, what-the-hell-is-a-loop-anyway, andy-matuschak-agent-loop-tempo-2026-07, every-compound-engineering-upgrade-2026-05, aiewf-2026-five-trends-latentspace, claude-fold-subagents-single-loop-2026-10]
 ---
 
 # Agent loop design
@@ -39,6 +39,19 @@ The practical guidance is conservative: start with the simplest loop, define exp
 
 For code quality, Anthropic recommends encoding verification steps as skills, keeping project conventions clean, making docs easy to reach, and using a second agent or `/code-review` skill for review rather than letting the generator fully evaluate its own work.
 
+## Folding subagents into one loop
+
+Anthropic's Applied AI team (October 2026) reports that across several enterprise deployments, a single agent with skills frequently beat both one big prompt and an orchestrator with specialist subagents on quality, often at lower cost and latency; one customer's single loop ran about 2x faster than its multi-agent harness. The failure it names is Conway's law: each team ships its own subagent, so the architecture copies the org chart. That brings subagent sprawl, a "Frankenprompt" of conflicting rules added by every team, subtask evals nobody owns end to end, and lossy handoffs.
+
+The target design:
+
+- One model and one context window run an open tool loop. The harness sets turn and cost budgets and write gates; the model batches tool calls, which run in parallel, and decides the next step from raw results.
+- The model writes its plan on the first turn and revises it as results arrive, so the planner is also the executor.
+- Procedure and ordering go into skills. Hard limits, approvals and per-user permissions go into tools, which return refusals or instructions the model can read. Group tools by user intent, since tool choice degrades past 30–50 definitions, and use tool search with deferred loading.
+- One small central team owns the system prompt and an end-to-end eval set (10 golden examples are enough to start); each team ships small evals with its skills.
+
+Migrate one subagent at a time, starting with the most-used, tightly coupled pairs, by turning its prompt into a skill and its API calls into tools. Compare which tasks flipped, not only the score, and run each task more than once: in Anthropic's sample support agent, one fold broke a working process in only one run of two. Keep a subagent only for measured context bloat, parallel throwaway contexts, or tool-selection conflicts, and split by context, not by problem type. Anthropic ships a migration kit, the `/claude-api build-eval`, `prompt-audit` (flags rules written for older models), `hillclimb` and `cost-optimize` skills, and `/skill-doctor` (cost and usage per skill).
+
 ## Where these patterns surfaced
 
 - Satya Nadella's June 2026 X essay (60M views) frames the loop as the primary product: build a learning loop where human capital and token capital compound, not just pick the best model.
@@ -48,6 +61,7 @@ For code quality, Anthropic recommends encoding verification steps as skills, ke
 
 ## Recent changes
 
+- [2026-10-24] Added "Folding subagents into one loop": Anthropic Applied AI's single-agent-with-skills design, the 30–50 tool ceiling with tool search, and one-at-a-time migration with flipped-task diffs.
 - [2026-10-19] Merged the Claude Code loop-taxonomy table (trigger, stop condition, primitive, best fit per loop type) and Anthropic's loop and code-quality guidance from [Claude Code](../tools/claude-code.md); folded the duplicate "where surfaced" bullet into it.
 - [2026-09-09] Page created, split out of [Agentic orchestration patterns](agentic-orchestration-patterns.md)'s flat pattern list: loop-first design, loop taxonomy, loop tempo selection, the four-layer loop stack, fresh-context/Ralph loops, the oversight loop, pipeline-vs-loop, explicit stop criteria, and the compound engineering loop.
 - [2026-07-14] Added named AI Engineer World's Fair 2026 detail to the loop-engineering pattern: inner/outer loop framing (Introspection, OpenClaw) and the autonomy-readiness stage debate (HumanLayer, Ralph Loop).
@@ -61,6 +75,7 @@ For code quality, Anthropic recommends encoding verification steps as skills, ke
 - [Multi-agent coordination](multi-agent-coordination.md) — topology patterns for running several agents together, as opposed to designing one agent's loop
 - [Harness (agent)](../concepts/harness.md) — the scaffolding a loop runs inside
 - [Claude Code](../tools/claude-code.md) — the tool whose `/goal`, `/loop`, `/schedule`, and routines primitives the loop taxonomy maps to
+- [Automated harness optimization](../concepts/automated-harness-optimization.md) — `/claude-api hillclimb`, used to compare a folded subagent against the original
 
 ## Sources
 
@@ -71,3 +86,4 @@ For code quality, Anthropic recommends encoding verification steps as skills, ke
 - [Andy Matuschak on coding-agent loop tempo](../sources/tweets/andy-matuschak-agent-loop-tempo-2026-07.md)
 - [Every - Compound Engineering Gets an Upgrade](../sources/newsletters/every-compound-engineering-upgrade-2026-05.md)
 - [5 Trends That Defined AI Engineering at World's Fair 2026 — Latent Space](../sources/newsletters/aiewf-2026-five-trends-latentspace.md)
+- [Claude — Building agents: When to fold subagents into your main agent loop](../sources/articles/claude-fold-subagents-single-loop-2026-10.md)

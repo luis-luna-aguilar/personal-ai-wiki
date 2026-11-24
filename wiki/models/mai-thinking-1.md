@@ -4,8 +4,8 @@ type: model
 domains: [models, coding]
 subcategory: frontier-model
 tags: [microsoft, closed-source]
-as_of: 2026-08-13
-sources: [ainews-mai-build-june-2026, satya-nadella-no-priors-june-2026, ainews-spacexai-grok-46-and-grok-bot-2026-08-13]
+as_of: 2026-11-17
+sources: [ainews-mai-build-june-2026, satya-nadella-no-priors-june-2026, ainews-spacexai-grok-46-and-grok-bot-2026-08-13, mai-licensed-weights-2026-11-17]
 ---
 
 # MAI-Thinking-1
@@ -42,11 +42,14 @@ Microsoft's first frontier-class reasoning model, launched at Build 2026. The he
 | MAI-Code-1-Flash | 5B active / 137B MoE | 51% SWE-Pro | GitHub Copilot, VS Code |
 | MAI-Image-2.5 | — | #2 Image Edit Arena (1401) | Image editing |
 
+Newer MAI coding models, MAI Code 2 and MAI Code 2 Flash (announced 2026-11-17), are the base for Microsoft's MAI Licensed Weights, which lets enterprises fine-tune and run MAI weights in their own Azure; see [Proprietary data becomes model moat](../trends/proprietary-data-becomes-model-moat.md). Their own specs are not yet captured here.
+
 Microsoft's audio models (MAI-Transcribe for speech recognition, MAI-Voice for text-to-speech) are a separate family with their own page: [MAI-Transcribe and MAI-Voice](mai-transcribe-voice.md).
 
 ## Recent changes
 
 - [2026-11-23] MAI-Transcribe and MAI-Voice rows moved off the family table to their own page, [MAI-Transcribe and MAI-Voice](mai-transcribe-voice.md).
+- [2026-11-17] MAI Licensed Weights announced at Ignite, built on MAI Code 2 and Code 2 Flash; customers fine-tune and run the weights in their own Azure.
 - [2026-08-13] Reached general availability in Azure AI Foundry; Microsoft (Finbarr Timbers) specifically soliciting feedback on tool-use behavior
 - [2026-06-03] Launched at Microsoft Build 2026; initial benchmarks and tech report
 
@@ -55,3 +58,4 @@ Microsoft's audio models (MAI-Transcribe for speech recognition, MAI-Voice for t
 - [AINews — Microsoft Build, MAI-Thinking-1 (June 3)](../sources/newsletters/ainews-mai-build-june-2026.md)
 - [Satya Nadella — No Priors x Latent Space (June 3)](../sources/newsletters/satya-nadella-no-priors-june-2026.md)
 - [AINews — SpaceXAI Grok 4.6 and Grok Bot (MAI-Thinking-1 Foundry GA)](../sources/newsletters/ainews-spacexai-grok-46-and-grok-bot-2026-08-13.md)
+- [Microsoft AI — MAI Licensed Weights: Frontier performance you control](../sources/articles/mai-licensed-weights-2026-11-17.md)

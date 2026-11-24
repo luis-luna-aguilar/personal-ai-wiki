@@ -3,8 +3,8 @@ title: Agent-readable web
 type: concept
 domains: [agents, computer-use]
 tags: [agentic]
-as_of: 2026-10-14
-sources: [website-future-agent-readable-2026-07-02, vercel-agents-new-software-2026-07-03, agent-ready-saas-mcp-2026-06, cloudflare-agent-internet-monetization-2026-07, expand-fetch-launch-2026-10]
+as_of: 2026-11-19
+sources: [website-future-agent-readable-2026-07-02, vercel-agents-new-software-2026-07-03, agent-ready-saas-mcp-2026-06, cloudflare-agent-internet-monetization-2026-07, expand-fetch-launch-2026-10, openai-chatgpt-wallet-2026-11-13, every-what-we-let-our-agents-buy-2026-11-19]
 ---
 
 # Agent-readable web
@@ -19,6 +19,7 @@ The agent-readable web is the shift from one website experience for everyone tow
 - The design split is practical, not only aesthetic: agent-readable pages can reduce parsing cost, improve task completion, and make product documentation current inside agent workflows.
 - Agent-ready SaaS extends the same pattern into products: expose documentation, APIs, authentication, and MCP servers so outside agents can operate inside the product ecosystem.
 - The reader side is maturing in parallel: fetch APIs such as [Expand Fetch](../tools/expand-fetch.md) clean arbitrary pages for agents because most sites still serve only human HTML; Expand argues lossy conversion (dropped icons, broken tables, missing page JSON) makes agents confidently wrong.
+- Commerce is the sharpest case. OpenAI's Commerce Partner Playbook (2026-11-13) asks merchants to publish product feeds, recognise signed agent requests through Web Bot Auth rather than block them, and add plugins or WebMCP tools. Copy matters as much as format: in Every's simulated-shopper test the same product sold to a Claude Sonnet shopper 4% of the time with hype copy written for humans and 97% with copy written for AI shoppers. See [Agentic commerce](../trends/agentic-commerce.md).
 
 ## Why it matters
 
@@ -29,9 +30,11 @@ Computer-use agents can operate through visual UIs, but that is often the most e
 - Whether `llms.txt`, Markdown endpoints, MCP servers, paid resource manifests, or structured website manifests become the default agent surface.
 - Whether web monetization shifts from advertising/pageviews toward metered agent access for data, APIs, and tools.
 - Whether serving different human/agent experiences creates abuse, cloaking, or compliance concerns.
+- Whether stores split into those that block shopping agents and those that write product pages for them.
 
 ## Recent changes
 
+- [2026-11-19] Commerce case added: OpenAI's merchant playbook (product feeds, Web Bot Auth, WebMCP) and Every's copy test (4% vs. 97% sales to a simulated Claude shopper).
 - [2026-10-14] Expand Fetch launch adds the reader-side view: trained page-to-Markdown and hidden-JSON models for sites that don't serve agent-native formats.
 - [2026-07-08] Cloudflare Monetization Gateway adds a usage-based billing signal for the agent-readable web: pages, datasets, APIs, and MCP tools can be monetized for machine access.
 - [2026-07-03] Vercel interview confirms production behavior: detect agent requests and serve Markdown directly.
@@ -44,3 +47,5 @@ Computer-use agents can operate through visual UIs, but that is often the most e
 - [Agent-ready SaaS and MCP surfaces](../sources/newsletters/agent-ready-saas-mcp-2026-06.md)
 - [Cloudflare Monetization Gateway and agent internet monetization](../sources/newsletters/cloudflare-agent-internet-monetization-2026-07.md)
 - [Announcing Expand Fetch](../sources/articles/expand-fetch-launch-2026-10.md)
+- [OpenAI — Introducing ChatGPT Wallet](../sources/articles/openai-chatgpt-wallet-2026-11-13.md)
+- [Every — What We Let Our Agents Buy](../sources/newsletters/every-what-we-let-our-agents-buy-2026-11-19.md)

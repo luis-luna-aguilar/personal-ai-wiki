@@ -3,15 +3,15 @@ title: Model sovereignty
 type: trend
 domains: [models]
 tags: [open-weights, moonshot-ai, huggingface]
-as_of: 2026-07-29
-sources: [fable-ban-june-2026, ainews-not-much-happened-2026-07-02, moonshot-kimi-k3-launch-2026-07-17, alibaba-qwen38-preview-2026-07-20, ainews-china-policy-openweight-2026-07-21, ainews-laguna-kratsios-2026-07-23, ainews-much-ado-about-open-weights-2026-07-28, ainews-fearing-rsi-pacing-letter-2026-07-29]
+as_of: 2026-09-10
+sources: [fable-ban-june-2026, ainews-not-much-happened-2026-07-02, moonshot-kimi-k3-launch-2026-07-17, alibaba-qwen38-preview-2026-07-20, ainews-china-policy-openweight-2026-07-21, ainews-laguna-kratsios-2026-07-23, ainews-much-ado-about-open-weights-2026-07-28, ainews-fearing-rsi-pacing-letter-2026-07-29, anthropic-threat-report-sep-2026]
 ---
 
 # Model sovereignty
 
 The trend: **model sovereignty** is the principle that teams should not be architecturally dependent on any single frontier model. The Fable 5 export-control ban (June 2026) turned it from an architectural preference into a risk-management requirement, and by July 2026 the same pressure was running in reverse, as governments weighed restricting open-weight models themselves. It is a driver of [Open-weight momentum broadens](open-weight-momentum-broadens.md).
 
-## Current signal (as of 2026-07-29)
+## Current signal (as of 2026-09-10)
 
 ### The Fable ban makes model neutrality a requirement
 
@@ -30,6 +30,10 @@ By July 2026 the pressure had started running the other way. Rather than only la
 
 The restriction pressure named its first concrete target on 2026-07-23: US Tech & Science Advisor Michael Kratsios publicly accused Moonshot AI of "large-scale, covert industrial distillation" of Anthropic's Fable to build [Kimi K3](../models/kimi-k3.md), citing Moonshot's access to GB300 chips in Thailand, with Treasury signaling possible Entity List sanctions. The accusation drew immediate technical pushback — critics noted only about 15 days separated Fable's release from K3's announcement, making a full distillation-driven capability jump implausible on that timeline — and legal commentators flagged that current copyright doctrine doesn't clearly support treating distillation itself as theft. The dispute is unresolved, but it converts the sovereignty story from general policy pressure into a live sanctions threat against a specific, already-shipping model.
 
+### Anthropic names seven labs distilling Claude
+
+Anthropic's 2026-09-10 misuse report says it has disrupted distillation campaigns from seven China-based labs since February: Alibaba (Qwen), Moonshot, DeepSeek, Zhipu (Z.ai), Xiaomi, SenseTime and MiniMax. All of them targeted generally available models, not Mythos. Access ran through proxy "transfer stations", networks of thousands of accounts opened with false identities, stolen cards and stolen API keys. Some proxies also log and resell users' transcripts, and MiniMax ran its own proxy through a shell company. Alibaba's campaign was the largest Anthropic has measured: more than 151M exchanges from May to July, peaking near 3M a day from over 3,500 accounts. Moonshot and DeepSeek silently relayed their own customers' requests to Claude Opus and harvested the reasoning, which exposed those customers' data. Zhipu abandoned Fable for Opus 4.6 because Fable's cyber safeguards were stronger. Anthropic's countermeasures are to attribute proxy networks to an organization instead of banning accounts one by one, to run extraction classifiers, to summarize Claude's reasoning, to use Fable 5.1's "preserved thinking", and to require identity checks for suspected resale or use from unsupported countries. For the Kratsios accusation above, this is the first lab-side evidence that Moonshot distilled Claude, but it concerns Opus (over 23M exchanges, May–July), not Fable.
+
 ### The industry response: NVIDIA's Open Secure AI Alliance
 
 NVIDIA formally launched the "Open Secure AI Alliance" on 2026-07-28 (Adobe, Cisco, Cloudflare, Hugging Face, IBM, Microsoft, Red Hat, Salesforce, SAP, ServiceNow, Snowflake, SpaceX), with Jensen Huang citing the [OpenAI/Hugging Face incident](openai-huggingface-cyber-incident.md) directly: a closed model's guardrails blocked essential forensics while a self-hosted open-weight model helped contain the intrusion. Initial reporting on 2026-07-28 said OpenAI signed the alliance's letter after rumors it wouldn't; a more detailed AINews recap the next day (2026-07-29) instead reported that OpenAI management decided not to join, a decision that was shared internally and reportedly met with employee backlash — this later, more detailed account supersedes the earlier one. Anthropic did not join either, instead publishing its own position saying it has "never advocated for a ban on open-weights models" but supports chip controls on China, anti-industrial-scale-distillation measures, and mandatory safety testing regardless of a model's openness. Separately, the New York Times reported OpenAI and Anthropic have been quietly lobbying Washington to restrict open-source AI even as Sam Altman publicly backs it, and US officials are reportedly weighing a mandatory pre-release review window (up to 30 days) for frontier models, with open-vs-closed treatment still unresolved.
@@ -43,6 +47,7 @@ NVIDIA formally launched the "Open Secure AI Alliance" on 2026-07-28 (Adobe, Cis
 ## Recent changes
 
 - [2026-10-19] Split from [Open-weight momentum broadens](open-weight-momentum-broadens.md): the model-sovereignty section moved here as its own trend page.
+- [2026-09-10] Anthropic disclosed distillation campaigns by seven China-based labs (Alibaba, Moonshot, DeepSeek, Zhipu, Xiaomi, SenseTime, MiniMax) run through proxy "transfer stations"; Moonshot's campaign targeted Opus, not Fable.
 - [2026-07-29] Corrects the prior entry: OpenAI in fact declined to join the Open Secure AI Alliance, per a more detailed 2026-07-29 AINews recap — the decision reportedly triggered internal employee backlash. The earlier "OpenAI signs" report (2026-07-28) appears to have been premature or imprecise.
 
 ## Related
@@ -62,3 +67,4 @@ NVIDIA formally launched the "Open Secure AI Alliance" on 2026-07-28 (Adobe, Cis
 - [AINews — Laguna S 2.1 / Kratsios distillation accusation](../sources/newsletters/ainews-laguna-kratsios-2026-07-23.md)
 - [AINews — Much ado about Open Weights](../sources/newsletters/ainews-much-ado-about-open-weights-2026-07-28.md)
 - [AINews — Fearing RSI: OpenAI, Anthropic, GDM, Meta cosign letter to "pace" AI development](../sources/newsletters/ainews-fearing-rsi-pacing-letter-2026-07-29.md)
+- [Anthropic — Detecting and countering misuse of AI: September 2026](../sources/articles/anthropic-threat-report-sep-2026.md)

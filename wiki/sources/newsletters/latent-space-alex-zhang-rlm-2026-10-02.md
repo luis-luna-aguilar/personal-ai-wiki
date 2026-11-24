@@ -15,7 +15,7 @@ Long podcast transcript with MIT PhD student Alex Zhang, author of the Recursive
 
 ## Influenced pages
 
-- [Harness vs model](../../concepts/harness-vs-model.md) — the "all mainstream harnesses are the same loop" dissent
+- [Harness-model co-evolution](../../concepts/harness-model-co-evolution.md) — the "all mainstream harnesses are the same loop" dissent
 - [Pi](../../tools/pi.md) — Pi as the reference harness
 
 ## Key claims extracted

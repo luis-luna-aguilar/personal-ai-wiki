@@ -21,7 +21,7 @@ AINews digest covering OpenAI cutting Cursor's model access post-SpaceX-acquisit
 - [Open-weight momentum broadens](../../trends/open-weight-momentum-broadens.md) — Tencent Hy4-preview, Qwen3.8-Flash
 - [Physical AI deployment curve](../../trends/physical-ai-deployment.md) — Microduck sales figures, simulator design
 - [Harness (agent)](../../concepts/harness.md) — Google's "wiki" skill-evolution paper, agents.md/claude.md fine-tuning, AGY patterns, cloud-resident agent shift
-- [Agent memory](../../concepts/agent-memory.md) — Google's trace → knowledge-store → skill ablation (moved from Harness (agent))
+- [Context editing](../../concepts/context-editing.md) — Google's trace → knowledge-store → skill ablation (moved from Harness (agent), then from Agent memory)
 - [Agent skill methodology](../../training/agent-skill-methodology.md) — T3 Code agents.md/claude.md fine-tuning result (moved from Harness (agent))
 - [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — cloud-resident agent shift (moved from Harness (agent))
 - [Agent safety and alignment research](../../trends/agent-safety-and-alignment-research.md) — Anthropic automated alignment research, EvoMal paper

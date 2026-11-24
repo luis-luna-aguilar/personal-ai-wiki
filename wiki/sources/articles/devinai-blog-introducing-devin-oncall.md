@@ -14,7 +14,7 @@ Cognition makes Devin Oncall generally available: Devin investigates alerts and 
 
 ## Influenced pages
 
-- [Devin](../../tools/devin.md) — Auto-Triage bullets replaced by Oncall (Responders, Incidents, review agent, context layers, results)
+- [Devin Oncall](../../tools/devin-oncall.md) — Auto-Triage bullets replaced by Oncall (Responders, Incidents, review agent, context layers, results); split out of [Devin](../../tools/devin.md) on 2026-11-24
 - [State of Agents](../../state-of/agents.md) — Devin line updated under Agent orchestration; added under Agentic DevOps
 - [Agentic infrastructure operations](../../training/agentic-infrastructure-operations.md) — first production evidence and a new failure mode
 

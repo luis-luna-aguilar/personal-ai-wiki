@@ -53,3 +53,8 @@
 
 - [2026-06-30] Anthropic published a Claude Code loop taxonomy tying task type to primitives: turn-based prompts, `/goal`, `/loop` or `/schedule`, and proactive routines composed with skills, dynamic workflows, and auto mode.
 - [2026-06-30] Official Sonnet 5 launch confirms Claude Code availability and `claude-sonnet-5` API access.
+
+## Archived from current page on 2026-11-24
+
+- [2026-06-30] Cursor iOS beta adds mobile launch/control for always-on cloud agents and desktop agents.
+- [2026-07-02] Z.ai launched ZCode for GLM-5.2, a signal that open coding models are building product ecosystems around long-context workflows rather than competing only as checkpoints.

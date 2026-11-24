@@ -14,3 +14,7 @@
 - [2026-04-14] Cursor 3.1 added a tiled Agents Window, saved layouts, branch selection for cloud agents, and stronger supervision controls for parallel agent work
 - [2026-04-10] Bugbot learned rules: production PR feedback now turns into active review rules; Cursor reports 78.13% resolution across 50,310 public PRs
 - [2026-04-10] Cloud agents now auto-attach demo videos and screenshots to GitHub PRs
+
+## Archived from current page on 2026-11-24
+
+- [2026-04-30] Cursor SDK released: TypeScript SDK exposes the Cursor agent runtime headlessly for CI, automations, cloud VMs, MCP servers, model swapping, and embedded product agents; marks transition from IDE seat product toward agent infrastructure platform

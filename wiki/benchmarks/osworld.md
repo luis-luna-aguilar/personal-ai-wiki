@@ -3,8 +3,8 @@ title: OSWorld
 type: benchmark
 domains: [agents, computer-use]
 tags: [agentic]
-as_of: 2026-04-23
-sources: [agents-evals-deep-research]
+as_of: 2026-10-13
+sources: [agents-evals-deep-research, vals-cua-bench-2026-10-13]
 ---
 
 # OSWorld
@@ -24,12 +24,19 @@ OSWorld is the most important benchmark for teams evaluating autonomous desktop 
 
 A model or system that performs well on text-based benchmarks but poorly on OSWorld is likely relying on text structure rather than genuine interface understanding.
 
+**Real-time counterpart:** Vals AI's [CUA-bench](../sources/articles/vals-cua-bench-2026-10-13.md) drops the thinking time OSWorld allows between actions: agents play six commercial games (three held out) from pixels, keyboard and mouse for three hours, and no tested model averages 20 of 100 *(as of 2026-10-13)*.
+
 ## Caveats
 
 - Specific scores are from a research synthesis report (April 2026); verify against the OSWorld leaderboard before citing numbers
 - Task distribution may favor certain OS environments; verify per-platform breakdown for specific use cases
 - GUI environments are updated over time; OSWorld scores may shift as apps change their interfaces
 
+## Recent changes
+
+- [2026-10-13] Added Vals AI's CUA-bench as the real-time, pixel-only counterpart: no tested model averages 20 of 100.
+
 ## Sources
 
 - [Comprehensive operational framework for agentic AI evaluation](../sources/deep-research/agents-evals-deep-research.md)
+- [Vals AI — CUA-bench leaderboard and methodology](../sources/articles/vals-cua-bench-2026-10-13.md)

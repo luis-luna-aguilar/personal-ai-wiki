@@ -3,8 +3,8 @@ title: Knowledge layer
 type: concept
 domains: [agents]
 tags: [agentic, knowledge-cluster]
-as_of: 2026-09-29
-sources: [knowledge-layer-architecture, llm-wikis-paperwiki-2026-07-06, ainews-not-much-happened-2026-07-02, agent-memory-systems-layer-2026-06, karpathy-llm-wiki-gist, rvaniaaaa-second-brain-compiler-2026-08-20, eugenalpeza-fde-boom-product-gap-2026-09-29]
+as_of: 2026-11-07
+sources: [knowledge-layer-architecture, llm-wikis-paperwiki-2026-07-06, ainews-not-much-happened-2026-07-02, agent-memory-systems-layer-2026-06, karpathy-llm-wiki-gist, rvaniaaaa-second-brain-compiler-2026-08-20, eugenalpeza-fde-boom-product-gap-2026-09-29, anthropic-components-of-agent-memory-2026-11]
 ---
 
 # Knowledge layer
@@ -15,7 +15,7 @@ A knowledge layer is a compiled, maintained context surface that sits between ra
 
 LLM wiki (Karpathy's name for the pattern), second brain (personal scope), PaperWiki (a research instance), wiki memory, maintained context surface. Not the same as a product's "knowledge base" feature, which is a document store rather than a compiled layer.
 
-## Current status (as of 2026-09-29)
+## Current status (as of 2026-11-07)
 
 - Framed as an answer to why agents often feel generic: they start from thin or unstructured context
 - Contrasted with naive RAG: compile once, cross-reference, and maintain over time rather than repeatedly searching raw chunks
@@ -24,6 +24,7 @@ LLM wiki (Karpathy's name for the pattern), second brain (personal scope), Paper
 - Becomes more useful as outputs, queries, and new sources compound back into the same system
 - Practitioner examples now frame this as "LLM Wikis": maintained markdown knowledge layers for agents, often implemented as Obsidian vaults with rich metadata, full-text + semantic search, and generated HTML artifacts that research agents can navigate directly
 - Wiki-style memory is moving from personal agent folders into explicit tooling: LangChain's [OpenWiki](../tools/openwiki.md) generates and maintains codebase docs meant for agents to consume.
+- Agents can compile the wiki themselves through dreaming, and it works best alongside search. In Anthropic's tests (November 2026), Opus 5 agents built a linked wiki over ~350k Stainless internal files (~420M tokens); scores on 25 questions rose from 13% to 48% of graded criteria as dreaming scaled from 2 to 128 sessions, and wiki plus search reached 61% against 53% for search alone while saving about 20k tokens per question. On merger questions spanning several documents the wiki scored 87% against search's 73%, but a legal brief answerable from one document showed no gain, and on another task the wiki grew larger than its sources, abstracting nothing. Building instructions matter: a self-reflection loop rewrote them (one page per contract, terms quoted verbatim) and lifted a brief from 72% to 100% of criteria.
 - Maintained memory is distinct from retrieval-only memory. Engram/Context Hub-style systems point toward extracting candidate memories, reconciling them against existing knowledge, and committing cleaned facts before query time rather than retrieving every plausible old fragment.
 - The common design direction is inspectable, editable, permission-aware knowledge that agents can share across sessions instead of hidden vector recall or one giant transcript.
 
@@ -48,6 +49,7 @@ A practitioner elaboration (@rvaniaaaa, August 2026) builds the same pattern spe
 
 ## Recent changes
 
+- [2026-11-07] Added Anthropic's dreamed-wiki results: a wiki built over 2→128 dreaming sessions (13%→48%), wiki plus search beating search alone, no gain on single-document tasks, and instruction rewriting lifting a brief from 72% to 100%.
 - [2026-09-29] Added Edra's ContextOps as a named discipline for the operating-rules layer: evidence-backed proposals, owner approval, versioned and tested instructions, executable coverage.
 - [2026-09-09] Terminology reorganization: added the `## Also called` alias line, corrected the Current-status stamp to match the page date, and rewrote the Related lines to agree with the new [Knowledge architectures](knowledge-architectures.md) hub.
 - [2026-08-20] Restructured the LLM Wiki section to lead with Karpathy's own original gist (the pattern's primary source, previously uncited here) rather than only the secondary PaperWiki example, and added a practitioner elaboration (@rvaniaaaa) built around Claude Desktop — with an explicit caveat that the elaboration misattributes two quotes to Karpathy.
@@ -68,3 +70,4 @@ A practitioner elaboration (@rvaniaaaa, August 2026) builds the same pattern spe
 - [LLM Wiki (gist) — Andrej Karpathy](../sources/articles/karpathy-llm-wiki-gist.md)
 - [The Second Brain Is Not a Storage System. It's a Compiler.](../sources/tweets/rvaniaaaa-second-brain-compiler-2026-08-20.md)
 - [Eugen Alpeza on X — The FDE boom is a product gap](../sources/tweets/eugenalpeza-fde-boom-product-gap-2026-09-29.md)
+- [Anthropic — The components of agent memory](../sources/articles/anthropic-components-of-agent-memory-2026-11.md)

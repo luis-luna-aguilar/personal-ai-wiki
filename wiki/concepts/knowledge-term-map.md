@@ -3,8 +3,8 @@ title: Knowledge term map
 type: concept
 domains: [agents]
 tags: [knowledge-cluster]
-as_of: 2026-10-25
-sources: [llm-wikis-paperwiki-2026-07-06, agent-memory-systems-layer-2026-06, femke-plantinga-company-brains-2026-08-27, ontologies-agentic-systems-2026-07-30, posthog-semantic-layer-2026-08-21, deeplethe-utopia-2026-09-09, helixdb-helix-foundry-2026-10-19, cognition-agent-memory-repo-2026-10, ainews-devin-dreaming-2026-10-06, latent-space-airbnb-inside-out-ai-2026-10-02, every-agent-claude-managed-agents-2026-10-08, latent-space-runway-worldprompt-2026-09-25, eugenalpeza-fde-boom-product-gap-2026-09-29, thorstenball-how-i-work-with-agents-2026-10-25, palantir-autoresearch-fine-tuning-ontology-2026-10-24]
+as_of: 2026-11-07
+sources: [llm-wikis-paperwiki-2026-07-06, agent-memory-systems-layer-2026-06, femke-plantinga-company-brains-2026-08-27, ontologies-agentic-systems-2026-07-30, posthog-semantic-layer-2026-08-21, deeplethe-utopia-2026-09-09, helixdb-helix-foundry-2026-10-19, cognition-agent-memory-repo-2026-10, ainews-devin-dreaming-2026-10-06, latent-space-airbnb-inside-out-ai-2026-10-02, every-agent-claude-managed-agents-2026-10-08, latent-space-runway-worldprompt-2026-09-25, eugenalpeza-fde-boom-product-gap-2026-09-29, thorstenball-how-i-work-with-agents-2026-10-25, palantir-autoresearch-fine-tuning-ontology-2026-10-24, tamaratran-fast-jev-compaction, anthropic-components-of-agent-memory-2026-11, openai-chatgpt-data-agent-2026-09-10]
 ---
 
 # Knowledge term map
@@ -41,6 +41,7 @@ The lookup table for the knowledge, memory, company-brain, and ontology cluster:
 |---|---|---|
 | context warehouse | Semantic layer | PostHog's product name for the store its semantic layer sits on; a vendor term, not a concept |
 | metrics layer, governed metric catalog | Semantic layer | aliases |
+| Genie Ontology (Databricks) | Semantic layer (vendor term) | Databricks' name for the self-maintained business-semantics context layer under Genie One ([Databricks](../tools/databricks.md)). OpenAI's Data agent reads it alongside dbt and Snowflake Horizon as a source of metric and business definitions, which is the semantic layer's job; nothing recorded gives it machine-checked rules, so it is not the ontology row's sense |
 | ontology, neurosymbolic AI, OWL/RDF guardrails | Ontologies as agent guardrails | the formal rule layer |
 | Neo4j's "semantic layer" | Ontologies as agent guardrails | Emil Eifrem uses "semantic layer" for a shared ontology substrate that agents consume. It is not the metric-definition [semantic layer](semantic-layer.md) above; the collision is noted on both pages |
 | knowledge graph | a data structure, not a concept | used by company brains (Zep/Graphiti), by ontology engines ([Utopia](../tools/utopia.md)), by personal assistants ([Amazon Quick](../tools/amazon-quick.md)), and by local data workspaces ([Helix Foundry](../tools/helix-foundry.md)). Link to the page whose system uses it |
@@ -52,6 +53,7 @@ The lookup table for the knowledge, memory, company-brain, and ontology cluster:
 | Term seen in sources | Maps to | Note |
 |---|---|---|
 | context engineering | [Harness](harness.md) | the practice of assembling what goes into a model's context window; a technique, not a store |
+| context editing, compaction, mutable agent state | [Context editing](context-editing.md), outside this cluster | managing what stays in one agent's context window during a run: explicit state instead of a growing transcript, RL-trained context edits, compaction by summary or deletion. A technique inside one session, not a store; Anthropic's definition of agent memory excludes compaction. The Google DeepMind trace-compiled knowledge store described there sits closer to a [knowledge layer](knowledge-layer.md) |
 | ContextOps | Knowledge layer (maintenance practice) | Edra's name for keeping agents' operating procedures current: agents propose rules from case evidence, the process owner approves, and each instruction has an owner, a version, tests, and rollback. A practice, not a store. Its authors contrast it with a context graph (the Company brain alias above), which records mistakes and exceptions alike. See [Forward-deployed engineering](../training/forward-deployed-engineering.md) |
 | company agent, shared company agent | [Multiplayer AI](multiplayer-ai.md), outside this cluster | one agent a whole organization shares in team chat (Every Agent). Its memory folders and saved skills are [agent memory](agent-memory.md) at company scope; it is a company brain only if it also carries a knowledge layer and a refresh loop |
 | RAG, vector store | a retrieval mechanism, not an architecture | Agent memory and Knowledge layer both contrast themselves with retrieval-only designs |
@@ -63,6 +65,7 @@ The lookup table for the knowledge, memory, company-brain, and ontology cluster:
 
 ## Recent changes
 
+- [2026-11-24] Mapped "context editing", "compaction" and "mutable agent state" to the new [Context editing](context-editing.md) page, outside the cluster, after its split from Agent memory.
 - [2026-11-23] Page created, split out of [Knowledge architectures](knowledge-architectures.md)'s "Term map" section.
 - [2026-10-25] Mapped "company memory" (Amp's shared, commit-linked agent threads) to Company brain.
 - [2026-10-24] Recorded Palantir's "Fine-Tuning Ontology" as a vendor name for a registry of training datasets, recipes, and weights, outside this cluster and not the ontology row's sense.
@@ -72,7 +75,6 @@ The lookup table for the knowledge, memory, company-brain, and ontology cluster:
 - [2026-10-02] Added "context graph" (Airbnb's Everest) as a Company brain alias.
 - [2026-09-29] Mapped "ContextOps" (Edra) to the Knowledge layer as a maintenance practice for owner-approved, versioned agent procedures, not a new store.
 - [2026-09-25] Mapped Runway's "interface world model" (video-generated software UIs) to the world-model row's video-prediction sense.
-- [2026-09-09] Recorded Utopia's "enterprise world model" as the first "world model" marketing alias, kept on the ontology row.
 
 ## Sources
 
@@ -91,3 +93,6 @@ The lookup table for the knowledge, memory, company-brain, and ontology cluster:
 - [Eugen Alpeza on X — The FDE boom is a product gap](../sources/tweets/eugenalpeza-fde-boom-product-gap-2026-09-29.md)
 - [Thorsten Ball (@thorstenball) — How I work with Agents](../sources/tweets/thorstenball-how-i-work-with-agents-2026-10-25.md)
 - [Palantir — AutoResearch and the Fine-Tuning Ontology](../sources/papers/palantir-autoresearch-fine-tuning-ontology-2026-10-24.md)
+- [tamaratran/fast-jev-compaction (GitHub)](../sources/repos/tamaratran-fast-jev-compaction.md)
+- [Anthropic — The components of agent memory](../sources/articles/anthropic-components-of-agent-memory-2026-11.md)
+- [OpenAI — Now everyone can put data to work (Data agent in ChatGPT Work)](../sources/articles/openai-chatgpt-data-agent-2026-09-10.md)

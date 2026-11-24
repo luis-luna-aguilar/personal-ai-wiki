@@ -14,8 +14,9 @@ An npm library and Claude Code plugin that replaces summary-based context compac
 
 ## Influenced pages
 - [fast-jev-compaction](../../tools/fast-jev-compaction.md) — new tool page
-- [Agent memory](../../concepts/agent-memory.md) — deletion-only compaction added to the context-editing section
-- [Claude Code](../../tools/claude-code.md) — function hooks gated as early access; third-party compaction plugin as an example
+- [Context editing](../../concepts/context-editing.md) — deletion-only compaction (moved from Agent memory)
+- [Knowledge term map](../../concepts/knowledge-term-map.md) — "compaction" mapped to Context editing
+- [Claude Code Mods](../../tools/claude-code-mods.md) — function hooks gated as early access; third-party compaction plugin as an example
 - [Jev](../../models/jev.md) — used as the keep/drop decision engine for context compaction
 
 ## Key claims extracted

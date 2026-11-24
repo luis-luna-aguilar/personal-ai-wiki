@@ -4,13 +4,13 @@ type: model
 domains: [models, coding]
 subcategory: frontier-model
 tags: [anthropic, closed-source]
-as_of: 2026-09-27
-sources: [claude-opus-5-5-launch, ainews-claude-opus-5-5-launch-2026-09-23, ainews-opus-5-5-coding-agent-index-2026-09-24, ainews-opus-5-5-simplebench-effort-2026-09-25, every-vibe-check-opus-5-5-2026-09-22, every-recap-opus-5-5-verdict-2026-09-27, bcherny-formal-verification-agent-sdk-2026-09-22]
+as_of: 2026-11-09
+sources: [claude-opus-5-5-launch, ainews-claude-opus-5-5-launch-2026-09-23, ainews-opus-5-5-coding-agent-index-2026-09-24, ainews-opus-5-5-simplebench-effort-2026-09-25, every-vibe-check-opus-5-5-2026-09-22, every-recap-opus-5-5-verdict-2026-09-27, bcherny-formal-verification-agent-sdk-2026-09-22, anthropic-formal-verification-2026-10-22, anthropic-claude-fable-mythos-5-2]
 ---
 
 # Claude Opus 5.5
 
-Anthropic's current flagship and the first model in the Claude 5.5 family, launched 2026-09-22, superseding [Claude Opus 5](../history/models/claude-opus-5.md). Anthropic says it performs at the level of [Claude Fable 5.1](claude-fable-5-1.md) on most work at about 40% lower cost than Opus 5, and pitches it at long, sprawling coding jobs and knowledge work. It is Anthropic's first release since its call for "pacing the frontier." Independent evals put it at or near the top of most coding leaderboards, though the cost saving holds only at default effort.
+Anthropic's current flagship and the first model in the Claude 5.5 family, launched 2026-09-22, superseding [Claude Opus 5](../history/models/claude-opus-5.md). Anthropic says it performs at the level of [Claude Fable 5.1](../history/models/claude-fable-5-1.md) on most work at about 40% lower cost than Opus 5, and pitches it at long, sprawling coding jobs and knowledge work. It is Anthropic's first release since its call for "pacing the frontier." Independent evals put it at or near the top of most coding leaderboards, though the cost saving holds only at default effort.
 
 ## Current status (as of 2026-09-27)
 
@@ -32,10 +32,12 @@ Anthropic's current flagship and the first model in the Claude 5.5 family, launc
 - Customers report the same quality as Opus 5 in roughly half the turns or tokens (Optiver, Lovable, Kiro); Deloitte says low-effort Opus 5.5 caught 72% of known code-review bugs against high-effort Opus 5's 56%.
 - Every's Vibe Check: Fable 5.1-level product and design work at about 60% less per token than Fable. It became Kieran Klaassen's daily driver and pulled some Codex converts back; Dan Shipper still prefers Codex for knowledge work and writing. It still buries the main point in prose and runs for hours unless given a budget and a stopping point.
 - Strong at visual work built from code: users shared videos, animations and Blender scenes generated entirely from code, including a one-shot ~80-minute Claude Code run that produced an animated explainer for about $20 of Opus usage.
-- Formal methods for non-specialists: Claude Code lead Boris Cherny used it to model the Claude Agent SDK in Lean and TLA+, and a couple of prompts yielded 16 PRs fixing bugs and race conditions. A formal-methods author replied that earlier models were poor at proposing system properties; Cherny says Opus 5.5 feels much better. See [Acceptance contracts and test oracles](../training/acceptance-contracts-and-test-oracles.md).
+- Formal methods for non-specialists: Claude Code lead Boris Cherny used it to model the Claude Agent SDK in Lean and TLA+, and a couple of prompts yielded 16 PRs fixing bugs and race conditions. A formal-methods author replied that earlier models were poor at proposing system properties; Cherny says Opus 5.5 feels much better. On Anthropic's 36 small verification tasks built from OSS-Fuzz code, Opus 5.5 proves half of them with about 40% fewer tokens than Opus 5. See [Acceptance contracts and test oracles](../training/acceptance-contracts-and-test-oracles.md).
 
 ## Recent changes
 
+- [2026-11-09] [Claude Fable 5.2](claude-fable-5-2.md) launched a step above Opus 5.5 on most of Anthropic's evals, but Anthropic still recommends starting most coding and knowledge work on Opus 5.5. On FrontierCode 2.0, Fable 5.2 at High effort scored about level with Opus 5.5 at Max for roughly half the cost per task.
+- [2026-10-22] Anthropic's formal-verification study: Opus 5.5 proves half of 36 OSS-Fuzz verification tasks with ~40% fewer tokens than Opus 5.
 - [2026-09-27] Independent evals and hands-on reviews added: #1 on the Vals Index and AA Coding Agent Index (66), CursorBench 57.8%; AA finds the per-task saving over Opus 5 disappears at max effort; Every reports Fable-level design work but long, unbudgeted runs.
 - [2026-09-22] Boris Cherny reports formally verifying the Claude Agent SDK with Opus 5.5 in Lean and TLA+ (16 bug- and race-fix PRs).
 - [2026-09-22] Launched as the first Claude 5.5 model, superseding Opus 5; default in Claude Code and the Claude app at medium effort.
@@ -49,3 +51,5 @@ Anthropic's current flagship and the first model in the Claude 5.5 family, launc
 - [Every — Vibe Check: Opus 5.5](../sources/newsletters/every-vibe-check-opus-5-5-2026-09-22.md)
 - [Every — weekly recap: Opus 5.5 verdict](../sources/newsletters/every-recap-opus-5-5-verdict-2026-09-27.md)
 - [Boris Cherny — formally verifying the Claude Agent SDK with Lean and Opus 5.5](../sources/tweets/bcherny-formal-verification-agent-sdk-2026-09-22.md)
+- [Anthropic — LLMs are making formal software verification feasible at a much larger scale](../sources/articles/anthropic-formal-verification-2026-10-22.md)
+- [Anthropic — Introducing Claude Fable 5.2 and Claude Mythos 5.2](../sources/articles/anthropic-claude-fable-mythos-5-2.md)

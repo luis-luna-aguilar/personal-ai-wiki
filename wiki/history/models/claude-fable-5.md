@@ -12,7 +12,7 @@ sources: [fable-ban-june-2026, ainews-fable5-june-2026, every-fable5-vibe-check,
 
 Anthropic's frontier model, launched June 9 2026 as the first generally available Mythos-class model. Described by Anthropic as "at least 2× the size of Opus." Reached #1 across nearly all major benchmarks at launch, was briefly suspended worldwide under US government export controls, and returned online July 2 with safety fallback routing.
 
-**Superseded by [Claude Fable 5.1 / Mythos 5.1](../../models/claude-fable-5-1.md), 2026-09-01.**
+**Superseded by [Claude Fable 5.1 / Mythos 5.1](claude-fable-5-1.md), 2026-09-01; now [Claude Fable 5.2 / Mythos 5.2](../../models/claude-fable-5-2.md).**
 
 ## Current status (as of 2026-07-02)
 
@@ -79,7 +79,7 @@ Every's July 2026 guidance sharpens Fable's practical niche: do not reserve it o
 
 ## Recent changes
 
-- [2026-09-01] Superseded by Claude Fable 5.1 / Mythos 5.1 — see [Claude Fable 5.1 / Mythos 5.1](../../models/claude-fable-5-1.md).
+- [2026-09-01] Superseded by Claude Fable 5.1 / Mythos 5.1 — see [Claude Fable 5.1 / Mythos 5.1](claude-fable-5-1.md).
 - [2026-07-07] Every frames Fable's premium use case as finding unknowns and invalid premises before execution, then converting recurring work into cheaper-model instructions and scripts.
 - [2026-07-02] Fable 5 returned online; Anthropic added visible safety fallback routing to Opus 4.8 for some sensitive domains; major coding tools restored access.
 - [2026-06-30] Sonnet 5 launch cluster also confirmed Fable 5 access had returned with fallback routing still relevant.

@@ -17,6 +17,7 @@ X thread from Claude Code lead Boris Cherny on launch day of Opus 5.5. He used t
 
 - [Acceptance contracts and test oracles](../../training/acceptance-contracts-and-test-oracles.md) — model-checked specifications as an oracle
 - [Claude Opus 5.5](../../models/claude-opus-5-5.md) — early-user formal-verification result
+- [AI formal verification](../../trends/ai-formal-verification.md) — non-specialist formal-methods example
 
 ## Key claims extracted
 

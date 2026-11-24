@@ -15,7 +15,9 @@ Interview with Anthropic's Thariq Shihipar on where the Claude Code harness is h
 
 ## Influenced pages
 
-- [Claude Code](../../tools/claude-code.md) — Mods, Projects, cloud-brain direction, CLAUDE.md guidance
+- [Claude Code](../../tools/claude-code.md) — cloud-brain direction, CLAUDE.md guidance
+- [Claude Code Mods](../../tools/claude-code-mods.md) — Mods (function hooks)
+- [Claude Code Projects](../../tools/claude-code-projects.md) — Projects as a Claude Tag-style supervising agent
 - [Agent runtime platforms](../../concepts/agent-runtime-platforms.md) — "cloud brain, local hands"
 
 ## Key claims extracted

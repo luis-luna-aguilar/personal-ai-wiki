@@ -33,7 +33,7 @@ One-time exception ingest from the user's legacy workbook. It contains mixed not
 - [OpenEvidence](../../tools/open-evidence.md)
 - [Kora](../../tools/kora.md)
 - [Hebbia](../../tools/hebbia.md)
-- [Seedance 2.0](../../tools/seedance-2.md)
+- [Seedance 2.0](../../history/tools/seedance-2.md) (archived; superseded by Seedance 2.5)
 - [Dream Machine](../../tools/dream-machine.md)
 - [Genspark Slides](../../tools/genspark-slides.md)
 - [HeyGen](../../tools/heygen.md)

@@ -15,7 +15,7 @@ Story from the 16 October 2026 AINews issue (covering 14–15 October): Perplexi
 
 ## Influenced pages
 
-- [State of Cybersecurity](../../state-of/cybersecurity.md) — Perplexity SPACE line in "Agents acting in the wild"
+- [Agent incidents in the wild](../../trends/agent-incidents-in-the-wild.md) — Perplexity SPACE line under containment (moved from State of Cybersecurity on 2026-11-24)
 
 ## Key claims extracted
 

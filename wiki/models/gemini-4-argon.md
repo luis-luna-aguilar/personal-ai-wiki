@@ -4,13 +4,13 @@ type: model
 domains: [models, coding, cybersecurity]
 subcategory: frontier-model
 tags: [google, closed-source, frontier]
-as_of: 2026-10-18
-sources: [ainews-gemini-4-argon-launch-2026-10-01, ainews-argon-fairwind-rollout-2026-10-10, every-vibe-check-gemini-4-argon-2026-10-13, ainews-argon-ga-aie-nyc-2026-10-14, ainews-argon-monitorability-reception-2026-10-15, ainews-argon-epoch-arc-2026-10-16, every-codex-comeback-argon-recap-2026-10-18]
+as_of: 2026-11-12
+sources: [ainews-gemini-4-argon-launch-2026-10-01, ainews-argon-fairwind-rollout-2026-10-10, every-vibe-check-gemini-4-argon-2026-10-13, ainews-argon-ga-aie-nyc-2026-10-14, ainews-argon-monitorability-reception-2026-10-15, ainews-argon-epoch-arc-2026-10-16, every-codex-comeback-argon-recap-2026-10-18, google-introducing-gemini-4-hydrogen]
 ---
 
 # Gemini 4 Argon
 
-Google DeepMind's first frontier-class model since Gemini 3.1 Pro (February 2026), announced 2026-09-30 for coding, enterprise knowledge work and cyber defense. Access started with government users and vetted defenders, then went generally available on 2026-10-13. Used through the [Gemini](../tools/gemini.md) app, API and Antigravity.
+Google DeepMind's first frontier-class model since Gemini 3.1 Pro (February 2026), announced 2026-09-30 for coding, enterprise knowledge work and cyber defense. Access started with government users and vetted defenders, then went generally available on 2026-10-13. Used through the [Gemini](../tools/gemini.md) app, API and Antigravity. Since late October it has three siblings: the stronger [Gemini 4 Carbon](gemini-4-carbon.md), the midweight [Gemini 4 Neon](gemini-4-neon.md) and the fast Hydrogen; Google still offers Argon as a frontier model beside Carbon, and on Artificial Analysis's rescored v5.0 index Argon sits at 50, just below Hydrogen's 51.
 
 ## Current status (as of 2026-10-16)
 
@@ -32,6 +32,7 @@ Cline reported its best launch-day uptake for a frontier model since June. Ethan
 
 ## Recent changes
 
+- [2026-11-12] Google's Hydrogen post puts Argon at 50 on AA Intelligence Index v5.0 (Hydrogen 51) and keeps it beside Carbon as a frontier model.
 - [2026-10-15] Neel Nanda's monitorability assessment; split launch-week reception (Cline, Theo, Mollick).
 - [2026-10-13] Generally available across the Gemini API, app, AI Mode, AI Studio and Antigravity; Cursor, Devin and Copilot integrations; Every Vibe Check.
 - [2026-09-30] Announced; gated to government users and Fairwind defenders; AA Intelligence Index 53, #1 Vals Index and Text Arena; 1M-token output.
@@ -45,3 +46,4 @@ Cline reported its best launch-day uptake for a frontier model since June. Ethan
 - [AINews — Argon monitorability and reception](../sources/newsletters/ainews-argon-monitorability-reception-2026-10-15.md)
 - [AINews — Argon on Epoch ECI and ARC-AGI-3](../sources/newsletters/ainews-argon-epoch-arc-2026-10-16.md)
 - [Every — Codex's Comeback Up Close (Argon recap)](../sources/newsletters/every-codex-comeback-argon-recap-2026-10-18.md)
+- [Google — Introducing Gemini 4 Hydrogen](../sources/articles/google-introducing-gemini-4-hydrogen.md)

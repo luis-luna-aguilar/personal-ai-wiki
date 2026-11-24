@@ -5,7 +5,7 @@ domains: [coding, agents, cybersecurity, computer-use]
 subcategory: terminal-coding-agent
 tags: [openai, closed-source, agentic]
 as_of: 2026-11-23
-sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026, openai-gpt-5-5-launch, superhuman-2026-04-23, codex-broader-computer-work-2026-04-24, codex-for-work-2026-05-01, symphony-devin-terminal-orchestration-2026-04-28, openai-daybreak-2026-05-13, codex-mobile-may-2026, codex-adoption-ecosystem-2026-05, codex-maxxing-jxnl-2026-05, codex-zoom-mobile-2026-05, codex-general-work-agents-2026-07, every-urge-to-merge-2026-07-14, ainews-devin-fusion-router-moat-2026-07-14, chatgpt-work-launch-2026-08-04, unsloth-desktop-chatgpt-linux-2026-08-12, developersopenaicom-blog-maintaining-software-gpt-6, ainews-codex-cloud-environments-2026-09-30, weinstein-computer-use-180-degrees-2026-09-30, ainews-openai-devday-2026-dots-2026-09-30, every-sam-altman-dots-ultrafast-2026-09-30, ainews-devday-agent-stack-recap-2026-10-01, every-vibe-check-openai-devday-2026-09-29, ainews-openai-capacity-squeeze-codex-pledge-2026-10-06, ainews-codex-windows-sandbox-2026-10-10, openai-cybersecurity-solutions-page]
+sources: [openai-pro-100, ainews-2026-04-21, openai-codex-ongoing-tasks, coding-agents-review-and-orchestration-march, codex-security-march, codex-updates-april-2026, openai-gpt-5-5-launch, superhuman-2026-04-23, codex-broader-computer-work-2026-04-24, codex-for-work-2026-05-01, symphony-devin-terminal-orchestration-2026-04-28, openai-daybreak-2026-05-13, codex-mobile-may-2026, codex-adoption-ecosystem-2026-05, codex-maxxing-jxnl-2026-05, codex-zoom-mobile-2026-05, codex-general-work-agents-2026-07, every-urge-to-merge-2026-07-14, ainews-devin-fusion-router-moat-2026-07-14, chatgpt-work-launch-2026-08-04, unsloth-desktop-chatgpt-linux-2026-08-12, developersopenaicom-blog-maintaining-software-gpt-6, ainews-codex-cloud-environments-2026-09-30, weinstein-computer-use-180-degrees-2026-09-30, ainews-openai-devday-2026-dots-2026-09-30, every-sam-altman-dots-ultrafast-2026-09-30, ainews-devday-agent-stack-recap-2026-10-01, every-vibe-check-openai-devday-2026-09-29, ainews-openai-capacity-squeeze-codex-pledge-2026-10-06, ainews-codex-windows-sandbox-2026-10-10, openai-cybersecurity-solutions-page, openai-chatgpt-data-agent-2026-09-10]
 ---
 
 # Codex
@@ -76,7 +76,7 @@ Research preview. Background agents monitor recent screen activity, build memori
 - Shift from explicit chat history to passive ambient context capture
 - Competitive framing: Harrison Chase's "memory will be the great lock-in" argument points to accumulated ambient context as a switching cost, not just a convenience
 
-## ChatGPT Work architecture (as of 2026-08-04)
+## ChatGPT Work architecture (as of 2026-09-10)
 
 A detailed independent teardown of Work — the ChatGPT mode OpenAI folded Codex into on 2026-07-14 — clarifies how the product actually holds state across tasks.
 
@@ -86,6 +86,7 @@ A detailed independent teardown of Work — the ChatGPT mode OpenAI folded Codex
 - Early proactive-task suggestions: Work can surface a pre-authored prompt drawn from calendar/email context (e.g. a meeting-prep brief) at the start of a new conversation, though the user still has to select and run it — full unprompted autonomy isn't there yet.
 - Scheduled Tasks come in two forms: a standalone automation that opens a fresh task from a saved prompt each run, and a heartbeat-triggered automation that resumes a specific existing thread with its context intact (heartbeats work in the desktop app but aren't yet exposed in Work on the web).
 - The Plugin Directory has scaled past 1,000 plugins (apps, skills, app templates) but has a real discovery gap: Work doesn't suggest an installed-but-relevant plugin for a task, even when the user names the target service directly.
+- **Data agent (2026-09-10):** a "Data" plugin, called as `@Data`, answers business questions over company data (Redshift, BigQuery, Snowflake, Databricks, ClickHouse, MongoDB, Datadog, plus Drive and SharePoint files). It reads definitions from semantic layers ([Semantic layer](../concepts/semantic-layer.md)), enforces each user's table, row and column permissions, builds editable shared dashboards (also inside Tableau, Power BI, Sigma, ThoughtSpot, Omni and Oracle BI) and acts through connected tools after approval.
 - Three weeks after the July 9 launch, Work plus Codex had reportedly crossed 10 million users; Greg Brockman has confirmed Work and regular Chat will merge into one product by the end of 2026.
 
 ## Recent changes
@@ -97,9 +98,9 @@ A detailed independent teardown of Work — the ChatGPT mode OpenAI folded Codex
 - [2026-09-30] Codex cloud environments keep sessions running with the laptop closed, alongside a refreshed Codex CLI with worktrees and `/agents` (per AINews); see [Agent runtime platforms](../concepts/agent-runtime-platforms.md).
 - [2026-09-30] Computer use in Codex now writes JavaScript that performs many actions per step and reads accessibility trees and the DOM instead of only screenshots; App Shots (double Command press) bring an app's full accessibility representation into a chat. OpenAI says GPT-6.1 Sol runs computer use at ~1/7 of Astra's cost, and the same implementation is now in the Agents API.
 - [2026-09-29] DevDay: Security Cloud, Ultrafast (up to 8x faster at 6x price), Sign in with ChatGPT for partner apps, and plan re-tiering with a new $500 Pro tier.
+- [2026-09-10] Data agent in ChatGPT Work: plain-language analysis and editable dashboards over warehouse data, grounded in semantic layers and per-user permissions; OpenAI says nearly all of its product team and over two-thirds of its GTM organization use it.
 - [2026-08-12] ChatGPT desktop app ships for Linux in preview (Ubuntu, Debian, Fedora; x64/ARM64); the desktop app can now import and sync projects, chats, skills, and plugins from other agents into ChatGPT Work and Codex with automatic updates — read as an effort to cut agent-switching friction and make Codex/Desktop an integration hub.
 - [2026-08-04] Independent architecture teardown of ChatGPT Work: persistent cloud microVM specs, deliberate split between agent-owned scratch space and product-managed continuity (Personal Context/Library/Projects), browser-service tool-call model, two-tier Scheduled Tasks, Plugin Directory discovery gap, and 10M-user milestone three weeks post-launch.
-- [2026-07-14] OpenAI folded Codex into a new ChatGPT desktop "superapp" (Chat/Work/Codex modes); power users pushed back hard, but usage estimates put Codex around 6-7M users by mid-July, roughly 10x growth year-to-date.
 
 ## Sources
 
@@ -133,3 +134,4 @@ A detailed independent teardown of Work — the ChatGPT mode OpenAI folded Codex
 - [AINews — OpenAI capacity squeeze and the Codex 28-day pledge](../sources/newsletters/ainews-openai-capacity-squeeze-codex-pledge-2026-10-06.md)
 - [AINews — Codex Windows sandbox and DHH's switch](../sources/newsletters/ainews-codex-windows-sandbox-2026-10-10.md)
 - [OpenAI — AI for Cybersecurity Teams solutions page](../sources/articles/openai-cybersecurity-solutions-page.md)
+- [OpenAI — Now everyone can put data to work (Data agent in ChatGPT Work)](../sources/articles/openai-chatgpt-data-agent-2026-09-10.md)

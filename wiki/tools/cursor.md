@@ -4,8 +4,8 @@ type: tool
 domains: [coding, agents]
 subcategory: agentic-coding-workspace
 tags: [closed-source, agentic]
-as_of: 2026-09-09
-sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models, cursor-cloud-agents-march, cursor-cloud-agents-february, cursor-third-era, ai-security-scanners-2026-05-01, cursor-sdk-agent-runtime-2026-04-30, agent-first-ide-convergence-may-2026, cursor-composer-2-5-launch, spacex-cursor-june-2026, cursor-ios-mobile-app-2026-06, cursor-blog-grok-4-5-launch-2026-07, ainews-spacexai-grok-45-2026-07-09, the-code-eval-data-moat-2026-07-13, ainews-openai-shuts-off-cursor-2026-08-29, cursor-self-driving-codebases-2026-09-09]
+as_of: 2026-09-10
+sources: [cursor-3-launch, cursor-pr-demos, cursor-bugbot-learning, coding-agent-control-planes, cursor-3-orchestration-bet, late-march-small-coding-models, cursor-cloud-agents-march, cursor-cloud-agents-february, cursor-third-era, ai-security-scanners-2026-05-01, cursor-sdk-agent-runtime-2026-04-30, agent-first-ide-convergence-may-2026, cursor-composer-2-5-launch, spacex-cursor-june-2026, cursor-ios-mobile-app-2026-06, cursor-blog-grok-4-5-launch-2026-07, ainews-spacexai-grok-45-2026-07-09, the-code-eval-data-moat-2026-07-13, ainews-openai-shuts-off-cursor-2026-08-29, cursor-self-driving-codebases-2026-09-09, cursor-projects-launch-2026-09-10, arslan-how-i-manage-my-agents-2026-09-11]
 ---
 
 # Cursor
@@ -14,13 +14,14 @@ Cursor is an AI coding product from Anysphere. It started life as a VS Code fork
 
 The strongest interpretive signal from the early-April reaction cycle is that Cursor 3 was not just a feature release. It was a bet about interface shape: the editor becomes secondary, while dispatching, monitoring, and reviewing agent work becomes the primary experience. That looks increasingly prescient as the broader category moves toward supervision surfaces, but the same sources also emphasize the risk that orchestration UX may outrun what mainstream users actually need today.
 
-## Current status (as of 2026-09-09)
+## Current status (as of 2026-09-10)
 
 - **Cursor 3** is the current shipped version: agent-first workspace with legacy IDE mode still available (see intro)
 - Inherently multi-workspace — humans and agents work across multiple repos simultaneously; plugin marketplace ("Cursor Marketplace") supports MCPs, skills, and subagents with private team marketplaces
 - Backed by **Composer 2.5** (in-house model, Kimi K2.5 base + targeted RL, 25× more synthetic tasks than Composer 2) alongside the jointly-trained Grok 4.5/4.6 from the SpaceX/xAI partnership — see SpaceX acquisition section below
 - Cursor for iOS (public beta) and the Cursor SDK extend the product to mobile control and headless/CI agent runtimes — see dedicated sections below
 - OpenAI cut Cursor's model access following the SpaceX acquisition close; Cursor now leans on Grok 4.6 (see Recent changes)
+- **Projects** (beta, 2026-09-10): long-lived coordinator agents that dispatch cloud and local workers, keep shared context, and act on PR, Slack or schedule events — see section below
 
 ## What's new in Cursor 3
 
@@ -50,6 +51,17 @@ Michael Truell's April 2026 essay defines three eras of AI software development:
 3. **Cloud agents** — agents running on their own VMs over hours; developer defines the problem and reviews artifacts (videos, previews, logs) rather than diffs; many in parallel is practical
 
 Internal Cursor data (as of April 2026): 35% of PRs merged internally at Cursor are now created by autonomous cloud agents. Agent users now outnumber Tab users 2:1 (was the reverse in March 2025); agent usage has grown 15× in one year. Truell's profile of a "third era developer": agents write ~100% of their code, they spend time on problem breakdown and artifact review, they spin up multiple agents simultaneously instead of hand-holding one.
+
+## Projects (as of 2026-09-10)
+
+Projects, in beta for all users since 2026-09-10, is Cursor's concrete version of the third-era thesis. A Project is a long-lived thread for work that outlives one chat (a multi-PR feature, a migration, ongoing upkeep). The user chats with a **coordinator agent** that writes no code and delegates to worker agents, so it is never blocked.
+
+- **Cloud by default, local when needed:** the Project runs on its own computer; it can also dispatch agents to the user's machine (remote workers) or a remote box they own.
+- **Shared context:** a Project Context (a coordinator-written `notes.md`, docs, agent scratch) syncs to every agent; a global User Context holds `preferences.md`, read only by coordinators, and synced skills.
+- **Subscriptions:** the coordinator follows PRs, Slack channels or schedules and wakes on CI results, review comments and merges.
+- Cursor reports new users merge 30% more PRs and Projects-heavy users six times as many; a design-system "gardening" Project adds a lint rule whenever it sees the same mistake twice.
+
+Cursor engineer Fatih Arslan's plans-in-git operating model for Projects is on [Multi-agent coordination](../workflows/multi-agent-coordination.md).
 
 ## Strengths
 
@@ -90,6 +102,7 @@ SpaceX exercised a previously announced option to acquire Cursor in an all-stock
 
 ## Recent changes
 
+- [2026-09-10] Projects launched in beta: long-running coordinator agents that dispatch cloud/local workers, keep shared Project and User Context, and subscribe to PRs, Slack channels and schedules; Cursor reports Projects-heavy users merge 6x as many PRs.
 - [2026-09-09] Cursor detailed the agent harness behind its long-running research (browser-building swarm, ~1,000 commits/hour peak over one week, recursive planner/subplanner/worker design) and said part of this research is now being made available to try for some users.
 - [2026-08-29] OpenAI cuts Cursor's model access following the SpaceX acquisition close, citing contract-violation history with Musk's companies; Cursor leans on Grok 4.6 as a result.
 - [2026-07-13] Cursor 3.11 ships side chats (`/side` / `/btw`), transcript search, and cloud-agent hooks.
@@ -99,7 +112,6 @@ SpaceX exercised a previously announced option to acquire Cursor in an all-stock
 - [2026-05-18] Composer 2.5: targeted RL with textual hints + KL distillation; 25× synthetic tasks; fast-tier pricing ($3/$15 per M); next model in training at SpaceX/Colossus 2 scale
 - [2026-05-14] Cloud development environments: multi-repo agent work with full env config, Dockerfile support, version history, rollback, isolated secrets, 70% faster cached builds; agents can cross-repo trace Slack issues → PRs
 - [2026-05-01] Cursor Security Review reported: always-on PR review and scheduled codebase scans; source is AINews secondary coverage, primary Cursor page not yet fetched
-- [2026-04-30] Cursor SDK released: TypeScript SDK exposes the Cursor agent runtime headlessly for CI, automations, cloud VMs, MCP servers, model swapping, and embedded product agents; marks transition from IDE seat product toward agent infrastructure platform
 
 ## Sources
 
@@ -120,3 +132,5 @@ SpaceX exercised a previously announced option to acquire Cursor in an all-stock
 - [The Code — GPT-5.6 Sol wins over developers; Cursor drops side chat; eval data is the real moat](../sources/newsletters/the-code-eval-data-moat-2026-07-13.md)
 - [AINews — OpenAI shuts off Cursor](../sources/newsletters/ainews-openai-shuts-off-cursor-2026-08-29.md)
 - [Cursor — Towards self-driving codebases](../sources/articles/cursor-self-driving-codebases-2026-09-09.md)
+- [Cursor — Introducing Projects](../sources/articles/cursor-projects-launch-2026-09-10.md)
+- [Fatih Arslan — How I manage my agents](../sources/articles/arslan-how-i-manage-my-agents-2026-09-11.md)
